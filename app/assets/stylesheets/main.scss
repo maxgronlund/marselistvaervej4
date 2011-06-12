@@ -1,0 +1,83 @@
+@import "compass/utilities/general/clearfix";
+
+@import "partials/base";
+@import "partials/color";
+@import "partials/dimensions";
+@import "partials/images";
+
+body {
+	background-color: $color_gray;
+	font-size: 12px;
+	margin: 0px;
+	margin-top: 0px;
+	background-image:url('/images/background.jpg');
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: arial;
+	font-weight: lighter;
+	color: #444;
+	margin-top: 0px;
+}
+
+h1.no-access {
+	text-align: center;
+}
+
+#header {
+	@include clearfix;
+	background-color: $color_white;
+	min-height: 32px;
+}
+#header {
+	margin-bottom: 24px;
+}
+#footer {
+	margin-top: 24px;
+	text-align: center;
+}
+
+.links {
+	text-align: right;
+}
+
+hr {
+	border: 0 #ccc solid;
+	border-top-width: 1px;
+	clear: both;
+	height: 0;
+	margin:0px 0px 0px 0px;
+}
+
+.desc{
+	padding-right:14px;
+	background-image:url('../images/arrow_up.png');
+	background-repeat:no-repeat;
+	background-color:transparent;
+	background-position:right top;
+}
+
+.asc{
+	padding-right:14px;
+	background-image:url('../images/arrow_down.png');
+	background-repeat:no-repeat;
+	background-color:transparent;
+	background-position:right top;
+}
+
+.text_right{
+	text-align:right;
+}
+
+a:focus {
+       outline: 0px none;
+       color:#000;
+}
+a:visited {
+       color: #666;
+}
+a:hover {
+       color: #ddd;
+       background-color:#333;
+}
+

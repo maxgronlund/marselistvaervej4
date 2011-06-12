@@ -1,0 +1,22 @@
+.single-column
+  h1= @user.name
+  = @user.email
+  - if can_edit?
+    br/
+    #{t('user.role')}: #{@user.role}
+    br/
+    #{t('user.language')}: #{@user.language}
+
+.single-column.top_margin_4
+  =image_tag @user.image.url(:medium), :border => 'none', :class => 'image_fix'
+
+- if can?(:manage, @user)
+  div class="grid_6 suffix_6"
+    = link_to t('admin.edit'), edit_user_path(@user)
+	br/
+    = link_to 'Skift adgangskode', user_password_path(:id => @user)
+    br/
+    = link_to 'edit image', recrop_user_path(@user)
+
+.single-column.top_margin_4
+  = link_to 'blog', user_blogs_path(@user)

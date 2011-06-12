@@ -1,0 +1,23 @@
+= form_for(@illustration, :html => { :multipart => true }) do |f|
+  - if @illustration.errors.any?
+   #error_explanation
+     h2
+       #{pluralize(@illustration.errors.count, "error")} prohibited this illustration from being saved:
+     ul
+       - @illustration.errors.full_messages.each do |msg|
+         li= msg
+
+  .field
+    = f.label :title, t('illustration.title')
+    br/
+    = f.text_field :title
+  .field
+    = f.label :image, t('illustration.image')
+    .image
+      = image_tag @illustration.image.url(:thumbnail), :border => 'none', :class => 'image_fix'
+    = f.file_field :image
+    br/
+
+  .actions
+    = f.submit t('admin.save'), disable_with: 'Saving...'
+    = image_tag "loader.gif", alt: "", width: "32", height: "32", style: "display: none;", class: 'spinner'

@@ -1,0 +1,20 @@
+.grid-container
+
+  .squared-box
+    .borders
+      .menu-box
+        = render :partial => "shared/menu"
+      .content
+        - if can?(:edit, @newspost)
+	      = link_to t('admin.edit'), edit_newspost_path(@newspost)
+        h1
+          =raw @newspost.title
+        =raw @newspost.body
+    
+	    
+  .squared-box
+    .borders
+//      div style="width:458px; height:376px; overflow:hidden"
+ //       = image_tag @company.image.url(:preview), :border => 'none', :class => 'image_fix'
+
+= render :partial => "shared/news", :locals => { :newsposts => @newsposts }

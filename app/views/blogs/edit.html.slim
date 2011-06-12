@@ -1,0 +1,9 @@
+.single-column
+  h1
+    = t('blog.edit')
+  = render 'form'
+
+.single-column
+  = link_to t('admin.show'), @blog
+  |  |
+  = link_to t('navigation.back'), :back

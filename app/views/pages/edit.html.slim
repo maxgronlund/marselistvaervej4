@@ -1,0 +1,11 @@
+.single-column
+  h1= t('page.edit_page')
+
+
+= render 'form'
+
+
+.single-column
+  = link_to t('admin.show'), @page
+  |  |
+  = link_to t('navigation.back'), :back

@@ -1,0 +1,51 @@
+.single-column
+  h1 Opret konto
+  = form_for(@user, :html => { :multipart => true }) do |f|
+    -#= devise_error_messages!
+
+    .field
+      = f.label :name
+      br/
+      = f.text_field :name
+
+    .field
+      = f.label :email
+      br/
+      = f.text_field :email
+
+    .field
+      = f.label :role, t('user.portrait')
+      br/
+      = f.file_field :image
+
+
+    .field
+      - if current_user.super?
+        = f.label :role, t('user.role')
+        br/
+        = f.select(:role, User::ROLES)
+      
+      - elsif current_user.admin?
+        = f.label :role, t('user.role')
+        br/
+        = f.select(:role, User::ROLES - ['super'])
+
+      
+
+
+    .field
+      = f.label :password
+      br/
+      = f.password_field :password
+      br/
+
+    .field
+      = f.label :password_confirmation
+      br/
+      = f.password_field :password_confirmation
+      br/
+
+    .action
+      = f.submit 'Opret konto', disable_with: 'Saving...'
+      = image_tag "loader.gif", alt: "", width: "32", height: "32", style: "display: none;", class: 'spinner'
+

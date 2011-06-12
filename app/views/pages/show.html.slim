@@ -1,0 +1,14 @@
+.single-column
+  h1= @page.title
+
+div class="grid_4 suffix_7"
+  = @page.body.html_safe
+
+- if can?(:manage, @page)
+  div class="grid_4 suffix_8 text_right"
+    br/
+    = link_to t('navigation.back'), :back
+    |  |
+    = link_to t('page.all_pages'), pages_path
+    |  |
+    = link_to t('admin.edit'), edit_page_path(@page)

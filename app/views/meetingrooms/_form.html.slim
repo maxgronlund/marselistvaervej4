@@ -1,0 +1,30 @@
+.single-column
+  = form_for(@meetingroom, :html => { :multipart => true }) do |f|
+    - if @meetingroom.errors.any?
+      #error_explanation
+        h2
+          #{pluralize(@meetingroom.errors.count, "error")} prohibited this page from being saved:
+        ul
+          - @meetingroom.errors.full_messages.each do |msg|
+            li= msg
+
+    .field
+      = f.label :image
+      br
+  	= f.file_field :image
+  
+    .field
+      =f.label :title
+      br
+      = f.text_field :title
+  
+    .field
+      = f.label :body
+  	br
+      = f.text_area :body
+  
+    .actions
+        = f.submit 'Gem', disable_with: 'Saving...'
+        = image_tag "loader.gif", alt: "", width: "32", height: "32", style: "display: none;", class: 'spinner'
+  
+  

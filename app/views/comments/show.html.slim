@@ -1,0 +1,10 @@
+.single-column
+  h3= t('system.comments')
+
+  .section
+    = @comment.body
+
+.single-column
+  = link_to 'Edit', edit_comment_path(@comment)
+  |  |
+  = link_to t('navigation.back'), :back

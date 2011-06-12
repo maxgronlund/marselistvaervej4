@@ -1,0 +1,11 @@
+.single-column
+  - if @about != nil
+    h1
+      =raw @about.title
+    .section
+      = raw @about.body
+
+    - if can?(:edit, @about)
+      .section-edit
+        hr/
+        = link_to t('admin.edit'), edit_page_path(@about)

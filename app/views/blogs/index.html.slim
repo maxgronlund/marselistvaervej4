@@ -1,0 +1,30 @@
+.single-column
+  .blog-header
+    h1
+      = t('blog.posts')
+    - if can? :manage, Blog
+      = link_to t('blog.create'), new_blog_path
+
+  - @blogs.each do |blog|
+    .blog-image
+      = link_to image_tag( blog.user.image.url(:small), :border => 'none', :class => 'image_fix'), user_path(blog.user)
+    .blog-content
+      div class=cycle('color_light_gray', 'color_gray')
+        h3= blog.title
+        i= blog.user.name
+        br/
+        = l blog.created_at, :format => :date_month_and_year
+        br/
+        = blog.body
+        br/
+        .links
+          = link_to t('admin.show'), blog
+          - if can?(:manage, blog)
+            |  |
+            = link_to t('admin.edit'), edit_blog_path(blog)
+            |  |
+            = link_to t('admin.delete'), blog, :confirm => t('admin.are_you_sure'), :method => :delete
+    = render :partial => "comments", :locals => { :blog => blog }
+
+  .pagination
+    = will_paginate @blogs

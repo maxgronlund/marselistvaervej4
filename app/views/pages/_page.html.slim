@@ -1,0 +1,9 @@
+h3= link_to element.title, page_path(element)
+= truncate(strip_tags(element.body),  :length => 100)
+.links
+  = link_to t('admin.show'), element
+  - if can?(:manage, element)
+    |  |
+    = link_to t('admin.edit'), edit_page_path(element)
+    |  |
+    = link_to t('admin.delete'), element, :confirm => t('admin.are_you_sure'), :method => :delete

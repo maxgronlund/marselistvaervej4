@@ -1,0 +1,8 @@
+.single-column
+  h1 comments
+  - for comment in @comments
+    .comment
+      = comment.title
+      br/
+      = comment.body
+  hr/

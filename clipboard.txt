@@ -1,0 +1,4 @@
+  .menu-box
+      .menu-back
+        h2
+          | NEWS

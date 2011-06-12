@@ -1,0 +1,9 @@
+.single-column
+  h1= t('illustration.edit')
+
+  = render 'form'
+
+.single-column
+  = link_to t('admin.show'), @illustration
+  |  |
+  = link_to t('navigation.back'), :back

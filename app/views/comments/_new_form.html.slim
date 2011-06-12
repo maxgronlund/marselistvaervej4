@@ -1,0 +1,6 @@
+- if can? :manage, Comment
+  b= t('comment.new')
+  br/
+  = form_for [ comment_subject, Comment.new] do |f|
+    = f.text_area :body, cols:"17", rows:"10"
+    p= f.submit t('admin.save')

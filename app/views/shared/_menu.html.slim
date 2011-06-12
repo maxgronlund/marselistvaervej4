@@ -1,0 +1,8 @@
+.menu-back
+  = link_to 'MT04', root_path
+  = link_to 'HISTORY', history_index_path
+  = link_to 'VIRKSOMHEDER', companies_path
+  - if !user_signed_in?
+    = link_to 'LOGIN', user_session_path
+  - else
+    = link_to 'LOG UD', destroy_user_session_path

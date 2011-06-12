@@ -1,0 +1,14 @@
+.single-column
+  h1= @illustration.title
+
+.single-column.top_margin_10
+  = image_tag @illustration.image.url()
+br/
+
+.single-column.top_margin_10
+  hr/
+  = link_to t('navigation.back'), :back
+  |  |
+  = link_to t('illustration.index'), pages_path
+  |  |
+  = link_to t('admin.edit'), edit_illustration_path(@illustration)

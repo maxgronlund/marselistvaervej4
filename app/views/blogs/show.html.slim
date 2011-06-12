@@ -1,0 +1,22 @@
+.single-column
+  h1
+    = @blog.title
+  i
+    = @blog.user.name
+  br/
+
+  .section
+    = @blog.body
+
+  .section-edit
+    - if can?(:manage, @blog)
+      = link_to 'rediger', edit_blog_path(@blog)
+      |  |
+      = link_to 'slet', @blog, :confirm => t('admin.are_you_sure'), :method => :delete
+
+  .section
+    hr/
+
+  .blog-comments
+    = render :partial => "comments/index", :locals => { :comment_subject => @blog }
+  br/

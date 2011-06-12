@@ -1,0 +1,9 @@
+.single-column
+  h1= t('comment.edit')
+
+  = render 'form'
+
+.single-column
+  = link_to t('admin.show'), @comment
+  |  |
+  = link_to t('navigation.back'), :back

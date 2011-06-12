@@ -1,0 +1,65 @@
+.single-column
+  h1= t('user.edit_account')
+  = form_for(@user, :html => { :multipart => true }) do |f|
+    - if @user.errors.any?
+      #error_explanation
+        h2
+          #{pluralize(@user.errors.count, "error")} prohibited this user from being saved:
+        ul
+          - @user.errors.full_messages.each do |msg|
+            li= msg
+
+    = image_tag  @user.image.url(:medium)
+    br/
+
+    .field
+      = f.label :name, t('user.name')
+      br/
+      = f.text_field :name
+
+    .field
+      = f.label :email
+      br/
+      = f.text_field :email
+
+    .field
+      = f.label :password
+      br/
+      = f.password_field :password
+    .field
+      = f.label :password_confirmation
+      br/
+      = f.password_field :password_confirmation
+      
+    - if current_user && current_user.admin_or_super?
+      .field
+        = f.label :grid
+        br/
+        = f.check_box :grid
+
+    .field
+      Billed
+      br/
+      = f.file_field :image
+    .field
+      - unless @user.id == User.first.id
+        - if current_user && current_user.admin_or_super?
+          - if current_user.super?
+            = f.label :role, t('user.role')
+	        br/
+            = f.select(:role, User::ROLES)
+          
+          - else
+            = f.label :role, t('user.role')
+	        br/
+            = f.select(:role, User::ROLES - ['super'])
+              
+
+
+
+
+    div class="actions top_margin_12"
+      = f.submit 'Gem', disable_with: 'Saving...'
+      = image_tag "loader.gif", alt: "", width: "32", height: "32", style: "display: none;", class: 'spinner'
+
+

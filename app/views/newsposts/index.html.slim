@@ -1,0 +1,44 @@
+- if can_edit?
+  .single-column
+    h1
+    | Listing newsposts
+
+
+  div class="grid_12 color_gray top_margin_24"
+    b
+      div class="grid_4 alpha"
+        = sortable 'title', t('system.title')
+      div class="grid_6 omega suffix_2"
+        = sortable 'created_at', t('admin.created_at')
+    hr/
+
+  - @newsposts.each do |newspost|
+    div class="grid_12"
+      div class="grid_12 alpha omega #{cycle('color_light_gray', 'color_gray')}"
+
+        div class="grid_4 alpha"
+          b= newspost.title
+        
+        div class="grid_4 suffix_2"
+          = l newspost.created_at, :format => :date_month_and_year
+
+        div class="grid_2 omega text_right"
+          - if can? :manage, newspost
+            = link_to t('admin.show'), newspost
+            |  |
+            = link_to t('admin.edit'), edit_newspost_path(newspost)
+            |  |
+            = link_to t('admin.delete'), newspost, :confirm => t('admin.are_you_sure'), :method => :delete
+
+  div class="grid_12"
+    = will_paginate @newsposts
+
+  - if can? :manage, Newspost
+    div class="grid_12 top_margin_10"
+      = link_to t('page.new'), new_newspost_path
+
+- else
+  = render :partial => "shared/no_access"
+
+
+

@@ -1,0 +1,35 @@
+.grid-container
+  .squared-box
+    .borders
+      .menu-box
+        = render :partial => "shared/menu"
+      .content
+        b
+          -@companies.each do |company|
+            = link_to company.title, company
+            br
+        - if can_edit?
+          br
+            = link_to 'Opret virksomhed', new_company_path
+
+  .squared-box
+    .borders
+      = image_tag 'frontpage-house.jpg', :border => 'none', :class => 'image_fix'
+
+= render :partial => "shared/news", :locals => { :newsposts => @newsposts }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
