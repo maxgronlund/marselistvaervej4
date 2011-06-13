@@ -1,7 +1,7 @@
 doctype html
 html
   head
-    title Rails template
+    title Marselis Tværvej 4
 
     = stylesheet_link_tag 'compiled/grid.css', 'compiled/text.css', 'compiled/main.css', :media => 'screen, projection'
     = javascript_include_tag 'jquery.tools.min.js', 'rails', 'application'
@@ -14,14 +14,16 @@ html
   body
     div class="background"
       div class="container_12 two-column#{' background_grid' if RAILS_ENV == 'development' && (user_signed_in? && current_user.grid?)}"
-        .logo-box
-          = link_to image_tag( 'logo.png'),root_path
-          
-
-          - if user_signed_in?
-            .logedin-box
+        .grid-container
+          .logo-box
+            = link_to image_tag( 'logo.png'),root_path
+          .logedin-box
+            - if user_signed_in?
+            
               = link_to 'min konto', current_user
               |  |  
               = link_to 'admin', admin_path
+              |  |  
+              = link_to 'mødelokaler' , meetingrooms_path
         = yield
         .clear

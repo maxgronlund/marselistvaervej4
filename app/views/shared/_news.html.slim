@@ -16,12 +16,13 @@
                   = l newspost.created_at, :format => :date_month_and_year
               = excerpt(newspost.body, '', :radius => 160)
               br /
-              - if newspost.body != nil && newspost.body.length > 72
+              - if newspost.body != nil && newspost.body.length > 160
                 = link_to 'læs mere', newspost_path(newspost)
   
               - if can?(:edit, newspost)
-                - if newspost.body != nil && newspost.body.length > 72
-                  |  |  
-                = link_to 'rediger', edit_newspost_path(newspost)
+                - if newspost.body != nil
+                  - if newspost.body.length > 160
+                    |  | 
+                  = link_to 'rediger', edit_newspost_path(newspost)
   = will_paginate @newsposts
   
