@@ -1,0 +1,17 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  meetingroom_id: 1
+  starttime: 2011-06-13 22:35:59
+  endtime: 2011-06-13 22:35:59
+  attendees: 1
+  coffee_and_bread: false
+  bookers_name: MyString
+
+two:
+  meetingroom_id: 1
+  starttime: 2011-06-13 22:35:59
+  endtime: 2011-06-13 22:35:59
+  attendees: 1
+  coffee_and_bread: false
+  bookers_name: MyString
