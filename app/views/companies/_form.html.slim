@@ -9,31 +9,32 @@
             li= msg
 
     .field
-      = f.label :image
+      | billed
       br
-  	= f.file_field :image
-  
+      = f.file_field :image
+    br
     .field
-      =f.label :title
+      | navn
       br
       = f.text_field :title
-  
+    br
     .field
       = f.label :body
   	br
       = f.text_area :body, :class => "mceEditor"
-  
+    br
     .field
-      = f.label :phone
+      | telefon
   	br
       = f.text_field :phone
 
+    br
     .field
-      = f.label :homepage
+      | hjemmeside
   	br
       = f.text_field :homepage
-
+    br
     .actions
-        = f.submit 'Gem', disable_with: 'Saving...'
+        = f.submit 'Gem', disable_with: 'Gemmer...'
         = image_tag "loader.gif", alt: "", width: "32", height: "32", style: "display: none;", class: 'spinner'
   

@@ -1,0 +1,10 @@
+.single-column
+  h1
+    | Rediger virksomhed
+
+= render 'form'
+
+.single-column
+  = link_to 'vis', @company
+  |  |  
+  = link_to 'tilbage', companies_path
