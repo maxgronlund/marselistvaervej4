@@ -5,7 +5,7 @@ class CompaniesController < InheritedResources::Base
   
   def index
     session[:go_to_after_edit] = companies_path
-    index!
+    @companies = Company.order('title asc').paginate(:per_page => 8, :page => params[:page])
   end
 
 

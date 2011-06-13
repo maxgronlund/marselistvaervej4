@@ -19,5 +19,13 @@
     .borders
       div style="width:458px; height:376px; overflow:hidden"
         = image_tag @company.image.url(:preview), :border => 'none', :class => 'image_fix'
+      .tlf-box
+        .tlf-content
+          | T: 
+          = @company.phone
+        .tlf-content 
+          | - 
+        .tlf-content 
+          = link_to @company.homepage, @company.homepage
 
 = render :partial => "shared/news", :locals => { :newsposts => @newsposts }

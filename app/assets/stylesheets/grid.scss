@@ -195,13 +195,25 @@ $ninesixty-gutter-width: 20px; // default: 20px
 
 .content{
 	margin: 20px;
+	.content-company{
+		height:280px;
+		.pagination {
+
+			text-align:center;
+			@include grid(4);
+			margin-top: 10px;
+
+
+		}
+	}
 }
 
 .squared-box{
 	background-color:#fff;
     margin-top:36px;
 	@include grid(6);
-	min-height:376px;
+	height:376px;
+	display:block;
 	.borders{
 		border-style:solid;
 		border-width:1px;
@@ -360,7 +372,7 @@ a:hover{
 	float: left;
 	margin-left: 10px;
 	margin-right: 10px;
-	margin-top: 20px;
+	margin-top: 8px;
 	
 	.image{
 		width:70px;
@@ -373,4 +385,24 @@ a:hover{
 
 .fullpage{
 	@include grid(12);
+}
+
+.tlf-box{
+	float:right;
+	text-align:center;
+	background-color:#fff;
+	position:relative;
+	top:-100px;
+	border-style:solid;
+	border-right-style:none;
+	border-width:1px;
+	height:40px;
+	.tlf-content{
+		position:relative;
+		top:10px;
+		margin:10px;
+		font-size:14px;
+		display: inline;
+		height:40px;
+	}
 }
