@@ -670,11 +670,11 @@ a:hover {
   border-right-style: none;
   border-width: 1px;
   height: 40px;
-  filter: alpha(opacity=75);
+  filter: alpha(opacity=80);
   /* IE's opacity*/
-  opacity: 0.75;
+  opacity: 0.8;
 }
-/* line 409, ../../../app/assets/stylesheets/grid.scss */
+/* line 405, ../../../app/assets/stylesheets/grid.scss */
 .tlf-box .tlf-content {
   position: relative;
   top: 10px;
