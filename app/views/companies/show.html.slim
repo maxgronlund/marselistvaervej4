@@ -10,10 +10,9 @@
           |  | 
           = link_to t('admin.delete'), @company, :confirm => t('admin.are_you_sure'), :method => :delete
         h1
-          =raw @company.title
+          = @company.title
         =raw @company.body
-        =raw @company.phone
-        =raw @company.homepage      
+
 	    
   .squared-box
     .borders
@@ -26,6 +25,6 @@
         .tlf-content 
           | - 
         .tlf-content 
-          = link_to @company.homepage, @company.homepage
+          =raw @link
 
 = render :partial => "shared/news", :locals => { :newsposts => @newsposts }

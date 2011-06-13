@@ -39,6 +39,11 @@ class CompaniesController < InheritedResources::Base
       render :action => 'new'
     end
   end
+  
+  def show
+
+    @link = '<a href="http://'+@company.homepage+'">'+@company.homepage+'<a/>'
+  end
 
 
 
