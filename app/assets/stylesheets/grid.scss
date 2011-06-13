@@ -158,9 +158,48 @@ $ninesixty-gutter-width: 20px; // default: 20px
   text-align:right;
 }
 
+.menu-box{
+	background-image:url('/images/nav_left.png');
+	background-repeat:no-repeat;
+	width:400px;
+	height:51px;
+	position:relative;
+	left:-14px;
+	top:20px;
+	color:#fff;
+	.menu-back{
+		margin-left:14px;
+		background-color:#000;
+		height:30px;
+		padding-top:8px;
+		padding-left:8px;
+	}
+	h2{
+		color: #fff;
+		font-size:15px;
+		margin-top:1px;
+		margin-left:10px;
+	}
+	a{
+		text-decoration:none;
+		color:#fff;
+		font-size:15px;
+		margin-top:1px;
+		margin-left:19px;
+	}
+	a:hover{
+		color:#000;
+		background-color:#fff;
+	}
+}
+
+.content{
+	margin: 20px;
+}
+
 .squared-box{
 	background-color:#fff;
-    margin-top:10px;
+    margin-top:36px;
 	@include grid(6);
 	min-height:376px;
 	.borders{
@@ -170,44 +209,16 @@ $ninesixty-gutter-width: 20px; // default: 20px
 		display:block;
 	}
 	.content{
-		margin: 20px;
+		.content-top{ height:280px;}
 	}
 	.text-right{
 		text-align: right;
 	}
 	.menu-box{
-		background-image:url('/images/nav_left.png');
-		background-repeat:no-repeat;
 		width:400px;
 		height:51px;
-		position:relative;
-		left:-14px;
-		top:20px;
-		color:#fff;
-		.menu-back{
-			margin-left:14px;
-			background-color:#000;
-			height:30px;
-			padding-top:8px;
-			padding-left:8px;
-		}
-		h2{
-			color: #fff;
-			font-size:15px;
-			margin-top:1px;
-			margin-left:10px;
-		}
-		a{
-			text-decoration:none;
-			color:#fff;
-			font-size:15px;
-			margin-top:1px;
-			margin-left:19px;
-		}
-		a:hover{
-			color:#000;
-			background-color:#fff;
-		}
+		a{ color:#fff; }
+		a:hover{ color:#000; background-color:#fff; }
 	}
 }
 
@@ -231,29 +242,12 @@ $ninesixty-gutter-width: 20px; // default: 20px
 		@include grid(3);
 		@include alpha;
 		width:168px;
-
+		
 		.menu-box{
-			background-image:url('/images/nav_left.png');
-			background-repeat:no-repeat;
 			width:154px;
 			height:51px;
-			position:relative;
-			left:-14px;
-			top:20px;
-			color:#fff;
-			.menu-back{
-				margin-left:14px;
-				background-color:#000;
-				height:30px;
-				padding-top:8px;
-				padding-left:8px;
-			}
-			h2{
-				color: #fff;
-				font-size:15px;
-				margin-top:1px;
-				margin-left:10px;
-			}
+			a{ color:#fff; }
+			a:hover{ color:#000; background-color:#fff; }
 		}
 	}
 	.news{
@@ -270,13 +264,11 @@ $ninesixty-gutter-width: 20px; // default: 20px
 			width:230px;
 			font-weight: bold;
 		}
-		a
-		{
+		a{
 			text-decoration:none;
 			font-weight: bold;
 			color:#444;
-		}
-		a:hover{
+		}a:hover{
 			color:#fff;
 			background-color:#000;
 		}
@@ -288,10 +280,8 @@ $ninesixty-gutter-width: 20px; // default: 20px
 		.gray{
 			color:#999;
 		}
-		.text-right{
-			text-align: right;
-		}
 		.content{
+			margin-top:0px;
 			width:210px;
 		}
 	}	
@@ -322,3 +312,38 @@ a:hover{
 
 
 
+.google-box{
+	background-color:#fff;
+    margin-top:36px;
+	@include grid(6);
+	min-height:80px;
+	.borders{
+		border-style:solid;
+		border-width:1px;
+		height:80px;
+		display:block;
+	}
+	.menu-box{
+		width:400px;
+		height:51px;
+		a{ color:#fff; }
+		a:hover{ color:#000; background-color:#fff; }
+	}
+}
+
+.googlemap{
+	@include grid(12);
+	background-color:#fff;
+    margin-top:22px;
+	height:600px;
+	width:940px;
+	display:block;
+
+	.borders{
+		border-style:solid;
+		border-width:1px;
+		height:600px;
+
+	}
+	
+}

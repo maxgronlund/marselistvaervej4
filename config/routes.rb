@@ -6,6 +6,8 @@ Rails_template::Application.routes.draw do
 
   
 
+
+
   scope "/:locale" do
     resources :blogs, :comments, :companies,:home, :illustrations, :meetingrooms, :newsposts, :pages, :users, 
   end
@@ -18,7 +20,7 @@ Rails_template::Application.routes.draw do
   get "contact/index"
   get 'users/password'
   get "history/index"
-
+  get "googlemap/index"
 
 
   scope "/:locale" do

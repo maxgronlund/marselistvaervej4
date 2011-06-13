@@ -1,0 +1,58 @@
+.grid-container
+
+  .squared-box
+    .borders
+      .menu-box
+        = render :partial => "shared/menu"
+      .content
+
+
+
+        h1
+          | Login
+        = form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f|
+          = f.label :email 
+          br
+          = f.text_field :email 
+          br
+          p
+            br
+            = f.label :password
+            br
+            = f.password_field :password 
+            br
+            br
+            -if devise_mapping.rememberable?
+              = f.check_box :remember_me 
+              | husk mig
+            br
+            br
+
+        
+          = f.submit "Login"
+        br
+
+        
+        = render :partial => "devise/shared/links" 
+		
+
+
+  .squared-box
+    .borders
+      = image_tag 'frontpage-house.jpg', :border => 'none', :class => 'image_fix'
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

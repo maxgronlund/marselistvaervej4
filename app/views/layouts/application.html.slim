@@ -12,7 +12,7 @@ html
       var session_key_name = '#{Rails.application.config.session_options[:key]}';
     = yield :head 
   body
-    div class="background"
+    .background
       div class="container_12 two-column#{' background_grid' if RAILS_ENV == 'development' && (user_signed_in? && current_user.grid?)}"
         .grid-container
           .logo-box

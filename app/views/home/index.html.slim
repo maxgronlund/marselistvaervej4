@@ -5,14 +5,17 @@
       .menu-box
         = render :partial => "shared/menu"
       .content
+        .content-top
 
 
-        h1
-          =raw @welcome.title
-        =raw @welcome.body      
-	    - if can?(:edit, @welcome)
-	      .text-right
-	        = link_to t('admin.edit'), edit_page_path(@welcome)
+          h1
+            =raw @welcome.title
+          =raw @welcome.body      
+	      - if can?(:edit, @welcome)
+	        .text-right
+	          = link_to t('admin.edit'), edit_page_path(@welcome)
+		
+        = link_to 'FIND OS PÅ KORT', googlemap_index_path
 
   .squared-box
     .borders

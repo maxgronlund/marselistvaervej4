@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+  <title>Marselis Tværvej 4</title>
+
+  	<%= stylesheet_link_tag :all %>
+	<%= javascript_include_tag 'jquery.tools.min.js', 'rails', 'application' %>
+	<%= javascript_include_tag 'uploadify/swfobject', 'uploadify/jquery.uploadify.v2.1.0.min' %>
+	<%= csrf_meta_tag %>
+	<%= include_tiny_mce_if_needed %>
+
+	<script type="text/javascript">
+	    var session_key      = '<%= cookies[Rails.application.config.session_options[:key]] %>';
+	    var session_key_name = '<%= Rails.application.config.session_options[:key] %>';
+	</script>
+	
+	<%= yield(:head) %>
+	
+	
+  
+  </head>
+  <body onload="initialize()">
+  	<%= yield %>
+  </body>
+</html>

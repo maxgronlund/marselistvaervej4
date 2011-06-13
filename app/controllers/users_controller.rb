@@ -3,8 +3,8 @@ class UsersController < InheritedResources::Base
   load_and_authorize_resource
   
   respond_to :js, :only => [:create, :update]
-  
   helper_method :sort_column, :sort_direction
+  before_filter :get_news
   
   def index
     # def index  
