@@ -1,24 +1,41 @@
 .grid-container
-  h1
-    | Mødelokaler
-  
-  
+  .slim-box
+    .borders
+      .menu-box
+        = render :partial => "shared/menu"
+      .content
+
+  .slim-box
+    .borders
+      .content
+        h1
+          | Mødelokaler
+  .fullpage
+    .top-margin
   - @meetingrooms.each do |meetingroom|
-    .meeting-room
-      = image_tag meetingroom.image.url(:thumbnail), :border => 'none', :class => 'image_fix'
-    h1
-      = meetingroom.title
-    = meetingroom.body 
-    br
-    = link_to 'Show', meetingroom 
-    |  |  
-    = link_to 'Edit', edit_meetingroom_path(meetingroom) 
-    |  |  
-    = link_to 'Destroy', meetingroom, :confirm => 'Are you sure?', :method => :delete 
-    hr
+      .fullpage
+        .meeting-room
+          = link_to image_tag(meetingroom.image.url(:thumbnail), :border => 'none', :class => 'image_fix'), meetingroom
+          - if can? :manage, Meetingroom
+            br
+              = link_to 'rediger', edit_meetingroom_path(meetingroom) 
+              |  |  
+              = link_to 'slet', meetingroom, :confirm => 'Are you sure?', :method => :delete
+        .meeting-room-right
+          hr
+          h1
+            = meetingroom.title
+          = excerpt(meetingroom.body, '', :radius => 160)
+          br 
+          - if meetingroom.body.length > 160
+            = link_to 'læs mere', meetingroom_path(meetingroom)
+        
+      
   
-  
-  br
-  
-  = link_to 'New Meetingroom', new_meetingroom_path
+  - if can? :manage, Meetingroom
+    .fullpage
+      hr
+      br
+      
+      = link_to 'opret nyt mødelokale', new_meetingroom_path
   

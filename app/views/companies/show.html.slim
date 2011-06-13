@@ -7,6 +7,8 @@
       .content
         - if can?(:edit, @company)
 	      = link_to t('admin.edit'), edit_company_path(@company)
+          |  | 
+          = link_to t('admin.delete'), @company, :confirm => t('admin.are_you_sure'), :method => :delete
         h1
           =raw @company.title
         =raw @company.body

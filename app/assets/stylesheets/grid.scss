@@ -292,10 +292,20 @@ $ninesixty-gutter-width: 20px; // default: 20px
 
 .grid-container{
 	@include grid-container;
+	.top-margin{
+		margin-top:32px;
+	}
 }
 
 .meeting-room{
 	@include grid(2);
+	@include alpha;
+}
+
+.meeting-room-right{
+	@include grid(4);
+	@include omega;
+	@include grid-suffix(6);
 }
 
 a
@@ -309,10 +319,7 @@ a:hover{
 	background-color:#000;
 }
 
-
-
-
-.google-box{
+.slim-box{
 	background-color:#fff;
     margin-top:36px;
 	@include grid(6);
@@ -343,7 +350,27 @@ a:hover{
 		border-style:solid;
 		border-width:1px;
 		height:600px;
-
 	}
+}
+
+.company-index{
+	width:185px;
+	height: 60px;
+	display: inline;
+	float: left;
+	margin-left: 10px;
+	margin-right: 10px;
+	margin-top: 20px;
 	
+	.image{
+		width:70px;
+		height: 57px;
+		display: inline;
+		float: left;
+		margin:1px 10px 1px 1px;	
+	}
+}
+
+.fullpage{
+	@include grid(12);
 }
