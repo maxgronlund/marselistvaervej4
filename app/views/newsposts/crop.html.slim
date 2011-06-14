@@ -16,12 +16,12 @@
     	var rx = 140/coords.w;
     	var ry = 114/coords.h;
     	$('#preview').css({
-    		width: Math.round(rx * #{@company.image_geometry(:xxl).width}) + 'px',
-    		height: Math.round(ry * #{@company.image_geometry(:xxl).height}) + 'px',
+    		width: Math.round(rx * #{@newspost.image_geometry(:xxl).width}) + 'px',
+    		height: Math.round(ry * #{@newspost.image_geometry(:xxl).height}) + 'px',
     		marginLeft: '-' + Math.round(rx * coords.x) + 'px',
     		marginTop: '-' + Math.round(ry * coords.y) + 'px'
     	});
-      var ratio = #{@company.image_geometry(:original).width} / #{ @company.image_geometry(:xxl).width};
+      var ratio = #{@newspost.image_geometry(:original).width} / #{ @newspost.image_geometry(:xxl).width};
       $("#crop_x").val(Math.round(coords.x * ratio));
       $("#crop_y").val(Math.round(coords.y * ratio));
       $("#crop_w").val(Math.round(coords.w * ratio));
@@ -33,14 +33,14 @@
   div class="grid_3 alpha"
     h3 Preview:
     div style="width:140px; height:114px; overflow:hidden"
-      = image_tag @company.image.url(:xxl), :id => "preview"
+      = image_tag @newspost.image.url(:xxl), :id => "preview"
 
   div class="grid_9 omega"
     h3 Editor:
     div class="clear">&nbsp;
-    = image_tag @company.image.url(:xxl), :id => "cropbox"
+    = image_tag @newspost.image.url(:xxl), :id => "cropbox"
 
-    = form_for @company do |f|
+    = form_for @newspost do |f|
       - for attribute in [:crop_x, :crop_y, :crop_w, :crop_h]
         = f.hidden_field attribute, :id => attribute
       br

@@ -234,7 +234,7 @@ $ninesixty-gutter-width: 20px; // default: 20px
 	}
 }
 
-.news-box{
+.bottom-box{
 	@include grid(12);
 	background-color:#fff;
     margin-top:22px;
@@ -261,6 +261,19 @@ $ninesixty-gutter-width: 20px; // default: 20px
 			a{ color:#fff; }
 			a:hover{ color:#000; background-color:#fff; }
 		}
+	}
+	.right-side{
+
+		height:184px;
+		@include grid(8);
+		@include omega;
+		width:730px;
+		
+	
+	}
+	.booking-box{
+		margin-top:80px;
+		margin-left:20px;
 	}
 	.news{
 		height:184px;

@@ -1,17 +1,8 @@
 Rails_template::Application.routes.draw do
 
 
-
-
-
-  
-
-
-
-  resources :bookings
-
   scope "/:locale" do
-    resources :blogs, :comments, :companies,:home, :illustrations, :meetingrooms, :newsposts, :pages, :users, 
+    resources :bookings, :blogs, :comments, :companies,:home, :illustrations, :meetingrooms, :newsposts, :pages, :users, 
   end
 
   
@@ -40,6 +31,10 @@ Rails_template::Application.routes.draw do
   
   resources :blogs do
     resources :comments
+  end
+  
+  resources :meetingrooms do
+    resources :bookings
   end
   
   

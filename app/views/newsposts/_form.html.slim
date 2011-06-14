@@ -1,0 +1,30 @@
+.single-column
+  = form_for(@newspost, :html => { :multipart => true }) do |f|
+    - if @newspost.errors.any?
+      #error_explanation
+        h2
+          #{pluralize(@newspost.errors.count, "error")} prohibited this page from being saved:
+        ul
+          - @newspost.errors.full_messages.each do |msg|
+            li= msg
+
+    .field
+      | billed
+      br
+      = f.file_field :image
+    br
+    .field
+      | navn
+      br
+      = f.text_field :title
+    br
+    .field
+      = f.label :body
+  	br
+      = f.text_area :body, :class => "mceEditor"
+    br
+    
+    .actions
+        = f.submit 'Gem', disable_with: 'Gemmer...'
+        = image_tag "loader.gif", alt: "", width: "32", height: "32", style: "display: none;", class: 'spinner'
+  

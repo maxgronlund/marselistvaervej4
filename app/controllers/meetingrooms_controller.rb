@@ -35,6 +35,11 @@ class MeetingroomsController < InheritedResources::Base
     end
   end
   
+  def show
+    session[:go_to_after_edit] = meetingroom_path(@meetingroom)
+    show!
+  end
+  
 
   
   def crop
