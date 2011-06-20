@@ -24,6 +24,25 @@ $(document).ready(function() {
     $('form.upload .spinner').show();
     return true;
   });
+
+  $("#booking_created_at").datepicker({
+    dateFormat:'dd.mm.yy',
+    onchange: function(formatted, dates) {
+      $('#booking_created_at').DatePickerHide();
+    }
+  });
+  $('#booking_created_at').bind('change', function() {
+    var meeting_room_id = $('#booking_meetingroom_id').val();
+    var date = $('#booking_created_at').val();
+    $.ajax({
+      url: "/meetingrooms/"+meeting_room_id+"/bookings?date="+date,
+      context: document.body,
+      success: function(data) {
+        $('.bookings-calendar').replaceWith(data);
+      }
+    });
+    return true;
+  });
 });
 
 

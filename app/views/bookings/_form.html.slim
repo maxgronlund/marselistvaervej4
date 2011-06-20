@@ -1,4 +1,4 @@
-= form_for([@meetingroom, @booking], :html => { :multipart => true }) do |f|
+= form_for([@meetingroom, @booking], :html => { :multipart => true, :class => 'booking_form' }) do |f|
   -if @booking.errors.any?
     #error_explanation
       h2
@@ -22,12 +22,13 @@
         = current_user.name
         = f.hidden_field :bookers_name, :value => current_user.name
     -else
-      = f.label :bookers_name, 'Bookes til:'
+      = f.label :bookers_name, 'Bookes til: '
       = f.select :bookers_name, user_select
 
   br
-  .field
-    = f.date_select :created_at
+  .field.booking-date
+    = f.label :created_at, 'Dato: '
+    = f.text_field :created_at, value: l((@booking.created_at || Date.today).to_date), readonly: true
 
   br
   .field
@@ -39,7 +40,7 @@
   br
   
   .field
-    = f.label :attendees, 'Deltagerer:'
+    = f.label :attendees, 'Deltagere: '
     = f.text_field :attendees
   
   br

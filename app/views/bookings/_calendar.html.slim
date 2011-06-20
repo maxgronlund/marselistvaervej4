@@ -1,11 +1,12 @@
-.calendar
+.bookings-calendar
+  - date = @booking && @booking.created_at && @booking.created_at.to_date || @date || Date.today
   h1
-    = l (@date || Date.today)
+    = l date, :format => :long
 
   - meetingrooms.each do |meetingroom|
     .calendar-row
       hr
       h3
         = meetingroom.title
-      - meetingroom.bookings.for_day(@date || Date.today).each do |booking|
+      - meetingroom.bookings.for_day(date).each do |booking|
         = render :partial => "bookingcalendar/booking", :locals => { :booking => booking }
