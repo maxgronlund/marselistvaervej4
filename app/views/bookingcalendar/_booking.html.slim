@@ -1,0 +1,11 @@
+.booking-back
+  b
+    = booking.bookers_name
+  br
+  = l booking.created_at, :format => :date_month_and_year
+  br
+  
+  = l booking.starttime, :format => :bookingtime
+  |  -  
+  = l booking.endtime, :format => :bookingtime
+

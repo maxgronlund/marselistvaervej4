@@ -1,0 +1,14 @@
+.grid-container
+  h1
+    | Booking kalender
+
+
+-@meetingrooms.each do |meetingroom | 
+  .calendar-row
+    hr
+    h3
+      = meetingroom.title
+    -meetingroom.bookings.each do |booking|
+      = render :partial => "bookingcalendar/booking", :locals => { :booking => booking}
+      
+

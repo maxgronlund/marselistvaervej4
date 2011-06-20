@@ -1,5 +1,5 @@
 /* http://sonspring.com/journal/clearing-floats */
-/* line 3, ../../../app/assets/stylesheets/partials/_base.scss */
+/* line 3, /Users/synthmax/Dropbox/marselistvaervej4/app/assets/stylesheets/partials/_base.scss */
 .clear {
   clear: both;
   display: block;
@@ -9,146 +9,146 @@
   height: 0;
 }
 
-/* line 9, ../../../app/assets/stylesheets/partials/_color.scss */
+/* line 9, /Users/synthmax/Dropbox/marselistvaervej4/app/assets/stylesheets/partials/_color.scss */
 .color_black {
   background-color: black;
 }
 
-/* line 14, ../../../app/assets/stylesheets/partials/_color.scss */
+/* line 14, /Users/synthmax/Dropbox/marselistvaervej4/app/assets/stylesheets/partials/_color.scss */
 .color_white {
   background-color: #fff;
 }
 
-/* line 19, ../../../app/assets/stylesheets/partials/_color.scss */
+/* line 19, /Users/synthmax/Dropbox/marselistvaervej4/app/assets/stylesheets/partials/_color.scss */
 .color_light_gray {
   background-color: #eee;
 }
 
-/* line 24, ../../../app/assets/stylesheets/partials/_color.scss */
+/* line 24, /Users/synthmax/Dropbox/marselistvaervej4/app/assets/stylesheets/partials/_color.scss */
 .color_gray {
   background-color: #ddd;
 }
 
-/* line 29, ../../../app/assets/stylesheets/partials/_color.scss */
+/* line 29, /Users/synthmax/Dropbox/marselistvaervej4/app/assets/stylesheets/partials/_color.scss */
 .color_notice {
   color: #080;
 }
 
-/* line 1, ../../../app/assets/stylesheets/partials/_dimensions.scss */
+/* line 1, /Users/synthmax/Dropbox/marselistvaervej4/app/assets/stylesheets/partials/_dimensions.scss */
 .top_margin_32 {
   margin-top: 32px;
 }
 
-/* line 5, ../../../app/assets/stylesheets/partials/_dimensions.scss */
+/* line 5, /Users/synthmax/Dropbox/marselistvaervej4/app/assets/stylesheets/partials/_dimensions.scss */
 .top_margin_24 {
   margin-top: 24px;
 }
 
-/* line 9, ../../../app/assets/stylesheets/partials/_dimensions.scss */
+/* line 9, /Users/synthmax/Dropbox/marselistvaervej4/app/assets/stylesheets/partials/_dimensions.scss */
 .top_margin_16 {
   margin-top: 16px;
 }
 
-/* line 13, ../../../app/assets/stylesheets/partials/_dimensions.scss */
+/* line 13, /Users/synthmax/Dropbox/marselistvaervej4/app/assets/stylesheets/partials/_dimensions.scss */
 .top_margin_12 {
   margin-top: 12px;
 }
 
-/* line 17, ../../../app/assets/stylesheets/partials/_dimensions.scss */
+/* line 17, /Users/synthmax/Dropbox/marselistvaervej4/app/assets/stylesheets/partials/_dimensions.scss */
 .top_margin_10 {
   margin-top: 10px;
 }
 
-/* line 21, ../../../app/assets/stylesheets/partials/_dimensions.scss */
+/* line 21, /Users/synthmax/Dropbox/marselistvaervej4/app/assets/stylesheets/partials/_dimensions.scss */
 .top_margin_8 {
   margin-top: 8px;
 }
 
-/* line 25, ../../../app/assets/stylesheets/partials/_dimensions.scss */
+/* line 25, /Users/synthmax/Dropbox/marselistvaervej4/app/assets/stylesheets/partials/_dimensions.scss */
 .top_margin_6 {
   margin-top: 6px;
 }
 
-/* line 29, ../../../app/assets/stylesheets/partials/_dimensions.scss */
+/* line 29, /Users/synthmax/Dropbox/marselistvaervej4/app/assets/stylesheets/partials/_dimensions.scss */
 .top_margin_4 {
   margin-top: 4px;
 }
 
-/* line 33, ../../../app/assets/stylesheets/partials/_dimensions.scss */
+/* line 33, /Users/synthmax/Dropbox/marselistvaervej4/app/assets/stylesheets/partials/_dimensions.scss */
 .bottom_margin_32 {
   margin-bottom: 32px;
 }
 
-/* line 37, ../../../app/assets/stylesheets/partials/_dimensions.scss */
+/* line 37, /Users/synthmax/Dropbox/marselistvaervej4/app/assets/stylesheets/partials/_dimensions.scss */
 .bottom_margin_24 {
   margin-bottom: 24px;
 }
 
-/* line 41, ../../../app/assets/stylesheets/partials/_dimensions.scss */
+/* line 41, /Users/synthmax/Dropbox/marselistvaervej4/app/assets/stylesheets/partials/_dimensions.scss */
 .bottom_margin_16 {
   margin-bottom: 16px;
 }
 
-/* line 45, ../../../app/assets/stylesheets/partials/_dimensions.scss */
+/* line 45, /Users/synthmax/Dropbox/marselistvaervej4/app/assets/stylesheets/partials/_dimensions.scss */
 .bottom_margin_12 {
   margin-bottom: 12px;
 }
 
-/* line 49, ../../../app/assets/stylesheets/partials/_dimensions.scss */
+/* line 49, /Users/synthmax/Dropbox/marselistvaervej4/app/assets/stylesheets/partials/_dimensions.scss */
 .bottom_margin_8 {
   margin-bottom: 8px;
 }
 
-/* line 53, ../../../app/assets/stylesheets/partials/_dimensions.scss */
+/* line 53, /Users/synthmax/Dropbox/marselistvaervej4/app/assets/stylesheets/partials/_dimensions.scss */
 .bottom_margin_6 {
   margin-bottom: 6px;
 }
 
-/* line 57, ../../../app/assets/stylesheets/partials/_dimensions.scss */
+/* line 57, /Users/synthmax/Dropbox/marselistvaervej4/app/assets/stylesheets/partials/_dimensions.scss */
 .bottom_margin_4 {
   margin-bottom: 4px;
 }
 
-/* line 61, ../../../app/assets/stylesheets/partials/_dimensions.scss */
+/* line 61, /Users/synthmax/Dropbox/marselistvaervej4/app/assets/stylesheets/partials/_dimensions.scss */
 .height_24 {
   min-height: 24px;
 }
 
-/* line 65, ../../../app/assets/stylesheets/partials/_dimensions.scss */
+/* line 65, /Users/synthmax/Dropbox/marselistvaervej4/app/assets/stylesheets/partials/_dimensions.scss */
 .height_32 {
   min-height: 32px;
 }
 
-/* line 69, ../../../app/assets/stylesheets/partials/_dimensions.scss */
+/* line 69, /Users/synthmax/Dropbox/marselistvaervej4/app/assets/stylesheets/partials/_dimensions.scss */
 .round_corners {
   -moz-border-radius: 5px;
   border-radius: 5px;
 }
 
-/* line 74, ../../../app/assets/stylesheets/partials/_dimensions.scss */
+/* line 74, /Users/synthmax/Dropbox/marselistvaervej4/app/assets/stylesheets/partials/_dimensions.scss */
 .borders {
   border-style: solid;
   border-width: 1px;
 }
 
-/* line 1, ../../../app/assets/stylesheets/partials/_images.scss */
+/* line 1, /Users/synthmax/Dropbox/marselistvaervej4/app/assets/stylesheets/partials/_images.scss */
 .background_grid {
   background-image: url("/images/background_grid.png");
 }
 
-/* line 5, ../../../app/assets/stylesheets/partials/_images.scss */
+/* line 5, /Users/synthmax/Dropbox/marselistvaervej4/app/assets/stylesheets/partials/_images.scss */
 .background {
   background-image: url("/images/background.jpg");
   height: 100%;
 }
 
-/* line 10, ../../../app/assets/stylesheets/partials/_images.scss */
+/* line 10, /Users/synthmax/Dropbox/marselistvaervej4/app/assets/stylesheets/partials/_images.scss */
 a .image_fix {
   background-color: transparent;
   margin: 0px 0px -3px 0px;
 }
 
-/* line 15, ../../../app/assets/stylesheets/partials/_images.scss */
+/* line 15, /Users/synthmax/Dropbox/marselistvaervej4/app/assets/stylesheets/partials/_images.scss */
 a:hover .image_fix {
   background-color: #e1e0e0;
   margin: 0px 0px -3px 0px;

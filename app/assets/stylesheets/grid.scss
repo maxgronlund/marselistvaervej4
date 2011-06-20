@@ -424,3 +424,21 @@ a:hover{
 		height:40px;
 	}
 }
+
+.calendar-row{
+	@include grid(2);
+	@include alpha;
+	@include omega;
+	margin-right:6px;
+   
+    
+
+	.booking-back{
+		
+		padding:4px;
+		background-color:#999;
+		margin:6px;
+		
+	}
+}
+

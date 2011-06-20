@@ -699,3 +699,21 @@ a:hover {
   display: inline;
   height: 40px;
 }
+
+/* line 428, ../../../app/assets/stylesheets/grid.scss */
+.calendar-row {
+  display: inline;
+  float: left;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 140px;
+  margin-left: 0;
+  margin-right: 0;
+  margin-right: 6px;
+}
+/* line 436, ../../../app/assets/stylesheets/grid.scss */
+.calendar-row .booking-back {
+  padding: 4px;
+  background-color: #999;
+  margin: 6px;
+}

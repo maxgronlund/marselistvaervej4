@@ -41,7 +41,6 @@ class CompaniesController < InheritedResources::Base
   end
   
   def show
-
     @link = '<a href="http://'+@company.homepage+'">'+@company.homepage+'<a/>'
   end
 

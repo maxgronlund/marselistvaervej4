@@ -1,4 +1,1 @@
-  .menu-box
-      .menu-back
-        h2
-          | NEWS
+ = render :partial => "bookingcalendar/booking", :value => { :booking => booking}

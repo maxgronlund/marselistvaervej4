@@ -134,6 +134,7 @@ dk:
          default: "%d.%m.%Y"
          short: "%e. %b. %Y"
          long: "%e. %B %Y"
+
     
        day_names: [søndag, mandag, tirsdag, onsdag, torsdag, fredag, lørdag]
        abbr_day_names: [sø, ma, ti, 'on', to, fr, lø] # Note: unescaped 'on' is parsed as true
@@ -148,6 +149,7 @@ dk:
         long: "%A, %e. %B %Y, %H:%M"
         date_month_and_year: "%d %B %Y"
         year: "%Y"
+        bookingtime: "%H:%M"
       am: ""
       pm: ""
     

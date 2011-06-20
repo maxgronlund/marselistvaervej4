@@ -1,0 +1,2 @@
+module BookingcalendarHelper
+end

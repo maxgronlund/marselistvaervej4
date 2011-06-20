@@ -8,22 +8,22 @@
 #end
 
 
-#PAGES = [
-#'velkommen',
-#'welcome',
-#'om',
-#'about'
-#] if !defined?(PAGES)
-#
-#PAGES.each do |identity|
-#  Page.find_or_create_by_identity(identity)
-#end
+PAGES = [
+'velkommen',
+'welcome',
+'om',
+'about'
+] if !defined?(PAGES)
 
-User.create(:email => "max@synthmax.dk", :password => "rosalina", :role => "super", :name => "Max Grønlund", :language => "dk")
+PAGES.each do |identity|
+  Page.find_or_create_by_identity(identity)
+end
 
-#Page.create(:identity => "welcome_dk" , :title => 'Velkommen', :body => 'formålet med denne side kan beskrives her', :language => "dk")
-#Page.create(:identity => "welcome_en" , :title => 'Welcome', :body => 'The purpose of this site can be explained here', :language => "en")
-#Page.create(:identity => "about_dk" , :title => 'Om denne side', :body => 'En forklaring af, sidens forfattere, formål e.t.c.', :language => "dk")
-#Page.create(:identity => "about_en" , :title => 'About this site', :body => 'An explanation of the site. The authors. and the values', :language => "en")
-#
-#Page.create(:identity => "history_dk" , :title => 'Historie', :body => 'Århus Kommune købte ejendommen i 1986...', :language => "dk")
+#User.create(:email => "max@synthmax.dk", :password => "rosalina", :role => "super", :name => "Max Grønlund", :language => "dk")
+
+Page.create(:identity => "welcome_dk" , :title => 'Velkommen', :body => 'formålet med denne side kan beskrives her', :language => "dk")
+Page.create(:identity => "welcome_en" , :title => 'Welcome', :body => 'The purpose of this site can be explained here', :language => "en")
+Page.create(:identity => "about_dk" , :title => 'Om denne side', :body => 'En forklaring af, sidens forfattere, formål e.t.c.', :language => "dk")
+Page.create(:identity => "about_en" , :title => 'About this site', :body => 'An explanation of the site. The authors. and the values', :language => "en")
+
+Page.create(:identity => "history_dk" , :title => 'Historie', :body => 'Århus Kommune købte ejendommen i 1986...', :language => "dk")

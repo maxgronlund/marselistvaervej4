@@ -29,9 +29,8 @@
               | Booking
         .booking-box
           = link_to 'book mødelokale', new_meetingroom_booking_path(@meetingroom)
-          - if can_edit?
-            br
-            = link_to 'bookings', meetingroom_bookings_path(@meetingroom)
+          br
+          = link_to 'bookings', meetingroom_bookings_path(@meetingroom)
       .right-side
         | da
       
