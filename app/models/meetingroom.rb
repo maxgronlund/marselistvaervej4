@@ -28,5 +28,9 @@ class Meetingroom < ActiveRecord::Base
    def reprocess_image
      image.reprocess!
    end
-   
+
+  def available?(date, starttime, endtime)
+    bookings.for_day(date).overlapping(starttime, endtime).any?
+  end
+
 end

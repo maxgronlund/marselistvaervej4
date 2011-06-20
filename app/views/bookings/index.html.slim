@@ -29,7 +29,7 @@ br
   hr
 
 
-- if can_edit? 
+- if can_edit? && @meetingroom
   br 
   = link_to 'New Booking', new_meetingroom_booking_path(@meetingroom) 
 

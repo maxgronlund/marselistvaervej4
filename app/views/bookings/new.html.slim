@@ -1,0 +1,10 @@
+.main
+  h1 Opret booking
+
+  = render 'form'
+
+= render :partial => 'calendar'
+
+.clear
+
+/= link_to 'tilbage', meetingroom_bookings_path(@meetingroom)
