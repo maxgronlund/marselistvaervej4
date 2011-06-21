@@ -1,57 +1,54 @@
 = form_for([@meetingroom, @booking], :html => { :multipart => true, :class => 'booking_form' }) do |f|
   -if @booking.errors.any?
-    #error_explanation
-      h2
-        = pluralize(@booking.errors.count, "error")
-        | prohibited this booking from being saved:
+    h4 
+     .color_allert
+       | Ikke alle feldter er udfyldt korekt
 
-      ul
-        -@booking.errors.full_messages.each do |msg|
-          li
-            = msg 
-
-  .field
-    = f.label :meetingroom_id, 'Mødelokale'
-    br
-    = f.select :meetingroom_id, meetingrooms_select
-
+  -else
+    h4 Booking:
+ 
+  | Mødelokale
+  br/
+  = f.select :meetingroom_id, meetingrooms_select
+  
+  br/
+  br/
+  
+  -if(current_user.role == 'member' ) 
+    | Bookes af: 
+    br/
+    = current_user.name
+    = f.hidden_field :bookers_name, :value => current_user.name
+  -else
+    | Bookes til: 
+    br/
+    = f.select :bookers_name, user_select
+  
   br
-  .field
-    -if(current_user.role == 'member' ) 
-        | Bookes af: 
-        = current_user.name
-        = f.hidden_field :bookers_name, :value => current_user.name
-    -else
-      = f.label :bookers_name, 'Bookes til: '
-      = f.select :bookers_name, user_select
-
   br
   .field.booking-date
-    = f.label :created_at, 'Dato: '
-    = f.text_field :created_at, value: l((@booking.created_at || Date.today).to_date), readonly: true
-
-  br
-  .field
-    = f.label :starttime, 'Fra kl.'
+    | Dato: 
+    br
+    = f.text_field :created_at, value: l((@booking.created_at || Date.today).to_date), readonly: true, :size=>8
+  
+  
+  
+    | -Fra kl.
     = f.time_select :starttime
-    = f.label :endtime, ' - Til kl.'
+    |  - Til kl.
     = f.time_select :endtime
-
+  
+  
+  br/
+  
+  | Deltagere: 
+  = f.text_field :attendees, :size=>6
+  br/
+  = f.check_box :coffee_and_bread
+  |  Brød og kaffe
   br
   
-  .field
-    = f.label :attendees, 'Deltagere: '
-    = f.text_field :attendees
   
-  br
-  .field
-    = f.check_box :coffee_and_bread
-    = f.label :coffee_and_bread, 'Brød og kaffe'
-  br
-
-  
-
-  br
-  .actions
+  .links
     = f.submit 'Gem'
     = image_tag "loader.gif", alt: "", width: "32", height: "32", style: "display: none;", class: 'spinner'

@@ -2,33 +2,35 @@ class BookingsController < InheritedResources::Base
   load_and_authorize_resource
   belongs_to :meetingroom , :optional => true
   
-  def index
+  def new
+    new!
+ #   @booking.endtime = @booking.starttime + 10
+    
+  end
+  
+  def index 
+    @bookings = Booking.order('starttime asc').paginate(:per_page => 24, :page => params[:page])
+    @meetingroom = Meetingroom.first
     if request.xhr?
       @date = Date.parse params[:date]
       render '_calendar', layout: false
     end
-    #session[:go_to_after_edit] = meetingroom_bookings_path(@meetingroom)
   end
   
   def create
-    
-    goto = session[:go_to_after_edit] || bookings_path
     session[:go_to_after_edit] = nil
-    create! {goto}
+    @meetingroom = Meetingroom.first
+    create! { new_meetingroom_booking_path(@meetingroom)}
     
   end
   
   def update
-    goto = session[:go_to_after_edit] || bookings_path
+
     session[:go_to_after_edit] = nil
-    update! {goto}
+    @meetingroom = Meetingroom.first
+    update! { new_meetingroom_booking_path(@meetingroom)}
   end
   
-  def destroy
-    goto = session[:go_to_after_edit] || bookings_path
-    session[:go_to_after_edit] = nil
-    destroy! {goto}
-  end
-  
+
   
 end

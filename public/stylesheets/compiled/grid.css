@@ -711,9 +711,70 @@ a:hover {
   margin-right: 0;
   margin-right: 6px;
 }
-/* line 436, ../../../app/assets/stylesheets/grid.scss */
+/* line 434, ../../../app/assets/stylesheets/grid.scss */
 .calendar-row .booking-back {
   padding: 4px;
   background-color: #999;
   margin: 6px;
+}
+
+/* line 443, ../../../app/assets/stylesheets/grid.scss */
+#columns-3-2-2-1-2 {
+  min-height: 500px;
+  display: inline;
+  float: left;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 940px;
+  margin-top: 24px;
+}
+/* line 447, ../../../app/assets/stylesheets/grid.scss */
+#columns-3-2-2-1-2 .left-column {
+  display: inline;
+  float: left;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 220px;
+  margin-left: 0;
+}
+/* line 451, ../../../app/assets/stylesheets/grid.scss */
+#columns-3-2-2-1-2 .center-column1 {
+  display: inline;
+  float: left;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 60px;
+}
+/* line 454, ../../../app/assets/stylesheets/grid.scss */
+#columns-3-2-2-1-2 .center-column2 {
+  display: inline;
+  float: left;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 140px;
+}
+/* line 457, ../../../app/assets/stylesheets/grid.scss */
+#columns-3-2-2-1-2 .center-column3 {
+  display: inline;
+  float: left;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 220px;
+}
+/* line 460, ../../../app/assets/stylesheets/grid.scss */
+#columns-3-2-2-1-2 .right-column {
+  display: inline;
+  float: left;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 140px;
+  margin-right: 0;
+  padding-right: 80px;
+}
+
+/* line 467, ../../../app/assets/stylesheets/grid.scss */
+.bookings-calendar {
+  margin-top: 10px;
+  margin-left: 10px;
+  text-align: center;
 }

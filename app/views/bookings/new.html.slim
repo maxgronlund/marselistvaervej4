@@ -1,10 +1,32 @@
-.main
-  h1 Opret booking
+.grid-container
 
-  = render 'form'
+  .squared-box
+    .borders
+      .menu-box
+        = render :partial => "shared/menu"
+      .content
+        = render 'form'
+	       
 
-= render :partial => 'calendar'
+  .squared-box
+    .borders
+     = render :partial => 'calendar'
 
-.clear
+  .bottom-box
+    .borders
+      .left-side
+        .menu-box
+          .menu-back
+            h2
+              | Booking
+        .booking-box
+          = link_to 'book mødelokale', new_meetingroom_booking_path(@meetingroom)
+          br
+          = link_to 'bookings', meetingroom_bookings_path(@meetingroom)
 
-/= link_to 'tilbage', meetingroom_bookings_path(@meetingroom)
+
+      .right-side
+        | da
+      
+
+

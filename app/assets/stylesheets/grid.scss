@@ -430,8 +430,6 @@ a:hover{
 	@include alpha;
 	@include omega;
 	margin-right:6px;
-   
-    
 
 	.booking-back{
 		
@@ -440,5 +438,35 @@ a:hover{
 		margin:6px;
 		
 	}
+}
+
+#columns-3-2-2-1-2{
+	min-height:500px;
+	@include grid(12);
+	margin-top:24px;
+	.left-column{
+		@include grid(3);
+		@include alpha;
+	}
+	.center-column1{
+		@include grid(1);
+	}
+	.center-column2{
+		@include grid(2);
+	}
+	.center-column3{
+		@include grid(3);
+	}
+	.right-column{
+		@include grid(2);
+		@include omega;
+		@include grid-suffix(1)
+	}
+}
+
+.bookings-calendar{
+	margin-top:10px;
+	margin-left:10px;
+	text-align:center;
 }
 

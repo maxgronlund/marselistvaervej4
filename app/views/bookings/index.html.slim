@@ -1,35 +1,54 @@
-h1
- Kalender
+#columns-3-2-2-1-2
 
-br
-
--@bookings.each do |booking| 
-
-  = booking.meetingroom.title
-  br
-  = l booking.created_at, :format => :date_month_and_year
-  | - kl.
-  = l booking.starttime, :format => :bookingtime
-  |  til 
-  = l booking.endtime, :format => :bookingtime
-  br
-  | Deltaterer: 
-  = booking.attendees 
-  br
-  - if booking.coffee_and_bread
-    | Kaffe og brød
-  - else
-    br
-  br
-  = booking.bookers_name
-  br
-  = link_to 'Show', meetingroom_booking_path(booking.meetingroom, booking)
-  = link_to 'Edit', edit_meetingroom_booking_path(booking.meetingroom,booking) 
-  = link_to 'Destroy', booking, :confirm => 'Er du sikker?', :method => :delete
-  hr
-
-
-- if can_edit? && @meetingroom
-  br 
-  = link_to 'New Booking', new_meetingroom_booking_path(@meetingroom) 
-
+  h1
+   | Alle mødelokale reservationer
+  
+  .left-column
+    b  Tidspunkt
+  .center-column2
+    b  Mødelokale
+  .center-column2
+    b  Reserveret til
+  .center-column1
+    b  Deltagere
+  .center-column1
+    b  Kaffe
+  .right-column
+    | -
+ 
+  
+  -@bookings.each do |booking| 
+    div class="grid_10 alpha omega #{cycle('color_light_gray', 'color_gray')}"
+      .left-column
+	    = l booking.created_at, :format => :date_month_and_year
+	    | - kl.
+	    = l booking.starttime, :format => :bookingtime
+	    |  til 
+	    = l booking.endtime, :format => :bookingtime
+	  .center-column2
+	    - if booking.meetingroom != nil
+	        = booking.meetingroom.title
+	  .center-column2
+	    = booking.bookers_name
+	  .center-column1
+	    = booking.attendees 
+	  .center-column1
+	    - if booking.coffee_and_bread
+	        | Ja
+	    - else
+            | -
+	  .right-column
+	    - if booking.meetingroom != nil
+	        = link_to 'Show', meetingroom_booking_path(booking.meetingroom, booking)
+	        = link_to 'Edit', edit_meetingroom_booking_path(booking.meetingroom,booking) 
+	    = link_to 'Destroy', booking, :confirm => 'Er du sikker?', :method => :delete
+      hr
+  
+  div class="grid_10 prefix_1 suffix_1"
+      = will_paginate @bookings
+  
+  - if can_edit?
+    br 
+    = link_to 'New Booking', new_meetingroom_booking_path(@meetingroom) 
+  
+  
