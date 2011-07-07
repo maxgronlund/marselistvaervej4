@@ -9,13 +9,20 @@ require 'bundler/capistrano'
 
 # main details
 set :application, "marselistvaervej4"                                       # <<< change name
-server "46.4.64.81", :app, :web, :db, :primary => true
+server "188.40.142.76", :app, :web, :db, :primary => true
+set :rvm_type, :user
+set :rvm_ruby_string, 'ree@marselistvaervej4'
+
+# Old
+# server "46.4.64.81", :app, :web, :db, :primary => true
 
 # server details
 default_run_options[:pty] = true
 ssh_options[:forward_agent] = true
 set :deploy_to, "/var/www/#{application}"
-set :deploy_via, :remote_cache
+set :deploy_via, :copy
+set :copy_cache, true
+set :copy_exclude, ['**/.git', '.git']
 set :user, "deploy"
 set :use_sudo, false
 
