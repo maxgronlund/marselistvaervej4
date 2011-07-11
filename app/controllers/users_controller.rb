@@ -4,7 +4,7 @@ class UsersController < InheritedResources::Base
   
   respond_to :js, :only => [:create, :update]
   helper_method :sort_column, :sort_direction
-  before_filter :get_news
+  before_filter :get_internal_news
   
   def index
     # def index  

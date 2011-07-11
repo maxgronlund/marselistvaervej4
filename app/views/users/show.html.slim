@@ -1,23 +1,26 @@
-.single-column
-  h1= @user.name
-  = @user.email
-//  - if can_edit?
-//    br/
-//    #{t('user.role')}: #{@user.role}
-//    br/
-//    #{t('user.language')}: #{@user.language}
+.grid-container
 
-.single-column.top_margin_4
+  .squared-box
+    .borders.fixed-height
+      .menu-box
+        = render :partial => "shared/menu"
+      .content
+        .content-top
 
-  =image_tag @user.image.url(:medium), :border => 'none', :class => 'image_fix'
-  -if @user.image.url(:medium) == "/images/fallback/default_avatar_medium.jpg"
-    br
-    | TIME TO UPLOAD AN AVATAR!
-  - if can?(:manage, @user)
-    br
-    = link_to t('admin.edit'), edit_user_path(@user)
 
-//
-//.single-column.top_margin_4
-//  = link_to 'blog', user_blogs_path(@user)
-//
+          h1
+            = @user.name
+          = @user.email
+          - if can?(:manage, @user)
+            br
+            = link_to t('admin.edit'), edit_user_path(@user)
+		  
+	      
+  .squared-box
+    .borders.fixed-height
+      = image_tag 'frontpage-house.jpg', :border => 'none', :class => 'image_fix'
+
+= render :partial => "shared/news", :locals => { :newsposts => @newsposts }
+
+
+

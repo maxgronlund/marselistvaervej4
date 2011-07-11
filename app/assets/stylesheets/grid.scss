@@ -5,10 +5,35 @@
 
 @import "compass/reset";
 @import "960/grid";
+@import "compass/css3/border-radius";
 
 $ninesixty-columns: 12; // default: 12
 $ninesixty-grid-width: 960px; // default: 960px
 $ninesixty-gutter-width: 20px; // default: 20px
+
+.edit{
+	text-align:right;
+}
+
+
+
+
+.grid-1{ @include grid(1);min-height:1px; }
+.grid-2{ @include grid(2);min-height:1px;}
+.grid-3{ @include grid(3);min-height:1px;}
+.grid-4{ @include grid(4);min-height:1px;}
+.grid-5{ @include grid(5);min-height:1px;}
+.grid-6{ @include grid(6);min-height:1px;}
+.grid-7{ @include grid(7);min-height:1px;}
+.grid-8{ @include grid(8);min-height:1px; }
+.grid-9{ @include grid(9);min-height:1px; }
+.grid-10{ @include grid(10);min-height:1px; }
+.grid-11{ @include grid(11);min-height:1px; }
+.grid-12{ @include grid(12);min-height:1px; }
+.alpha{ @include alpha; }
+.omega{@include omega;}
+
+
 
 .two-column {
   @include grid-container;
@@ -212,12 +237,12 @@ $ninesixty-gutter-width: 20px; // default: 20px
 	background-color:#fff;
     margin-top:36px;
 	@include grid(6);
-	height:376px;
+	min-height:376px;
 	display:block;
 	.borders{
 		border-style:solid;
 		border-width:1px;
-		height:376px;
+		min-height:376px;
 		display:block;
 	}
 	.content{
@@ -232,6 +257,13 @@ $ninesixty-gutter-width: 20px; // default: 20px
 		a{ color:#fff; }
 		a:hover{ color:#000; background-color:#fff; }
 	}
+	.image-box{
+		height:376px;
+	}
+}
+
+.fixed-height{
+	height:376px;
 }
 
 .bottom-box{
@@ -469,4 +501,5 @@ a:hover{
 	margin-left:10px;
 	text-align:center;
 }
+
 

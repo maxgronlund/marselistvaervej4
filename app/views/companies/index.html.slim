@@ -1,6 +1,6 @@
 .grid-container
   .squared-box
-    .borders
+    .borders.fixed-height
       .menu-box
         = render :partial => "shared/menu"
       .content
@@ -17,7 +17,7 @@
         
 
   .squared-box
-    .borders
+    .borders.fixed-height
       = image_tag 'room.jpg', :border => 'none', :class => 'image_fix'
 
 = render :partial => "shared/news", :locals => { :newsposts => @newsposts }

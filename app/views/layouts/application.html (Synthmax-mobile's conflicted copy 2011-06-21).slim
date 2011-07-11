@@ -1,0 +1,31 @@
+doctype html
+html
+  head
+    title Marselis Tværvej 4
+
+    = stylesheet_link_tag 'compiled/grid.css', 'compiled/text.css', 'compiled/main.css', :media => 'screen, projection'
+    = javascript_include_tag 'jquery.tools.min.js', 'rails', 'application'
+    = csrf_meta_tag
+    = include_tiny_mce_if_needed
+    javascript:
+      var session_key      = '#{cookies[Rails.application.config.session_options[:key]]}';
+      var session_key_name = '#{Rails.application.config.session_options[:key]}';
+    = yield :head 
+  body
+    .background
+      div class="container_12 two-column#{' background_grid' if RAILS_ENV == 'development' && (user_signed_in? && current_user.grid?)}"
+        .grid-container
+          .logo-box
+            = link_to image_tag( 'logo.png'),root_path
+          .logedin-box
+            - if user_signed_in?
+            
+              = link_to 'min konto', current_user
+              |  |  
+              = link_to 'admin', admin_path
+              |  |  
+              = link_to 'mødelokaler' , meetingrooms_path
+              |  |  
+              = link_to 'booking kalender', bookingcalendar_index_path
+        = yield
+        .clear

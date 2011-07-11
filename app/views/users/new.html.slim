@@ -13,11 +13,6 @@
       br/
       = f.text_field :email
 
-    .field
-      = f.label :role, t('user.portrait')
-      br/
-      = f.file_field :image
-
 
     .field
       - if current_user.super?

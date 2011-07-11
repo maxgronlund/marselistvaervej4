@@ -7,8 +7,6 @@ class Illustration < ActiveRecord::Base
   validates_attachment_size :image, :less_than => 800.kilobytes
   validates_attachment_content_type :image, :content_type => ['image/jpeg','image/jpg','image/png','image/gif']
   
-  
-  
   def self.with_title(title)
     where(:title => title).first
   end

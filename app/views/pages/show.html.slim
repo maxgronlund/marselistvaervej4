@@ -1,14 +1,33 @@
-.single-column
-  h1= @page.title
+.grid-container
 
-div class="grid_4 suffix_7"
-  = @page.body.html_safe
+  .squared-box-no-height
+    .borders
+      .menu-box
+        = render :partial => "shared/menu"
+      .content
 
-- if can?(:manage, @page)
-  div class="grid_4 suffix_8 text_right"
-    br/
-    = link_to t('navigation.back'), :back
-    |  |
-    = link_to t('page.all_pages'), pages_path
-    |  |
-    = link_to t('admin.edit'), edit_page_path(@page)
+        h1
+          =raw @page.title
+        =raw @page.body      
+	    - if can?(:edit, @page)
+	      .text-right
+	        = link_to t('admin.edit'), edit_page_path(@page)
+
+  .squared-box
+    .borders
+      = image_tag 'frontpage-house.jpg', :border => 'none', :class => 'image_fix'
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

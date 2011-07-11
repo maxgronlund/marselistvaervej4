@@ -1,0 +1,64 @@
+= form_for(@booking, :html => { :multipart => true }) do |f|
+  -if @booking.errors.any?
+	#error_explanation
+      h2
+        = pluralize(@booking.errors.count, "error")
+        | prohibited this booking from being saved:
+
+      ul
+        -@booking.errors.full_messages.each do |msg|
+          li
+            = msg 
+
+
+  .field
+    | Mødelokale
+    br
+    = f.select :meetingroom_id, @select_meetingroom
+  br
+  .field
+    -if(current_user.role == 'member' ) 
+        | Bookes af: 
+        = @user.name
+        = f.hidden_field :bookers_name, :value => @user.name 
+    -else
+      | Bookes til: 
+      = f.select :bookers_name, @select_user
+
+
+	
+	
+  br
+  .field
+	= f.date_select :created_at
+
+  br
+  .field
+
+    | Fra kl.
+    = f.time_select :starttime
+    | - Til kl. 
+    = f.time_select :endtime
+
+  
+  br
+  
+  .field
+    | Deltagerer: 
+    = f.text_field :attendees
+  
+  br
+  .field
+    = f.check_box :coffee_and_bread
+    | Brød og kaffe
+  br
+
+  
+
+  br
+  .actions
+    = f.submit 'Gem'
+    = image_tag "loader.gif", alt: "", width: "32", height: "32", style: "display: none;", class: 'spinner'
+
+
+
