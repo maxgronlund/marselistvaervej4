@@ -1,10 +1,7 @@
 Rails_template::Application.routes.draw do
 
-
-
-
   scope "/:locale" do
-    resources :bookings, :blogs, :comments, :companies,:home, :illustrations, :meetingrooms, :newsposts, :pages, :users, 
+    resources :bookings, :blogs, :comments, :companies,:home, :illustrations, :meetingrooms, :newsposts, :pages, :users
   end
 
   
