@@ -54,3 +54,12 @@ namespace :deploy do
 end
 
 after 'deploy:update_code', 'deploy:symlink_shared'
+
+desc "Tail all or a single remote file"
+task :tail do
+  ENV["LOGFILE"] ||= "*.log"
+  run "tail -f #{shared_path}/log/#{ENV["LOGFILE"]}" do |channel, stream, data|
+    puts "#{data}"
+    break if stream == :err
+  end
+end
