@@ -28,5 +28,10 @@ class Newspost < ActiveRecord::Base
      image.reprocess!
    end
    
+   scope :internal, where(:internal_letter => true)
+   scope :external, where(:internal_letter => false)
+   
+   
+   
    
 end

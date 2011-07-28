@@ -5,12 +5,19 @@
       .menu-box
         = render :partial => "shared/menu"
       .content
-        - if can?(:edit, @newspost)
-	      = link_to t('admin.edit'), edit_newspost_path(@newspost)
+
         h1
           =raw @newspost.title
         =raw @newspost.body
-    
+        br
+        br
+        - if can?(:edit, @newspost)
+          - if @newspost.internal_letter?
+            b • intern nyhen
+          - else
+            b • offentlig nyhed
+          .edit
+	        = link_to t('admin.edit'), edit_newspost_path(@newspost), :class => 'button'
 	    
   .squared-box
 

@@ -18,7 +18,10 @@ html
       div class="container_12 two-column#{' background_grid' if RAILS_ENV == 'development' && (user_signed_in? && current_user.grid?)}"
         .grid-container
           .logo-box
-            = link_to image_tag( 'logo.png'),root_path
+            - if user_signed_in?
+              = link_to image_tag( 'logo.png'),user_path(current_user)
+            - else
+              = link_to image_tag( 'logo.png'),root_path
           .logedin-box
             - if user_signed_in?
             

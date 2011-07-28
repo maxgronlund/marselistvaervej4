@@ -4,6 +4,13 @@ class ApplicationController < ActionController::Base
   
  before_filter :set_locale
  
+ def after_sign_in_path_for(resource)
+   if current_user.admin_or_super?
+     admin_path
+   else
+     user_path(resource)
+   end
+ end
  
   def set_locale
    I18n.locale = 'dk'
@@ -20,11 +27,11 @@ class ApplicationController < ActionController::Base
   end
   
   def get_news
-    @newsposts = Newspost.order('created_at desc').paginate(:per_page => 3, :page => params[:page])
+    @newsposts = Newspost.external.order('created_at desc').paginate(:per_page => 3, :page => params[:page])
   end
   
   def get_internal_news
-    @newsposts = Newspost.order('created_at desc').paginate(:per_page => 3, :page => params[:page])
+    @newsposts = Newspost.internal.order('created_at desc').paginate(:per_page => 3, :page => params[:page])
   end
  
 private  

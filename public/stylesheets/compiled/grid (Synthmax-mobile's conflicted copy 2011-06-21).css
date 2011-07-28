@@ -2,7 +2,7 @@
  * Learn more ~ http://960.gs/
  * *
  * Licensed under GPL and MIT. */
-/* line 17, ../../../../../.rvm/gems/ruby-1.9.2-rc2/gems/compass-0.11.1/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 17, ../../../../../.rvm/gems/ruby-1.9.2-rc2@railspre/gems/compass-0.11.1/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -24,57 +24,57 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 
-/* line 20, ../../../../../.rvm/gems/ruby-1.9.2-rc2/gems/compass-0.11.1/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 20, ../../../../../.rvm/gems/ruby-1.9.2-rc2@railspre/gems/compass-0.11.1/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 body {
   line-height: 1;
 }
 
-/* line 22, ../../../../../.rvm/gems/ruby-1.9.2-rc2/gems/compass-0.11.1/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 22, ../../../../../.rvm/gems/ruby-1.9.2-rc2@railspre/gems/compass-0.11.1/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 ol, ul {
   list-style: none;
 }
 
-/* line 24, ../../../../../.rvm/gems/ruby-1.9.2-rc2/gems/compass-0.11.1/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 24, ../../../../../.rvm/gems/ruby-1.9.2-rc2@railspre/gems/compass-0.11.1/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/* line 26, ../../../../../.rvm/gems/ruby-1.9.2-rc2/gems/compass-0.11.1/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 26, ../../../../../.rvm/gems/ruby-1.9.2-rc2@railspre/gems/compass-0.11.1/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 caption, th, td {
   text-align: left;
   font-weight: normal;
   vertical-align: middle;
 }
 
-/* line 28, ../../../../../.rvm/gems/ruby-1.9.2-rc2/gems/compass-0.11.1/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 28, ../../../../../.rvm/gems/ruby-1.9.2-rc2@railspre/gems/compass-0.11.1/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 q, blockquote {
   quotes: none;
 }
-/* line 101, ../../../../../.rvm/gems/ruby-1.9.2-rc2/gems/compass-0.11.1/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 101, ../../../../../.rvm/gems/ruby-1.9.2-rc2@railspre/gems/compass-0.11.1/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 q:before, q:after, blockquote:before, blockquote:after {
   content: "";
   content: none;
 }
 
-/* line 30, ../../../../../.rvm/gems/ruby-1.9.2-rc2/gems/compass-0.11.1/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 30, ../../../../../.rvm/gems/ruby-1.9.2-rc2@railspre/gems/compass-0.11.1/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 a img {
   border: none;
 }
 
-/* line 115, ../../../../../.rvm/gems/ruby-1.9.2-rc2/gems/compass-0.11.1/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 115, ../../../../../.rvm/gems/ruby-1.9.2-rc2@railspre/gems/compass-0.11.1/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
   display: block;
 }
 
-/* line 13, ../../../app/assets/stylesheets/grid.scss */
+/* line 13, ../../../app/assets/stylesheets/grid (Synthmax-mobile's conflicted copy 2011-06-21).scss */
 .two-column {
   margin-left: auto;
   margin-right: auto;
   width: 960px;
 }
-/* line 20, ../../../app/assets/stylesheets/grid.scss */
+/* line 20, ../../../app/assets/stylesheets/grid (Synthmax-mobile's conflicted copy 2011-06-21).scss */
 .two-column #header,
 .two-column #footer,
 .two-column #sidebar,
@@ -85,24 +85,24 @@ footer, header, hgroup, menu, nav, section {
   margin-left: 10px;
   margin-right: 10px;
 }
-/* line 23, ../../../app/assets/stylesheets/grid.scss */
+/* line 23, ../../../app/assets/stylesheets/grid (Synthmax-mobile's conflicted copy 2011-06-21).scss */
 .two-column #header, .two-column #footer, .two-column .single-column {
   width: 940px;
 }
-/* line 25, ../../../app/assets/stylesheets/grid.scss */
+/* line 25, ../../../app/assets/stylesheets/grid (Synthmax-mobile's conflicted copy 2011-06-21).scss */
 .two-column #main-content {
   width: 620px;
 }
-/* line 27, ../../../app/assets/stylesheets/grid.scss */
+/* line 27, ../../../app/assets/stylesheets/grid (Synthmax-mobile's conflicted copy 2011-06-21).scss */
 .two-column #sidebar {
   width: 300px;
 }
-/* line 29, ../../../app/assets/stylesheets/grid.scss */
+/* line 29, ../../../app/assets/stylesheets/grid (Synthmax-mobile's conflicted copy 2011-06-21).scss */
 .two-column #left-box {
   width: 460px;
 }
 
-/* line 35, ../../../app/assets/stylesheets/grid.scss */
+/* line 35, ../../../app/assets/stylesheets/grid (Synthmax-mobile's conflicted copy 2011-06-21).scss */
 #header .locale {
   display: inline;
   float: left;
@@ -111,7 +111,7 @@ footer, header, hgroup, menu, nav, section {
   width: 60px;
   margin-left: 0;
 }
-/* line 39, ../../../app/assets/stylesheets/grid.scss */
+/* line 39, ../../../app/assets/stylesheets/grid (Synthmax-mobile's conflicted copy 2011-06-21).scss */
 #header .nav {
   display: inline;
   float: left;
@@ -121,7 +121,7 @@ footer, header, hgroup, menu, nav, section {
   margin-top: 8px;
   vertical-align: baseline;
 }
-/* line 44, ../../../app/assets/stylesheets/grid.scss */
+/* line 44, ../../../app/assets/stylesheets/grid (Synthmax-mobile's conflicted copy 2011-06-21).scss */
 #header .session {
   display: inline;
   float: left;
@@ -132,7 +132,7 @@ footer, header, hgroup, menu, nav, section {
   text-align: right;
   vertical-align: baseline;
 }
-/* line 50, ../../../app/assets/stylesheets/grid.scss */
+/* line 50, ../../../app/assets/stylesheets/grid (Synthmax-mobile's conflicted copy 2011-06-21).scss */
 #header .search {
   display: inline;
   float: left;
@@ -143,7 +143,7 @@ footer, header, hgroup, menu, nav, section {
   margin-top: 8px;
 }
 
-/* line 57, ../../../app/assets/stylesheets/grid.scss */
+/* line 57, ../../../app/assets/stylesheets/grid (Synthmax-mobile's conflicted copy 2011-06-21).scss */
 .section {
   display: inline;
   float: left;
@@ -155,7 +155,7 @@ footer, header, hgroup, menu, nav, section {
   margin-right: 0;
 }
 
-/* line 65, ../../../app/assets/stylesheets/grid.scss */
+/* line 65, ../../../app/assets/stylesheets/grid (Synthmax-mobile's conflicted copy 2011-06-21).scss */
 .section-edit {
   display: inline;
   float: left;
@@ -167,7 +167,7 @@ footer, header, hgroup, menu, nav, section {
   margin-right: 0;
 }
 
-/* line 72, ../../../app/assets/stylesheets/grid.scss */
+/* line 72, ../../../app/assets/stylesheets/grid (Synthmax-mobile's conflicted copy 2011-06-21).scss */
 .blog-header {
   display: inline;
   float: left;
@@ -179,7 +179,7 @@ footer, header, hgroup, menu, nav, section {
   margin-right: 0;
 }
 
-/* line 78, ../../../app/assets/stylesheets/grid.scss */
+/* line 78, ../../../app/assets/stylesheets/grid (Synthmax-mobile's conflicted copy 2011-06-21).scss */
 .blog-image {
   display: inline;
   float: left;
@@ -190,7 +190,7 @@ footer, header, hgroup, menu, nav, section {
   margin-top: 24px;
 }
 
-/* line 83, ../../../app/assets/stylesheets/grid.scss */
+/* line 83, ../../../app/assets/stylesheets/grid (Synthmax-mobile's conflicted copy 2011-06-21).scss */
 .blog-content {
   display: inline;
   float: left;
@@ -202,7 +202,7 @@ footer, header, hgroup, menu, nav, section {
   margin-top: 24px;
 }
 
-/* line 89, ../../../app/assets/stylesheets/grid.scss */
+/* line 89, ../../../app/assets/stylesheets/grid (Synthmax-mobile's conflicted copy 2011-06-21).scss */
 .blog-comments {
   display: inline;
   float: left;
@@ -215,7 +215,7 @@ footer, header, hgroup, menu, nav, section {
   margin-right: 0;
 }
 
-/* line 96, ../../../app/assets/stylesheets/grid.scss */
+/* line 96, ../../../app/assets/stylesheets/grid (Synthmax-mobile's conflicted copy 2011-06-21).scss */
 .blog-comments-title, .blog-comments-new {
   display: inline;
   float: left;
@@ -229,7 +229,7 @@ footer, header, hgroup, menu, nav, section {
   margin-top: 10px;
 }
 
-/* line 104, ../../../app/assets/stylesheets/grid.scss */
+/* line 104, ../../../app/assets/stylesheets/grid (Synthmax-mobile's conflicted copy 2011-06-21).scss */
 .blog-comment-image {
   display: inline;
   float: left;
@@ -241,7 +241,7 @@ footer, header, hgroup, menu, nav, section {
   text-align: right;
 }
 
-/* line 110, ../../../app/assets/stylesheets/grid.scss */
+/* line 110, ../../../app/assets/stylesheets/grid (Synthmax-mobile's conflicted copy 2011-06-21).scss */
 .blog-comment-content {
   display: inline;
   float: left;
@@ -253,7 +253,7 @@ footer, header, hgroup, menu, nav, section {
   margin-top: 10px;
 }
 
-/* line 119, ../../../app/assets/stylesheets/grid.scss */
+/* line 119, ../../../app/assets/stylesheets/grid (Synthmax-mobile's conflicted copy 2011-06-21).scss */
 .user-image {
   display: inline;
   float: left;
@@ -263,7 +263,7 @@ footer, header, hgroup, menu, nav, section {
   margin-left: 0;
 }
 
-/* line 123, ../../../app/assets/stylesheets/grid.scss */
+/* line 123, ../../../app/assets/stylesheets/grid (Synthmax-mobile's conflicted copy 2011-06-21).scss */
 .user-name {
   display: inline;
   float: left;
@@ -272,7 +272,7 @@ footer, header, hgroup, menu, nav, section {
   width: 140px;
 }
 
-/* line 126, ../../../app/assets/stylesheets/grid.scss */
+/* line 126, ../../../app/assets/stylesheets/grid (Synthmax-mobile's conflicted copy 2011-06-21).scss */
 .user-email {
   display: inline;
   float: left;
@@ -281,7 +281,7 @@ footer, header, hgroup, menu, nav, section {
   width: 220px;
 }
 
-/* line 129, ../../../app/assets/stylesheets/grid.scss */
+/* line 129, ../../../app/assets/stylesheets/grid (Synthmax-mobile's conflicted copy 2011-06-21).scss */
 .user-role {
   display: inline;
   float: left;
@@ -292,7 +292,7 @@ footer, header, hgroup, menu, nav, section {
   margin-right: 0;
 }
 
-/* line 135, ../../../app/assets/stylesheets/grid.scss */
+/* line 135, ../../../app/assets/stylesheets/grid (Synthmax-mobile's conflicted copy 2011-06-21).scss */
 .pagination {
   text-align: center;
   display: inline;
@@ -303,7 +303,7 @@ footer, header, hgroup, menu, nav, section {
   margin-top: 10px;
 }
 
-/* line 144, ../../../app/assets/stylesheets/grid.scss */
+/* line 144, ../../../app/assets/stylesheets/grid (Synthmax-mobile's conflicted copy 2011-06-21).scss */
 .logo-box {
   margin-top: 36px;
   display: inline;
@@ -314,12 +314,12 @@ footer, header, hgroup, menu, nav, section {
   margin-left: 0;
   height: 72px;
 }
-/* line 149, ../../../app/assets/stylesheets/grid.scss */
+/* line 149, ../../../app/assets/stylesheets/grid (Synthmax-mobile's conflicted copy 2011-06-21).scss */
 .logo-box a:hover {
   background-color: transparent;
 }
 
-/* line 154, ../../../app/assets/stylesheets/grid.scss */
+/* line 154, ../../../app/assets/stylesheets/grid (Synthmax-mobile's conflicted copy 2011-06-21).scss */
 .logedin-box {
   margin-top: 36px;
   display: inline;
@@ -331,7 +331,7 @@ footer, header, hgroup, menu, nav, section {
   text-align: right;
 }
 
-/* line 161, ../../../app/assets/stylesheets/grid.scss */
+/* line 161, ../../../app/assets/stylesheets/grid (Synthmax-mobile's conflicted copy 2011-06-21).scss */
 .menu-box {
   background-image: url("/images/nav_left.png");
   background-repeat: no-repeat;
@@ -342,7 +342,7 @@ footer, header, hgroup, menu, nav, section {
   top: 20px;
   color: #fff;
 }
-/* line 170, ../../../app/assets/stylesheets/grid.scss */
+/* line 170, ../../../app/assets/stylesheets/grid (Synthmax-mobile's conflicted copy 2011-06-21).scss */
 .menu-box .menu-back {
   margin-left: 14px;
   background-color: #000;
@@ -350,14 +350,14 @@ footer, header, hgroup, menu, nav, section {
   padding-top: 8px;
   padding-left: 8px;
 }
-/* line 177, ../../../app/assets/stylesheets/grid.scss */
+/* line 177, ../../../app/assets/stylesheets/grid (Synthmax-mobile's conflicted copy 2011-06-21).scss */
 .menu-box h2 {
   color: #fff;
   font-size: 15px;
   margin-top: 1px;
   margin-left: 10px;
 }
-/* line 183, ../../../app/assets/stylesheets/grid.scss */
+/* line 183, ../../../app/assets/stylesheets/grid (Synthmax-mobile's conflicted copy 2011-06-21).scss */
 .menu-box a {
   text-decoration: none;
   color: #fff;
@@ -365,21 +365,21 @@ footer, header, hgroup, menu, nav, section {
   margin-top: 1px;
   margin-left: 19px;
 }
-/* line 190, ../../../app/assets/stylesheets/grid.scss */
+/* line 190, ../../../app/assets/stylesheets/grid (Synthmax-mobile's conflicted copy 2011-06-21).scss */
 .menu-box a:hover {
   color: #000;
   background-color: #fff;
 }
 
-/* line 196, ../../../app/assets/stylesheets/grid.scss */
+/* line 196, ../../../app/assets/stylesheets/grid (Synthmax-mobile's conflicted copy 2011-06-21).scss */
 .content {
   margin: 20px;
 }
-/* line 198, ../../../app/assets/stylesheets/grid.scss */
+/* line 198, ../../../app/assets/stylesheets/grid (Synthmax-mobile's conflicted copy 2011-06-21).scss */
 .content .content-company {
   height: 280px;
 }
-/* line 200, ../../../app/assets/stylesheets/grid.scss */
+/* line 200, ../../../app/assets/stylesheets/grid (Synthmax-mobile's conflicted copy 2011-06-21).scss */
 .content .content-company .pagination {
   text-align: center;
   display: inline;
@@ -390,7 +390,7 @@ footer, header, hgroup, menu, nav, section {
   margin-top: 10px;
 }
 
-/* line 211, ../../../app/assets/stylesheets/grid.scss */
+/* line 211, ../../../app/assets/stylesheets/grid (Synthmax-mobile's conflicted copy 2011-06-21).scss */
 .squared-box {
   background-color: #fff;
   margin-top: 36px;
@@ -402,37 +402,37 @@ footer, header, hgroup, menu, nav, section {
   height: 376px;
   display: block;
 }
-/* line 217, ../../../app/assets/stylesheets/grid.scss */
+/* line 217, ../../../app/assets/stylesheets/grid (Synthmax-mobile's conflicted copy 2011-06-21).scss */
 .squared-box .borders {
   border-style: solid;
   border-width: 1px;
   height: 376px;
   display: block;
 }
-/* line 224, ../../../app/assets/stylesheets/grid.scss */
+/* line 224, ../../../app/assets/stylesheets/grid (Synthmax-mobile's conflicted copy 2011-06-21).scss */
 .squared-box .content .content-top {
   height: 280px;
 }
-/* line 226, ../../../app/assets/stylesheets/grid.scss */
+/* line 226, ../../../app/assets/stylesheets/grid (Synthmax-mobile's conflicted copy 2011-06-21).scss */
 .squared-box .text-right {
   text-align: right;
 }
-/* line 229, ../../../app/assets/stylesheets/grid.scss */
+/* line 229, ../../../app/assets/stylesheets/grid (Synthmax-mobile's conflicted copy 2011-06-21).scss */
 .squared-box .menu-box {
   width: 400px;
   height: 51px;
 }
-/* line 232, ../../../app/assets/stylesheets/grid.scss */
+/* line 232, ../../../app/assets/stylesheets/grid (Synthmax-mobile's conflicted copy 2011-06-21).scss */
 .squared-box .menu-box a {
   color: #fff;
 }
-/* line 233, ../../../app/assets/stylesheets/grid.scss */
+/* line 233, ../../../app/assets/stylesheets/grid (Synthmax-mobile's conflicted copy 2011-06-21).scss */
 .squared-box .menu-box a:hover {
   color: #000;
   background-color: #fff;
 }
 
-/* line 237, ../../../app/assets/stylesheets/grid.scss */
+/* line 237, ../../../app/assets/stylesheets/grid (Synthmax-mobile's conflicted copy 2011-06-21).scss */
 .bottom-box {
   display: inline;
   float: left;
@@ -445,13 +445,13 @@ footer, header, hgroup, menu, nav, section {
   width: 940px;
   display: block;
 }
-/* line 245, ../../../app/assets/stylesheets/grid.scss */
+/* line 245, ../../../app/assets/stylesheets/grid (Synthmax-mobile's conflicted copy 2011-06-21).scss */
 .bottom-box .borders {
   border-style: solid;
   border-width: 1px;
   height: 184px;
 }
-/* line 251, ../../../app/assets/stylesheets/grid.scss */
+/* line 251, ../../../app/assets/stylesheets/grid (Synthmax-mobile's conflicted copy 2011-06-21).scss */
 .bottom-box .left-side {
   height: 184px;
   display: inline;
@@ -462,21 +462,21 @@ footer, header, hgroup, menu, nav, section {
   margin-left: 0;
   width: 168px;
 }
-/* line 258, ../../../app/assets/stylesheets/grid.scss */
+/* line 258, ../../../app/assets/stylesheets/grid (Synthmax-mobile's conflicted copy 2011-06-21).scss */
 .bottom-box .left-side .menu-box {
   width: 154px;
   height: 51px;
 }
-/* line 261, ../../../app/assets/stylesheets/grid.scss */
+/* line 261, ../../../app/assets/stylesheets/grid (Synthmax-mobile's conflicted copy 2011-06-21).scss */
 .bottom-box .left-side .menu-box a {
   color: #fff;
 }
-/* line 262, ../../../app/assets/stylesheets/grid.scss */
+/* line 262, ../../../app/assets/stylesheets/grid (Synthmax-mobile's conflicted copy 2011-06-21).scss */
 .bottom-box .left-side .menu-box a:hover {
   color: #000;
   background-color: #fff;
 }
-/* line 265, ../../../app/assets/stylesheets/grid.scss */
+/* line 265, ../../../app/assets/stylesheets/grid (Synthmax-mobile's conflicted copy 2011-06-21).scss */
 .bottom-box .right-side {
   height: 184px;
   display: inline;
@@ -487,12 +487,12 @@ footer, header, hgroup, menu, nav, section {
   margin-right: 0;
   width: 730px;
 }
-/* line 274, ../../../app/assets/stylesheets/grid.scss */
+/* line 274, ../../../app/assets/stylesheets/grid (Synthmax-mobile's conflicted copy 2011-06-21).scss */
 .bottom-box .booking-box {
   margin-top: 80px;
   margin-left: 20px;
 }
-/* line 278, ../../../app/assets/stylesheets/grid.scss */
+/* line 278, ../../../app/assets/stylesheets/grid (Synthmax-mobile's conflicted copy 2011-06-21).scss */
 .bottom-box .news {
   height: 184px;
   display: inline;
@@ -502,7 +502,7 @@ footer, header, hgroup, menu, nav, section {
   width: 220px;
   width: 230px;
 }
-/* line 283, ../../../app/assets/stylesheets/grid.scss */
+/* line 283, ../../../app/assets/stylesheets/grid (Synthmax-mobile's conflicted copy 2011-06-21).scss */
 .bottom-box .news .header {
   height: 54px;
   margin-top: 10px;
@@ -516,50 +516,50 @@ footer, header, hgroup, menu, nav, section {
   width: 230px;
   font-weight: bold;
 }
-/* line 292, ../../../app/assets/stylesheets/grid.scss */
+/* line 292, ../../../app/assets/stylesheets/grid (Synthmax-mobile's conflicted copy 2011-06-21).scss */
 .bottom-box .news a {
   text-decoration: none;
   font-weight: bold;
   color: #444;
 }
-/* line 296, ../../../app/assets/stylesheets/grid.scss */
+/* line 296, ../../../app/assets/stylesheets/grid (Synthmax-mobile's conflicted copy 2011-06-21).scss */
 .bottom-box .news a:hover {
   color: #fff;
   background-color: #000;
 }
-/* line 300, ../../../app/assets/stylesheets/grid.scss */
+/* line 300, ../../../app/assets/stylesheets/grid (Synthmax-mobile's conflicted copy 2011-06-21).scss */
 .bottom-box .news h1 {
   margin-bottom: 0px;
   height: 34px;
   color: #000;
 }
-/* line 305, ../../../app/assets/stylesheets/grid.scss */
+/* line 305, ../../../app/assets/stylesheets/grid (Synthmax-mobile's conflicted copy 2011-06-21).scss */
 .bottom-box .news .gray {
   color: #999;
 }
-/* line 308, ../../../app/assets/stylesheets/grid.scss */
+/* line 308, ../../../app/assets/stylesheets/grid (Synthmax-mobile's conflicted copy 2011-06-21).scss */
 .bottom-box .news .content {
   margin-top: 0px;
   width: 210px;
 }
 
-/* line 314, ../../../app/assets/stylesheets/grid.scss */
+/* line 314, ../../../app/assets/stylesheets/grid (Synthmax-mobile's conflicted copy 2011-06-21).scss */
 .text-right {
   text-align: right;
 }
 
-/* line 318, ../../../app/assets/stylesheets/grid.scss */
+/* line 318, ../../../app/assets/stylesheets/grid (Synthmax-mobile's conflicted copy 2011-06-21).scss */
 .grid-container {
   margin-left: auto;
   margin-right: auto;
   width: 960px;
 }
-/* line 320, ../../../app/assets/stylesheets/grid.scss */
+/* line 320, ../../../app/assets/stylesheets/grid (Synthmax-mobile's conflicted copy 2011-06-21).scss */
 .grid-container .top-margin {
   margin-top: 32px;
 }
 
-/* line 325, ../../../app/assets/stylesheets/grid.scss */
+/* line 325, ../../../app/assets/stylesheets/grid (Synthmax-mobile's conflicted copy 2011-06-21).scss */
 .meeting-room {
   display: inline;
   float: left;
@@ -569,7 +569,7 @@ footer, header, hgroup, menu, nav, section {
   margin-left: 0;
 }
 
-/* line 330, ../../../app/assets/stylesheets/grid.scss */
+/* line 330, ../../../app/assets/stylesheets/grid (Synthmax-mobile's conflicted copy 2011-06-21).scss */
 .meeting-room-right {
   display: inline;
   float: left;
@@ -580,19 +580,19 @@ footer, header, hgroup, menu, nav, section {
   padding-right: 480px;
 }
 
-/* line 337, ../../../app/assets/stylesheets/grid.scss */
+/* line 337, ../../../app/assets/stylesheets/grid (Synthmax-mobile's conflicted copy 2011-06-21).scss */
 a {
   text-decoration: none;
   color: #444;
 }
 
-/* line 342, ../../../app/assets/stylesheets/grid.scss */
+/* line 342, ../../../app/assets/stylesheets/grid (Synthmax-mobile's conflicted copy 2011-06-21).scss */
 a:hover {
   color: #fff;
   background-color: #000;
 }
 
-/* line 347, ../../../app/assets/stylesheets/grid.scss */
+/* line 347, ../../../app/assets/stylesheets/grid (Synthmax-mobile's conflicted copy 2011-06-21).scss */
 .slim-box {
   background-color: #fff;
   margin-top: 36px;
@@ -603,29 +603,29 @@ a:hover {
   width: 460px;
   min-height: 80px;
 }
-/* line 352, ../../../app/assets/stylesheets/grid.scss */
+/* line 352, ../../../app/assets/stylesheets/grid (Synthmax-mobile's conflicted copy 2011-06-21).scss */
 .slim-box .borders {
   border-style: solid;
   border-width: 1px;
   height: 80px;
   display: block;
 }
-/* line 358, ../../../app/assets/stylesheets/grid.scss */
+/* line 358, ../../../app/assets/stylesheets/grid (Synthmax-mobile's conflicted copy 2011-06-21).scss */
 .slim-box .menu-box {
   width: 400px;
   height: 51px;
 }
-/* line 361, ../../../app/assets/stylesheets/grid.scss */
+/* line 361, ../../../app/assets/stylesheets/grid (Synthmax-mobile's conflicted copy 2011-06-21).scss */
 .slim-box .menu-box a {
   color: #fff;
 }
-/* line 362, ../../../app/assets/stylesheets/grid.scss */
+/* line 362, ../../../app/assets/stylesheets/grid (Synthmax-mobile's conflicted copy 2011-06-21).scss */
 .slim-box .menu-box a:hover {
   color: #000;
   background-color: #fff;
 }
 
-/* line 366, ../../../app/assets/stylesheets/grid.scss */
+/* line 366, ../../../app/assets/stylesheets/grid (Synthmax-mobile's conflicted copy 2011-06-21).scss */
 .googlemap {
   display: inline;
   float: left;
@@ -638,14 +638,14 @@ a:hover {
   width: 940px;
   display: block;
 }
-/* line 374, ../../../app/assets/stylesheets/grid.scss */
+/* line 374, ../../../app/assets/stylesheets/grid (Synthmax-mobile's conflicted copy 2011-06-21).scss */
 .googlemap .borders {
   border-style: solid;
   border-width: 1px;
   height: 600px;
 }
 
-/* line 381, ../../../app/assets/stylesheets/grid.scss */
+/* line 381, ../../../app/assets/stylesheets/grid (Synthmax-mobile's conflicted copy 2011-06-21).scss */
 .company-index {
   width: 180px;
   height: 60px;
@@ -655,7 +655,7 @@ a:hover {
   margin-right: 10px;
   margin-top: 8px;
 }
-/* line 390, ../../../app/assets/stylesheets/grid.scss */
+/* line 390, ../../../app/assets/stylesheets/grid (Synthmax-mobile's conflicted copy 2011-06-21).scss */
 .company-index .image {
   border-style: solid;
   border-width: 1px;
@@ -666,7 +666,7 @@ a:hover {
   margin: 1px 10px 1px 1px;
 }
 
-/* line 401, ../../../app/assets/stylesheets/grid.scss */
+/* line 401, ../../../app/assets/stylesheets/grid (Synthmax-mobile's conflicted copy 2011-06-21).scss */
 .fullpage {
   display: inline;
   float: left;
@@ -675,7 +675,7 @@ a:hover {
   width: 940px;
 }
 
-/* line 405, ../../../app/assets/stylesheets/grid.scss */
+/* line 405, ../../../app/assets/stylesheets/grid (Synthmax-mobile's conflicted copy 2011-06-21).scss */
 .tlf-box {
   float: right;
   text-align: center;
@@ -690,7 +690,7 @@ a:hover {
   /* IE's opacity*/
   opacity: 0.8;
 }
-/* line 418, ../../../app/assets/stylesheets/grid.scss */
+/* line 418, ../../../app/assets/stylesheets/grid (Synthmax-mobile's conflicted copy 2011-06-21).scss */
 .tlf-box .tlf-content {
   position: relative;
   top: 10px;
@@ -700,7 +700,7 @@ a:hover {
   height: 40px;
 }
 
-/* line 428, ../../../app/assets/stylesheets/grid.scss */
+/* line 428, ../../../app/assets/stylesheets/grid (Synthmax-mobile's conflicted copy 2011-06-21).scss */
 .calendar-row {
   display: inline;
   float: left;
@@ -711,7 +711,7 @@ a:hover {
   margin-right: 0;
   margin-right: 6px;
 }
-/* line 436, ../../../app/assets/stylesheets/grid.scss */
+/* line 436, ../../../app/assets/stylesheets/grid (Synthmax-mobile's conflicted copy 2011-06-21).scss */
 .calendar-row .booking-back {
   padding: 4px;
   background-color: #999;

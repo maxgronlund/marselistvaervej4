@@ -6,9 +6,11 @@
 
   .grid-12.color_gray.top_margin_24
     b
-      .grid-4.alpha
+      .grid-3.alpha
         = sortable 'title', t('system.title')
-      .grid-8.omega
+      .grid-3
+        = sortable 'internal_letter', 'offentlig/ intern'
+      .grid-6.omega
         = sortable 'created_at', t('admin.created_at')
     hr/
 
@@ -16,13 +18,20 @@
     .grid-12
       div class="grid-12 alpha omega #{cycle('color_light_gray', 'color_gray')}"
 
-        .grid-4.alpha
+        .grid-3.alpha
           b= newspost.title
         
-        .grid-4
+        .grid-3
+          - if newspost.internal_letter?
+            | internt
+          - else
+            | offentligt
+
+
+        .grid-3
           = l newspost.created_at, :format => :date_month_and_year
 
-        .grid-4.omega.edit
+        .grid-3.omega.edit
           - if can? :manage, newspost
             = link_to t('admin.show'), newspost
             |  |
