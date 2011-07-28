@@ -1,0 +1,35 @@
+h1
+ Kalender
+
+br
+
+-@bookings.each do |booking| 
+
+  = booking.meetingroom.title
+  br
+  = l booking.created_at, :format => :date_month_and_year
+  | - kl.
+  = l booking.starttime, :format => :bookingtime
+  |  til 
+  = l booking.endtime, :format => :bookingtime
+  br
+  | Deltaterer: 
+  = booking.attendees 
+  br
+  - if booking.coffee_and_bread
+    | Kaffe og brød
+  - else
+    br
+  br
+  = booking.bookers_name
+  br
+  = link_to 'Show', meetingroom_booking_path(booking.meetingroom, booking)
+  = link_to 'Edit', edit_meetingroom_booking_path(booking.meetingroom,booking) 
+  = link_to 'Destroy', booking, :confirm => 'Er du sikker?', :method => :delete
+  hr
+
+
+- if can_edit? 
+  br 
+  = link_to 'New Booking', new_meetingroom_booking_path(@meetingroom) 
+

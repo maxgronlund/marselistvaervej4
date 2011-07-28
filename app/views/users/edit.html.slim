@@ -9,7 +9,6 @@
           - @user.errors.full_messages.each do |msg|
             li= msg
 
-    = image_tag  @user.image.url(:medium)
     br/
 
     .field
@@ -37,10 +36,7 @@
         br/
         = f.check_box :grid
 
-    .field
-      Billed
-      br/
-      = f.file_field :image
+
     .field
       - unless @user.id == User.first.id
         - if current_user && current_user.admin_or_super?

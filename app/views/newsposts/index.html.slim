@@ -4,25 +4,25 @@
     | Listing newsposts
 
 
-  div class="grid_12 color_gray top_margin_24"
+  .grid-12.color_gray.top_margin_24
     b
-      div class="grid_4 alpha"
+      .grid-4.alpha
         = sortable 'title', t('system.title')
-      div class="grid_6 omega suffix_2"
+      .grid-8.omega
         = sortable 'created_at', t('admin.created_at')
     hr/
 
   - @newsposts.each do |newspost|
-    div class="grid_12"
-      div class="grid_12 alpha omega #{cycle('color_light_gray', 'color_gray')}"
+    .grid-12
+      div class="grid-12 alpha omega #{cycle('color_light_gray', 'color_gray')}"
 
-        div class="grid_4 alpha"
+        .grid-4.alpha
           b= newspost.title
         
-        div class="grid_4 suffix_2"
+        .grid-4
           = l newspost.created_at, :format => :date_month_and_year
 
-        div class="grid_2 omega text_right"
+        .grid-4.omega.edit
           - if can? :manage, newspost
             = link_to t('admin.show'), newspost
             |  |
@@ -30,12 +30,13 @@
             |  |
             = link_to t('admin.delete'), newspost, :confirm => t('admin.are_you_sure'), :method => :delete
 
-  div class="grid_12"
+  .grid-12
     = will_paginate @newsposts
 
   - if can? :manage, Newspost
-    div class="grid_12 top_margin_10"
-      = link_to t('page.new'), new_newspost_path
+    .grid-12.edit
+      br
+      = link_to 'opret nyhed', new_newspost_path, :class => 'button'
 
 - else
   = render :partial => "shared/no_access"

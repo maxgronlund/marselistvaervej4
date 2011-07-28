@@ -7,12 +7,7 @@ class NewspostsController < InheritedResources::Base
   def index
     @newsposts = Newspost.order(sort_column + ' ' + sort_direction).paginate(:per_page => 25, :page => params[:page])
   end
-  
-#  def update
-#    goto = session[:go_to_after_edit] || newsposts_path
-#    session[:go_to_after_edit] = nil
-#    update! {goto}
-#  end
+
   
   def update
 

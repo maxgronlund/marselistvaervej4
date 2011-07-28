@@ -4,7 +4,7 @@
  * Licensed under GPL and MIT. */
 
 @import "960/text";
-
+@import "compass/css3/border-radius";
 @include text;
 
 b{
@@ -20,4 +20,19 @@ h1, h2, h3, h4{
 
 p{
 	margin-bottom:6px;
+}
+
+.button{
+	background-color:#dd7b3b;
+	padding:4px;
+
+	@include border-radius(4px, 4px);
+	border-style:solid;
+	border-width:1px;
+	border-color:#999;
+    font-weight: bold;
+    wt{
+	    color: #fff;
+	    text-decoration: none;
+	} 
 }

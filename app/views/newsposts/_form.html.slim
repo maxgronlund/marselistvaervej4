@@ -23,7 +23,9 @@
   	br
       = f.text_area :body, :class => "mceEditor"
     br
-    
+      = f.check_box :internal_letter
+      | Internt nyhed
+    br   
     .actions
         = f.submit 'Gem', disable_with: 'Gemmer...'
         = image_tag "loader.gif", alt: "", width: "32", height: "32", style: "display: none;", class: 'spinner'

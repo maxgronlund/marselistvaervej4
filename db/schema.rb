@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110614053542) do
+ActiveRecord::Schema.define(:version => 20110624120802) do
 
   create_table "blogs", :force => true do |t|
     t.string   "title"
@@ -88,6 +88,7 @@ ActiveRecord::Schema.define(:version => 20110614053542) do
     t.string   "image_content_type"
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
+    t.boolean  "internal_letter"
   end
 
   create_table "pages", :force => true do |t|

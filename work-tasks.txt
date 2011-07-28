@@ -2,3 +2,16 @@ ROLES:
 - limit access to admin#index
 
 
+
+
+
+
+
+
+=image_tag @user.image.url(:medium), :border => 'none', :class => 'image_fix'
+  -if @user.image.url(:medium) == "/images/fallback/default_avatar_medium.jpg"
+    br
+    | TIME TO UPLOAD AN AVATAR!
+  - if can?(:manage, @user)
+    br
+    = link_to t('admin.edit'), edit_user_path(@user)

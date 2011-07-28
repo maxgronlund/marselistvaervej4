@@ -27,4 +27,6 @@ class Newspost < ActiveRecord::Base
    def reprocess_image
      image.reprocess!
    end
+   
+   
 end

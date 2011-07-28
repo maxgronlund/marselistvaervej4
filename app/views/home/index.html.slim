@@ -1,7 +1,7 @@
 .grid-container
 
   .squared-box
-    .borders
+    .borders.fixed-height
       .menu-box
         = render :partial => "shared/menu"
       .content
@@ -13,12 +13,12 @@
           =raw @welcome.body      
 	      - if can?(:edit, @welcome)
 	        .text-right
-	          = link_to t('admin.edit'), edit_page_path(@welcome)
+	          = link_to t('admin.edit'), edit_page_path(@welcome), :class => 'button'
 		
         = link_to 'FIND OS PÅ KORT', googlemap_index_path
 
   .squared-box
-    .borders
+    .borders.fixed-height
       = image_tag 'frontpage-house.jpg', :border => 'none', :class => 'image_fix'
 
 = render :partial => "shared/news", :locals => { :newsposts => @newsposts }

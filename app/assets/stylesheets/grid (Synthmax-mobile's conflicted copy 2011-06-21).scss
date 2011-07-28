@@ -1,0 +1,444 @@
+/* 960 Grid System ~ Core CSS.
+ * Learn more ~ http://960.gs/
+ * *
+ * Licensed under GPL and MIT. */
+
+@import "compass/reset";
+@import "960/grid";
+
+$ninesixty-columns: 12; // default: 12
+$ninesixty-grid-width: 960px; // default: 960px
+$ninesixty-gutter-width: 20px; // default: 20px
+
+.two-column {
+  @include grid-container;
+
+  #header,
+  #footer,
+  #sidebar,
+  #main-content,
+  .single-column {
+    @include grid-unit-base;
+  }
+  #header, #footer, .single-column {
+    @include grid-width(12); }
+  #main-content {
+    @include grid-width(8); }
+  #sidebar {
+    @include grid-width(4); }
+  #left-box{ 
+	@include grid-width(6); } 
+}
+
+
+#header {
+	.locale {
+		@include grid(1);
+		@include alpha;
+	}
+	.nav {
+		@include grid(3);
+		margin-top: 8px;
+		vertical-align: baseline;
+	}
+	.session {
+		@include grid(5);
+		margin-top: 8px;
+		text-align: right;
+		vertical-align: baseline;
+	}
+	.search {
+		@include grid(3);
+		@include omega;
+		margin-top: 8px;
+	}
+}
+
+.section {
+	@include grid(4);
+	@include grid-suffix(8);
+	@include alpha;
+	@include omega;
+	
+}
+
+.section-edit {
+	@include grid(1);
+	@include grid-prefix(5);
+	@include alpha;
+	@include omega;
+}
+
+.blog-header {
+	@include grid(11);
+	@include grid-prefix(1);
+	@include alpha;
+	@include omega;
+}
+.blog-image {
+	@include grid(1);
+	@include alpha;
+	margin-top: 24px;
+}
+.blog-content {
+	@include grid(4);
+	@include grid-suffix(7);
+	@include omega;
+	margin-top: 24px;
+}
+.blog-comments {
+	@include grid(2);
+	@include grid-prefix(2);
+	@include grid-suffix(8);
+	@include alpha;
+	@include omega;
+}
+.blog-comments-title, .blog-comments-new {
+	@include grid(3);
+	@include grid-prefix(3);
+	@include grid-suffix(6);
+	@include alpha;
+	@include omega;
+	margin-top: 10px;
+}
+.blog-comment-image {
+	@include grid(3);
+	@include alpha;
+	margin-top: 10px;
+	text-align: right;
+}
+.blog-comment-content {
+	@include grid(2);
+	@include grid-suffix(7);
+	@include omega;
+	margin-top: 10px;
+}
+
+
+
+.user-image {
+	@include grid(1);
+	@include alpha;
+}
+.user-name {
+	@include grid(2);
+}
+.user-email {
+	@include grid(3);
+}
+.user-role {
+	@include grid(2);
+	@include grid-suffix(2);
+	@include omega;
+}
+
+.pagination {
+
+	text-align:center;
+	@include grid(12);
+	margin-top: 10px;
+	
+
+}
+
+.logo-box {
+  margin-top:36px;
+  @include grid(6);
+  @include alpha;
+  height:72px;
+  a:hover{
+	background-color: transparent;
+  }
+}
+
+.logedin-box{
+  margin-top:36px;
+  @include grid(6);
+  height:72px;
+  text-align:right;
+}
+
+.menu-box{
+	background-image:url('/images/nav_left.png');
+	background-repeat:no-repeat;
+	width:400px;
+	height:51px;
+	position:relative;
+	left:-14px;
+	top:20px;
+	color:#fff;
+	.menu-back{
+		margin-left:14px;
+		background-color:#000;
+		height:30px;
+		padding-top:8px;
+		padding-left:8px;
+	}
+	h2{
+		color: #fff;
+		font-size:15px;
+		margin-top:1px;
+		margin-left:10px;
+	}
+	a{
+		text-decoration:none;
+		color:#fff;
+		font-size:15px;
+		margin-top:1px;
+		margin-left:19px;
+	}
+	a:hover{
+		color:#000;
+		background-color:#fff;
+	}
+}
+
+.content{
+	margin: 20px;
+	.content-company{
+		height:280px;
+		.pagination {
+
+			text-align:center;
+			@include grid(4);
+			margin-top: 10px;
+
+
+		}
+	}
+}
+
+.squared-box{
+	background-color:#fff;
+    margin-top:36px;
+	@include grid(6);
+	height:376px;
+	display:block;
+	.borders{
+		border-style:solid;
+		border-width:1px;
+		height:376px;
+		display:block;
+	}
+	.content{
+		.content-top{ height:280px;}
+	}
+	.text-right{
+		text-align: right;
+	}
+	.menu-box{
+		width:400px;
+		height:51px;
+		a{ color:#fff; }
+		a:hover{ color:#000; background-color:#fff; }
+	}
+}
+
+.bottom-box{
+	@include grid(12);
+	background-color:#fff;
+    margin-top:22px;
+	height:186px;
+	width:940px;
+	display:block;
+
+	.borders{
+		border-style:solid;
+		border-width:1px;
+		height:184px;
+
+	}
+	.left-side{
+
+		height:184px;
+		@include grid(3);
+		@include alpha;
+		width:168px;
+		
+		.menu-box{
+			width:154px;
+			height:51px;
+			a{ color:#fff; }
+			a:hover{ color:#000; background-color:#fff; }
+		}
+	}
+	.right-side{
+
+		height:184px;
+		@include grid(8);
+		@include omega;
+		width:730px;
+		
+	
+	}
+	.booking-box{
+		margin-top:80px;
+		margin-left:20px;
+	}
+	.news{
+		height:184px;
+		@include grid(3);
+		width:230px;
+		.header
+		{
+			height:54px;
+			margin-top:10px;
+			@include grid(3);
+			@include alpha;
+			@include omega;
+			width:230px;
+			font-weight: bold;
+		}
+		a{
+			text-decoration:none;
+			font-weight: bold;
+			color:#444;
+		}a:hover{
+			color:#fff;
+			background-color:#000;
+		}
+		h1{
+			margin-bottom:0px;
+			height:34px;
+			color:#000;
+		}
+		.gray{
+			color:#999;
+		}
+		.content{
+			margin-top:0px;
+			width:210px;
+		}
+	}	
+}
+.text-right{
+	text-align: right;
+}
+
+.grid-container{
+	@include grid-container;
+	.top-margin{
+		margin-top:32px;
+	}
+}
+
+.meeting-room{
+	@include grid(2);
+	@include alpha;
+}
+
+.meeting-room-right{
+	@include grid(4);
+	@include omega;
+	@include grid-suffix(6);
+}
+
+a
+{
+	text-decoration:none;
+//	font-weight: bold;
+	color:#444;
+}
+a:hover{
+	color:#fff;
+	background-color:#000;
+}
+
+.slim-box{
+	background-color:#fff;
+    margin-top:36px;
+	@include grid(6);
+	min-height:80px;
+	.borders{
+		border-style:solid;
+		border-width:1px;
+		height:80px;
+		display:block;
+	}
+	.menu-box{
+		width:400px;
+		height:51px;
+		a{ color:#fff; }
+		a:hover{ color:#000; background-color:#fff; }
+	}
+}
+
+.googlemap{
+	@include grid(12);
+	background-color:#fff;
+    margin-top:22px;
+	height:600px;
+	width:940px;
+	display:block;
+
+	.borders{
+		border-style:solid;
+		border-width:1px;
+		height:600px;
+	}
+}
+
+.company-index{
+	width:180px;
+	height: 60px;
+	display: inline;
+	float: left;
+	margin-left: 10px;
+	margin-right: 10px;
+	margin-top: 8px;
+	
+	.image{
+		border-style:solid;
+		border-width:1px;
+		width:70px;
+		height: 57px;
+		display: inline;
+		float: left;
+		margin:1px 10px 1px 1px;	
+	}
+}
+
+.fullpage{
+	@include grid(12);
+}
+
+.tlf-box{
+	float:right;
+	text-align:center;
+	background-color:#fff;
+	position:relative;
+	top:-100px;
+	border-style:solid;
+	border-right-style:none;
+	border-width:1px;
+	height:40px;
+	filter:alpha(opacity=80); /* IE's opacity*/
+	opacity: 0.8;
+	
+	.tlf-content{
+		position:relative;
+		top:10px;
+		margin:10px;
+		font-size:14px;
+		display: inline;
+		height:40px;
+	}
+}
+
+.calendar-row{
+	@include grid(2);
+	@include alpha;
+	@include omega;
+	margin-right:6px;
+   
+    
+
+	.booking-back{
+		
+		padding:4px;
+		background-color:#999;
+		margin:6px;
+		
+	}
+}
+
