@@ -29,7 +29,7 @@
   .field.booking-date
     | Dato: 
     br
-    = f.text_field :created_at, value: l((@booking.created_at || Date.today).to_date), readonly: true, :size=>8
+    = f.text_field :created_at, :value => l((@booking.created_at || Date.today).to_date), :readonly => true, :size=>8
   
   
   
