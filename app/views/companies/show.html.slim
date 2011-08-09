@@ -28,4 +28,6 @@
         .tlf-content 
           =raw @link
 
+  = link_to 'tilføj logo', new_company_company_thumb_path(@company)
+
 = render :partial => "shared/news", :locals => { :newsposts => @newsposts }

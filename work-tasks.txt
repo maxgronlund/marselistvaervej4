@@ -15,3 +15,9 @@ ROLES:
   - if can?(:manage, @user)
     br
     = link_to t('admin.edit'), edit_user_path(@user)
+
+
+rails g scaffold company_thumb
+
+
+70 313 332

@@ -1,0 +1,21 @@
+<h1>Listing company_thumbs</h1>
+
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @company_thumbs.each do |company_thumb| %>
+  <tr>
+    <td><%= link_to 'Show', company_thumb %></td>
+    <td><%= link_to 'Edit', edit_company_thumb_path(company_thumb) %></td>
+    <td><%= link_to 'Destroy', company_thumb, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Company thumb', new_company_thumb_path %>

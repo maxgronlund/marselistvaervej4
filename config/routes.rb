@@ -1,5 +1,7 @@
 Rails_template::Application.routes.draw do
 
+  resources :company_thumbs
+
   scope "/:locale" do
     resources :bookings, :blogs, :comments, :companies,:home, :illustrations, :meetingrooms, :newsposts, :pages, :users
   end
@@ -35,6 +37,10 @@ Rails_template::Application.routes.draw do
   
   resources :meetingrooms do
     resources :bookings
+  end
+  
+  resources :companies do
+    resources :company_thumbs
   end
   
   

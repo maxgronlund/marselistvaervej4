@@ -1,0 +1,16 @@
+.single-column
+  = form_for([@company_thumb.company, @company_thumb], :html => { :multipart => true }) do |f|
+  
+    -if @company_thumb.errors.any?
+      .error_explanation
+        h2
+          'hey dude! er det et billed du prøver at uploade?:
+  
+  
+    .field
+      | billed
+      br
+      = f.file_field :image
+    .actions
+      = f.submit
+  
