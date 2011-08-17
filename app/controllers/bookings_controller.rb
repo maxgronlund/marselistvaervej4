@@ -14,7 +14,7 @@ class BookingsController < InheritedResources::Base
     @meetingroom = Meetingroom.first
     if request.xhr?
       @date = Date.parse params[:date]
-      render '_calendar', layout => false
+      render '_calendar', :layout => false
     end
   end
   
