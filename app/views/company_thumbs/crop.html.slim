@@ -41,7 +41,7 @@
     = image_tag @company_thumb.image.url(:xxl), :id => "cropbox"
 
     = form_for([@company_thumb.company, @company_thumb], :html => { :multipart => true }) do |f|
-    -#= form_for @company_thumb do |f|
+
       - for attribute in [:crop_x, :crop_y, :crop_w, :crop_h]
         = f.hidden_field attribute, :id => attribute
       br
