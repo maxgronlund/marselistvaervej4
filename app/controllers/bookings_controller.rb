@@ -1,6 +1,7 @@
 class BookingsController < InheritedResources::Base
   load_and_authorize_resource
   belongs_to :meetingroom , :optional => true
+  before_filter :get_news
   
   def new
     new!

@@ -31,7 +31,8 @@
             = link_to 'læs mere', meetingroom_path(meetingroom)
         
       
-  
+  = link_to 'book mødelokale', new_meetingroom_booking_path(@meetingroom)
+  br
   - if can? :manage, Meetingroom
     .fullpage
       hr

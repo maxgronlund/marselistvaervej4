@@ -10,3 +10,4 @@
         = meetingroom.title
       - meetingroom.bookings.for_day(date).each do |booking|
         = render :partial => "bookingcalendar/booking", :locals => { :booking => booking }
+

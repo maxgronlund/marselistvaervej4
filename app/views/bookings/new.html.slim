@@ -6,27 +6,16 @@
         = render :partial => "shared/menu"
       .content
         = render 'form'
+
+		= link_to 'bookings', meetingroom_bookings_path(@meetingroom)
 	       
 
   .squared-box
     .borders
      = render :partial => 'calendar'
 
-  .bottom-box
-    .borders
-      .left-side
-        .menu-box
-          .menu-back
-            h2
-              | Booking
-        .booking-box
-          = link_to 'book mødelokale', new_meetingroom_booking_path(@meetingroom)
-          br
-          = link_to 'bookings', meetingroom_bookings_path(@meetingroom)
 
-
-      .right-side
-        | da
+= render :partial => "shared/news", :locals => { :newsposts => @newsposts }
       
 
 
