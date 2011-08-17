@@ -31,12 +31,11 @@
             = link_to 'læs mere', meetingroom_path(meetingroom)
         
       
-  = link_to 'book mødelokale', new_meetingroom_booking_path(@first_meeting_room)
+  
   br
+  .fullpage
+    = link_to 'book mødelokale', new_meetingroom_booking_path(@first_meeting_room), :class => 'button'
   - if can? :manage, Meetingroom
-    .fullpage
-      hr
-      br
-      
-      = link_to 'opret nyt mødelokale', new_meetingroom_path
+    .edit
+      = link_to 'opret nyt mødelokale', new_meetingroom_path, :class => 'button'
   
