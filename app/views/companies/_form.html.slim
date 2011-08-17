@@ -35,6 +35,7 @@
       = f.text_field :homepage
     br
     .actions
-        = f.submit 'Gem', disable_with: 'Gemmer...'
-        = image_tag "loader.gif", alt: "", width: "32", height: "32", style: "display: none;", class: 'spinner'
+      f.submit 'Gem'
+      -#= f.submit 'Gem', disable_with: 'Gemmer...'
+      -#= image_tag "loader.gif", alt: "", width: "32", height: "32", style: "display: none;", class: 'spinner'
   
