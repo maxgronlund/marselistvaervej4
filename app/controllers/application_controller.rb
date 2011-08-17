@@ -6,7 +6,9 @@ class ApplicationController < ActionController::Base
  
  def after_sign_in_path_for(resource)
    if current_user.admin_or_super?
-     admin_path
+     #admin_path
+     @meeting_room = Meetingroom.first
+     new_meetingroom_booking_path(@meeting_room)
    else
      user_path(resource)
    end
