@@ -2,6 +2,8 @@
 class MeetingroomsController < InheritedResources::Base
   load_and_authorize_resource
   
+  before_filter :get_first_meeting_room
+  
   
 
   def update

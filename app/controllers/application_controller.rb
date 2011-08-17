@@ -32,6 +32,10 @@ class ApplicationController < ActionController::Base
     @newsposts = Newspost.external.order('created_at desc').paginate(:per_page => 3, :page => params[:page])
   end
   
+  def get_first_meeting_room
+    @first_meeting_room = Meetingroom.first
+  end
+  
   def get_internal_news
     @newsposts = Newspost.internal.order('created_at desc').paginate(:per_page => 3, :page => params[:page])
   end
