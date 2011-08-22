@@ -5,9 +5,11 @@ class BookingsController < InheritedResources::Base
     helper_method :sort_column, :sort_direction 
   
   def new
+    @booking = Booking.new
+    @booking.created_at = params[:date].present?? params[:date].to_date : Date.today
+    @booking.starttime = Time.now
+    @booking.endtime = @booking.starttime + 1.hour
     new!
- #   @booking.endtime = @booking.starttime + 10
-    
   end
   
   def index 
@@ -22,7 +24,7 @@ class BookingsController < InheritedResources::Base
   def create
     session[:go_to_after_edit] = nil
     @meetingroom = Meetingroom.first
-    create! { new_meetingroom_booking_path(@meetingroom)}
+    create! { new_meetingroom_booking_path(@meetingroom, :date => @booking.created_at)}
     
   end
   
@@ -30,7 +32,7 @@ class BookingsController < InheritedResources::Base
 
     session[:go_to_after_edit] = nil
     @meetingroom = Meetingroom.first
-    update! { new_meetingroom_booking_path(@meetingroom)}
+    update! { new_meetingroom_booking_path(@meetingroom, :date => @booking.created_at)}
   end
   
 
