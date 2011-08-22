@@ -12,7 +12,8 @@
 
   .squared-box
     .borders
-     = render :partial => 'calendar'
+      /= render :partial => 'calendar'
+      div id='calendar'
 
 
 = render :partial => "shared/news", :locals => { :newsposts => @newsposts }

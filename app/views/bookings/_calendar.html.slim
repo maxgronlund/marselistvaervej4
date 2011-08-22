@@ -1,7 +1,7 @@
 .bookings-calendar
   - date = @booking && @booking.created_at && @booking.created_at.to_date || @date || Date.today
   h1
-    = l date, :format => :long
+    span.calendar-date= l date, :format => :long
 
   - meetingrooms.each do |meetingroom|
     .calendar-row

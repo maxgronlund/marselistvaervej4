@@ -25,4 +25,42 @@ class Booking < ActiveRecord::Base
       meetingroom.available? created_at, starttime, endtime
   end
 
+
+  # Calendar requires this
+  scope :before, lambda {|end_time| {:conditions => ["created_at < ?", Booking.format_date(end_time.end_of_day)] }}
+  scope :after, lambda {|start_time| {:conditions => ["created_at > ?", Booking.format_date(start_time - 1.day)] }} # !!! WTF - beginning_of_day doesn't work properly!?
+  
+  # need to override the json view to return what full_calendar is expecting.
+  # http://arshaw.com/fullcalendar/docs/event_data/Event_Object/
+  def as_json(options = {})
+    {
+      :id => self.id,
+      :title => self.bookers_name,
+      :description => self.custom_message || "",
+      :start => (created_at.beginning_of_day + starttime.hour.hours + starttime.min.minutes).rfc822,
+      :end => (created_at.beginning_of_day + endtime.hour.hours + endtime.min.minutes).rfc822,
+      :allDay => false,
+      :recurring => false,
+      color: color,
+      #textColor: 'black',
+      :url => Rails.application.routes.url_helpers.edit_meetingroom_booking_path(meetingroom_id, id, :locale => 'da')
+    }
+  end
+  
+  def self.format_date(date_time)
+    Time.at(date_time.to_i).to_formatted_s(:db)
+  end
+
+  def color
+    if meetingroom_id == 1
+      'lightblue'
+    elsif meetingroom_id == 2
+      'lightgreen'
+    elsif meetingroom_id == 3
+      'red'
+    else
+      'yellow'
+    end
+  end
+
 end
