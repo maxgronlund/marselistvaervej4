@@ -39,14 +39,22 @@
     = f.time_select :endtime
   
   
-  br/
+  br
   
   | Deltagere: 
   = f.text_field :attendees, :size=>6
-  br/
-  = f.check_box :coffee_and_bread
-  |  Brød og kaffe
   br
+  br
+  = f.check_box :coffee_and_tea
+  |  Kaffe og the
+  '&nbsp &nbsp; 
+  = f.check_box :bread
+  | Brød
+  br
+  br
+  'Andet:
+  br
+  = f.text_field :custom_message
   
   
   .links

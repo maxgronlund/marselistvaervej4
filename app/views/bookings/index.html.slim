@@ -2,19 +2,20 @@
 
   h1
    | Alle mødelokale reservationer
-  
-  .left-column
-    b  Tidspunkt
-  .center-column2
-    b  Mødelokale
-  .center-column2
-    b  Reserveret til
-  .center-column1
-    b  Deltagere
-  .center-column1
-    b  Kaffe
-  .right-column
-    | -
+  b
+    .sort-list-header
+      .left-column
+        = sortable 'created_at', 'Tidspunkt'
+      .center-column2
+        = sortable 'meetingroom_id','Mødelokale'
+      .center-column2
+        = sortable 'user_id','Reserveret til'
+      .center-column1
+        'Deltagere
+      .center-column1
+        'Kaffe
+      .right-column
+        | -
  
   
   -@bookings.each do |booking| 
@@ -33,15 +34,17 @@
 	  .center-column1
 	    = booking.attendees 
 	  .center-column1
-	    - if booking.coffee_and_bread
+	    - if booking.coffee_and_tea
 	        | Ja
 	    - else
             | -
-	  .right-column
+	  .right-column.edit
 	    - if booking.meetingroom != nil
-	        = link_to 'Show', meetingroom_booking_path(booking.meetingroom, booking)
-	        = link_to 'Edit', edit_meetingroom_booking_path(booking.meetingroom,booking) 
-	    = link_to 'Destroy', booking, :confirm => 'Er du sikker?', :method => :delete
+	      -#= link_to 'Show', meetingroom_booking_path(booking.meetingroom, booking)
+	      '&nbsp; 
+	      -#= link_to 'Edit', edit_meetingroom_booking_path(booking.meetingroom,booking) 
+	      '&nbsp; 
+	    = link_to 'slet', booking, :confirm => 'Er du sikker?', :method => :delete
       hr
   
   div class="grid_10 prefix_1 suffix_1"
@@ -49,6 +52,6 @@
   
   - if can_edit?
     br 
-    = link_to 'New Booking', new_meetingroom_booking_path(@meetingroom) 
+    = link_to 'Opret reservation', new_meetingroom_booking_path(@meetingroom) 
   
   

@@ -5,7 +5,7 @@ one:
   starttime: 2011-06-13 22:35:59
   endtime: 2011-06-13 22:35:59
   attendees: 1
-  coffee_and_bread: false
+  coffee_and_tea: false
   bookers_name: MyString
 
 two:
@@ -13,5 +13,5 @@ two:
   starttime: 2011-06-13 22:35:59
   endtime: 2011-06-13 22:35:59
   attendees: 1
-  coffee_and_bread: false
+  coffee_and_tea: false
   bookers_name: MyString

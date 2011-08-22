@@ -85,3 +85,19 @@ a:hover {
 	color: #f00;
 }
 
+.desc{
+	padding-right:14px;
+	background-image:url('arrow_up.png');
+	background-repeat:no-repeat;
+	background-color:transparent;
+	background-position:right top;
+}
+
+.asc{
+	padding-right:14px;
+	background-image:url('arrow_down.png');
+	background-repeat:no-repeat;
+	background-color:transparent;
+	background-position:right top;
+}
+

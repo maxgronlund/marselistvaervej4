@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110809114540) do
+ActiveRecord::Schema.define(:version => 20110822041143) do
 
   create_table "blogs", :force => true do |t|
     t.string   "title"
@@ -26,11 +26,14 @@ ActiveRecord::Schema.define(:version => 20110809114540) do
     t.time     "starttime"
     t.time     "endtime"
     t.integer  "attendees"
-    t.boolean  "coffee_and_bread"
     t.string   "bookers_name"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "user_id"
+    t.string   "message"
+    t.string   "custom_message"
+    t.boolean  "coffee_and_tea"
+    t.boolean  "bread"
   end
 
   create_table "comments", :force => true do |t|

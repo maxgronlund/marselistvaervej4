@@ -1,23 +1,28 @@
-ROLES:
-- limit access to admin#index
+meetingrooms/5/bookings
+sort list default by date
+
+meetingrooms/5/bookings
+add kaffe/vand
+rails g migration add_message_to_bookings message:string 
+
+add the
+add text_field
+send mail til mark'd user
+
+http://localhost:3000/dk/users/4/edit
+add to company
+
+/dk/users
+mail_to: all open in mail client
+
+http://ajax.googleapis.com/ajax/libs/jqueryui/1.7/themes/redmond/jquery-ui.css
+
+ny kalender
+
+alt på dansk
+
+opret nyt mødelokale skjules
 
 
 
 
-
-
-
-
-=image_tag @user.image.url(:medium), :border => 'none', :class => 'image_fix'
-  -if @user.image.url(:medium) == "/images/fallback/default_avatar_medium.jpg"
-    br
-    | TIME TO UPLOAD AN AVATAR!
-  - if can?(:manage, @user)
-    br
-    = link_to t('admin.edit'), edit_user_path(@user)
-
-
-rails g scaffold company_thumb
-
-
-70 313 332

@@ -253,3 +253,21 @@ a:hover {
 .color_allert {
   color: #f00;
 }
+
+/* line 88, ../../../app/assets/stylesheets/main.scss */
+.desc {
+  padding-right: 14px;
+  background-image: url("arrow_up.png");
+  background-repeat: no-repeat;
+  background-color: transparent;
+  background-position: right top;
+}
+
+/* line 96, ../../../app/assets/stylesheets/main.scss */
+.asc {
+  padding-right: 14px;
+  background-image: url("arrow_down.png");
+  background-repeat: no-repeat;
+  background-color: transparent;
+  background-position: right top;
+}
