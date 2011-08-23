@@ -4,6 +4,20 @@ class BookingsController < InheritedResources::Base
   before_filter :get_internal_news
     helper_method :sort_column, :sort_direction 
   
+  def index
+    @bookings = Booking.scoped
+    @bookings = @bookings.after(Time.at(params['start'].to_i)) if (params['start'])
+    @bookings = @bookings.before(Time.at(params['end'].to_i)) if (params['end'])
+    @bookings = @bookings.order(sort_column + ' ' + sort_direction).paginate(:per_page => 24, :page => params[:page]) unless params['start'] or params['end']
+    @meetingroom ||= Meetingroom.first
+
+    respond_to do |format|
+      format.html # index.html.erb
+      format.xml  { render :xml => @bookings }
+      format.js  { render :json => @bookings }
+    end
+  end
+  
   def new
     @booking = Booking.new
     @booking.created_at = params[:date].present?? params[:date].to_date : Date.today
@@ -12,26 +26,17 @@ class BookingsController < InheritedResources::Base
     new!
   end
   
-  def index 
-    @bookings = Booking.order(sort_column + ' ' + sort_direction).paginate(:per_page => 24, :page => params[:page])
-    @meetingroom = Meetingroom.first
-    if request.xhr?
-      @date = Date.parse params[:date]
-      render '_calendar', :layout => false
-    end
-  end
-  
   def create
     session[:go_to_after_edit] = nil
-    @meetingroom = Meetingroom.first
+    @meetingroom = Meetingroom.find(params[:booking][:meetingroom_id])#Meetingroom.first
+    @booking.meetingroom = @meetingroom
     create! { new_meetingroom_booking_path(@meetingroom, :date => @booking.created_at)}
-    
   end
   
   def update
-
     session[:go_to_after_edit] = nil
-    @meetingroom = Meetingroom.first
+    @meetingroom = Meetingroom.find(params[:booking][:meetingroom_id])#Meetingroom.first
+    @booking.meetingroom = @meetingroom
     update! { new_meetingroom_booking_path(@meetingroom, :date => @booking.created_at)}
   end
   
