@@ -60,3 +60,11 @@
     = f.submit 'Gem'
     -#= image_tag "loader.gif", :alt => "", :width => "32", :height => "32", :style => "display: none;", :class => 'spinner'
 
+  .meetingrooms
+    - Meetingroom.all.each do |meetingroom|
+      .booking-meetingroom-column
+        div style="background-color: #{meetingroom.color || 'yellow'};"
+          strong= meetingroom.title
+          br/
+          = image_tag meetingroom.image(:mini)
+

@@ -472,6 +472,12 @@ a:hover{
 	}
 }
 
+.booking-meetingroom-column{
+	float:left;
+	margin: 2px;
+	width: 134px;
+}
+
 #columns-3-2-2-1-2{
 	min-height:500px;
 	@include grid(12);
