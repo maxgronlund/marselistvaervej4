@@ -23,6 +23,16 @@
   	br
       = f.text_area :body
   
+    .field
+      = f.label :color
+  	br
+      = f.text_field :color
+  	br
+      em
+        'Farve som vises i kalender for dette mødelokale.  Skal være 
+        = link_to 'gyldig CSS farvenavn', 'http://www.w3schools.com/cssref/css_colornames.asp'
+        ' (gul med mindre andet angives)
+
     .actions
         = f.submit 'Gem', :disable_with =>  'Saving...'
         = image_tag "loader.gif", :alt => "", :width => "32", :height => "32", :style => "display: none;", :class =>  'spinner'

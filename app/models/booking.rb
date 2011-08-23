@@ -41,7 +41,7 @@ class Booking < ActiveRecord::Base
       :end => (created_at.beginning_of_day + endtime.hour.hours + endtime.min.minutes).rfc822,
       :allDay => false,
       :recurring => false,
-      color: color,
+      color: meetingroom.color,
       #textColor: 'black',
       :url => Rails.application.routes.url_helpers.edit_meetingroom_booking_path(meetingroom_id, id, :locale => 'da')
     }
@@ -49,18 +49,6 @@ class Booking < ActiveRecord::Base
   
   def self.format_date(date_time)
     Time.at(date_time.to_i).to_formatted_s(:db)
-  end
-
-  def color
-    if meetingroom_id == 1
-      'lightblue'
-    elsif meetingroom_id == 2
-      'lightgreen'
-    elsif meetingroom_id == 3
-      'red'
-    else
-      'yellow'
-    end
   end
 
 end
