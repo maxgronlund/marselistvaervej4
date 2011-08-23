@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110823080216) do
+ActiveRecord::Schema.define(:version => 20110823125615) do
 
   create_table "blogs", :force => true do |t|
     t.string   "title"
@@ -136,8 +136,10 @@ ActiveRecord::Schema.define(:version => 20110823080216) do
     t.datetime "image_updated_at"
     t.string   "language"
     t.boolean  "grid"
+    t.integer  "company_id"
   end
 
+  add_index "users", ["company_id"], :name => "index_users_on_company_id"
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true
   add_index "users", ["reset_password_token"], :name => "index_users_on_reset_password_token", :unique => true
 
