@@ -45,3 +45,6 @@
   .edit
     = link_to t('user.create'), new_user_path, :class => 'button'
     br/
+
+  - if can_edit?
+    p= link_to 'Send E-Mail til *alle* brugere', "mailto:#{User.all.map(&:email).join(', ')}", :confirm => t('admin.are_you_sure')
