@@ -41,6 +41,11 @@ $(document).ready(function() {
             ignoreTimezone: false
         }],
         
+        titleFormat: {
+          month: 'MMMM yyyy',                             // September 2009
+          week: "d. [MMM][ yyyy]{ '&#8212;' d. MMM yyyy}", // 7. - 13. Sep 2009
+          day: 'd. MMM, yyyy'                  // 8. Sep, 2009
+        },
         columnFormat: {
             month: 'ddd',    // Mon
             week: 'ddd d/M', // Mon 7/9

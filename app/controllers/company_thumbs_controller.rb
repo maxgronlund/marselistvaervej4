@@ -26,7 +26,7 @@ class CompanyThumbsController < InheritedResources::Base
     @company_thumb = @company.company_thumbs.create(params[:company_thumb])
 #    @company_thumb = CompanyThumb.new(params[:company_thumb])
     if @company_thumb.save
-      if params[:company_thumb][:image].blank?
+      if params[:company_thumb].nil? or params[:company_thumb][:image].blank?
         flash[:notice] = "Successfully created company."
         redirect_to company_path(@company_thumb.company)
       else
