@@ -13,10 +13,10 @@
   .fullpage
     .top-margin
   - @meetingrooms.each do |meetingroom|
-      .fullpage
+      .fullpage.top_margin
         .meeting-room
           = link_to image_tag(meetingroom.image.url(:thumbnail), :border => 'none', :class => 'image_fix'), meetingroom
-          - if can? :manage, Meetingroom
+          - if is_super?
             br
               = link_to 'rediger', edit_meetingroom_path(meetingroom) 
               |  |  
@@ -29,12 +29,15 @@
           br 
           - if meetingroom.body.length > 160
             = link_to 'læs mere', meetingroom_path(meetingroom)
+          br
+          .edit.top_margin
+            = link_to 'book mødelokale', new_meetingroom_booking_path(meetingroom), :class => 'button'
         
       
   
   br
   .fullpage
-    = link_to 'book mødelokale', new_meetingroom_booking_path(@first_meeting_room), :class => 'button'
+    -#= link_to 'book mødelokale', new_meetingroom_booking_path(@first_meeting_room), :class => 'button'
   - if is_super?
     .edit
       = link_to 'opret nyt mødelokale', new_meetingroom_path, :class => 'button'

@@ -1,20 +1,20 @@
 .single-column
-  h1 Opret konto
+  h1 Opret bruger
   = form_for(@user, :html => { :multipart => true }) do |f|
     -#= devise_error_messages!
 
     .field
-      = f.label :name
+      'navn
       br/
       = f.text_field :name
 
-    .field
-      = f.label :email
+    .field.top_margin
+      'email
       br/
       = f.text_field :email
 
 
-    .field
+    .field.top_margin
       - if current_user.super?
         = f.label :role, t('user.role')
         br/
@@ -28,7 +28,7 @@
       
 
 
-    .field
+    .field.top_margin
       = f.label :password
       br/
       = f.password_field :password
@@ -40,7 +40,7 @@
       = f.password_field :password_confirmation
       br/
 
-    .action
+    .action.top_margin
       = f.submit 'Opret konto'
       -#= f.submit 'Opret konto', disable_with: 'Saving...'
       -#= image_tag "loader.gif", alt: "", width: "32", height: "32", style: "display: none;", class: 'spinner'

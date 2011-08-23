@@ -1,6 +1,9 @@
 class Meetingroom < ActiveRecord::Base
   has_many :bookings
   
+  validates :title, :presence => true
+  validates :body, :presence => true
+  
   has_attached_file :image, 
                     :styles => { :mini => "70x57#",:thumbnail => "140x114#", :preview => "460x376#",:xxl => "754x616>" }, 
                     :processors => [:cropper],
