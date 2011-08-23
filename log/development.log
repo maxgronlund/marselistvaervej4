@@ -13125,3 +13125,716 @@ Rendered company_thumbs/_form.html.slim (5.9ms)
   [1m[36mUser Load (0.8ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 5 LIMIT 1[0m
 Rendered company_thumbs/new.html.slim within layouts/application (86.2ms)
 Completed 200 OK in 116ms (Views: 94.7ms | ActiveRecord: 1.4ms | Sphinx: 0.0ms)
+
+
+Started GET "/companies/13/company_thumbs/new?locale=dk" for 127.0.0.1 at 2011-08-23 14:00:35 +0200
+  Processing by CompanyThumbsController#new as HTML
+  Parameters: {"locale"=>"dk", "company_id"=>"13"}
+  [1m[35mCompany Load (0.6ms)[0m  SELECT `companies`.* FROM `companies` WHERE `companies`.`id` = 13 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `companies`.* FROM `companies` WHERE `companies`.`id` = 13 LIMIT 1[0m
+Rendered company_thumbs/_form.html.slim (6.5ms)
+  [1m[35mUser Load (0.9ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 5 LIMIT 1
+Rendered company_thumbs/new.html.slim within layouts/application (87.9ms)
+Completed 200 OK in 118ms (Views: 96.5ms | ActiveRecord: 1.6ms | Sphinx: 0.0ms)
+
+
+Started GET "/companies/13/company_thumbs/new?locale=dk" for 127.0.0.1 at 2011-08-23 14:00:35 +0200
+  Processing by CompanyThumbsController#new as HTML
+  Parameters: {"locale"=>"dk", "company_id"=>"13"}
+  [1m[36mCompany Load (0.6ms)[0m  [1mSELECT `companies`.* FROM `companies` WHERE `companies`.`id` = 13 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `companies`.* FROM `companies` WHERE `companies`.`id` = 13 LIMIT 1
+Rendered company_thumbs/_form.html.slim (6.6ms)
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 5 LIMIT 1[0m
+Rendered company_thumbs/new.html.slim within layouts/application (47.5ms)
+Completed 200 OK in 78ms (Views: 56.5ms | ActiveRecord: 1.5ms | Sphinx: 0.0ms)
+
+
+Started POST "/companies/13/company_thumbs?locale=dk" for 127.0.0.1 at 2011-08-23 14:00:37 +0200
+  Processing by CompanyThumbsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DlzIKL9IqqTgJRRjp8/mOvNOF/P1bzRcvIhMnkKd2lE=", "commit"=>"gem", "locale"=>"dk", "company_id"=>"13"}
+  [1m[35mCompany Load (0.8ms)[0m  SELECT `companies`.* FROM `companies` WHERE `companies`.`id` = 13 LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.1ms)[0m  describe `company_thumbs`
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO `company_thumbs` (`created_at`, `updated_at`, `image_file_name`, `image_content_type`, `image_file_size`, `image_updated_at`, `company_id`) VALUES ('2011-08-23 12:00:37', '2011-08-23 12:00:37', NULL, NULL, NULL, NULL, 13)[0m
+[paperclip] Saving attachments.
+  [1m[35mSQL (0.4ms)[0m  COMMIT
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+[paperclip] Saving attachments.
+  [1m[35mSQL (0.1ms)[0m  COMMIT
+  [1m[36mCompany Load (0.6ms)[0m  [1mSELECT `companies`.* FROM `companies` WHERE `companies`.`id` = 13 LIMIT 1[0m
+Redirected to http://localhost:3000/dk/companies/13
+Completed 302 Found in 31ms
+
+
+Started GET "/dk/companies/13" for 127.0.0.1 at 2011-08-23 14:00:37 +0200
+  Processing by CompaniesController#show as HTML
+  Parameters: {"locale"=>"dk", "id"=>"13"}
+  [1m[35mCompany Load (0.7ms)[0m  SELECT `companies`.* FROM `companies` WHERE `companies`.`id` = 13 LIMIT 1
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 5 LIMIT 1[0m
+  [1m[35mNewspost Load (0.9ms)[0m  SELECT `newsposts`.* FROM `newsposts` WHERE `newsposts`.`internal_letter` = 0 ORDER BY created_at desc LIMIT 3 OFFSET 0
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT COUNT(*) FROM `newsposts` WHERE `newsposts`.`internal_letter` = 0[0m
+Rendered shared/_menu.html.slim (1.9ms)
+Rendered shared/_news.html.slim (11.7ms)
+Rendered companies/show.html.slim within layouts/application (28.6ms)
+Completed 200 OK in 228ms (Views: 39.0ms | ActiveRecord: 2.7ms | Sphinx: 0.0ms)
+
+
+Started GET "/dk/companies/13" for 127.0.0.1 at 2011-08-23 14:00:38 +0200
+  Processing by CompaniesController#show as HTML
+  Parameters: {"locale"=>"dk", "id"=>"13"}
+  [1m[35mCompany Load (88.7ms)[0m  SELECT `companies`.* FROM `companies` WHERE `companies`.`id` = 13 LIMIT 1
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 5 LIMIT 1[0m
+  [1m[35mNewspost Load (1.1ms)[0m  SELECT `newsposts`.* FROM `newsposts` WHERE `newsposts`.`internal_letter` = 0 ORDER BY created_at desc LIMIT 3 OFFSET 0
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT COUNT(*) FROM `newsposts` WHERE `newsposts`.`internal_letter` = 0[0m
+Rendered shared/_menu.html.slim (1.9ms)
+Rendered shared/_news.html.slim (11.3ms)
+Rendered companies/show.html.slim within layouts/application (27.7ms)
+Completed 200 OK in 280ms (Views: 37.6ms | ActiveRecord: 91.0ms | Sphinx: 0.0ms)
+
+
+Started GET "/dk/meetingrooms" for 127.0.0.1 at 2011-08-23 14:00:46 +0200
+  Processing by MeetingroomsController#index as HTML
+  Parameters: {"locale"=>"dk"}
+  [1m[35mUser Load (1.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 5 LIMIT 1
+  [1m[36mMeetingroom Load (0.6ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1[0m
+  [1m[35mNewspost Load (0.6ms)[0m  SELECT `newsposts`.* FROM `newsposts` WHERE `newsposts`.`internal_letter` = 1 ORDER BY created_at desc LIMIT 3 OFFSET 0
+Rendered shared/_menu.html.slim (1.9ms)
+  [1m[36mMeetingroom Load (0.8ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms`[0m
+Rendered meetingrooms/index.html.slim within layouts/application (28.8ms)
+Completed 200 OK in 231ms (Views: 38.6ms | ActiveRecord: 6.5ms | Sphinx: 0.0ms)
+
+
+Started GET "/dk/meetingrooms" for 127.0.0.1 at 2011-08-23 14:00:46 +0200
+  Processing by MeetingroomsController#index as HTML
+  Parameters: {"locale"=>"dk"}
+  [1m[35mUser Load (0.9ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 5 LIMIT 1
+  [1m[36mMeetingroom Load (7.2ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1[0m
+  [1m[35mNewspost Load (0.8ms)[0m  SELECT `newsposts`.* FROM `newsposts` WHERE `newsposts`.`internal_letter` = 1 ORDER BY created_at desc LIMIT 3 OFFSET 0
+Rendered shared/_menu.html.slim (1.7ms)
+  [1m[36mMeetingroom Load (0.7ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms`[0m
+Rendered meetingrooms/index.html.slim within layouts/application (70.5ms)
+Completed 200 OK in 466ms (Views: 79.1ms | ActiveRecord: 9.6ms | Sphinx: 0.0ms)
+
+
+Started GET "/dk/companies" for 127.0.0.1 at 2011-08-23 14:00:47 +0200
+  Processing by CompaniesController#index as HTML
+  Parameters: {"locale"=>"dk"}
+  [1m[35mUser Load (1.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 5 LIMIT 1
+  [1m[36mNewspost Load (0.8ms)[0m  [1mSELECT `newsposts`.* FROM `newsposts` WHERE `newsposts`.`internal_letter` = 0 ORDER BY created_at desc LIMIT 3 OFFSET 0[0m
+  [1m[35mSQL (0.3ms)[0m  SELECT COUNT(*) FROM `newsposts` WHERE `newsposts`.`internal_letter` = 0
+  [1m[36mCompany Load (1.2ms)[0m  [1mSELECT `companies`.* FROM `companies` ORDER BY title asc LIMIT 8 OFFSET 0[0m
+  [1m[35mSQL (0.3ms)[0m  SELECT COUNT(*) FROM `companies`
+Rendered shared/_menu.html.slim (1.9ms)
+  [1m[36mSQL (0.4ms)[0m  [1mSELECT COUNT(*) FROM `company_thumbs` WHERE (`company_thumbs`.company_id = 13)[0m
+  [1m[35mCompanyThumb Load (0.7ms)[0m  SELECT `company_thumbs`.* FROM `company_thumbs` WHERE (`company_thumbs`.company_id = 13) ORDER BY company_thumbs.id DESC LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT COUNT(*) FROM `company_thumbs` WHERE (`company_thumbs`.company_id = 2)[0m
+  [1m[35mCompanyThumb Load (0.4ms)[0m  SELECT `company_thumbs`.* FROM `company_thumbs` WHERE (`company_thumbs`.company_id = 2) ORDER BY company_thumbs.id DESC LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT COUNT(*) FROM `company_thumbs` WHERE (`company_thumbs`.company_id = 12)[0m
+  [1m[35mSQL (0.5ms)[0m  SELECT COUNT(*) FROM `company_thumbs` WHERE (`company_thumbs`.company_id = 8)
+  [1m[36mCompanyThumb Load (0.5ms)[0m  [1mSELECT `company_thumbs`.* FROM `company_thumbs` WHERE (`company_thumbs`.company_id = 8) ORDER BY company_thumbs.id DESC LIMIT 1[0m
+  [1m[35mSQL (0.6ms)[0m  SELECT COUNT(*) FROM `company_thumbs` WHERE (`company_thumbs`.company_id = 11)
+  [1m[36mSQL (0.5ms)[0m  [1mSELECT COUNT(*) FROM `company_thumbs` WHERE (`company_thumbs`.company_id = 7)[0m
+  [1m[35mSQL (0.4ms)[0m  SELECT COUNT(*) FROM `company_thumbs` WHERE (`company_thumbs`.company_id = 10)
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT COUNT(*) FROM `company_thumbs` WHERE (`company_thumbs`.company_id = 1)[0m
+  [1m[35mCompanyThumb Load (0.4ms)[0m  SELECT `company_thumbs`.* FROM `company_thumbs` WHERE (`company_thumbs`.company_id = 1) ORDER BY company_thumbs.id DESC LIMIT 1
+Rendered shared/_news.html.slim (10.9ms)
+Rendered companies/index.html.slim within layouts/application (63.7ms)
+Completed 200 OK in 250ms (Views: 67.4ms | ActiveRecord: 8.9ms | Sphinx: 0.0ms)
+
+
+Started GET "/images/fallback/default_illustration_mini.gif" for 127.0.0.1 at 2011-08-23 14:00:47 +0200
+
+ActionController::RoutingError (No route matches "/images/fallback/default_illustration_mini.gif"):
+  
+
+Rendered /Users/synthmax/.rvm/gems/ruby-1.9.2-rc2/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/dk/companies" for 127.0.0.1 at 2011-08-23 14:00:48 +0200
+  Processing by CompaniesController#index as HTML
+  Parameters: {"locale"=>"dk"}
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 5 LIMIT 1[0m
+  [1m[35mNewspost Load (0.7ms)[0m  SELECT `newsposts`.* FROM `newsposts` WHERE `newsposts`.`internal_letter` = 0 ORDER BY created_at desc LIMIT 3 OFFSET 0
+  [1m[36mSQL (0.4ms)[0m  [1mSELECT COUNT(*) FROM `newsposts` WHERE `newsposts`.`internal_letter` = 0[0m
+  [1m[35mCompany Load (0.9ms)[0m  SELECT `companies`.* FROM `companies` ORDER BY title asc LIMIT 8 OFFSET 0
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT COUNT(*) FROM `companies`[0m
+Rendered shared/_menu.html.slim (1.7ms)
+  [1m[35mSQL (0.4ms)[0m  SELECT COUNT(*) FROM `company_thumbs` WHERE (`company_thumbs`.company_id = 13)
+  [1m[36mCompanyThumb Load (0.4ms)[0m  [1mSELECT `company_thumbs`.* FROM `company_thumbs` WHERE (`company_thumbs`.company_id = 13) ORDER BY company_thumbs.id DESC LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  SELECT COUNT(*) FROM `company_thumbs` WHERE (`company_thumbs`.company_id = 2)
+  [1m[36mCompanyThumb Load (0.5ms)[0m  [1mSELECT `company_thumbs`.* FROM `company_thumbs` WHERE (`company_thumbs`.company_id = 2) ORDER BY company_thumbs.id DESC LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  SELECT COUNT(*) FROM `company_thumbs` WHERE (`company_thumbs`.company_id = 12)
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT COUNT(*) FROM `company_thumbs` WHERE (`company_thumbs`.company_id = 8)[0m
+  [1m[35mCompanyThumb Load (0.4ms)[0m  SELECT `company_thumbs`.* FROM `company_thumbs` WHERE (`company_thumbs`.company_id = 8) ORDER BY company_thumbs.id DESC LIMIT 1
+  [1m[36mSQL (0.5ms)[0m  [1mSELECT COUNT(*) FROM `company_thumbs` WHERE (`company_thumbs`.company_id = 11)[0m
+  [1m[35mSQL (0.4ms)[0m  SELECT COUNT(*) FROM `company_thumbs` WHERE (`company_thumbs`.company_id = 7)
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT COUNT(*) FROM `company_thumbs` WHERE (`company_thumbs`.company_id = 10)[0m
+  [1m[35mSQL (0.4ms)[0m  SELECT COUNT(*) FROM `company_thumbs` WHERE (`company_thumbs`.company_id = 1)
+  [1m[36mCompanyThumb Load (0.4ms)[0m  [1mSELECT `company_thumbs`.* FROM `company_thumbs` WHERE (`company_thumbs`.company_id = 1) ORDER BY company_thumbs.id DESC LIMIT 1[0m
+Rendered shared/_news.html.slim (11.4ms)
+Rendered companies/index.html.slim within layouts/application (101.7ms)
+Completed 200 OK in 256ms (Views: 106.1ms | ActiveRecord: 7.8ms | Sphinx: 0.0ms)
+
+
+Started GET "/images/fallback/default_illustration_mini.gif" for 127.0.0.1 at 2011-08-23 14:00:48 +0200
+
+ActionController::RoutingError (No route matches "/images/fallback/default_illustration_mini.gif"):
+  
+
+Rendered /Users/synthmax/.rvm/gems/ruby-1.9.2-rc2/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/images/fallback/default_illustration_mini.gif" for 127.0.0.1 at 2011-08-23 14:00:48 +0200
+
+ActionController::RoutingError (No route matches "/images/fallback/default_illustration_mini.gif"):
+  
+
+Rendered /Users/synthmax/.rvm/gems/ruby-1.9.2-rc2/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/dk/companies/13" for 127.0.0.1 at 2011-08-23 14:00:57 +0200
+  Processing by CompaniesController#show as HTML
+  Parameters: {"locale"=>"dk", "id"=>"13"}
+  [1m[35mCompany Load (0.8ms)[0m  SELECT `companies`.* FROM `companies` WHERE `companies`.`id` = 13 LIMIT 1
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 5 LIMIT 1[0m
+  [1m[35mNewspost Load (0.9ms)[0m  SELECT `newsposts`.* FROM `newsposts` WHERE `newsposts`.`internal_letter` = 0 ORDER BY created_at desc LIMIT 3 OFFSET 0
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT COUNT(*) FROM `newsposts` WHERE `newsposts`.`internal_letter` = 0[0m
+Rendered shared/_menu.html.slim (1.8ms)
+Rendered shared/_news.html.slim (10.9ms)
+Rendered companies/show.html.slim within layouts/application (26.3ms)
+Completed 200 OK in 218ms (Views: 35.7ms | ActiveRecord: 3.1ms | Sphinx: 0.0ms)
+
+
+Started GET "/dk/companies/13" for 127.0.0.1 at 2011-08-23 14:00:58 +0200
+  Processing by CompaniesController#show as HTML
+  Parameters: {"locale"=>"dk", "id"=>"13"}
+  [1m[35mCompany Load (0.5ms)[0m  SELECT `companies`.* FROM `companies` WHERE `companies`.`id` = 13 LIMIT 1
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 5 LIMIT 1[0m
+  [1m[35mNewspost Load (0.7ms)[0m  SELECT `newsposts`.* FROM `newsposts` WHERE `newsposts`.`internal_letter` = 0 ORDER BY created_at desc LIMIT 3 OFFSET 0
+  [1m[36mSQL (0.5ms)[0m  [1mSELECT COUNT(*) FROM `newsposts` WHERE `newsposts`.`internal_letter` = 0[0m
+Rendered shared/_menu.html.slim (1.7ms)
+Rendered shared/_news.html.slim (10.5ms)
+Rendered companies/show.html.slim within layouts/application (26.1ms)
+Completed 200 OK in 175ms (Views: 34.7ms | ActiveRecord: 2.7ms | Sphinx: 0.0ms)
+
+
+Started GET "/companies/13/company_thumbs/new?locale=dk" for 127.0.0.1 at 2011-08-23 14:01:29 +0200
+  Processing by CompanyThumbsController#new as HTML
+  Parameters: {"locale"=>"dk", "company_id"=>"13"}
+  [1m[35mCompany Load (0.6ms)[0m  SELECT `companies`.* FROM `companies` WHERE `companies`.`id` = 13 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `companies`.* FROM `companies` WHERE `companies`.`id` = 13 LIMIT 1[0m
+Rendered company_thumbs/_form.html.slim (6.0ms)
+  [1m[35mUser Load (1.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 5 LIMIT 1
+Rendered company_thumbs/new.html.slim within layouts/application (44.4ms)
+Completed 200 OK in 75ms (Views: 52.5ms | ActiveRecord: 1.6ms | Sphinx: 0.0ms)
+
+
+Started GET "/companies/13/company_thumbs/new?locale=dk" for 127.0.0.1 at 2011-08-23 14:01:30 +0200
+  Processing by CompanyThumbsController#new as HTML
+  Parameters: {"locale"=>"dk", "company_id"=>"13"}
+  [1m[36mCompany Load (0.6ms)[0m  [1mSELECT `companies`.* FROM `companies` WHERE `companies`.`id` = 13 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `companies`.* FROM `companies` WHERE `companies`.`id` = 13 LIMIT 1
+Rendered company_thumbs/_form.html.slim (6.0ms)
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 5 LIMIT 1[0m
+Rendered company_thumbs/new.html.slim within layouts/application (84.5ms)
+Completed 200 OK in 114ms (Views: 92.5ms | ActiveRecord: 1.5ms | Sphinx: 0.0ms)
+
+
+Started POST "/companies/13/company_thumbs?locale=dk" for 127.0.0.1 at 2011-08-23 14:01:33 +0200
+  Processing by CompanyThumbsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DlzIKL9IqqTgJRRjp8/mOvNOF/P1bzRcvIhMnkKd2lE=", "company_thumb"=>{"image"=>#<ActionDispatch::Http::UploadedFile:0x0000010251b398 @original_filename="portraits_of_celebrities_640_05.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"company_thumb[image]\"; filename=\"portraits_of_celebrities_640_05.jpg\"\r\nContent-Type: image/jpeg\r\n", @tempfile=#<File:/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/RackMultipart20110823-4320-ojq0kk>>}, "commit"=>"gem", "locale"=>"dk", "company_id"=>"13"}
+  [1m[35mCompany Load (0.7ms)[0m  SELECT `companies`.* FROM `companies` WHERE `companies`.`id` = 13 LIMIT 1
+[paperclip] identify -format %wx%h '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/stream20110823-4320-108qm8m.jpg[0]' 2>/dev/null
+[paperclip] convert '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/stream20110823-4320-108qm8m.jpg[0]' -resize "x57" -crop "70x57+7+0" +repage '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/stream20110823-4320-108qm8m20110823-4320-1p6y8gx' 2>/dev/null
+[paperclip] identify -format %wx%h '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/stream20110823-4320-108qm8m.jpg[0]' 2>/dev/null
+[paperclip] convert '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/stream20110823-4320-108qm8m.jpg[0]' -resize "x114" -crop "140x114+15+0" +repage '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/stream20110823-4320-108qm8m20110823-4320-2f5l9t' 2>/dev/null
+[paperclip] identify -format %wx%h '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/stream20110823-4320-108qm8m.jpg[0]' 2>/dev/null
+[paperclip] convert '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/stream20110823-4320-108qm8m.jpg[0]' -resize "x376" -crop "460x376+52+0" +repage '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/stream20110823-4320-108qm8m20110823-4320-1pbtlk0' 2>/dev/null
+[paperclip] identify -format %wx%h '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/stream20110823-4320-108qm8m.jpg[0]' 2>/dev/null
+[paperclip] convert '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/stream20110823-4320-108qm8m.jpg[0]' -resize "754x616>" '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/stream20110823-4320-108qm8m20110823-4320-cioavr' 2>/dev/null
+  [1m[36mSQL (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.5ms)[0m  describe `company_thumbs`
+  [1m[36mAREL (0.4ms)[0m  [1mINSERT INTO `company_thumbs` (`created_at`, `updated_at`, `image_file_name`, `image_content_type`, `image_file_size`, `image_updated_at`, `company_id`) VALUES ('2011-08-23 12:01:34', '2011-08-23 12:01:34', 'portraits_of_celebrities_640_05.jpg', 'image/jpeg', 22264, '2011-08-23 12:01:33', 13)[0m
+[paperclip] Saving attachments.
+[paperclip] saving /Users/synthmax/Dropbox/marselistvaervej4/public/system/images/29/original/portraits_of_celebrities_640_05.jpg
+[paperclip] saving /Users/synthmax/Dropbox/marselistvaervej4/public/system/images/29/mini/portraits_of_celebrities_640_05.jpg
+[paperclip] saving /Users/synthmax/Dropbox/marselistvaervej4/public/system/images/29/thumbnail/portraits_of_celebrities_640_05.jpg
+[paperclip] saving /Users/synthmax/Dropbox/marselistvaervej4/public/system/images/29/preview/portraits_of_celebrities_640_05.jpg
+[paperclip] saving /Users/synthmax/Dropbox/marselistvaervej4/public/system/images/29/xxl/portraits_of_celebrities_640_05.jpg
+  [1m[35mSQL (0.5ms)[0m  COMMIT
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+[paperclip] Saving attachments.
+  [1m[35mSQL (0.2ms)[0m  COMMIT
+[paperclip] identify -format %wx%h '/Users/synthmax/Dropbox/marselistvaervej4/public/system/images/29/xxl/portraits_of_celebrities_640_05.jpg[0]' 2>/dev/null
+[paperclip] identify -format %wx%h '/Users/synthmax/Dropbox/marselistvaervej4/public/system/images/29/original/portraits_of_celebrities_640_05.jpg[0]' 2>/dev/null
+  [1m[36mCompany Load (1.4ms)[0m  [1mSELECT `companies`.* FROM `companies` WHERE `companies`.`id` = 13 LIMIT 1[0m
+  [1m[35mUser Load (1.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 5 LIMIT 1
+Rendered company_thumbs/crop.html.slim within layouts/application (111.5ms)
+Completed 200 OK in 435ms (Views: 123.0ms | ActiveRecord: 6.3ms | Sphinx: 0.0ms)
+
+
+Started GET "/stylesheets/Jcrop.gif" for 127.0.0.1 at 2011-08-23 14:01:35 +0200
+
+ActionController::RoutingError (No route matches "/stylesheets/Jcrop.gif"):
+  
+
+Rendered /Users/synthmax/.rvm/gems/ruby-1.9.2-rc2/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/companies/13/company_thumbs?locale=dk" for 127.0.0.1 at 2011-08-23 14:01:35 +0200
+  Processing by CompanyThumbsController#index as HTML
+  Parameters: {"locale"=>"dk", "company_id"=>"13"}
+  [1m[36mCompany Load (0.6ms)[0m  [1mSELECT `companies`.* FROM `companies` WHERE `companies`.`id` = 13 LIMIT 1[0m
+  [1m[35mCompanyThumb Load (1.2ms)[0m  SELECT `company_thumbs`.* FROM `company_thumbs` WHERE (`company_thumbs`.company_id = 13)
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 5 LIMIT 1[0m
+Rendered company_thumbs/index.html.erb within layouts/application (101.9ms)
+Completed 200 OK in 128ms (Views: 110.7ms | ActiveRecord: 2.7ms | Sphinx: 0.0ms)
+
+
+Started GET "/stylesheets/Jcrop.gif" for 127.0.0.1 at 2011-08-23 14:01:35 +0200
+
+ActionController::RoutingError (No route matches "/stylesheets/Jcrop.gif"):
+  
+
+Rendered /Users/synthmax/.rvm/gems/ruby-1.9.2-rc2/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started POST "/companies/13/company_thumbs/29?locale=dk" for 127.0.0.1 at 2011-08-23 14:01:46 +0200
+  Processing by CompanyThumbsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DlzIKL9IqqTgJRRjp8/mOvNOF/P1bzRcvIhMnkKd2lE=", "company_thumb"=>{"crop_x"=>"324", "crop_y"=>"166", "crop_w"=>"83", "crop_h"=>"68"}, "commit"=>"Crop", "locale"=>"dk", "company_id"=>"13", "id"=>"29"}
+  [1m[35mCompany Load (0.7ms)[0m  SELECT `companies`.* FROM `companies` WHERE `companies`.`id` = 13 LIMIT 1
+  [1m[36mCompanyThumb Load (0.5ms)[0m  [1mSELECT `company_thumbs`.* FROM `company_thumbs` WHERE `company_thumbs`.`id` = 29 AND (`company_thumbs`.company_id = 13) LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+[paperclip] identify -format %wx%h '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/paperclip-reprocess20110823-4320-vsm22l[0]' 2>/dev/null
+[paperclip] convert '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/paperclip-reprocess20110823-4320-vsm22l[0]' -crop 83x68+324+166 -resize "x57" +repage '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/paperclip-reprocess20110823-4320-vsm22l20110823-4320-1ac9rzi' 2>/dev/null
+[paperclip] identify -format %wx%h '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/paperclip-reprocess20110823-4320-vsm22l[0]' 2>/dev/null
+[paperclip] convert '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/paperclip-reprocess20110823-4320-vsm22l[0]' -crop 83x68+324+166 -resize "x114" +repage '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/paperclip-reprocess20110823-4320-vsm22l20110823-4320-1ndemf3' 2>/dev/null
+[paperclip] identify -format %wx%h '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/paperclip-reprocess20110823-4320-vsm22l[0]' 2>/dev/null
+[paperclip] convert '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/paperclip-reprocess20110823-4320-vsm22l[0]' -crop 83x68+324+166 -resize "x376" +repage '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/paperclip-reprocess20110823-4320-vsm22l20110823-4320-bnkmu3' 2>/dev/null
+[paperclip] identify -format %wx%h '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/paperclip-reprocess20110823-4320-vsm22l[0]' 2>/dev/null
+[paperclip] convert '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/paperclip-reprocess20110823-4320-vsm22l[0]' -crop 83x68+324+166 -resize "754x616>" '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/paperclip-reprocess20110823-4320-vsm22l20110823-4320-lj3m2a' 2>/dev/null
+[paperclip] saving /Users/synthmax/Dropbox/marselistvaervej4/public/system/images/29/original/portraits_of_celebrities_640_05.jpg
+[paperclip] saving /Users/synthmax/Dropbox/marselistvaervej4/public/system/images/29/mini/portraits_of_celebrities_640_05.jpg
+[paperclip] saving /Users/synthmax/Dropbox/marselistvaervej4/public/system/images/29/thumbnail/portraits_of_celebrities_640_05.jpg
+[paperclip] saving /Users/synthmax/Dropbox/marselistvaervej4/public/system/images/29/preview/portraits_of_celebrities_640_05.jpg
+[paperclip] saving /Users/synthmax/Dropbox/marselistvaervej4/public/system/images/29/xxl/portraits_of_celebrities_640_05.jpg
+[paperclip] Saving attachments.
+  [1m[36mSQL (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `companies`.* FROM `companies` WHERE `companies`.`id` = 13 LIMIT 1
+Redirected to http://localhost:3000/dk/companies/13
+Completed 302 Found in 233ms
+
+
+Started GET "/dk/companies/13" for 127.0.0.1 at 2011-08-23 14:01:46 +0200
+  Processing by CompaniesController#show as HTML
+  Parameters: {"locale"=>"dk", "id"=>"13"}
+  [1m[36mCompany Load (0.7ms)[0m  [1mSELECT `companies`.* FROM `companies` WHERE `companies`.`id` = 13 LIMIT 1[0m
+  [1m[35mUser Load (0.8ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 5 LIMIT 1
+  [1m[36mNewspost Load (0.8ms)[0m  [1mSELECT `newsposts`.* FROM `newsposts` WHERE `newsposts`.`internal_letter` = 0 ORDER BY created_at desc LIMIT 3 OFFSET 0[0m
+  [1m[35mSQL (0.4ms)[0m  SELECT COUNT(*) FROM `newsposts` WHERE `newsposts`.`internal_letter` = 0
+Rendered shared/_menu.html.slim (1.9ms)
+Rendered shared/_news.html.slim (11.3ms)
+Rendered companies/show.html.slim within layouts/application (27.8ms)
+Completed 200 OK in 239ms (Views: 37.0ms | ActiveRecord: 2.6ms | Sphinx: 0.0ms)
+
+
+Started GET "/dk/companies/13" for 127.0.0.1 at 2011-08-23 14:01:47 +0200
+  Processing by CompaniesController#show as HTML
+  Parameters: {"locale"=>"dk", "id"=>"13"}
+  [1m[36mCompany Load (0.7ms)[0m  [1mSELECT `companies`.* FROM `companies` WHERE `companies`.`id` = 13 LIMIT 1[0m
+  [1m[35mUser Load (0.8ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 5 LIMIT 1
+  [1m[36mNewspost Load (9.2ms)[0m  [1mSELECT `newsposts`.* FROM `newsposts` WHERE `newsposts`.`internal_letter` = 0 ORDER BY created_at desc LIMIT 3 OFFSET 0[0m
+  [1m[35mSQL (16.3ms)[0m  SELECT COUNT(*) FROM `newsposts` WHERE `newsposts`.`internal_letter` = 0
+Rendered shared/_menu.html.slim (1.8ms)
+Rendered shared/_news.html.slim (10.7ms)
+Rendered companies/show.html.slim within layouts/application (25.8ms)
+Completed 200 OK in 358ms (Views: 34.9ms | ActiveRecord: 28.6ms | Sphinx: 0.0ms)
+
+
+Started GET "/dk/companies" for 127.0.0.1 at 2011-08-23 14:01:50 +0200
+  Processing by CompaniesController#index as HTML
+  Parameters: {"locale"=>"dk"}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 5 LIMIT 1[0m
+  [1m[35mNewspost Load (0.8ms)[0m  SELECT `newsposts`.* FROM `newsposts` WHERE `newsposts`.`internal_letter` = 0 ORDER BY created_at desc LIMIT 3 OFFSET 0
+  [1m[36mSQL (0.5ms)[0m  [1mSELECT COUNT(*) FROM `newsposts` WHERE `newsposts`.`internal_letter` = 0[0m
+  [1m[35mCompany Load (1.0ms)[0m  SELECT `companies`.* FROM `companies` ORDER BY title asc LIMIT 8 OFFSET 0
+  [1m[36mSQL (0.4ms)[0m  [1mSELECT COUNT(*) FROM `companies`[0m
+Rendered shared/_menu.html.slim (1.8ms)
+  [1m[35mSQL (0.3ms)[0m  SELECT COUNT(*) FROM `company_thumbs` WHERE (`company_thumbs`.company_id = 13)
+  [1m[36mCompanyThumb Load (0.4ms)[0m  [1mSELECT `company_thumbs`.* FROM `company_thumbs` WHERE (`company_thumbs`.company_id = 13) ORDER BY company_thumbs.id DESC LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  SELECT COUNT(*) FROM `company_thumbs` WHERE (`company_thumbs`.company_id = 2)
+  [1m[36mCompanyThumb Load (0.5ms)[0m  [1mSELECT `company_thumbs`.* FROM `company_thumbs` WHERE (`company_thumbs`.company_id = 2) ORDER BY company_thumbs.id DESC LIMIT 1[0m
+  [1m[35mSQL (0.5ms)[0m  SELECT COUNT(*) FROM `company_thumbs` WHERE (`company_thumbs`.company_id = 12)
+  [1m[36mSQL (0.5ms)[0m  [1mSELECT COUNT(*) FROM `company_thumbs` WHERE (`company_thumbs`.company_id = 8)[0m
+  [1m[35mCompanyThumb Load (0.5ms)[0m  SELECT `company_thumbs`.* FROM `company_thumbs` WHERE (`company_thumbs`.company_id = 8) ORDER BY company_thumbs.id DESC LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT COUNT(*) FROM `company_thumbs` WHERE (`company_thumbs`.company_id = 11)[0m
+  [1m[35mSQL (0.5ms)[0m  SELECT COUNT(*) FROM `company_thumbs` WHERE (`company_thumbs`.company_id = 7)
+  [1m[36mSQL (0.5ms)[0m  [1mSELECT COUNT(*) FROM `company_thumbs` WHERE (`company_thumbs`.company_id = 10)[0m
+  [1m[35mSQL (0.3ms)[0m  SELECT COUNT(*) FROM `company_thumbs` WHERE (`company_thumbs`.company_id = 1)
+  [1m[36mCompanyThumb Load (0.5ms)[0m  [1mSELECT `company_thumbs`.* FROM `company_thumbs` WHERE (`company_thumbs`.company_id = 1) ORDER BY company_thumbs.id DESC LIMIT 1[0m
+Rendered shared/_news.html.slim (11.2ms)
+Rendered companies/index.html.slim within layouts/application (64.8ms)
+Completed 200 OK in 253ms (Views: 70.3ms | ActiveRecord: 8.7ms | Sphinx: 0.0ms)
+
+
+Started GET "/dk/companies" for 127.0.0.1 at 2011-08-23 14:01:51 +0200
+  Processing by CompaniesController#index as HTML
+  Parameters: {"locale"=>"dk"}
+  [1m[35mUser Load (0.9ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 5 LIMIT 1
+  [1m[36mNewspost Load (0.8ms)[0m  [1mSELECT `newsposts`.* FROM `newsposts` WHERE `newsposts`.`internal_letter` = 0 ORDER BY created_at desc LIMIT 3 OFFSET 0[0m
+  [1m[35mSQL (0.5ms)[0m  SELECT COUNT(*) FROM `newsposts` WHERE `newsposts`.`internal_letter` = 0
+  [1m[36mCompany Load (1.1ms)[0m  [1mSELECT `companies`.* FROM `companies` ORDER BY title asc LIMIT 8 OFFSET 0[0m
+  [1m[35mSQL (0.4ms)[0m  SELECT COUNT(*) FROM `companies`
+Rendered shared/_menu.html.slim (2.0ms)
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT COUNT(*) FROM `company_thumbs` WHERE (`company_thumbs`.company_id = 13)[0m
+  [1m[35mCompanyThumb Load (0.6ms)[0m  SELECT `company_thumbs`.* FROM `company_thumbs` WHERE (`company_thumbs`.company_id = 13) ORDER BY company_thumbs.id DESC LIMIT 1
+  [1m[36mSQL (0.5ms)[0m  [1mSELECT COUNT(*) FROM `company_thumbs` WHERE (`company_thumbs`.company_id = 2)[0m
+  [1m[35mCompanyThumb Load (0.5ms)[0m  SELECT `company_thumbs`.* FROM `company_thumbs` WHERE (`company_thumbs`.company_id = 2) ORDER BY company_thumbs.id DESC LIMIT 1
+  [1m[36mSQL (0.5ms)[0m  [1mSELECT COUNT(*) FROM `company_thumbs` WHERE (`company_thumbs`.company_id = 12)[0m
+  [1m[35mSQL (0.6ms)[0m  SELECT COUNT(*) FROM `company_thumbs` WHERE (`company_thumbs`.company_id = 8)
+  [1m[36mCompanyThumb Load (0.4ms)[0m  [1mSELECT `company_thumbs`.* FROM `company_thumbs` WHERE (`company_thumbs`.company_id = 8) ORDER BY company_thumbs.id DESC LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  SELECT COUNT(*) FROM `company_thumbs` WHERE (`company_thumbs`.company_id = 11)
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT COUNT(*) FROM `company_thumbs` WHERE (`company_thumbs`.company_id = 7)[0m
+  [1m[35mSQL (0.4ms)[0m  SELECT COUNT(*) FROM `company_thumbs` WHERE (`company_thumbs`.company_id = 10)
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT COUNT(*) FROM `company_thumbs` WHERE (`company_thumbs`.company_id = 1)[0m
+  [1m[35mCompanyThumb Load (0.5ms)[0m  SELECT `company_thumbs`.* FROM `company_thumbs` WHERE (`company_thumbs`.company_id = 1) ORDER BY company_thumbs.id DESC LIMIT 1
+Rendered shared/_news.html.slim (11.0ms)
+Rendered companies/index.html.slim within layouts/application (102.4ms)
+Completed 200 OK in 255ms (Views: 106.1ms | ActiveRecord: 8.7ms | Sphinx: 0.0ms)
+
+
+Started GET "/dk/companies/13" for 127.0.0.1 at 2011-08-23 14:01:53 +0200
+  Processing by CompaniesController#show as HTML
+  Parameters: {"locale"=>"dk", "id"=>"13"}
+  [1m[36mCompany Load (0.6ms)[0m  [1mSELECT `companies`.* FROM `companies` WHERE `companies`.`id` = 13 LIMIT 1[0m
+  [1m[35mUser Load (0.9ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 5 LIMIT 1
+  [1m[36mNewspost Load (0.7ms)[0m  [1mSELECT `newsposts`.* FROM `newsposts` WHERE `newsposts`.`internal_letter` = 0 ORDER BY created_at desc LIMIT 3 OFFSET 0[0m
+  [1m[35mSQL (0.3ms)[0m  SELECT COUNT(*) FROM `newsposts` WHERE `newsposts`.`internal_letter` = 0
+Rendered shared/_menu.html.slim (2.1ms)
+Rendered shared/_news.html.slim (11.4ms)
+Rendered companies/show.html.slim within layouts/application (29.6ms)
+Completed 200 OK in 232ms (Views: 39.4ms | ActiveRecord: 2.4ms | Sphinx: 0.0ms)
+
+
+Started GET "/dk/companies/13" for 127.0.0.1 at 2011-08-23 14:01:54 +0200
+  Processing by CompaniesController#show as HTML
+  Parameters: {"locale"=>"dk", "id"=>"13"}
+  [1m[36mCompany Load (0.7ms)[0m  [1mSELECT `companies`.* FROM `companies` WHERE `companies`.`id` = 13 LIMIT 1[0m
+  [1m[35mUser Load (1.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 5 LIMIT 1
+  [1m[36mNewspost Load (0.8ms)[0m  [1mSELECT `newsposts`.* FROM `newsposts` WHERE `newsposts`.`internal_letter` = 0 ORDER BY created_at desc LIMIT 3 OFFSET 0[0m
+  [1m[35mSQL (0.3ms)[0m  SELECT COUNT(*) FROM `newsposts` WHERE `newsposts`.`internal_letter` = 0
+Rendered shared/_menu.html.slim (1.8ms)
+Rendered shared/_news.html.slim (10.6ms)
+Rendered companies/show.html.slim within layouts/application (26.2ms)
+Completed 200 OK in 218ms (Views: 35.1ms | ActiveRecord: 2.8ms | Sphinx: 0.0ms)
+
+
+Started GET "/dk/companies/13/edit" for 127.0.0.1 at 2011-08-23 14:01:58 +0200
+  Processing by CompaniesController#edit as HTML
+  Parameters: {"locale"=>"dk", "id"=>"13"}
+  [1m[36mCompany Load (0.6ms)[0m  [1mSELECT `companies`.* FROM `companies` WHERE `companies`.`id` = 13 LIMIT 1[0m
+  [1m[35mUser Load (1.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 5 LIMIT 1
+  [1m[36mNewspost Load (0.9ms)[0m  [1mSELECT `newsposts`.* FROM `newsposts` WHERE `newsposts`.`internal_letter` = 0 ORDER BY created_at desc LIMIT 3 OFFSET 0[0m
+  [1m[35mSQL (0.4ms)[0m  SELECT COUNT(*) FROM `newsposts` WHERE `newsposts`.`internal_letter` = 0
+Rendered companies/_form.html.slim (13.2ms)
+Rendered companies/edit.html.slim within layouts/application (23.2ms)
+Completed 200 OK in 207ms (Views: 32.5ms | ActiveRecord: 2.8ms | Sphinx: 0.0ms)
+
+
+Started GET "/dk/companies/13/edit" for 127.0.0.1 at 2011-08-23 14:02:00 +0200
+  Processing by CompaniesController#edit as HTML
+  Parameters: {"locale"=>"dk", "id"=>"13"}
+  [1m[36mCompany Load (0.6ms)[0m  [1mSELECT `companies`.* FROM `companies` WHERE `companies`.`id` = 13 LIMIT 1[0m
+  [1m[35mUser Load (1.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 5 LIMIT 1
+  [1m[36mNewspost Load (0.8ms)[0m  [1mSELECT `newsposts`.* FROM `newsposts` WHERE `newsposts`.`internal_letter` = 0 ORDER BY created_at desc LIMIT 3 OFFSET 0[0m
+  [1m[35mSQL (0.3ms)[0m  SELECT COUNT(*) FROM `newsposts` WHERE `newsposts`.`internal_letter` = 0
+Rendered companies/_form.html.slim (11.9ms)
+Rendered companies/edit.html.slim within layouts/application (20.7ms)
+Completed 200 OK in 161ms (Views: 29.5ms | ActiveRecord: 2.7ms | Sphinx: 0.0ms)
+
+
+Started POST "/dk/companies/13" for 127.0.0.1 at 2011-08-23 14:02:08 +0200
+  Processing by CompaniesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DlzIKL9IqqTgJRRjp8/mOvNOF/P1bzRcvIhMnkKd2lE=", "company"=>{"image"=>#<ActionDispatch::Http::UploadedFile:0x00000104ed7060 @original_filename="Gallery-Portraits-for-Pos-011.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"company[image]\"; filename=\"Gallery-Portraits-for-Pos-011.jpg\"\r\nContent-Type: image/jpeg\r\n", @tempfile=#<File:/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/RackMultipart20110823-4320-13mjnwd>>, "title"=>"asdf", "body"=>"", "phone"=>"", "homepage"=>""}, "commit"=>"Gem", "locale"=>"dk", "id"=>"13"}
+  [1m[36mCompany Load (0.6ms)[0m  [1mSELECT `companies`.* FROM `companies` WHERE `companies`.`id` = 13 LIMIT 1[0m
+  [1m[35mUser Load (0.9ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 5 LIMIT 1
+  [1m[36mNewspost Load (0.9ms)[0m  [1mSELECT `newsposts`.* FROM `newsposts` WHERE `newsposts`.`internal_letter` = 0 ORDER BY created_at desc LIMIT 3 OFFSET 0[0m
+  [1m[35mSQL (0.3ms)[0m  SELECT COUNT(*) FROM `newsposts` WHERE `newsposts`.`internal_letter` = 0
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `companies`.* FROM `companies` WHERE `companies`.`id` = 13 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+[paperclip] identify -format %wx%h '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/stream20110823-4320-1hhcbau.jpg[0]' 2>/dev/null
+[paperclip] convert '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/stream20110823-4320-1hhcbau.jpg[0]' -resize "70x" -crop "70x57+0+14" +repage '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/stream20110823-4320-1hhcbau20110823-4320-5xkjea' 2>/dev/null
+[paperclip] identify -format %wx%h '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/stream20110823-4320-1hhcbau.jpg[0]' 2>/dev/null
+[paperclip] convert '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/stream20110823-4320-1hhcbau.jpg[0]' -resize "140x" -crop "140x114+0+29" +repage '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/stream20110823-4320-1hhcbau20110823-4320-1sut33n' 2>/dev/null
+[paperclip] identify -format %wx%h '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/stream20110823-4320-1hhcbau.jpg[0]' 2>/dev/null
+[paperclip] convert '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/stream20110823-4320-1hhcbau.jpg[0]' -resize "460x" -crop "460x376+0+97" +repage '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/stream20110823-4320-1hhcbau20110823-4320-htt1ml' 2>/dev/null
+[paperclip] identify -format %wx%h '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/stream20110823-4320-1hhcbau.jpg[0]' 2>/dev/null
+[paperclip] convert '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/stream20110823-4320-1hhcbau.jpg[0]' -resize "754x616>" '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/stream20110823-4320-1hhcbau20110823-4320-179mc4n' 2>/dev/null
+  [1m[36mAREL (0.5ms)[0m  [1mUPDATE `companies` SET `image_file_name` = 'Gallery-Portraits-for-Pos-011.jpg', `image_file_size` = 40259, `image_updated_at` = '2011-08-23 12:02:08', `updated_at` = '2011-08-23 12:02:08' WHERE `companies`.`id` = 13[0m
+[paperclip] Saving attachments.
+[paperclip] deleting /Users/synthmax/Dropbox/marselistvaervej4/public/system/images/13/original/portraits_of_celebrities_640_05.jpg
+[paperclip] deleting /Users/synthmax/Dropbox/marselistvaervej4/public/system/images/13/mini/portraits_of_celebrities_640_05.jpg
+[paperclip] deleting /Users/synthmax/Dropbox/marselistvaervej4/public/system/images/13/thumbnail/portraits_of_celebrities_640_05.jpg
+[paperclip] deleting /Users/synthmax/Dropbox/marselistvaervej4/public/system/images/13/preview/portraits_of_celebrities_640_05.jpg
+[paperclip] deleting /Users/synthmax/Dropbox/marselistvaervej4/public/system/images/13/xxl/portraits_of_celebrities_640_05.jpg
+[paperclip] saving /Users/synthmax/Dropbox/marselistvaervej4/public/system/images/13/original/Gallery-Portraits-for-Pos-011.jpg
+[paperclip] saving /Users/synthmax/Dropbox/marselistvaervej4/public/system/images/13/mini/Gallery-Portraits-for-Pos-011.jpg
+[paperclip] saving /Users/synthmax/Dropbox/marselistvaervej4/public/system/images/13/thumbnail/Gallery-Portraits-for-Pos-011.jpg
+[paperclip] saving /Users/synthmax/Dropbox/marselistvaervej4/public/system/images/13/preview/Gallery-Portraits-for-Pos-011.jpg
+[paperclip] saving /Users/synthmax/Dropbox/marselistvaervej4/public/system/images/13/xxl/Gallery-Portraits-for-Pos-011.jpg
+  [1m[35mSQL (0.4ms)[0m  COMMIT
+[paperclip] identify -format %wx%h '/Users/synthmax/Dropbox/marselistvaervej4/public/system/images/13/xxl/Gallery-Portraits-for-Pos-011.jpg[0]' 2>/dev/null
+[paperclip] identify -format %wx%h '/Users/synthmax/Dropbox/marselistvaervej4/public/system/images/13/original/Gallery-Portraits-for-Pos-011.jpg[0]' 2>/dev/null
+Rendered companies/crop.html.slim within layouts/application (56.5ms)
+Completed 200 OK in 436ms (Views: 70.7ms | ActiveRecord: 3.8ms | Sphinx: 0.0ms)
+
+
+Started GET "/stylesheets/Jcrop.gif" for 127.0.0.1 at 2011-08-23 14:02:09 +0200
+
+ActionController::RoutingError (No route matches "/stylesheets/Jcrop.gif"):
+  
+
+Rendered /Users/synthmax/.rvm/gems/ruby-1.9.2-rc2/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/dk/companies/13" for 127.0.0.1 at 2011-08-23 14:02:09 +0200
+  Processing by CompaniesController#show as HTML
+  Parameters: {"locale"=>"dk", "id"=>"13"}
+  [1m[36mCompany Load (0.6ms)[0m  [1mSELECT `companies`.* FROM `companies` WHERE `companies`.`id` = 13 LIMIT 1[0m
+  [1m[35mUser Load (1.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 5 LIMIT 1
+  [1m[36mNewspost Load (0.9ms)[0m  [1mSELECT `newsposts`.* FROM `newsposts` WHERE `newsposts`.`internal_letter` = 0 ORDER BY created_at desc LIMIT 3 OFFSET 0[0m
+  [1m[35mSQL (0.5ms)[0m  SELECT COUNT(*) FROM `newsposts` WHERE `newsposts`.`internal_letter` = 0
+Rendered shared/_menu.html.slim (1.8ms)
+Rendered shared/_news.html.slim (11.4ms)
+Rendered companies/show.html.slim within layouts/application (27.2ms)
+Completed 200 OK in 225ms (Views: 36.7ms | ActiveRecord: 3.4ms | Sphinx: 0.0ms)
+
+
+Started GET "/stylesheets/Jcrop.gif" for 127.0.0.1 at 2011-08-23 14:02:10 +0200
+
+ActionController::RoutingError (No route matches "/stylesheets/Jcrop.gif"):
+  
+
+Rendered /Users/synthmax/.rvm/gems/ruby-1.9.2-rc2/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started POST "/dk/companies/13" for 127.0.0.1 at 2011-08-23 14:02:12 +0200
+  Processing by CompaniesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DlzIKL9IqqTgJRRjp8/mOvNOF/P1bzRcvIhMnkKd2lE=", "company"=>{"crop_x"=>"0", "crop_y"=>"32", "crop_w"=>"403", "crop_h"=>"329"}, "commit"=>"Crop", "locale"=>"dk", "id"=>"13"}
+  [1m[36mCompany Load (0.7ms)[0m  [1mSELECT `companies`.* FROM `companies` WHERE `companies`.`id` = 13 LIMIT 1[0m
+  [1m[35mUser Load (0.9ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 5 LIMIT 1
+  [1m[36mNewspost Load (0.9ms)[0m  [1mSELECT `newsposts`.* FROM `newsposts` WHERE `newsposts`.`internal_letter` = 0 ORDER BY created_at desc LIMIT 3 OFFSET 0[0m
+  [1m[35mSQL (0.3ms)[0m  SELECT COUNT(*) FROM `newsposts` WHERE `newsposts`.`internal_letter` = 0
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `companies`.* FROM `companies` WHERE `companies`.`id` = 13 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+[paperclip] identify -format %wx%h '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/paperclip-reprocess20110823-4320-15sn3ht[0]' 2>/dev/null
+[paperclip] convert '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/paperclip-reprocess20110823-4320-15sn3ht[0]' -crop 403x329+0+32 -resize "70x" +repage '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/paperclip-reprocess20110823-4320-15sn3ht20110823-4320-1d6fdip' 2>/dev/null
+[paperclip] identify -format %wx%h '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/paperclip-reprocess20110823-4320-15sn3ht[0]' 2>/dev/null
+[paperclip] convert '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/paperclip-reprocess20110823-4320-15sn3ht[0]' -crop 403x329+0+32 -resize "140x" +repage '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/paperclip-reprocess20110823-4320-15sn3ht20110823-4320-1ant6xx' 2>/dev/null
+[paperclip] identify -format %wx%h '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/paperclip-reprocess20110823-4320-15sn3ht[0]' 2>/dev/null
+[paperclip] convert '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/paperclip-reprocess20110823-4320-15sn3ht[0]' -crop 403x329+0+32 -resize "460x" +repage '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/paperclip-reprocess20110823-4320-15sn3ht20110823-4320-16ykbdx' 2>/dev/null
+[paperclip] identify -format %wx%h '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/paperclip-reprocess20110823-4320-15sn3ht[0]' 2>/dev/null
+[paperclip] convert '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/paperclip-reprocess20110823-4320-15sn3ht[0]' -crop 403x329+0+32 -resize "754x616>" '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/paperclip-reprocess20110823-4320-15sn3ht20110823-4320-u3u6gs' 2>/dev/null
+[paperclip] saving /Users/synthmax/Dropbox/marselistvaervej4/public/system/images/13/original/Gallery-Portraits-for-Pos-011.jpg
+[paperclip] saving /Users/synthmax/Dropbox/marselistvaervej4/public/system/images/13/mini/Gallery-Portraits-for-Pos-011.jpg
+[paperclip] saving /Users/synthmax/Dropbox/marselistvaervej4/public/system/images/13/thumbnail/Gallery-Portraits-for-Pos-011.jpg
+[paperclip] saving /Users/synthmax/Dropbox/marselistvaervej4/public/system/images/13/preview/Gallery-Portraits-for-Pos-011.jpg
+[paperclip] saving /Users/synthmax/Dropbox/marselistvaervej4/public/system/images/13/xxl/Gallery-Portraits-for-Pos-011.jpg
+[paperclip] Saving attachments.
+  [1m[36mSQL (0.2ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/dk/companies/13
+Completed 302 Found in 397ms
+
+
+Started GET "/dk/companies/13" for 127.0.0.1 at 2011-08-23 14:02:12 +0200
+  Processing by CompaniesController#show as HTML
+  Parameters: {"locale"=>"dk", "id"=>"13"}
+  [1m[35mCompany Load (0.8ms)[0m  SELECT `companies`.* FROM `companies` WHERE `companies`.`id` = 13 LIMIT 1
+  [1m[36mUser Load (1.5ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 5 LIMIT 1[0m
+  [1m[35mNewspost Load (0.8ms)[0m  SELECT `newsposts`.* FROM `newsposts` WHERE `newsposts`.`internal_letter` = 0 ORDER BY created_at desc LIMIT 3 OFFSET 0
+  [1m[36mSQL (0.4ms)[0m  [1mSELECT COUNT(*) FROM `newsposts` WHERE `newsposts`.`internal_letter` = 0[0m
+Rendered shared/_menu.html.slim (2.1ms)
+Rendered shared/_news.html.slim (11.4ms)
+Rendered companies/show.html.slim within layouts/application (29.0ms)
+Completed 200 OK in 244ms (Views: 38.3ms | ActiveRecord: 3.4ms | Sphinx: 0.0ms)
+
+
+Started GET "/dk/companies/13" for 127.0.0.1 at 2011-08-23 14:02:14 +0200
+  Processing by CompaniesController#show as HTML
+  Parameters: {"locale"=>"dk", "id"=>"13"}
+  [1m[35mCompany Load (0.7ms)[0m  SELECT `companies`.* FROM `companies` WHERE `companies`.`id` = 13 LIMIT 1
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 5 LIMIT 1[0m
+  [1m[35mNewspost Load (1.0ms)[0m  SELECT `newsposts`.* FROM `newsposts` WHERE `newsposts`.`internal_letter` = 0 ORDER BY created_at desc LIMIT 3 OFFSET 0
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT COUNT(*) FROM `newsposts` WHERE `newsposts`.`internal_letter` = 0[0m
+Rendered shared/_menu.html.slim (1.8ms)
+Rendered shared/_news.html.slim (10.8ms)
+Rendered companies/show.html.slim within layouts/application (26.5ms)
+Completed 200 OK in 220ms (Views: 36.0ms | ActiveRecord: 6.1ms | Sphinx: 0.0ms)
+
+
+Started GET "/dk/companies" for 127.0.0.1 at 2011-08-23 14:02:16 +0200
+  Processing by CompaniesController#index as HTML
+  Parameters: {"locale"=>"dk"}
+  [1m[35mUser Load (0.8ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 5 LIMIT 1
+  [1m[36mNewspost Load (0.8ms)[0m  [1mSELECT `newsposts`.* FROM `newsposts` WHERE `newsposts`.`internal_letter` = 0 ORDER BY created_at desc LIMIT 3 OFFSET 0[0m
+  [1m[35mSQL (0.5ms)[0m  SELECT COUNT(*) FROM `newsposts` WHERE `newsposts`.`internal_letter` = 0
+  [1m[36mCompany Load (1.1ms)[0m  [1mSELECT `companies`.* FROM `companies` ORDER BY title asc LIMIT 8 OFFSET 0[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT COUNT(*) FROM `companies`
+Rendered shared/_menu.html.slim (1.9ms)
+  [1m[36mSQL (0.5ms)[0m  [1mSELECT COUNT(*) FROM `company_thumbs` WHERE (`company_thumbs`.company_id = 13)[0m
+  [1m[35mCompanyThumb Load (0.5ms)[0m  SELECT `company_thumbs`.* FROM `company_thumbs` WHERE (`company_thumbs`.company_id = 13) ORDER BY company_thumbs.id DESC LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT COUNT(*) FROM `company_thumbs` WHERE (`company_thumbs`.company_id = 2)[0m
+  [1m[35mCompanyThumb Load (0.5ms)[0m  SELECT `company_thumbs`.* FROM `company_thumbs` WHERE (`company_thumbs`.company_id = 2) ORDER BY company_thumbs.id DESC LIMIT 1
+  [1m[36mSQL (0.5ms)[0m  [1mSELECT COUNT(*) FROM `company_thumbs` WHERE (`company_thumbs`.company_id = 12)[0m
+  [1m[35mSQL (0.6ms)[0m  SELECT COUNT(*) FROM `company_thumbs` WHERE (`company_thumbs`.company_id = 8)
+  [1m[36mCompanyThumb Load (0.4ms)[0m  [1mSELECT `company_thumbs`.* FROM `company_thumbs` WHERE (`company_thumbs`.company_id = 8) ORDER BY company_thumbs.id DESC LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  SELECT COUNT(*) FROM `company_thumbs` WHERE (`company_thumbs`.company_id = 11)
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT COUNT(*) FROM `company_thumbs` WHERE (`company_thumbs`.company_id = 7)[0m
+  [1m[35mSQL (0.3ms)[0m  SELECT COUNT(*) FROM `company_thumbs` WHERE (`company_thumbs`.company_id = 10)
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT COUNT(*) FROM `company_thumbs` WHERE (`company_thumbs`.company_id = 1)[0m
+  [1m[35mCompanyThumb Load (0.7ms)[0m  SELECT `company_thumbs`.* FROM `company_thumbs` WHERE (`company_thumbs`.company_id = 1) ORDER BY company_thumbs.id DESC LIMIT 1
+Rendered shared/_news.html.slim (11.2ms)
+Rendered companies/index.html.slim within layouts/application (65.1ms)
+Completed 200 OK in 251ms (Views: 69.3ms | ActiveRecord: 8.7ms | Sphinx: 0.0ms)
+
+
+Started GET "/dk/companies" for 127.0.0.1 at 2011-08-23 14:02:17 +0200
+  Processing by CompaniesController#index as HTML
+  Parameters: {"locale"=>"dk"}
+  [1m[36mUser Load (5.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 5 LIMIT 1[0m
+  [1m[35mNewspost Load (0.7ms)[0m  SELECT `newsposts`.* FROM `newsposts` WHERE `newsposts`.`internal_letter` = 0 ORDER BY created_at desc LIMIT 3 OFFSET 0
+  [1m[36mSQL (14.6ms)[0m  [1mSELECT COUNT(*) FROM `newsposts` WHERE `newsposts`.`internal_letter` = 0[0m
+  [1m[35mCompany Load (0.9ms)[0m  SELECT `companies`.* FROM `companies` ORDER BY title asc LIMIT 8 OFFSET 0
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT COUNT(*) FROM `companies`[0m
+Rendered shared/_menu.html.slim (1.7ms)
+  [1m[35mSQL (1.5ms)[0m  SELECT COUNT(*) FROM `company_thumbs` WHERE (`company_thumbs`.company_id = 13)
+  [1m[36mCompanyThumb Load (0.5ms)[0m  [1mSELECT `company_thumbs`.* FROM `company_thumbs` WHERE (`company_thumbs`.company_id = 13) ORDER BY company_thumbs.id DESC LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  SELECT COUNT(*) FROM `company_thumbs` WHERE (`company_thumbs`.company_id = 2)
+  [1m[36mCompanyThumb Load (0.4ms)[0m  [1mSELECT `company_thumbs`.* FROM `company_thumbs` WHERE (`company_thumbs`.company_id = 2) ORDER BY company_thumbs.id DESC LIMIT 1[0m
+  [1m[35mSQL (0.6ms)[0m  SELECT COUNT(*) FROM `company_thumbs` WHERE (`company_thumbs`.company_id = 12)
+  [1m[36mSQL (0.6ms)[0m  [1mSELECT COUNT(*) FROM `company_thumbs` WHERE (`company_thumbs`.company_id = 8)[0m
+  [1m[35mCompanyThumb Load (0.7ms)[0m  SELECT `company_thumbs`.* FROM `company_thumbs` WHERE (`company_thumbs`.company_id = 8) ORDER BY company_thumbs.id DESC LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT COUNT(*) FROM `company_thumbs` WHERE (`company_thumbs`.company_id = 11)[0m
+  [1m[35mSQL (0.4ms)[0m  SELECT COUNT(*) FROM `company_thumbs` WHERE (`company_thumbs`.company_id = 7)
+  [1m[36mSQL (0.6ms)[0m  [1mSELECT COUNT(*) FROM `company_thumbs` WHERE (`company_thumbs`.company_id = 10)[0m
+  [1m[35mSQL (0.5ms)[0m  SELECT COUNT(*) FROM `company_thumbs` WHERE (`company_thumbs`.company_id = 1)
+  [1m[36mCompanyThumb Load (0.7ms)[0m  [1mSELECT `company_thumbs`.* FROM `company_thumbs` WHERE (`company_thumbs`.company_id = 1) ORDER BY company_thumbs.id DESC LIMIT 1[0m
+Rendered shared/_news.html.slim (10.7ms)
+Rendered companies/index.html.slim within layouts/application (103.9ms)
+Completed 200 OK in 501ms (Views: 105.4ms | ActiveRecord: 28.7ms | Sphinx: 0.0ms)
+
+
+Started GET "/dk/companies/13" for 127.0.0.1 at 2011-08-23 14:02:19 +0200
+  Processing by CompaniesController#show as HTML
+  Parameters: {"locale"=>"dk", "id"=>"13"}
+  [1m[35mCompany Load (0.5ms)[0m  SELECT `companies`.* FROM `companies` WHERE `companies`.`id` = 13 LIMIT 1
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 5 LIMIT 1[0m
+  [1m[35mNewspost Load (1.0ms)[0m  SELECT `newsposts`.* FROM `newsposts` WHERE `newsposts`.`internal_letter` = 0 ORDER BY created_at desc LIMIT 3 OFFSET 0
+  [1m[36mSQL (0.4ms)[0m  [1mSELECT COUNT(*) FROM `newsposts` WHERE `newsposts`.`internal_letter` = 0[0m
+Rendered shared/_menu.html.slim (39.9ms)
+Rendered shared/_news.html.slim (10.8ms)
+Rendered companies/show.html.slim within layouts/application (64.5ms)
+Completed 200 OK in 215ms (Views: 73.8ms | ActiveRecord: 3.0ms | Sphinx: 0.0ms)
+
+
+Started GET "/dk/companies/13" for 127.0.0.1 at 2011-08-23 14:02:20 +0200
+  Processing by CompaniesController#show as HTML
+  Parameters: {"locale"=>"dk", "id"=>"13"}
+  [1m[35mCompany Load (0.6ms)[0m  SELECT `companies`.* FROM `companies` WHERE `companies`.`id` = 13 LIMIT 1
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 5 LIMIT 1[0m
+  [1m[35mNewspost Load (0.9ms)[0m  SELECT `newsposts`.* FROM `newsposts` WHERE `newsposts`.`internal_letter` = 0 ORDER BY created_at desc LIMIT 3 OFFSET 0
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT COUNT(*) FROM `newsposts` WHERE `newsposts`.`internal_letter` = 0[0m
+Rendered shared/_menu.html.slim (1.8ms)
+Rendered shared/_news.html.slim (10.9ms)
+Rendered companies/show.html.slim within layouts/application (26.2ms)
+Completed 200 OK in 215ms (Views: 35.0ms | ActiveRecord: 2.8ms | Sphinx: 0.0ms)
+
+
+Started GET "/dk/meetingrooms" for 127.0.0.1 at 2011-08-23 14:02:26 +0200
+  Processing by MeetingroomsController#index as HTML
+  Parameters: {"locale"=>"dk"}
+  [1m[35mUser Load (0.9ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 5 LIMIT 1
+  [1m[36mMeetingroom Load (0.7ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1[0m
+  [1m[35mNewspost Load (0.7ms)[0m  SELECT `newsposts`.* FROM `newsposts` WHERE `newsposts`.`internal_letter` = 1 ORDER BY created_at desc LIMIT 3 OFFSET 0
+Rendered shared/_menu.html.slim (41.1ms)
+  [1m[36mMeetingroom Load (0.8ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms`[0m
+Rendered meetingrooms/index.html.slim within layouts/application (67.6ms)
+Completed 200 OK in 217ms (Views: 76.1ms | ActiveRecord: 3.0ms | Sphinx: 0.0ms)
+
+
+Started GET "/dk/meetingrooms" for 127.0.0.1 at 2011-08-23 14:02:27 +0200
+  Processing by MeetingroomsController#index as HTML
+  Parameters: {"locale"=>"dk"}
+  [1m[35mUser Load (1.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 5 LIMIT 1
+  [1m[36mMeetingroom Load (0.8ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1[0m
+  [1m[35mNewspost Load (0.8ms)[0m  SELECT `newsposts`.* FROM `newsposts` WHERE `newsposts`.`internal_letter` = 1 ORDER BY created_at desc LIMIT 3 OFFSET 0
+Rendered shared/_menu.html.slim (1.7ms)
+  [1m[36mMeetingroom Load (0.8ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms`[0m
+Rendered meetingrooms/index.html.slim within layouts/application (26.9ms)
+Completed 200 OK in 205ms (Views: 34.9ms | ActiveRecord: 3.5ms | Sphinx: 0.0ms)
+
+
+Started GET "/meetingrooms/6/bookings/new?locale=dk" for 127.0.0.1 at 2011-08-23 14:02:28 +0200
+  Processing by BookingsController#new as HTML
+  Parameters: {"locale"=>"dk", "meetingroom_id"=>"6"}
+  [1m[35mMeetingroom Load (0.5ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 6 LIMIT 1
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 5 LIMIT 1[0m
+  [1m[35mNewspost Load (0.7ms)[0m  SELECT `newsposts`.* FROM `newsposts` WHERE `newsposts`.`internal_letter` = 1 ORDER BY created_at desc LIMIT 3 OFFSET 0
+Rendered shared/_menu.html.slim (1.8ms)
+  [1m[36mMeetingroom Load (0.8ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` ORDER BY title DESC[0m
+  [1m[35mUser Load (1.3ms)[0m  SELECT `users`.* FROM `users` ORDER BY name DESC
+  [1m[36mMeetingroom Load (0.8ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms`[0m
+Rendered bookings/_form.html.slim (16.4ms)
+Rendered shared/_news.html.slim (11.6ms)
+Rendered bookings/new.html.slim within layouts/application (41.7ms)
+Completed 200 OK in 238ms (Views: 47.8ms | ActiveRecord: 5.1ms | Sphinx: 0.0ms)
+
+
+Started GET "/da/bookings?_=1314100949644&start=1313964000&end=1314568800" for 127.0.0.1 at 2011-08-23 14:02:29 +0200
+  Processing by BookingsController#index as JS
+  Parameters: {"_"=>"1314100949644", "start"=>"1313964000", "end"=>"1314568800", "locale"=>"da"}
+  [1m[35mUser Load (0.9ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 5 LIMIT 1
+  [1m[36mNewspost Load (0.8ms)[0m  [1mSELECT `newsposts`.* FROM `newsposts` WHERE `newsposts`.`internal_letter` = 1 ORDER BY created_at desc LIMIT 3 OFFSET 0[0m
+  [1m[35mMeetingroom Load (0.6ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1
+  [1m[36mBooking Load (0.9ms)[0m  [1mSELECT `bookings`.* FROM `bookings` WHERE (created_at > '2011-08-21 00:00:00') AND (created_at < '2011-08-29 23:59:59')[0m
+  [1m[35mMeetingroom Load (0.6ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 5 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 5 LIMIT 1[0m
+  [1m[35mMeetingroom Load (0.7ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 7 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 5 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 5 LIMIT 1
+  [1m[36mMeetingroom Load (0.6ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 6 LIMIT 1[0m
+Completed 200 OK in 162ms (Views: 33.6ms | ActiveRecord: 5.0ms | Sphinx: 0.0ms)
+
+
+Started GET "/meetingrooms/6/bookings/new?locale=dk" for 127.0.0.1 at 2011-08-23 14:02:30 +0200
+  Processing by BookingsController#new as HTML
+  Parameters: {"locale"=>"dk", "meetingroom_id"=>"6"}
+  [1m[35mMeetingroom Load (0.6ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 6 LIMIT 1
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 5 LIMIT 1[0m
+  [1m[35mNewspost Load (0.7ms)[0m  SELECT `newsposts`.* FROM `newsposts` WHERE `newsposts`.`internal_letter` = 1 ORDER BY created_at desc LIMIT 3 OFFSET 0
+Rendered shared/_menu.html.slim (1.7ms)
+  [1m[36mMeetingroom Load (0.7ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` ORDER BY title DESC[0m
+  [1m[35mUser Load (1.3ms)[0m  SELECT `users`.* FROM `users` ORDER BY name DESC
+  [1m[36mMeetingroom Load (0.8ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms`[0m
+Rendered bookings/_form.html.slim (16.3ms)
+Rendered shared/_news.html.slim (11.9ms)
+Rendered bookings/new.html.slim within layouts/application (41.5ms)
+Completed 200 OK in 193ms (Views: 47.0ms | ActiveRecord: 5.1ms | Sphinx: 0.0ms)
+
+
+Started GET "/da/bookings?_=1314100959027&start=1312149600&end=1315778400" for 127.0.0.1 at 2011-08-23 14:02:39 +0200
+  Processing by BookingsController#index as JS
+  Parameters: {"_"=>"1314100959027", "start"=>"1312149600", "end"=>"1315778400", "locale"=>"da"}
+  [1m[35mUser Load (1.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 5 LIMIT 1
+  [1m[36mNewspost Load (1.0ms)[0m  [1mSELECT `newsposts`.* FROM `newsposts` WHERE `newsposts`.`internal_letter` = 1 ORDER BY created_at desc LIMIT 3 OFFSET 0[0m
+  [1m[35mMeetingroom Load (0.8ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1
+  [1m[36mBooking Load (1.2ms)[0m  [1mSELECT `bookings`.* FROM `bookings` WHERE (created_at > '2011-07-31 00:00:00') AND (created_at < '2011-09-12 23:59:59')[0m
+  [1m[35mMeetingroom Load (0.5ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 5 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 5 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 5 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 5 LIMIT 1[0m
+  [1m[35mMeetingroom Load (0.6ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 7 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 5 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 5 LIMIT 1
+  [1m[36mMeetingroom Load (0.5ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 6 LIMIT 1[0m
+Completed 200 OK in 164ms (Views: 33.2ms | ActiveRecord: 5.6ms | Sphinx: 0.0ms)

@@ -10,7 +10,7 @@
         =raw @meetingroom.body  
         .text-right
           - if can?(:create, Booking)  
-            = link_to 'book mødelokale', new_meetingroom_booking_path(@meetingroom), class: 'button'
+            = link_to 'book mødelokale', new_meetingroom_booking_path(@meetingroom), :class => 'button'
             br
 	      - if can?(:edit, @meetingroom)
 	        = link_to t('admin.edit'), edit_meetingroom_path(@meetingroom)

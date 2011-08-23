@@ -41,7 +41,7 @@ class Booking < ActiveRecord::Base
       :end => (created_at.beginning_of_day + endtime.hour.hours + endtime.min.minutes).rfc822,
       :allDay => false,
       :recurring => false,
-      color: meetingroom.color,
+      :color => meetingroom.color,
       #textColor: 'black',
       :url => Rails.application.routes.url_helpers.edit_meetingroom_booking_path(meetingroom_id, id, :locale => 'da')
     }
