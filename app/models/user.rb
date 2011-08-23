@@ -12,9 +12,10 @@ class User < ActiveRecord::Base
   # Setup accessible (or protected) attributes for your model
   attr_accessible :email, :password, :password_confirmation, :remember_me, :role, 
                   :name, :image, :language,:crop_x, :crop_y, :crop_w, :crop_h,
-                  :grid
+                  :grid, :company_id
   has_many :blogs
   has_many :comments
+  belongs_to :company
   
   validates_presence_of :name          
   after_update :reprocess_image, :if => :cropping?

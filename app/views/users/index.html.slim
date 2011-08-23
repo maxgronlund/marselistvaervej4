@@ -8,9 +8,13 @@
     .grid-3
       = sortable t('user.email')
       -#= link_to 'email',:sort => "email"
-    .grid-6.omega
+    .grid-3
+      'Firma
+    .grid-1
       = sortable 'rolle'
       -#= link_to 'role',:sort => "role"
+    .grid-2.omega
+      '
   hr/
 
   - @users.each do |user|
@@ -22,9 +26,11 @@
         .grid-3.top_margin_6
           = user.email
         .grid-3.top_margin_6
+          = user.company.title if user.company.present?
+        .grid-1.top_margin_6
           = user.role
           br/
-        .grid-3.omega.top_margin_6.text_right
+        .grid-2.omega.top_margin_6.text_right
           - if can_edit?
             = link_to t('admin.edit'), edit_user_path(user)
             - unless user.super?

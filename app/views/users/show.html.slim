@@ -11,11 +11,17 @@
           h1
             = @user.name
           = @user.email
+
+          - if @user.company.present?
+            br/
+            'Firma: 
+            = link_to @user.company.title, @user.company
+
           - if can?(:manage, @user)
             br
             = link_to t('admin.edit'), edit_user_path(@user)
-		  
-	      
+
+
   .squared-box
     .borders.fixed-height
       = image_tag 'frontpage-house.jpg', :border => 'none', :class => 'image_fix'
