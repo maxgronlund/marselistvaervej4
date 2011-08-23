@@ -11,13 +11,12 @@
     = f.label :title, t('illustration.title')
     br/
     = f.text_field :title
-  .field
+  .field.top_margin
     = f.label :image, t('illustration.image')
-    .image
-      = image_tag @illustration.image.url(:thumbnail), :border => 'none', :class => 'image_fix'
+    br
     = f.file_field :image
     br/
 
-  .actions
+  .actions.top_margin
     = f.submit t('admin.save'), disable_with: 'Saving...'
     = image_tag "loader.gif", alt: "", width: "32", height: "32", style: "display: none;", class: 'spinner'

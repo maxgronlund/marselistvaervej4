@@ -25,4 +25,8 @@ module ApplicationHelper
     user_signed_in? && current_user.admin_or_super?
   end
   
+  def is_super?
+    user_signed_in? && current_user.super?
+  end
+  
 end

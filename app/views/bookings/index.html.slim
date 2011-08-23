@@ -30,7 +30,7 @@
 	    - if booking.meetingroom != nil
 	        = booking.meetingroom.title
 	  .center-column2
-	    = booking.bookers_name
+	    = link_to booking.bookers_name, edit_booking_path(booking) 
 	  .center-column1
 	    = booking.attendees 
 	  .center-column1

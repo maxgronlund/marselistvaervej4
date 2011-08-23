@@ -35,7 +35,7 @@
   br
   .fullpage
     = link_to 'book mødelokale', new_meetingroom_booking_path(@first_meeting_room), :class => 'button'
-  - if can? :manage, Meetingroom
+  - if is_super?
     .edit
       = link_to 'opret nyt mødelokale', new_meetingroom_path, :class => 'button'
   

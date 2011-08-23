@@ -2,18 +2,8 @@
   .single-column
     h1= t('illustration.headline')
 
-  div class="grid_10 prefix_1 suffix_1"
-    b
-      div class="grid_3 alpha"
-        = sortable 'title'
-      div class="grid_3"
-        = sortable 'identity'
-      div class="grid_2"
-        = sortable 'created_at', t('admin.created_at')
-      div class="grid_2 suffix_2 omega"
-    hr/
 
-  div class="grid_10 prefix_1 suffix_1"
+  div class="grid_12 "
     - @illustrations.each do |illustration|
       div class="grid_3 alpha"
         = link_to image_tag( illustration.image.url(:mini), :border => 'none', :class => 'image_fix'), illustration
@@ -22,14 +12,15 @@
         = illustration.title
       div class="grid_2"
         = l illustration.created_at, :format => :date_month_and_year
-      div class="grid_2 omega text_right"
+      div class="grid_2 suffix_2 omega text_right"
         = link_to t('admin.show'), illustration
         |  |
         = link_to t('admin.edit'), edit_illustration_path(illustration)
         |  |
         = link_to t('admin.delete'), illustration, :confirm => t('admin.are_you_sure'), :method => :delete
       hr/
-    = link_to t('illustration.create_new'), new_illustration_path
+    .grid_12.edit.top_margin
+      = link_to t('illustration.create_new'), new_illustration_path, :class => 'button'
 
 - else
 

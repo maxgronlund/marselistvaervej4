@@ -12,10 +12,11 @@
           ul
             li
               = link_to t('admin.users'), users_path
-            li
-              = link_to t('admin.illustrations'), illustrations_path
-            li
-              = link_to t('admin.pages'), pages_path
+            - if is_super?
+              li
+                = link_to t('admin.illustrations'), illustrations_path
+              li
+                = link_to t('admin.pages'), pages_path
             li
               = link_to 'nyheder' , newsposts_path
             li
