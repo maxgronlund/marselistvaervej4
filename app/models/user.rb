@@ -20,7 +20,7 @@ class User < ActiveRecord::Base
   after_update :reprocess_image, :if => :cropping?
   
   has_attached_file :image, 
-                    :styles => {  :micro => "25x25#", :small => "50x50#", :medium => "238x280#", :large => "754x887>"}, 
+                    :styles => { :small => "120x180#", :large => "480x520>"}, 
                     :processors => [:cropper],
                     :default_url => "/images/fallback/default_avatar_:style.jpg"
                     

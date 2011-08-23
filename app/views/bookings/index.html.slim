@@ -1,50 +1,56 @@
-#columns-3-2-2-1-2
+.grid-container
 
   h1
    | Alle mødelokale reservationer
   b
     .sort-list-header
-      .left-column
+      .grid-3
         = sortable 'created_at', 'Tidspunkt'
-      .center-column2
+      .grid-2
         = sortable 'meetingroom_id','Mødelokale'
-      .center-column2
-        = sortable 'user_id','Reserveret til'
-      .center-column1
+      .grid-1
+        = sortable 'user_id','Bruger'
+      .grid-1
         'Deltagere
-      .center-column1
-        'Kaffe
-      .right-column
-        | -
+      .grid-1
+        'Kaffe og vand
+      .grid-1
+        'The
+      .grid-2
+        'Andet
+      .grid-1
+        '-
+    .grid-12
  
   
   -@bookings.each do |booking| 
-    div class="grid_10 alpha omega #{cycle('color_light_gray', 'color_gray')}"
-      .left-column
+    div class="grid_12 alpha omega #{cycle('color_light_gray', 'color_gray')}"
+      .grid-3
 	    = l booking.created_at, :format => :date_month_and_year
 	    | - kl.
 	    = l booking.starttime, :format => :bookingtime
 	    |  til 
 	    = l booking.endtime, :format => :bookingtime
-	  .center-column2
+	  .grid-2
 	    - if booking.meetingroom != nil
 	        = booking.meetingroom.title
-	  .center-column2
+	  .grid-1
 	    = link_to booking.bookers_name, edit_booking_path(booking) 
-	  .center-column1
+	  .grid-1
 	    = booking.attendees 
-	  .center-column1
-	    - if booking.coffee_and_tea
-	        | Ja
-	    - else
-            | -
-	  .right-column.edit
-	    - if booking.meetingroom != nil
-	      -#= link_to 'Show', meetingroom_booking_path(booking.meetingroom, booking)
-	      '&nbsp; 
-	      -#= link_to 'Edit', edit_meetingroom_booking_path(booking.meetingroom,booking) 
-	      '&nbsp; 
-	    = link_to 'slet', booking, :confirm => 'Er du sikker?', :method => :delete
+	  .grid-1
+        - if booking.coffee_and_tea?
+            | X
+      .grid-1
+        - if booking.bread?
+            | X
+
+      .grid-2
+        = booking.message
+	  .grid-1.edit
+        = link_to image_tag('pencil_16.png'), edit_meetingroom_booking_path(booking.meetingroom,booking)
+        '&nbsp; 
+	    = link_to image_tag('delete_16.png'), booking, :confirm => 'Er du sikker?', :method => :delete
       hr
   
   div class="grid_10 prefix_1 suffix_1"

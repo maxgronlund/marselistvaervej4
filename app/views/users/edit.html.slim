@@ -10,7 +10,11 @@
             li= msg
 
     br/
-
+    .field
+      = f.label :name, t('user.portrait')
+      br/
+      = f.file_field :image
+    br/
     .field
       = f.label :name, t('user.name')
       br/

@@ -6,15 +6,15 @@
       $('#cropbox').Jcrop({
         onChange: update_crop,
         onSelect: update_crop,
-        setSelect: [0, 0, 754, 887],
+        setSelect: [0, 0, 480, 520],
         bgColor:    'none',
-        aspectRatio: 0.85
+        aspectRatio: 0.92307692307692
       });
     });
     
     function update_crop(coords) {
-    	var rx = 238/coords.w;
-    	var ry = 288/coords.h;
+    	var rx = 120/coords.w;
+    	var ry = 130/coords.h;
     	$('#preview').css({
     		width: Math.round(rx * #{@user.image_geometry(:large).width}) + 'px',
     		height: Math.round(ry * #{@user.image_geometry(:large).height}) + 'px',
@@ -32,7 +32,7 @@
 .single-column  
   div class="grid_3 alpha"
     h3 Preview:
-    div style="width:238px; height:280px; overflow:hidden"
+    div style="width:120px; height:130px; overflow:hidden"
       = image_tag @user.image.url(:large), :id => "preview"
 
   div class="grid_9 omega"
