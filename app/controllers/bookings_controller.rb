@@ -10,10 +10,6 @@ class BookingsController < InheritedResources::Base
     @bookings = @bookings.before(Time.at(params['end'].to_i)) if (params['end'])
     @bookings = @bookings.order(sort_column + ' ' + sort_direction).paginate(:per_page => 24, :page => params[:page]) unless params['start'] or params['end']
     @meetingroom ||= Meetingroom.first
-    #if request.xhr?
-    #  @date = Date.parse params[:date]
-    #  render '_calendar', :layout => false
-    #end
 
     respond_to do |format|
       format.html # index.html.erb
