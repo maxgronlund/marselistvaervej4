@@ -16,6 +16,9 @@
             '&nbsp;  
             = link_to 'tilføj logo', new_company_company_thumb_path(@company), :class =>'button'
 
+          p= link_to 'Send E-Mail til alle i firma', "mailto:#{@company.users.map(&:email).join(', ')}"
+
+
 	    
   .squared-box.fixed-height
     .borders

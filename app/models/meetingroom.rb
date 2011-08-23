@@ -32,8 +32,9 @@ class Meetingroom < ActiveRecord::Base
      image.reprocess!
    end
 
-  def available?(date, starttime, endtime)
-    bookings.for_day(date).overlapping(starttime, endtime).any?
+  def available?(date, starttime, endtime, booking)
+    (booking.new_record?? bookings : bookings.except_this(booking)).
+      for_day(date).overlapping(starttime, endtime).none?
   end
 
 end
