@@ -27,11 +27,26 @@ $(document).ready(function() {
 
   $("#booking_created_at").datepicker({
     dateFormat:'dd.mm.yy',
+    firstDay: 1,
     onchange: function(formatted, dates) {
       $('#booking_created_at').DatePickerHide();
     }
   });
+  $('#booking_created_at').bind('change', function() {
+    var meeting_room_id = $('#booking_meetingroom_id').val();
+    var date = $('#booking_created_at').val();
+    //$.ajax({
+    //  url: "/meetingrooms/"+meeting_room_id+"/bookings?date="+date,
+    //  context: document.body,
+    //  success: function(data) {
+    //    $('.bookings-calendar').replaceWith(data);
+    //  }
+    //});
+    calendarGotoDate(date);
+    return true;
+  });
 });
+
 
 
 /*

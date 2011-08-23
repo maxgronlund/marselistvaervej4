@@ -16,7 +16,8 @@ $(document).ready(function() {
         defaultView: 'agendaWeek',
         firstDay: 1, // Monday
         height: 500,
-        slotMinutes: 15,
+        firstHour: 8,
+        slotMinutes: 30,
         
         dayNames: ['Søndag', 'Mandag', 'Tirsdag', 'Onsdag', 'Torsdag', 'Fredag', 'Lørdag'],
         dayNamesShort: ['Sø', 'Ma', 'Ti', 'On', 'To', 'Fr', 'Lø'],
@@ -41,7 +42,9 @@ $(document).ready(function() {
         }],
         
         timeFormat: 'HH:mm{ - HH:mm} ',
-        dragOpacity: "0.5",
+
+        //dragOpacity: "0.5",
+        editable: false,
         
         //http://arshaw.com/fullcalendar/docs/event_ui/eventDrop/
         //eventDrop: function(event, dayDelta, minuteDelta, allDay, revertFunc){
@@ -59,25 +62,35 @@ $(document).ready(function() {
         },
 
         dayClick: function(date, allDay, jsEvent, view){
-          window.href = "/calendar_events/new?date="+date+"&allDay="+allDay
+          location.href = "/meetingrooms/1/bookings/new?date="+date+"&allDay="+allDay
         },
 
 	});
 });
 
-function updateEvent(the_event) {
-    $.update(
-      "/da/bookings/" + the_event.id,
-      { calendar_event: { title: the_event.title,
-                 starts_at: "" + the_event.start,
-                 ends_at: "" + the_event.end,
-                 description: the_event.description
-               }
-      },
-      function (reponse) { alert('successfully updated event.'); }
-    );
-};
+//function updateEvent(the_event) {
+//    $.update(
+//      "/da/bookings/" + the_event.id,
+//      { calendar_event: { title: the_event.title,
+//                 starts_at: "" + the_event.start,
+//                 ends_at: "" + the_event.end,
+//                 description: the_event.description
+//               }
+//      },
+//      function (reponse) { alert('successfully updated event.'); }
+//    );
+//};
 
+
+$(document).ready(function() {
+  calendarGotoDate($('#booking_created_at').val());
+});
+
+function calendarGotoDate(date){
+    var m = date.match(/^(\d{1,2})\.(\d{1,2})\.(\d{4})$/);
+    (m) ? $('#calendar').fullCalendar('gotoDate', m[3], m[2]-1, m[1]) : null;
+    (m) ? $('#calendar').fullCalendar('highlightDate', m[3], m[2]-1, m[1]) : null;
+}
 
 
 $.ajaxSetup({
