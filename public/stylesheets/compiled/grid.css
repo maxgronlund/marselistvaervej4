@@ -863,6 +863,13 @@ a:hover {
 }
 
 /* line 475, ../../../app/assets/stylesheets/grid.scss */
+.booking-meetingroom-column {
+  float: left;
+  margin: 2px;
+  width: 134px;
+}
+
+/* line 481, ../../../app/assets/stylesheets/grid.scss */
 #columns-3-2-2-1-2 {
   min-height: 500px;
   display: inline;
@@ -872,7 +879,7 @@ a:hover {
   width: 940px;
   margin-top: 24px;
 }
-/* line 479, ../../../app/assets/stylesheets/grid.scss */
+/* line 485, ../../../app/assets/stylesheets/grid.scss */
 #columns-3-2-2-1-2 .left-column {
   display: inline;
   float: left;
@@ -881,7 +888,7 @@ a:hover {
   width: 220px;
   margin-left: 0;
 }
-/* line 483, ../../../app/assets/stylesheets/grid.scss */
+/* line 489, ../../../app/assets/stylesheets/grid.scss */
 #columns-3-2-2-1-2 .center-column1 {
   display: inline;
   float: left;
@@ -889,7 +896,7 @@ a:hover {
   margin-right: 10px;
   width: 60px;
 }
-/* line 486, ../../../app/assets/stylesheets/grid.scss */
+/* line 492, ../../../app/assets/stylesheets/grid.scss */
 #columns-3-2-2-1-2 .center-column2 {
   display: inline;
   float: left;
@@ -897,7 +904,7 @@ a:hover {
   margin-right: 10px;
   width: 140px;
 }
-/* line 489, ../../../app/assets/stylesheets/grid.scss */
+/* line 495, ../../../app/assets/stylesheets/grid.scss */
 #columns-3-2-2-1-2 .center-column3 {
   display: inline;
   float: left;
@@ -905,7 +912,7 @@ a:hover {
   margin-right: 10px;
   width: 220px;
 }
-/* line 492, ../../../app/assets/stylesheets/grid.scss */
+/* line 498, ../../../app/assets/stylesheets/grid.scss */
 #columns-3-2-2-1-2 .right-column {
   display: inline;
   float: left;
@@ -916,14 +923,14 @@ a:hover {
   padding-right: 80px;
 }
 
-/* line 499, ../../../app/assets/stylesheets/grid.scss */
+/* line 505, ../../../app/assets/stylesheets/grid.scss */
 .bookings-calendar {
   margin-top: 10px;
   margin-left: 10px;
   text-align: center;
 }
 
-/* line 505, ../../../app/assets/stylesheets/grid.scss */
+/* line 511, ../../../app/assets/stylesheets/grid.scss */
 .top_margin {
   margin-top: 8px;
 }

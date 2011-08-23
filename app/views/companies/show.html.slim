@@ -11,8 +11,10 @@
         - if can?(:edit, @company)
           .edit
 	        = link_to t('admin.edit'), edit_company_path(@company), :class =>'button'
-            |  -  
+            '&nbsp;   
             = link_to t('admin.delete'), @company, :confirm => t('admin.are_you_sure'), :method => :delete, :class =>'button'
+            '&nbsp;  
+            = link_to 'tilføj logo', new_company_company_thumb_path(@company), :class =>'button'
 
 	    
   .squared-box.fixed-height
@@ -28,6 +30,6 @@
         .tlf-content 
           =raw @link
 
-  = link_to 'tilføj logo', new_company_company_thumb_path(@company)
+
 
 = render :partial => "shared/news", :locals => { :newsposts => @newsposts }

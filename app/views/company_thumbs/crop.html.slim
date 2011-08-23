@@ -13,8 +13,8 @@
     });
     
     function update_crop(coords) {
-    	var rx = 140/coords.w;
-    	var ry = 114/coords.h;
+    	var rx = 70/coords.w;
+    	var ry = 57/coords.h;
     	$('#preview').css({
     		width: Math.round(rx * #{@company_thumb.image_geometry(:xxl).width}) + 'px',
     		height: Math.round(ry * #{@company_thumb.image_geometry(:xxl).height}) + 'px',
@@ -32,7 +32,7 @@
 .single-column  
   div class="grid_3 alpha"
     h3 Preview:
-    div style="width:140px; height:114px; overflow:hidden"
+    div style="width:70px; height:57px; overflow:hidden"
       = image_tag @company_thumb.image.url(:xxl), :id => "preview"
 
   div class="grid_9 omega"
@@ -47,6 +47,7 @@
       br
       br
       = f.submit "Crop"
+
 
 
 
