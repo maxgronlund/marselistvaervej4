@@ -10,6 +10,7 @@ class Booking < ActiveRecord::Base
     where "starttime < ? AND endtime > ?",
       endtime, starttime
   }
+  scope :except_this, lambda { |booking| where "bookings.id != ?", booking.id }
 
   validate :booking_length
   validate :bookings_cannot_overlap
@@ -22,7 +23,7 @@ class Booking < ActiveRecord::Base
 
   def bookings_cannot_overlap
     errors.add(:meetingroom, "er allerede booket for det tidsrum") if
-      meetingroom.available? created_at, starttime, endtime
+      !meetingroom.available? created_at, starttime, endtime, self
   end
 
 
