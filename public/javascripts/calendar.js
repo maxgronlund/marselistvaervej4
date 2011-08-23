@@ -90,7 +90,9 @@ $(document).ready(function() {
 
 
 $(document).ready(function() {
-  calendarGotoDate($('#booking_created_at').val());
+  if ( $('#booking_created_at')[0] ) {
+    calendarGotoDate($('#booking_created_at').val());
+  }
 });
 
 function calendarGotoDate(date){
@@ -101,7 +103,6 @@ function calendarGotoDate(date){
       var startDate = $.datepicker.parseDate("dd.mm.yy", date);
       var endDate = $.datepicker.parseDate("dd.mm.yy", date);
       endDate.setDate(startDate.getDate() + 1);
-      $('#calendar').fullCalendar('unselect');
       $('#calendar').fullCalendar('select', startDate, endDate, false);
     }
 }
