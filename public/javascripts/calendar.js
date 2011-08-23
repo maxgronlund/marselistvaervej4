@@ -41,10 +41,17 @@ $(document).ready(function() {
             ignoreTimezone: false
         }],
         
+        columnFormat: {
+            month: 'ddd',    // Mon
+            week: 'ddd d/M', // Mon 7/9
+            day: 'dddd d/M'  // Monday 7/9
+        },
+        axisFormat: 'HH:mm',
         timeFormat: 'HH:mm{ - HH:mm} ',
 
         //dragOpacity: "0.5",
         editable: false,
+        //selectable: true,
         
         //http://arshaw.com/fullcalendar/docs/event_ui/eventDrop/
         //eventDrop: function(event, dayDelta, minuteDelta, allDay, revertFunc){
@@ -62,7 +69,7 @@ $(document).ready(function() {
         },
 
         dayClick: function(date, allDay, jsEvent, view){
-          location.href = "/meetingrooms/1/bookings/new?date="+date+"&allDay="+allDay
+          calendarSelectDate(date, allDay);
         },
 
 	});
@@ -88,8 +95,21 @@ $(document).ready(function() {
 
 function calendarGotoDate(date){
     var m = date.match(/^(\d{1,2})\.(\d{1,2})\.(\d{4})$/);
-    (m) ? $('#calendar').fullCalendar('gotoDate', m[3], m[2]-1, m[1]) : null;
-    (m) ? $('#calendar').fullCalendar('highlightDate', m[3], m[2]-1, m[1]) : null;
+    if (m) {
+      $('#calendar').fullCalendar('gotoDate', m[3], m[2]-1, m[1]);
+
+      var startDate = $.datepicker.parseDate("dd.mm.yy", date);
+      var endDate = $.datepicker.parseDate("dd.mm.yy", date);
+      endDate.setDate(startDate.getDate() + 1);
+      $('#calendar').fullCalendar('unselect');
+      $('#calendar').fullCalendar('select', startDate, endDate, false);
+    }
+}
+
+function calendarSelectDate(date, allDay){
+	// get meetingroom_id from current selection in booking form
+	var meetingroom_id = $('#booking_meetingroom_id').val();
+	location.href = "/meetingrooms/"+meetingroom_id+"/bookings/new?date="+date+"&allDay="+allDay;
 }
 
 
