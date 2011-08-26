@@ -24255,3 +24255,305 @@ Started GET "/dk/bookings" for 127.0.0.1 at 2011-08-23 15:37:05 +0200
   [1m[36mCACHE (0.0ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 6 LIMIT 1[0m
 Rendered bookings/index.html.slim within layouts/application (68.6ms)
 Completed 200 OK in 264ms (Views: 75.5ms | ActiveRecord: 6.0ms | Sphinx: 0.0ms)
+DEPRECATION WARNING: Use toplevel init.rb; rails/init.rb is deprecated: /Users/synthmax/Dropbox/marselistvaervej4/vendor/plugins/paperclip/rails/init.rb. (called from <top (required)> at /Users/synthmax/Dropbox/marselistvaervej4/config/environment.rb:5)
+
+
+Started GET "/" for 127.0.0.1 at 2011-08-24 10:38:03 +0200
+  Processing by HomeController#index as HTML
+  [1m[36mSQL (127.1ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mNewspost Load (10.5ms)[0m  SELECT `newsposts`.* FROM `newsposts` WHERE `newsposts`.`internal_letter` = 0 ORDER BY created_at desc LIMIT 3 OFFSET 0
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT COUNT(*) FROM `newsposts` WHERE `newsposts`.`internal_letter` = 0[0m
+  [1m[35mPage Load (0.6ms)[0m  SELECT `pages`.* FROM `pages` WHERE `pages`.`identity` = 'welcome_dk ' LIMIT 1
+Rendered shared/_menu.html.slim (2.4ms)
+Rendered shared/_news.html.slim (71.8ms)
+DEPRECATION WARNING: RAILS_ENV is deprecated. Please use ::Rails.env. (called from _app_views_layouts_application_html_slim__3839935630237787629_2218891220_1069700216703409162 at /Users/synthmax/Dropbox/marselistvaervej4/app/views/layouts/application.html.slim:20)
+Rendered home/index.html.slim within layouts/application (121.4ms)
+Completed 200 OK in 626ms (Views: 162.8ms | ActiveRecord: 138.4ms | Sphinx: 0.0ms)
+
+
+Started GET "/users/sign_in?locale=dk" for 127.0.0.1 at 2011-08-24 10:38:08 +0200
+  Processing by Devise::SessionsController#new as HTML
+  Parameters: {"locale"=>"dk"}
+Rendered shared/_menu.html.slim (2.3ms)
+Rendered devise/shared/_links.erb (1.4ms)
+Rendered devise/sessions/new.html.slim within layouts/application (30.2ms)
+Completed 200 OK in 132ms (Views: 48.8ms | ActiveRecord: 0.0ms | Sphinx: 0.0ms)
+
+
+Started POST "/users/sign_in?locale=dk" for 127.0.0.1 at 2011-08-24 10:38:16 +0200
+  Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7gsyeW/KnSYdIuYVC3zm4AVlpF6xpIUPSz720aYQwv0=", "user"=>{"email"=>"max@synthmax.dk", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Login", "locale"=>"dk"}
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'max@synthmax.dk' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mAREL (0.3ms)[0m  [1mUPDATE `users` SET `last_sign_in_at` = '2011-08-23 11:04:14', `current_sign_in_at` = '2011-08-24 08:38:16', `sign_in_count` = 59, `updated_at` = '2011-08-24 08:38:16' WHERE `users`.`id` = 1[0m
+[paperclip] Saving attachments.
+  [1m[35mSQL (0.4ms)[0m  COMMIT
+  [1m[36mMeetingroom Load (46.6ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1[0m
+Redirected to http://localhost:3000/meetingrooms/5/bookings/new?locale=dk
+Completed 302 Found in 245ms
+
+
+Started GET "/meetingrooms/5/bookings/new?locale=dk" for 127.0.0.1 at 2011-08-24 10:38:17 +0200
+  Processing by BookingsController#new as HTML
+  Parameters: {"locale"=>"dk", "meetingroom_id"=>"5"}
+  [1m[35mMeetingroom Load (0.5ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 5 LIMIT 1
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mNewspost Load (0.6ms)[0m  SELECT `newsposts`.* FROM `newsposts` WHERE `newsposts`.`internal_letter` = 1 ORDER BY created_at desc LIMIT 3 OFFSET 0
+Rendered shared/_menu.html.slim (1.9ms)
+  [1m[36mMeetingroom Load (0.8ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` ORDER BY title DESC[0m
+  [1m[35mUser Load (1.2ms)[0m  SELECT `users`.* FROM `users` ORDER BY name DESC
+  [1m[36mMeetingroom Load (0.5ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms`[0m
+Rendered bookings/_form.html.slim (17.4ms)
+Rendered shared/_news.html.slim (12.7ms)
+Rendered bookings/new.html.slim within layouts/application (62.2ms)
+Completed 200 OK in 220ms (Views: 78.9ms | ActiveRecord: 4.4ms | Sphinx: 0.0ms)
+
+
+Started GET "/da/bookings?_=1314175097722&start=1313964000&end=1314568800" for 127.0.0.1 at 2011-08-24 10:38:17 +0200
+  Processing by BookingsController#index as JS
+  Parameters: {"_"=>"1314175097722", "start"=>"1313964000", "end"=>"1314568800", "locale"=>"da"}
+  [1m[35mUser Load (0.8ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mNewspost Load (0.6ms)[0m  [1mSELECT `newsposts`.* FROM `newsposts` WHERE `newsposts`.`internal_letter` = 1 ORDER BY created_at desc LIMIT 3 OFFSET 0[0m
+  [1m[35mMeetingroom Load (0.4ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1
+  [1m[36mBooking Load (0.9ms)[0m  [1mSELECT `bookings`.* FROM `bookings` WHERE (created_at > '2011-08-21 00:00:00') AND (created_at < '2011-08-29 23:59:59')[0m
+  [1m[35mMeetingroom Load (0.7ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 5 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 5 LIMIT 1[0m
+  [1m[35mMeetingroom Load (0.6ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 7 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 5 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 5 LIMIT 1
+  [1m[36mMeetingroom Load (0.5ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 6 LIMIT 1[0m
+Completed 200 OK in 150ms (Views: 36.7ms | ActiveRecord: 4.6ms | Sphinx: 0.0ms)
+
+
+Started GET "/dk/users/1" for 127.0.0.1 at 2011-08-24 10:38:19 +0200
+  Processing by UsersController#show as HTML
+  Parameters: {"locale"=>"dk", "id"=>"1"}
+  [1m[35mUser Load (0.8ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mNewspost Load (0.6ms)[0m  SELECT `newsposts`.* FROM `newsposts` WHERE `newsposts`.`internal_letter` = 1 ORDER BY created_at desc LIMIT 3 OFFSET 0
+Rendered shared/_menu.html.slim (1.9ms)
+Rendered shared/_news.html.slim (51.0ms)
+Rendered users/show.html.slim within layouts/application (65.9ms)
+Completed 200 OK in 153ms (Views: 97.1ms | ActiveRecord: 1.5ms | Sphinx: 0.0ms)
+
+
+Started GET "/images/fallback/default_avatar_small.jpg" for 127.0.0.1 at 2011-08-24 10:38:19 +0200
+
+ActionController::RoutingError (No route matches "/images/fallback/default_avatar_small.jpg"):
+  
+
+Rendered /Users/synthmax/.rvm/gems/ruby-1.9.2-rc2/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/dk/users/1/edit" for 127.0.0.1 at 2011-08-24 10:38:21 +0200
+  Processing by UsersController#edit as HTML
+  Parameters: {"locale"=>"dk", "id"=>"1"}
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mNewspost Load (0.6ms)[0m  [1mSELECT `newsposts`.* FROM `newsposts` WHERE `newsposts`.`internal_letter` = 1 ORDER BY created_at desc LIMIT 3 OFFSET 0[0m
+  [1m[35mCompany Load (39.2ms)[0m  SELECT `companies`.* FROM `companies`
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT `users`.* FROM `users` LIMIT 1[0m
+Rendered users/edit.html.slim within layouts/application (114.5ms)
+Completed 200 OK in 236ms (Views: 102.5ms | ActiveRecord: 41.6ms | Sphinx: 0.0ms)
+DEPRECATION WARNING: Use toplevel init.rb; rails/init.rb is deprecated: /Users/synthmax/Dropbox/marselistvaervej4/vendor/plugins/paperclip/rails/init.rb. (called from <top (required)> at /Users/synthmax/Dropbox/marselistvaervej4/config/environment.rb:5)
+
+
+Started GET "/" for 127.0.0.1 at 2011-08-24 11:39:41 +0200
+  Processing by HomeController#index as HTML
+  [1m[35mNewspost Load (386.8ms)[0m  SELECT `newsposts`.* FROM `newsposts` WHERE `newsposts`.`internal_letter` = 0 ORDER BY created_at desc LIMIT 3 OFFSET 0
+  [1m[36mSQL (0.7ms)[0m  [1mSELECT COUNT(*) FROM `newsposts` WHERE `newsposts`.`internal_letter` = 0[0m
+  [1m[35mPage Load (0.6ms)[0m  SELECT `pages`.* FROM `pages` WHERE `pages`.`identity` = 'welcome_dk ' LIMIT 1
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Rendered shared/_menu.html.slim (42.9ms)
+Rendered shared/_news.html.slim (11.6ms)
+Rendered home/index.html.slim within layouts/application (89.3ms)
+Completed 200 OK in 881ms (Views: 95.3ms | ActiveRecord: 389.0ms | Sphinx: 0.0ms)
+DEPRECATION WARNING: Use toplevel init.rb; rails/init.rb is deprecated: /Users/synthmax/Dropbox/marselistvaervej4/vendor/plugins/paperclip/rails/init.rb. (called from <top (required)> at /Users/synthmax/Dropbox/marselistvaervej4/config/environment.rb:5)
+
+
+Started GET "/dk/users/1" for 127.0.0.1 at 2011-08-24 11:40:16 +0200
+  Processing by UsersController#show as HTML
+  Parameters: {"locale"=>"dk", "id"=>"1"}
+  [1m[36mSQL (6.1ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mUser Load (0.9ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mNewspost Load (0.6ms)[0m  SELECT `newsposts`.* FROM `newsposts` WHERE `newsposts`.`internal_letter` = 1 ORDER BY created_at desc LIMIT 3 OFFSET 0
+Rendered shared/_menu.html.slim (1.9ms)
+Rendered shared/_news.html.slim (71.0ms)
+DEPRECATION WARNING: RAILS_ENV is deprecated. Please use ::Rails.env. (called from _app_views_layouts_application_html_slim__2327668765215216397_2187903880__3787584138064976675 at /Users/synthmax/Dropbox/marselistvaervej4/app/views/layouts/application.html.slim:20)
+Rendered users/show.html.slim within layouts/application (89.2ms)
+Completed 200 OK in 158ms (Views: 99.1ms | ActiveRecord: 7.6ms | Sphinx: 0.0ms)
+
+
+Started GET "/images/fallback/default_avatar_small.jpg" for 127.0.0.1 at 2011-08-24 11:40:17 +0200
+
+ActionController::RoutingError (No route matches "/images/fallback/default_avatar_small.jpg"):
+  
+
+Rendered /Users/synthmax/.rvm/gems/ruby-1.9.2-rc2/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/dk/users/1/edit" for 127.0.0.1 at 2011-08-24 11:40:18 +0200
+  Processing by UsersController#edit as HTML
+  Parameters: {"locale"=>"dk", "id"=>"1"}
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mNewspost Load (0.6ms)[0m  [1mSELECT `newsposts`.* FROM `newsposts` WHERE `newsposts`.`internal_letter` = 1 ORDER BY created_at desc LIMIT 3 OFFSET 0[0m
+  [1m[35mCompany Load (1.0ms)[0m  SELECT `companies`.* FROM `companies`
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT `users`.* FROM `users` LIMIT 1[0m
+Rendered users/edit.html.slim within layouts/application (40.4ms)
+Completed 200 OK in 138ms (Views: 48.1ms | ActiveRecord: 3.3ms | Sphinx: 0.0ms)
+
+
+Started POST "/dk/users/1" for 127.0.0.1 at 2011-08-24 11:40:42 +0200
+  Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7gsyeW/KnSYdIuYVC3zm4AVlpF6xpIUPSz720aYQwv0=", "user"=>{"image"=>#<ActionDispatch::Http::UploadedFile:0x00000104e62170 @original_filename="beautiful girl in the world.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"user[image]\"; filename=\"beautiful+girl+in+the+world.jpg\"\r\nContent-Type: image/jpeg\r\n", @tempfile=#<File:/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/RackMultipart20110824-2407-1driofp>>, "name"=>"Max Grønlund", "email"=>"max@synthmax.dk", "company_id"=>"2", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "grid"=>"0"}, "commit"=>"Gem", "locale"=>"dk", "id"=>"1"}
+  [1m[35mUser Load (0.8ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mNewspost Load (0.6ms)[0m  SELECT `newsposts`.* FROM `newsposts` WHERE `newsposts`.`internal_letter` = 1 ORDER BY created_at desc LIMIT 3 OFFSET 0
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+[paperclip] identify -format %wx%h '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/stream20110824-2407-1asssh7.jpg[0]' 2>/dev/null
+[paperclip] convert '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/stream20110824-2407-1asssh7.jpg[0]' -resize "x130" -crop "120x130+5+0" +repage '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/stream20110824-2407-1asssh720110824-2407-1vh9800' 2>/dev/null
+[paperclip] identify -format %wx%h '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/stream20110824-2407-1asssh7.jpg[0]' 2>/dev/null
+[paperclip] convert '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/stream20110824-2407-1asssh7.jpg[0]' -resize "480x520>" '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/stream20110824-2407-1asssh720110824-2407-s3hj7k' 2>/dev/null
+  [1m[36mSQL (0.5ms)[0m  [1mSELECT 1 FROM `users` WHERE (LOWER(`users`.`email`) = LOWER('max@synthmax.dk')) AND (`users`.id <> 1) LIMIT 1[0m
+  [1m[35mAREL (0.3ms)[0m  UPDATE `users` SET `image_file_name` = 'beautiful girl in the world.jpg', `image_content_type` = 'image/jpeg', `image_file_size` = 36380, `image_updated_at` = '2011-08-24 09:40:42', `company_id` = 2, `updated_at` = '2011-08-24 09:40:44' WHERE `users`.`id` = 1
+[paperclip] Saving attachments.
+[paperclip] saving /Users/synthmax/Dropbox/marselistvaervej4/public/system/images/1/original/beautiful girl in the world.jpg
+[paperclip] saving /Users/synthmax/Dropbox/marselistvaervej4/public/system/images/1/small/beautiful girl in the world.jpg
+[paperclip] saving /Users/synthmax/Dropbox/marselistvaervej4/public/system/images/1/large/beautiful girl in the world.jpg
+  [1m[36mSQL (28.1ms)[0m  [1mCOMMIT[0m
+[paperclip] identify -format %wx%h '/Users/synthmax/Dropbox/marselistvaervej4/public/system/images/1/large/beautiful girl in the world.jpg[0]' 2>/dev/null
+[paperclip] identify -format %wx%h '/Users/synthmax/Dropbox/marselistvaervej4/public/system/images/1/original/beautiful girl in the world.jpg[0]' 2>/dev/null
+Rendered users/crop.html.slim within layouts/application (51.6ms)
+Completed 200 OK in 2307ms (Views: 516.9ms | ActiveRecord: 30.4ms | Sphinx: 0.0ms)
+
+
+Started GET "/stylesheets/Jcrop.gif" for 127.0.0.1 at 2011-08-24 11:40:45 +0200
+
+ActionController::RoutingError (No route matches "/stylesheets/Jcrop.gif"):
+  
+
+Rendered /Users/synthmax/.rvm/gems/ruby-1.9.2-rc2/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started POST "/dk/users/1" for 127.0.0.1 at 2011-08-24 11:40:50 +0200
+  Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7gsyeW/KnSYdIuYVC3zm4AVlpF6xpIUPSz720aYQwv0=", "user"=>{"crop_x"=>"80", "crop_y"=>"52", "crop_w"=>"337", "crop_h"=>"365"}, "commit"=>"Crop", "locale"=>"dk", "id"=>"1"}
+  [1m[35mUser Load (0.9ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mNewspost Load (0.6ms)[0m  SELECT `newsposts`.* FROM `newsposts` WHERE `newsposts`.`internal_letter` = 1 ORDER BY created_at desc LIMIT 3 OFFSET 0
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT 1 FROM `users` WHERE (LOWER(`users`.`email`) = LOWER('max@synthmax.dk')) AND (`users`.id <> 1) LIMIT 1[0m
+[paperclip] identify -format %wx%h '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/paperclip-reprocess20110824-2407-em6e67[0]' 2>/dev/null
+[paperclip] convert '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/paperclip-reprocess20110824-2407-em6e67[0]' -crop 337x365+80+52 -resize "x130" +repage '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/paperclip-reprocess20110824-2407-em6e6720110824-2407-qd2haj' 2>/dev/null
+[paperclip] identify -format %wx%h '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/paperclip-reprocess20110824-2407-em6e67[0]' 2>/dev/null
+[paperclip] convert '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/paperclip-reprocess20110824-2407-em6e67[0]' -crop 337x365+80+52 -resize "480x520>" '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/paperclip-reprocess20110824-2407-em6e6720110824-2407-dsgbtq' 2>/dev/null
+[paperclip] saving /Users/synthmax/Dropbox/marselistvaervej4/public/system/images/1/original/beautiful girl in the world.jpg
+[paperclip] saving /Users/synthmax/Dropbox/marselistvaervej4/public/system/images/1/small/beautiful girl in the world.jpg
+[paperclip] saving /Users/synthmax/Dropbox/marselistvaervej4/public/system/images/1/large/beautiful girl in the world.jpg
+[paperclip] Saving attachments.
+  [1m[35mSQL (0.2ms)[0m  COMMIT
+Redirected to http://localhost:3000/dk/users/1
+Completed 302 Found in 208ms
+
+
+Started GET "/dk/users/1" for 127.0.0.1 at 2011-08-24 11:40:51 +0200
+  Processing by UsersController#show as HTML
+  Parameters: {"locale"=>"dk", "id"=>"1"}
+  [1m[36mUser Load (2.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mNewspost Load (0.9ms)[0m  [1mSELECT `newsposts`.* FROM `newsposts` WHERE `newsposts`.`internal_letter` = 1 ORDER BY created_at desc LIMIT 3 OFFSET 0[0m
+Rendered shared/_menu.html.slim (3.3ms)
+  [1m[35mCompany Load (0.8ms)[0m  SELECT `companies`.* FROM `companies` WHERE `companies`.`id` = 2 LIMIT 1
+Rendered shared/_news.html.slim (14.5ms)
+Rendered users/show.html.slim within layouts/application (75.9ms)
+Completed 200 OK in 233ms (Views: 91.2ms | ActiveRecord: 4.1ms | Sphinx: 0.0ms)
+DEPRECATION WARNING: Use toplevel init.rb; rails/init.rb is deprecated: /Users/synthmax/Dropbox/marselistvaervej4/vendor/plugins/paperclip/rails/init.rb. (called from <top (required)> at /Users/synthmax/Dropbox/marselistvaervej4/config/environment.rb:5)
+
+
+Started GET "/product_lines/7" for 127.0.0.1 at 2011-08-26 07:10:52 +0200
+
+ActionController::RoutingError (No route matches "/product_lines/7"):
+  
+
+Rendered /Users/synthmax/.rvm/gems/ruby-1.9.2-rc2/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/product_lines/20" for 127.0.0.1 at 2011-08-26 07:10:53 +0200
+
+ActionController::RoutingError (No route matches "/product_lines/20"):
+  
+
+Rendered /Users/synthmax/.rvm/gems/ruby-1.9.2-rc2/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-08-26 07:11:00 +0200
+  Processing by HomeController#index as HTML
+  [1m[36mSQL (111.2ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mNewspost Load (13.0ms)[0m  SELECT `newsposts`.* FROM `newsposts` WHERE `newsposts`.`internal_letter` = 0 ORDER BY created_at desc LIMIT 3 OFFSET 0
+  [1m[36mSQL (0.5ms)[0m  [1mSELECT COUNT(*) FROM `newsposts` WHERE `newsposts`.`internal_letter` = 0[0m
+  [1m[35mPage Load (0.8ms)[0m  SELECT `pages`.* FROM `pages` WHERE `pages`.`identity` = 'welcome_dk ' LIMIT 1
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 AND `users`.`remember_token` = 'l2_ijLUYz2owkGXzVQLE' LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  BEGIN
+[paperclip] Saving attachments.
+  [1m[36mSQL (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35mSQL (0.3ms)[0m  BEGIN
+  [1m[36mAREL (0.4ms)[0m  [1mUPDATE `users` SET `last_sign_in_at` = '2011-08-24 08:38:16', `current_sign_in_at` = '2011-08-26 05:11:00', `sign_in_count` = 60, `updated_at` = '2011-08-26 05:11:00' WHERE `users`.`id` = 1[0m
+[paperclip] Saving attachments.
+  [1m[35mSQL (0.8ms)[0m  COMMIT
+Rendered shared/_menu.html.slim (140.9ms)
+Rendered shared/_news.html.slim (18.2ms)
+DEPRECATION WARNING: RAILS_ENV is deprecated. Please use ::Rails.env. (called from _app_views_layouts_application_html_slim___2813908763071381524_2178383140__33704551035278559 at /Users/synthmax/Dropbox/marselistvaervej4/app/views/layouts/application.html.slim:20)
+Rendered home/index.html.slim within layouts/application (179.3ms)
+Completed 200 OK in 513ms (Views: 182.4ms | ActiveRecord: 128.8ms | Sphinx: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-08-26 07:11:42 +0200
+  Processing by HomeController#index as HTML
+  [1m[36mNewspost Load (0.7ms)[0m  [1mSELECT `newsposts`.* FROM `newsposts` WHERE `newsposts`.`internal_letter` = 0 ORDER BY created_at desc LIMIT 3 OFFSET 0[0m
+  [1m[35mSQL (0.3ms)[0m  SELECT COUNT(*) FROM `newsposts` WHERE `newsposts`.`internal_letter` = 0
+  [1m[36mPage Load (0.8ms)[0m  [1mSELECT `pages`.* FROM `pages` WHERE `pages`.`identity` = 'welcome_dk ' LIMIT 1[0m
+  [1m[35mUser Load (1.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Rendered shared/_menu.html.slim (19.6ms)
+Rendered shared/_news.html.slim (10.3ms)
+Rendered home/index.html.slim within layouts/application (45.8ms)
+Completed 200 OK in 194ms (Views: 50.5ms | ActiveRecord: 2.8ms | Sphinx: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-08-26 07:12:10 +0200
+  Processing by HomeController#index as HTML
+  [1m[36mNewspost Load (1.0ms)[0m  [1mSELECT `newsposts`.* FROM `newsposts` WHERE `newsposts`.`internal_letter` = 0 ORDER BY created_at desc LIMIT 3 OFFSET 0[0m
+  [1m[35mSQL (9.7ms)[0m  SELECT COUNT(*) FROM `newsposts` WHERE `newsposts`.`internal_letter` = 0
+  [1m[36mPage Load (0.8ms)[0m  [1mSELECT `pages`.* FROM `pages` WHERE `pages`.`identity` = 'welcome_dk ' LIMIT 1[0m
+  [1m[35mUser Load (9.9ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Rendered shared/_menu.html.slim (82.0ms)
+Rendered shared/_news.html.slim (10.2ms)
+Rendered home/index.html.slim within layouts/application (217.7ms)
+Completed 200 OK in 356ms (Views: 213.6ms | ActiveRecord: 21.3ms | Sphinx: 0.0ms)
+
+
+Started GET "/dk/admin" for 127.0.0.1 at 2011-08-26 07:12:19 +0200
+  Processing by AdminController#index as HTML
+  Parameters: {"locale"=>"dk"}
+  [1m[36mNewspost Load (100.8ms)[0m  [1mSELECT `newsposts`.* FROM `newsposts` WHERE `newsposts`.`internal_letter` = 1 ORDER BY created_at desc LIMIT 3 OFFSET 0[0m
+  [1m[35mUser Load (52.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Rendered shared/_menu.html.slim (111.6ms)
+Rendered shared/_news.html.slim (14.7ms)
+Rendered admin/index.html.slim within layouts/application (138.7ms)
+Completed 200 OK in 317ms (Views: 92.6ms | ActiveRecord: 153.1ms | Sphinx: 0.0ms)
+
+
+Started GET "/dk/users" for 127.0.0.1 at 2011-08-26 07:12:23 +0200
+  Processing by UsersController#index as HTML
+  Parameters: {"locale"=>"dk"}
+  [1m[36mUser Load (1.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mNewspost Load (1.0ms)[0m  SELECT `newsposts`.* FROM `newsposts` WHERE `newsposts`.`internal_letter` = 1 ORDER BY created_at desc LIMIT 3 OFFSET 0
+  [1m[36mUser Load (1.4ms)[0m  [1mSELECT `users`.* FROM `users` ORDER BY name asc LIMIT 30 OFFSET 0[0m
+  [1m[35mCompany Load (0.5ms)[0m  SELECT `companies`.* FROM `companies` WHERE `companies`.`id` = 1 LIMIT 1
+  [1m[36mCompany Load (0.8ms)[0m  [1mSELECT `companies`.* FROM `companies` WHERE `companies`.`id` = 2 LIMIT 1[0m
+  [1m[35mUser Load (1.3ms)[0m  SELECT `users`.* FROM `users`
+Rendered users/index.html.slim within layouts/application (89.3ms)
+Completed 200 OK in 165ms (Views: 95.5ms | ActiveRecord: 6.2ms | Sphinx: 0.0ms)

@@ -48,7 +48,7 @@
 
     .field
       - unless @user.id == User.first.id
-        - if current_user && current_user.admin_or_super?
+        - if can_edit?
           - if current_user.super?
             = f.label :role, t('user.role')
 	        br/
