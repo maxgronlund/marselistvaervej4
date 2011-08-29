@@ -32,7 +32,7 @@ class User < ActiveRecord::Base
   #, :default_url => "/images/fallback/default_avatar_:style.png"
   
   validates_attachment_size :image, :less_than => 8.megabytes
-  validates_attachment_content_type :image, :content_type => ['image/jpeg','image/jpg','image/png','image/gif'],:message => 'must be a URL for GIF, JPG or PNG image.'
+  validates_attachment_content_type :image, :content_type => ['image/jpeg','image/jpg','image/png','image/x-png','image/gif','image/pjpeg'],:message => 'must be a URL for GIF, JPG or PNG image.'
   
   
   ROLES = %w[member admin super]

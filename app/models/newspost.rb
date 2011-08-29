@@ -9,7 +9,9 @@ class Newspost < ActiveRecord::Base
                     validates_attachment_content_type :image, :content_type => ['image/jpeg',
                                                                                 'image/jpg',
                                                                                 'image/png',
-                                                                                'image/gif'],:message => 'must be a URL for GIF, JPG or PNG image.'
+                                                                                'image/x-png',
+                                                                                'image/gif',
+                                                                                'image/pjpeg'],:message => 'must be a URL for GIF, JPG or PNG image.'
   after_update :reprocess_image, :if => :cropping?
 
   attr_accessor :crop_x, :crop_y, :crop_w, :crop_h
