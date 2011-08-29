@@ -12,6 +12,7 @@ class Ability
         can :manage, Company
         can :manage, Illustration
         can :manage, Meetingroom
+        can :manage, CompanyThumb
         can :manage, Newspost
         can :manage, Page
         can :manage, User
