@@ -43,7 +43,7 @@ $(document).ready(function() {
         
         titleFormat: {
           month: 'MMMM yyyy',                             // September 2009
-          week: "d. [MMM][ yyyy]{ '&#8212;' d. MMM yyyy}", // 7. - 13. Sep 2009
+          week: "d. [MMM][ yyyy]{ '&#8212;' d. MMM}", // 7. - 13. Sep
           day: 'd. MMM, yyyy'                  // 8. Sep, 2009
         },
         columnFormat: {
