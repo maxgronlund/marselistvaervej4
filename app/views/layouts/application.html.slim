@@ -31,9 +31,12 @@ html
               |  |  
               = link_to 'admin', admin_path
               |  |  
+              = link_to 'booking' , new_meetingroom_booking_path(Meetingroom.first)
+              |  |  
               = link_to 'mødelokaler' , meetingrooms_path
-
-              
+              - InfoPage.all.each do |info_page|
+                '&nbsp;|&nbsp;
+                = link_to info_page.title, info_page
 
         = yield
         .clear

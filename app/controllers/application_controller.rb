@@ -3,6 +3,7 @@ class ApplicationController < ActionController::Base
   protect_from_forgery
   
  before_filter :set_locale
+ before_filter :set_info_pages
  
  def after_sign_in_path_for(resource)
    if current_user.admin_or_super?
@@ -22,6 +23,11 @@ class ApplicationController < ActionController::Base
 #       #I18n.locale = 'dk'
 #       I18n.locale = session[:locale] || 'en'
 #     end
+  end
+  
+  def set_info_pages
+    @set_info_pages = InfoPage.all
+    
   end
  
   def default_url_options(options={})

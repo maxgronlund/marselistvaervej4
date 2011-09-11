@@ -4,14 +4,14 @@
 
   b
     .grid-3.alpha
-      = sortable t('user.name')
+      = sortable 'name', t('user.name')
     .grid-3
       = sortable t('user.email')
       -#= link_to 'email',:sort => "email"
     .grid-3
       'Firma
     .grid-1
-      = sortable 'rolle'
+      = sortable 'role', 'rolle'
       -#= link_to 'role',:sort => "role"
     .grid-2.omega
       '

@@ -2,6 +2,7 @@ class NewspostsController < InheritedResources::Base
   load_and_authorize_resource
   before_filter :get_news
   helper_method :sort_column, :sort_direction
+  uses_tiny_mce :only => [:new, :create, :edit, :update]
 
 
   def index

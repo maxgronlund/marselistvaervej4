@@ -14,7 +14,7 @@
                   = link_to newspost.title, newspost
                 .gray
                   = l newspost.created_at, :format => :date_month_and_year
-              = excerpt(newspost.body, '', :radius => 160)
+              =raw excerpt(newspost.body, '', :radius => 160)
               br /
               - if newspost.body != nil && newspost.body.length > 160
                 = link_to 'læs mere', newspost_path(newspost)

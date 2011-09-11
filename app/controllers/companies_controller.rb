@@ -5,7 +5,11 @@ class CompaniesController < InheritedResources::Base
   
   def index
     session[:go_to_after_edit] = companies_path
-    @companies = Company.order('title asc').paginate(:per_page => 8, :page => params[:page])
+    @companies = Company.order('title asc').paginate(:per_page => 12, :page => params[:page])
+    
+    if user_signed_in?
+      @newsposts = Newspost.internal.order('created_at desc').paginate(:per_page => 3, :page => params[:page])
+    end 
   end
 
 

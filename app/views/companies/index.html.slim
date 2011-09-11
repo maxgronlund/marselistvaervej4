@@ -5,7 +5,6 @@
         = render :partial => "shared/menu"
       .content
         .content-company
-          
           -@companies.each do |company|
             .company-index
               .image
@@ -13,7 +12,7 @@
                   = link_to image_tag(company.company_thumbs.last.image.url(:mini), :border => 'none', :class => 'image_fix'), company 
                 - else
                   = link_to image_tag(company.image.url(:mini), :border => 'none', :class => 'image_fix'), company 
-              = link_to company.title, company
+              -#= link_to company.title, company
           = will_paginate @companies 
         - if can_edit?
           = link_to 'Opret virksomhed', new_company_path

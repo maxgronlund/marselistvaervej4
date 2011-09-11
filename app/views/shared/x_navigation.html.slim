@@ -1,0 +1,28 @@
+#header
+  .locale
+    =link_to image_tag('flags/dk.png', :border => 'none', :class => 'image_fix'), locale_path(:locale => 'dk'), :method => :post
+    =link_to image_tag('flags/en.png', :border => 'none', :class => 'image_fix'), locale_path(:locale => 'en'), :method => :post
+
+  .nav
+    = link_to t('navigation.home'), root_path
+    - if user_signed_in? && current_user.admin_or_super?
+      |  |
+      = link_to 'admin', admin_path
+    |  |
+    = link_to t('navigation.about'), about_path
+    |  |
+    = link_to t('navigation.blog'), blogs_path
+
+  .session
+    - if user_signed_in?
+      = link_to current_user.email, current_user
+      |  |
+      = link_to t('navigation.sign_out'), destroy_user_session_path
+    - else
+      -#= link_to 'opret konto', new_user_registration_path # uncomment this if users can sign-up themself
+      = link_to t('navigation.sign_in'), user_session_path
+
+  .search
+    = form_tag '/search', :method => :get do
+      = text_field_tag :search
+      = submit_tag t('admin.search'), :name => nil

@@ -26,3 +26,50 @@ opret nyt mødelokale skjules
 
 
 
+ 
+1:
+Mulighed for visning af flere billeder (billedgalleri)
+
+
+2: √
+Links i teksterne
+
+3: √
+Virksomheder. Vis kun logo og ikke virksomhedsnavne, så alle virksomheder kan være på én side (logoet for bricks kan stadig ikke ses)
+
+4: √
+Interne nyheder forsvinder under Virksomheder. 
+
+Bookning af mødelokaler
+
+5: √
+Overskrift mangler: ”Book Mødelokaler”
+
+6: 
+Billederne skal være lige store – skriv evt.”kælder” i stedet for ”kælderen”
+
+7:
+Interne nyheder – se nyhedsteksten
+
+8:
+Vi mangler en praktisk info i menu øverst til højre, når man er logget ind. Her kunne bla. Stå:
+Email alle i huset
+Ugens menu
+Husregler
+Mm
+
+Min konto: se fejl øverst
+
+Sorterfunktion i bookingliste
+
+Hurtigere vej til kalenderoversigt, så man ikke kun kan se de reserverede mødelokaler, når man er helt inde og booke.
+
+
+rails g scaffold info_page title:string body:text
+
+
+
+
+
+
+

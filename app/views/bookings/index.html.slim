@@ -9,7 +9,7 @@
       .grid-2
         = sortable 'meetingroom_id','Mødelokale'
       .grid-1
-        = sortable 'user_id','Bruger'
+        'Bruger
       .grid-1
         'Deltagere
       .grid-1
@@ -56,8 +56,6 @@
   div class="grid_10 prefix_1 suffix_1"
       = will_paginate @bookings
   
-  - if can_edit?
-    br 
-    = link_to 'Opret reservation', new_meetingroom_booking_path(@meetingroom) 
+
   
   

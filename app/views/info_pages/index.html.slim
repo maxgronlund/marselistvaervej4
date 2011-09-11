@@ -1,0 +1,34 @@
+
+.single-column
+  h1 side administration
+
+
+  b
+    .grid-12.alpha.omega
+      = sortable 'title', 'overskrift'
+    
+  hr/
+
+  - @info_pages.each do |info_page|
+    div class="grid_10 prefix_1 suffix_1"
+      div class="grid_10 alpha omega #{cycle('color_light_gray', 'color_gray')}"
+  
+        .grid-10.alpha.top_margin_6
+          = link_to info_page.title, info_page_path(info_page);
+        
+        .grid-2.omega.top_margin_6.text_right
+          - if can_edit?
+            = link_to t('admin.edit'), edit_info_page_path(info_page)
+            '&nbsp;|&nbsp;
+            = link_to t('admin.delete'), info_page, :confirm => t('admin.are_you_sure'), :method => :delete
+        hr/
+
+
+
+
+  br
+  .edit
+    = link_to 'opret side', new_info_page_path, :class => 'button'
+    br/
+
+

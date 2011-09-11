@@ -212,7 +212,7 @@ hr {
 /* line 52, ../../../app/assets/stylesheets/main.scss */
 .desc {
   padding-right: 14px;
-  background-image: url("../images/arrow_up.png");
+  background-image: url("../../images/arrow_up.png");
   background-repeat: no-repeat;
   background-color: transparent;
   background-position: right top;
@@ -221,7 +221,7 @@ hr {
 /* line 60, ../../../app/assets/stylesheets/main.scss */
 .asc {
   padding-right: 14px;
-  background-image: url("../images/arrow_down.png");
+  background-image: url("../../images/arrow_down.png");
   background-repeat: no-repeat;
   background-color: transparent;
   background-position: right top;
@@ -254,20 +254,21 @@ a:hover {
   color: #f00;
 }
 
-/* line 88, ../../../app/assets/stylesheets/main.scss */
-.desc {
-  padding-right: 14px;
-  background-image: url("arrow_up.png");
-  background-repeat: no-repeat;
-  background-color: transparent;
-  background-position: right top;
+/*
+.desc{
+	padding-right:14px;
+	background-image:url('arrow_up.png');
+	background-repeat:no-repeat;
+	background-color:transparent;
+	background-position:right top;
 }
 
-/* line 96, ../../../app/assets/stylesheets/main.scss */
-.asc {
-  padding-right: 14px;
-  background-image: url("arrow_down.png");
-  background-repeat: no-repeat;
-  background-color: transparent;
-  background-position: right top;
+.asc{
+	padding-right:14px;
+	background-image:url('arrow_down.png');
+	background-repeat:no-repeat;
+	background-color:transparent;
+	background-position:right top;
 }
+
+*/

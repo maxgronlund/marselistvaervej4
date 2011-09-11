@@ -4,67 +4,71 @@
      .color_allert
        | Ikke alle feldter er udfyldt korekt
 
-
+  .grid-6.alpha
  
-  | Mødelokale
-  br/
-  = f.select :meetingroom_id, meetingrooms_select
-  
-  br/
-  br/
-  
-  -if(current_user.role == 'member' ) 
-    | Bookes af: 
+    | Mødelokale
     br/
-    = current_user.name
-    = f.hidden_field :bookers_name, :value => current_user.name
-  -else
-    | Bookes til: 
+    = f.select :meetingroom_id, meetingrooms_select
+    
     br/
-    = f.select :bookers_name, user_select
-  
-  br
-  br
-  .field.booking-date
-    | Dato: 
+    br/
+    
+    -if(current_user.role == 'member' ) 
+      | Bookes af: 
+      br/
+      = current_user.name
+      = f.hidden_field :bookers_name, :value => current_user.name
+    -else
+      | Bookes til: 
+      br/
+      = f.select :bookers_name, user_select
+    
+
     br
-    = f.text_field :created_at, :value => l((@booking.created_at || Date.today).to_date), :readonly => true, :size=>12
-  
-  
-  
+    .field.booking-date
+      | Dato: 
+      br
+      = f.text_field :created_at, :value => l((@booking.created_at || Date.today).to_date), :readonly => true, :size=>12
+    
+    
+    
+
+    
+    
+    br
+  .grid-5.omega
     | -Fra kl.
     = f.time_select :starttime
     |  - Til kl.
     = f.time_select :endtime
+    br
+	br
+    'Deltagere: 
+    = f.text_field :attendees, :size=>6
+    br
+    br
+    = f.check_box :coffee_and_tea
+    |  Kaffe og vand
+    '&nbsp &nbsp; 
+    = f.check_box :bread
+    | The
+    br
+    br
+    'Andet:
+    br
+    = f.text_field :custom_message
+    
+    
+    .links
+      = f.submit 'Gem'
+      -#= image_tag "loader.gif", :alt => "", :width => "32", :height => "32", :style => "display: none;", :class => 'spinner'
   
-  
-  br
-  
-  | Deltagere: 
-  = f.text_field :attendees, :size=>6
-  br
-  br
-  = f.check_box :coffee_and_tea
-  |  Kaffe og vand
-  '&nbsp &nbsp; 
-  = f.check_box :bread
-  | The
-  br
-  br
-  'Andet:
-  br
-  = f.text_field :custom_message
-  
-  
-  .links
-    = f.submit 'Gem'
-    -#= image_tag "loader.gif", :alt => "", :width => "32", :height => "32", :style => "display: none;", :class => 'spinner'
-
-  .meetingrooms
-    - Meetingroom.all.each do |meetingroom|
-      .booking-meetingroom-column
-        div style="background-color: #{meetingroom.color || 'yellow'};"
-          strong= meetingroom.title
-          br/
-          = image_tag meetingroom.image(:mini)
-    div style="clear:both;"
+  .grid-11.alpha.omega  
+    .meetingrooms
+      - Meetingroom.all.each do |meetingroom|
+        .booking-meetingroom-column
+          div style="background-color: #{meetingroom.color || 'yellow'};"
+            strong= meetingroom.title
+            br/
+            = image_tag meetingroom.image(:mini)
+      div style="clear:both;"

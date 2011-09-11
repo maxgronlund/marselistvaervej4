@@ -233,6 +233,64 @@ $ninesixty-gutter-width: 20px; // default: 20px
 	}
 }
 
+.bookings-box{
+	background-color:#fff;
+    margin-top:36px;
+	@include grid(12);
+	min-height:376px;
+	display:block;
+	.borders{
+		border-style:solid;
+		border-width:1px;
+		min-height:376px;
+		display:block;
+	}
+	.content{
+		.content-top{ height:280px;}
+	}
+	.text-right{
+		text-align: right;
+	}
+	.menu-box{
+		width:400px;
+		height:51px;
+		a{ color:#fff; }
+		a:hover{ color:#000; background-color:#fff; }
+	}
+	.image-box{
+		height:376px;
+	}
+}
+
+.calendar-box{
+	background-color:#fff;
+    margin-top:10px;
+	@include grid(12);
+	min-height:376px;
+	display:block;
+	.borders{
+		border-style:solid;
+		border-width:1px;
+		min-height:376px;
+		display:block;
+	}
+	.content{
+		.content-top{ height:280px;}
+	}
+	.text-right{
+		text-align: right;
+	}
+	.menu-box{
+		width:400px;
+		height:51px;
+		a{ color:#fff; }
+		a:hover{ color:#000; background-color:#fff; }
+	}
+	.image-box{
+		height:376px;
+	}
+}
+
 .squared-box{
 	background-color:#fff;
     margin-top:36px;
@@ -324,7 +382,7 @@ $ninesixty-gutter-width: 20px; // default: 20px
 		a{
 			text-decoration:none;
 			font-weight: bold;
-			color:#444;
+			color:#448;
 		}a:hover{
 			color:#fff;
 			background-color:#000;
@@ -411,7 +469,7 @@ a:hover{
 }
 
 .company-index{
-	width:180px;
+	width:110px;
 	height: 60px;
 	display: inline;
 	float: left;

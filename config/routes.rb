@@ -1,5 +1,7 @@
 Rails_template::Application.routes.draw do
 
+  resources :info_pages
+
   resources :company_thumbs
 
   scope "/:locale" do
