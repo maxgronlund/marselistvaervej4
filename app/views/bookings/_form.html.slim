@@ -70,5 +70,5 @@
           div style="background-color: #{meetingroom.color || 'yellow'};"
             strong= meetingroom.title
             br/
-            = image_tag meetingroom.image(:mini)
+            = link_to image_tag(meetingroom.image(:mini)), meetingroom
       div style="clear:both;"

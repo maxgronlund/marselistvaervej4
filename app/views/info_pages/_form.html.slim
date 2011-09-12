@@ -1,0 +1,21 @@
+.single-column
+  = form_for(@info_page) do |f|
+    - if @info_page.errors.any?
+      #error_explanation
+        h2
+          #{pluralize(@info_page.errors.count, "error")} prohibited this page from being saved:
+        ul
+          - @info_page.errors.full_messages.each do |msg|
+            li= msg
+
+    
+    .field
+      = t('system.title')
+      br/
+      = f.text_field :title
+    .field
+      = t('system.body')
+      br/
+      = f.text_area :body, :class => "mceEditor"
+    
+   

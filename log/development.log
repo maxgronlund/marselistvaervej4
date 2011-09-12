@@ -32549,3 +32549,2081 @@ Started GET "/info_pages?locale=dk" for 127.0.0.1 at 2011-09-11 19:06:29 +0200
   [1m[36mCACHE (0.0ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages`[0m
 Rendered info_pages/index.html.slim within layouts/application (105.0ms)
 Completed 200 OK in 146ms (Views: 111.8ms | ActiveRecord: 3.7ms | Sphinx: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-09-11 21:17:58 +0200
+  Processing by HomeController#index as HTML
+  [1m[35mInfoPage Load (0.8ms)[0m  SELECT `info_pages`.* FROM `info_pages`
+  [1m[36mNewspost Load (0.7ms)[0m  [1mSELECT `newsposts`.* FROM `newsposts` WHERE `newsposts`.`internal_letter` = 0 ORDER BY created_at desc LIMIT 3 OFFSET 0[0m
+  [1m[35mSQL (0.5ms)[0m  SELECT COUNT(*) FROM `newsposts` WHERE `newsposts`.`internal_letter` = 0
+  [1m[36mPage Load (0.7ms)[0m  [1mSELECT `pages`.* FROM `pages` WHERE `pages`.`identity` = 'welcome_dk ' LIMIT 1[0m
+  [1m[35mUser Load (1.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Rendered shared/_menu.html.slim (20.0ms)
+Rendered shared/_news.html.slim (10.4ms)
+  [1m[36mMeetingroom Load (0.6ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `info_pages`.* FROM `info_pages`
+Rendered home/index.html.slim within layouts/application (95.8ms)
+Completed 200 OK in 222ms (Views: 99.9ms | ActiveRecord: 4.4ms | Sphinx: 0.0ms)
+
+
+Started GET "/dk/users/1" for 127.0.0.1 at 2011-09-11 21:18:01 +0200
+  Processing by UsersController#show as HTML
+  Parameters: {"locale"=>"dk", "id"=>"1"}
+  [1m[36mInfoPage Load (0.6ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages`[0m
+  [1m[35mUser Load (0.9ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mNewspost Load (0.7ms)[0m  SELECT `newsposts`.* FROM `newsposts` WHERE `newsposts`.`internal_letter` = 1 ORDER BY created_at desc LIMIT 3 OFFSET 0
+Rendered shared/_menu.html.slim (1.9ms)
+  [1m[36mCompany Load (0.6ms)[0m  [1mSELECT `companies`.* FROM `companies` WHERE `companies`.`id` = 2 LIMIT 1[0m
+Rendered shared/_news.html.slim (12.2ms)
+  [1m[35mMeetingroom Load (0.7ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages`[0m
+Rendered users/show.html.slim within layouts/application (118.8ms)
+Completed 200 OK in 230ms (Views: 126.9ms | ActiveRecord: 3.4ms | Sphinx: 0.0ms)
+
+
+Started GET "/dk/admin" for 127.0.0.1 at 2011-09-11 21:18:03 +0200
+  Processing by AdminController#index as HTML
+  Parameters: {"locale"=>"dk"}
+  [1m[35mInfoPage Load (0.5ms)[0m  SELECT `info_pages`.* FROM `info_pages`
+  [1m[36mNewspost Load (0.6ms)[0m  [1mSELECT `newsposts`.* FROM `newsposts` WHERE `newsposts`.`internal_letter` = 1 ORDER BY created_at desc LIMIT 3 OFFSET 0[0m
+  [1m[35mUser Load (1.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Rendered shared/_menu.html.slim (69.8ms)
+  [1m[36mUser Load (1.4ms)[0m  [1mSELECT `users`.* FROM `users`[0m
+Rendered shared/_news.html.slim (15.2ms)
+  [1m[35mMeetingroom Load (0.8ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages`[0m
+Rendered admin/index.html.slim within layouts/application (162.1ms)
+Completed 200 OK in 183ms (Views: 164.5ms | ActiveRecord: 4.5ms | Sphinx: 0.0ms)
+
+
+Started GET "/meetingrooms/5/bookings/new?locale=dk" for 127.0.0.1 at 2011-09-11 21:18:04 +0200
+  Processing by BookingsController#new as HTML
+  Parameters: {"locale"=>"dk", "meetingroom_id"=>"5"}
+  [1m[35mInfoPage Load (0.8ms)[0m  SELECT `info_pages`.* FROM `info_pages`
+  [1m[36mMeetingroom Load (0.6ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 5 LIMIT 1[0m
+  [1m[35mUser Load (1.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mNewspost Load (0.9ms)[0m  [1mSELECT `newsposts`.* FROM `newsposts` WHERE `newsposts`.`internal_letter` = 1 ORDER BY created_at desc LIMIT 3 OFFSET 0[0m
+Rendered shared/_menu.html.slim (1.7ms)
+  [1m[35mMeetingroom Load (0.9ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` ORDER BY title DESC
+  [1m[36mUser Load (1.4ms)[0m  [1mSELECT `users`.* FROM `users` ORDER BY name DESC[0m
+  [1m[35mMeetingroom Load (0.8ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms`
+Rendered bookings/_form.html.slim (16.2ms)
+Rendered shared/_news.html.slim (11.4ms)
+  [1m[36mMeetingroom Load (0.8ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `info_pages`.* FROM `info_pages`
+Rendered bookings/new.html.slim within layouts/application (47.9ms)
+Completed 200 OK in 220ms (Views: 52.5ms | ActiveRecord: 7.3ms | Sphinx: 0.0ms)
+
+
+Started GET "/da/bookings?_=1315768684671&start=1315173600&end=1315778400" for 127.0.0.1 at 2011-09-11 21:18:04 +0200
+  Processing by BookingsController#index as JS
+  Parameters: {"_"=>"1315768684671", "start"=>"1315173600", "end"=>"1315778400", "locale"=>"da"}
+  [1m[36mInfoPage Load (0.6ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages`[0m
+  [1m[35mUser Load (1.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mNewspost Load (0.8ms)[0m  [1mSELECT `newsposts`.* FROM `newsposts` WHERE `newsposts`.`internal_letter` = 1 ORDER BY created_at desc LIMIT 3 OFFSET 0[0m
+  [1m[35mMeetingroom Load (0.8ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1
+  [1m[36mBooking Load (1.2ms)[0m  [1mSELECT `bookings`.* FROM `bookings` WHERE (created_at > '2011-09-04 00:00:00') AND (created_at < '2011-09-12 23:59:59')[0m
+  [1m[35mMeetingroom Load (0.6ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 5 LIMIT 1
+  [1m[36mMeetingroom Load (0.7ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 6 LIMIT 1[0m
+Completed 200 OK in 143ms (Views: 28.9ms | ActiveRecord: 5.6ms | Sphinx: 0.0ms)
+
+
+Started GET "/dk/meetingrooms" for 127.0.0.1 at 2011-09-11 21:18:08 +0200
+  Processing by MeetingroomsController#index as HTML
+  Parameters: {"locale"=>"dk"}
+  [1m[35mInfoPage Load (0.7ms)[0m  SELECT `info_pages`.* FROM `info_pages`
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mMeetingroom Load (0.7ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1
+  [1m[36mNewspost Load (0.8ms)[0m  [1mSELECT `newsposts`.* FROM `newsposts` WHERE `newsposts`.`internal_letter` = 1 ORDER BY created_at desc LIMIT 3 OFFSET 0[0m
+Rendered shared/_menu.html.slim (1.7ms)
+  [1m[35mMeetingroom Load (0.9ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms`
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `info_pages`.* FROM `info_pages`
+Rendered meetingrooms/index.html.slim within layouts/application (70.5ms)
+Completed 200 OK in 186ms (Views: 78.2ms | ActiveRecord: 4.2ms | Sphinx: 0.0ms)
+
+
+Started GET "/info_pages/1?locale=dk" for 127.0.0.1 at 2011-09-11 21:18:10 +0200
+  Processing by InfoPagesController#show as HTML
+  Parameters: {"locale"=>"dk", "id"=>"1"}
+  [1m[36mInfoPage Load (0.5ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages`[0m
+  [1m[35mNewspost Load (0.9ms)[0m  SELECT `newsposts`.* FROM `newsposts` WHERE `newsposts`.`internal_letter` = 0 ORDER BY created_at desc LIMIT 3 OFFSET 0
+  [1m[36mSQL (0.6ms)[0m  [1mSELECT COUNT(*) FROM `newsposts` WHERE `newsposts`.`internal_letter` = 0[0m
+  [1m[35mInfoPage Load (0.4ms)[0m  SELECT `info_pages`.* FROM `info_pages` WHERE `info_pages`.`id` = 1 LIMIT 1
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Rendered shared/_menu.html.slim (32.9ms)
+Rendered shared/_news.html.slim (10.5ms)
+  [1m[35mMeetingroom Load (0.9ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages`[0m
+Rendered info_pages/show.html.slim within layouts/application (120.4ms)
+Completed 200 OK in 202ms (Views: 127.1ms | ActiveRecord: 4.2ms | Sphinx: 0.0ms)
+
+
+Started GET "/dk/users/1" for 127.0.0.1 at 2011-09-11 21:18:13 +0200
+  Processing by UsersController#show as HTML
+  Parameters: {"locale"=>"dk", "id"=>"1"}
+  [1m[35mInfoPage Load (0.6ms)[0m  SELECT `info_pages`.* FROM `info_pages`
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mNewspost Load (0.8ms)[0m  [1mSELECT `newsposts`.* FROM `newsposts` WHERE `newsposts`.`internal_letter` = 1 ORDER BY created_at desc LIMIT 3 OFFSET 0[0m
+Rendered shared/_menu.html.slim (1.8ms)
+  [1m[35mCompany Load (0.6ms)[0m  SELECT `companies`.* FROM `companies` WHERE `companies`.`id` = 2 LIMIT 1
+Rendered shared/_news.html.slim (12.4ms)
+  [1m[36mMeetingroom Load (0.7ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `info_pages`.* FROM `info_pages`
+Rendered users/show.html.slim within layouts/application (117.2ms)
+Completed 200 OK in 223ms (Views: 125.4ms | ActiveRecord: 3.9ms | Sphinx: 0.0ms)
+
+
+Started GET "/dk/admin" for 127.0.0.1 at 2011-09-11 21:18:19 +0200
+  Processing by AdminController#index as HTML
+  Parameters: {"locale"=>"dk"}
+  [1m[36mInfoPage Load (0.6ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages`[0m
+  [1m[35mNewspost Load (0.8ms)[0m  SELECT `newsposts`.* FROM `newsposts` WHERE `newsposts`.`internal_letter` = 1 ORDER BY created_at desc LIMIT 3 OFFSET 0
+  [1m[36mUser Load (1.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Rendered shared/_menu.html.slim (33.5ms)
+  [1m[35mUser Load (1.3ms)[0m  SELECT `users`.* FROM `users`
+Rendered shared/_news.html.slim (15.4ms)
+  [1m[36mMeetingroom Load (0.8ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `info_pages`.* FROM `info_pages`
+Rendered admin/index.html.slim within layouts/application (126.5ms)
+Completed 200 OK in 147ms (Views: 128.8ms | ActiveRecord: 4.8ms | Sphinx: 0.0ms)
+DEPRECATION WARNING: Use toplevel init.rb; rails/init.rb is deprecated: /Users/synthmax/Dropbox/marselistvaervej4/vendor/plugins/paperclip/rails/init.rb. (called from <top (required)> at /Users/synthmax/Dropbox/marselistvaervej4/config/environment.rb:5)
+
+
+Started GET "/" for 127.0.0.1 at 2011-09-12 09:04:02 +0200
+
+NoMethodError (undefined method `init' for Mysql:Class):
+  
+
+Rendered /Users/synthmax/.rvm/gems/ruby-1.9.2-rc2/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+Rendered /Users/synthmax/.rvm/gems/ruby-1.9.2-rc2/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (6.3ms)
+Rendered /Users/synthmax/.rvm/gems/ruby-1.9.2-rc2/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (12.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-09-12 09:04:02 +0200
+
+NoMethodError (undefined method `init' for Mysql:Class):
+  
+
+Rendered /Users/synthmax/.rvm/gems/ruby-1.9.2-rc2/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+Rendered /Users/synthmax/.rvm/gems/ruby-1.9.2-rc2/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+Rendered /Users/synthmax/.rvm/gems/ruby-1.9.2-rc2/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (5.4ms)
+DEPRECATION WARNING: Use toplevel init.rb; rails/init.rb is deprecated: /Users/synthmax/Dropbox/marselistvaervej4/vendor/plugins/paperclip/rails/init.rb. (called from <top (required)> at /Users/synthmax/Dropbox/marselistvaervej4/config/environment.rb:5)
+
+
+Started GET "/" for 127.0.0.1 at 2011-09-12 09:05:23 +0200
+
+NoMethodError (undefined method `init' for Mysql:Class):
+  
+
+Rendered /Users/synthmax/.rvm/gems/ruby-1.9.2-rc2/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /Users/synthmax/.rvm/gems/ruby-1.9.2-rc2/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (6.6ms)
+Rendered /Users/synthmax/.rvm/gems/ruby-1.9.2-rc2/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (11.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-09-12 09:05:23 +0200
+
+NoMethodError (undefined method `init' for Mysql:Class):
+  
+
+Rendered /Users/synthmax/.rvm/gems/ruby-1.9.2-rc2/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+Rendered /Users/synthmax/.rvm/gems/ruby-1.9.2-rc2/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+Rendered /Users/synthmax/.rvm/gems/ruby-1.9.2-rc2/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (5.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-09-12 09:05:25 +0200
+
+NoMethodError (undefined method `init' for Mysql:Class):
+  
+
+Rendered /Users/synthmax/.rvm/gems/ruby-1.9.2-rc2/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /Users/synthmax/.rvm/gems/ruby-1.9.2-rc2/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+Rendered /Users/synthmax/.rvm/gems/ruby-1.9.2-rc2/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (6.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-09-12 09:05:25 +0200
+
+NoMethodError (undefined method `init' for Mysql:Class):
+  
+
+Rendered /Users/synthmax/.rvm/gems/ruby-1.9.2-rc2/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+Rendered /Users/synthmax/.rvm/gems/ruby-1.9.2-rc2/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+Rendered /Users/synthmax/.rvm/gems/ruby-1.9.2-rc2/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (5.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-09-12 09:05:27 +0200
+
+NoMethodError (undefined method `init' for Mysql:Class):
+  
+
+Rendered /Users/synthmax/.rvm/gems/ruby-1.9.2-rc2/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+Rendered /Users/synthmax/.rvm/gems/ruby-1.9.2-rc2/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+Rendered /Users/synthmax/.rvm/gems/ruby-1.9.2-rc2/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (5.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-09-12 09:05:27 +0200
+
+NoMethodError (undefined method `init' for Mysql:Class):
+  
+
+Rendered /Users/synthmax/.rvm/gems/ruby-1.9.2-rc2/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+Rendered /Users/synthmax/.rvm/gems/ruby-1.9.2-rc2/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+Rendered /Users/synthmax/.rvm/gems/ruby-1.9.2-rc2/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (5.3ms)
+DEPRECATION WARNING: Use toplevel init.rb; rails/init.rb is deprecated: /Users/synthmax/Dropbox/marselistvaervej4/vendor/plugins/paperclip/rails/init.rb. (called from <top (required)> at /Users/synthmax/Dropbox/marselistvaervej4/config/environment.rb:5)
+
+
+Started GET "/" for 127.0.0.1 at 2011-09-12 09:08:47 +0200
+
+RuntimeError (!!! Missing the mysql2 gem. Add it to your Gemfile: gem 'mysql2'):
+  
+
+Rendered /Users/synthmax/.rvm/gems/ruby-1.9.2-p290@railspre/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+Rendered /Users/synthmax/.rvm/gems/ruby-1.9.2-p290@railspre/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (16.6ms)
+Rendered /Users/synthmax/.rvm/gems/ruby-1.9.2-p290@railspre/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (31.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-09-12 09:08:47 +0200
+
+RuntimeError (!!! Missing the mysql2 gem. Add it to your Gemfile: gem 'mysql2'):
+  
+
+Rendered /Users/synthmax/.rvm/gems/ruby-1.9.2-p290@railspre/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+Rendered /Users/synthmax/.rvm/gems/ruby-1.9.2-p290@railspre/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+Rendered /Users/synthmax/.rvm/gems/ruby-1.9.2-p290@railspre/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (4.3ms)
+DEPRECATION WARNING: Use toplevel init.rb; rails/init.rb is deprecated: /Users/synthmax/Dropbox/marselistvaervej4/vendor/plugins/paperclip/rails/init.rb. (called from <top (required)> at /Users/synthmax/Dropbox/marselistvaervej4/config/environment.rb:5)
+
+
+Started GET "/" for 127.0.0.1 at 2011-09-12 09:11:55 +0200
+  Processing by HomeController#index as HTML
+  [1m[36mInfoPage Load (14.1ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages`[0m
+  [1m[35mSQL (99.1ms)[0m  SHOW TABLES
+  [1m[36mNewspost Load (12.9ms)[0m  [1mSELECT `newsposts`.* FROM `newsposts` WHERE `newsposts`.`internal_letter` = 0 ORDER BY created_at desc LIMIT 3 OFFSET 0[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT COUNT(*) FROM `newsposts` WHERE `newsposts`.`internal_letter` = 0
+  [1m[36mPage Load (0.8ms)[0m  [1mSELECT `pages`.* FROM `pages` WHERE `pages`.`identity` = 'welcome_dk ' LIMIT 1[0m
+  [1m[35mUser Load (1.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 AND `users`.`remember_token` = 'p6tegdhczltPyUrJVdbL' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mBEGIN[0m
+[paperclip] Saving attachments.
+  [1m[35mSQL (0.3ms)[0m  COMMIT
+  [1m[36mSQL (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mAREL (0.6ms)[0m  UPDATE `users` SET `last_sign_in_at` = '2011-09-11 17:00:28', `current_sign_in_at` = '2011-09-12 07:11:56', `sign_in_count` = 68, `updated_at` = '2011-09-12 07:11:56' WHERE `users`.`id` = 1
+[paperclip] Saving attachments.
+  [1m[36mSQL (0.8ms)[0m  [1mCOMMIT[0m
+Rendered shared/_menu.html.slim (116.7ms)
+Rendered shared/_news.html.slim (19.8ms)
+DEPRECATION WARNING: RAILS_ENV is deprecated. Please use ::Rails.env. (called from _app_views_layouts_application_html_slim__3017577469721537931_70176182817520_3481080353127047333 at /Users/synthmax/Dropbox/marselistvaervej4/app/views/layouts/application.html.slim:20)
+  [1m[35mMeetingroom Load (21.7ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1
+  [1m[36mInfoPage Load (0.6ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages`[0m
+Rendered home/index.html.slim within layouts/application (227.1ms)
+Completed 200 OK in 705ms (Views: 236.4ms | ActiveRecord: 152.9ms | Sphinx: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-09-12 09:11:57 +0200
+  Processing by HomeController#index as HTML
+  [1m[35mInfoPage Load (0.6ms)[0m  SELECT `info_pages`.* FROM `info_pages`
+  [1m[36mNewspost Load (0.7ms)[0m  [1mSELECT `newsposts`.* FROM `newsposts` WHERE `newsposts`.`internal_letter` = 0 ORDER BY created_at desc LIMIT 3 OFFSET 0[0m
+  [1m[35mSQL (0.4ms)[0m  SELECT COUNT(*) FROM `newsposts` WHERE `newsposts`.`internal_letter` = 0
+  [1m[36mPage Load (0.8ms)[0m  [1mSELECT `pages`.* FROM `pages` WHERE `pages`.`identity` = 'welcome_dk ' LIMIT 1[0m
+  [1m[35mUser Load (1.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Rendered shared/_menu.html.slim (85.1ms)
+Rendered shared/_news.html.slim (13.2ms)
+  [1m[36mMeetingroom Load (0.9ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `info_pages`.* FROM `info_pages`
+Rendered home/index.html.slim within layouts/application (222.4ms)
+Completed 200 OK in 385ms (Views: 224.5ms | ActiveRecord: 4.5ms | Sphinx: 0.0ms)
+
+
+Started GET "/dk/home?page=2" for 127.0.0.1 at 2011-09-12 09:12:28 +0200
+  Processing by HomeController#index as HTML
+  Parameters: {"page"=>"2", "locale"=>"dk"}
+  [1m[36mInfoPage Load (0.6ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages`[0m
+  [1m[35mNewspost Load (0.7ms)[0m  SELECT `newsposts`.* FROM `newsposts` WHERE `newsposts`.`internal_letter` = 0 ORDER BY created_at desc LIMIT 3 OFFSET 3
+  [1m[36mPage Load (0.6ms)[0m  [1mSELECT `pages`.* FROM `pages` WHERE `pages`.`identity` = 'welcome_dk ' LIMIT 1[0m
+  [1m[35mUser Load (1.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Rendered shared/_menu.html.slim (53.1ms)
+Rendered shared/_news.html.slim (12.2ms)
+  [1m[36mMeetingroom Load (0.7ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `info_pages`.* FROM `info_pages`
+Rendered home/index.html.slim within layouts/application (97.5ms)
+Completed 200 OK in 218ms (Views: 100.0ms | ActiveRecord: 3.5ms | Sphinx: 0.0ms)
+
+
+Started GET "/dk/home?page=1" for 127.0.0.1 at 2011-09-12 09:12:30 +0200
+  Processing by HomeController#index as HTML
+  Parameters: {"page"=>"1", "locale"=>"dk"}
+  [1m[36mInfoPage Load (0.6ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages`[0m
+  [1m[35mNewspost Load (0.8ms)[0m  SELECT `newsposts`.* FROM `newsposts` WHERE `newsposts`.`internal_letter` = 0 ORDER BY created_at desc LIMIT 3 OFFSET 0
+  [1m[36mSQL (0.4ms)[0m  [1mSELECT COUNT(*) FROM `newsposts` WHERE `newsposts`.`internal_letter` = 0[0m
+  [1m[35mPage Load (0.6ms)[0m  SELECT `pages`.* FROM `pages` WHERE `pages`.`identity` = 'welcome_dk ' LIMIT 1
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Rendered shared/_menu.html.slim (21.2ms)
+Rendered shared/_news.html.slim (11.8ms)
+  [1m[35mMeetingroom Load (0.7ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages`[0m
+Rendered home/index.html.slim within layouts/application (95.2ms)
+Completed 200 OK in 219ms (Views: 97.7ms | ActiveRecord: 4.0ms | Sphinx: 0.0ms)
+
+
+Started GET "/dk/newsposts/4" for 127.0.0.1 at 2011-09-12 09:12:37 +0200
+  Processing by NewspostsController#show as HTML
+  Parameters: {"locale"=>"dk", "id"=>"4"}
+  [1m[35mInfoPage Load (0.7ms)[0m  SELECT `info_pages`.* FROM `info_pages`
+  [1m[36mNewspost Load (0.6ms)[0m  [1mSELECT `newsposts`.* FROM `newsposts` WHERE `newsposts`.`id` = 4 LIMIT 1[0m
+  [1m[35mUser Load (1.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mNewspost Load (0.9ms)[0m  [1mSELECT `newsposts`.* FROM `newsposts` WHERE `newsposts`.`internal_letter` = 0 ORDER BY created_at desc LIMIT 3 OFFSET 0[0m
+  [1m[35mSQL (0.3ms)[0m  SELECT COUNT(*) FROM `newsposts` WHERE `newsposts`.`internal_letter` = 0
+Rendered shared/_menu.html.slim (2.0ms)
+Rendered shared/_news.html.slim (5.9ms)
+  [1m[36mMeetingroom Load (0.8ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `info_pages`.* FROM `info_pages`
+Rendered newsposts/show.html.slim within layouts/application (66.9ms)
+Completed 200 OK in 169ms (Views: 90.4ms | ActiveRecord: 4.4ms | Sphinx: 0.0ms)
+
+
+Started GET "/dk/newsposts/4/edit" for 127.0.0.1 at 2011-09-12 09:12:43 +0200
+  Processing by NewspostsController#edit as HTML
+  Parameters: {"locale"=>"dk", "id"=>"4"}
+  [1m[36mInfoPage Load (0.5ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages`[0m
+  [1m[35mNewspost Load (0.7ms)[0m  SELECT `newsposts`.* FROM `newsposts` WHERE `newsposts`.`id` = 4 LIMIT 1
+  [1m[36mUser Load (1.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mNewspost Load (0.8ms)[0m  SELECT `newsposts`.* FROM `newsposts` WHERE `newsposts`.`internal_letter` = 0 ORDER BY created_at desc LIMIT 3 OFFSET 0
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT COUNT(*) FROM `newsposts` WHERE `newsposts`.`internal_letter` = 0[0m
+Rendered newsposts/_form.html.slim (10.0ms)
+  [1m[35mMeetingroom Load (0.7ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages`[0m
+Rendered newsposts/edit.html.erb within layouts/application (48.8ms)
+Completed 200 OK in 169ms (Views: 70.9ms | ActiveRecord: 4.2ms | Sphinx: 0.0ms)
+
+
+Started GET "/info_pages/1?locale=dk" for 127.0.0.1 at 2011-09-12 09:12:53 +0200
+  Processing by InfoPagesController#show as HTML
+  Parameters: {"locale"=>"dk", "id"=>"1"}
+  [1m[35mInfoPage Load (0.6ms)[0m  SELECT `info_pages`.* FROM `info_pages`
+  [1m[36mNewspost Load (0.7ms)[0m  [1mSELECT `newsposts`.* FROM `newsposts` WHERE `newsposts`.`internal_letter` = 0 ORDER BY created_at desc LIMIT 3 OFFSET 0[0m
+  [1m[35mSQL (0.3ms)[0m  SELECT COUNT(*) FROM `newsposts` WHERE `newsposts`.`internal_letter` = 0
+  [1m[36mInfoPage Load (0.5ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages` WHERE `info_pages`.`id` = 1 LIMIT 1[0m
+  [1m[35mUser Load (0.9ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Rendered shared/_menu.html.slim (35.3ms)
+Rendered shared/_news.html.slim (11.4ms)
+  [1m[36mMeetingroom Load (0.8ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `info_pages`.* FROM `info_pages`
+Rendered info_pages/show.html.slim within layouts/application (120.0ms)
+Completed 200 OK in 204ms (Views: 135.7ms | ActiveRecord: 3.8ms | Sphinx: 0.0ms)
+
+
+Started GET "/info_pages/1/edit?locale=dk" for 127.0.0.1 at 2011-09-12 09:12:55 +0200
+  Processing by InfoPagesController#edit as HTML
+  Parameters: {"locale"=>"dk", "id"=>"1"}
+  [1m[36mInfoPage Load (0.6ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages`[0m
+  [1m[35mNewspost Load (8.4ms)[0m  SELECT `newsposts`.* FROM `newsposts` WHERE `newsposts`.`internal_letter` = 0 ORDER BY created_at desc LIMIT 3 OFFSET 0
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT COUNT(*) FROM `newsposts` WHERE `newsposts`.`internal_letter` = 0[0m
+  [1m[35mInfoPage Load (0.4ms)[0m  SELECT `info_pages`.* FROM `info_pages` WHERE `info_pages`.`id` = 1 LIMIT 1
+Rendered info_pages/_form.html.slim (8.3ms)
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mMeetingroom Load (0.7ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages`[0m
+Rendered info_pages/edit.html.erb within layouts/application (139.1ms)
+Completed 200 OK in 260ms (Views: 162.6ms | ActiveRecord: 11.4ms | Sphinx: 0.0ms)
+
+
+Started GET "/info_pages/1/edit?locale=dk" for 127.0.0.1 at 2011-09-12 09:13:35 +0200
+  Processing by InfoPagesController#edit as HTML
+  Parameters: {"locale"=>"dk", "id"=>"1"}
+  [1m[35mInfoPage Load (0.5ms)[0m  SELECT `info_pages`.* FROM `info_pages`
+  [1m[36mNewspost Load (0.8ms)[0m  [1mSELECT `newsposts`.* FROM `newsposts` WHERE `newsposts`.`internal_letter` = 0 ORDER BY created_at desc LIMIT 3 OFFSET 0[0m
+  [1m[35mSQL (0.3ms)[0m  SELECT COUNT(*) FROM `newsposts` WHERE `newsposts`.`internal_letter` = 0
+  [1m[36mInfoPage Load (0.4ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages` WHERE `info_pages`.`id` = 1 LIMIT 1[0m
+Rendered info_pages/_form.html.slim (8.6ms)
+  [1m[35mUser Load (1.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mMeetingroom Load (0.8ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `info_pages`.* FROM `info_pages`
+Rendered info_pages/edit.html.erb within layouts/application (115.1ms)
+Completed 200 OK in 194ms (Views: 119.7ms | ActiveRecord: 3.8ms | Sphinx: 0.0ms)
+
+
+Started GET "/meetingrooms/5/bookings/new?locale=dk" for 127.0.0.1 at 2011-09-12 09:13:55 +0200
+  Processing by BookingsController#new as HTML
+  Parameters: {"locale"=>"dk", "meetingroom_id"=>"5"}
+  [1m[36mInfoPage Load (0.8ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages`[0m
+  [1m[35mMeetingroom Load (0.8ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 5 LIMIT 1
+  [1m[36mUser Load (1.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mNewspost Load (0.9ms)[0m  SELECT `newsposts`.* FROM `newsposts` WHERE `newsposts`.`internal_letter` = 1 ORDER BY created_at desc LIMIT 3 OFFSET 0
+Rendered shared/_menu.html.slim (1.8ms)
+  [1m[36mMeetingroom Load (0.8ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` ORDER BY title DESC[0m
+  [1m[35mUser Load (1.5ms)[0m  SELECT `users`.* FROM `users` ORDER BY name DESC
+  [1m[36mMeetingroom Load (0.9ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms`[0m
+Rendered bookings/_form.html.slim (17.3ms)
+Rendered shared/_news.html.slim (11.9ms)
+  [1m[35mMeetingroom Load (0.8ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages`[0m
+Rendered bookings/new.html.slim within layouts/application (88.5ms)
+Completed 200 OK in 301ms (Views: 118.0ms | ActiveRecord: 7.5ms | Sphinx: 0.0ms)
+
+
+Started GET "/da/bookings?_=1315811636204&start=1315778400&end=1316383200" for 127.0.0.1 at 2011-09-12 09:13:56 +0200
+  Processing by BookingsController#index as JS
+  Parameters: {"_"=>"1315811636204", "start"=>"1315778400", "end"=>"1316383200", "locale"=>"da"}
+  [1m[35mInfoPage Load (0.6ms)[0m  SELECT `info_pages`.* FROM `info_pages`
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mNewspost Load (0.7ms)[0m  SELECT `newsposts`.* FROM `newsposts` WHERE `newsposts`.`internal_letter` = 1 ORDER BY created_at desc LIMIT 3 OFFSET 0
+  [1m[36mMeetingroom Load (0.6ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1[0m
+  [1m[35mBooking Load (0.7ms)[0m  SELECT `bookings`.* FROM `bookings` WHERE (created_at > '2011-09-11 00:00:00') AND (created_at < '2011-09-19 23:59:59')
+Completed 200 OK in 128ms (Views: 4.4ms | ActiveRecord: 3.6ms | Sphinx: 0.0ms)
+
+
+Started GET "/dk/meetingrooms" for 127.0.0.1 at 2011-09-12 09:14:01 +0200
+  Processing by MeetingroomsController#index as HTML
+  Parameters: {"locale"=>"dk"}
+  [1m[36mInfoPage Load (0.6ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages`[0m
+  [1m[35mUser Load (1.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mMeetingroom Load (0.7ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1[0m
+  [1m[35mNewspost Load (0.7ms)[0m  SELECT `newsposts`.* FROM `newsposts` WHERE `newsposts`.`internal_letter` = 1 ORDER BY created_at desc LIMIT 3 OFFSET 0
+Rendered shared/_menu.html.slim (2.0ms)
+  [1m[36mMeetingroom Load (1.1ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms`[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages`[0m
+Rendered meetingrooms/index.html.slim within layouts/application (35.8ms)
+Completed 200 OK in 183ms (Views: 69.3ms | ActiveRecord: 4.3ms | Sphinx: 0.0ms)
+
+
+Started GET "/meetingrooms/5/bookings/new?locale=dk" for 127.0.0.1 at 2011-09-12 09:14:04 +0200
+  Processing by BookingsController#new as HTML
+  Parameters: {"locale"=>"dk", "meetingroom_id"=>"5"}
+  [1m[35mInfoPage Load (0.5ms)[0m  SELECT `info_pages`.* FROM `info_pages`
+  [1m[36mMeetingroom Load (0.7ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 5 LIMIT 1[0m
+  [1m[35mUser Load (2.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mNewspost Load (0.6ms)[0m  [1mSELECT `newsposts`.* FROM `newsposts` WHERE `newsposts`.`internal_letter` = 1 ORDER BY created_at desc LIMIT 3 OFFSET 0[0m
+Rendered shared/_menu.html.slim (2.1ms)
+  [1m[35mMeetingroom Load (0.9ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` ORDER BY title DESC
+  [1m[36mUser Load (1.4ms)[0m  [1mSELECT `users`.* FROM `users` ORDER BY name DESC[0m
+  [1m[35mMeetingroom Load (0.9ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms`
+Rendered bookings/_form.html.slim (19.6ms)
+Rendered shared/_news.html.slim (18.3ms)
+  [1m[36mMeetingroom Load (0.8ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `info_pages`.* FROM `info_pages`
+Rendered bookings/new.html.slim within layouts/application (61.8ms)
+Completed 200 OK in 236ms (Views: 77.2ms | ActiveRecord: 8.0ms | Sphinx: 0.0ms)
+
+
+Started GET "/da/bookings?_=1315811644786&start=1315778400&end=1316383200" for 127.0.0.1 at 2011-09-12 09:14:04 +0200
+  Processing by BookingsController#index as JS
+  Parameters: {"_"=>"1315811644786", "start"=>"1315778400", "end"=>"1316383200", "locale"=>"da"}
+  [1m[36mInfoPage Load (0.7ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages`[0m
+  [1m[35mUser Load (10.8ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mNewspost Load (0.9ms)[0m  [1mSELECT `newsposts`.* FROM `newsposts` WHERE `newsposts`.`internal_letter` = 1 ORDER BY created_at desc LIMIT 3 OFFSET 0[0m
+  [1m[35mMeetingroom Load (0.8ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1
+  [1m[36mBooking Load (0.8ms)[0m  [1mSELECT `bookings`.* FROM `bookings` WHERE (created_at > '2011-09-11 00:00:00') AND (created_at < '2011-09-19 23:59:59')[0m
+Completed 200 OK in 179ms (Views: 4.1ms | ActiveRecord: 14.0ms | Sphinx: 0.0ms)
+
+
+Started GET "/meetingrooms/5/bookings/new?locale=dk" for 127.0.0.1 at 2011-09-12 09:15:21 +0200
+  Processing by BookingsController#new as HTML
+  Parameters: {"locale"=>"dk", "meetingroom_id"=>"5"}
+  [1m[35mInfoPage Load (0.7ms)[0m  SELECT `info_pages`.* FROM `info_pages`
+  [1m[36mMeetingroom Load (0.6ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 5 LIMIT 1[0m
+  [1m[35mUser Load (28.7ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mNewspost Load (0.8ms)[0m  [1mSELECT `newsposts`.* FROM `newsposts` WHERE `newsposts`.`internal_letter` = 1 ORDER BY created_at desc LIMIT 3 OFFSET 0[0m
+Rendered shared/_menu.html.slim (1.8ms)
+  [1m[35mMeetingroom Load (0.8ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` ORDER BY title DESC
+  [1m[36mUser Load (1.4ms)[0m  [1mSELECT `users`.* FROM `users` ORDER BY name DESC[0m
+  [1m[35mMeetingroom Load (0.9ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms`
+Rendered bookings/_form.html.slim (174.2ms)
+Rendered bookings/new.html.slim within layouts/application (179.5ms)
+Completed   in 391ms
+
+ActionView::Template::Error (undefined method `symbolize_keys!' for #<Meetingroom:0x007fa654bd1dc8>):
+    70:           div style="background-color: #{meetingroom.color || 'yellow'};"
+    71:             strong= meetingroom.title
+    72:             br/
+    73:             = link_to image_tag meetingroom.image(:mini), meetingroom
+    74:       div style="clear:both;"
+  app/views/bookings/_form.html.slim:73:in `block (2 levels) in _app_views_bookings__form_html_slim___1749666158609509669_70176182806980__3056729878815819651'
+  app/views/bookings/_form.html.slim:68:in `each'
+  app/views/bookings/_form.html.slim:68:in `block in _app_views_bookings__form_html_slim___1749666158609509669_70176182806980__3056729878815819651'
+  app/views/bookings/_form.html.slim:1:in `_app_views_bookings__form_html_slim___1749666158609509669_70176182806980__3056729878815819651'
+  app/views/bookings/new.html.slim:8:in `_app_views_bookings_new_html_slim___1252811060358148056_70176183048560_3481080353127047333'
+  app/controllers/bookings_controller.rb:26:in `new'
+  app/middleware/flash_session_cookie_middleware.rb:16:in `call'
+
+Rendered /Users/synthmax/.rvm/gems/ruby-1.9.2-p290@railspre/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /Users/synthmax/.rvm/gems/ruby-1.9.2-p290@railspre/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (46.8ms)
+Rendered /Users/synthmax/.rvm/gems/ruby-1.9.2-p290@railspre/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (58.8ms)
+
+
+Started GET "/meetingrooms/5/bookings/new?locale=dk" for 127.0.0.1 at 2011-09-12 09:15:56 +0200
+  Processing by BookingsController#new as HTML
+  Parameters: {"locale"=>"dk", "meetingroom_id"=>"5"}
+  [1m[36mInfoPage Load (0.5ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages`[0m
+  [1m[35mMeetingroom Load (0.7ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 5 LIMIT 1
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mNewspost Load (0.8ms)[0m  SELECT `newsposts`.* FROM `newsposts` WHERE `newsposts`.`internal_letter` = 1 ORDER BY created_at desc LIMIT 3 OFFSET 0
+Rendered shared/_menu.html.slim (1.9ms)
+  [1m[36mMeetingroom Load (1.0ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` ORDER BY title DESC[0m
+  [1m[35mUser Load (1.4ms)[0m  SELECT `users`.* FROM `users` ORDER BY name DESC
+  [1m[36mMeetingroom Load (0.9ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms`[0m
+Rendered bookings/_form.html.slim (52.3ms)
+Rendered shared/_news.html.slim (12.1ms)
+  [1m[35mMeetingroom Load (0.6ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages`[0m
+Rendered bookings/new.html.slim within layouts/application (84.7ms)
+Completed 200 OK in 227ms (Views: 87.3ms | ActiveRecord: 6.9ms | Sphinx: 0.0ms)
+
+
+Started GET "/da/bookings?_=1315811757269&start=1315778400&end=1316383200" for 127.0.0.1 at 2011-09-12 09:15:57 +0200
+  Processing by BookingsController#index as JS
+  Parameters: {"_"=>"1315811757269", "start"=>"1315778400", "end"=>"1316383200", "locale"=>"da"}
+  [1m[35mInfoPage Load (0.6ms)[0m  SELECT `info_pages`.* FROM `info_pages`
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mNewspost Load (0.7ms)[0m  SELECT `newsposts`.* FROM `newsposts` WHERE `newsposts`.`internal_letter` = 1 ORDER BY created_at desc LIMIT 3 OFFSET 0
+  [1m[36mMeetingroom Load (0.6ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1[0m
+  [1m[35mBooking Load (0.7ms)[0m  SELECT `bookings`.* FROM `bookings` WHERE (created_at > '2011-09-11 00:00:00') AND (created_at < '2011-09-19 23:59:59')
+Completed 200 OK in 133ms (Views: 4.2ms | ActiveRecord: 3.6ms | Sphinx: 0.0ms)
+
+
+Started GET "/dk/meetingrooms/5" for 127.0.0.1 at 2011-09-12 09:16:35 +0200
+  Processing by MeetingroomsController#show as HTML
+  Parameters: {"locale"=>"dk", "id"=>"5"}
+  [1m[36mInfoPage Load (0.7ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages`[0m
+  [1m[35mMeetingroom Load (0.6ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 5 LIMIT 1
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mMeetingroom Load (0.6ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1
+  [1m[36mNewspost Load (0.7ms)[0m  [1mSELECT `newsposts`.* FROM `newsposts` WHERE `newsposts`.`internal_letter` = 1 ORDER BY created_at desc LIMIT 3 OFFSET 0[0m
+Rendered shared/_menu.html.slim (1.8ms)
+Rendered shared/_news.html.slim (43.9ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages`[0m
+Rendered meetingrooms/show.html.slim within layouts/application (76.6ms)
+Completed 200 OK in 213ms (Views: 96.2ms | ActiveRecord: 3.7ms | Sphinx: 0.0ms)
+
+
+Started GET "/dk/meetingrooms/5/edit" for 127.0.0.1 at 2011-09-12 09:16:39 +0200
+  Processing by MeetingroomsController#edit as HTML
+  Parameters: {"locale"=>"dk", "id"=>"5"}
+  [1m[35mInfoPage Load (0.6ms)[0m  SELECT `info_pages`.* FROM `info_pages`
+  [1m[36mMeetingroom Load (0.7ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 5 LIMIT 1[0m
+  [1m[35mUser Load (1.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mMeetingroom Load (0.7ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1[0m
+  [1m[35mNewspost Load (0.7ms)[0m  SELECT `newsposts`.* FROM `newsposts` WHERE `newsposts`.`internal_letter` = 1 ORDER BY created_at desc LIMIT 3 OFFSET 0
+Rendered meetingrooms/_form.html.slim (46.6ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `info_pages`.* FROM `info_pages`
+Rendered meetingrooms/edit.html.erb within layouts/application (99.6ms)
+Completed 200 OK in 217ms (Views: 105.7ms | ActiveRecord: 3.7ms | Sphinx: 0.0ms)
+
+
+Started POST "/dk/meetingrooms/5" for 127.0.0.1 at 2011-09-12 09:16:47 +0200
+  Processing by MeetingroomsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XxtCmMyOSbsTMkBRkLJr/Tti1HfjY2YE1sJnMEJG9mY=", "meetingroom"=>{"image"=>#<ActionDispatch::Http::UploadedFile:0x007fa654c36750 @original_filename="Mads Mikkelsen Portraits 66th Venice Film mBo5wQDSY3Fl-1.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"meetingroom[image]\"; filename=\"Mads+Mikkelsen+Portraits+66th+Venice+Film+mBo5wQDSY3Fl-1.jpg\"\r\nContent-Type: image/jpeg\r\n", @tempfile=#<File:/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/RackMultipart20110912-1269-1ns32ri>>, "title"=>"Mødelokale 1, Stuen", "body"=>"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.", "color"=>"#ff00ff"}, "locale"=>"dk", "id"=>"5"}
+  [1m[36mInfoPage Load (0.7ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages`[0m
+  [1m[35mMeetingroom Load (0.8ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 5 LIMIT 1
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mMeetingroom Load (0.7ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1
+  [1m[36mNewspost Load (0.7ms)[0m  [1mSELECT `newsposts`.* FROM `newsposts` WHERE `newsposts`.`internal_letter` = 1 ORDER BY created_at desc LIMIT 3 OFFSET 0[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 5 LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mBEGIN[0m
+[paperclip] identify -format %wx%h '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/stream20110912-1269-ceif8z.jpg[0]' 2>/dev/null
+[paperclip] convert '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/stream20110912-1269-ceif8z.jpg[0]' -resize "70x57>" '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/stream20110912-1269-ceif8z20110912-1269-cne9kz' 2>/dev/null
+[paperclip] identify -format %wx%h '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/stream20110912-1269-ceif8z.jpg[0]' 2>/dev/null
+[paperclip] convert '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/stream20110912-1269-ceif8z.jpg[0]' -resize "140x" -crop "140x114+0+48" +repage '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/stream20110912-1269-ceif8z20110912-1269-sshn6y' 2>/dev/null
+[paperclip] identify -format %wx%h '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/stream20110912-1269-ceif8z.jpg[0]' 2>/dev/null
+[paperclip] convert '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/stream20110912-1269-ceif8z.jpg[0]' -resize "460x" -crop "460x376+0+157" +repage '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/stream20110912-1269-ceif8z20110912-1269-1k8s804' 2>/dev/null
+[paperclip] identify -format %wx%h '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/stream20110912-1269-ceif8z.jpg[0]' 2>/dev/null
+[paperclip] convert '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/stream20110912-1269-ceif8z.jpg[0]' -resize "754x616>" '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/stream20110912-1269-ceif8z20110912-1269-kt7x7k' 2>/dev/null
+  [1m[35mAREL (0.5ms)[0m  UPDATE `meetingrooms` SET `image_file_name` = 'Mads Mikkelsen Portraits 66th Venice Film mBo5wQDSY3Fl-1.jpg', `image_file_size` = 73403, `image_updated_at` = '2011-09-12 07:16:47', `updated_at` = '2011-09-12 07:16:49' WHERE `meetingrooms`.`id` = 5
+[paperclip] Saving attachments.
+[paperclip] deleting /Users/synthmax/Dropbox/marselistvaervej4/public/system/images/5/original/meeting_rooms_img.jpg
+[paperclip] deleting /Users/synthmax/Dropbox/marselistvaervej4/public/system/images/5/mini/meeting_rooms_img.jpg
+[paperclip] deleting /Users/synthmax/Dropbox/marselistvaervej4/public/system/images/5/thumbnail/meeting_rooms_img.jpg
+[paperclip] deleting /Users/synthmax/Dropbox/marselistvaervej4/public/system/images/5/preview/meeting_rooms_img.jpg
+[paperclip] deleting /Users/synthmax/Dropbox/marselistvaervej4/public/system/images/5/xxl/meeting_rooms_img.jpg
+[paperclip] saving /Users/synthmax/Dropbox/marselistvaervej4/public/system/images/5/original/Mads Mikkelsen Portraits 66th Venice Film mBo5wQDSY3Fl-1.jpg
+[paperclip] saving /Users/synthmax/Dropbox/marselistvaervej4/public/system/images/5/mini/Mads Mikkelsen Portraits 66th Venice Film mBo5wQDSY3Fl-1.jpg
+[paperclip] saving /Users/synthmax/Dropbox/marselistvaervej4/public/system/images/5/thumbnail/Mads Mikkelsen Portraits 66th Venice Film mBo5wQDSY3Fl-1.jpg
+[paperclip] saving /Users/synthmax/Dropbox/marselistvaervej4/public/system/images/5/preview/Mads Mikkelsen Portraits 66th Venice Film mBo5wQDSY3Fl-1.jpg
+[paperclip] saving /Users/synthmax/Dropbox/marselistvaervej4/public/system/images/5/xxl/Mads Mikkelsen Portraits 66th Venice Film mBo5wQDSY3Fl-1.jpg
+  [1m[36mSQL (0.4ms)[0m  [1mCOMMIT[0m
+[paperclip] identify -format %wx%h '/Users/synthmax/Dropbox/marselistvaervej4/public/system/images/5/xxl/Mads Mikkelsen Portraits 66th Venice Film mBo5wQDSY3Fl-1.jpg[0]' 2>/dev/null
+[paperclip] identify -format %wx%h '/Users/synthmax/Dropbox/marselistvaervej4/public/system/images/5/original/Mads Mikkelsen Portraits 66th Venice Film mBo5wQDSY3Fl-1.jpg[0]' 2>/dev/null
+  [1m[35mMeetingroom Load (0.7ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1
+  [1m[36mInfoPage Load (0.4ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages`[0m
+Rendered meetingrooms/crop.html.slim within layouts/application (63.8ms)
+Completed 200 OK in 1737ms (Views: 72.5ms | ActiveRecord: 6.3ms | Sphinx: 0.0ms)
+
+
+Started GET "/stylesheets/Jcrop.gif" for 127.0.0.1 at 2011-09-12 09:16:49 +0200
+
+ActionController::RoutingError (No route matches "/stylesheets/Jcrop.gif"):
+  
+
+Rendered /Users/synthmax/.rvm/gems/ruby-1.9.2-p290@railspre/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.1ms)
+
+
+Started POST "/dk/meetingrooms/5" for 127.0.0.1 at 2011-09-12 09:16:52 +0200
+  Processing by MeetingroomsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XxtCmMyOSbsTMkBRkLJr/Tti1HfjY2YE1sJnMEJG9mY=", "meetingroom"=>{"crop_x"=>"0", "crop_y"=>"68", "crop_w"=>"396", "crop_h"=>"324"}, "commit"=>"Crop", "locale"=>"dk", "id"=>"5"}
+  [1m[35mInfoPage Load (0.8ms)[0m  SELECT `info_pages`.* FROM `info_pages`
+  [1m[36mMeetingroom Load (4.1ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 5 LIMIT 1[0m
+  [1m[35mUser Load (1.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mMeetingroom Load (0.7ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1[0m
+  [1m[35mNewspost Load (0.8ms)[0m  SELECT `newsposts`.* FROM `newsposts` WHERE `newsposts`.`internal_letter` = 1 ORDER BY created_at desc LIMIT 3 OFFSET 0
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 5 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+[paperclip] identify -format %wx%h '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/paperclip-reprocess20110912-1269-1ts5xsk[0]' 2>/dev/null
+[paperclip] convert '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/paperclip-reprocess20110912-1269-1ts5xsk[0]' -crop 396x324+0+68 -resize "70x57>" '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/paperclip-reprocess20110912-1269-1ts5xsk20110912-1269-a3x2wn' 2>/dev/null
+[paperclip] identify -format %wx%h '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/paperclip-reprocess20110912-1269-1ts5xsk[0]' 2>/dev/null
+[paperclip] convert '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/paperclip-reprocess20110912-1269-1ts5xsk[0]' -crop 396x324+0+68 -resize "140x" +repage '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/paperclip-reprocess20110912-1269-1ts5xsk20110912-1269-uzlhlt' 2>/dev/null
+[paperclip] identify -format %wx%h '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/paperclip-reprocess20110912-1269-1ts5xsk[0]' 2>/dev/null
+[paperclip] convert '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/paperclip-reprocess20110912-1269-1ts5xsk[0]' -crop 396x324+0+68 -resize "460x" +repage '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/paperclip-reprocess20110912-1269-1ts5xsk20110912-1269-owloa3' 2>/dev/null
+[paperclip] identify -format %wx%h '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/paperclip-reprocess20110912-1269-1ts5xsk[0]' 2>/dev/null
+[paperclip] convert '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/paperclip-reprocess20110912-1269-1ts5xsk[0]' -crop 396x324+0+68 -resize "754x616>" '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/paperclip-reprocess20110912-1269-1ts5xsk20110912-1269-149qwu2' 2>/dev/null
+[paperclip] saving /Users/synthmax/Dropbox/marselistvaervej4/public/system/images/5/original/Mads Mikkelsen Portraits 66th Venice Film mBo5wQDSY3Fl-1.jpg
+[paperclip] saving /Users/synthmax/Dropbox/marselistvaervej4/public/system/images/5/mini/Mads Mikkelsen Portraits 66th Venice Film mBo5wQDSY3Fl-1.jpg
+[paperclip] saving /Users/synthmax/Dropbox/marselistvaervej4/public/system/images/5/thumbnail/Mads Mikkelsen Portraits 66th Venice Film mBo5wQDSY3Fl-1.jpg
+[paperclip] saving /Users/synthmax/Dropbox/marselistvaervej4/public/system/images/5/preview/Mads Mikkelsen Portraits 66th Venice Film mBo5wQDSY3Fl-1.jpg
+[paperclip] saving /Users/synthmax/Dropbox/marselistvaervej4/public/system/images/5/xxl/Mads Mikkelsen Portraits 66th Venice Film mBo5wQDSY3Fl-1.jpg
+[paperclip] Saving attachments.
+  [1m[36mSQL (0.2ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/dk/meetingrooms/5
+Completed 302 Found in 412ms
+
+
+Started GET "/dk/meetingrooms/5" for 127.0.0.1 at 2011-09-12 09:16:53 +0200
+  Processing by MeetingroomsController#show as HTML
+  Parameters: {"locale"=>"dk", "id"=>"5"}
+  [1m[35mInfoPage Load (0.5ms)[0m  SELECT `info_pages`.* FROM `info_pages`
+  [1m[36mMeetingroom Load (1.1ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 5 LIMIT 1[0m
+  [1m[35mUser Load (22.6ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mMeetingroom Load (0.6ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1[0m
+  [1m[35mNewspost Load (0.8ms)[0m  SELECT `newsposts`.* FROM `newsposts` WHERE `newsposts`.`internal_letter` = 1 ORDER BY created_at desc LIMIT 3 OFFSET 0
+Rendered shared/_menu.html.slim (2.1ms)
+Rendered shared/_news.html.slim (13.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `info_pages`.* FROM `info_pages`
+Rendered meetingrooms/show.html.slim within layouts/application (51.7ms)
+Completed 200 OK in 239ms (Views: 58.2ms | ActiveRecord: 25.6ms | Sphinx: 0.0ms)
+
+
+Started GET "/dk/meetingrooms" for 127.0.0.1 at 2011-09-12 09:16:56 +0200
+  Processing by MeetingroomsController#index as HTML
+  Parameters: {"locale"=>"dk"}
+  [1m[36mInfoPage Load (0.6ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages`[0m
+  [1m[35mUser Load (1.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mMeetingroom Load (0.7ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1[0m
+  [1m[35mNewspost Load (0.7ms)[0m  SELECT `newsposts`.* FROM `newsposts` WHERE `newsposts`.`internal_letter` = 1 ORDER BY created_at desc LIMIT 3 OFFSET 0
+Rendered shared/_menu.html.slim (1.9ms)
+  [1m[36mMeetingroom Load (0.8ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms`[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages`[0m
+Rendered meetingrooms/index.html.slim within layouts/application (36.6ms)
+Completed 200 OK in 176ms (Views: 60.9ms | ActiveRecord: 3.8ms | Sphinx: 0.0ms)
+
+
+Started GET "/dk/meetingrooms/6/edit" for 127.0.0.1 at 2011-09-12 09:17:02 +0200
+  Processing by MeetingroomsController#edit as HTML
+  Parameters: {"locale"=>"dk", "id"=>"6"}
+  [1m[35mInfoPage Load (0.6ms)[0m  SELECT `info_pages`.* FROM `info_pages`
+  [1m[36mMeetingroom Load (0.6ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 6 LIMIT 1[0m
+  [1m[35mUser Load (1.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mMeetingroom Load (0.7ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1[0m
+  [1m[35mNewspost Load (0.7ms)[0m  SELECT `newsposts`.* FROM `newsposts` WHERE `newsposts`.`internal_letter` = 1 ORDER BY created_at desc LIMIT 3 OFFSET 0
+Rendered meetingrooms/_form.html.slim (14.5ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `info_pages`.* FROM `info_pages`
+Rendered meetingrooms/edit.html.erb within layouts/application (28.9ms)
+Completed 200 OK in 145ms (Views: 34.8ms | ActiveRecord: 3.7ms | Sphinx: 0.0ms)
+
+
+Started POST "/dk/meetingrooms/6" for 127.0.0.1 at 2011-09-12 09:17:13 +0200
+  Processing by MeetingroomsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XxtCmMyOSbsTMkBRkLJr/Tti1HfjY2YE1sJnMEJG9mY=", "meetingroom"=>{"image"=>#<ActionDispatch::Http::UploadedFile:0x007fa654fc26a8 @original_filename="portraits_of_celebrities_640_12.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"meetingroom[image]\"; filename=\"portraits_of_celebrities_640_12.jpg\"\r\nContent-Type: image/jpeg\r\n", @tempfile=#<File:/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/RackMultipart20110912-1269-ykjg19>>, "title"=>"Luxux", "body"=>"nu med fri bar", "color"=>""}, "locale"=>"dk", "id"=>"6"}
+  [1m[36mInfoPage Load (0.6ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages`[0m
+  [1m[35mMeetingroom Load (1.3ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 6 LIMIT 1
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mMeetingroom Load (0.8ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1
+  [1m[36mNewspost Load (1.7ms)[0m  [1mSELECT `newsposts`.* FROM `newsposts` WHERE `newsposts`.`internal_letter` = 1 ORDER BY created_at desc LIMIT 3 OFFSET 0[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 6 LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+[paperclip] identify -format %wx%h '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/stream20110912-1269-iq8d44.jpg[0]' 2>/dev/null
+[paperclip] convert '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/stream20110912-1269-iq8d44.jpg[0]' -resize "70x57>" '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/stream20110912-1269-iq8d4420110912-1269-1nsvvjx' 2>/dev/null
+[paperclip] identify -format %wx%h '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/stream20110912-1269-iq8d44.jpg[0]' 2>/dev/null
+[paperclip] convert '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/stream20110912-1269-iq8d44.jpg[0]' -resize "x114" -crop "140x114+8+0" +repage '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/stream20110912-1269-iq8d4420110912-1269-15kl6mj' 2>/dev/null
+[paperclip] identify -format %wx%h '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/stream20110912-1269-iq8d44.jpg[0]' 2>/dev/null
+[paperclip] convert '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/stream20110912-1269-iq8d44.jpg[0]' -resize "x376" -crop "460x376+29+0" +repage '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/stream20110912-1269-iq8d4420110912-1269-11ejpl5' 2>/dev/null
+[paperclip] identify -format %wx%h '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/stream20110912-1269-iq8d44.jpg[0]' 2>/dev/null
+[paperclip] convert '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/stream20110912-1269-iq8d44.jpg[0]' -resize "754x616>" '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/stream20110912-1269-iq8d4420110912-1269-cq7zqw' 2>/dev/null
+  [1m[35mAREL (0.5ms)[0m  UPDATE `meetingrooms` SET `image_file_name` = 'portraits_of_celebrities_640_12.jpg', `image_content_type` = 'image/jpeg', `image_file_size` = 44009, `image_updated_at` = '2011-09-12 07:17:13', `color` = '', `updated_at` = '2011-09-12 07:17:14' WHERE `meetingrooms`.`id` = 6
+[paperclip] Saving attachments.
+[paperclip] deleting /Users/synthmax/Dropbox/marselistvaervej4/public/system/images/6/original/Screen shot 2011-06-14 at 08.30.32.png
+[paperclip] deleting /Users/synthmax/Dropbox/marselistvaervej4/public/system/images/6/mini/Screen shot 2011-06-14 at 08.30.32.png
+[paperclip] deleting /Users/synthmax/Dropbox/marselistvaervej4/public/system/images/6/thumbnail/Screen shot 2011-06-14 at 08.30.32.png
+[paperclip] deleting /Users/synthmax/Dropbox/marselistvaervej4/public/system/images/6/preview/Screen shot 2011-06-14 at 08.30.32.png
+[paperclip] deleting /Users/synthmax/Dropbox/marselistvaervej4/public/system/images/6/xxl/Screen shot 2011-06-14 at 08.30.32.png
+[paperclip] saving /Users/synthmax/Dropbox/marselistvaervej4/public/system/images/6/original/portraits_of_celebrities_640_12.jpg
+[paperclip] saving /Users/synthmax/Dropbox/marselistvaervej4/public/system/images/6/mini/portraits_of_celebrities_640_12.jpg
+[paperclip] saving /Users/synthmax/Dropbox/marselistvaervej4/public/system/images/6/thumbnail/portraits_of_celebrities_640_12.jpg
+[paperclip] saving /Users/synthmax/Dropbox/marselistvaervej4/public/system/images/6/preview/portraits_of_celebrities_640_12.jpg
+[paperclip] saving /Users/synthmax/Dropbox/marselistvaervej4/public/system/images/6/xxl/portraits_of_celebrities_640_12.jpg
+  [1m[36mSQL (0.5ms)[0m  [1mCOMMIT[0m
+[paperclip] identify -format %wx%h '/Users/synthmax/Dropbox/marselistvaervej4/public/system/images/6/xxl/portraits_of_celebrities_640_12.jpg[0]' 2>/dev/null
+[paperclip] identify -format %wx%h '/Users/synthmax/Dropbox/marselistvaervej4/public/system/images/6/original/portraits_of_celebrities_640_12.jpg[0]' 2>/dev/null
+  [1m[35mMeetingroom Load (0.9ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1
+  [1m[36mInfoPage Load (0.5ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages`[0m
+Rendered meetingrooms/crop.html.slim within layouts/application (113.7ms)
+Completed 200 OK in 622ms (Views: 119.5ms | ActiveRecord: 15.4ms | Sphinx: 0.0ms)
+
+
+Started GET "/stylesheets/Jcrop.gif" for 127.0.0.1 at 2011-09-12 09:17:14 +0200
+
+ActionController::RoutingError (No route matches "/stylesheets/Jcrop.gif"):
+  
+
+Rendered /Users/synthmax/.rvm/gems/ruby-1.9.2-p290@railspre/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started POST "/dk/meetingrooms/6" for 127.0.0.1 at 2011-09-12 09:17:20 +0200
+  Processing by MeetingroomsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XxtCmMyOSbsTMkBRkLJr/Tti1HfjY2YE1sJnMEJG9mY=", "meetingroom"=>{"crop_x"=>"67", "crop_y"=>"0", "crop_w"=>"464", "crop_h"=>"379"}, "commit"=>"Crop", "locale"=>"dk", "id"=>"6"}
+  [1m[35mInfoPage Load (0.6ms)[0m  SELECT `info_pages`.* FROM `info_pages`
+  [1m[36mMeetingroom Load (0.6ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 6 LIMIT 1[0m
+  [1m[35mUser Load (1.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mMeetingroom Load (0.7ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1[0m
+  [1m[35mNewspost Load (0.7ms)[0m  SELECT `newsposts`.* FROM `newsposts` WHERE `newsposts`.`internal_letter` = 1 ORDER BY created_at desc LIMIT 3 OFFSET 0
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 6 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+[paperclip] identify -format %wx%h '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/paperclip-reprocess20110912-1269-rfewqf[0]' 2>/dev/null
+[paperclip] convert '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/paperclip-reprocess20110912-1269-rfewqf[0]' -crop 464x379+67+0 -resize "70x57>" '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/paperclip-reprocess20110912-1269-rfewqf20110912-1269-3bcckt' 2>/dev/null
+[paperclip] identify -format %wx%h '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/paperclip-reprocess20110912-1269-rfewqf[0]' 2>/dev/null
+[paperclip] convert '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/paperclip-reprocess20110912-1269-rfewqf[0]' -crop 464x379+67+0 -resize "x114" +repage '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/paperclip-reprocess20110912-1269-rfewqf20110912-1269-oipton' 2>/dev/null
+[paperclip] identify -format %wx%h '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/paperclip-reprocess20110912-1269-rfewqf[0]' 2>/dev/null
+[paperclip] convert '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/paperclip-reprocess20110912-1269-rfewqf[0]' -crop 464x379+67+0 -resize "x376" +repage '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/paperclip-reprocess20110912-1269-rfewqf20110912-1269-r3x5po' 2>/dev/null
+[paperclip] identify -format %wx%h '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/paperclip-reprocess20110912-1269-rfewqf[0]' 2>/dev/null
+[paperclip] convert '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/paperclip-reprocess20110912-1269-rfewqf[0]' -crop 464x379+67+0 -resize "754x616>" '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/paperclip-reprocess20110912-1269-rfewqf20110912-1269-3vm7zf' 2>/dev/null
+[paperclip] saving /Users/synthmax/Dropbox/marselistvaervej4/public/system/images/6/original/portraits_of_celebrities_640_12.jpg
+[paperclip] saving /Users/synthmax/Dropbox/marselistvaervej4/public/system/images/6/mini/portraits_of_celebrities_640_12.jpg
+[paperclip] saving /Users/synthmax/Dropbox/marselistvaervej4/public/system/images/6/thumbnail/portraits_of_celebrities_640_12.jpg
+[paperclip] saving /Users/synthmax/Dropbox/marselistvaervej4/public/system/images/6/preview/portraits_of_celebrities_640_12.jpg
+[paperclip] saving /Users/synthmax/Dropbox/marselistvaervej4/public/system/images/6/xxl/portraits_of_celebrities_640_12.jpg
+[paperclip] Saving attachments.
+  [1m[36mSQL (0.3ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/dk/meetingrooms/6
+Completed 302 Found in 386ms
+
+
+Started GET "/dk/meetingrooms/6" for 127.0.0.1 at 2011-09-12 09:17:20 +0200
+  Processing by MeetingroomsController#show as HTML
+  Parameters: {"locale"=>"dk", "id"=>"6"}
+  [1m[35mInfoPage Load (0.6ms)[0m  SELECT `info_pages`.* FROM `info_pages`
+  [1m[36mMeetingroom Load (0.7ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 6 LIMIT 1[0m
+  [1m[35mUser Load (5.9ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mMeetingroom Load (0.7ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1[0m
+  [1m[35mNewspost Load (0.7ms)[0m  SELECT `newsposts`.* FROM `newsposts` WHERE `newsposts`.`internal_letter` = 1 ORDER BY created_at desc LIMIT 3 OFFSET 0
+Rendered shared/_menu.html.slim (1.9ms)
+Rendered shared/_news.html.slim (46.1ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `info_pages`.* FROM `info_pages`
+Rendered meetingrooms/show.html.slim within layouts/application (80.9ms)
+Completed 200 OK in 230ms (Views: 87.1ms | ActiveRecord: 8.5ms | Sphinx: 0.0ms)
+
+
+Started GET "/dk/meetingrooms" for 127.0.0.1 at 2011-09-12 09:17:23 +0200
+  Processing by MeetingroomsController#index as HTML
+  Parameters: {"locale"=>"dk"}
+  [1m[36mInfoPage Load (0.7ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages`[0m
+  [1m[35mUser Load (1.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mMeetingroom Load (0.7ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1[0m
+  [1m[35mNewspost Load (280.2ms)[0m  SELECT `newsposts`.* FROM `newsposts` WHERE `newsposts`.`internal_letter` = 1 ORDER BY created_at desc LIMIT 3 OFFSET 0
+Rendered shared/_menu.html.slim (1.9ms)
+  [1m[36mMeetingroom Load (0.8ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms`[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages`[0m
+Rendered meetingrooms/index.html.slim within layouts/application (143.0ms)
+Completed 200 OK in 559ms (Views: 148.2ms | ActiveRecord: 283.6ms | Sphinx: 0.0ms)
+
+
+Started GET "/dk/meetingrooms/7/edit" for 127.0.0.1 at 2011-09-12 09:17:28 +0200
+  Processing by MeetingroomsController#edit as HTML
+  Parameters: {"locale"=>"dk", "id"=>"7"}
+  [1m[35mInfoPage Load (0.5ms)[0m  SELECT `info_pages`.* FROM `info_pages`
+  [1m[36mMeetingroom Load (35.3ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 7 LIMIT 1[0m
+  [1m[35mUser Load (1.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mMeetingroom Load (0.7ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1[0m
+  [1m[35mNewspost Load (0.7ms)[0m  SELECT `newsposts`.* FROM `newsposts` WHERE `newsposts`.`internal_letter` = 1 ORDER BY created_at desc LIMIT 3 OFFSET 0
+Rendered meetingrooms/_form.html.slim (14.6ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `info_pages`.* FROM `info_pages`
+Rendered meetingrooms/edit.html.erb within layouts/application (63.9ms)
+Completed 200 OK in 187ms (Views: 69.8ms | ActiveRecord: 38.4ms | Sphinx: 0.0ms)
+
+
+Started POST "/dk/meetingrooms/7" for 127.0.0.1 at 2011-09-12 09:17:34 +0200
+  Processing by MeetingroomsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XxtCmMyOSbsTMkBRkLJr/Tti1HfjY2YE1sJnMEJG9mY=", "meetingroom"=>{"image"=>#<ActionDispatch::Http::UploadedFile:0x007fa654e4e8f8 @original_filename="portraits_of_celebrities_640_40.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"meetingroom[image]\"; filename=\"portraits_of_celebrities_640_40.jpg\"\r\nContent-Type: image/jpeg\r\n", @tempfile=#<File:/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/RackMultipart20110912-1269-1smgh4i>>, "title"=>"Det fede", "body"=>"er der mere at sige=?", "color"=>"#00ff00"}, "locale"=>"dk", "id"=>"7"}
+  [1m[36mInfoPage Load (0.8ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages`[0m
+  [1m[35mMeetingroom Load (0.6ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 7 LIMIT 1
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mMeetingroom Load (0.7ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1
+  [1m[36mNewspost Load (0.7ms)[0m  [1mSELECT `newsposts`.* FROM `newsposts` WHERE `newsposts`.`internal_letter` = 1 ORDER BY created_at desc LIMIT 3 OFFSET 0[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 7 LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+[paperclip] identify -format %wx%h '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/stream20110912-1269-1plnxlc.jpg[0]' 2>/dev/null
+[paperclip] convert '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/stream20110912-1269-1plnxlc.jpg[0]' -resize "70x57>" '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/stream20110912-1269-1plnxlc20110912-1269-12pgrs4' 2>/dev/null
+[paperclip] identify -format %wx%h '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/stream20110912-1269-1plnxlc.jpg[0]' 2>/dev/null
+[paperclip] convert '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/stream20110912-1269-1plnxlc.jpg[0]' -resize "140x" -crop "140x114+0+40" +repage '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/stream20110912-1269-1plnxlc20110912-1269-trbs40' 2>/dev/null
+[paperclip] identify -format %wx%h '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/stream20110912-1269-1plnxlc.jpg[0]' 2>/dev/null
+[paperclip] convert '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/stream20110912-1269-1plnxlc.jpg[0]' -resize "460x" -crop "460x376+0+133" +repage '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/stream20110912-1269-1plnxlc20110912-1269-rup6q4' 2>/dev/null
+[paperclip] identify -format %wx%h '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/stream20110912-1269-1plnxlc.jpg[0]' 2>/dev/null
+[paperclip] convert '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/stream20110912-1269-1plnxlc.jpg[0]' -resize "754x616>" '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/stream20110912-1269-1plnxlc20110912-1269-pomlji' 2>/dev/null
+  [1m[35mAREL (0.4ms)[0m  UPDATE `meetingrooms` SET `image_file_name` = 'portraits_of_celebrities_640_40.jpg', `image_file_size` = 21859, `image_updated_at` = '2011-09-12 07:17:34', `updated_at` = '2011-09-12 07:17:34' WHERE `meetingrooms`.`id` = 7
+[paperclip] Saving attachments.
+[paperclip] deleting /Users/synthmax/Dropbox/marselistvaervej4/public/system/images/7/original/portraits_of_celebrities_640_12.jpg
+[paperclip] deleting /Users/synthmax/Dropbox/marselistvaervej4/public/system/images/7/mini/portraits_of_celebrities_640_12.jpg
+[paperclip] deleting /Users/synthmax/Dropbox/marselistvaervej4/public/system/images/7/thumbnail/portraits_of_celebrities_640_12.jpg
+[paperclip] deleting /Users/synthmax/Dropbox/marselistvaervej4/public/system/images/7/preview/portraits_of_celebrities_640_12.jpg
+[paperclip] deleting /Users/synthmax/Dropbox/marselistvaervej4/public/system/images/7/xxl/portraits_of_celebrities_640_12.jpg
+[paperclip] saving /Users/synthmax/Dropbox/marselistvaervej4/public/system/images/7/original/portraits_of_celebrities_640_40.jpg
+[paperclip] saving /Users/synthmax/Dropbox/marselistvaervej4/public/system/images/7/mini/portraits_of_celebrities_640_40.jpg
+[paperclip] saving /Users/synthmax/Dropbox/marselistvaervej4/public/system/images/7/thumbnail/portraits_of_celebrities_640_40.jpg
+[paperclip] saving /Users/synthmax/Dropbox/marselistvaervej4/public/system/images/7/preview/portraits_of_celebrities_640_40.jpg
+[paperclip] saving /Users/synthmax/Dropbox/marselistvaervej4/public/system/images/7/xxl/portraits_of_celebrities_640_40.jpg
+  [1m[36mSQL (0.5ms)[0m  [1mCOMMIT[0m
+[paperclip] identify -format %wx%h '/Users/synthmax/Dropbox/marselistvaervej4/public/system/images/7/xxl/portraits_of_celebrities_640_40.jpg[0]' 2>/dev/null
+[paperclip] identify -format %wx%h '/Users/synthmax/Dropbox/marselistvaervej4/public/system/images/7/original/portraits_of_celebrities_640_40.jpg[0]' 2>/dev/null
+  [1m[35mMeetingroom Load (1.2ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1
+  [1m[36mInfoPage Load (0.8ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages`[0m
+Rendered meetingrooms/crop.html.slim within layouts/application (84.3ms)
+Completed 200 OK in 523ms (Views: 92.4ms | ActiveRecord: 6.9ms | Sphinx: 0.0ms)
+
+
+Started GET "/stylesheets/Jcrop.gif" for 127.0.0.1 at 2011-09-12 09:17:34 +0200
+
+ActionController::RoutingError (No route matches "/stylesheets/Jcrop.gif"):
+  
+
+Rendered /Users/synthmax/.rvm/gems/ruby-1.9.2-p290@railspre/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started POST "/dk/meetingrooms/7" for 127.0.0.1 at 2011-09-12 09:17:37 +0200
+  Processing by MeetingroomsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XxtCmMyOSbsTMkBRkLJr/Tti1HfjY2YE1sJnMEJG9mY=", "meetingroom"=>{"crop_x"=>"0", "crop_y"=>"0", "crop_w"=>"429", "crop_h"=>"351"}, "commit"=>"Crop", "locale"=>"dk", "id"=>"7"}
+  [1m[35mInfoPage Load (0.6ms)[0m  SELECT `info_pages`.* FROM `info_pages`
+  [1m[36mMeetingroom Load (0.6ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 7 LIMIT 1[0m
+  [1m[35mUser Load (1.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mMeetingroom Load (0.7ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1[0m
+  [1m[35mNewspost Load (0.7ms)[0m  SELECT `newsposts`.* FROM `newsposts` WHERE `newsposts`.`internal_letter` = 1 ORDER BY created_at desc LIMIT 3 OFFSET 0
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 7 LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+[paperclip] identify -format %wx%h '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/paperclip-reprocess20110912-1269-rhibn3[0]' 2>/dev/null
+[paperclip] convert '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/paperclip-reprocess20110912-1269-rhibn3[0]' -crop 429x351+0+0 -resize "70x57>" '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/paperclip-reprocess20110912-1269-rhibn320110912-1269-1x11gd1' 2>/dev/null
+[paperclip] identify -format %wx%h '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/paperclip-reprocess20110912-1269-rhibn3[0]' 2>/dev/null
+[paperclip] convert '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/paperclip-reprocess20110912-1269-rhibn3[0]' -crop 429x351+0+0 -resize "140x" +repage '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/paperclip-reprocess20110912-1269-rhibn320110912-1269-7sm5bz' 2>/dev/null
+[paperclip] identify -format %wx%h '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/paperclip-reprocess20110912-1269-rhibn3[0]' 2>/dev/null
+[paperclip] convert '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/paperclip-reprocess20110912-1269-rhibn3[0]' -crop 429x351+0+0 -resize "460x" +repage '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/paperclip-reprocess20110912-1269-rhibn320110912-1269-13dx20t' 2>/dev/null
+[paperclip] identify -format %wx%h '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/paperclip-reprocess20110912-1269-rhibn3[0]' 2>/dev/null
+[paperclip] convert '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/paperclip-reprocess20110912-1269-rhibn3[0]' -crop 429x351+0+0 -resize "754x616>" '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/paperclip-reprocess20110912-1269-rhibn320110912-1269-19x0w7x' 2>/dev/null
+[paperclip] saving /Users/synthmax/Dropbox/marselistvaervej4/public/system/images/7/original/portraits_of_celebrities_640_40.jpg
+[paperclip] saving /Users/synthmax/Dropbox/marselistvaervej4/public/system/images/7/mini/portraits_of_celebrities_640_40.jpg
+[paperclip] saving /Users/synthmax/Dropbox/marselistvaervej4/public/system/images/7/thumbnail/portraits_of_celebrities_640_40.jpg
+[paperclip] saving /Users/synthmax/Dropbox/marselistvaervej4/public/system/images/7/preview/portraits_of_celebrities_640_40.jpg
+[paperclip] saving /Users/synthmax/Dropbox/marselistvaervej4/public/system/images/7/xxl/portraits_of_celebrities_640_40.jpg
+[paperclip] Saving attachments.
+  [1m[36mSQL (0.3ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/dk/meetingrooms/7
+Completed 302 Found in 345ms
+
+
+Started GET "/dk/meetingrooms/7" for 127.0.0.1 at 2011-09-12 09:17:37 +0200
+  Processing by MeetingroomsController#show as HTML
+  Parameters: {"locale"=>"dk", "id"=>"7"}
+  [1m[35mInfoPage Load (0.6ms)[0m  SELECT `info_pages`.* FROM `info_pages`
+  [1m[36mMeetingroom Load (0.7ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 7 LIMIT 1[0m
+  [1m[35mUser Load (1.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mMeetingroom Load (0.8ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1[0m
+  [1m[35mNewspost Load (0.7ms)[0m  SELECT `newsposts`.* FROM `newsposts` WHERE `newsposts`.`internal_letter` = 1 ORDER BY created_at desc LIMIT 3 OFFSET 0
+Rendered shared/_menu.html.slim (2.3ms)
+Rendered shared/_news.html.slim (13.6ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `info_pages`.* FROM `info_pages`
+Rendered meetingrooms/show.html.slim within layouts/application (90.5ms)
+Completed 200 OK in 250ms (Views: 97.6ms | ActiveRecord: 3.9ms | Sphinx: 0.0ms)
+
+
+Started GET "/dk/meetingrooms" for 127.0.0.1 at 2011-09-12 09:17:40 +0200
+  Processing by MeetingroomsController#index as HTML
+  Parameters: {"locale"=>"dk"}
+  [1m[36mInfoPage Load (0.6ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages`[0m
+  [1m[35mUser Load (1.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mMeetingroom Load (1.0ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1[0m
+  [1m[35mNewspost Load (1.2ms)[0m  SELECT `newsposts`.* FROM `newsposts` WHERE `newsposts`.`internal_letter` = 1 ORDER BY created_at desc LIMIT 3 OFFSET 0
+Rendered shared/_menu.html.slim (3.4ms)
+  [1m[36mMeetingroom Load (0.9ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms`[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages`[0m
+Rendered meetingrooms/index.html.slim within layouts/application (42.8ms)
+Completed 200 OK in 174ms (Views: 49.8ms | ActiveRecord: 4.6ms | Sphinx: 0.0ms)
+
+
+Started GET "/meetingrooms/5/bookings/new?locale=dk" for 127.0.0.1 at 2011-09-12 09:17:47 +0200
+  Processing by BookingsController#new as HTML
+  Parameters: {"locale"=>"dk", "meetingroom_id"=>"5"}
+  [1m[35mInfoPage Load (0.5ms)[0m  SELECT `info_pages`.* FROM `info_pages`
+  [1m[36mMeetingroom Load (0.5ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 5 LIMIT 1[0m
+  [1m[35mUser Load (1.5ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mNewspost Load (0.7ms)[0m  [1mSELECT `newsposts`.* FROM `newsposts` WHERE `newsposts`.`internal_letter` = 1 ORDER BY created_at desc LIMIT 3 OFFSET 0[0m
+Rendered shared/_menu.html.slim (2.0ms)
+  [1m[35mMeetingroom Load (0.8ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` ORDER BY title DESC
+  [1m[36mUser Load (1.4ms)[0m  [1mSELECT `users`.* FROM `users` ORDER BY name DESC[0m
+  [1m[35mMeetingroom Load (0.9ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms`
+Rendered bookings/_form.html.slim (21.1ms)
+Rendered shared/_news.html.slim (15.9ms)
+  [1m[36mMeetingroom Load (0.8ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `info_pages`.* FROM `info_pages`
+Rendered bookings/new.html.slim within layouts/application (60.3ms)
+Completed 200 OK in 213ms (Views: 63.0ms | ActiveRecord: 7.1ms | Sphinx: 0.0ms)
+
+
+Started GET "/da/bookings?_=1315811868229&start=1315778400&end=1316383200" for 127.0.0.1 at 2011-09-12 09:17:48 +0200
+  Processing by BookingsController#index as JS
+  Parameters: {"_"=>"1315811868229", "start"=>"1315778400", "end"=>"1316383200", "locale"=>"da"}
+  [1m[36mInfoPage Load (0.5ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages`[0m
+  [1m[35mUser Load (1.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mNewspost Load (0.7ms)[0m  [1mSELECT `newsposts`.* FROM `newsposts` WHERE `newsposts`.`internal_letter` = 1 ORDER BY created_at desc LIMIT 3 OFFSET 0[0m
+  [1m[35mMeetingroom Load (0.6ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1
+  [1m[36mBooking Load (0.8ms)[0m  [1mSELECT `bookings`.* FROM `bookings` WHERE (created_at > '2011-09-11 00:00:00') AND (created_at < '2011-09-19 23:59:59')[0m
+Completed 200 OK in 125ms (Views: 5.1ms | ActiveRecord: 7.8ms | Sphinx: 0.0ms)
+
+
+Started GET "/meetingrooms/5/bookings/new?locale=dk" for 127.0.0.1 at 2011-09-12 09:17:52 +0200
+  Processing by BookingsController#new as HTML
+  Parameters: {"locale"=>"dk", "meetingroom_id"=>"5"}
+  [1m[35mInfoPage Load (0.5ms)[0m  SELECT `info_pages`.* FROM `info_pages`
+  [1m[36mMeetingroom Load (0.7ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 5 LIMIT 1[0m
+  [1m[35mUser Load (1.5ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mNewspost Load (0.7ms)[0m  [1mSELECT `newsposts`.* FROM `newsposts` WHERE `newsposts`.`internal_letter` = 1 ORDER BY created_at desc LIMIT 3 OFFSET 0[0m
+Rendered shared/_menu.html.slim (2.1ms)
+  [1m[35mMeetingroom Load (0.8ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` ORDER BY title DESC
+  [1m[36mUser Load (1.4ms)[0m  [1mSELECT `users`.* FROM `users` ORDER BY name DESC[0m
+  [1m[35mMeetingroom Load (0.7ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms`
+Rendered bookings/_form.html.slim (21.0ms)
+Rendered shared/_news.html.slim (13.1ms)
+  [1m[36mMeetingroom Load (0.7ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `info_pages`.* FROM `info_pages`
+Rendered bookings/new.html.slim within layouts/application (57.5ms)
+Completed 200 OK in 202ms (Views: 60.2ms | ActiveRecord: 7.1ms | Sphinx: 0.0ms)
+
+
+Started GET "/da/bookings?_=1315811873399&start=1315778400&end=1316383200" for 127.0.0.1 at 2011-09-12 09:17:53 +0200
+  Processing by BookingsController#index as JS
+  Parameters: {"_"=>"1315811873399", "start"=>"1315778400", "end"=>"1316383200", "locale"=>"da"}
+  [1m[36mInfoPage Load (0.7ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages`[0m
+  [1m[35mUser Load (1.6ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mNewspost Load (0.6ms)[0m  [1mSELECT `newsposts`.* FROM `newsposts` WHERE `newsposts`.`internal_letter` = 1 ORDER BY created_at desc LIMIT 3 OFFSET 0[0m
+  [1m[35mMeetingroom Load (0.6ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1
+  [1m[36mBooking Load (0.7ms)[0m  [1mSELECT `bookings`.* FROM `bookings` WHERE (created_at > '2011-09-11 00:00:00') AND (created_at < '2011-09-19 23:59:59')[0m
+Completed 200 OK in 155ms (Views: 4.6ms | ActiveRecord: 4.3ms | Sphinx: 0.0ms)
+
+
+Started GET "/dk/meetingrooms/6" for 127.0.0.1 at 2011-09-12 09:17:58 +0200
+  Processing by MeetingroomsController#show as HTML
+  Parameters: {"locale"=>"dk", "id"=>"6"}
+  [1m[35mInfoPage Load (0.5ms)[0m  SELECT `info_pages`.* FROM `info_pages`
+  [1m[36mMeetingroom Load (0.6ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 6 LIMIT 1[0m
+  [1m[35mUser Load (1.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mMeetingroom Load (0.6ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1[0m
+  [1m[35mNewspost Load (0.8ms)[0m  SELECT `newsposts`.* FROM `newsposts` WHERE `newsposts`.`internal_letter` = 1 ORDER BY created_at desc LIMIT 3 OFFSET 0
+Rendered shared/_menu.html.slim (2.1ms)
+Rendered shared/_news.html.slim (14.3ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `info_pages`.* FROM `info_pages`
+Rendered meetingrooms/show.html.slim within layouts/application (49.9ms)
+Completed 200 OK in 256ms (Views: 56.3ms | ActiveRecord: 7.6ms | Sphinx: 0.0ms)
+
+
+Started GET "/dk/meetingrooms/6/edit" for 127.0.0.1 at 2011-09-12 09:18:01 +0200
+  Processing by MeetingroomsController#edit as HTML
+  Parameters: {"locale"=>"dk", "id"=>"6"}
+  [1m[36mInfoPage Load (0.7ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages`[0m
+  [1m[35mMeetingroom Load (0.9ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 6 LIMIT 1
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mMeetingroom Load (0.7ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1
+  [1m[36mNewspost Load (1.0ms)[0m  [1mSELECT `newsposts`.* FROM `newsposts` WHERE `newsposts`.`internal_letter` = 1 ORDER BY created_at desc LIMIT 3 OFFSET 0[0m
+Rendered meetingrooms/_form.html.slim (19.4ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages`[0m
+Rendered meetingrooms/edit.html.erb within layouts/application (35.7ms)
+Completed 200 OK in 173ms (Views: 44.3ms | ActiveRecord: 4.2ms | Sphinx: 0.0ms)
+
+
+Started POST "/dk/meetingrooms/6" for 127.0.0.1 at 2011-09-12 09:18:20 +0200
+  Processing by MeetingroomsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XxtCmMyOSbsTMkBRkLJr/Tti1HfjY2YE1sJnMEJG9mY=", "meetingroom"=>{"title"=>"Luxux", "body"=>"nu med fri bar", "color"=>"#aaaaaa"}, "locale"=>"dk", "id"=>"6"}
+  [1m[35mInfoPage Load (0.5ms)[0m  SELECT `info_pages`.* FROM `info_pages`
+  [1m[36mMeetingroom Load (0.6ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 6 LIMIT 1[0m
+  [1m[35mUser Load (1.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mMeetingroom Load (0.8ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1[0m
+  [1m[35mNewspost Load (0.7ms)[0m  SELECT `newsposts`.* FROM `newsposts` WHERE `newsposts`.`internal_letter` = 1 ORDER BY created_at desc LIMIT 3 OFFSET 0
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 6 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mAREL (0.4ms)[0m  [1mUPDATE `meetingrooms` SET `color` = '#aaaaaa', `updated_at` = '2011-09-12 07:18:20' WHERE `meetingrooms`.`id` = 6[0m
+[paperclip] Saving attachments.
+  [1m[35mSQL (0.7ms)[0m  COMMIT
+Redirected to http://localhost:3000/dk/meetingrooms/6
+Completed 302 Found in 121ms
+
+
+Started GET "/dk/meetingrooms/6" for 127.0.0.1 at 2011-09-12 09:18:20 +0200
+  Processing by MeetingroomsController#show as HTML
+  Parameters: {"locale"=>"dk", "id"=>"6"}
+  [1m[36mInfoPage Load (0.6ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages`[0m
+  [1m[35mMeetingroom Load (0.6ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 6 LIMIT 1
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mMeetingroom Load (0.8ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1
+  [1m[36mNewspost Load (0.8ms)[0m  [1mSELECT `newsposts`.* FROM `newsposts` WHERE `newsposts`.`internal_letter` = 1 ORDER BY created_at desc LIMIT 3 OFFSET 0[0m
+Rendered shared/_menu.html.slim (1.8ms)
+Rendered shared/_news.html.slim (46.2ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages`[0m
+Rendered meetingrooms/show.html.slim within layouts/application (80.2ms)
+Completed 200 OK in 206ms (Views: 86.3ms | ActiveRecord: 3.9ms | Sphinx: 0.0ms)
+
+
+Started GET "/meetingrooms/5/bookings/new?locale=dk" for 127.0.0.1 at 2011-09-12 09:18:23 +0200
+  Processing by BookingsController#new as HTML
+  Parameters: {"locale"=>"dk", "meetingroom_id"=>"5"}
+  [1m[35mInfoPage Load (0.6ms)[0m  SELECT `info_pages`.* FROM `info_pages`
+  [1m[36mMeetingroom Load (0.6ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 5 LIMIT 1[0m
+  [1m[35mUser Load (1.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mNewspost Load (0.7ms)[0m  [1mSELECT `newsposts`.* FROM `newsposts` WHERE `newsposts`.`internal_letter` = 1 ORDER BY created_at desc LIMIT 3 OFFSET 0[0m
+Rendered shared/_menu.html.slim (1.9ms)
+  [1m[35mMeetingroom Load (0.8ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` ORDER BY title DESC
+  [1m[36mUser Load (1.3ms)[0m  [1mSELECT `users`.* FROM `users` ORDER BY name DESC[0m
+  [1m[35mMeetingroom Load (0.6ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms`
+Rendered bookings/_form.html.slim (19.1ms)
+Rendered shared/_news.html.slim (12.7ms)
+  [1m[36mMeetingroom Load (0.6ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `info_pages`.* FROM `info_pages`
+Rendered bookings/new.html.slim within layouts/application (52.8ms)
+Completed 200 OK in 222ms (Views: 55.6ms | ActiveRecord: 6.4ms | Sphinx: 0.0ms)
+
+
+Started GET "/da/bookings?_=1315811903524&start=1315778400&end=1316383200" for 127.0.0.1 at 2011-09-12 09:18:23 +0200
+  Processing by BookingsController#index as JS
+  Parameters: {"_"=>"1315811903524", "start"=>"1315778400", "end"=>"1316383200", "locale"=>"da"}
+  [1m[36mInfoPage Load (0.5ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages`[0m
+  [1m[35mUser Load (1.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mNewspost Load (0.8ms)[0m  [1mSELECT `newsposts`.* FROM `newsposts` WHERE `newsposts`.`internal_letter` = 1 ORDER BY created_at desc LIMIT 3 OFFSET 0[0m
+  [1m[35mMeetingroom Load (0.5ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1
+  [1m[36mBooking Load (0.6ms)[0m  [1mSELECT `bookings`.* FROM `bookings` WHERE (created_at > '2011-09-11 00:00:00') AND (created_at < '2011-09-19 23:59:59')[0m
+Completed 200 OK in 139ms (Views: 4.4ms | ActiveRecord: 3.6ms | Sphinx: 0.0ms)
+
+
+Started POST "/meetingrooms/5/bookings?locale=dk" for 127.0.0.1 at 2011-09-12 09:18:42 +0200
+  Processing by BookingsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XxtCmMyOSbsTMkBRkLJr/Tti1HfjY2YE1sJnMEJG9mY=", "booking"=>{"meetingroom_id"=>"6", "bookers_name"=>"Someone", "created_at"=>"12.09.2011", "starttime(1i)"=>"2011", "starttime(2i)"=>"9", "starttime(3i)"=>"12", "starttime(4i)"=>"09", "starttime(5i)"=>"18", "endtime(1i)"=>"2011", "endtime(2i)"=>"9", "endtime(3i)"=>"12", "endtime(4i)"=>"10", "endtime(5i)"=>"18", "attendees"=>"2", "coffee_and_tea"=>"0", "bread"=>"0", "custom_message"=>""}, "commit"=>"Gem", "locale"=>"dk", "meetingroom_id"=>"5"}
+  [1m[35mInfoPage Load (0.6ms)[0m  SELECT `info_pages`.* FROM `info_pages`
+  [1m[36mMeetingroom Load (0.6ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 5 LIMIT 1[0m
+  [1m[35mUser Load (1.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mNewspost Load (0.8ms)[0m  [1mSELECT `newsposts`.* FROM `newsposts` WHERE `newsposts`.`internal_letter` = 1 ORDER BY created_at desc LIMIT 3 OFFSET 0[0m
+  [1m[35mMeetingroom Load (0.6ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 6 LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mBooking Load (0.8ms)[0m  SELECT `bookings`.* FROM `bookings` WHERE (`bookings`.meetingroom_id = 6) AND (created_at BETWEEN '2011-09-11 22:00:00' AND '2011-09-12 21:59:59') AND (starttime < '2011-09-12 10:18:00' AND endtime > '2011-09-12 09:18:00')
+  [1m[36mSQL (1.6ms)[0m  [1mdescribe `bookings`[0m
+  [1m[35mAREL (0.6ms)[0m  INSERT INTO `bookings` (`meetingroom_id`, `starttime`, `endtime`, `attendees`, `bookers_name`, `created_at`, `updated_at`, `user_id`, `message`, `custom_message`, `coffee_and_tea`, `bread`) VALUES (6, '2011-09-12 09:18:00', '2011-09-12 10:18:00', 2, 'Someone', '2011-09-11 22:00:00', '2011-09-12 07:18:42', NULL, NULL, '', 0, 0)
+  [1m[36mSQL (0.4ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/meetingrooms/6/bookings/new?date=2011-09-12+00%3A00%3A00+%2B0200&locale=dk
+Completed 302 Found in 251ms
+
+
+Started GET "/meetingrooms/6/bookings/new?date=2011-09-12+00%3A00%3A00+%2B0200&locale=dk" for 127.0.0.1 at 2011-09-12 09:18:42 +0200
+  Processing by BookingsController#new as HTML
+  Parameters: {"date"=>"2011-09-12 00:00:00 +0200", "locale"=>"dk", "meetingroom_id"=>"6"}
+  [1m[35mInfoPage Load (0.6ms)[0m  SELECT `info_pages`.* FROM `info_pages`
+  [1m[36mMeetingroom Load (0.8ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 6 LIMIT 1[0m
+  [1m[35mUser Load (1.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mNewspost Load (0.6ms)[0m  [1mSELECT `newsposts`.* FROM `newsposts` WHERE `newsposts`.`internal_letter` = 1 ORDER BY created_at desc LIMIT 3 OFFSET 0[0m
+Rendered shared/_menu.html.slim (2.0ms)
+  [1m[35mMeetingroom Load (0.9ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` ORDER BY title DESC
+  [1m[36mUser Load (1.4ms)[0m  [1mSELECT `users`.* FROM `users` ORDER BY name DESC[0m
+  [1m[35mMeetingroom Load (1.1ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms`
+Rendered bookings/_form.html.slim (20.7ms)
+Rendered shared/_news.html.slim (12.9ms)
+  [1m[36mMeetingroom Load (1.0ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `info_pages`.* FROM `info_pages`
+Rendered bookings/new.html.slim within layouts/application (55.8ms)
+Completed 200 OK in 225ms (Views: 93.0ms | ActiveRecord: 7.5ms | Sphinx: 0.0ms)
+
+
+Started GET "/da/bookings?_=1315811923009&start=1315778400&end=1316383200" for 127.0.0.1 at 2011-09-12 09:18:43 +0200
+  Processing by BookingsController#index as JS
+  Parameters: {"_"=>"1315811923009", "start"=>"1315778400", "end"=>"1316383200", "locale"=>"da"}
+  [1m[36mInfoPage Load (0.6ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages`[0m
+  [1m[35mUser Load (1.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mNewspost Load (0.7ms)[0m  [1mSELECT `newsposts`.* FROM `newsposts` WHERE `newsposts`.`internal_letter` = 1 ORDER BY created_at desc LIMIT 3 OFFSET 0[0m
+  [1m[35mMeetingroom Load (0.6ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1
+  [1m[36mBooking Load (0.7ms)[0m  [1mSELECT `bookings`.* FROM `bookings` WHERE (created_at > '2011-09-11 00:00:00') AND (created_at < '2011-09-19 23:59:59')[0m
+  [1m[35mMeetingroom Load (1.1ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 6 LIMIT 1
+Completed 200 OK in 137ms (Views: 26.5ms | ActiveRecord: 4.7ms | Sphinx: 0.0ms)
+
+
+Started POST "/meetingrooms/6/bookings?locale=dk" for 127.0.0.1 at 2011-09-12 09:18:58 +0200
+  Processing by BookingsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XxtCmMyOSbsTMkBRkLJr/Tti1HfjY2YE1sJnMEJG9mY=", "booking"=>{"meetingroom_id"=>"5", "bookers_name"=>"Someone", "created_at"=>"12.09.2011", "starttime(1i)"=>"2011", "starttime(2i)"=>"9", "starttime(3i)"=>"12", "starttime(4i)"=>"09", "starttime(5i)"=>"18", "endtime(1i)"=>"2011", "endtime(2i)"=>"9", "endtime(3i)"=>"12", "endtime(4i)"=>"10", "endtime(5i)"=>"18", "attendees"=>"2", "coffee_and_tea"=>"0", "bread"=>"0", "custom_message"=>""}, "commit"=>"Gem", "locale"=>"dk", "meetingroom_id"=>"6"}
+  [1m[36mInfoPage Load (0.7ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages`[0m
+  [1m[35mMeetingroom Load (0.6ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 6 LIMIT 1
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mNewspost Load (0.7ms)[0m  SELECT `newsposts`.* FROM `newsposts` WHERE `newsposts`.`internal_letter` = 1 ORDER BY created_at desc LIMIT 3 OFFSET 0
+  [1m[36mMeetingroom Load (0.6ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 5 LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mBooking Load (0.7ms)[0m  [1mSELECT `bookings`.* FROM `bookings` WHERE (`bookings`.meetingroom_id = 5) AND (created_at BETWEEN '2011-09-11 22:00:00' AND '2011-09-12 21:59:59') AND (starttime < '2011-09-12 10:18:00' AND endtime > '2011-09-12 09:18:00')[0m
+  [1m[35mSQL (1.4ms)[0m  describe `bookings`
+  [1m[36mAREL (0.7ms)[0m  [1mINSERT INTO `bookings` (`meetingroom_id`, `starttime`, `endtime`, `attendees`, `bookers_name`, `created_at`, `updated_at`, `user_id`, `message`, `custom_message`, `coffee_and_tea`, `bread`) VALUES (5, '2011-09-12 09:18:00', '2011-09-12 10:18:00', 2, 'Someone', '2011-09-11 22:00:00', '2011-09-12 07:18:58', NULL, NULL, '', 0, 0)[0m
+  [1m[35mSQL (0.6ms)[0m  COMMIT
+Redirected to http://localhost:3000/meetingrooms/5/bookings/new?date=2011-09-12+00%3A00%3A00+%2B0200&locale=dk
+Completed 302 Found in 148ms
+
+
+Started GET "/meetingrooms/5/bookings/new?date=2011-09-12+00%3A00%3A00+%2B0200&locale=dk" for 127.0.0.1 at 2011-09-12 09:18:58 +0200
+  Processing by BookingsController#new as HTML
+  Parameters: {"date"=>"2011-09-12 00:00:00 +0200", "locale"=>"dk", "meetingroom_id"=>"5"}
+  [1m[36mInfoPage Load (0.6ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages`[0m
+  [1m[35mMeetingroom Load (0.6ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 5 LIMIT 1
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mNewspost Load (0.7ms)[0m  SELECT `newsposts`.* FROM `newsposts` WHERE `newsposts`.`internal_letter` = 1 ORDER BY created_at desc LIMIT 3 OFFSET 0
+Rendered shared/_menu.html.slim (2.0ms)
+  [1m[36mMeetingroom Load (0.8ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` ORDER BY title DESC[0m
+  [1m[35mUser Load (1.3ms)[0m  SELECT `users`.* FROM `users` ORDER BY name DESC
+  [1m[36mMeetingroom Load (0.7ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms`[0m
+Rendered bookings/_form.html.slim (19.2ms)
+Rendered shared/_news.html.slim (16.8ms)
+  [1m[35mMeetingroom Load (0.7ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages`[0m
+Rendered bookings/new.html.slim within layouts/application (56.7ms)
+Completed 200 OK in 231ms (Views: 59.4ms | ActiveRecord: 6.5ms | Sphinx: 0.0ms)
+
+
+Started GET "/da/bookings?_=1315811939133&start=1315778400&end=1316383200" for 127.0.0.1 at 2011-09-12 09:18:59 +0200
+  Processing by BookingsController#index as JS
+  Parameters: {"_"=>"1315811939133", "start"=>"1315778400", "end"=>"1316383200", "locale"=>"da"}
+  [1m[35mInfoPage Load (0.6ms)[0m  SELECT `info_pages`.* FROM `info_pages`
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mNewspost Load (0.7ms)[0m  SELECT `newsposts`.* FROM `newsposts` WHERE `newsposts`.`internal_letter` = 1 ORDER BY created_at desc LIMIT 3 OFFSET 0
+  [1m[36mMeetingroom Load (0.6ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1[0m
+  [1m[35mBooking Load (0.8ms)[0m  SELECT `bookings`.* FROM `bookings` WHERE (created_at > '2011-09-11 00:00:00') AND (created_at < '2011-09-19 23:59:59')
+  [1m[36mMeetingroom Load (0.7ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 6 LIMIT 1[0m
+  [1m[35mMeetingroom Load (0.6ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 5 LIMIT 1
+Completed 200 OK in 140ms (Views: 27.4ms | ActiveRecord: 5.0ms | Sphinx: 0.0ms)
+
+
+Started POST "/meetingrooms/5/bookings?locale=dk" for 127.0.0.1 at 2011-09-12 09:19:07 +0200
+  Processing by BookingsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XxtCmMyOSbsTMkBRkLJr/Tti1HfjY2YE1sJnMEJG9mY=", "booking"=>{"meetingroom_id"=>"7", "bookers_name"=>"Someone", "created_at"=>"12.09.2011", "starttime(1i)"=>"2011", "starttime(2i)"=>"9", "starttime(3i)"=>"12", "starttime(4i)"=>"09", "starttime(5i)"=>"18", "endtime(1i)"=>"2011", "endtime(2i)"=>"9", "endtime(3i)"=>"12", "endtime(4i)"=>"10", "endtime(5i)"=>"18", "attendees"=>"3", "coffee_and_tea"=>"0", "bread"=>"0", "custom_message"=>""}, "commit"=>"Gem", "locale"=>"dk", "meetingroom_id"=>"5"}
+  [1m[36mInfoPage Load (0.6ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages`[0m
+  [1m[35mMeetingroom Load (1.2ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 5 LIMIT 1
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mNewspost Load (0.7ms)[0m  SELECT `newsposts`.* FROM `newsposts` WHERE `newsposts`.`internal_letter` = 1 ORDER BY created_at desc LIMIT 3 OFFSET 0
+  [1m[36mMeetingroom Load (0.5ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 7 LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mBooking Load (0.6ms)[0m  [1mSELECT `bookings`.* FROM `bookings` WHERE (`bookings`.meetingroom_id = 7) AND (created_at BETWEEN '2011-09-11 22:00:00' AND '2011-09-12 21:59:59') AND (starttime < '2011-09-12 10:18:00' AND endtime > '2011-09-12 09:18:00')[0m
+  [1m[35mSQL (1.5ms)[0m  describe `bookings`
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO `bookings` (`meetingroom_id`, `starttime`, `endtime`, `attendees`, `bookers_name`, `created_at`, `updated_at`, `user_id`, `message`, `custom_message`, `coffee_and_tea`, `bread`) VALUES (7, '2011-09-12 09:18:00', '2011-09-12 10:18:00', 3, 'Someone', '2011-09-11 22:00:00', '2011-09-12 07:19:07', NULL, NULL, '', 0, 0)[0m
+  [1m[35mSQL (0.4ms)[0m  COMMIT
+Redirected to http://localhost:3000/meetingrooms/7/bookings/new?date=2011-09-12+00%3A00%3A00+%2B0200&locale=dk
+Completed 302 Found in 150ms
+
+
+Started GET "/meetingrooms/7/bookings/new?date=2011-09-12+00%3A00%3A00+%2B0200&locale=dk" for 127.0.0.1 at 2011-09-12 09:19:07 +0200
+  Processing by BookingsController#new as HTML
+  Parameters: {"date"=>"2011-09-12 00:00:00 +0200", "locale"=>"dk", "meetingroom_id"=>"7"}
+  [1m[36mInfoPage Load (0.6ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages`[0m
+  [1m[35mMeetingroom Load (0.6ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 7 LIMIT 1
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mNewspost Load (0.8ms)[0m  SELECT `newsposts`.* FROM `newsposts` WHERE `newsposts`.`internal_letter` = 1 ORDER BY created_at desc LIMIT 3 OFFSET 0
+Rendered shared/_menu.html.slim (2.2ms)
+  [1m[36mMeetingroom Load (0.9ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` ORDER BY title DESC[0m
+  [1m[35mUser Load (1.4ms)[0m  SELECT `users`.* FROM `users` ORDER BY name DESC
+  [1m[36mMeetingroom Load (0.8ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms`[0m
+Rendered bookings/_form.html.slim (21.5ms)
+Rendered shared/_news.html.slim (13.7ms)
+  [1m[35mMeetingroom Load (0.7ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages`[0m
+Rendered bookings/new.html.slim within layouts/application (56.5ms)
+Completed 200 OK in 231ms (Views: 58.9ms | ActiveRecord: 11.7ms | Sphinx: 0.0ms)
+
+
+Started GET "/da/bookings?_=1315811948349&start=1315778400&end=1316383200" for 127.0.0.1 at 2011-09-12 09:19:08 +0200
+  Processing by BookingsController#index as JS
+  Parameters: {"_"=>"1315811948349", "start"=>"1315778400", "end"=>"1316383200", "locale"=>"da"}
+  [1m[35mInfoPage Load (0.5ms)[0m  SELECT `info_pages`.* FROM `info_pages`
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mNewspost Load (0.7ms)[0m  SELECT `newsposts`.* FROM `newsposts` WHERE `newsposts`.`internal_letter` = 1 ORDER BY created_at desc LIMIT 3 OFFSET 0
+  [1m[36mMeetingroom Load (0.6ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1[0m
+  [1m[35mBooking Load (0.8ms)[0m  SELECT `bookings`.* FROM `bookings` WHERE (created_at > '2011-09-11 00:00:00') AND (created_at < '2011-09-19 23:59:59')
+  [1m[36mMeetingroom Load (1.0ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 6 LIMIT 1[0m
+  [1m[35mMeetingroom Load (18.4ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 5 LIMIT 1
+  [1m[36mMeetingroom Load (0.6ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 7 LIMIT 1[0m
+Completed 200 OK in 161ms (Views: 28.4ms | ActiveRecord: 23.7ms | Sphinx: 0.0ms)
+
+
+Started GET "/meetingrooms/7/bookings/46/edit?locale=da" for 127.0.0.1 at 2011-09-12 09:19:11 +0200
+  Processing by BookingsController#edit as HTML
+  Parameters: {"locale"=>"da", "meetingroom_id"=>"7", "id"=>"46"}
+  [1m[35mInfoPage Load (0.5ms)[0m  SELECT `info_pages`.* FROM `info_pages`
+  [1m[36mMeetingroom Load (0.6ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 7 LIMIT 1[0m
+  [1m[35mBooking Load (1.6ms)[0m  SELECT `bookings`.* FROM `bookings` WHERE `bookings`.`id` = 46 AND (`bookings`.meetingroom_id = 7) LIMIT 1
+  [1m[36mUser Load (1.6ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mNewspost Load (1.0ms)[0m  SELECT `newsposts`.* FROM `newsposts` WHERE `newsposts`.`internal_letter` = 1 ORDER BY created_at desc LIMIT 3 OFFSET 0
+Rendered shared/_menu.html.slim (1.9ms)
+  [1m[36mMeetingroom Load (0.9ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` ORDER BY title DESC[0m
+  [1m[35mUser Load (1.4ms)[0m  SELECT `users`.* FROM `users` ORDER BY name DESC
+  [1m[36mMeetingroom Load (0.9ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms`[0m
+Rendered bookings/_form.html.slim (33.4ms)
+Rendered shared/_news.html.slim (12.3ms)
+  [1m[35mMeetingroom Load (0.7ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages`[0m
+Rendered bookings/edit.html.slim within layouts/application (65.5ms)
+Completed 200 OK in 267ms (Views: 92.8ms | ActiveRecord: 9.2ms | Sphinx: 0.0ms)
+
+
+Started GET "/da/bookings?_=1315811952502&start=1315778400&end=1316383200" for 127.0.0.1 at 2011-09-12 09:19:12 +0200
+  Processing by BookingsController#index as JS
+  Parameters: {"_"=>"1315811952502", "start"=>"1315778400", "end"=>"1316383200", "locale"=>"da"}
+  [1m[35mInfoPage Load (0.6ms)[0m  SELECT `info_pages`.* FROM `info_pages`
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mNewspost Load (0.7ms)[0m  SELECT `newsposts`.* FROM `newsposts` WHERE `newsposts`.`internal_letter` = 1 ORDER BY created_at desc LIMIT 3 OFFSET 0
+  [1m[36mMeetingroom Load (0.5ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1[0m
+  [1m[35mBooking Load (0.9ms)[0m  SELECT `bookings`.* FROM `bookings` WHERE (created_at > '2011-09-11 00:00:00') AND (created_at < '2011-09-19 23:59:59')
+  [1m[36mMeetingroom Load (1.0ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 6 LIMIT 1[0m
+  [1m[35mMeetingroom Load (0.6ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 5 LIMIT 1
+  [1m[36mMeetingroom Load (0.6ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 7 LIMIT 1[0m
+Completed 200 OK in 173ms (Views: 37.4ms | ActiveRecord: 5.9ms | Sphinx: 0.0ms)
+
+
+Started GET "/da/bookings?_=1315811966093&start=1315778400&end=1316383200" for 127.0.0.1 at 2011-09-12 09:19:26 +0200
+  Processing by BookingsController#index as JS
+  Parameters: {"_"=>"1315811966093", "start"=>"1315778400", "end"=>"1316383200", "locale"=>"da"}
+  [1m[35mInfoPage Load (0.6ms)[0m  SELECT `info_pages`.* FROM `info_pages`
+  [1m[36mUser Load (2.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mNewspost Load (2.2ms)[0m  SELECT `newsposts`.* FROM `newsposts` WHERE `newsposts`.`internal_letter` = 1 ORDER BY created_at desc LIMIT 3 OFFSET 0
+  [1m[36mMeetingroom Load (0.6ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1[0m
+  [1m[35mBooking Load (0.9ms)[0m  SELECT `bookings`.* FROM `bookings` WHERE (created_at > '2011-09-11 00:00:00') AND (created_at < '2011-09-19 23:59:59')
+  [1m[36mMeetingroom Load (2.6ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 6 LIMIT 1[0m
+  [1m[35mMeetingroom Load (0.6ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 5 LIMIT 1
+  [1m[36mMeetingroom Load (0.5ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 7 LIMIT 1[0m
+Completed 200 OK in 160ms (Views: 31.0ms | ActiveRecord: 10.1ms | Sphinx: 0.0ms)
+
+
+Started GET "/dk/meetingrooms" for 127.0.0.1 at 2011-09-12 09:20:08 +0200
+  Processing by MeetingroomsController#index as HTML
+  Parameters: {"locale"=>"dk"}
+  [1m[35mInfoPage Load (0.7ms)[0m  SELECT `info_pages`.* FROM `info_pages`
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mMeetingroom Load (0.7ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1
+  [1m[36mNewspost Load (0.9ms)[0m  [1mSELECT `newsposts`.* FROM `newsposts` WHERE `newsposts`.`internal_letter` = 1 ORDER BY created_at desc LIMIT 3 OFFSET 0[0m
+Rendered shared/_menu.html.slim (2.0ms)
+  [1m[35mMeetingroom Load (0.9ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms`
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `info_pages`.* FROM `info_pages`
+Rendered meetingrooms/index.html.slim within layouts/application (36.2ms)
+Completed 200 OK in 182ms (Views: 59.1ms | ActiveRecord: 4.3ms | Sphinx: 0.0ms)
+
+
+Started GET "/dk/meetingrooms/5" for 127.0.0.1 at 2011-09-12 09:20:10 +0200
+  Processing by MeetingroomsController#show as HTML
+  Parameters: {"locale"=>"dk", "id"=>"5"}
+  [1m[36mInfoPage Load (0.6ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages`[0m
+  [1m[35mMeetingroom Load (0.6ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 5 LIMIT 1
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mMeetingroom Load (0.8ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1
+  [1m[36mNewspost Load (0.7ms)[0m  [1mSELECT `newsposts`.* FROM `newsposts` WHERE `newsposts`.`internal_letter` = 1 ORDER BY created_at desc LIMIT 3 OFFSET 0[0m
+Rendered shared/_menu.html.slim (2.0ms)
+Rendered shared/_news.html.slim (12.9ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages`[0m
+Rendered meetingrooms/show.html.slim within layouts/application (47.4ms)
+Completed 200 OK in 211ms (Views: 53.7ms | ActiveRecord: 3.7ms | Sphinx: 0.0ms)
+
+
+Started GET "/meetingrooms/5/bookings/new?locale=dk" for 127.0.0.1 at 2011-09-12 09:20:16 +0200
+  Processing by BookingsController#new as HTML
+  Parameters: {"locale"=>"dk", "meetingroom_id"=>"5"}
+  [1m[35mInfoPage Load (0.5ms)[0m  SELECT `info_pages`.* FROM `info_pages`
+  [1m[36mMeetingroom Load (3.7ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 5 LIMIT 1[0m
+  [1m[35mUser Load (1.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mNewspost Load (0.7ms)[0m  [1mSELECT `newsposts`.* FROM `newsposts` WHERE `newsposts`.`internal_letter` = 1 ORDER BY created_at desc LIMIT 3 OFFSET 0[0m
+Rendered shared/_menu.html.slim (2.0ms)
+  [1m[35mMeetingroom Load (0.9ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` ORDER BY title DESC
+  [1m[36mUser Load (1.3ms)[0m  [1mSELECT `users`.* FROM `users` ORDER BY name DESC[0m
+  [1m[35mMeetingroom Load (0.8ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms`
+Rendered bookings/_form.html.slim (19.7ms)
+Rendered shared/_news.html.slim (47.5ms)
+  [1m[36mMeetingroom Load (0.7ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `info_pages`.* FROM `info_pages`
+Rendered bookings/new.html.slim within layouts/application (88.5ms)
+Completed 200 OK in 436ms (Views: 90.9ms | ActiveRecord: 9.7ms | Sphinx: 0.0ms)
+
+
+Started GET "/da/bookings?_=1315812017175&start=1315778400&end=1316383200" for 127.0.0.1 at 2011-09-12 09:20:17 +0200
+  Processing by BookingsController#index as JS
+  Parameters: {"_"=>"1315812017175", "start"=>"1315778400", "end"=>"1316383200", "locale"=>"da"}
+  [1m[36mInfoPage Load (0.7ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages`[0m
+  [1m[35mUser Load (1.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mNewspost Load (0.7ms)[0m  [1mSELECT `newsposts`.* FROM `newsposts` WHERE `newsposts`.`internal_letter` = 1 ORDER BY created_at desc LIMIT 3 OFFSET 0[0m
+  [1m[35mMeetingroom Load (0.6ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1
+  [1m[36mBooking Load (0.8ms)[0m  [1mSELECT `bookings`.* FROM `bookings` WHERE (created_at > '2011-09-11 00:00:00') AND (created_at < '2011-09-19 23:59:59')[0m
+  [1m[35mMeetingroom Load (0.7ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 6 LIMIT 1
+  [1m[36mMeetingroom Load (0.7ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 5 LIMIT 1[0m
+  [1m[35mMeetingroom Load (0.6ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 7 LIMIT 1
+Completed 200 OK in 179ms (Views: 62.4ms | ActiveRecord: 5.8ms | Sphinx: 0.0ms)
+
+
+Started GET "/dk/meetingrooms/5" for 127.0.0.1 at 2011-09-12 09:20:19 +0200
+  Processing by MeetingroomsController#show as HTML
+  Parameters: {"locale"=>"dk", "id"=>"5"}
+  [1m[36mInfoPage Load (0.6ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages`[0m
+  [1m[35mMeetingroom Load (0.6ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 5 LIMIT 1
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mMeetingroom Load (0.7ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1
+  [1m[36mNewspost Load (0.7ms)[0m  [1mSELECT `newsposts`.* FROM `newsposts` WHERE `newsposts`.`internal_letter` = 1 ORDER BY created_at desc LIMIT 3 OFFSET 0[0m
+Rendered shared/_menu.html.slim (2.0ms)
+Rendered shared/_news.html.slim (46.6ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages`[0m
+Rendered meetingrooms/show.html.slim within layouts/application (80.3ms)
+Completed 200 OK in 206ms (Views: 86.3ms | ActiveRecord: 3.6ms | Sphinx: 0.0ms)
+
+
+Started GET "/dk/meetingrooms" for 127.0.0.1 at 2011-09-12 09:20:21 +0200
+  Processing by MeetingroomsController#index as HTML
+  Parameters: {"locale"=>"dk"}
+  [1m[35mInfoPage Load (0.6ms)[0m  SELECT `info_pages`.* FROM `info_pages`
+  [1m[36mUser Load (12.6ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mMeetingroom Load (0.7ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1
+  [1m[36mNewspost Load (0.7ms)[0m  [1mSELECT `newsposts`.* FROM `newsposts` WHERE `newsposts`.`internal_letter` = 1 ORDER BY created_at desc LIMIT 3 OFFSET 0[0m
+Rendered shared/_menu.html.slim (2.0ms)
+  [1m[35mMeetingroom Load (0.8ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms`
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `info_pages`.* FROM `info_pages`
+Rendered meetingrooms/index.html.slim within layouts/application (120.0ms)
+Completed 200 OK in 402ms (Views: 181.0ms | ActiveRecord: 15.4ms | Sphinx: 0.0ms)
+
+
+Started GET "/meetingrooms/6/bookings/new?locale=dk" for 127.0.0.1 at 2011-09-12 09:20:26 +0200
+  Processing by BookingsController#new as HTML
+  Parameters: {"locale"=>"dk", "meetingroom_id"=>"6"}
+  [1m[36mInfoPage Load (0.7ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages`[0m
+  [1m[35mMeetingroom Load (0.7ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 6 LIMIT 1
+  [1m[36mUser Load (21.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mNewspost Load (0.8ms)[0m  SELECT `newsposts`.* FROM `newsposts` WHERE `newsposts`.`internal_letter` = 1 ORDER BY created_at desc LIMIT 3 OFFSET 0
+Rendered shared/_menu.html.slim (2.1ms)
+  [1m[36mMeetingroom Load (0.9ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` ORDER BY title DESC[0m
+  [1m[35mUser Load (1.3ms)[0m  SELECT `users`.* FROM `users` ORDER BY name DESC
+  [1m[36mMeetingroom Load (0.7ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms`[0m
+Rendered bookings/_form.html.slim (20.2ms)
+Rendered shared/_news.html.slim (12.6ms)
+  [1m[35mMeetingroom Load (3.3ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages`[0m
+Rendered bookings/new.html.slim within layouts/application (83.0ms)
+Completed 200 OK in 551ms (Views: 82.9ms | ActiveRecord: 29.7ms | Sphinx: 0.0ms)
+
+
+Started GET "/da/bookings?_=1315812027148&start=1315778400&end=1316383200" for 127.0.0.1 at 2011-09-12 09:20:27 +0200
+  Processing by BookingsController#index as JS
+  Parameters: {"_"=>"1315812027148", "start"=>"1315778400", "end"=>"1316383200", "locale"=>"da"}
+  [1m[35mInfoPage Load (0.7ms)[0m  SELECT `info_pages`.* FROM `info_pages`
+  [1m[36mUser Load (24.6ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mNewspost Load (36.3ms)[0m  SELECT `newsposts`.* FROM `newsposts` WHERE `newsposts`.`internal_letter` = 1 ORDER BY created_at desc LIMIT 3 OFFSET 0
+  [1m[36mMeetingroom Load (0.6ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1[0m
+  [1m[35mBooking Load (0.9ms)[0m  SELECT `bookings`.* FROM `bookings` WHERE (created_at > '2011-09-11 00:00:00') AND (created_at < '2011-09-19 23:59:59')
+  [1m[36mMeetingroom Load (16.3ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 6 LIMIT 1[0m
+  [1m[35mMeetingroom Load (0.7ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 5 LIMIT 1
+  [1m[36mMeetingroom Load (0.7ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 7 LIMIT 1[0m
+Completed 200 OK in 461ms (Views: 106.5ms | ActiveRecord: 80.8ms | Sphinx: 0.0ms)
+
+
+Started GET "/dk/meetingrooms" for 127.0.0.1 at 2011-09-12 09:20:29 +0200
+  Processing by MeetingroomsController#index as HTML
+  Parameters: {"locale"=>"dk"}
+  [1m[35mInfoPage Load (0.7ms)[0m  SELECT `info_pages`.* FROM `info_pages`
+  [1m[36mUser Load (1.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mMeetingroom Load (1.0ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1
+  [1m[36mNewspost Load (0.7ms)[0m  [1mSELECT `newsposts`.* FROM `newsposts` WHERE `newsposts`.`internal_letter` = 1 ORDER BY created_at desc LIMIT 3 OFFSET 0[0m
+Rendered shared/_menu.html.slim (1.8ms)
+  [1m[35mMeetingroom Load (0.9ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms`
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `info_pages`.* FROM `info_pages`
+Rendered meetingrooms/index.html.slim within layouts/application (71.9ms)
+Completed 200 OK in 210ms (Views: 76.8ms | ActiveRecord: 4.7ms | Sphinx: 0.0ms)
+
+
+Started GET "/dk/meetingrooms/6" for 127.0.0.1 at 2011-09-12 09:20:32 +0200
+  Processing by MeetingroomsController#show as HTML
+  Parameters: {"locale"=>"dk", "id"=>"6"}
+  [1m[36mInfoPage Load (0.6ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages`[0m
+  [1m[35mMeetingroom Load (0.6ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 6 LIMIT 1
+  [1m[36mUser Load (8.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mMeetingroom Load (0.7ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1
+  [1m[36mNewspost Load (0.7ms)[0m  [1mSELECT `newsposts`.* FROM `newsposts` WHERE `newsposts`.`internal_letter` = 1 ORDER BY created_at desc LIMIT 3 OFFSET 0[0m
+Rendered shared/_menu.html.slim (1.8ms)
+Rendered shared/_news.html.slim (12.4ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages`[0m
+Rendered meetingrooms/show.html.slim within layouts/application (78.5ms)
+Completed 200 OK in 233ms (Views: 84.6ms | ActiveRecord: 10.8ms | Sphinx: 0.0ms)
+
+
+Started GET "/meetingrooms/6/bookings/new?locale=dk" for 127.0.0.1 at 2011-09-12 09:20:34 +0200
+  Processing by BookingsController#new as HTML
+  Parameters: {"locale"=>"dk", "meetingroom_id"=>"6"}
+  [1m[35mInfoPage Load (0.6ms)[0m  SELECT `info_pages`.* FROM `info_pages`
+  [1m[36mMeetingroom Load (0.5ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 6 LIMIT 1[0m
+  [1m[35mUser Load (1.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mNewspost Load (0.7ms)[0m  [1mSELECT `newsposts`.* FROM `newsposts` WHERE `newsposts`.`internal_letter` = 1 ORDER BY created_at desc LIMIT 3 OFFSET 0[0m
+Rendered shared/_menu.html.slim (1.9ms)
+  [1m[35mMeetingroom Load (0.8ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` ORDER BY title DESC
+  [1m[36mUser Load (1.3ms)[0m  [1mSELECT `users`.* FROM `users` ORDER BY name DESC[0m
+  [1m[35mMeetingroom Load (0.7ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms`
+Rendered bookings/_form.html.slim (18.8ms)
+Rendered shared/_news.html.slim (12.6ms)
+  [1m[36mMeetingroom Load (0.6ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `info_pages`.* FROM `info_pages`
+Rendered bookings/new.html.slim within layouts/application (84.4ms)
+Completed 200 OK in 224ms (Views: 86.9ms | ActiveRecord: 6.4ms | Sphinx: 0.0ms)
+
+
+Started GET "/da/bookings?_=1315812034779&start=1315778400&end=1316383200" for 127.0.0.1 at 2011-09-12 09:20:34 +0200
+  Processing by BookingsController#index as JS
+  Parameters: {"_"=>"1315812034779", "start"=>"1315778400", "end"=>"1316383200", "locale"=>"da"}
+  [1m[36mInfoPage Load (0.6ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages`[0m
+  [1m[35mUser Load (1.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mNewspost Load (0.7ms)[0m  [1mSELECT `newsposts`.* FROM `newsposts` WHERE `newsposts`.`internal_letter` = 1 ORDER BY created_at desc LIMIT 3 OFFSET 0[0m
+  [1m[35mMeetingroom Load (0.6ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1
+  [1m[36mBooking Load (0.8ms)[0m  [1mSELECT `bookings`.* FROM `bookings` WHERE (created_at > '2011-09-11 00:00:00') AND (created_at < '2011-09-19 23:59:59')[0m
+  [1m[35mMeetingroom Load (0.6ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 6 LIMIT 1
+  [1m[36mMeetingroom Load (0.7ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 5 LIMIT 1[0m
+  [1m[35mMeetingroom Load (0.5ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 7 LIMIT 1
+Completed 200 OK in 142ms (Views: 27.9ms | ActiveRecord: 5.5ms | Sphinx: 0.0ms)
+
+
+Started GET "/dk/meetingrooms" for 127.0.0.1 at 2011-09-12 09:20:37 +0200
+  Processing by MeetingroomsController#index as HTML
+  Parameters: {"locale"=>"dk"}
+  [1m[36mInfoPage Load (0.5ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages`[0m
+  [1m[35mUser Load (1.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mMeetingroom Load (0.7ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1[0m
+  [1m[35mNewspost Load (0.7ms)[0m  SELECT `newsposts`.* FROM `newsposts` WHERE `newsposts`.`internal_letter` = 1 ORDER BY created_at desc LIMIT 3 OFFSET 0
+Rendered shared/_menu.html.slim (2.5ms)
+  [1m[36mMeetingroom Load (0.8ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms`[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages`[0m
+Rendered meetingrooms/index.html.slim within layouts/application (41.5ms)
+Completed 200 OK in 171ms (Views: 48.0ms | ActiveRecord: 3.7ms | Sphinx: 0.0ms)
+
+
+Started GET "/meetingrooms/5/bookings/new?locale=dk" for 127.0.0.1 at 2011-09-12 09:20:39 +0200
+  Processing by BookingsController#new as HTML
+  Parameters: {"locale"=>"dk", "meetingroom_id"=>"5"}
+  [1m[35mInfoPage Load (0.5ms)[0m  SELECT `info_pages`.* FROM `info_pages`
+  [1m[36mMeetingroom Load (0.8ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 5 LIMIT 1[0m
+  [1m[35mUser Load (16.9ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mNewspost Load (0.7ms)[0m  [1mSELECT `newsposts`.* FROM `newsposts` WHERE `newsposts`.`internal_letter` = 1 ORDER BY created_at desc LIMIT 3 OFFSET 0[0m
+Rendered shared/_menu.html.slim (2.0ms)
+  [1m[35mMeetingroom Load (0.9ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` ORDER BY title DESC
+  [1m[36mUser Load (1.4ms)[0m  [1mSELECT `users`.* FROM `users` ORDER BY name DESC[0m
+  [1m[35mMeetingroom Load (0.9ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms`
+Rendered bookings/_form.html.slim (19.2ms)
+Rendered shared/_news.html.slim (87.2ms)
+  [1m[36mMeetingroom Load (0.8ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `info_pages`.* FROM `info_pages`
+Rendered bookings/new.html.slim within layouts/application (200.7ms)
+Completed 200 OK in 485ms (Views: 202.8ms | ActiveRecord: 22.9ms | Sphinx: 0.0ms)
+
+
+Started GET "/da/bookings?_=1315812040150&start=1315778400&end=1316383200" for 127.0.0.1 at 2011-09-12 09:20:40 +0200
+  Processing by BookingsController#index as JS
+  Parameters: {"_"=>"1315812040150", "start"=>"1315778400", "end"=>"1316383200", "locale"=>"da"}
+  [1m[36mInfoPage Load (0.6ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages`[0m
+  [1m[35mUser Load (1.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mNewspost Load (0.7ms)[0m  [1mSELECT `newsposts`.* FROM `newsposts` WHERE `newsposts`.`internal_letter` = 1 ORDER BY created_at desc LIMIT 3 OFFSET 0[0m
+  [1m[35mMeetingroom Load (0.6ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1
+  [1m[36mBooking Load (0.9ms)[0m  [1mSELECT `bookings`.* FROM `bookings` WHERE (created_at > '2011-09-11 00:00:00') AND (created_at < '2011-09-19 23:59:59')[0m
+  [1m[35mMeetingroom Load (0.7ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 6 LIMIT 1
+  [1m[36mMeetingroom Load (0.9ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 5 LIMIT 1[0m
+  [1m[35mMeetingroom Load (0.8ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 7 LIMIT 1
+Completed 200 OK in 304ms (Views: 144.2ms | ActiveRecord: 6.3ms | Sphinx: 0.0ms)
+
+
+Started GET "/dk/meetingrooms/6" for 127.0.0.1 at 2011-09-12 09:20:43 +0200
+  Processing by MeetingroomsController#show as HTML
+  Parameters: {"locale"=>"dk", "id"=>"6"}
+  [1m[36mInfoPage Load (0.5ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages`[0m
+  [1m[35mMeetingroom Load (1.9ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 6 LIMIT 1
+  [1m[36mUser Load (11.8ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mMeetingroom Load (11.7ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1
+  [1m[36mNewspost Load (2.7ms)[0m  [1mSELECT `newsposts`.* FROM `newsposts` WHERE `newsposts`.`internal_letter` = 1 ORDER BY created_at desc LIMIT 3 OFFSET 0[0m
+Rendered shared/_menu.html.slim (1.9ms)
+Rendered shared/_news.html.slim (82.3ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages`[0m
+Rendered meetingrooms/show.html.slim within layouts/application (130.7ms)
+Completed 200 OK in 401ms (Views: 147.5ms | ActiveRecord: 28.5ms | Sphinx: 0.0ms)
+
+
+Started GET "/meetingrooms/6/bookings/new?locale=dk" for 127.0.0.1 at 2011-09-12 09:20:46 +0200
+  Processing by BookingsController#new as HTML
+  Parameters: {"locale"=>"dk", "meetingroom_id"=>"6"}
+  [1m[35mInfoPage Load (0.5ms)[0m  SELECT `info_pages`.* FROM `info_pages`
+  [1m[36mMeetingroom Load (1.1ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 6 LIMIT 1[0m
+  [1m[35mUser Load (1.6ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mNewspost Load (3.4ms)[0m  [1mSELECT `newsposts`.* FROM `newsposts` WHERE `newsposts`.`internal_letter` = 1 ORDER BY created_at desc LIMIT 3 OFFSET 0[0m
+Rendered shared/_menu.html.slim (1.9ms)
+  [1m[35mMeetingroom Load (0.9ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` ORDER BY title DESC
+  [1m[36mUser Load (1.6ms)[0m  [1mSELECT `users`.* FROM `users` ORDER BY name DESC[0m
+  [1m[35mMeetingroom Load (0.9ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms`
+Rendered bookings/_form.html.slim (19.3ms)
+Rendered shared/_news.html.slim (16.5ms)
+  [1m[36mMeetingroom Load (0.7ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `info_pages`.* FROM `info_pages`
+Rendered bookings/new.html.slim within layouts/application (58.2ms)
+Completed 200 OK in 365ms (Views: 59.9ms | ActiveRecord: 10.7ms | Sphinx: 0.0ms)
+
+
+Started GET "/da/bookings?_=1315812047015&start=1315778400&end=1316383200" for 127.0.0.1 at 2011-09-12 09:20:47 +0200
+  Processing by BookingsController#index as JS
+  Parameters: {"_"=>"1315812047015", "start"=>"1315778400", "end"=>"1316383200", "locale"=>"da"}
+  [1m[36mInfoPage Load (0.8ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages`[0m
+  [1m[35mUser Load (9.5ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mNewspost Load (10.9ms)[0m  [1mSELECT `newsposts`.* FROM `newsposts` WHERE `newsposts`.`internal_letter` = 1 ORDER BY created_at desc LIMIT 3 OFFSET 0[0m
+  [1m[35mMeetingroom Load (0.5ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1
+  [1m[36mBooking Load (0.8ms)[0m  [1mSELECT `bookings`.* FROM `bookings` WHERE (created_at > '2011-09-11 00:00:00') AND (created_at < '2011-09-19 23:59:59')[0m
+  [1m[35mMeetingroom Load (0.6ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 6 LIMIT 1
+  [1m[36mMeetingroom Load (0.8ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 5 LIMIT 1[0m
+  [1m[35mMeetingroom Load (0.8ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 7 LIMIT 1
+Completed 200 OK in 351ms (Views: 100.5ms | ActiveRecord: 24.8ms | Sphinx: 0.0ms)
+
+
+Started GET "/dk/meetingrooms/7" for 127.0.0.1 at 2011-09-12 09:20:49 +0200
+  Processing by MeetingroomsController#show as HTML
+  Parameters: {"locale"=>"dk", "id"=>"7"}
+  [1m[36mInfoPage Load (0.7ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages`[0m
+  [1m[35mMeetingroom Load (0.8ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 7 LIMIT 1
+  [1m[36mUser Load (17.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mMeetingroom Load (0.6ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1
+  [1m[36mNewspost Load (1.1ms)[0m  [1mSELECT `newsposts`.* FROM `newsposts` WHERE `newsposts`.`internal_letter` = 1 ORDER BY created_at desc LIMIT 3 OFFSET 0[0m
+Rendered shared/_menu.html.slim (1.9ms)
+Rendered shared/_news.html.slim (68.8ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages`[0m
+Rendered meetingrooms/show.html.slim within layouts/application (172.5ms)
+Completed 200 OK in 570ms (Views: 179.1ms | ActiveRecord: 20.7ms | Sphinx: 0.0ms)
+
+
+Started GET "/meetingrooms/5/bookings/new?locale=dk" for 127.0.0.1 at 2011-09-12 09:20:52 +0200
+  Processing by BookingsController#new as HTML
+  Parameters: {"locale"=>"dk", "meetingroom_id"=>"5"}
+  [1m[35mInfoPage Load (0.8ms)[0m  SELECT `info_pages`.* FROM `info_pages`
+  [1m[36mMeetingroom Load (0.8ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 5 LIMIT 1[0m
+  [1m[35mUser Load (1.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mNewspost Load (0.7ms)[0m  [1mSELECT `newsposts`.* FROM `newsposts` WHERE `newsposts`.`internal_letter` = 1 ORDER BY created_at desc LIMIT 3 OFFSET 0[0m
+Rendered shared/_menu.html.slim (2.1ms)
+  [1m[35mMeetingroom Load (0.9ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` ORDER BY title DESC
+  [1m[36mUser Load (1.4ms)[0m  [1mSELECT `users`.* FROM `users` ORDER BY name DESC[0m
+  [1m[35mMeetingroom Load (0.7ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms`
+Rendered bookings/_form.html.slim (19.6ms)
+Rendered shared/_news.html.slim (28.9ms)
+  [1m[36mMeetingroom Load (0.7ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `info_pages`.* FROM `info_pages`
+Rendered bookings/new.html.slim within layouts/application (102.6ms)
+Completed 200 OK in 296ms (Views: 105.7ms | ActiveRecord: 6.9ms | Sphinx: 0.0ms)
+
+
+Started GET "/da/bookings?_=1315812053192&start=1315778400&end=1316383200" for 127.0.0.1 at 2011-09-12 09:20:53 +0200
+  Processing by BookingsController#index as JS
+  Parameters: {"_"=>"1315812053192", "start"=>"1315778400", "end"=>"1316383200", "locale"=>"da"}
+  [1m[36mInfoPage Load (0.6ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages`[0m
+  [1m[35mUser Load (0.9ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mNewspost Load (24.0ms)[0m  [1mSELECT `newsposts`.* FROM `newsposts` WHERE `newsposts`.`internal_letter` = 1 ORDER BY created_at desc LIMIT 3 OFFSET 0[0m
+  [1m[35mMeetingroom Load (0.6ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1
+  [1m[36mBooking Load (1.0ms)[0m  [1mSELECT `bookings`.* FROM `bookings` WHERE (created_at > '2011-09-11 00:00:00') AND (created_at < '2011-09-19 23:59:59')[0m
+  [1m[35mMeetingroom Load (0.6ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 6 LIMIT 1
+  [1m[36mMeetingroom Load (0.9ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 5 LIMIT 1[0m
+  [1m[35mMeetingroom Load (0.7ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 7 LIMIT 1
+Completed 200 OK in 262ms (Views: 45.0ms | ActiveRecord: 29.2ms | Sphinx: 0.0ms)
+
+
+Started GET "/meetingrooms/7/bookings/46/edit?locale=da" for 127.0.0.1 at 2011-09-12 09:21:02 +0200
+  Processing by BookingsController#edit as HTML
+  Parameters: {"locale"=>"da", "meetingroom_id"=>"7", "id"=>"46"}
+  [1m[36mInfoPage Load (0.6ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages`[0m
+  [1m[35mMeetingroom Load (1.4ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 7 LIMIT 1
+  [1m[36mBooking Load (22.3ms)[0m  [1mSELECT `bookings`.* FROM `bookings` WHERE `bookings`.`id` = 46 AND (`bookings`.meetingroom_id = 7) LIMIT 1[0m
+  [1m[35mUser Load (1.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mNewspost Load (0.9ms)[0m  [1mSELECT `newsposts`.* FROM `newsposts` WHERE `newsposts`.`internal_letter` = 1 ORDER BY created_at desc LIMIT 3 OFFSET 0[0m
+Rendered shared/_menu.html.slim (2.1ms)
+  [1m[35mMeetingroom Load (0.8ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` ORDER BY title DESC
+  [1m[36mUser Load (1.3ms)[0m  [1mSELECT `users`.* FROM `users` ORDER BY name DESC[0m
+  [1m[35mMeetingroom Load (0.8ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms`
+Rendered bookings/_form.html.slim (34.3ms)
+Rendered shared/_news.html.slim (46.3ms)
+  [1m[36mMeetingroom Load (0.6ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `info_pages`.* FROM `info_pages`
+Rendered bookings/edit.html.slim within layouts/application (101.8ms)
+Completed 200 OK in 344ms (Views: 104.0ms | ActiveRecord: 29.8ms | Sphinx: 0.0ms)
+
+
+Started GET "/da/bookings?_=1315812062691&start=1315778400&end=1316383200" for 127.0.0.1 at 2011-09-12 09:21:02 +0200
+  Processing by BookingsController#index as JS
+  Parameters: {"_"=>"1315812062691", "start"=>"1315778400", "end"=>"1316383200", "locale"=>"da"}
+  [1m[36mInfoPage Load (0.5ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages`[0m
+  [1m[35mUser Load (1.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mNewspost Load (0.7ms)[0m  [1mSELECT `newsposts`.* FROM `newsposts` WHERE `newsposts`.`internal_letter` = 1 ORDER BY created_at desc LIMIT 3 OFFSET 0[0m
+  [1m[35mMeetingroom Load (0.6ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1
+  [1m[36mBooking Load (0.9ms)[0m  [1mSELECT `bookings`.* FROM `bookings` WHERE (created_at > '2011-09-11 00:00:00') AND (created_at < '2011-09-19 23:59:59')[0m
+  [1m[35mMeetingroom Load (1.5ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 6 LIMIT 1
+  [1m[36mMeetingroom Load (0.6ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 5 LIMIT 1[0m
+  [1m[35mMeetingroom Load (0.7ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 7 LIMIT 1
+Completed 200 OK in 198ms (Views: 66.1ms | ActiveRecord: 6.5ms | Sphinx: 0.0ms)
+
+
+Started GET "/da/bookings?_=1315812070413&start=1315778400&end=1316383200" for 127.0.0.1 at 2011-09-12 09:21:10 +0200
+  Processing by BookingsController#index as JS
+  Parameters: {"_"=>"1315812070413", "start"=>"1315778400", "end"=>"1316383200", "locale"=>"da"}
+  [1m[36mInfoPage Load (0.7ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages`[0m
+  [1m[35mUser Load (1.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mNewspost Load (10.2ms)[0m  [1mSELECT `newsposts`.* FROM `newsposts` WHERE `newsposts`.`internal_letter` = 1 ORDER BY created_at desc LIMIT 3 OFFSET 0[0m
+  [1m[35mMeetingroom Load (0.6ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1
+  [1m[36mBooking Load (0.8ms)[0m  [1mSELECT `bookings`.* FROM `bookings` WHERE (created_at > '2011-09-11 00:00:00') AND (created_at < '2011-09-19 23:59:59')[0m
+  [1m[35mMeetingroom Load (0.5ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 6 LIMIT 1
+  [1m[36mMeetingroom Load (0.7ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 5 LIMIT 1[0m
+  [1m[35mMeetingroom Load (0.6ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 7 LIMIT 1
+Completed 200 OK in 182ms (Views: 38.8ms | ActiveRecord: 15.2ms | Sphinx: 0.0ms)
+
+
+Started GET "/dk/meetingrooms/5" for 127.0.0.1 at 2011-09-12 09:39:22 +0200
+  Processing by MeetingroomsController#show as HTML
+  Parameters: {"locale"=>"dk", "id"=>"5"}
+  [1m[36mInfoPage Load (0.6ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages`[0m
+  [1m[35mMeetingroom Load (0.6ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 5 LIMIT 1
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mMeetingroom Load (1.0ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1
+  [1m[36mNewspost Load (0.7ms)[0m  [1mSELECT `newsposts`.* FROM `newsposts` WHERE `newsposts`.`internal_letter` = 1 ORDER BY created_at desc LIMIT 3 OFFSET 0[0m
+Rendered shared/_menu.html.slim (1.9ms)
+Rendered shared/_news.html.slim (12.5ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages`[0m
+Rendered meetingrooms/show.html.slim within layouts/application (77.9ms)
+Completed 200 OK in 235ms (Views: 107.1ms | ActiveRecord: 4.0ms | Sphinx: 0.0ms)
+
+
+Started GET "/dk/meetingrooms/5/edit" for 127.0.0.1 at 2011-09-12 09:39:24 +0200
+  Processing by MeetingroomsController#edit as HTML
+  Parameters: {"locale"=>"dk", "id"=>"5"}
+  [1m[35mInfoPage Load (0.8ms)[0m  SELECT `info_pages`.* FROM `info_pages`
+  [1m[36mMeetingroom Load (0.5ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 5 LIMIT 1[0m
+  [1m[35mUser Load (1.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mMeetingroom Load (0.8ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1[0m
+  [1m[35mNewspost Load (0.8ms)[0m  SELECT `newsposts`.* FROM `newsposts` WHERE `newsposts`.`internal_letter` = 1 ORDER BY created_at desc LIMIT 3 OFFSET 0
+Rendered meetingrooms/_form.html.slim (14.8ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `info_pages`.* FROM `info_pages`
+Rendered meetingrooms/edit.html.erb within layouts/application (29.5ms)
+Completed 200 OK in 176ms (Views: 63.3ms | ActiveRecord: 4.0ms | Sphinx: 0.0ms)
+
+
+Started POST "/dk/meetingrooms/5" for 127.0.0.1 at 2011-09-12 09:39:36 +0200
+  Processing by MeetingroomsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XxtCmMyOSbsTMkBRkLJr/Tti1HfjY2YE1sJnMEJG9mY=", "meetingroom"=>{"title"=>"Mødelokale 1, Stuen", "body"=>"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.", "color"=>"#888888"}, "locale"=>"dk", "id"=>"5"}
+  [1m[36mInfoPage Load (0.8ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages`[0m
+  [1m[35mMeetingroom Load (0.6ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 5 LIMIT 1
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mMeetingroom Load (0.7ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1
+  [1m[36mNewspost Load (0.8ms)[0m  [1mSELECT `newsposts`.* FROM `newsposts` WHERE `newsposts`.`internal_letter` = 1 ORDER BY created_at desc LIMIT 3 OFFSET 0[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 5 LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mAREL (0.5ms)[0m  UPDATE `meetingrooms` SET `color` = '#888888', `updated_at` = '2011-09-12 07:39:36' WHERE `meetingrooms`.`id` = 5
+[paperclip] Saving attachments.
+  [1m[36mSQL (20.7ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/dk/meetingrooms/5
+Completed 302 Found in 143ms
+
+
+Started GET "/dk/meetingrooms/5" for 127.0.0.1 at 2011-09-12 09:39:36 +0200
+  Processing by MeetingroomsController#show as HTML
+  Parameters: {"locale"=>"dk", "id"=>"5"}
+  [1m[35mInfoPage Load (0.8ms)[0m  SELECT `info_pages`.* FROM `info_pages`
+  [1m[36mMeetingroom Load (0.6ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 5 LIMIT 1[0m
+  [1m[35mUser Load (1.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mMeetingroom Load (0.6ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1[0m
+  [1m[35mNewspost Load (0.9ms)[0m  SELECT `newsposts`.* FROM `newsposts` WHERE `newsposts`.`internal_letter` = 1 ORDER BY created_at desc LIMIT 3 OFFSET 0
+Rendered shared/_menu.html.slim (1.8ms)
+Rendered shared/_news.html.slim (12.3ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `info_pages`.* FROM `info_pages`
+Rendered meetingrooms/show.html.slim within layouts/application (45.2ms)
+Completed 200 OK in 204ms (Views: 50.9ms | ActiveRecord: 4.0ms | Sphinx: 0.0ms)
+
+
+Started GET "/dk/meetingrooms" for 127.0.0.1 at 2011-09-12 09:39:41 +0200
+  Processing by MeetingroomsController#index as HTML
+  Parameters: {"locale"=>"dk"}
+  [1m[36mInfoPage Load (0.7ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages`[0m
+  [1m[35mUser Load (1.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mMeetingroom Load (0.7ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1[0m
+  [1m[35mNewspost Load (0.9ms)[0m  SELECT `newsposts`.* FROM `newsposts` WHERE `newsposts`.`internal_letter` = 1 ORDER BY created_at desc LIMIT 3 OFFSET 0
+Rendered shared/_menu.html.slim (2.0ms)
+  [1m[36mMeetingroom Load (0.9ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms`[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages`[0m
+Rendered meetingrooms/index.html.slim within layouts/application (36.7ms)
+Completed 200 OK in 153ms (Views: 41.5ms | ActiveRecord: 29.7ms | Sphinx: 0.0ms)
+
+
+Started GET "/meetingrooms/5/bookings/new?locale=dk" for 127.0.0.1 at 2011-09-12 09:39:45 +0200
+  Processing by BookingsController#new as HTML
+  Parameters: {"locale"=>"dk", "meetingroom_id"=>"5"}
+  [1m[35mInfoPage Load (0.8ms)[0m  SELECT `info_pages`.* FROM `info_pages`
+  [1m[36mMeetingroom Load (0.9ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 5 LIMIT 1[0m
+  [1m[35mUser Load (1.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mNewspost Load (0.9ms)[0m  [1mSELECT `newsposts`.* FROM `newsposts` WHERE `newsposts`.`internal_letter` = 1 ORDER BY created_at desc LIMIT 3 OFFSET 0[0m
+Rendered shared/_menu.html.slim (1.8ms)
+  [1m[35mMeetingroom Load (1.2ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` ORDER BY title DESC
+  [1m[36mUser Load (1.5ms)[0m  [1mSELECT `users`.* FROM `users` ORDER BY name DESC[0m
+  [1m[35mMeetingroom Load (0.9ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms`
+Rendered bookings/_form.html.slim (19.2ms)
+Rendered shared/_news.html.slim (12.4ms)
+  [1m[36mMeetingroom Load (0.8ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `info_pages`.* FROM `info_pages`
+Rendered bookings/new.html.slim within layouts/application (84.0ms)
+Completed 200 OK in 242ms (Views: 107.5ms | ActiveRecord: 8.1ms | Sphinx: 0.0ms)
+
+
+Started GET "/da/bookings?_=1315813185612&start=1315778400&end=1316383200" for 127.0.0.1 at 2011-09-12 09:39:45 +0200
+  Processing by BookingsController#index as JS
+  Parameters: {"_"=>"1315813185612", "start"=>"1315778400", "end"=>"1316383200", "locale"=>"da"}
+  [1m[36mInfoPage Load (0.8ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages`[0m
+  [1m[35mUser Load (0.9ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mNewspost Load (0.8ms)[0m  [1mSELECT `newsposts`.* FROM `newsposts` WHERE `newsposts`.`internal_letter` = 1 ORDER BY created_at desc LIMIT 3 OFFSET 0[0m
+  [1m[35mMeetingroom Load (0.7ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1
+  [1m[36mBooking Load (0.9ms)[0m  [1mSELECT `bookings`.* FROM `bookings` WHERE (created_at > '2011-09-11 00:00:00') AND (created_at < '2011-09-19 23:59:59')[0m
+  [1m[35mMeetingroom Load (0.7ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 6 LIMIT 1
+  [1m[36mMeetingroom Load (0.9ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 5 LIMIT 1[0m
+  [1m[35mMeetingroom Load (0.8ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 7 LIMIT 1
+Completed 200 OK in 177ms (Views: 61.2ms | ActiveRecord: 6.5ms | Sphinx: 0.0ms)
+
+
+Started GET "/dk/meetingrooms/7" for 127.0.0.1 at 2011-09-12 09:39:48 +0200
+  Processing by MeetingroomsController#show as HTML
+  Parameters: {"locale"=>"dk", "id"=>"7"}
+  [1m[36mInfoPage Load (0.6ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages`[0m
+  [1m[35mMeetingroom Load (0.9ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 7 LIMIT 1
+  [1m[36mUser Load (34.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mMeetingroom Load (1.0ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1
+  [1m[36mNewspost Load (0.7ms)[0m  [1mSELECT `newsposts`.* FROM `newsposts` WHERE `newsposts`.`internal_letter` = 1 ORDER BY created_at desc LIMIT 3 OFFSET 0[0m
+Rendered shared/_menu.html.slim (1.8ms)
+Rendered shared/_news.html.slim (11.8ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages`[0m
+Rendered meetingrooms/show.html.slim within layouts/application (77.0ms)
+Completed 200 OK in 202ms (Views: 82.9ms | ActiveRecord: 37.6ms | Sphinx: 0.0ms)
+
+
+Started GET "/dk/meetingrooms/7/edit" for 127.0.0.1 at 2011-09-12 09:39:52 +0200
+  Processing by MeetingroomsController#edit as HTML
+  Parameters: {"locale"=>"dk", "id"=>"7"}
+  [1m[35mInfoPage Load (0.8ms)[0m  SELECT `info_pages`.* FROM `info_pages`
+  [1m[36mMeetingroom Load (0.7ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 7 LIMIT 1[0m
+  [1m[35mUser Load (1.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mMeetingroom Load (0.8ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1[0m
+  [1m[35mNewspost Load (1.0ms)[0m  SELECT `newsposts`.* FROM `newsposts` WHERE `newsposts`.`internal_letter` = 1 ORDER BY created_at desc LIMIT 3 OFFSET 0
+Rendered meetingrooms/_form.html.slim (14.4ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `info_pages`.* FROM `info_pages`
+Rendered meetingrooms/edit.html.erb within layouts/application (28.3ms)
+Completed 200 OK in 148ms (Views: 34.0ms | ActiveRecord: 4.5ms | Sphinx: 0.0ms)
+
+
+Started POST "/dk/meetingrooms/7" for 127.0.0.1 at 2011-09-12 09:40:00 +0200
+  Processing by MeetingroomsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XxtCmMyOSbsTMkBRkLJr/Tti1HfjY2YE1sJnMEJG9mY=", "meetingroom"=>{"title"=>"Det fede", "body"=>"er der mere at sige=?", "color"=>"#444444"}, "locale"=>"dk", "id"=>"7"}
+  [1m[36mInfoPage Load (0.5ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages`[0m
+  [1m[35mMeetingroom Load (0.8ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 7 LIMIT 1
+  [1m[36mUser Load (1.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mMeetingroom Load (0.8ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1
+  [1m[36mNewspost Load (0.9ms)[0m  [1mSELECT `newsposts`.* FROM `newsposts` WHERE `newsposts`.`internal_letter` = 1 ORDER BY created_at desc LIMIT 3 OFFSET 0[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 7 LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mAREL (0.7ms)[0m  UPDATE `meetingrooms` SET `color` = '#444444', `updated_at` = '2011-09-12 07:40:00' WHERE `meetingrooms`.`id` = 7
+[paperclip] Saving attachments.
+  [1m[36mSQL (0.9ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/dk/meetingrooms/7
+Completed 302 Found in 124ms
+
+
+Started GET "/dk/meetingrooms/7" for 127.0.0.1 at 2011-09-12 09:40:00 +0200
+  Processing by MeetingroomsController#show as HTML
+  Parameters: {"locale"=>"dk", "id"=>"7"}
+  [1m[35mInfoPage Load (0.5ms)[0m  SELECT `info_pages`.* FROM `info_pages`
+  [1m[36mMeetingroom Load (0.9ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 7 LIMIT 1[0m
+  [1m[35mUser Load (1.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mMeetingroom Load (0.7ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1[0m
+  [1m[35mNewspost Load (1.0ms)[0m  SELECT `newsposts`.* FROM `newsposts` WHERE `newsposts`.`internal_letter` = 1 ORDER BY created_at desc LIMIT 3 OFFSET 0
+Rendered shared/_menu.html.slim (1.9ms)
+Rendered shared/_news.html.slim (12.1ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `info_pages`.* FROM `info_pages`
+Rendered meetingrooms/show.html.slim within layouts/application (77.6ms)
+Completed 200 OK in 203ms (Views: 83.4ms | ActiveRecord: 4.0ms | Sphinx: 0.0ms)
+
+
+Started GET "/dk/meetingrooms" for 127.0.0.1 at 2011-09-12 09:40:02 +0200
+  Processing by MeetingroomsController#index as HTML
+  Parameters: {"locale"=>"dk"}
+  [1m[36mInfoPage Load (0.6ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages`[0m
+  [1m[35mUser Load (1.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mMeetingroom Load (0.6ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1[0m
+  [1m[35mNewspost Load (0.7ms)[0m  SELECT `newsposts`.* FROM `newsposts` WHERE `newsposts`.`internal_letter` = 1 ORDER BY created_at desc LIMIT 3 OFFSET 0
+Rendered shared/_menu.html.slim (1.8ms)
+  [1m[36mMeetingroom Load (0.9ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms`[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages`[0m
+Rendered meetingrooms/index.html.slim within layouts/application (36.2ms)
+Completed 200 OK in 154ms (Views: 41.1ms | ActiveRecord: 3.9ms | Sphinx: 0.0ms)
+
+
+Started GET "/meetingrooms/5/bookings/new?locale=dk" for 127.0.0.1 at 2011-09-12 09:40:03 +0200
+  Processing by BookingsController#new as HTML
+  Parameters: {"locale"=>"dk", "meetingroom_id"=>"5"}
+  [1m[35mInfoPage Load (0.6ms)[0m  SELECT `info_pages`.* FROM `info_pages`
+  [1m[36mMeetingroom Load (1.0ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 5 LIMIT 1[0m
+  [1m[35mUser Load (1.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mNewspost Load (0.9ms)[0m  [1mSELECT `newsposts`.* FROM `newsposts` WHERE `newsposts`.`internal_letter` = 1 ORDER BY created_at desc LIMIT 3 OFFSET 0[0m
+Rendered shared/_menu.html.slim (1.8ms)
+  [1m[35mMeetingroom Load (0.9ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` ORDER BY title DESC
+  [1m[36mUser Load (1.3ms)[0m  [1mSELECT `users`.* FROM `users` ORDER BY name DESC[0m
+  [1m[35mMeetingroom Load (0.9ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms`
+Rendered bookings/_form.html.slim (19.3ms)
+Rendered shared/_news.html.slim (11.9ms)
+  [1m[36mMeetingroom Load (0.8ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `info_pages`.* FROM `info_pages`
+Rendered bookings/new.html.slim within layouts/application (51.4ms)
+Completed 200 OK in 187ms (Views: 53.5ms | ActiveRecord: 7.4ms | Sphinx: 0.0ms)
+
+
+Started GET "/da/bookings?_=1315813204267&start=1315778400&end=1316383200" for 127.0.0.1 at 2011-09-12 09:40:04 +0200
+  Processing by BookingsController#index as JS
+  Parameters: {"_"=>"1315813204267", "start"=>"1315778400", "end"=>"1316383200", "locale"=>"da"}
+  [1m[36mInfoPage Load (0.8ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages`[0m
+  [1m[35mUser Load (1.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mNewspost Load (0.9ms)[0m  [1mSELECT `newsposts`.* FROM `newsposts` WHERE `newsposts`.`internal_letter` = 1 ORDER BY created_at desc LIMIT 3 OFFSET 0[0m
+  [1m[35mMeetingroom Load (0.8ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1
+  [1m[36mBooking Load (1.0ms)[0m  [1mSELECT `bookings`.* FROM `bookings` WHERE (created_at > '2011-09-11 00:00:00') AND (created_at < '2011-09-19 23:59:59')[0m
+  [1m[35mMeetingroom Load (0.8ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 6 LIMIT 1
+  [1m[36mMeetingroom Load (0.8ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 5 LIMIT 1[0m
+  [1m[35mMeetingroom Load (0.6ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 7 LIMIT 1
+Completed 200 OK in 140ms (Views: 27.6ms | ActiveRecord: 6.8ms | Sphinx: 0.0ms)
+
+
+Started GET "/meetingrooms/6/bookings/44/edit?locale=da" for 127.0.0.1 at 2011-09-12 09:40:06 +0200
+  Processing by BookingsController#edit as HTML
+  Parameters: {"locale"=>"da", "meetingroom_id"=>"6", "id"=>"44"}
+  [1m[36mInfoPage Load (0.6ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages`[0m
+  [1m[35mMeetingroom Load (0.6ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 6 LIMIT 1
+  [1m[36mBooking Load (0.6ms)[0m  [1mSELECT `bookings`.* FROM `bookings` WHERE `bookings`.`id` = 44 AND (`bookings`.meetingroom_id = 6) LIMIT 1[0m
+  [1m[35mUser Load (1.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mNewspost Load (1.0ms)[0m  [1mSELECT `newsposts`.* FROM `newsposts` WHERE `newsposts`.`internal_letter` = 1 ORDER BY created_at desc LIMIT 3 OFFSET 0[0m
+Rendered shared/_menu.html.slim (1.8ms)
+  [1m[35mMeetingroom Load (1.0ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` ORDER BY title DESC
+  [1m[36mUser Load (1.3ms)[0m  [1mSELECT `users`.* FROM `users` ORDER BY name DESC[0m
+  [1m[35mMeetingroom Load (0.9ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms`
+Rendered bookings/_form.html.slim (28.0ms)
+Rendered shared/_news.html.slim (45.4ms)
+  [1m[36mMeetingroom Load (0.9ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `info_pages`.* FROM `info_pages`
+Rendered bookings/edit.html.slim within layouts/application (93.8ms)
+Completed 200 OK in 226ms (Views: 95.4ms | ActiveRecord: 8.0ms | Sphinx: 0.0ms)
+
+
+Started GET "/da/bookings?_=1315813207149&start=1315778400&end=1316383200" for 127.0.0.1 at 2011-09-12 09:40:07 +0200
+  Processing by BookingsController#index as JS
+  Parameters: {"_"=>"1315813207149", "start"=>"1315778400", "end"=>"1316383200", "locale"=>"da"}
+  [1m[36mInfoPage Load (0.7ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages`[0m
+  [1m[35mUser Load (1.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mNewspost Load (0.9ms)[0m  [1mSELECT `newsposts`.* FROM `newsposts` WHERE `newsposts`.`internal_letter` = 1 ORDER BY created_at desc LIMIT 3 OFFSET 0[0m
+  [1m[35mMeetingroom Load (0.8ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1
+  [1m[36mBooking Load (1.0ms)[0m  [1mSELECT `bookings`.* FROM `bookings` WHERE (created_at > '2011-09-11 00:00:00') AND (created_at < '2011-09-19 23:59:59')[0m
+  [1m[35mMeetingroom Load (0.6ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 6 LIMIT 1
+  [1m[36mMeetingroom Load (0.6ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 5 LIMIT 1[0m
+  [1m[35mMeetingroom Load (0.8ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 7 LIMIT 1
+Completed 200 OK in 179ms (Views: 60.5ms | ActiveRecord: 6.5ms | Sphinx: 0.0ms)
+
+
+Started GET "/da/bookings?_=1315813212355&start=1315778400&end=1316383200" for 127.0.0.1 at 2011-09-12 09:40:12 +0200
+  Processing by BookingsController#index as JS
+  Parameters: {"_"=>"1315813212355", "start"=>"1315778400", "end"=>"1316383200", "locale"=>"da"}
+  [1m[36mInfoPage Load (0.8ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages`[0m
+  [1m[35mUser Load (1.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mNewspost Load (0.9ms)[0m  [1mSELECT `newsposts`.* FROM `newsposts` WHERE `newsposts`.`internal_letter` = 1 ORDER BY created_at desc LIMIT 3 OFFSET 0[0m
+  [1m[35mMeetingroom Load (0.8ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1
+  [1m[36mBooking Load (0.9ms)[0m  [1mSELECT `bookings`.* FROM `bookings` WHERE (created_at > '2011-09-11 00:00:00') AND (created_at < '2011-09-19 23:59:59')[0m
+  [1m[35mMeetingroom Load (0.8ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 6 LIMIT 1
+  [1m[36mMeetingroom Load (0.5ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 5 LIMIT 1[0m
+  [1m[35mMeetingroom Load (0.7ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 7 LIMIT 1
+Completed 200 OK in 140ms (Views: 28.2ms | ActiveRecord: 12.6ms | Sphinx: 0.0ms)
+
+
+Started GET "/dk/meetingrooms/6" for 127.0.0.1 at 2011-09-12 09:40:15 +0200
+  Processing by MeetingroomsController#show as HTML
+  Parameters: {"locale"=>"dk", "id"=>"6"}
+  [1m[36mInfoPage Load (0.7ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages`[0m
+  [1m[35mMeetingroom Load (0.8ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 6 LIMIT 1
+  [1m[36mUser Load (1.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mMeetingroom Load (0.7ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1
+  [1m[36mNewspost Load (0.8ms)[0m  [1mSELECT `newsposts`.* FROM `newsposts` WHERE `newsposts`.`internal_letter` = 1 ORDER BY created_at desc LIMIT 3 OFFSET 0[0m
+Rendered shared/_menu.html.slim (1.8ms)
+Rendered shared/_news.html.slim (12.3ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages`[0m
+Rendered meetingrooms/show.html.slim within layouts/application (44.7ms)
+Completed 200 OK in 169ms (Views: 50.4ms | ActiveRecord: 4.2ms | Sphinx: 0.0ms)
+
+
+Started GET "/dk/meetingrooms/6/edit" for 127.0.0.1 at 2011-09-12 09:40:18 +0200
+  Processing by MeetingroomsController#edit as HTML
+  Parameters: {"locale"=>"dk", "id"=>"6"}
+  [1m[35mInfoPage Load (0.8ms)[0m  SELECT `info_pages`.* FROM `info_pages`
+  [1m[36mMeetingroom Load (0.8ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 6 LIMIT 1[0m
+  [1m[35mUser Load (1.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mMeetingroom Load (0.6ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1[0m
+  [1m[35mNewspost Load (0.9ms)[0m  SELECT `newsposts`.* FROM `newsposts` WHERE `newsposts`.`internal_letter` = 1 ORDER BY created_at desc LIMIT 3 OFFSET 0
+Rendered meetingrooms/_form.html.slim (14.8ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `info_pages`.* FROM `info_pages`
+Rendered meetingrooms/edit.html.erb within layouts/application (28.9ms)
+Completed 200 OK in 148ms (Views: 34.7ms | ActiveRecord: 4.2ms | Sphinx: 0.0ms)
+
+
+Started POST "/dk/meetingrooms/6" for 127.0.0.1 at 2011-09-12 09:40:29 +0200
+  Processing by MeetingroomsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XxtCmMyOSbsTMkBRkLJr/Tti1HfjY2YE1sJnMEJG9mY=", "meetingroom"=>{"title"=>"Luxux", "body"=>"nu med fri bar", "color"=>"#dddddd"}, "locale"=>"dk", "id"=>"6"}
+  [1m[36mInfoPage Load (0.9ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages`[0m
+  [1m[35mMeetingroom Load (0.7ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 6 LIMIT 1
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mMeetingroom Load (0.9ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1
+  [1m[36mNewspost Load (0.9ms)[0m  [1mSELECT `newsposts`.* FROM `newsposts` WHERE `newsposts`.`internal_letter` = 1 ORDER BY created_at desc LIMIT 3 OFFSET 0[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 6 LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mAREL (0.4ms)[0m  UPDATE `meetingrooms` SET `color` = '#dddddd', `updated_at` = '2011-09-12 07:40:30' WHERE `meetingrooms`.`id` = 6
+[paperclip] Saving attachments.
+  [1m[36mSQL (0.7ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/dk/meetingrooms/6
+Completed 302 Found in 124ms
+
+
+Started GET "/dk/meetingrooms/6" for 127.0.0.1 at 2011-09-12 09:40:30 +0200
+  Processing by MeetingroomsController#show as HTML
+  Parameters: {"locale"=>"dk", "id"=>"6"}
+  [1m[35mInfoPage Load (0.8ms)[0m  SELECT `info_pages`.* FROM `info_pages`
+  [1m[36mMeetingroom Load (0.8ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 6 LIMIT 1[0m
+  [1m[35mUser Load (1.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mMeetingroom Load (0.6ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1[0m
+  [1m[35mNewspost Load (0.7ms)[0m  SELECT `newsposts`.* FROM `newsposts` WHERE `newsposts`.`internal_letter` = 1 ORDER BY created_at desc LIMIT 3 OFFSET 0
+Rendered shared/_menu.html.slim (1.8ms)
+Rendered shared/_news.html.slim (12.4ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `info_pages`.* FROM `info_pages`
+Rendered meetingrooms/show.html.slim within layouts/application (79.3ms)
+Completed 200 OK in 203ms (Views: 85.2ms | ActiveRecord: 4.0ms | Sphinx: 0.0ms)
+
+
+Started GET "/meetingrooms/5/bookings/new?locale=dk" for 127.0.0.1 at 2011-09-12 09:40:44 +0200
+  Processing by BookingsController#new as HTML
+  Parameters: {"locale"=>"dk", "meetingroom_id"=>"5"}
+  [1m[36mInfoPage Load (0.9ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages`[0m
+  [1m[35mMeetingroom Load (0.7ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 5 LIMIT 1
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mNewspost Load (0.9ms)[0m  SELECT `newsposts`.* FROM `newsposts` WHERE `newsposts`.`internal_letter` = 1 ORDER BY created_at desc LIMIT 3 OFFSET 0
+Rendered shared/_menu.html.slim (1.8ms)
+  [1m[36mMeetingroom Load (0.8ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` ORDER BY title DESC[0m
+  [1m[35mUser Load (1.4ms)[0m  SELECT `users`.* FROM `users` ORDER BY name DESC
+  [1m[36mMeetingroom Load (0.8ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms`[0m
+Rendered bookings/_form.html.slim (18.9ms)
+Rendered shared/_news.html.slim (12.0ms)
+  [1m[35mMeetingroom Load (0.6ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages`[0m
+Rendered bookings/new.html.slim within layouts/application (50.7ms)
+Completed 200 OK in 187ms (Views: 53.1ms | ActiveRecord: 7.1ms | Sphinx: 0.0ms)
+
+
+Started GET "/da/bookings?_=1315813244560&start=1315778400&end=1316383200" for 127.0.0.1 at 2011-09-12 09:40:44 +0200
+  Processing by BookingsController#index as JS
+  Parameters: {"_"=>"1315813244560", "start"=>"1315778400", "end"=>"1316383200", "locale"=>"da"}
+  [1m[35mInfoPage Load (0.7ms)[0m  SELECT `info_pages`.* FROM `info_pages`
+  [1m[36mUser Load (1.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mNewspost Load (0.9ms)[0m  SELECT `newsposts`.* FROM `newsposts` WHERE `newsposts`.`internal_letter` = 1 ORDER BY created_at desc LIMIT 3 OFFSET 0
+  [1m[36mMeetingroom Load (0.8ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1[0m
+  [1m[35mBooking Load (1.0ms)[0m  SELECT `bookings`.* FROM `bookings` WHERE (created_at > '2011-09-11 00:00:00') AND (created_at < '2011-09-19 23:59:59')
+  [1m[36mMeetingroom Load (0.6ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 6 LIMIT 1[0m
+  [1m[35mMeetingroom Load (0.6ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 5 LIMIT 1
+  [1m[36mMeetingroom Load (0.8ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 7 LIMIT 1[0m
+Completed 200 OK in 142ms (Views: 27.9ms | ActiveRecord: 6.5ms | Sphinx: 0.0ms)
+
+
+Started GET "/dk/meetingrooms" for 127.0.0.1 at 2011-09-12 10:22:40 +0200
+  Processing by MeetingroomsController#index as HTML
+  Parameters: {"locale"=>"dk"}
+  [1m[35mInfoPage Load (0.6ms)[0m  SELECT `info_pages`.* FROM `info_pages`
+  [1m[36mUser Load (1.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mMeetingroom Load (1.0ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1
+  [1m[36mNewspost Load (0.7ms)[0m  [1mSELECT `newsposts`.* FROM `newsposts` WHERE `newsposts`.`internal_letter` = 1 ORDER BY created_at desc LIMIT 3 OFFSET 0[0m
+Rendered shared/_menu.html.slim (1.9ms)
+  [1m[35mMeetingroom Load (0.9ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms`
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `info_pages`.* FROM `info_pages`
+Rendered meetingrooms/index.html.slim within layouts/application (35.7ms)
+Completed 200 OK in 190ms (Views: 65.9ms | ActiveRecord: 4.5ms | Sphinx: 0.0ms)
+
+
+Started GET "/info_pages/1?locale=dk" for 127.0.0.1 at 2011-09-12 10:22:42 +0200
+  Processing by InfoPagesController#show as HTML
+  Parameters: {"locale"=>"dk", "id"=>"1"}
+  [1m[36mInfoPage Load (0.6ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages`[0m
+  [1m[35mNewspost Load (0.9ms)[0m  SELECT `newsposts`.* FROM `newsposts` WHERE `newsposts`.`internal_letter` = 0 ORDER BY created_at desc LIMIT 3 OFFSET 0
+  [1m[36mSQL (0.5ms)[0m  [1mSELECT COUNT(*) FROM `newsposts` WHERE `newsposts`.`internal_letter` = 0[0m
+  [1m[35mInfoPage Load (0.4ms)[0m  SELECT `info_pages`.* FROM `info_pages` WHERE `info_pages`.`id` = 1 LIMIT 1
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Rendered shared/_menu.html.slim (70.8ms)
+Rendered shared/_news.html.slim (11.5ms)
+  [1m[35mMeetingroom Load (0.8ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages`[0m
+Rendered info_pages/show.html.slim within layouts/application (124.5ms)
+Completed 200 OK in 167ms (Views: 128.8ms | ActiveRecord: 4.2ms | Sphinx: 0.0ms)
+
+
+Started GET "/info_pages/1/edit?locale=dk" for 127.0.0.1 at 2011-09-12 10:22:46 +0200
+  Processing by InfoPagesController#edit as HTML
+  Parameters: {"locale"=>"dk", "id"=>"1"}
+  [1m[35mInfoPage Load (0.5ms)[0m  SELECT `info_pages`.* FROM `info_pages`
+  [1m[36mNewspost Load (0.8ms)[0m  [1mSELECT `newsposts`.* FROM `newsposts` WHERE `newsposts`.`internal_letter` = 0 ORDER BY created_at desc LIMIT 3 OFFSET 0[0m
+  [1m[35mSQL (0.5ms)[0m  SELECT COUNT(*) FROM `newsposts` WHERE `newsposts`.`internal_letter` = 0
+  [1m[36mInfoPage Load (0.4ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages` WHERE `info_pages`.`id` = 1 LIMIT 1[0m
+Rendered info_pages/_form.html.slim (8.1ms)
+  [1m[35mUser Load (1.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mMeetingroom Load (0.6ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `info_pages`.* FROM `info_pages`
+Rendered info_pages/edit.html.erb within layouts/application (109.1ms)
+Completed 200 OK in 151ms (Views: 113.4ms | ActiveRecord: 3.8ms | Sphinx: 0.0ms)
+
+
+Started GET "/dk/admin" for 127.0.0.1 at 2011-09-12 10:22:51 +0200
+  Processing by AdminController#index as HTML
+  Parameters: {"locale"=>"dk"}
+  [1m[36mInfoPage Load (0.6ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages`[0m
+  [1m[35mNewspost Load (0.8ms)[0m  SELECT `newsposts`.* FROM `newsposts` WHERE `newsposts`.`internal_letter` = 1 ORDER BY created_at desc LIMIT 3 OFFSET 0
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Rendered shared/_menu.html.slim (69.9ms)
+  [1m[35mUser Load (1.2ms)[0m  SELECT `users`.* FROM `users`
+Rendered shared/_news.html.slim (16.2ms)
+  [1m[36mMeetingroom Load (0.6ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `info_pages`.* FROM `info_pages`
+Rendered admin/index.html.slim within layouts/application (127.5ms)
+Completed 200 OK in 147ms (Views: 128.8ms | ActiveRecord: 4.2ms | Sphinx: 0.0ms)
+DEPRECATION WARNING: Use toplevel init.rb; rails/init.rb is deprecated: /Users/synthmax/Dropbox/marselistvaervej4/vendor/plugins/paperclip/rails/init.rb. (called from <top (required)> at /Users/synthmax/Dropbox/marselistvaervej4/config/environment.rb:5)

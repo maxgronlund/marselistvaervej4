@@ -48,20 +48,23 @@ Overskrift mangler: ”Book Mødelokaler”
 6: 
 Billederne skal være lige store – skriv evt.”kælder” i stedet for ”kælderen”
 
-7:
+7: ?/√
 Interne nyheder – se nyhedsteksten
 
-8:
+8: √
 Vi mangler en praktisk info i menu øverst til højre, når man er logget ind. Her kunne bla. Stå:
 Email alle i huset
 Ugens menu
 Husregler
 Mm
 
+9: ?
 Min konto: se fejl øverst
 
+10: √
 Sorterfunktion i bookingliste
 
+11: √
 Hurtigere vej til kalenderoversigt, så man ikke kun kan se de reserverede mødelokaler, når man er helt inde og booke.
 
 
