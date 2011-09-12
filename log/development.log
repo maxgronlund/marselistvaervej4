@@ -34627,3 +34627,1440 @@ Rendered shared/_news.html.slim (16.2ms)
 Rendered admin/index.html.slim within layouts/application (127.5ms)
 Completed 200 OK in 147ms (Views: 128.8ms | ActiveRecord: 4.2ms | Sphinx: 0.0ms)
 DEPRECATION WARNING: Use toplevel init.rb; rails/init.rb is deprecated: /Users/synthmax/Dropbox/marselistvaervej4/vendor/plugins/paperclip/rails/init.rb. (called from <top (required)> at /Users/synthmax/Dropbox/marselistvaervej4/config/environment.rb:5)
+
+
+Started GET "/" for 127.0.0.1 at 2011-09-12 12:28:01 +0200
+  Processing by HomeController#index as HTML
+  [1m[36mInfoPage Load (0.5ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages`[0m
+  [1m[35mSQL (124.0ms)[0m  SHOW TABLES
+  [1m[36mNewspost Load (0.9ms)[0m  [1mSELECT `newsposts`.* FROM `newsposts` WHERE `newsposts`.`internal_letter` = 0 ORDER BY created_at desc LIMIT 3 OFFSET 0[0m
+  [1m[35mSQL (0.4ms)[0m  SELECT COUNT(*) FROM `newsposts` WHERE `newsposts`.`internal_letter` = 0
+  [1m[36mPage Load (0.7ms)[0m  [1mSELECT `pages`.* FROM `pages` WHERE `pages`.`identity` = 'welcome_dk ' LIMIT 1[0m
+  [1m[35mUser Load (1.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Rendered shared/_menu.html.slim (22.4ms)
+Rendered shared/_news.html.slim (141.4ms)
+DEPRECATION WARNING: RAILS_ENV is deprecated. Please use ::Rails.env. (called from _app_views_layouts_application_html_slim___1875198298327938942_70266417750380__1166240332383203009 at /Users/synthmax/Dropbox/marselistvaervej4/app/views/layouts/application.html.slim:20)
+  [1m[36mMeetingroom Load (0.8ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `info_pages`.* FROM `info_pages`
+Rendered home/index.html.slim within layouts/application (199.1ms)
+Completed 200 OK in 581ms (Views: 213.3ms | ActiveRecord: 128.3ms | Sphinx: 0.0ms)
+DEPRECATION WARNING: Use toplevel init.rb; rails/init.rb is deprecated: /Users/synthmax/Dropbox/marselistvaervej4/vendor/plugins/paperclip/rails/init.rb. (called from <top (required)> at /Users/synthmax/Dropbox/marselistvaervej4/config/environment.rb:5)
+DEPRECATION WARNING: Use toplevel init.rb; rails/init.rb is deprecated: /Users/synthmax/Dropbox/marselistvaervej4/vendor/plugins/paperclip/rails/init.rb. (called from <top (required)> at /Users/synthmax/Dropbox/marselistvaervej4/config/environment.rb:5)
+DEPRECATION WARNING: Use toplevel init.rb; rails/init.rb is deprecated: /Users/synthmax/Dropbox/marselistvaervej4/vendor/plugins/paperclip/rails/init.rb. (called from <top (required)> at /Users/synthmax/Dropbox/marselistvaervej4/config/environment.rb:5)
+DEPRECATION WARNING: Use toplevel init.rb; rails/init.rb is deprecated: /Users/synthmax/Dropbox/marselistvaervej4/vendor/plugins/paperclip/rails/init.rb. (called from <top (required)> at /Users/synthmax/Dropbox/marselistvaervej4/config/environment.rb:5)
+DEPRECATION WARNING: Use toplevel init.rb; rails/init.rb is deprecated: /Users/synthmax/Dropbox/marselistvaervej4/vendor/plugins/paperclip/rails/init.rb. (called from <top (required)> at /Users/synthmax/Dropbox/marselistvaervej4/config/environment.rb:5)
+  [1m[36mSQL (0.5ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.7ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.6ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+Migrating to CreatePages (20101130091642)
+Migrating to DeviseCreateUsers (20101210122355)
+Migrating to AddRoleToUsers (20101210122646)
+Migrating to CreateIllustrations (20101212080325)
+Migrating to AddAttachmentImageToIllustration (20101212080423)
+Migrating to AddNameToUser (20101214002148)
+Migrating to AddHeaderToPage (20101216120541)
+Migrating to AddLableToPage (20101223175838)
+Migrating to CreateComments (20101226223033)
+Migrating to CreateBlogs (20101226230641)
+Migrating to AddAttachmentImageToUser (20101227203942)
+Migrating to AddLanguageToUser (20110110141411)
+Migrating to AddLanguageToPage (20110110171914)
+Migrating to AddGridToUser (20110427075036)
+Migrating to CreateNewsposts (20110611205049)
+Migrating to CreateMeetingrooms (20110612085719)
+Migrating to AddAttachmentImageToMeetionroom (20110612085759)
+Migrating to CreateCompanies (20110612152534)
+Migrating to AddAttachmentImageToCompany (20110612152603)
+Migrating to CreateBookings (20110613203559)
+Migrating to AddUserIdToBooking (20110613205103)
+Migrating to AddAttachmentImageToNewspost (20110614053542)
+Migrating to AddInternalToNewsmail (20110624120802)
+Migrating to CreateCompanyThumbs (20110809111240)
+Migrating to AddAttachmentImageToCompanyThumb (20110809111336)
+Migrating to AddCompanyIdToCompany (20110809114540)
+Migrating to AddMessageToBookings (20110822041143)
+Migrating to AddColorToMeetingrooms (20110823080216)
+Migrating to AddCompanyIdToUser (20110823125615)
+Migrating to CreateInfoPages (20110911163805)
+Migrating to CreatePhotos (20110912103945)
+  [1m[35mSQL (54.2ms)[0m  CREATE TABLE `photos` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `title` varchar(255), `body` text, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20110912103945')[0m
+Migrating to AddAttachmentImageToPhoto (20110912104246)
+  [1m[35mSQL (188.7ms)[0m  ALTER TABLE `photos` ADD `image_file_name` varchar(255)
+  [1m[36mSQL (158.1ms)[0m  [1mALTER TABLE `photos` ADD `image_content_type` varchar(255)[0m
+  [1m[35mSQL (124.7ms)[0m  ALTER TABLE `photos` ADD `image_file_size` int(11)
+  [1m[36mSQL (125.1ms)[0m  [1mALTER TABLE `photos` ADD `image_updated_at` datetime[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20110912104246')
+  [1m[36mSQL (0.8ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.8ms)[0m  SELECT `schema_migrations`.`version` FROM `schema_migrations`
+  [1m[36mSQL (0.4ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (1.7ms)[0m  describe `blogs`
+  [1m[36mSQL (0.7ms)[0m  [1mSHOW KEYS FROM `blogs`[0m
+  [1m[35mSQL (1.6ms)[0m  describe `bookings`
+  [1m[36mSQL (0.7ms)[0m  [1mSHOW KEYS FROM `bookings`[0m
+  [1m[35mSQL (13.1ms)[0m  describe `comments`
+  [1m[36mSQL (0.5ms)[0m  [1mSHOW KEYS FROM `comments`[0m
+  [1m[35mSQL (1.5ms)[0m  describe `companies`
+  [1m[36mSQL (0.6ms)[0m  [1mSHOW KEYS FROM `companies`[0m
+  [1m[35mSQL (1.2ms)[0m  describe `company_thumbs`
+  [1m[36mSQL (0.7ms)[0m  [1mSHOW KEYS FROM `company_thumbs`[0m
+  [1m[35mSQL (1.3ms)[0m  describe `illustrations`
+  [1m[36mSQL (36.0ms)[0m  [1mSHOW KEYS FROM `illustrations`[0m
+  [1m[35mSQL (1.0ms)[0m  describe `info_pages`
+  [1m[36mSQL (0.9ms)[0m  [1mSHOW KEYS FROM `info_pages`[0m
+  [1m[35mSQL (1.2ms)[0m  describe `meetingrooms`
+  [1m[36mSQL (0.5ms)[0m  [1mSHOW KEYS FROM `meetingrooms`[0m
+  [1m[35mSQL (1.5ms)[0m  describe `newsposts`
+  [1m[36mSQL (0.6ms)[0m  [1mSHOW KEYS FROM `newsposts`[0m
+  [1m[35mSQL (1.2ms)[0m  describe `pages`
+  [1m[36mSQL (0.6ms)[0m  [1mSHOW KEYS FROM `pages`[0m
+  [1m[35mSQL (1.2ms)[0m  describe `photos`
+  [1m[36mSQL (0.6ms)[0m  [1mSHOW KEYS FROM `photos`[0m
+  [1m[35mSQL (1.8ms)[0m  describe `users`
+  [1m[36mSQL (0.8ms)[0m  [1mSHOW KEYS FROM `users`[0m
+DEPRECATION WARNING: Use toplevel init.rb; rails/init.rb is deprecated: /Users/synthmax/Dropbox/marselistvaervej4/vendor/plugins/paperclip/rails/init.rb. (called from <top (required)> at /Users/synthmax/Dropbox/marselistvaervej4/config/environment.rb:5)
+DEPRECATION WARNING: Use toplevel init.rb; rails/init.rb is deprecated: /Users/synthmax/Dropbox/marselistvaervej4/vendor/plugins/paperclip/rails/init.rb. (called from <top (required)> at /Users/synthmax/Dropbox/marselistvaervej4/config/environment.rb:5)
+
+
+Started GET "/" for 127.0.0.1 at 2011-09-12 12:45:58 +0200
+  Processing by HomeController#index as HTML
+  [1m[36mInfoPage Load (0.8ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages`[0m
+  [1m[35mSQL (0.9ms)[0m  SHOW TABLES
+  [1m[36mNewspost Load (0.8ms)[0m  [1mSELECT `newsposts`.* FROM `newsposts` WHERE `newsposts`.`internal_letter` = 0 ORDER BY created_at desc LIMIT 3 OFFSET 0[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT COUNT(*) FROM `newsposts` WHERE `newsposts`.`internal_letter` = 0
+  [1m[36mPage Load (0.7ms)[0m  [1mSELECT `pages`.* FROM `pages` WHERE `pages`.`identity` = 'welcome_dk ' LIMIT 1[0m
+  [1m[35mUser Load (1.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Rendered shared/_menu.html.slim (51.4ms)
+Rendered shared/_news.html.slim (22.8ms)
+DEPRECATION WARNING: RAILS_ENV is deprecated. Please use ::Rails.env. (called from _app_views_layouts_application_html_slim___369694731489484906_70249990242460__371464861983689153 at /Users/synthmax/Dropbox/marselistvaervej4/app/views/layouts/application.html.slim:20)
+  [1m[36mMeetingroom Load (0.8ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `info_pages`.* FROM `info_pages`
+Rendered home/index.html.slim within layouts/application (109.7ms)
+Completed 200 OK in 245ms (Views: 112.8ms | ActiveRecord: 5.2ms | Sphinx: 0.0ms)
+
+
+Started GET "/dk/admin" for 127.0.0.1 at 2011-09-12 12:46:02 +0200
+  Processing by AdminController#index as HTML
+  Parameters: {"locale"=>"dk"}
+  [1m[36mInfoPage Load (0.7ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages`[0m
+  [1m[35mNewspost Load (0.6ms)[0m  SELECT `newsposts`.* FROM `newsposts` WHERE `newsposts`.`internal_letter` = 1 ORDER BY created_at desc LIMIT 3 OFFSET 0
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Rendered shared/_menu.html.slim (67.1ms)
+  [1m[35mUser Load (1.2ms)[0m  SELECT `users`.* FROM `users`
+Rendered shared/_news.html.slim (16.1ms)
+  [1m[36mMeetingroom Load (1.0ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `info_pages`.* FROM `info_pages`
+Rendered admin/index.html.slim within layouts/application (126.6ms)
+Completed 200 OK in 147ms (Views: 127.9ms | ActiveRecord: 4.5ms | Sphinx: 0.0ms)
+
+
+Started GET "/gallery/index?locale=dk" for 127.0.0.1 at 2011-09-12 12:46:04 +0200
+  Processing by GalleryController#index as HTML
+  Parameters: {"locale"=>"dk"}
+  [1m[36mInfoPage Load (0.7ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages`[0m
+  [1m[35mUser Load (1.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mMeetingroom Load (0.9ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `info_pages`.* FROM `info_pages`
+Rendered gallery/index.html.erb within layouts/application (98.7ms)
+Completed 200 OK in 109ms (Views: 101.2ms | ActiveRecord: 2.8ms | Sphinx: 0.0ms)
+
+
+Started GET "/dk/admin" for 127.0.0.1 at 2011-09-12 12:46:45 +0200
+  Processing by AdminController#index as HTML
+  Parameters: {"locale"=>"dk"}
+  [1m[36mInfoPage Load (0.6ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages`[0m
+  [1m[35mNewspost Load (1.0ms)[0m  SELECT `newsposts`.* FROM `newsposts` WHERE `newsposts`.`internal_letter` = 1 ORDER BY created_at desc LIMIT 3 OFFSET 0
+  [1m[36mUser Load (1.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Rendered shared/_menu.html.slim (36.1ms)
+  [1m[35mUser Load (1.5ms)[0m  SELECT `users`.* FROM `users`
+Rendered shared/_news.html.slim (50.4ms)
+  [1m[36mMeetingroom Load (0.7ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `info_pages`.* FROM `info_pages`
+Rendered admin/index.html.slim within layouts/application (131.1ms)
+Completed 200 OK in 151ms (Views: 131.8ms | ActiveRecord: 4.9ms | Sphinx: 0.0ms)
+
+
+Started GET "/photos?locale=dk" for 127.0.0.1 at 2011-09-12 12:46:48 +0200
+  Processing by PhotosController#index as HTML
+  Parameters: {"locale"=>"dk"}
+  [1m[36mInfoPage Load (0.7ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages`[0m
+  [1m[35mPhoto Load (0.5ms)[0m  SELECT `photos`.* FROM `photos`
+  [1m[36mUser Load (9.9ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mMeetingroom Load (0.6ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages`[0m
+Rendered photos/index.html.erb within layouts/application (109.4ms)
+Completed 200 OK in 123ms (Views: 105.0ms | ActiveRecord: 11.8ms | Sphinx: 0.0ms)
+
+
+Started GET "/photos/new?locale=dk" for 127.0.0.1 at 2011-09-12 12:46:50 +0200
+  Processing by PhotosController#new as HTML
+  Parameters: {"locale"=>"dk"}
+  [1m[35mInfoPage Load (0.7ms)[0m  SELECT `info_pages`.* FROM `info_pages`
+Rendered photos/_form.html.erb (7.8ms)
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mMeetingroom Load (0.8ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages`[0m
+Rendered photos/new.html.erb within layouts/application (111.1ms)
+Completed 200 OK in 146ms (Views: 115.3ms | ActiveRecord: 2.5ms | Sphinx: 0.0ms)
+
+
+Started GET "/dk/users/1" for 127.0.0.1 at 2011-09-12 12:47:07 +0200
+  Processing by UsersController#show as HTML
+  Parameters: {"locale"=>"dk", "id"=>"1"}
+  [1m[35mInfoPage Load (0.6ms)[0m  SELECT `info_pages`.* FROM `info_pages`
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mNewspost Load (0.7ms)[0m  [1mSELECT `newsposts`.* FROM `newsposts` WHERE `newsposts`.`internal_letter` = 1 ORDER BY created_at desc LIMIT 3 OFFSET 0[0m
+Rendered shared/_menu.html.slim (2.0ms)
+  [1m[35mCompany Load (0.6ms)[0m  SELECT `companies`.* FROM `companies` WHERE `companies`.`id` = 2 LIMIT 1
+Rendered shared/_news.html.slim (12.2ms)
+  [1m[36mMeetingroom Load (0.7ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `info_pages`.* FROM `info_pages`
+Rendered users/show.html.slim within layouts/application (111.4ms)
+Completed 200 OK in 215ms (Views: 116.5ms | ActiveRecord: 3.7ms | Sphinx: 0.0ms)
+
+
+Started GET "/dk/admin" for 127.0.0.1 at 2011-09-12 12:50:20 +0200
+  Processing by AdminController#index as HTML
+  Parameters: {"locale"=>"dk"}
+  [1m[36mInfoPage Load (0.8ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages`[0m
+  [1m[35mNewspost Load (0.9ms)[0m  SELECT `newsposts`.* FROM `newsposts` WHERE `newsposts`.`internal_letter` = 1 ORDER BY created_at desc LIMIT 3 OFFSET 0
+  [1m[36mUser Load (1.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Rendered shared/_menu.html.slim (35.7ms)
+  [1m[35mUser Load (1.5ms)[0m  SELECT `users`.* FROM `users`
+Rendered shared/_news.html.slim (16.0ms)
+  [1m[36mMeetingroom Load (0.7ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `info_pages`.* FROM `info_pages`
+Rendered admin/index.html.slim within layouts/application (127.8ms)
+Completed 200 OK in 181ms (Views: 128.5ms | ActiveRecord: 4.9ms | Sphinx: 0.0ms)
+
+
+Started GET "/photos?locale=dk" for 127.0.0.1 at 2011-09-12 12:50:22 +0200
+  Processing by PhotosController#index as HTML
+  Parameters: {"locale"=>"dk"}
+  [1m[36mInfoPage Load (0.6ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages`[0m
+  [1m[35mPhoto Load (0.7ms)[0m  SELECT `photos`.* FROM `photos`
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mMeetingroom Load (0.9ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages`[0m
+Rendered photos/index.html.erb within layouts/application (103.5ms)
+Completed 200 OK in 170ms (Views: 107.4ms | ActiveRecord: 3.3ms | Sphinx: 0.0ms)
+
+
+Started GET "/photos/new?locale=dk" for 127.0.0.1 at 2011-09-12 12:51:07 +0200
+  Processing by PhotosController#new as HTML
+  Parameters: {"locale"=>"dk"}
+  [1m[35mInfoPage Load (0.6ms)[0m  SELECT `info_pages`.* FROM `info_pages`
+Rendered photos/_form.html.erb (7.2ms)
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mMeetingroom Load (0.9ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages`[0m
+Rendered photos/new.html.erb within layouts/application (111.9ms)
+Completed 200 OK in 183ms (Views: 115.7ms | ActiveRecord: 2.6ms | Sphinx: 0.0ms)
+
+
+Started POST "/photos?locale=dk" for 127.0.0.1 at 2011-09-12 12:51:19 +0200
+  Processing by PhotosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XxtCmMyOSbsTMkBRkLJr/Tti1HfjY2YE1sJnMEJG9mY=", "photo"=>{"title"=>"test", "body"=>"bla bla", "image"=>"portraits_of_celebrities_640_16.jpg"}, "commit"=>"Create Photo", "locale"=>"dk"}
+  [1m[35mInfoPage Load (0.9ms)[0m  SELECT `info_pages`.* FROM `info_pages`
+  [1m[36mSQL (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (2.3ms)[0m  describe `photos`
+  [1m[36mAREL (0.4ms)[0m  [1mINSERT INTO `photos` (`title`, `body`, `created_at`, `updated_at`, `image_file_name`, `image_content_type`, `image_file_size`, `image_updated_at`) VALUES ('test', 'bla bla', '2011-09-12 10:51:19', '2011-09-12 10:51:19', NULL, NULL, NULL, NULL)[0m
+[paperclip] Saving attachments.
+  [1m[35mSQL (0.7ms)[0m  COMMIT
+Redirected to http://localhost:3000/photos/1?locale=dk
+Completed 302 Found in 122ms
+
+
+Started GET "/photos/1?locale=dk" for 127.0.0.1 at 2011-09-12 12:51:19 +0200
+  Processing by PhotosController#show as HTML
+  Parameters: {"locale"=>"dk", "id"=>"1"}
+  [1m[36mInfoPage Load (0.7ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages`[0m
+  [1m[35mPhoto Load (0.5ms)[0m  SELECT `photos`.* FROM `photos` WHERE `photos`.`id` = 1 LIMIT 1
+  [1m[36mUser Load (1.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mMeetingroom Load (0.8ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages`[0m
+Rendered photos/show.html.erb within layouts/application (108.5ms)
+Completed 200 OK in 144ms (Views: 112.4ms | ActiveRecord: 3.2ms | Sphinx: 0.0ms)
+
+
+Started GET "/gallery/index" for 127.0.0.1 at 2011-09-12 13:12:47 +0200
+  Processing by GalleryController#index as HTML
+  [1m[35mInfoPage Load (0.5ms)[0m  SELECT `info_pages`.* FROM `info_pages`
+  [1m[36mPhoto Load (0.8ms)[0m  [1mSELECT `photos`.* FROM `photos`[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `photos`.* FROM `photos`
+  [1m[36mUser Load (1.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mMeetingroom Load (0.9ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages`[0m
+Rendered gallery/index.html.erb within layouts/application (108.6ms)
+Completed 200 OK in 125ms (Views: 110.5ms | ActiveRecord: 3.5ms | Sphinx: 0.0ms)
+
+
+Started GET "/images/fallback/default_illustration_mini.gif" for 127.0.0.1 at 2011-09-12 13:12:47 +0200
+
+ActionController::RoutingError (No route matches "/images/fallback/default_illustration_mini.gif"):
+  
+
+Rendered /Users/synthmax/.rvm/gems/ruby-1.9.2-p290@railspre/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+DEPRECATION WARNING: Use toplevel init.rb; rails/init.rb is deprecated: /Users/synthmax/Dropbox/marselistvaervej4/vendor/plugins/paperclip/rails/init.rb. (called from <top (required)> at /Users/synthmax/Dropbox/marselistvaervej4/config/environment.rb:5)
+
+
+Started GET "/photos/1" for 127.0.0.1 at 2011-09-12 13:14:20 +0200
+  Processing by PhotosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mInfoPage Load (0.8ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages`[0m
+  [1m[35mSQL (0.8ms)[0m  SHOW TABLES
+  [1m[36mPhoto Load (0.9ms)[0m  [1mSELECT `photos`.* FROM `photos` WHERE `photos`.`id` = 1 LIMIT 1[0m
+Rendered photos/show.html.erb within layouts/application (41.9ms)
+Completed   in 58ms
+
+ActionView::Template::Error (undefined local variable or method `photo' for #<#<Class:0x007ffea1711950>:0x007ffea170db70>):
+    10:   <%= @photo.body %>
+    11: </p>
+    12: 
+    13: <%= photo.image.url(:original) %>
+    14: 
+    15: 
+    16: <%= link_to 'Edit', edit_photo_path(@photo) %> |
+  app/views/photos/show.html.erb:13:in `_app_views_photos_show_html_erb__4529733774131000856_70365803468800_3355170791865976485'
+  app/middleware/flash_session_cookie_middleware.rb:16:in `call'
+
+Rendered /Users/synthmax/.rvm/gems/ruby-1.9.2-p290@railspre/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+Rendered /Users/synthmax/.rvm/gems/ruby-1.9.2-p290@railspre/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.6ms)
+Rendered /Users/synthmax/.rvm/gems/ruby-1.9.2-p290@railspre/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (7.5ms)
+
+
+Started GET "/photos/1" for 127.0.0.1 at 2011-09-12 13:15:04 +0200
+  Processing by PhotosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mInfoPage Load (0.5ms)[0m  SELECT `info_pages`.* FROM `info_pages`
+  [1m[36mPhoto Load (0.5ms)[0m  [1mSELECT `photos`.* FROM `photos` WHERE `photos`.`id` = 1 LIMIT 1[0m
+DEPRECATION WARNING: RAILS_ENV is deprecated. Please use ::Rails.env. (called from _app_views_layouts_application_html_slim__803783526102813505_70365802316080_3355170791865976485 at /Users/synthmax/Dropbox/marselistvaervej4/app/views/layouts/application.html.slim:21)
+  [1m[35mUser Load (1.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mMeetingroom Load (0.7ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `info_pages`.* FROM `info_pages`
+Rendered photos/show.html.erb within layouts/application (119.3ms)
+Completed 200 OK in 155ms (Views: 123.2ms | ActiveRecord: 2.8ms | Sphinx: 0.0ms)
+
+
+Started GET "/photos/1/edit?locale=dk" for 127.0.0.1 at 2011-09-12 13:15:10 +0200
+  Processing by PhotosController#edit as HTML
+  Parameters: {"locale"=>"dk", "id"=>"1"}
+  [1m[36mInfoPage Load (0.8ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages`[0m
+  [1m[35mPhoto Load (0.5ms)[0m  SELECT `photos`.* FROM `photos` WHERE `photos`.`id` = 1 LIMIT 1
+Rendered photos/_form.html.erb (9.6ms)
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mMeetingroom Load (0.8ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages`[0m
+Rendered photos/edit.html.erb within layouts/application (110.7ms)
+Completed 200 OK in 146ms (Views: 114.7ms | ActiveRecord: 3.1ms | Sphinx: 0.0ms)
+
+
+Started POST "/photos/1?locale=dk" for 127.0.0.1 at 2011-09-12 13:15:14 +0200
+  Processing by PhotosController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XxtCmMyOSbsTMkBRkLJr/Tti1HfjY2YE1sJnMEJG9mY=", "photo"=>{"title"=>"test", "body"=>"bla bla", "image"=>"portraits_of_celebrities_640_09.jpg"}, "commit"=>"Update Photo", "locale"=>"dk", "id"=>"1"}
+  [1m[35mInfoPage Load (0.7ms)[0m  SELECT `info_pages`.* FROM `info_pages`
+  [1m[36mPhoto Load (0.7ms)[0m  [1mSELECT `photos`.* FROM `photos` WHERE `photos`.`id` = 1 LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  BEGIN
+[paperclip] Saving attachments.
+  [1m[36mSQL (0.1ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/photos/1?locale=dk
+Completed 302 Found in 46ms
+
+
+Started GET "/photos/1?locale=dk" for 127.0.0.1 at 2011-09-12 13:15:14 +0200
+  Processing by PhotosController#show as HTML
+  Parameters: {"locale"=>"dk", "id"=>"1"}
+  [1m[35mInfoPage Load (0.6ms)[0m  SELECT `info_pages`.* FROM `info_pages`
+  [1m[36mPhoto Load (0.5ms)[0m  [1mSELECT `photos`.* FROM `photos` WHERE `photos`.`id` = 1 LIMIT 1[0m
+  [1m[35mUser Load (1.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mMeetingroom Load (0.8ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `info_pages`.* FROM `info_pages`
+Rendered photos/show.html.erb within layouts/application (114.4ms)
+Completed 200 OK in 182ms (Views: 118.5ms | ActiveRecord: 2.9ms | Sphinx: 0.0ms)
+DEPRECATION WARNING: Use toplevel init.rb; rails/init.rb is deprecated: /Users/synthmax/Dropbox/marselistvaervej4/vendor/plugins/paperclip/rails/init.rb. (called from <top (required)> at /Users/synthmax/Dropbox/marselistvaervej4/config/environment.rb:5)
+
+
+Started GET "/photos/1?locale=dk" for 127.0.0.1 at 2011-09-12 13:15:54 +0200
+  Processing by PhotosController#show as HTML
+  Parameters: {"locale"=>"dk", "id"=>"1"}
+  [1m[36mInfoPage Load (0.7ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages`[0m
+  [1m[35mSQL (0.8ms)[0m  SHOW TABLES
+  [1m[36mPhoto Load (0.8ms)[0m  [1mSELECT `photos`.* FROM `photos` WHERE `photos`.`id` = 1 LIMIT 1[0m
+DEPRECATION WARNING: RAILS_ENV is deprecated. Please use ::Rails.env. (called from _app_views_layouts_application_html_slim__1681592492290335491_70245485643180_1258692234034893042 at /Users/synthmax/Dropbox/marselistvaervej4/app/views/layouts/application.html.slim:21)
+  [1m[35mUser Load (1.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mMeetingroom Load (0.9ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `info_pages`.* FROM `info_pages`
+Rendered photos/show.html.erb within layouts/application (105.5ms)
+Completed 200 OK in 122ms (Views: 109.4ms | ActiveRecord: 4.4ms | Sphinx: 0.0ms)
+
+
+Started GET "/photos/1/edit?locale=dk" for 127.0.0.1 at 2011-09-12 13:15:59 +0200
+  Processing by PhotosController#edit as HTML
+  Parameters: {"locale"=>"dk", "id"=>"1"}
+  [1m[36mInfoPage Load (0.7ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages`[0m
+  [1m[35mPhoto Load (0.8ms)[0m  SELECT `photos`.* FROM `photos` WHERE `photos`.`id` = 1 LIMIT 1
+Rendered photos/_form.html.erb (9.6ms)
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mMeetingroom Load (0.7ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages`[0m
+Rendered photos/edit.html.erb within layouts/application (108.5ms)
+Completed 200 OK in 144ms (Views: 112.4ms | ActiveRecord: 3.1ms | Sphinx: 0.0ms)
+
+
+Started GET "/photos/1/edit?locale=dk" for 127.0.0.1 at 2011-09-12 13:18:12 +0200
+  Processing by PhotosController#edit as HTML
+  Parameters: {"locale"=>"dk", "id"=>"1"}
+  [1m[35mInfoPage Load (0.9ms)[0m  SELECT `info_pages`.* FROM `info_pages`
+  [1m[36mPhoto Load (0.5ms)[0m  [1mSELECT `photos`.* FROM `photos` WHERE `photos`.`id` = 1 LIMIT 1[0m
+Rendered photos/_form.html.erb (40.6ms)
+  [1m[35mUser Load (1.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mMeetingroom Load (0.8ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `info_pages`.* FROM `info_pages`
+Rendered photos/edit.html.erb within layouts/application (141.8ms)
+Completed 200 OK in 177ms (Views: 145.4ms | ActiveRecord: 3.4ms | Sphinx: 0.0ms)
+
+
+Started POST "/photos/1?locale=dk" for 127.0.0.1 at 2011-09-12 13:18:17 +0200
+  Processing by PhotosController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XxtCmMyOSbsTMkBRkLJr/Tti1HfjY2YE1sJnMEJG9mY=", "photo"=>{"title"=>"test", "body"=>"bla bla", "image"=>"portraits_of_celebrities_640_16.jpg"}, "commit"=>"Update Photo", "locale"=>"dk", "id"=>"1"}
+  [1m[36mInfoPage Load (0.7ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages`[0m
+  [1m[35mPhoto Load (0.6ms)[0m  SELECT `photos`.* FROM `photos` WHERE `photos`.`id` = 1 LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mBEGIN[0m
+[paperclip] Saving attachments.
+  [1m[35mSQL (0.2ms)[0m  COMMIT
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+[paperclip] Saving attachments.
+  [1m[35mSQL (0.1ms)[0m  COMMIT
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+[paperclip] Saving attachments.
+  [1m[35mSQL (0.1ms)[0m  COMMIT
+Redirected to http://localhost:3000/photos/1?locale=dk
+Completed 302 Found in 97ms
+
+
+Started GET "/photos/1?locale=dk" for 127.0.0.1 at 2011-09-12 13:18:17 +0200
+  Processing by PhotosController#show as HTML
+  Parameters: {"locale"=>"dk", "id"=>"1"}
+  [1m[36mInfoPage Load (0.8ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages`[0m
+  [1m[35mPhoto Load (0.8ms)[0m  SELECT `photos`.* FROM `photos` WHERE `photos`.`id` = 1 LIMIT 1
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mMeetingroom Load (0.9ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages`[0m
+Rendered photos/show.html.erb within layouts/application (138.4ms)
+Completed 200 OK in 175ms (Views: 142.5ms | ActiveRecord: 3.4ms | Sphinx: 0.0ms)
+
+
+Started GET "/photos/1/edit?locale=dk" for 127.0.0.1 at 2011-09-12 13:18:25 +0200
+  Processing by PhotosController#edit as HTML
+  Parameters: {"locale"=>"dk", "id"=>"1"}
+  [1m[35mInfoPage Load (0.6ms)[0m  SELECT `info_pages`.* FROM `info_pages`
+  [1m[36mPhoto Load (0.6ms)[0m  [1mSELECT `photos`.* FROM `photos` WHERE `photos`.`id` = 1 LIMIT 1[0m
+Rendered photos/_form.html.erb (41.7ms)
+  [1m[35mUser Load (0.9ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mMeetingroom Load (0.7ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `info_pages`.* FROM `info_pages`
+Rendered photos/edit.html.erb within layouts/application (142.8ms)
+Completed 200 OK in 177ms (Views: 146.7ms | ActiveRecord: 2.7ms | Sphinx: 0.0ms)
+
+
+Started POST "/photos/1?locale=dk" for 127.0.0.1 at 2011-09-12 13:18:29 +0200
+  Processing by PhotosController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XxtCmMyOSbsTMkBRkLJr/Tti1HfjY2YE1sJnMEJG9mY=", "photo"=>{"title"=>"test", "body"=>"bla bla", "image"=>"portraits_of_celebrities_640_15.jpg"}, "commit"=>"Update Photo", "locale"=>"dk", "id"=>"1"}
+  [1m[36mInfoPage Load (0.6ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages`[0m
+  [1m[35mPhoto Load (0.6ms)[0m  SELECT `photos`.* FROM `photos` WHERE `photos`.`id` = 1 LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+[paperclip] Saving attachments.
+  [1m[35mSQL (0.3ms)[0m  COMMIT
+  [1m[36mSQL (0.3ms)[0m  [1mBEGIN[0m
+[paperclip] Saving attachments.
+  [1m[35mSQL (0.1ms)[0m  COMMIT
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+[paperclip] Saving attachments.
+  [1m[35mSQL (0.1ms)[0m  COMMIT
+Redirected to http://localhost:3000/photos/1?locale=dk
+Completed 302 Found in 76ms
+
+
+Started GET "/photos/1?locale=dk" for 127.0.0.1 at 2011-09-12 13:18:29 +0200
+  Processing by PhotosController#show as HTML
+  Parameters: {"locale"=>"dk", "id"=>"1"}
+  [1m[36mInfoPage Load (0.7ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages`[0m
+  [1m[35mPhoto Load (0.4ms)[0m  SELECT `photos`.* FROM `photos` WHERE `photos`.`id` = 1 LIMIT 1
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mMeetingroom Load (0.8ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages`[0m
+Rendered photos/show.html.erb within layouts/application (106.6ms)
+Completed 200 OK in 142ms (Views: 110.3ms | ActiveRecord: 3.1ms | Sphinx: 0.0ms)
+
+
+Started GET "/photos/1?locale=dk" for 127.0.0.1 at 2011-09-12 13:43:12 +0200
+  Processing by PhotosController#show as HTML
+  Parameters: {"locale"=>"dk", "id"=>"1"}
+  [1m[35mInfoPage Load (0.7ms)[0m  SELECT `info_pages`.* FROM `info_pages`
+  [1m[36mPhoto Load (0.6ms)[0m  [1mSELECT `photos`.* FROM `photos` WHERE `photos`.`id` = 1 LIMIT 1[0m
+  [1m[35mUser Load (1.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mMeetingroom Load (0.8ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `info_pages`.* FROM `info_pages`
+Rendered photos/show.html.erb within layouts/application (105.4ms)
+Completed 200 OK in 142ms (Views: 109.4ms | ActiveRecord: 3.2ms | Sphinx: 0.0ms)
+
+
+Started GET "/photos/1?locale=dk" for 127.0.0.1 at 2011-09-12 13:43:23 +0200
+  Processing by PhotosController#show as HTML
+  Parameters: {"locale"=>"dk", "id"=>"1"}
+  [1m[36mInfoPage Load (0.5ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages`[0m
+  [1m[35mPhoto Load (0.7ms)[0m  SELECT `photos`.* FROM `photos` WHERE `photos`.`id` = 1 LIMIT 1
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mMeetingroom Load (0.7ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages`[0m
+Rendered photos/show.html.erb within layouts/application (149.2ms)
+Completed 200 OK in 186ms (Views: 153.5ms | ActiveRecord: 2.9ms | Sphinx: 0.0ms)
+
+
+Started GET "/photos/1/edit?locale=dk" for 127.0.0.1 at 2011-09-12 13:43:27 +0200
+  Processing by PhotosController#edit as HTML
+  Parameters: {"locale"=>"dk", "id"=>"1"}
+  [1m[35mInfoPage Load (0.7ms)[0m  SELECT `info_pages`.* FROM `info_pages`
+  [1m[36mPhoto Load (0.6ms)[0m  [1mSELECT `photos`.* FROM `photos` WHERE `photos`.`id` = 1 LIMIT 1[0m
+Rendered photos/_form.html.erb (9.6ms)
+  [1m[35mUser Load (1.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mMeetingroom Load (0.9ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `info_pages`.* FROM `info_pages`
+Rendered photos/edit.html.erb within layouts/application (109.9ms)
+Completed 200 OK in 177ms (Views: 113.9ms | ActiveRecord: 3.2ms | Sphinx: 0.0ms)
+
+
+Started POST "/photos/1?locale=dk" for 127.0.0.1 at 2011-09-12 13:43:33 +0200
+  Processing by PhotosController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XxtCmMyOSbsTMkBRkLJr/Tti1HfjY2YE1sJnMEJG9mY=", "photo"=>{"title"=>"test", "body"=>"bla bla", "image"=>"portraits_of_celebrities_640_11.jpg"}, "commit"=>"Update Photo", "locale"=>"dk", "id"=>"1"}
+  [1m[36mInfoPage Load (0.5ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages`[0m
+  [1m[35mPhoto Load (0.4ms)[0m  SELECT `photos`.* FROM `photos` WHERE `photos`.`id` = 1 LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+[paperclip] Saving attachments.
+  [1m[35mSQL (0.2ms)[0m  COMMIT
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+[paperclip] Saving attachments.
+  [1m[35mSQL (0.1ms)[0m  COMMIT
+  [1m[36mSQL (0.2ms)[0m  [1mBEGIN[0m
+[paperclip] Saving attachments.
+  [1m[35mSQL (0.1ms)[0m  COMMIT
+Redirected to http://localhost:3000/photos/1?locale=dk
+Completed 302 Found in 78ms
+
+
+Started GET "/photos/1?locale=dk" for 127.0.0.1 at 2011-09-12 13:43:33 +0200
+  Processing by PhotosController#show as HTML
+  Parameters: {"locale"=>"dk", "id"=>"1"}
+  [1m[36mInfoPage Load (0.7ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages`[0m
+  [1m[35mPhoto Load (0.6ms)[0m  SELECT `photos`.* FROM `photos` WHERE `photos`.`id` = 1 LIMIT 1
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mMeetingroom Load (0.8ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages`[0m
+Rendered photos/show.html.erb within layouts/application (114.3ms)
+Completed 200 OK in 150ms (Views: 118.4ms | ActiveRecord: 3.1ms | Sphinx: 0.0ms)
+
+
+Started GET "/photos/1/edit?locale=dk" for 127.0.0.1 at 2011-09-12 13:51:33 +0200
+  Processing by PhotosController#edit as HTML
+  Parameters: {"locale"=>"dk", "id"=>"1"}
+  [1m[35mInfoPage Load (0.6ms)[0m  SELECT `info_pages`.* FROM `info_pages`
+  [1m[36mPhoto Load (0.4ms)[0m  [1mSELECT `photos`.* FROM `photos` WHERE `photos`.`id` = 1 LIMIT 1[0m
+Rendered photos/_form.html.erb (40.3ms)
+  [1m[35mUser Load (1.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mMeetingroom Load (0.9ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `info_pages`.* FROM `info_pages`
+Rendered photos/edit.html.erb within layouts/application (141.7ms)
+Completed 200 OK in 176ms (Views: 145.3ms | ActiveRecord: 3.1ms | Sphinx: 0.0ms)
+
+
+Started POST "/photos/1?locale=dk" for 127.0.0.1 at 2011-09-12 13:51:40 +0200
+  Processing by PhotosController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XxtCmMyOSbsTMkBRkLJr/Tti1HfjY2YE1sJnMEJG9mY=", "photo"=>{"title"=>"test", "body"=>"bla bla", "image"=>"portraits_of_celebrities_640_13.jpg"}, "commit"=>"Update Photo", "locale"=>"dk", "id"=>"1"}
+  [1m[36mInfoPage Load (0.6ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages`[0m
+  [1m[35mPhoto Load (0.7ms)[0m  SELECT `photos`.* FROM `photos` WHERE `photos`.`id` = 1 LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mBEGIN[0m
+[paperclip] Saving attachments.
+  [1m[35mSQL (0.2ms)[0m  COMMIT
+Redirected to http://localhost:3000/photos/1?locale=dk
+Completed 302 Found in 77ms
+
+
+Started GET "/photos/1?locale=dk" for 127.0.0.1 at 2011-09-12 13:51:40 +0200
+  Processing by PhotosController#show as HTML
+  Parameters: {"locale"=>"dk", "id"=>"1"}
+  [1m[36mInfoPage Load (0.5ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages`[0m
+  [1m[35mPhoto Load (0.8ms)[0m  SELECT `photos`.* FROM `photos` WHERE `photos`.`id` = 1 LIMIT 1
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mMeetingroom Load (0.8ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages`[0m
+Rendered photos/show.html.erb within layouts/application (107.8ms)
+Completed 200 OK in 143ms (Views: 111.8ms | ActiveRecord: 3.1ms | Sphinx: 0.0ms)
+
+
+Started GET "/photos/1/edit?locale=dk" for 127.0.0.1 at 2011-09-12 13:52:22 +0200
+  Processing by PhotosController#edit as HTML
+  Parameters: {"locale"=>"dk", "id"=>"1"}
+  [1m[35mInfoPage Load (0.9ms)[0m  SELECT `info_pages`.* FROM `info_pages`
+  [1m[36mPhoto Load (0.8ms)[0m  [1mSELECT `photos`.* FROM `photos` WHERE `photos`.`id` = 1 LIMIT 1[0m
+ERROR: compiling _app_views_photos__form_html_erb__1823992473547871975_70245484376140__2525337669918528388 RAISED /Users/synthmax/Dropbox/marselistvaervej4/app/views/photos/_form.html.erb:2: syntax error, unexpected '<'
+  <% if @photo.errors.any? );@output_buffer.safe_concat('
+   ^
+/Users/synthmax/Dropbox/marselistvaervej4/app/views/photos/_form.html.erb:2: syntax error, unexpected tIVAR, expecting keyword_end
+  <% if @photo.errors.any? );@output_buffer.safe_concat('
+              ^
+/Users/synthmax/Dropbox/marselistvaervej4/app/views/photos/_form.html.erb:2: syntax error, unexpected ')', expecting keyword_end
+  <% if @photo.errors.any? );@output_buffer.safe_concat('
+                            ^
+/Users/synthmax/Dropbox/marselistvaervej4/app/views/photos/_form.html.erb:30: syntax error, unexpected keyword_end, expecting ')'
+'); end 
+       ^
+/Users/synthmax/Dropbox/marselistvaervej4/app/views/photos/_form.html.erb:32: syntax error, unexpected keyword_ensure, expecting ')'
+/Users/synthmax/Dropbox/marselistvaervej4/app/views/photos/_form.html.erb:34: syntax error, unexpected keyword_end, expecting ')'
+Function body:           def _app_views_photos__form_html_erb__1823992473547871975_70245484376140__2525337669918528388(local_assigns)
+            _old_virtual_path, @_virtual_path = @_virtual_path, "photos/_form";_old_output_buffer = @output_buffer;form = local_assigns[:form];;@output_buffer = ActionView::OutputBuffer.new;@output_buffer.append= ( form_for(@photo, :html => { :multipart => true }) do |f|
+  <% if @photo.errors.any? );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('    <div id="error_explanation">
+      <h2>');@output_buffer.append= ( pluralize(@photo.errors.count, "error") );@output_buffer.safe_concat(' prohibited this photo from being saved:</h2>
+
+      <ul>
+');@output_buffer.append_if_string=        @photo.errors.full_messages.each do |msg| 
+@output_buffer.safe_concat('        <li>');@output_buffer.append= ( msg );@output_buffer.safe_concat('</li>
+');       end 
+@output_buffer.safe_concat('      </ul>
+    </div>
+');   end 
+@output_buffer.safe_concat('
+  <div class="field">
+    ');@output_buffer.append= ( f.label :title );@output_buffer.safe_concat('<br />
+    ');@output_buffer.append= ( f.text_field :title );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  </div>
+  <div class="field">
+    ');@output_buffer.append= ( f.label :body );@output_buffer.safe_concat('<br />
+    ');@output_buffer.append= ( f.text_area :body );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  </div>
+
+  <div class="field">
+  	billed<br />
+  	');@output_buffer.append= ( f.file_field :image );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  </div>
+  <div class="actions">
+    ');@output_buffer.append= ( f.submit );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  </div>
+'); end 
+@output_buffer.to_s
+          ensure
+            @_virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+Backtrace: /Users/synthmax/.rvm/gems/ruby-1.9.2-p290@railspre/gems/actionpack-3.0.7/lib/action_view/template.rb:255:in `module_eval'
+/Users/synthmax/.rvm/gems/ruby-1.9.2-p290@railspre/gems/actionpack-3.0.7/lib/action_view/template.rb:255:in `compile'
+/Users/synthmax/.rvm/gems/ruby-1.9.2-p290@railspre/gems/actionpack-3.0.7/lib/action_view/template.rb:134:in `block in render'
+/Users/synthmax/.rvm/gems/ruby-1.9.2-p290@railspre/gems/activesupport-3.0.7/lib/active_support/notifications.rb:54:in `instrument'
+/Users/synthmax/.rvm/gems/ruby-1.9.2-p290@railspre/gems/actionpack-3.0.7/lib/action_view/template.rb:127:in `render'
+/Users/synthmax/.rvm/gems/ruby-1.9.2-p290@railspre/gems/actionpack-3.0.7/lib/action_view/render/partials.rb:333:in `render_partial'
+/Users/synthmax/.rvm/gems/ruby-1.9.2-p290@railspre/gems/actionpack-3.0.7/lib/action_view/render/partials.rb:262:in `block in render'
+/Users/synthmax/.rvm/gems/ruby-1.9.2-p290@railspre/gems/activesupport-3.0.7/lib/active_support/notifications.rb:52:in `block in instrument'
+/Users/synthmax/.rvm/gems/ruby-1.9.2-p290@railspre/gems/activesupport-3.0.7/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/Users/synthmax/.rvm/gems/ruby-1.9.2-p290@railspre/gems/activesupport-3.0.7/lib/active_support/notifications.rb:52:in `instrument'
+/Users/synthmax/.rvm/gems/ruby-1.9.2-p290@railspre/gems/actionpack-3.0.7/lib/action_view/render/partials.rb:260:in `render'
+/Users/synthmax/.rvm/gems/ruby-1.9.2-p290@railspre/gems/actionpack-3.0.7/lib/action_view/render/partials.rb:378:in `_render_partial'
+/Users/synthmax/.rvm/gems/ruby-1.9.2-p290@railspre/gems/actionpack-3.0.7/lib/action_view/render/rendering.rb:31:in `render'
+/Users/synthmax/Dropbox/marselistvaervej4/app/views/photos/edit.html.erb:3:in `_app_views_photos_edit_html_erb__119154922081788334_70245484391320_1258692234034893042'
+/Users/synthmax/.rvm/gems/ruby-1.9.2-p290@railspre/gems/actionpack-3.0.7/lib/action_view/template.rb:135:in `block in render'
+/Users/synthmax/.rvm/gems/ruby-1.9.2-p290@railspre/gems/activesupport-3.0.7/lib/active_support/notifications.rb:54:in `instrument'
+/Users/synthmax/.rvm/gems/ruby-1.9.2-p290@railspre/gems/actionpack-3.0.7/lib/action_view/template.rb:127:in `render'
+/Users/synthmax/.rvm/gems/ruby-1.9.2-p290@railspre/gems/actionpack-3.0.7/lib/action_view/render/rendering.rb:59:in `block in _render_template'
+/Users/synthmax/.rvm/gems/ruby-1.9.2-p290@railspre/gems/activesupport-3.0.7/lib/active_support/notifications.rb:52:in `block in instrument'
+/Users/synthmax/.rvm/gems/ruby-1.9.2-p290@railspre/gems/activesupport-3.0.7/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/Users/synthmax/.rvm/gems/ruby-1.9.2-p290@railspre/gems/activesupport-3.0.7/lib/active_support/notifications.rb:52:in `instrument'
+/Users/synthmax/.rvm/gems/ruby-1.9.2-p290@railspre/gems/actionpack-3.0.7/lib/action_view/render/rendering.rb:56:in `_render_template'
+/Users/synthmax/.rvm/gems/ruby-1.9.2-p290@railspre/gems/actionpack-3.0.7/lib/action_view/render/rendering.rb:26:in `render'
+/Users/synthmax/.rvm/gems/ruby-1.9.2-p290@railspre/gems/actionpack-3.0.7/lib/abstract_controller/rendering.rb:115:in `_render_template'
+/Users/synthmax/.rvm/gems/ruby-1.9.2-p290@railspre/gems/actionpack-3.0.7/lib/abstract_controller/rendering.rb:109:in `render_to_body'
+/Users/synthmax/.rvm/gems/ruby-1.9.2-p290@railspre/gems/actionpack-3.0.7/lib/action_controller/metal/renderers.rb:47:in `render_to_body'
+/Users/synthmax/.rvm/gems/ruby-1.9.2-p290@railspre/gems/actionpack-3.0.7/lib/action_controller/metal/compatibility.rb:55:in `render_to_body'
+/Users/synthmax/.rvm/gems/ruby-1.9.2-p290@railspre/gems/actionpack-3.0.7/lib/abstract_controller/rendering.rb:102:in `render_to_string'
+/Users/synthmax/.rvm/gems/ruby-1.9.2-p290@railspre/gems/actionpack-3.0.7/lib/abstract_controller/rendering.rb:93:in `render'
+/Users/synthmax/.rvm/gems/ruby-1.9.2-p290@railspre/gems/actionpack-3.0.7/lib/action_controller/metal/rendering.rb:17:in `render'
+/Users/synthmax/.rvm/gems/ruby-1.9.2-p290@railspre/gems/actionpack-3.0.7/lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+/Users/synthmax/.rvm/gems/ruby-1.9.2-p290@railspre/gems/activesupport-3.0.7/lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+/Users/synthmax/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/benchmark.rb:310:in `realtime'
+/Users/synthmax/.rvm/gems/ruby-1.9.2-p290@railspre/gems/activesupport-3.0.7/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/Users/synthmax/.rvm/gems/ruby-1.9.2-p290@railspre/gems/actionpack-3.0.7/lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+/Users/synthmax/.rvm/gems/ruby-1.9.2-p290@railspre/gems/actionpack-3.0.7/lib/action_controller/metal/instrumentation.rb:78:in `cleanup_view_runtime'
+/Users/synthmax/.rvm/gems/ruby-1.9.2-p290@railspre/gems/activerecord-3.0.7/lib/active_record/railties/controller_runtime.rb:15:in `cleanup_view_runtime'
+/Users/synthmax/.rvm/gems/ruby-1.9.2-p290@railspre/gems/thinking-sphinx-2.0.1/lib/thinking_sphinx/action_controller.rb:12:in `cleanup_view_runtime'
+/Users/synthmax/.rvm/gems/ruby-1.9.2-p290@railspre/gems/actionpack-3.0.7/lib/action_controller/metal/instrumentation.rb:39:in `render'
+/Users/synthmax/.rvm/gems/ruby-1.9.2-p290@railspre/gems/actionpack-3.0.7/lib/action_controller/metal/implicit_render.rb:14:in `default_render'
+/Users/synthmax/.rvm/gems/ruby-1.9.2-p290@railspre/gems/actionpack-3.0.7/lib/action_controller/metal/mime_responds.rb:261:in `block in retrieve_response_from_mimes'
+/Users/synthmax/.rvm/gems/ruby-1.9.2-p290@railspre/gems/actionpack-3.0.7/lib/action_controller/metal/responder.rb:190:in `call'
+/Users/synthmax/.rvm/gems/ruby-1.9.2-p290@railspre/gems/actionpack-3.0.7/lib/action_controller/metal/responder.rb:190:in `default_render'
+/Users/synthmax/.rvm/gems/ruby-1.9.2-p290@railspre/gems/actionpack-3.0.7/lib/action_controller/metal/responder.rb:126:in `to_html'
+/Users/synthmax/.rvm/gems/ruby-1.9.2-p290@railspre/gems/responders-0.6.4/lib/responders/flash_responder.rb:93:in `to_html'
+/Users/synthmax/.rvm/gems/ruby-1.9.2-p290@railspre/gems/actionpack-3.0.7/lib/action_controller/metal/responder.rb:119:in `respond'
+/Users/synthmax/.rvm/gems/ruby-1.9.2-p290@railspre/gems/actionpack-3.0.7/lib/action_controller/metal/responder.rb:112:in `call'
+/Users/synthmax/.rvm/gems/ruby-1.9.2-p290@railspre/gems/actionpack-3.0.7/lib/action_controller/metal/mime_responds.rb:232:in `respond_with'
+/Users/synthmax/.rvm/gems/ruby-1.9.2-p290@railspre/gems/inherited_resources-1.1.2/lib/inherited_resources/actions.rb:25:in `edit'
+/Users/synthmax/.rvm/gems/ruby-1.9.2-p290@railspre/gems/actionpack-3.0.7/lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+/Users/synthmax/.rvm/gems/ruby-1.9.2-p290@railspre/gems/actionpack-3.0.7/lib/abstract_controller/base.rb:150:in `process_action'
+/Users/synthmax/.rvm/gems/ruby-1.9.2-p290@railspre/gems/actionpack-3.0.7/lib/action_controller/metal/rendering.rb:11:in `process_action'
+/Users/synthmax/.rvm/gems/ruby-1.9.2-p290@railspre/gems/actionpack-3.0.7/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+/Users/synthmax/.rvm/gems/ruby-1.9.2-p290@railspre/gems/activesupport-3.0.7/lib/active_support/callbacks.rb:446:in `_run__3233586738534929423__process_action__4455661127489493087__callbacks'
+/Users/synthmax/.rvm/gems/ruby-1.9.2-p290@railspre/gems/activesupport-3.0.7/lib/active_support/callbacks.rb:410:in `_run_process_action_callbacks'
+/Users/synthmax/.rvm/gems/ruby-1.9.2-p290@railspre/gems/activesupport-3.0.7/lib/active_support/callbacks.rb:94:in `run_callbacks'
+/Users/synthmax/.rvm/gems/ruby-1.9.2-p290@railspre/gems/actionpack-3.0.7/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/Users/synthmax/.rvm/gems/ruby-1.9.2-p290@railspre/gems/actionpack-3.0.7/lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+/Users/synthmax/.rvm/gems/ruby-1.9.2-p290@railspre/gems/activesupport-3.0.7/lib/active_support/notifications.rb:52:in `block in instrument'
+/Users/synthmax/.rvm/gems/ruby-1.9.2-p290@railspre/gems/activesupport-3.0.7/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/Users/synthmax/.rvm/gems/ruby-1.9.2-p290@railspre/gems/activesupport-3.0.7/lib/active_support/notifications.rb:52:in `instrument'
+/Users/synthmax/.rvm/gems/ruby-1.9.2-p290@railspre/gems/actionpack-3.0.7/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+/Users/synthmax/.rvm/gems/ruby-1.9.2-p290@railspre/gems/actionpack-3.0.7/lib/action_controller/metal/rescue.rb:17:in `process_action'
+/Users/synthmax/.rvm/gems/ruby-1.9.2-p290@railspre/gems/actionpack-3.0.7/lib/abstract_controller/base.rb:119:in `process'
+/Users/synthmax/.rvm/gems/ruby-1.9.2-p290@railspre/gems/actionpack-3.0.7/lib/abstract_controller/rendering.rb:41:in `process'
+/Users/synthmax/.rvm/gems/ruby-1.9.2-p290@railspre/gems/actionpack-3.0.7/lib/action_controller/metal.rb:138:in `dispatch'
+/Users/synthmax/.rvm/gems/ruby-1.9.2-p290@railspre/gems/actionpack-3.0.7/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+/Users/synthmax/.rvm/gems/ruby-1.9.2-p290@railspre/gems/actionpack-3.0.7/lib/action_controller/metal.rb:178:in `block in action'
+/Users/synthmax/.rvm/gems/ruby-1.9.2-p290@railspre/gems/actionpack-3.0.7/lib/action_dispatch/routing/route_set.rb:62:in `call'
+/Users/synthmax/.rvm/gems/ruby-1.9.2-p290@railspre/gems/actionpack-3.0.7/lib/action_dispatch/routing/route_set.rb:62:in `dispatch'
+/Users/synthmax/.rvm/gems/ruby-1.9.2-p290@railspre/gems/actionpack-3.0.7/lib/action_dispatch/routing/route_set.rb:27:in `call'
+/Users/synthmax/.rvm/gems/ruby-1.9.2-p290@railspre/gems/rack-mount-0.6.14/lib/rack/mount/route_set.rb:148:in `block in call'
+/Users/synthmax/.rvm/gems/ruby-1.9.2-p290@railspre/gems/rack-mount-0.6.14/lib/rack/mount/code_generation.rb:93:in `block in recognize'
+/Users/synthmax/.rvm/gems/ruby-1.9.2-p290@railspre/gems/rack-mount-0.6.14/lib/rack/mount/code_generation.rb:75:in `optimized_each'
+/Users/synthmax/.rvm/gems/ruby-1.9.2-p290@railspre/gems/rack-mount-0.6.14/lib/rack/mount/code_generation.rb:92:in `recognize'
+/Users/synthmax/.rvm/gems/ruby-1.9.2-p290@railspre/gems/rack-mount-0.6.14/lib/rack/mount/route_set.rb:139:in `call'
+/Users/synthmax/.rvm/gems/ruby-1.9.2-p290@railspre/gems/actionpack-3.0.7/lib/action_dispatch/routing/route_set.rb:493:in `call'
+/Users/synthmax/.rvm/gems/ruby-1.9.2-p290@railspre/gems/sass-3.1.2/lib/sass/plugin/rack.rb:54:in `call'
+/Users/synthmax/.rvm/gems/ruby-1.9.2-p290@railspre/gems/warden-1.0.4/lib/warden/manager.rb:35:in `block in call'
+/Users/synthmax/.rvm/gems/ruby-1.9.2-p290@railspre/gems/warden-1.0.4/lib/warden/manager.rb:34:in `catch'
+/Users/synthmax/.rvm/gems/ruby-1.9.2-p290@railspre/gems/warden-1.0.4/lib/warden/manager.rb:34:in `call'
+/Users/synthmax/.rvm/gems/ruby-1.9.2-p290@railspre/gems/actionpack-3.0.7/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+/Users/synthmax/.rvm/gems/ruby-1.9.2-p290@railspre/gems/actionpack-3.0.7/lib/action_dispatch/middleware/head.rb:14:in `call'
+/Users/synthmax/.rvm/gems/ruby-1.9.2-p290@railspre/gems/rack-1.2.3/lib/rack/methodoverride.rb:24:in `call'
+/Users/synthmax/.rvm/gems/ruby-1.9.2-p290@railspre/gems/actionpack-3.0.7/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+/Users/synthmax/.rvm/gems/ruby-1.9.2-p290@railspre/gems/actionpack-3.0.7/lib/action_dispatch/middleware/flash.rb:182:in `call'
+/Users/synthmax/.rvm/gems/ruby-1.9.2-p290@railspre/gems/actionpack-3.0.7/lib/action_dispatch/middleware/session/abstract_store.rb:149:in `call'
+/Users/synthmax/Dropbox/marselistvaervej4/app/middleware/flash_session_cookie_middleware.rb:16:in `call'
+/Users/synthmax/.rvm/gems/ruby-1.9.2-p290@railspre/gems/actionpack-3.0.7/lib/action_dispatch/middleware/cookies.rb:302:in `call'
+/Users/synthmax/.rvm/gems/ruby-1.9.2-p290@railspre/gems/activerecord-3.0.7/lib/active_record/query_cache.rb:32:in `block in call'
+/Users/synthmax/.rvm/gems/ruby-1.9.2-p290@railspre/gems/activerecord-3.0.7/lib/active_record/connection_adapters/abstract/query_cache.rb:28:in `cache'
+/Users/synthmax/.rvm/gems/ruby-1.9.2-p290@railspre/gems/activerecord-3.0.7/lib/active_record/query_cache.rb:12:in `cache'
+/Users/synthmax/.rvm/gems/ruby-1.9.2-p290@railspre/gems/activerecord-3.0.7/lib/active_record/query_cache.rb:31:in `call'
+/Users/synthmax/.rvm/gems/ruby-1.9.2-p290@railspre/gems/activerecord-3.0.7/lib/active_record/connection_adapters/abstract/connection_pool.rb:354:in `call'
+/Users/synthmax/.rvm/gems/ruby-1.9.2-p290@railspre/gems/actionpack-3.0.7/lib/action_dispatch/middleware/callbacks.rb:46:in `block in call'
+/Users/synthmax/.rvm/gems/ruby-1.9.2-p290@railspre/gems/activesupport-3.0.7/lib/active_support/callbacks.rb:416:in `_run_call_callbacks'
+/Users/synthmax/.rvm/gems/ruby-1.9.2-p290@railspre/gems/actionpack-3.0.7/lib/action_dispatch/middleware/callbacks.rb:44:in `call'
+/Users/synthmax/.rvm/gems/ruby-1.9.2-p290@railspre/gems/rack-1.2.3/lib/rack/sendfile.rb:107:in `call'
+/Users/synthmax/.rvm/gems/ruby-1.9.2-p290@railspre/gems/actionpack-3.0.7/lib/action_dispatch/middleware/remote_ip.rb:48:in `call'
+/Users/synthmax/.rvm/gems/ruby-1.9.2-p290@railspre/gems/actionpack-3.0.7/lib/action_dispatch/middleware/show_exceptions.rb:47:in `call'
+/Users/synthmax/.rvm/gems/ruby-1.9.2-p290@railspre/gems/railties-3.0.7/lib/rails/rack/logger.rb:13:in `call'
+/Users/synthmax/.rvm/gems/ruby-1.9.2-p290@railspre/gems/rack-1.2.3/lib/rack/runtime.rb:17:in `call'
+/Users/synthmax/.rvm/gems/ruby-1.9.2-p290@railspre/gems/activesupport-3.0.7/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+/Users/synthmax/.rvm/gems/ruby-1.9.2-p290@railspre/gems/rack-1.2.3/lib/rack/lock.rb:11:in `block in call'
+<internal:prelude>:10:in `synchronize'
+/Users/synthmax/.rvm/gems/ruby-1.9.2-p290@railspre/gems/rack-1.2.3/lib/rack/lock.rb:11:in `call'
+/Users/synthmax/.rvm/gems/ruby-1.9.2-p290@railspre/gems/actionpack-3.0.7/lib/action_dispatch/middleware/static.rb:30:in `call'
+/Users/synthmax/.rvm/gems/ruby-1.9.2-p290@railspre/gems/railties-3.0.7/lib/rails/application.rb:168:in `call'
+/Users/synthmax/.rvm/gems/ruby-1.9.2-p290@railspre/gems/railties-3.0.7/lib/rails/application.rb:77:in `method_missing'
+/Users/synthmax/.rvm/gems/ruby-1.9.2-p290@railspre/gems/railties-3.0.7/lib/rails/rack/log_tailer.rb:14:in `call'
+/Users/synthmax/.rvm/gems/ruby-1.9.2-p290@railspre/gems/rack-1.2.3/lib/rack/content_length.rb:13:in `call'
+/Users/synthmax/.rvm/gems/ruby-1.9.2-p290@railspre/gems/rack-1.2.3/lib/rack/handler/webrick.rb:52:in `service'
+/Users/synthmax/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+/Users/synthmax/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+/Users/synthmax/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+Rendered photos/_form.html.erb (0.8ms)
+Rendered photos/edit.html.erb within layouts/application (2.0ms)
+Completed   in 38ms
+
+ActionView::Template::Error (/Users/synthmax/Dropbox/marselistvaervej4/app/views/photos/_form.html.erb:2: syntax error, unexpected '<'
+  <% if @photo.errors.any? );@output_buffer.safe_concat('
+   ^
+/Users/synthmax/Dropbox/marselistvaervej4/app/views/photos/_form.html.erb:2: syntax error, unexpected tIVAR, expecting keyword_end
+  <% if @photo.errors.any? );@output_buffer.safe_concat('
+              ^
+/Users/synthmax/Dropbox/marselistvaervej4/app/views/photos/_form.html.erb:2: syntax error, unexpected ')', expecting keyword_end
+  <% if @photo.errors.any? );@output_buffer.safe_concat('
+                            ^
+/Users/synthmax/Dropbox/marselistvaervej4/app/views/photos/_form.html.erb:30: syntax error, unexpected keyword_end, expecting ')'
+'); end 
+       ^
+/Users/synthmax/Dropbox/marselistvaervej4/app/views/photos/_form.html.erb:32: syntax error, unexpected keyword_ensure, expecting ')'
+/Users/synthmax/Dropbox/marselistvaervej4/app/views/photos/_form.html.erb:34: syntax error, unexpected keyword_end, expecting ')'):
+    1: <%= form_for(@photo, :html => { :multipart => true }) do |f|
+    2:   <% if @photo.errors.any? %>
+    3:     <div id="error_explanation">
+    4:       <h2><%= pluralize(@photo.errors.count, "error") %> prohibited this photo from being saved:</h2>
+    5: 
+  app/views/photos/edit.html.erb:3:in `_app_views_photos_edit_html_erb__119154922081788334_70245484391320_1258692234034893042'
+  app/middleware/flash_session_cookie_middleware.rb:16:in `call'
+
+Rendered /Users/synthmax/.rvm/gems/ruby-1.9.2-p290@railspre/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+Rendered /Users/synthmax/.rvm/gems/ruby-1.9.2-p290@railspre/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (43.5ms)
+Rendered /Users/synthmax/.rvm/gems/ruby-1.9.2-p290@railspre/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (47.4ms)
+
+
+Started GET "/photos/1/edit?locale=dk" for 127.0.0.1 at 2011-09-12 13:52:40 +0200
+  Processing by PhotosController#edit as HTML
+  Parameters: {"locale"=>"dk", "id"=>"1"}
+  [1m[35mInfoPage Load (0.8ms)[0m  SELECT `info_pages`.* FROM `info_pages`
+  [1m[36mPhoto Load (0.4ms)[0m  [1mSELECT `photos`.* FROM `photos` WHERE `photos`.`id` = 1 LIMIT 1[0m
+Rendered photos/_form.html.erb (9.2ms)
+  [1m[35mUser Load (1.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mMeetingroom Load (0.8ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `info_pages`.* FROM `info_pages`
+Rendered photos/edit.html.erb within layouts/application (110.5ms)
+Completed 200 OK in 146ms (Views: 114.2ms | ActiveRecord: 3.3ms | Sphinx: 0.0ms)
+
+
+Started POST "/photos/1?locale=dk" for 127.0.0.1 at 2011-09-12 13:52:44 +0200
+  Processing by PhotosController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XxtCmMyOSbsTMkBRkLJr/Tti1HfjY2YE1sJnMEJG9mY=", "photo"=>{"title"=>"test", "body"=>"bla bla", "image"=>#<ActionDispatch::Http::UploadedFile:0x007fc69a6c5b70 @original_filename="portraits_of_celebrities_640_11.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"photo[image]\"; filename=\"portraits_of_celebrities_640_11.jpg\"\r\nContent-Type: image/jpeg\r\n", @tempfile=#<File:/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/RackMultipart20110912-4922-e659ox>>}, "commit"=>"Update Photo", "locale"=>"dk", "id"=>"1"}
+  [1m[36mInfoPage Load (0.6ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages`[0m
+  [1m[35mPhoto Load (0.6ms)[0m  SELECT `photos`.* FROM `photos` WHERE `photos`.`id` = 1 LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+[paperclip] identify -format %wx%h '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/stream20110912-4922-jk1is8.jpg[0]' 2>/dev/null
+[paperclip] convert '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/stream20110912-4922-jk1is8.jpg[0]' -resize "x75" -crop "75x75+11+0" +repage '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/stream20110912-4922-jk1is820110912-4922-v8szsj' 2>/dev/null
+[paperclip] identify -format %wx%h '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/stream20110912-4922-jk1is8.jpg[0]' 2>/dev/null
+[paperclip] convert '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/stream20110912-4922-jk1is8.jpg[0]' -resize "540x490>" '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/stream20110912-4922-jk1is820110912-4922-1nwtayi' 2>/dev/null
+  [1m[35mAREL (0.6ms)[0m  UPDATE `photos` SET `image_file_name` = 'portraits_of_celebrities_640_11.jpg', `image_content_type` = 'image/jpeg', `image_file_size` = 21173, `image_updated_at` = '2011-09-12 11:52:45', `updated_at` = '2011-09-12 11:52:45' WHERE `photos`.`id` = 1
+[paperclip] Saving attachments.
+[paperclip] saving /Users/synthmax/Dropbox/marselistvaervej4/public/system/images/1/original/portraits_of_celebrities_640_11.jpg
+[paperclip] saving /Users/synthmax/Dropbox/marselistvaervej4/public/system/images/1/mini/portraits_of_celebrities_640_11.jpg
+[paperclip] saving /Users/synthmax/Dropbox/marselistvaervej4/public/system/images/1/fullSize/portraits_of_celebrities_640_11.jpg
+  [1m[36mSQL (0.7ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/photos/1?locale=dk
+Completed 302 Found in 923ms
+
+
+Started GET "/photos/1?locale=dk" for 127.0.0.1 at 2011-09-12 13:52:45 +0200
+  Processing by PhotosController#show as HTML
+  Parameters: {"locale"=>"dk", "id"=>"1"}
+  [1m[35mInfoPage Load (0.5ms)[0m  SELECT `info_pages`.* FROM `info_pages`
+  [1m[36mPhoto Load (0.8ms)[0m  [1mSELECT `photos`.* FROM `photos` WHERE `photos`.`id` = 1 LIMIT 1[0m
+  [1m[35mUser Load (1.6ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mMeetingroom Load (0.7ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `info_pages`.* FROM `info_pages`
+Rendered photos/show.html.erb within layouts/application (156.2ms)
+Completed 200 OK in 200ms (Views: 160.4ms | ActiveRecord: 3.7ms | Sphinx: 0.0ms)
+
+
+Started GET "/photos/1?locale=dk" for 127.0.0.1 at 2011-09-12 13:54:11 +0200
+  Processing by PhotosController#show as HTML
+  Parameters: {"locale"=>"dk", "id"=>"1"}
+  [1m[36mInfoPage Load (0.8ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages`[0m
+  [1m[35mPhoto Load (0.7ms)[0m  SELECT `photos`.* FROM `photos` WHERE `photos`.`id` = 1 LIMIT 1
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mMeetingroom Load (0.9ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages`[0m
+Rendered photos/show.html.erb within layouts/application (145.6ms)
+Completed 200 OK in 182ms (Views: 149.7ms | ActiveRecord: 3.4ms | Sphinx: 0.0ms)
+
+
+Started GET "/dk/admin" for 127.0.0.1 at 2011-09-12 13:54:19 +0200
+  Processing by AdminController#index as HTML
+  Parameters: {"locale"=>"dk"}
+  [1m[35mInfoPage Load (0.7ms)[0m  SELECT `info_pages`.* FROM `info_pages`
+  [1m[36mNewspost Load (0.9ms)[0m  [1mSELECT `newsposts`.* FROM `newsposts` WHERE `newsposts`.`internal_letter` = 1 ORDER BY created_at desc LIMIT 3 OFFSET 0[0m
+  [1m[35mUser Load (0.9ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Rendered shared/_menu.html.slim (35.0ms)
+  [1m[36mUser Load (1.4ms)[0m  [1mSELECT `users`.* FROM `users`[0m
+Rendered shared/_news.html.slim (24.5ms)
+  [1m[35mMeetingroom Load (0.9ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages`[0m
+Rendered admin/index.html.slim within layouts/application (135.7ms)
+Completed 200 OK in 188ms (Views: 136.5ms | ActiveRecord: 4.7ms | Sphinx: 0.0ms)
+
+
+Started GET "/gallery/index?locale=dk" for 127.0.0.1 at 2011-09-12 13:54:21 +0200
+  Processing by GalleryController#index as HTML
+  Parameters: {"locale"=>"dk"}
+  [1m[35mInfoPage Load (0.7ms)[0m  SELECT `info_pages`.* FROM `info_pages`
+  [1m[36mPhoto Load (0.9ms)[0m  [1mSELECT `photos`.* FROM `photos`[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `photos`.* FROM `photos`
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mMeetingroom Load (0.9ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages`[0m
+Rendered gallery/index.html.erb within layouts/application (108.2ms)
+Completed 200 OK in 125ms (Views: 110.3ms | ActiveRecord: 3.5ms | Sphinx: 0.0ms)
+
+
+Started GET "/gallery/index?locale=dk" for 127.0.0.1 at 2011-09-12 14:20:38 +0200
+  Processing by GalleryController#index as HTML
+  Parameters: {"locale"=>"dk"}
+  [1m[35mInfoPage Load (0.6ms)[0m  SELECT `info_pages`.* FROM `info_pages`
+  [1m[36mPhoto Load (0.8ms)[0m  [1mSELECT `photos`.* FROM `photos`[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `photos`.* FROM `photos`
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mMeetingroom Load (0.9ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages`[0m
+Rendered gallery/index.html.erb within layouts/application (109.9ms)
+Completed 200 OK in 127ms (Views: 112.2ms | ActiveRecord: 3.4ms | Sphinx: 0.0ms)
+
+
+Started GET "/gallery/index?locale=dk" for 127.0.0.1 at 2011-09-12 14:20:48 +0200
+  Processing by GalleryController#index as HTML
+  Parameters: {"locale"=>"dk"}
+  [1m[35mInfoPage Load (0.7ms)[0m  SELECT `info_pages`.* FROM `info_pages`
+  [1m[36mPhoto Load (0.5ms)[0m  [1mSELECT `photos`.* FROM `photos`[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `photos`.* FROM `photos`
+  [1m[36mUser Load (34.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mMeetingroom Load (0.7ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages`[0m
+Rendered gallery/index.html.erb within layouts/application (109.3ms)
+Completed 200 OK in 126ms (Views: 78.5ms | ActiveRecord: 36.1ms | Sphinx: 0.0ms)
+
+
+Started GET "/dk/admin" for 127.0.0.1 at 2011-09-12 14:21:09 +0200
+  Processing by AdminController#index as HTML
+  Parameters: {"locale"=>"dk"}
+  [1m[35mInfoPage Load (0.8ms)[0m  SELECT `info_pages`.* FROM `info_pages`
+  [1m[36mNewspost Load (0.7ms)[0m  [1mSELECT `newsposts`.* FROM `newsposts` WHERE `newsposts`.`internal_letter` = 1 ORDER BY created_at desc LIMIT 3 OFFSET 0[0m
+  [1m[35mUser Load (1.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Rendered shared/_menu.html.slim (69.7ms)
+  [1m[36mUser Load (1.6ms)[0m  [1mSELECT `users`.* FROM `users`[0m
+Rendered shared/_news.html.slim (16.1ms)
+  [1m[35mMeetingroom Load (0.9ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages`[0m
+Rendered admin/index.html.slim within layouts/application (130.8ms)
+Completed 200 OK in 150ms (Views: 131.2ms | ActiveRecord: 5.1ms | Sphinx: 0.0ms)
+
+
+Started GET "/photos?locale=dk" for 127.0.0.1 at 2011-09-12 14:21:11 +0200
+  Processing by PhotosController#index as HTML
+  Parameters: {"locale"=>"dk"}
+  [1m[35mInfoPage Load (0.5ms)[0m  SELECT `info_pages`.* FROM `info_pages`
+  [1m[36mPhoto Load (0.4ms)[0m  [1mSELECT `photos`.* FROM `photos`[0m
+  [1m[35mUser Load (1.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mMeetingroom Load (0.8ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `info_pages`.* FROM `info_pages`
+Rendered photos/index.html.erb within layouts/application (110.0ms)
+Completed 200 OK in 143ms (Views: 113.8ms | ActiveRecord: 2.7ms | Sphinx: 0.0ms)
+
+
+Started GET "/photos/new?locale=dk" for 127.0.0.1 at 2011-09-12 14:21:16 +0200
+  Processing by PhotosController#new as HTML
+  Parameters: {"locale"=>"dk"}
+  [1m[36mInfoPage Load (0.4ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages`[0m
+Rendered photos/_form.html.erb (8.4ms)
+  [1m[35mUser Load (1.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mMeetingroom Load (0.7ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `info_pages`.* FROM `info_pages`
+Rendered photos/new.html.erb within layouts/application (111.2ms)
+Completed 200 OK in 146ms (Views: 114.9ms | ActiveRecord: 2.5ms | Sphinx: 0.0ms)
+
+
+Started POST "/photos?locale=dk" for 127.0.0.1 at 2011-09-12 14:21:25 +0200
+  Processing by PhotosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XxtCmMyOSbsTMkBRkLJr/Tti1HfjY2YE1sJnMEJG9mY=", "photo"=>{"title"=>"dfg", "body"=>"dfg", "image"=>#<ActionDispatch::Http::UploadedFile:0x007fc69a646dc0 @original_filename="images.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"photo[image]\"; filename=\"images.jpg\"\r\nContent-Type: image/jpeg\r\n", @tempfile=#<File:/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/RackMultipart20110912-4922-1kr1yrk>>}, "commit"=>"Create Photo", "locale"=>"dk"}
+  [1m[36mInfoPage Load (0.6ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages`[0m
+[paperclip] identify -format %wx%h '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/stream20110912-4922-10ukj07.jpg[0]' 2>/dev/null
+[paperclip] convert '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/stream20110912-4922-10ukj07.jpg[0]' -resize "75x" -crop "75x75+0+9" +repage '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/stream20110912-4922-10ukj0720110912-4922-iat36n' 2>/dev/null
+[paperclip] identify -format %wx%h '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/stream20110912-4922-10ukj07.jpg[0]' 2>/dev/null
+[paperclip] convert '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/stream20110912-4922-10ukj07.jpg[0]' -resize "540x490>" '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/stream20110912-4922-10ukj0720110912-4922-1raklsu' 2>/dev/null
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mSQL (2.8ms)[0m  [1mdescribe `photos`[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO `photos` (`title`, `body`, `created_at`, `updated_at`, `image_file_name`, `image_content_type`, `image_file_size`, `image_updated_at`) VALUES ('dfg', 'dfg', '2011-09-12 12:21:25', '2011-09-12 12:21:25', 'images.jpg', 'image/jpeg', 6710, '2011-09-12 12:21:25')
+[paperclip] Saving attachments.
+[paperclip] saving /Users/synthmax/Dropbox/marselistvaervej4/public/system/images/2/original/images.jpg
+[paperclip] saving /Users/synthmax/Dropbox/marselistvaervej4/public/system/images/2/mini/images.jpg
+[paperclip] saving /Users/synthmax/Dropbox/marselistvaervej4/public/system/images/2/fullSize/images.jpg
+  [1m[36mSQL (0.5ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/photos/2?locale=dk
+Completed 302 Found in 250ms
+
+
+Started GET "/photos/2?locale=dk" for 127.0.0.1 at 2011-09-12 14:21:25 +0200
+  Processing by PhotosController#show as HTML
+  Parameters: {"locale"=>"dk", "id"=>"2"}
+  [1m[35mInfoPage Load (0.5ms)[0m  SELECT `info_pages`.* FROM `info_pages`
+  [1m[36mPhoto Load (0.8ms)[0m  [1mSELECT `photos`.* FROM `photos` WHERE `photos`.`id` = 2 LIMIT 1[0m
+  [1m[35mUser Load (1.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mMeetingroom Load (0.7ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `info_pages`.* FROM `info_pages`
+Rendered photos/show.html.erb within layouts/application (130.5ms)
+Completed 200 OK in 170ms (Views: 135.0ms | ActiveRecord: 3.2ms | Sphinx: 0.0ms)
+
+
+Started GET "/dk/admin" for 127.0.0.1 at 2011-09-12 14:21:28 +0200
+  Processing by AdminController#index as HTML
+  Parameters: {"locale"=>"dk"}
+  [1m[36mInfoPage Load (0.7ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages`[0m
+  [1m[35mNewspost Load (0.8ms)[0m  SELECT `newsposts`.* FROM `newsposts` WHERE `newsposts`.`internal_letter` = 1 ORDER BY created_at desc LIMIT 3 OFFSET 0
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Rendered shared/_menu.html.slim (69.5ms)
+  [1m[35mUser Load (1.4ms)[0m  SELECT `users`.* FROM `users`
+Rendered shared/_news.html.slim (16.5ms)
+  [1m[36mMeetingroom Load (0.6ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `info_pages`.* FROM `info_pages`
+Rendered admin/index.html.slim within layouts/application (129.5ms)
+Completed 200 OK in 149ms (Views: 130.4ms | ActiveRecord: 4.7ms | Sphinx: 0.0ms)
+
+
+Started GET "/gallery/index?locale=dk" for 127.0.0.1 at 2011-09-12 14:21:30 +0200
+  Processing by GalleryController#index as HTML
+  Parameters: {"locale"=>"dk"}
+  [1m[36mInfoPage Load (0.6ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages`[0m
+  [1m[35mPhoto Load (0.8ms)[0m  SELECT `photos`.* FROM `photos`
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `photos`.* FROM `photos`[0m
+  [1m[35mUser Load (1.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mMeetingroom Load (0.8ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `info_pages`.* FROM `info_pages`
+Rendered gallery/index.html.erb within layouts/application (114.1ms)
+Completed 200 OK in 131ms (Views: 116.2ms | ActiveRecord: 3.4ms | Sphinx: 0.0ms)
+
+
+Started GET "/gallery/index?locale=dk" for 127.0.0.1 at 2011-09-12 14:26:24 +0200
+  Processing by GalleryController#index as HTML
+  Parameters: {"locale"=>"dk"}
+  [1m[36mInfoPage Load (0.8ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages`[0m
+  [1m[35mPhoto Load (0.6ms)[0m  SELECT `photos`.* FROM `photos`
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `photos`.* FROM `photos`[0m
+  [1m[35mUser Load (1.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mMeetingroom Load (0.6ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `info_pages`.* FROM `info_pages`
+Rendered gallery/index.html.erb within layouts/application (143.1ms)
+Completed 200 OK in 160ms (Views: 145.4ms | ActiveRecord: 3.1ms | Sphinx: 0.0ms)
+
+
+Started GET "/dk/meetingrooms" for 127.0.0.1 at 2011-09-12 14:26:52 +0200
+  Processing by MeetingroomsController#index as HTML
+  Parameters: {"locale"=>"dk"}
+  [1m[36mInfoPage Load (0.8ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages`[0m
+  [1m[35mUser Load (1.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mMeetingroom Load (0.6ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1[0m
+  [1m[35mNewspost Load (0.6ms)[0m  SELECT `newsposts`.* FROM `newsposts` WHERE `newsposts`.`internal_letter` = 1 ORDER BY created_at desc LIMIT 3 OFFSET 0
+Rendered shared/_menu.html.slim (1.8ms)
+  [1m[36mMeetingroom Load (0.9ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms`[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages`[0m
+Rendered meetingrooms/index.html.slim within layouts/application (70.6ms)
+Completed 200 OK in 187ms (Views: 75.8ms | ActiveRecord: 4.0ms | Sphinx: 0.0ms)
+DEPRECATION WARNING: Use toplevel init.rb; rails/init.rb is deprecated: /Users/synthmax/Dropbox/marselistvaervej4/vendor/plugins/paperclip/rails/init.rb. (called from <top (required)> at /Users/synthmax/Dropbox/marselistvaervej4/config/environment.rb:5)
+
+
+Started GET "/" for 127.0.0.1 at 2011-09-12 14:50:43 +0200
+  Processing by HomeController#index as HTML
+  [1m[36mInfoPage Load (60.4ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages`[0m
+  [1m[35mSQL (186.1ms)[0m  SHOW TABLES
+  [1m[36mNewspost Load (35.4ms)[0m  [1mSELECT `newsposts`.* FROM `newsposts` WHERE `newsposts`.`internal_letter` = 0 ORDER BY created_at desc LIMIT 3 OFFSET 0[0m
+  [1m[35mSQL (0.5ms)[0m  SELECT COUNT(*) FROM `newsposts` WHERE `newsposts`.`internal_letter` = 0
+  [1m[36mPage Load (0.8ms)[0m  [1mSELECT `pages`.* FROM `pages` WHERE `pages`.`identity` = 'welcome_dk ' LIMIT 1[0m
+  [1m[35mUser Load (1.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 AND `users`.`remember_token` = 'p6tegdhczltPyUrJVdbL' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mBEGIN[0m
+[paperclip] Saving attachments.
+  [1m[35mSQL (0.3ms)[0m  COMMIT
+  [1m[36mSQL (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mAREL (0.6ms)[0m  UPDATE `users` SET `last_sign_in_at` = '2011-09-12 07:11:56', `current_sign_in_at` = '2011-09-12 12:50:46', `sign_in_count` = 69, `updated_at` = '2011-09-12 12:50:46' WHERE `users`.`id` = 1
+[paperclip] Saving attachments.
+  [1m[36mSQL (21.2ms)[0m  [1mCOMMIT[0m
+Rendered shared/_menu.html.slim (152.4ms)
+Rendered shared/_news.html.slim (18.7ms)
+DEPRECATION WARNING: RAILS_ENV is deprecated. Please use ::Rails.env. (called from _app_views_layouts_application_html_slim___2331621719482411147_2210845200__2597543316474207280 at /Users/synthmax/Dropbox/marselistvaervej4/app/views/layouts/application.html.slim:22)
+  [1m[35mMeetingroom Load (22.3ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1
+  [1m[36mInfoPage Load (0.7ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages`[0m
+Rendered home/index.html.slim within layouts/application (277.1ms)
+Completed 200 OK in 1082ms (Views: 305.4ms | ActiveRecord: 329.8ms | Sphinx: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-09-12 14:50:47 +0200
+  Processing by HomeController#index as HTML
+  [1m[35mInfoPage Load (0.5ms)[0m  SELECT `info_pages`.* FROM `info_pages`
+  [1m[36mNewspost Load (0.7ms)[0m  [1mSELECT `newsposts`.* FROM `newsposts` WHERE `newsposts`.`internal_letter` = 0 ORDER BY created_at desc LIMIT 3 OFFSET 0[0m
+  [1m[35mSQL (0.3ms)[0m  SELECT COUNT(*) FROM `newsposts` WHERE `newsposts`.`internal_letter` = 0
+  [1m[36mPage Load (0.8ms)[0m  [1mSELECT `pages`.* FROM `pages` WHERE `pages`.`identity` = 'welcome_dk ' LIMIT 1[0m
+  [1m[35mUser Load (0.8ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Rendered shared/_menu.html.slim (19.4ms)
+Rendered shared/_news.html.slim (10.6ms)
+  [1m[36mMeetingroom Load (0.9ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `info_pages`.* FROM `info_pages`
+Rendered home/index.html.slim within layouts/application (77.1ms)
+Completed 200 OK in 255ms (Views: 81.3ms | ActiveRecord: 4.0ms | Sphinx: 0.0ms)
+
+
+Started GET "/info_pages/1?locale=dk" for 127.0.0.1 at 2011-09-12 14:50:51 +0200
+  Processing by InfoPagesController#show as HTML
+  Parameters: {"locale"=>"dk", "id"=>"1"}
+  [1m[36mInfoPage Load (0.7ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages`[0m
+  [1m[35mNewspost Load (0.7ms)[0m  SELECT `newsposts`.* FROM `newsposts` WHERE `newsposts`.`internal_letter` = 0 ORDER BY created_at desc LIMIT 3 OFFSET 0
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT COUNT(*) FROM `newsposts` WHERE `newsposts`.`internal_letter` = 0[0m
+  [1m[35mInfoPage Load (0.3ms)[0m  SELECT `info_pages`.* FROM `info_pages` WHERE `info_pages`.`id` = 1 LIMIT 1
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Rendered shared/_menu.html.slim (65.4ms)
+Rendered shared/_news.html.slim (10.5ms)
+  [1m[35mMeetingroom Load (0.8ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages`[0m
+Rendered info_pages/show.html.slim within layouts/application (117.3ms)
+Completed 200 OK in 160ms (Views: 142.9ms | ActiveRecord: 3.7ms | Sphinx: 0.0ms)
+
+
+Started GET "/info_pages/1?locale=dk" for 127.0.0.1 at 2011-09-12 14:50:54 +0200
+  Processing by InfoPagesController#show as HTML
+  Parameters: {"locale"=>"dk", "id"=>"1"}
+  [1m[35mInfoPage Load (0.6ms)[0m  SELECT `info_pages`.* FROM `info_pages`
+  [1m[36mNewspost Load (57.3ms)[0m  [1mSELECT `newsposts`.* FROM `newsposts` WHERE `newsposts`.`internal_letter` = 0 ORDER BY created_at desc LIMIT 3 OFFSET 0[0m
+  [1m[35mSQL (1.8ms)[0m  SELECT COUNT(*) FROM `newsposts` WHERE `newsposts`.`internal_letter` = 0
+  [1m[36mInfoPage Load (0.4ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages` WHERE `info_pages`.`id` = 1 LIMIT 1[0m
+  [1m[35mUser Load (78.8ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Rendered shared/_menu.html.slim (169.3ms)
+Rendered shared/_news.html.slim (10.9ms)
+  [1m[36mMeetingroom Load (0.8ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `info_pages`.* FROM `info_pages`
+Rendered info_pages/show.html.slim within layouts/application (377.0ms)
+Completed 200 OK in 544ms (Views: 306.6ms | ActiveRecord: 139.6ms | Sphinx: 0.0ms)
+
+
+Started GET "/dk/admin" for 127.0.0.1 at 2011-09-12 14:51:00 +0200
+  Processing by AdminController#index as HTML
+  Parameters: {"locale"=>"dk"}
+  [1m[36mInfoPage Load (0.7ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages`[0m
+  [1m[35mNewspost Load (0.9ms)[0m  SELECT `newsposts`.* FROM `newsposts` WHERE `newsposts`.`internal_letter` = 1 ORDER BY created_at desc LIMIT 3 OFFSET 0
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Rendered shared/_menu.html.slim (32.7ms)
+  [1m[35mUser Load (1.3ms)[0m  SELECT `users`.* FROM `users`
+Rendered shared/_news.html.slim (15.2ms)
+  [1m[36mMeetingroom Load (0.8ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `info_pages`.* FROM `info_pages`
+Rendered admin/index.html.slim within layouts/application (123.4ms)
+Completed 200 OK in 177ms (Views: 126.1ms | ActiveRecord: 4.7ms | Sphinx: 0.0ms)
+
+
+Started GET "/dk/users/1" for 127.0.0.1 at 2011-09-12 14:51:05 +0200
+  Processing by UsersController#show as HTML
+  Parameters: {"locale"=>"dk", "id"=>"1"}
+  [1m[36mInfoPage Load (0.7ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages`[0m
+  [1m[35mUser Load (0.9ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mNewspost Load (0.9ms)[0m  SELECT `newsposts`.* FROM `newsposts` WHERE `newsposts`.`internal_letter` = 1 ORDER BY created_at desc LIMIT 3 OFFSET 0
+Rendered shared/_menu.html.slim (1.9ms)
+  [1m[36mCompany Load (0.6ms)[0m  [1mSELECT `companies`.* FROM `companies` WHERE `companies`.`id` = 2 LIMIT 1[0m
+Rendered shared/_news.html.slim (11.5ms)
+  [1m[35mMeetingroom Load (0.8ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages`[0m
+Rendered users/show.html.slim within layouts/application (167.7ms)
+Completed 200 OK in 259ms (Views: 198.6ms | ActiveRecord: 3.9ms | Sphinx: 0.0ms)
+
+
+Started GET "/dk/users/1" for 127.0.0.1 at 2011-09-12 14:51:08 +0200
+  Processing by UsersController#show as HTML
+  Parameters: {"locale"=>"dk", "id"=>"1"}
+  [1m[35mInfoPage Load (0.7ms)[0m  SELECT `info_pages`.* FROM `info_pages`
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mNewspost Load (11.0ms)[0m  [1mSELECT `newsposts`.* FROM `newsposts` WHERE `newsposts`.`internal_letter` = 1 ORDER BY created_at desc LIMIT 3 OFFSET 0[0m
+Rendered shared/_menu.html.slim (1.9ms)
+  [1m[35mCompany Load (0.7ms)[0m  SELECT `companies`.* FROM `companies` WHERE `companies`.`id` = 2 LIMIT 1
+Rendered shared/_news.html.slim (31.6ms)
+  [1m[36mMeetingroom Load (0.8ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `info_pages`.* FROM `info_pages`
+Rendered users/show.html.slim within layouts/application (228.6ms)
+Completed 200 OK in 381ms (Views: 235.7ms | ActiveRecord: 14.2ms | Sphinx: 0.0ms)
+
+
+Started GET "/dk/companies" for 127.0.0.1 at 2011-09-12 14:51:10 +0200
+  Processing by CompaniesController#index as HTML
+  Parameters: {"locale"=>"dk"}
+  [1m[36mInfoPage Load (0.7ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages`[0m
+  [1m[35mUser Load (1.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mNewspost Load (176.6ms)[0m  [1mSELECT `newsposts`.* FROM `newsposts` WHERE `newsposts`.`internal_letter` = 0 ORDER BY created_at desc LIMIT 3 OFFSET 0[0m
+  [1m[35mSQL (3.1ms)[0m  SELECT COUNT(*) FROM `newsposts` WHERE `newsposts`.`internal_letter` = 0
+  [1m[36mCompany Load (1.0ms)[0m  [1mSELECT `companies`.* FROM `companies` ORDER BY title asc LIMIT 12 OFFSET 0[0m
+  [1m[35mNewspost Load (0.7ms)[0m  SELECT `newsposts`.* FROM `newsposts` WHERE `newsposts`.`internal_letter` = 1 ORDER BY created_at desc LIMIT 3 OFFSET 0
+Rendered shared/_menu.html.slim (1.8ms)
+  [1m[36mSQL (0.5ms)[0m  [1mSELECT COUNT(*) FROM `company_thumbs` WHERE (`company_thumbs`.company_id = 13)[0m
+  [1m[35mCompanyThumb Load (0.5ms)[0m  SELECT `company_thumbs`.* FROM `company_thumbs` WHERE (`company_thumbs`.company_id = 13) ORDER BY company_thumbs.id DESC LIMIT 1
+  [1m[36mSQL (0.6ms)[0m  [1mSELECT COUNT(*) FROM `company_thumbs` WHERE (`company_thumbs`.company_id = 2)[0m
+  [1m[35mCompanyThumb Load (0.8ms)[0m  SELECT `company_thumbs`.* FROM `company_thumbs` WHERE (`company_thumbs`.company_id = 2) ORDER BY company_thumbs.id DESC LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mSELECT COUNT(*) FROM `company_thumbs` WHERE (`company_thumbs`.company_id = 12)[0m
+  [1m[35mSQL (0.5ms)[0m  SELECT COUNT(*) FROM `company_thumbs` WHERE (`company_thumbs`.company_id = 8)
+  [1m[36mCompanyThumb Load (0.7ms)[0m  [1mSELECT `company_thumbs`.* FROM `company_thumbs` WHERE (`company_thumbs`.company_id = 8) ORDER BY company_thumbs.id DESC LIMIT 1[0m
+  [1m[35mSQL (0.6ms)[0m  SELECT COUNT(*) FROM `company_thumbs` WHERE (`company_thumbs`.company_id = 11)
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT COUNT(*) FROM `company_thumbs` WHERE (`company_thumbs`.company_id = 7)[0m
+  [1m[35mSQL (0.5ms)[0m  SELECT COUNT(*) FROM `company_thumbs` WHERE (`company_thumbs`.company_id = 10)
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT COUNT(*) FROM `company_thumbs` WHERE (`company_thumbs`.company_id = 1)[0m
+  [1m[35mCompanyThumb Load (0.5ms)[0m  SELECT `company_thumbs`.* FROM `company_thumbs` WHERE (`company_thumbs`.company_id = 1) ORDER BY company_thumbs.id DESC LIMIT 1
+  [1m[36mSQL (0.6ms)[0m  [1mSELECT COUNT(*) FROM `company_thumbs` WHERE (`company_thumbs`.company_id = 6)[0m
+Rendered shared/_news.html.slim (9.9ms)
+  [1m[35mMeetingroom Load (0.7ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages`[0m
+Rendered companies/index.html.slim within layouts/application (235.9ms)
+Completed 200 OK in 692ms (Views: 283.1ms | ActiveRecord: 190.8ms | Sphinx: 0.0ms)
+
+
+Started GET "/users/sign_out?locale=dk" for 127.0.0.1 at 2011-09-12 14:51:14 +0200
+  Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"locale"=>"dk"}
+  [1m[35mInfoPage Load (0.7ms)[0m  SELECT `info_pages`.* FROM `info_pages`
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  BEGIN
+  [1m[36mAREL (0.5ms)[0m  [1mUPDATE `users` SET `remember_token` = NULL, `remember_created_at` = NULL, `updated_at` = '2011-09-12 12:51:15' WHERE `users`.`id` = 1[0m
+[paperclip] Saving attachments.
+  [1m[35mSQL (0.8ms)[0m  COMMIT
+Redirected to http://localhost:3000/?locale=dk
+Completed 302 Found in 40ms
+
+
+Started GET "/?locale=dk" for 127.0.0.1 at 2011-09-12 14:51:15 +0200
+  Processing by HomeController#index as HTML
+  Parameters: {"locale"=>"dk"}
+  [1m[36mInfoPage Load (0.7ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages`[0m
+  [1m[35mNewspost Load (1.0ms)[0m  SELECT `newsposts`.* FROM `newsposts` WHERE `newsposts`.`internal_letter` = 0 ORDER BY created_at desc LIMIT 3 OFFSET 0
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT COUNT(*) FROM `newsposts` WHERE `newsposts`.`internal_letter` = 0[0m
+  [1m[35mPage Load (0.8ms)[0m  SELECT `pages`.* FROM `pages` WHERE `pages`.`identity` = 'welcome_dk ' LIMIT 1
+Rendered shared/_menu.html.slim (1.9ms)
+Rendered shared/_news.html.slim (10.0ms)
+Rendered home/index.html.slim within layouts/application (64.8ms)
+Completed 200 OK in 191ms (Views: 70.4ms | ActiveRecord: 2.8ms | Sphinx: 0.0ms)
+DEPRECATION WARNING: Use toplevel init.rb; rails/init.rb is deprecated: /Users/synthmax/Dropbox/marselistvaervej4/vendor/plugins/paperclip/rails/init.rb. (called from <top (required)> at /Users/synthmax/Dropbox/marselistvaervej4/config/environment.rb:5)
+
+
+Started GET "/?locale=dk" for 127.0.0.1 at 2011-09-12 14:51:43 +0200
+  Processing by HomeController#index as HTML
+  Parameters: {"locale"=>"dk"}
+  [1m[36mInfoPage Load (0.6ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages`[0m
+  [1m[35mSQL (0.8ms)[0m  SHOW TABLES
+  [1m[36mNewspost Load (28.8ms)[0m  [1mSELECT `newsposts`.* FROM `newsposts` WHERE `newsposts`.`internal_letter` = 0 ORDER BY created_at desc LIMIT 3 OFFSET 0[0m
+  [1m[35mSQL (5.7ms)[0m  SELECT COUNT(*) FROM `newsposts` WHERE `newsposts`.`internal_letter` = 0
+  [1m[36mPage Load (0.7ms)[0m  [1mSELECT `pages`.* FROM `pages` WHERE `pages`.`identity` = 'welcome_dk ' LIMIT 1[0m
+Rendered shared/_menu.html.slim (1.9ms)
+Rendered shared/_news.html.slim (53.7ms)
+DEPRECATION WARNING: RAILS_ENV is deprecated. Please use ::Rails.env. (called from _app_views_layouts_application_html_slim___2246952048096895121_2194665260__851765832415601218 at /Users/synthmax/Dropbox/marselistvaervej4/app/views/layouts/application.html.slim:22)
+Rendered home/index.html.slim within layouts/application (142.3ms)
+Completed 200 OK in 428ms (Views: 151.0ms | ActiveRecord: 36.6ms | Sphinx: 0.0ms)
+
+
+Started GET "/dk/companies" for 127.0.0.1 at 2011-09-12 14:51:46 +0200
+  Processing by CompaniesController#index as HTML
+  Parameters: {"locale"=>"dk"}
+  [1m[35mInfoPage Load (0.7ms)[0m  SELECT `info_pages`.* FROM `info_pages`
+  [1m[36mNewspost Load (0.8ms)[0m  [1mSELECT `newsposts`.* FROM `newsposts` WHERE `newsposts`.`internal_letter` = 0 ORDER BY created_at desc LIMIT 3 OFFSET 0[0m
+  [1m[35mSQL (0.6ms)[0m  SELECT COUNT(*) FROM `newsposts` WHERE `newsposts`.`internal_letter` = 0
+  [1m[36mCompany Load (1.1ms)[0m  [1mSELECT `companies`.* FROM `companies` ORDER BY title asc LIMIT 12 OFFSET 0[0m
+Rendered shared/_menu.html.slim (1.8ms)
+  [1m[35mSQL (1.0ms)[0m  SELECT COUNT(*) FROM `company_thumbs` WHERE (`company_thumbs`.company_id = 13)
+  [1m[36mCompanyThumb Load (0.4ms)[0m  [1mSELECT `company_thumbs`.* FROM `company_thumbs` WHERE (`company_thumbs`.company_id = 13) ORDER BY company_thumbs.id DESC LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  SELECT COUNT(*) FROM `company_thumbs` WHERE (`company_thumbs`.company_id = 2)
+  [1m[36mCompanyThumb Load (0.4ms)[0m  [1mSELECT `company_thumbs`.* FROM `company_thumbs` WHERE (`company_thumbs`.company_id = 2) ORDER BY company_thumbs.id DESC LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  SELECT COUNT(*) FROM `company_thumbs` WHERE (`company_thumbs`.company_id = 12)
+  [1m[36mSQL (0.6ms)[0m  [1mSELECT COUNT(*) FROM `company_thumbs` WHERE (`company_thumbs`.company_id = 8)[0m
+  [1m[35mCompanyThumb Load (0.7ms)[0m  SELECT `company_thumbs`.* FROM `company_thumbs` WHERE (`company_thumbs`.company_id = 8) ORDER BY company_thumbs.id DESC LIMIT 1
+  [1m[36mSQL (0.6ms)[0m  [1mSELECT COUNT(*) FROM `company_thumbs` WHERE (`company_thumbs`.company_id = 11)[0m
+  [1m[35mSQL (0.4ms)[0m  SELECT COUNT(*) FROM `company_thumbs` WHERE (`company_thumbs`.company_id = 7)
+  [1m[36mSQL (0.6ms)[0m  [1mSELECT COUNT(*) FROM `company_thumbs` WHERE (`company_thumbs`.company_id = 10)[0m
+  [1m[35mSQL (0.6ms)[0m  SELECT COUNT(*) FROM `company_thumbs` WHERE (`company_thumbs`.company_id = 1)
+  [1m[36mCompanyThumb Load (0.7ms)[0m  [1mSELECT `company_thumbs`.* FROM `company_thumbs` WHERE (`company_thumbs`.company_id = 1) ORDER BY company_thumbs.id DESC LIMIT 1[0m
+  [1m[35mSQL (0.5ms)[0m  SELECT COUNT(*) FROM `company_thumbs` WHERE (`company_thumbs`.company_id = 6)
+Rendered shared/_news.html.slim (10.8ms)
+Rendered companies/index.html.slim within layouts/application (100.4ms)
+Completed 200 OK in 235ms (Views: 102.4ms | ActiveRecord: 10.3ms | Sphinx: 0.0ms)
+
+
+Started GET "/history/index?locale=dk" for 127.0.0.1 at 2011-09-12 14:51:49 +0200
+  Processing by HistoryController#index as HTML
+  Parameters: {"locale"=>"dk"}
+  [1m[36mInfoPage Load (0.7ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages`[0m
+  [1m[35mNewspost Load (0.8ms)[0m  SELECT `newsposts`.* FROM `newsposts` WHERE `newsposts`.`internal_letter` = 0 ORDER BY created_at desc LIMIT 3 OFFSET 0
+  [1m[36mSQL (0.5ms)[0m  [1mSELECT COUNT(*) FROM `newsposts` WHERE `newsposts`.`internal_letter` = 0[0m
+  [1m[35mPage Load (0.8ms)[0m  SELECT `pages`.* FROM `pages` WHERE `pages`.`identity` = 'history_dk' LIMIT 1
+Rendered shared/_menu.html.slim (1.8ms)
+Rendered shared/_news.html.slim (9.9ms)
+Rendered history/index.html.slim within layouts/application (28.6ms)
+Completed 200 OK in 175ms (Views: 56.6ms | ActiveRecord: 2.8ms | Sphinx: 0.0ms)
+
+
+Started GET "/?locale=dk" for 127.0.0.1 at 2011-09-12 14:51:51 +0200
+  Processing by HomeController#index as HTML
+  Parameters: {"locale"=>"dk"}
+  [1m[36mInfoPage Load (0.5ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages`[0m
+  [1m[35mNewspost Load (3.0ms)[0m  SELECT `newsposts`.* FROM `newsposts` WHERE `newsposts`.`internal_letter` = 0 ORDER BY created_at desc LIMIT 3 OFFSET 0
+  [1m[36mSQL (10.5ms)[0m  [1mSELECT COUNT(*) FROM `newsposts` WHERE `newsposts`.`internal_letter` = 0[0m
+  [1m[35mPage Load (0.8ms)[0m  SELECT `pages`.* FROM `pages` WHERE `pages`.`identity` = 'welcome_dk ' LIMIT 1
+Rendered shared/_menu.html.slim (2.0ms)
+Rendered shared/_news.html.slim (10.4ms)
+Rendered home/index.html.slim within layouts/application (30.4ms)
+Completed 200 OK in 225ms (Views: 36.3ms | ActiveRecord: 14.8ms | Sphinx: 0.0ms)
+
+
+Started GET "/users/sign_in?locale=dk" for 127.0.0.1 at 2011-09-12 14:51:53 +0200
+  Processing by Devise::SessionsController#new as HTML
+  Parameters: {"locale"=>"dk"}
+  [1m[36mInfoPage Load (0.8ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages`[0m
+Rendered shared/_menu.html.slim (1.8ms)
+Rendered devise/shared/_links.erb (1.0ms)
+Rendered devise/sessions/new.html.slim within layouts/application (46.4ms)
+Completed 200 OK in 274ms (Views: 73.5ms | ActiveRecord: 0.8ms | Sphinx: 0.0ms)
+
+
+Started GET "/dk/companies" for 127.0.0.1 at 2011-09-12 14:51:55 +0200
+  Processing by CompaniesController#index as HTML
+  Parameters: {"locale"=>"dk"}
+  [1m[35mInfoPage Load (0.6ms)[0m  SELECT `info_pages`.* FROM `info_pages`
+  [1m[36mNewspost Load (1.0ms)[0m  [1mSELECT `newsposts`.* FROM `newsposts` WHERE `newsposts`.`internal_letter` = 0 ORDER BY created_at desc LIMIT 3 OFFSET 0[0m
+  [1m[35mSQL (0.4ms)[0m  SELECT COUNT(*) FROM `newsposts` WHERE `newsposts`.`internal_letter` = 0
+  [1m[36mCompany Load (0.9ms)[0m  [1mSELECT `companies`.* FROM `companies` ORDER BY title asc LIMIT 12 OFFSET 0[0m
+Rendered shared/_menu.html.slim (1.8ms)
+  [1m[35mSQL (67.5ms)[0m  SELECT COUNT(*) FROM `company_thumbs` WHERE (`company_thumbs`.company_id = 13)
+  [1m[36mCompanyThumb Load (0.7ms)[0m  [1mSELECT `company_thumbs`.* FROM `company_thumbs` WHERE (`company_thumbs`.company_id = 13) ORDER BY company_thumbs.id DESC LIMIT 1[0m
+  [1m[35mSQL (0.6ms)[0m  SELECT COUNT(*) FROM `company_thumbs` WHERE (`company_thumbs`.company_id = 2)
+  [1m[36mCompanyThumb Load (0.8ms)[0m  [1mSELECT `company_thumbs`.* FROM `company_thumbs` WHERE (`company_thumbs`.company_id = 2) ORDER BY company_thumbs.id DESC LIMIT 1[0m
+  [1m[35mSQL (0.6ms)[0m  SELECT COUNT(*) FROM `company_thumbs` WHERE (`company_thumbs`.company_id = 12)
+  [1m[36mSQL (0.4ms)[0m  [1mSELECT COUNT(*) FROM `company_thumbs` WHERE (`company_thumbs`.company_id = 8)[0m
+  [1m[35mCompanyThumb Load (0.4ms)[0m  SELECT `company_thumbs`.* FROM `company_thumbs` WHERE (`company_thumbs`.company_id = 8) ORDER BY company_thumbs.id DESC LIMIT 1
+  [1m[36mSQL (0.6ms)[0m  [1mSELECT COUNT(*) FROM `company_thumbs` WHERE (`company_thumbs`.company_id = 11)[0m
+  [1m[35mSQL (0.6ms)[0m  SELECT COUNT(*) FROM `company_thumbs` WHERE (`company_thumbs`.company_id = 7)
+  [1m[36mSQL (0.6ms)[0m  [1mSELECT COUNT(*) FROM `company_thumbs` WHERE (`company_thumbs`.company_id = 10)[0m
+  [1m[35mSQL (0.7ms)[0m  SELECT COUNT(*) FROM `company_thumbs` WHERE (`company_thumbs`.company_id = 1)
+  [1m[36mCompanyThumb Load (0.4ms)[0m  [1mSELECT `company_thumbs`.* FROM `company_thumbs` WHERE (`company_thumbs`.company_id = 1) ORDER BY company_thumbs.id DESC LIMIT 1[0m
+  [1m[35mSQL (0.5ms)[0m  SELECT COUNT(*) FROM `company_thumbs` WHERE (`company_thumbs`.company_id = 6)
+Rendered shared/_news.html.slim (9.8ms)
+Rendered companies/index.html.slim within layouts/application (279.9ms)
+Completed 200 OK in 509ms (Views: 214.7ms | ActiveRecord: 77.1ms | Sphinx: 0.0ms)
+
+
+Started GET "/dk/companies?page=2" for 127.0.0.1 at 2011-09-12 14:52:05 +0200
+  Processing by CompaniesController#index as HTML
+  Parameters: {"page"=>"2", "locale"=>"dk"}
+  [1m[36mInfoPage Load (0.8ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages`[0m
+  [1m[35mNewspost Load (0.6ms)[0m  SELECT `newsposts`.* FROM `newsposts` WHERE `newsposts`.`internal_letter` = 0 ORDER BY created_at desc LIMIT 3 OFFSET 3
+  [1m[36mCompany Load (0.5ms)[0m  [1mSELECT `companies`.* FROM `companies` ORDER BY title asc LIMIT 12 OFFSET 12[0m
+  [1m[35mSQL (0.9ms)[0m  SELECT COUNT(*) FROM `companies`
+Rendered shared/_menu.html.slim (1.9ms)
+Rendered shared/_news.html.slim (12.1ms)
+Rendered companies/index.html.slim within layouts/application (26.2ms)
+Completed 200 OK in 219ms (Views: 35.1ms | ActiveRecord: 2.7ms | Sphinx: 0.0ms)
+
+
+Started GET "/dk/companies?page=1" for 127.0.0.1 at 2011-09-12 14:52:07 +0200
+  Processing by CompaniesController#index as HTML
+  Parameters: {"page"=>"1", "locale"=>"dk"}
+  [1m[36mInfoPage Load (0.7ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages`[0m
+  [1m[35mNewspost Load (1.0ms)[0m  SELECT `newsposts`.* FROM `newsposts` WHERE `newsposts`.`internal_letter` = 0 ORDER BY created_at desc LIMIT 3 OFFSET 0
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT COUNT(*) FROM `newsposts` WHERE `newsposts`.`internal_letter` = 0[0m
+  [1m[35mCompany Load (1.0ms)[0m  SELECT `companies`.* FROM `companies` ORDER BY title asc LIMIT 12 OFFSET 0
+Rendered shared/_menu.html.slim (1.9ms)
+  [1m[36mSQL (1.0ms)[0m  [1mSELECT COUNT(*) FROM `company_thumbs` WHERE (`company_thumbs`.company_id = 13)[0m
+  [1m[35mCompanyThumb Load (0.4ms)[0m  SELECT `company_thumbs`.* FROM `company_thumbs` WHERE (`company_thumbs`.company_id = 13) ORDER BY company_thumbs.id DESC LIMIT 1
+  [1m[36mSQL (0.6ms)[0m  [1mSELECT COUNT(*) FROM `company_thumbs` WHERE (`company_thumbs`.company_id = 2)[0m
+  [1m[35mCompanyThumb Load (0.6ms)[0m  SELECT `company_thumbs`.* FROM `company_thumbs` WHERE (`company_thumbs`.company_id = 2) ORDER BY company_thumbs.id DESC LIMIT 1
+  [1m[36mSQL (0.6ms)[0m  [1mSELECT COUNT(*) FROM `company_thumbs` WHERE (`company_thumbs`.company_id = 12)[0m
+  [1m[35mSQL (0.5ms)[0m  SELECT COUNT(*) FROM `company_thumbs` WHERE (`company_thumbs`.company_id = 8)
+  [1m[36mCompanyThumb Load (0.7ms)[0m  [1mSELECT `company_thumbs`.* FROM `company_thumbs` WHERE (`company_thumbs`.company_id = 8) ORDER BY company_thumbs.id DESC LIMIT 1[0m
+  [1m[35mSQL (0.6ms)[0m  SELECT COUNT(*) FROM `company_thumbs` WHERE (`company_thumbs`.company_id = 11)
+  [1m[36mSQL (0.6ms)[0m  [1mSELECT COUNT(*) FROM `company_thumbs` WHERE (`company_thumbs`.company_id = 7)[0m
+  [1m[35mSQL (0.6ms)[0m  SELECT COUNT(*) FROM `company_thumbs` WHERE (`company_thumbs`.company_id = 10)
+  [1m[36mSQL (0.6ms)[0m  [1mSELECT COUNT(*) FROM `company_thumbs` WHERE (`company_thumbs`.company_id = 1)[0m
+  [1m[35mCompanyThumb Load (0.8ms)[0m  SELECT `company_thumbs`.* FROM `company_thumbs` WHERE (`company_thumbs`.company_id = 1) ORDER BY company_thumbs.id DESC LIMIT 1
+  [1m[36mSQL (0.6ms)[0m  [1mSELECT COUNT(*) FROM `company_thumbs` WHERE (`company_thumbs`.company_id = 6)[0m
+Rendered shared/_news.html.slim (10.0ms)
+Rendered companies/index.html.slim within layouts/application (99.0ms)
+Completed 200 OK in 347ms (Views: 100.5ms | ActiveRecord: 10.8ms | Sphinx: 0.0ms)
+
+
+Started GET "/dk/companies?page=1" for 127.0.0.1 at 2011-09-12 14:57:26 +0200
+  Processing by CompaniesController#index as HTML
+  Parameters: {"page"=>"1", "locale"=>"dk"}
+  [1m[35mInfoPage Load (0.8ms)[0m  SELECT `info_pages`.* FROM `info_pages`
+  [1m[36mNewspost Load (0.8ms)[0m  [1mSELECT `newsposts`.* FROM `newsposts` WHERE `newsposts`.`internal_letter` = 0 ORDER BY created_at desc LIMIT 3 OFFSET 0[0m
+  [1m[35mSQL (0.5ms)[0m  SELECT COUNT(*) FROM `newsposts` WHERE `newsposts`.`internal_letter` = 0
+  [1m[36mCompany Load (1.1ms)[0m  [1mSELECT `companies`.* FROM `companies` ORDER BY title asc LIMIT 12 OFFSET 0[0m
+Rendered shared/_menu.html.slim (1.7ms)
+  [1m[35mSQL (0.6ms)[0m  SELECT COUNT(*) FROM `company_thumbs` WHERE (`company_thumbs`.company_id = 13)
+  [1m[36mCompanyThumb Load (0.7ms)[0m  [1mSELECT `company_thumbs`.* FROM `company_thumbs` WHERE (`company_thumbs`.company_id = 13) ORDER BY company_thumbs.id DESC LIMIT 1[0m
+  [1m[35mSQL (0.6ms)[0m  SELECT COUNT(*) FROM `company_thumbs` WHERE (`company_thumbs`.company_id = 2)
+  [1m[36mCompanyThumb Load (0.7ms)[0m  [1mSELECT `company_thumbs`.* FROM `company_thumbs` WHERE (`company_thumbs`.company_id = 2) ORDER BY company_thumbs.id DESC LIMIT 1[0m
+  [1m[35mSQL (0.5ms)[0m  SELECT COUNT(*) FROM `company_thumbs` WHERE (`company_thumbs`.company_id = 12)
+  [1m[36mSQL (0.6ms)[0m  [1mSELECT COUNT(*) FROM `company_thumbs` WHERE (`company_thumbs`.company_id = 8)[0m
+  [1m[35mCompanyThumb Load (0.5ms)[0m  SELECT `company_thumbs`.* FROM `company_thumbs` WHERE (`company_thumbs`.company_id = 8) ORDER BY company_thumbs.id DESC LIMIT 1
+  [1m[36mSQL (0.6ms)[0m  [1mSELECT COUNT(*) FROM `company_thumbs` WHERE (`company_thumbs`.company_id = 11)[0m
+  [1m[35mSQL (0.6ms)[0m  SELECT COUNT(*) FROM `company_thumbs` WHERE (`company_thumbs`.company_id = 7)
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT COUNT(*) FROM `company_thumbs` WHERE (`company_thumbs`.company_id = 10)[0m
+  [1m[35mSQL (0.6ms)[0m  SELECT COUNT(*) FROM `company_thumbs` WHERE (`company_thumbs`.company_id = 1)
+  [1m[36mCompanyThumb Load (0.5ms)[0m  [1mSELECT `company_thumbs`.* FROM `company_thumbs` WHERE (`company_thumbs`.company_id = 1) ORDER BY company_thumbs.id DESC LIMIT 1[0m
+  [1m[35mSQL (0.5ms)[0m  SELECT COUNT(*) FROM `company_thumbs` WHERE (`company_thumbs`.company_id = 6)
+Rendered shared/_news.html.slim (10.3ms)
+Rendered companies/index.html.slim within layouts/application (80.6ms)
+Completed 200 OK in 307ms (Views: 121.6ms | ActiveRecord: 10.5ms | Sphinx: 0.0ms)
+DEPRECATION WARNING: Use toplevel init.rb; rails/init.rb is deprecated: /Users/synthmax/Dropbox/marselistvaervej4/vendor/plugins/paperclip/rails/init.rb. (called from <top (required)> at /Users/synthmax/Dropbox/marselistvaervej4/config/environment.rb:5)
+
+
+Started GET "/dk/companies?page=1" for 127.0.0.1 at 2011-09-12 14:58:04 +0200
+
+NoMethodError (undefined method `init' for Mysql:Class):
+  
+
+Rendered /Users/synthmax/.rvm/gems/ruby-1.9.2-rc2/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+Rendered /Users/synthmax/.rvm/gems/ruby-1.9.2-rc2/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+Rendered /Users/synthmax/.rvm/gems/ruby-1.9.2-rc2/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (6.8ms)
+
+
+Started GET "/dk/companies?page=1" for 127.0.0.1 at 2011-09-12 14:58:19 +0200
+
+NoMethodError (undefined method `init' for Mysql:Class):
+  
+
+Rendered /Users/synthmax/.rvm/gems/ruby-1.9.2-rc2/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+Rendered /Users/synthmax/.rvm/gems/ruby-1.9.2-rc2/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+Rendered /Users/synthmax/.rvm/gems/ruby-1.9.2-rc2/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (5.4ms)
+
+
+Started GET "/dk/companies?page=1" for 127.0.0.1 at 2011-09-12 14:58:22 +0200
+
+NoMethodError (undefined method `init' for Mysql:Class):
+  
+
+Rendered /Users/synthmax/.rvm/gems/ruby-1.9.2-rc2/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /Users/synthmax/.rvm/gems/ruby-1.9.2-rc2/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+Rendered /Users/synthmax/.rvm/gems/ruby-1.9.2-rc2/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (5.3ms)
+DEPRECATION WARNING: Use toplevel init.rb; rails/init.rb is deprecated: /Users/synthmax/Dropbox/marselistvaervej4/vendor/plugins/paperclip/rails/init.rb. (called from <top (required)> at /Users/synthmax/Dropbox/marselistvaervej4/config/environment.rb:5)
+
+
+Started GET "/dk/companies?page=1" for 127.0.0.1 at 2011-09-12 14:59:27 +0200
+  Processing by CompaniesController#index as HTML
+  Parameters: {"page"=>"1", "locale"=>"dk"}
+  [1m[36mInfoPage Load (0.6ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages`[0m
+  [1m[35mSQL (48.7ms)[0m  SHOW TABLES
+  [1m[36mNewspost Load (0.7ms)[0m  [1mSELECT `newsposts`.* FROM `newsposts` WHERE `newsposts`.`internal_letter` = 0 ORDER BY created_at desc LIMIT 3 OFFSET 0[0m
+  [1m[35mSQL (0.5ms)[0m  SELECT COUNT(*) FROM `newsposts` WHERE `newsposts`.`internal_letter` = 0
+  [1m[36mCompany Load (1.0ms)[0m  [1mSELECT `companies`.* FROM `companies` ORDER BY title asc LIMIT 12 OFFSET 0[0m
+Rendered shared/_menu.html.slim (1.8ms)
+  [1m[35mSQL (2.2ms)[0m  SELECT COUNT(*) FROM `company_thumbs` WHERE (`company_thumbs`.company_id = 13)
+  [1m[36mCompanyThumb Load (0.5ms)[0m  [1mSELECT `company_thumbs`.* FROM `company_thumbs` WHERE (`company_thumbs`.company_id = 13) ORDER BY company_thumbs.id DESC LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  SELECT COUNT(*) FROM `company_thumbs` WHERE (`company_thumbs`.company_id = 2)
+  [1m[36mCompanyThumb Load (0.6ms)[0m  [1mSELECT `company_thumbs`.* FROM `company_thumbs` WHERE (`company_thumbs`.company_id = 2) ORDER BY company_thumbs.id DESC LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  SELECT COUNT(*) FROM `company_thumbs` WHERE (`company_thumbs`.company_id = 12)
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT COUNT(*) FROM `company_thumbs` WHERE (`company_thumbs`.company_id = 8)[0m
+  [1m[35mCompanyThumb Load (0.5ms)[0m  SELECT `company_thumbs`.* FROM `company_thumbs` WHERE (`company_thumbs`.company_id = 8) ORDER BY company_thumbs.id DESC LIMIT 1
+  [1m[36mSQL (0.6ms)[0m  [1mSELECT COUNT(*) FROM `company_thumbs` WHERE (`company_thumbs`.company_id = 11)[0m
+  [1m[35mSQL (0.4ms)[0m  SELECT COUNT(*) FROM `company_thumbs` WHERE (`company_thumbs`.company_id = 7)
+  [1m[36mSQL (0.5ms)[0m  [1mSELECT COUNT(*) FROM `company_thumbs` WHERE (`company_thumbs`.company_id = 10)[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT COUNT(*) FROM `company_thumbs` WHERE (`company_thumbs`.company_id = 1)
+  [1m[36mCompanyThumb Load (0.4ms)[0m  [1mSELECT `company_thumbs`.* FROM `company_thumbs` WHERE (`company_thumbs`.company_id = 1) ORDER BY company_thumbs.id DESC LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  SELECT COUNT(*) FROM `company_thumbs` WHERE (`company_thumbs`.company_id = 6)
+Rendered shared/_news.html.slim (64.4ms)
+DEPRECATION WARNING: RAILS_ENV is deprecated. Please use ::Rails.env. (called from _app_views_layouts_application_html_slim__2444799491434031538_2171643100_3806951435642247971 at /Users/synthmax/Dropbox/marselistvaervej4/app/views/layouts/application.html.slim:22)
+Rendered companies/index.html.slim within layouts/application (375.6ms)
+Completed 200 OK in 1178ms (Views: 377.6ms | ActiveRecord: 58.7ms | Sphinx: 0.0ms)
+
+
+Started GET "/dk/companies" for 127.0.0.1 at 2011-09-12 14:59:33 +0200
+  Processing by CompaniesController#index as HTML
+  Parameters: {"locale"=>"dk"}
+  [1m[36mInfoPage Load (0.7ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages`[0m
+  [1m[35mNewspost Load (0.7ms)[0m  SELECT `newsposts`.* FROM `newsposts` WHERE `newsposts`.`internal_letter` = 0 ORDER BY created_at desc LIMIT 3 OFFSET 0
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT COUNT(*) FROM `newsposts` WHERE `newsposts`.`internal_letter` = 0[0m
+  [1m[35mCompany Load (1.1ms)[0m  SELECT `companies`.* FROM `companies` ORDER BY title asc LIMIT 12 OFFSET 0
+Rendered shared/_menu.html.slim (1.8ms)
+  [1m[36mSQL (0.9ms)[0m  [1mSELECT COUNT(*) FROM `company_thumbs` WHERE (`company_thumbs`.company_id = 13)[0m
+  [1m[35mCompanyThumb Load (0.4ms)[0m  SELECT `company_thumbs`.* FROM `company_thumbs` WHERE (`company_thumbs`.company_id = 13) ORDER BY company_thumbs.id DESC LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT COUNT(*) FROM `company_thumbs` WHERE (`company_thumbs`.company_id = 2)[0m
+  [1m[35mCompanyThumb Load (0.5ms)[0m  SELECT `company_thumbs`.* FROM `company_thumbs` WHERE (`company_thumbs`.company_id = 2) ORDER BY company_thumbs.id DESC LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT COUNT(*) FROM `company_thumbs` WHERE (`company_thumbs`.company_id = 12)[0m
+  [1m[35mSQL (0.3ms)[0m  SELECT COUNT(*) FROM `company_thumbs` WHERE (`company_thumbs`.company_id = 8)
+  [1m[36mCompanyThumb Load (0.5ms)[0m  [1mSELECT `company_thumbs`.* FROM `company_thumbs` WHERE (`company_thumbs`.company_id = 8) ORDER BY company_thumbs.id DESC LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  SELECT COUNT(*) FROM `company_thumbs` WHERE (`company_thumbs`.company_id = 11)
+  [1m[36mSQL (0.6ms)[0m  [1mSELECT COUNT(*) FROM `company_thumbs` WHERE (`company_thumbs`.company_id = 7)[0m
+  [1m[35mSQL (0.3ms)[0m  SELECT COUNT(*) FROM `company_thumbs` WHERE (`company_thumbs`.company_id = 10)
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT COUNT(*) FROM `company_thumbs` WHERE (`company_thumbs`.company_id = 1)[0m
+  [1m[35mCompanyThumb Load (0.4ms)[0m  SELECT `company_thumbs`.* FROM `company_thumbs` WHERE (`company_thumbs`.company_id = 1) ORDER BY company_thumbs.id DESC LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mSELECT COUNT(*) FROM `company_thumbs` WHERE (`company_thumbs`.company_id = 6)[0m
+Rendered shared/_news.html.slim (10.3ms)
+Rendered companies/index.html.slim within layouts/application (108.8ms)
+Completed 200 OK in 393ms (Views: 112.3ms | ActiveRecord: 8.2ms | Sphinx: 0.0ms)

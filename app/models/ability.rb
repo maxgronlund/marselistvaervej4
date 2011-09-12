@@ -14,6 +14,7 @@ class Ability
         can :manage, Meetingroom
         can :manage, CompanyThumb
         can :manage, Newspost
+        can :manage, Photo
         can :manage, Page
         can :manage, User
         
@@ -32,6 +33,7 @@ class Ability
         can :read, Meetingroom
         can :read, Newspost
         can :read, Page
+        can :read, Photo
         can :read, User
         can :manage, User, :id => user.id
        
@@ -46,6 +48,7 @@ class Ability
      can :read, Meetingroom
      can :read, Newspost
      can :read, Page
+     can :read, Photo
      can :read, User
      #can :create, User# <----------- Uncomment this to alow users to signup by them self 
     end

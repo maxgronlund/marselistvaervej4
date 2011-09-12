@@ -1,0 +1,18 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Title:</b>
+  <%= @photo.title %>
+</p>
+
+<p>
+  <b>Body:</b>
+  <%= @photo.body %>
+</p>
+
+
+<%= image_tag @photo.image.url(:fullSize), :border => 'none', :class => 'image_fix'%>
+
+
+<%= link_to 'Edit', edit_photo_path(@photo) %> |
+<%= link_to 'Back', photos_path %>

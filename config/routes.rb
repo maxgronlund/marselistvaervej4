@@ -1,5 +1,9 @@
 Rails_template::Application.routes.draw do
 
+  get "gallery/index"
+
+  resources :photos
+
   resources :info_pages
 
   resources :company_thumbs

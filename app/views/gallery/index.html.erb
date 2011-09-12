@@ -1,0 +1,39 @@
+<!-- Start Advanced Gallery Html Containers -->
+<div id="gallery" class="content top_margin_8">
+		<p>
+			<b>Antal mødelokaler: </b><%#= @facility.meeting_rooms %><br>
+			<b>Max antal deltagere: </b><%#= @facility.participants %><br>
+			<b>Antal værelser: </b><%#= @facility.rooms %><br>
+			<b>Antal senge: </b><%#= @facility.beds %><br>
+			<b>Hjemmeside: </b><%#= link_to 'Hjemmeside',@facility.url %>
+		</p>
+	
+	<div class="slideshow-container">
+		<div id="loading" class="loader"></div>
+		<div id="slideshow" class="slideshow"></div>
+	</div>
+	<div id="controls" class="controls"></div>
+	<div id="caption" class="caption-container"></div>
+</div>
+<div id="thumbs" class="navigation">
+	
+	<%#=raw @facility.body_dk %>
+	
+	<ul class="thumbs noscript">
+		<% Photo.all.each do |photo| %>
+			<li>
+				<a class="thumb" name="<%= photo.title%>" href="<%= photo.image.url(:fullSize) %>" title="<%= photo.title%>">
+					<img src="<%= photo.image.url(:mini) %>" alt="<%= photo.title%>" />
+				</a>
+				<div class="caption">
+					<div class="text_right">
+						<a href="<%= photo.image.url(:original) %>">Download billed</a>
+					</div>
+					<h3><%= photo.title%></h3>
+					<%= photo.body%>
+				</div>	
+			</li>
+		<% end %>
+	</ul>
+</div>
+<div style="clear: both;"></div>
