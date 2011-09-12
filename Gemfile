@@ -3,8 +3,8 @@ source 'http://rubygems.org'
 gem 'rails', '3.0.7'
 
 
-#gem 'mysql'
-gem 'ruby-mysql', '2.9.3'
+gem 'mysql'
+#gem 'ruby-mysql', '2.9.3'
 
 
 gem 'inherited_resources', '1.1.2'
