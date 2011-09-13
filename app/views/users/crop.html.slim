@@ -7,7 +7,7 @@
         onChange: update_crop,
         onSelect: update_crop,
         setSelect: [0, 0, 480, 520],
-        bgColor:    'none',
+        //bgColor:    'none',
         aspectRatio: 0.92307692307692
       });
     });
@@ -37,7 +37,8 @@
 
   div class="grid_9 omega"
     h3 Editor:
-    div class="clear">&nbsp;
+    div class="clear"
+      '&nbsp;
     = image_tag @user.image.url(:large), :id => "cropbox"
 
     = form_for @user do |f|
