@@ -568,3 +568,62 @@ a:hover{
 
 .top_margin{ margin-top:8px;}
 
+.thumb-box{
+	background-color:#fff;
+    margin-top:36px;
+	@include grid(5);
+	min-height:376px;
+	display:block;
+	.borders{
+		border-style:solid;
+		border-width:1px;
+		min-height:376px;
+		display:block;
+	}
+	.content{
+		.content-top{ height:280px;}
+	}
+	.text-right{
+		text-align: right;
+	}
+	.menu-box{
+		width:400px;
+		height:51px;
+		a{ color:#fff; }
+		a:hover{ color:#000; background-color:#fff; }
+	}
+	.image-box{
+		height:376px;
+	}
+}
+
+.gallery-box{
+	background-color:#fff;
+    margin-top:36px;
+	@include grid(7);
+	min-height:376px;
+	display:block;
+	.borders{
+		border-style:solid;
+		border-width:1px;
+		min-height:376px;
+		display:block;
+	}
+	.content{
+		.content-top{ height:280px;}
+	}
+	.text-right{
+		text-align: right;
+	}
+	.menu-box{
+		width:400px;
+		height:51px;
+		a{ color:#fff; }
+		a:hover{ color:#000; background-color:#fff; }
+	}
+	.image-box{
+		height:376px;
+	}
+}
+
+

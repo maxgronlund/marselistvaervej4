@@ -10,12 +10,12 @@ class Meetingroom < ActiveRecord::Base
                     :default_url => "/images/fallback/default_illustration_:style.gif"
   
                     validates_attachment_size :image, :less_than => 8.megabytes
-                    validates_attachment_content_type :image, :content_type => ['image/jpeg',
-                                                                                'image/jpg',
-                                                                                'image/png',
-                                                                                'image/x-png',
-                                                                                'image/gif',
-                                                                                'image/pjpeg'],:message => 'must be a URL for GIF, JPG or PNG image.'
+                    #validates_attachment_content_type :image, :content_type => ['image/jpeg',
+                    #                                                            'image/jpg',
+                    #                                                            'image/png',
+                    #                                                            'image/x-png',
+                    #                                                            'image/gif',
+                    #                                                            'image/pjpeg'],:message => 'must be a URL for GIF, JPG or PNG image.'
   after_update :reprocess_image, :if => :cropping?
   
   attr_accessor :crop_x, :crop_y, :crop_w, :crop_h

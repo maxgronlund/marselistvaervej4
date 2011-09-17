@@ -6,8 +6,7 @@
         = render :partial => "shared/menu"
       .content
 
-        h1
-          =raw @history.title
+        h1 = @history.title
         =raw @history.body      
 	    - if can?(:edit, @history)
 	      .text-right
