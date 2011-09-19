@@ -1,11 +1,19 @@
 class PhotosController < InheritedResources::Base
      before_filter :get_internal_news
   
-  def create  
+  def create
     @photo = Photo.new(params[:photo])
     @photo.image_content_type = MIME::Types.type_for(@photo.image.original_filename).first.to_s if @photo.image.original_filename.present?
-    @photo.save
-    create! {photo_path(@photo)}
+    if @photo.save
+      if params[:photo][:image].blank?
+        flash[:notice] = "Successfully created photo."
+        redirect_to photos_path
+      else
+        render :action => "crop"
+      end
+    else
+      render :action => 'new'
+    end
   end
   
   def update
@@ -23,7 +31,7 @@ class PhotosController < InheritedResources::Base
   end
    
    def crop
-
+     # nothing here
    end
    
 end
