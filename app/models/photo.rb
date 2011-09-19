@@ -5,7 +5,7 @@ class Photo < ActiveRecord::Base
   attr_accessible :image,:crop_x, :crop_y, :crop_w, :crop_h, :title, :body
   
   has_attached_file :image, 
-                    :styles => {  :mini => "100x75#", :fullSize => "540x405#" }, 
+                    :styles => {  :micro => "60x45#",:mini => "100x75#", :fullSize => "540x405#" }, 
                     :processors => [:cropper],
                     :default_url => "/images/fallback/default_avatar_:style.jpg"
                     

@@ -1,5 +1,5 @@
 class PhotosController < InheritedResources::Base
-  
+     before_filter :get_internal_news
   
   def create  
     @photo = Photo.new(params[:photo])
@@ -9,12 +9,11 @@ class PhotosController < InheritedResources::Base
   end
   
   def update
-
     @photo = Photo.find(params[:id])
     if @photo.update_attributes(params[:photo])
       if params[:photo][:image].blank?
         flash[:notice] = "Successfully updated photo."
-        redirect_to @photo
+        redirect_to photos_path
       else
         render :action => "crop"
       end

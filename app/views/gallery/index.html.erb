@@ -1,10 +1,6 @@
-
 <div class ="mstv grid-container">
-		
 	<div class="thumb-box">
-	
 		<div class="borders">
-	
 			<div id="thumbs" class="navigation">
 				
 				<%#=raw @facility.body_dk %>
@@ -27,6 +23,11 @@
 				</ul>
 			</div>
 		</div>
+		<% if can_edit? %>
+			<div class="edit">
+				<%= link_to 'rediger photos', photos_path %>
+			</div>
+		<%end%>
 	</div>
 	
 	<div class="gallery-box">
