@@ -1,28 +1,24 @@
 <div class ="mstv grid-container">
 	<div class="thumb-box">
-		<div class="borders">
-			<div id="thumbs" class="navigation">
-				
-				<%#=raw @facility.body_dk %>
-				
+		<div id="thumbs" class="navigation borders">
+			<div class="thumbs-box">
 				<ul class="thumbs noscript">
-					<% Photo.all.each do |photo| %>
-						<li>
-							<a class="thumb" name="<%= photo.title%>" href="<%= photo.image.url(:fullSize) %>" title="<%= photo.title%>">
-								<img src="<%= photo.image.url(:mini) %>" alt="<%= photo.title%>" />
-							</a>
-							<div class="caption">
-								<div class="text_right">
-									<a href="<%= photo.image.url(:fullSize) %>">Download billed</a>
-								</div>
-								<h3><%= photo.title%></h3>
-								<%= photo.body%>
-							</div>	
-						</li>
-					<% end %>
+					 <% Photo.all.each do |photo| %>
+					 	<li>
+					 		<a class="thumb" name="<%= photo.title%>" href="<%= photo.image.url(:fullSize) %>" title="<%= photo.title%>">
+					 			<img src="<%= photo.image.url(:mini) %>" alt="<%= photo.title%>" />
+					 		</a>
+					 		<div class="caption">
+					 			<a href="<%= photo.image.url(:original) %>">Download billed</a>
+					 			<h3><%= photo.title%></h3>
+					 			<%= photo.body%>
+					 		</div>	
+					 	</li>
+					 <% end %>
 				</ul>
 			</div>
 		</div>
+        
 		<% if can_edit? %>
 			<div class="edit">
 				<%= link_to 'rediger photos', photos_path %>

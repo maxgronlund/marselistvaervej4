@@ -254,6 +254,18 @@ a:hover {
   color: #f00;
 }
 
+/* line 88, ../../../app/assets/stylesheets/main.scss */
+.thumbs-box {
+  margin-left: 10px;
+}
+
+/* line 92, ../../../app/assets/stylesheets/main.scss */
+.photo-thumb {
+  margin: 2px;
+  width: 60px;
+  display: block;
+}
+
 /*
 .desc{
 	padding-right:14px;
