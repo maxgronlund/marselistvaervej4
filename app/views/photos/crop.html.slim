@@ -16,12 +16,12 @@
     	var rx = 100/coords.w;
     	var ry = 75/coords.h;
     	$('#preview').css({
-    		width: Math.round(rx * #{@photo.image_geometry(:fullsize).width}) + 'px',
-    		height: Math.round(ry * #{@photo.image_geometry(:fullsize).height}) + 'px',
+    		width: Math.round(rx * #{@photo.image_geometry(:fullSize).width}) + 'px',
+    		height: Math.round(ry * #{@photo.image_geometry(:fullSize).height}) + 'px',
     		marginLeft: '-' + Math.round(rx * coords.x) + 'px',
     		marginTop: '-' + Math.round(ry * coords.y) + 'px'
     	});
-      var ratio = #{@photo.image_geometry(:original).width} / #{ @photo.image_geometry(:fullsize).width};
+      var ratio = #{@photo.image_geometry(:original).width} / #{ @photo.image_geometry(:fullSize).width};
       $("#crop_x").val(Math.round(coords.x * ratio));
       $("#crop_y").val(Math.round(coords.y * ratio));
       $("#crop_w").val(Math.round(coords.w * ratio));
@@ -33,13 +33,13 @@
   div class="grid_3 alpha"
     h3 Preview:
     div style="width:100px; height:75px; overflow:hidden"
-      = image_tag @photo.image.url(:fullsize), :id => "preview"
+      = image_tag @photo.image.url(:fullSize), :id => "preview"
 
   div class="grid_9 omega"
     h3 Editor:
     div class="clear"
       '&nbsp;
-    = image_tag @photo.image.url(:fullsize), :id => "cropbox"
+    = image_tag @photo.image.url(:fullSize), :id => "cropbox"
 
     = form_for @photo do |f|
       - for attribute in [:crop_x, :crop_y, :crop_w, :crop_h]
