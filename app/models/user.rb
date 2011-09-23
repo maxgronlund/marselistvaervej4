@@ -22,8 +22,7 @@ class User < ActiveRecord::Base
   
   has_attached_file :image, 
                     :styles => { :small => "120x130#", :large => "480x520>"}, 
-                    :processors => [:cropper],
-                    :default_url => "/images/fallback/default_avatar_:style.jpg"
+                    :processors => [:cropper]
                     
   
   after_update :reprocess_image, :if => :cropping?

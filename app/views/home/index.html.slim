@@ -14,11 +14,7 @@
 		
         = link_to 'FIND OS PÅ KORT', googlemap_index_path
         br
-        'galleri
-        br
-        -@photos.all.each do |photo|
-          '&nbsp;
-          = link_to image_tag(photo.image.url(:micro)), gallery_index_path
+        = link_to 'Galleri', gallery_index_path
 
 
   .squared-box

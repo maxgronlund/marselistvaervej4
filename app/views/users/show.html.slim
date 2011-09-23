@@ -6,8 +6,8 @@
         = render :partial => "shared/menu"
       .content
         .content-top
-
-          =image_tag @user.image.url(:small), :border => 'none', :class => 'image_fix' if @user.image.url
+          -if @user.image.url != '/images/original/missing.png'
+            =image_tag @user.image.url(:small), :border => 'none', :class => 'image_fix' 
           h1
             = @user.name
           = @user.email
