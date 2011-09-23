@@ -19,8 +19,8 @@
 
 
 	    
-  .squared-box
-    .borders.fixed-height
+  .squared-box.fixed-height
+    .borders
       div style="width:458px; height:376px; overflow:hidden"
         = image_tag @company.image.url(:preview), :border => 'none', :class => 'image_fix'
       .tlf-box
@@ -32,5 +32,5 @@
         .tlf-content 
           =raw @link
 
-
+br
 = render :partial => "shared/news", :locals => { :newsposts => @newsposts }

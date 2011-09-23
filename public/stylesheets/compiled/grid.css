@@ -2,7 +2,7 @@
  * Learn more ~ http://960.gs/
  * *
  * Licensed under GPL and MIT. */
-/* line 17, ../../../../../.rvm/gems/ruby-1.9.2-rc2/gems/compass-0.11.1/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 17, ../../../../../.rvm/gems/ruby-1.9.2-p290@railspre/gems/compass-0.11.1/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -24,45 +24,45 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 
-/* line 20, ../../../../../.rvm/gems/ruby-1.9.2-rc2/gems/compass-0.11.1/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 20, ../../../../../.rvm/gems/ruby-1.9.2-p290@railspre/gems/compass-0.11.1/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 body {
   line-height: 1;
 }
 
-/* line 22, ../../../../../.rvm/gems/ruby-1.9.2-rc2/gems/compass-0.11.1/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 22, ../../../../../.rvm/gems/ruby-1.9.2-p290@railspre/gems/compass-0.11.1/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 ol, ul {
   list-style: none;
 }
 
-/* line 24, ../../../../../.rvm/gems/ruby-1.9.2-rc2/gems/compass-0.11.1/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 24, ../../../../../.rvm/gems/ruby-1.9.2-p290@railspre/gems/compass-0.11.1/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/* line 26, ../../../../../.rvm/gems/ruby-1.9.2-rc2/gems/compass-0.11.1/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 26, ../../../../../.rvm/gems/ruby-1.9.2-p290@railspre/gems/compass-0.11.1/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 caption, th, td {
   text-align: left;
   font-weight: normal;
   vertical-align: middle;
 }
 
-/* line 28, ../../../../../.rvm/gems/ruby-1.9.2-rc2/gems/compass-0.11.1/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 28, ../../../../../.rvm/gems/ruby-1.9.2-p290@railspre/gems/compass-0.11.1/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 q, blockquote {
   quotes: none;
 }
-/* line 101, ../../../../../.rvm/gems/ruby-1.9.2-rc2/gems/compass-0.11.1/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 101, ../../../../../.rvm/gems/ruby-1.9.2-p290@railspre/gems/compass-0.11.1/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 q:before, q:after, blockquote:before, blockquote:after {
   content: "";
   content: none;
 }
 
-/* line 30, ../../../../../.rvm/gems/ruby-1.9.2-rc2/gems/compass-0.11.1/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 30, ../../../../../.rvm/gems/ruby-1.9.2-p290@railspre/gems/compass-0.11.1/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 a img {
   border: none;
 }
 
-/* line 115, ../../../../../.rvm/gems/ruby-1.9.2-rc2/gems/compass-0.11.1/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 115, ../../../../../.rvm/gems/ruby-1.9.2-p290@railspre/gems/compass-0.11.1/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
   display: block;
@@ -728,7 +728,7 @@ footer, header, hgroup, menu, nav, section {
   margin-top: 80px;
   margin-left: 20px;
 }
-/* line 368, ../../../app/assets/stylesheets/grid.scss */
+/* line 369, ../../../app/assets/stylesheets/grid.scss */
 .bottom-box .news {
   height: 184px;
   display: inline;
@@ -738,7 +738,7 @@ footer, header, hgroup, menu, nav, section {
   width: 220px;
   width: 230px;
 }
-/* line 373, ../../../app/assets/stylesheets/grid.scss */
+/* line 375, ../../../app/assets/stylesheets/grid.scss */
 .bottom-box .news .header {
   height: 54px;
   margin-top: 10px;
@@ -752,50 +752,50 @@ footer, header, hgroup, menu, nav, section {
   width: 230px;
   font-weight: bold;
 }
-/* line 382, ../../../app/assets/stylesheets/grid.scss */
+/* line 384, ../../../app/assets/stylesheets/grid.scss */
 .bottom-box .news a {
   text-decoration: none;
   font-weight: bold;
-  color: #448;
+  color: #000;
 }
-/* line 386, ../../../app/assets/stylesheets/grid.scss */
+/* line 388, ../../../app/assets/stylesheets/grid.scss */
 .bottom-box .news a:hover {
   color: #fff;
   background-color: #000;
 }
-/* line 390, ../../../app/assets/stylesheets/grid.scss */
+/* line 392, ../../../app/assets/stylesheets/grid.scss */
 .bottom-box .news h1 {
   margin-bottom: 0px;
   height: 34px;
   color: #000;
 }
-/* line 395, ../../../app/assets/stylesheets/grid.scss */
+/* line 397, ../../../app/assets/stylesheets/grid.scss */
 .bottom-box .news .gray {
   color: #999;
 }
-/* line 398, ../../../app/assets/stylesheets/grid.scss */
+/* line 400, ../../../app/assets/stylesheets/grid.scss */
 .bottom-box .news .content {
   margin-top: 0px;
   width: 210px;
 }
 
-/* line 404, ../../../app/assets/stylesheets/grid.scss */
+/* line 406, ../../../app/assets/stylesheets/grid.scss */
 .text-right {
   text-align: right;
 }
 
-/* line 408, ../../../app/assets/stylesheets/grid.scss */
+/* line 410, ../../../app/assets/stylesheets/grid.scss */
 .grid-container {
   margin-left: auto;
   margin-right: auto;
   width: 960px;
 }
-/* line 410, ../../../app/assets/stylesheets/grid.scss */
+/* line 412, ../../../app/assets/stylesheets/grid.scss */
 .grid-container .top-margin {
   margin-top: 32px;
 }
 
-/* line 415, ../../../app/assets/stylesheets/grid.scss */
+/* line 417, ../../../app/assets/stylesheets/grid.scss */
 .meeting-room {
   display: inline;
   float: left;
@@ -805,7 +805,7 @@ footer, header, hgroup, menu, nav, section {
   margin-left: 0;
 }
 
-/* line 420, ../../../app/assets/stylesheets/grid.scss */
+/* line 422, ../../../app/assets/stylesheets/grid.scss */
 .meeting-room-right {
   display: inline;
   float: left;
@@ -816,19 +816,19 @@ footer, header, hgroup, menu, nav, section {
   padding-right: 480px;
 }
 
-/* line 427, ../../../app/assets/stylesheets/grid.scss */
+/* line 429, ../../../app/assets/stylesheets/grid.scss */
 a {
   text-decoration: none;
   color: #444;
 }
 
-/* line 432, ../../../app/assets/stylesheets/grid.scss */
+/* line 434, ../../../app/assets/stylesheets/grid.scss */
 a:hover {
   color: #fff;
   background-color: #000;
 }
 
-/* line 437, ../../../app/assets/stylesheets/grid.scss */
+/* line 439, ../../../app/assets/stylesheets/grid.scss */
 .slim-box {
   background-color: #fff;
   margin-top: 36px;
@@ -839,29 +839,29 @@ a:hover {
   width: 460px;
   min-height: 80px;
 }
-/* line 442, ../../../app/assets/stylesheets/grid.scss */
+/* line 444, ../../../app/assets/stylesheets/grid.scss */
 .slim-box .borders {
   border-style: solid;
   border-width: 1px;
   height: 80px;
   display: block;
 }
-/* line 448, ../../../app/assets/stylesheets/grid.scss */
+/* line 450, ../../../app/assets/stylesheets/grid.scss */
 .slim-box .menu-box {
   width: 400px;
   height: 51px;
 }
-/* line 451, ../../../app/assets/stylesheets/grid.scss */
+/* line 453, ../../../app/assets/stylesheets/grid.scss */
 .slim-box .menu-box a {
   color: #fff;
 }
-/* line 452, ../../../app/assets/stylesheets/grid.scss */
+/* line 454, ../../../app/assets/stylesheets/grid.scss */
 .slim-box .menu-box a:hover {
   color: #000;
   background-color: #fff;
 }
 
-/* line 456, ../../../app/assets/stylesheets/grid.scss */
+/* line 458, ../../../app/assets/stylesheets/grid.scss */
 .googlemap {
   display: inline;
   float: left;
@@ -874,14 +874,14 @@ a:hover {
   width: 940px;
   display: block;
 }
-/* line 464, ../../../app/assets/stylesheets/grid.scss */
+/* line 466, ../../../app/assets/stylesheets/grid.scss */
 .googlemap .borders {
   border-style: solid;
   border-width: 1px;
   height: 600px;
 }
 
-/* line 471, ../../../app/assets/stylesheets/grid.scss */
+/* line 473, ../../../app/assets/stylesheets/grid.scss */
 .company-index {
   width: 110px;
   height: 60px;
@@ -891,7 +891,7 @@ a:hover {
   margin-right: 10px;
   margin-top: 8px;
 }
-/* line 480, ../../../app/assets/stylesheets/grid.scss */
+/* line 482, ../../../app/assets/stylesheets/grid.scss */
 .company-index .image {
   border-style: solid;
   border-width: 1px;
@@ -902,7 +902,7 @@ a:hover {
   margin: 1px 10px 1px 1px;
 }
 
-/* line 491, ../../../app/assets/stylesheets/grid.scss */
+/* line 493, ../../../app/assets/stylesheets/grid.scss */
 .fullpage {
   display: inline;
   float: left;
@@ -911,7 +911,7 @@ a:hover {
   width: 940px;
 }
 
-/* line 495, ../../../app/assets/stylesheets/grid.scss */
+/* line 497, ../../../app/assets/stylesheets/grid.scss */
 .tlf-box {
   float: right;
   text-align: center;
@@ -926,7 +926,7 @@ a:hover {
   /* IE's opacity*/
   opacity: 0.8;
 }
-/* line 508, ../../../app/assets/stylesheets/grid.scss */
+/* line 510, ../../../app/assets/stylesheets/grid.scss */
 .tlf-box .tlf-content {
   position: relative;
   top: 10px;
@@ -936,7 +936,7 @@ a:hover {
   height: 40px;
 }
 
-/* line 518, ../../../app/assets/stylesheets/grid.scss */
+/* line 520, ../../../app/assets/stylesheets/grid.scss */
 .calendar-row {
   display: inline;
   float: left;
@@ -947,21 +947,21 @@ a:hover {
   margin-right: 0;
   margin-right: 6px;
 }
-/* line 524, ../../../app/assets/stylesheets/grid.scss */
+/* line 526, ../../../app/assets/stylesheets/grid.scss */
 .calendar-row .booking-back {
   padding: 4px;
   background-color: #999;
   margin: 6px;
 }
 
-/* line 533, ../../../app/assets/stylesheets/grid.scss */
+/* line 535, ../../../app/assets/stylesheets/grid.scss */
 .booking-meetingroom-column {
   float: left;
   margin: 2px;
   width: 134px;
 }
 
-/* line 539, ../../../app/assets/stylesheets/grid.scss */
+/* line 541, ../../../app/assets/stylesheets/grid.scss */
 #columns-3-2-2-1-2 {
   min-height: 500px;
   display: inline;
@@ -971,7 +971,7 @@ a:hover {
   width: 940px;
   margin-top: 24px;
 }
-/* line 543, ../../../app/assets/stylesheets/grid.scss */
+/* line 545, ../../../app/assets/stylesheets/grid.scss */
 #columns-3-2-2-1-2 .left-column {
   display: inline;
   float: left;
@@ -980,7 +980,7 @@ a:hover {
   width: 220px;
   margin-left: 0;
 }
-/* line 547, ../../../app/assets/stylesheets/grid.scss */
+/* line 549, ../../../app/assets/stylesheets/grid.scss */
 #columns-3-2-2-1-2 .center-column1 {
   display: inline;
   float: left;
@@ -988,7 +988,7 @@ a:hover {
   margin-right: 10px;
   width: 60px;
 }
-/* line 550, ../../../app/assets/stylesheets/grid.scss */
+/* line 552, ../../../app/assets/stylesheets/grid.scss */
 #columns-3-2-2-1-2 .center-column2 {
   display: inline;
   float: left;
@@ -996,7 +996,7 @@ a:hover {
   margin-right: 10px;
   width: 140px;
 }
-/* line 553, ../../../app/assets/stylesheets/grid.scss */
+/* line 555, ../../../app/assets/stylesheets/grid.scss */
 #columns-3-2-2-1-2 .center-column3 {
   display: inline;
   float: left;
@@ -1004,7 +1004,7 @@ a:hover {
   margin-right: 10px;
   width: 220px;
 }
-/* line 556, ../../../app/assets/stylesheets/grid.scss */
+/* line 558, ../../../app/assets/stylesheets/grid.scss */
 #columns-3-2-2-1-2 .right-column {
   display: inline;
   float: left;
@@ -1015,19 +1015,19 @@ a:hover {
   padding-right: 80px;
 }
 
-/* line 563, ../../../app/assets/stylesheets/grid.scss */
+/* line 565, ../../../app/assets/stylesheets/grid.scss */
 .bookings-calendar {
   margin-top: 10px;
   margin-left: 10px;
   text-align: center;
 }
 
-/* line 569, ../../../app/assets/stylesheets/grid.scss */
+/* line 571, ../../../app/assets/stylesheets/grid.scss */
 .top_margin {
   margin-top: 8px;
 }
 
-/* line 571, ../../../app/assets/stylesheets/grid.scss */
+/* line 573, ../../../app/assets/stylesheets/grid.scss */
 .thumb-box {
   background-color: #fff;
   margin-top: 36px;
@@ -1039,41 +1039,41 @@ a:hover {
   min-height: 376px;
   display: block;
 }
-/* line 577, ../../../app/assets/stylesheets/grid.scss */
+/* line 579, ../../../app/assets/stylesheets/grid.scss */
 .thumb-box .borders {
   border-style: solid;
   border-width: 1px;
   min-height: 376px;
   display: block;
 }
-/* line 584, ../../../app/assets/stylesheets/grid.scss */
+/* line 586, ../../../app/assets/stylesheets/grid.scss */
 .thumb-box .content .content-top {
   height: 280px;
 }
-/* line 586, ../../../app/assets/stylesheets/grid.scss */
+/* line 588, ../../../app/assets/stylesheets/grid.scss */
 .thumb-box .text-right {
   text-align: right;
 }
-/* line 589, ../../../app/assets/stylesheets/grid.scss */
+/* line 591, ../../../app/assets/stylesheets/grid.scss */
 .thumb-box .menu-box {
   width: 400px;
   height: 51px;
 }
-/* line 592, ../../../app/assets/stylesheets/grid.scss */
+/* line 594, ../../../app/assets/stylesheets/grid.scss */
 .thumb-box .menu-box a {
   color: #fff;
 }
-/* line 593, ../../../app/assets/stylesheets/grid.scss */
+/* line 595, ../../../app/assets/stylesheets/grid.scss */
 .thumb-box .menu-box a:hover {
   color: #000;
   background-color: #fff;
 }
-/* line 595, ../../../app/assets/stylesheets/grid.scss */
+/* line 597, ../../../app/assets/stylesheets/grid.scss */
 .thumb-box .image-box {
   height: 376px;
 }
 
-/* line 600, ../../../app/assets/stylesheets/grid.scss */
+/* line 602, ../../../app/assets/stylesheets/grid.scss */
 .gallery-box {
   background-color: #fff;
   margin-top: 36px;
@@ -1085,36 +1085,36 @@ a:hover {
   min-height: 376px;
   display: block;
 }
-/* line 606, ../../../app/assets/stylesheets/grid.scss */
+/* line 608, ../../../app/assets/stylesheets/grid.scss */
 .gallery-box .borders {
   border-style: solid;
   border-width: 1px;
   min-height: 376px;
   display: block;
 }
-/* line 613, ../../../app/assets/stylesheets/grid.scss */
+/* line 615, ../../../app/assets/stylesheets/grid.scss */
 .gallery-box .content .content-top {
   height: 280px;
 }
-/* line 615, ../../../app/assets/stylesheets/grid.scss */
+/* line 617, ../../../app/assets/stylesheets/grid.scss */
 .gallery-box .text-right {
   text-align: right;
 }
-/* line 618, ../../../app/assets/stylesheets/grid.scss */
+/* line 620, ../../../app/assets/stylesheets/grid.scss */
 .gallery-box .menu-box {
   width: 400px;
   height: 51px;
 }
-/* line 621, ../../../app/assets/stylesheets/grid.scss */
+/* line 623, ../../../app/assets/stylesheets/grid.scss */
 .gallery-box .menu-box a {
   color: #fff;
 }
-/* line 622, ../../../app/assets/stylesheets/grid.scss */
+/* line 624, ../../../app/assets/stylesheets/grid.scss */
 .gallery-box .menu-box a:hover {
   color: #000;
   background-color: #fff;
 }
-/* line 624, ../../../app/assets/stylesheets/grid.scss */
+/* line 626, ../../../app/assets/stylesheets/grid.scss */
 .gallery-box .image-box {
   height: 376px;
 }
