@@ -8,10 +8,7 @@
         = @company.title
       =raw @company.body
       br
-      | T: 
-      = @company.phone
-      '&nbsp; - &nbsp; 
-      =raw @link
+  
       - if can?(:edit, @company)
         .edit
           = link_to t('admin.edit'), edit_company_path(@company), :class =>'button'
@@ -20,7 +17,14 @@
           '&nbsp;  
           = link_to 'tilføj logo', new_company_company_thumb_path(@company), :class =>'button'
 
-	
+		.tlf-box
+	      .tlf-content
+	        | T: 
+	        = @company.phone
+	      .tlf-content 
+	        | - 
+	      .tlf-content 
+	        =raw @link
 
         p= link_to 'Send E-Mail til alle i firma', "mailto:#{@company.users.map(&:email).join(', ')}"
 
