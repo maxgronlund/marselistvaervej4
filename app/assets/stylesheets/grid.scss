@@ -292,6 +292,7 @@ $ninesixty-gutter-width: 20px; // default: 20px
 }
 
 .squared-box{
+	position:relative;
 	background-color:#fff;
     margin-top:36px;
 	@include grid(6);
