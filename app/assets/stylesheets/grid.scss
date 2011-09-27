@@ -320,6 +320,28 @@ $ninesixty-gutter-width: 20px; // default: 20px
 	.image-box{
 		height:376px;
 	}
+	.tlf-box{
+		float:right;
+		text-align:center;
+		background-color:#fff;
+		position:relative;
+		top:-100px;
+		border-style:solid;
+		border-right-style:none;
+		border-width:1px;
+		height:40px;
+		filter:alpha(opacity=80); /* IE's opacity*/
+		opacity: 0.8;
+
+		.tlf-content{
+			position:relative;
+			top:10px;
+			margin:10px;
+			font-size:14px;
+			display: inline;
+			height:40px;
+		}
+	}
 }
 
 .fixed-height{
@@ -516,28 +538,7 @@ a:hover{
 	@include grid(12);
 }
 
-.tlf-box{
-	float:right;
-	text-align:center;
-	background-color:#fff;
-	position:relative;
-	top:-100px;
-	border-style:solid;
-	border-right-style:none;
-	border-width:1px;
-	height:40px;
-	filter:alpha(opacity=80); /* IE's opacity*/
-	opacity: 0.8;
-	
-	.tlf-content{
-		position:relative;
-		top:10px;
-		margin:10px;
-		font-size:14px;
-		display: inline;
-		height:40px;
-	}
-}
+
 
 .calendar-row{
 	@include grid(2);
