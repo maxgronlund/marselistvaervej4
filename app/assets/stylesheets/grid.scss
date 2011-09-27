@@ -328,7 +328,7 @@ $ninesixty-gutter-width: 20px; // default: 20px
 	@include grid(12);
 	background-color:#fff;
     margin-top:22px;
-/*	height:186px;*/
+	height:186px;
 	width:940px;
 	display:block;
 
@@ -336,7 +336,6 @@ $ninesixty-gutter-width: 20px; // default: 20px
 		border-style:solid;
 		border-width:1px;
 		height:184px;
-	/*	display:inline;*/
 
 	}
 	.left-side{
@@ -367,15 +366,30 @@ $ninesixty-gutter-width: 20px; // default: 20px
 		margin-left:20px;
 	}
 
-		
 	.news{
-		display: inline;
-	    float: left;
-	    height: 184px;
-	    margin-left: 10px;
-	    margin-right: 10px;
-	    width: 228px;
-    
+		height:184px;
+		@include grid(3);
+		width:230px;
+		.content{
+			.header
+			{
+				height:54px;
+				margin-top:10px;
+				@include grid(3);
+				@include alpha;
+				@include omega;
+				width:230px;
+				font-weight: bold;
+				a{
+					text-decoration:none;
+					font-weight: bold;
+					color:#000;
+				}a:hover{
+					color:#fff;
+					background-color:#000;
+				}
+			}
+		}
 		.header
 		{
 			height:54px;
@@ -383,16 +397,8 @@ $ninesixty-gutter-width: 20px; // default: 20px
 			@include grid(3);
 			@include alpha;
 			@include omega;
-			width:228px;
+			width:230px;
 			font-weight: bold;
-			a{
-				text-decoration:none;
-				font-weight: bold;
-				color:#000;
-			}a:hover{
-				color:#fff;
-				background-color:#000;
-			}
 		}
 		a{
 			text-decoration:none;
@@ -414,10 +420,7 @@ $ninesixty-gutter-width: 20px; // default: 20px
 			margin-top:0px;
 			width:210px;
 		}
-		
-	}
-
-	
+	}	
 }
 .text-right{
 	text-align: right;
