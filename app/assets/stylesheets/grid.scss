@@ -297,11 +297,13 @@ $ninesixty-gutter-width: 20px; // default: 20px
 	@include grid(6);
 	min-height:376px;
 	display:block;
+	overflow:hidden;
 	.borders{
 		border-style:solid;
 		border-width:1px;
 		min-height:376px;
 		display:block;
+		overflow:hidden;
 	}
 	.content{
 		.content-top{ height:280px;}
