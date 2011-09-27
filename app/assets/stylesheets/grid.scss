@@ -365,12 +365,15 @@ $ninesixty-gutter-width: 20px; // default: 20px
 		margin-top:80px;
 		margin-left:20px;
 	}
+	.news-box{
+		width:200px;
+	}
 
 	.news{
 		height:184px;
 		@include grid(3);
 		width:230px;
-		.content{
+	/*	.content{
 			.header
 			{
 				height:54px;
@@ -390,6 +393,7 @@ $ninesixty-gutter-width: 20px; // default: 20px
 				}
 			}
 		}
+		*/
 		.header
 		{
 			height:54px;
@@ -399,6 +403,14 @@ $ninesixty-gutter-width: 20px; // default: 20px
 			@include omega;
 			width:230px;
 			font-weight: bold;
+			a{
+				text-decoration:none;
+				font-weight: bold;
+				color:#000;
+			}a:hover{
+				color:#fff;
+				background-color:#000;
+			}
 		}
 		a{
 			text-decoration:none;
