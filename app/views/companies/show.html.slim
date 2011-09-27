@@ -3,19 +3,7 @@
   .borders
     .menu-box
       = render :partial => "shared/menu"
-    .content
-      h1
-        = @company.title
-      =raw @company.body
-      - if can?(:edit, @company)
-        .edit
-          = link_to t('admin.edit'), edit_company_path(@company), :class =>'button'
-          '&nbsp;   
-          = link_to t('admin.delete'), @company, :confirm => t('admin.are_you_sure'), :method => :delete, :class =>'button'
-          '&nbsp;  
-          = link_to 'tilføj logo', new_company_company_thumb_path(@company), :class =>'button'
-
-        p= link_to 'Send E-Mail til alle i firma', "mailto:#{@company.users.map(&:email).join(', ')}"
+    
 
 
       
