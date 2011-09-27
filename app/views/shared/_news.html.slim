@@ -6,9 +6,9 @@
           .menu-back
             h2
               | NYHEDER
+
       - newsposts.each do |newspost|
         .news
-          
           .header
             h1 = link_to newspost.title, newspost
             .gray
