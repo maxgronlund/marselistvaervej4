@@ -322,24 +322,18 @@ $ninesixty-gutter-width: 20px; // default: 20px
 		height:376px;
 	}
 	.tlf-box{
-		float:right;
 		text-align:center;
-		background-color:#fff;
-		position:relative;
-		top:-100px;
+		background-color:#ddd;
 		border-style:solid;
-		border-right-style:none;
 		border-width:1px;
-		height:40px;
-		filter:alpha(opacity=80); /* IE's opacity*/
-		opacity: 0.8;
-
+		margin-bottom:8px;
+		display:inline;
 		.tlf-content{
-			top:10px;
-			margin:10px;
-			font-size:14px;
-			display: inline;
-			height:40px;
+			
+			text-align:left;
+		}
+		.web-content{
+			text-align:right;
 		}
 	}
 }
