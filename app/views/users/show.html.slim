@@ -30,9 +30,9 @@
         -@bookings.each do |booking| 
           
           .booking-col-1
-            = l booking.created_at, :format => :date_month_and_year
+            = l booking.starttime, :format => :date_month_and_year
             '&nbsp; kl.
-            = l booking.created_at, :format => :bookingtime
+            = l booking.starttime, :format => :bookingtime
           .booking-col-2
               = booking.meetingroom.title
           .booking-col-3.edit_symbold.edit 
