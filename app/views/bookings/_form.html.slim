@@ -1,8 +1,5 @@
 = form_for([@meetingroom, @booking], :html => { :multipart => true, :class => 'booking_form' }) do |f|
-  -if @booking.errors.any?
-    h4 
-     .color_allert
-       | Ikke alle felter er udfyldt korrekt
+  
 
   .grid-6.alpha
  
@@ -30,13 +27,23 @@
       br
       = f.text_field :created_at, :value => l((@booking.created_at || Date.today).to_date), :readonly => true, :size=>12
     
-    
+    .meetingrooms.top-margin
+      - Meetingroom.all.each do |meetingroom|
+        .booking-meetingroom-column
+          div style="background-color: #{meetingroom.color || 'yellow'};"
+            strong= meetingroom.title
+            br/
+            = link_to image_tag(meetingroom.image(:mini)), meetingroom
     
 
     
     
     br
   .grid-5.omega
+    -if @booking.errors.any?
+        h4 
+         .color_allert
+           | kontroller reservations tidspunktet og antallet af deltagerer
     | -Fra kl.
     = f.time_select :starttime
     |  - Til kl.
@@ -63,12 +70,6 @@
       = f.submit 'Gem'
       -#= image_tag "loader.gif", :alt => "", :width => "32", :height => "32", :style => "display: none;", :class => 'spinner'
   
-  .grid-11.alpha.omega  
-    .meetingrooms
-      - Meetingroom.all.each do |meetingroom|
-        .booking-meetingroom-column
-          div style="background-color: #{meetingroom.color || 'yellow'};"
-            strong= meetingroom.title
-            br/
-            = link_to image_tag(meetingroom.image(:mini)), meetingroom
+ 
+
       div style="clear:both;"

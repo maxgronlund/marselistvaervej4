@@ -255,21 +255,22 @@ a:hover {
 /* line 88, ../../../app/assets/stylesheets/main.scss */
 .color_allert {
   color: #f00;
+  font-size: 14px;
 }
 
-/* line 92, ../../../app/assets/stylesheets/main.scss */
+/* line 93, ../../../app/assets/stylesheets/main.scss */
 .thumbs-box {
   margin-left: 10px;
 }
 
-/* line 96, ../../../app/assets/stylesheets/main.scss */
+/* line 97, ../../../app/assets/stylesheets/main.scss */
 .photo-thumb {
   margin: 2px;
   width: 60px;
   display: block;
 }
 
-/* line 103, ../../../app/assets/stylesheets/main.scss */
+/* line 104, ../../../app/assets/stylesheets/main.scss */
 .edit_symbold:hover a:hover {
   background-color: #DDDDDD;
 }
@@ -292,7 +293,7 @@ a:hover {
 }
 
 */
-/* line 128, ../../../app/assets/stylesheets/main.scss */
+/* line 129, ../../../app/assets/stylesheets/main.scss */
 .booking-col-1 {
   display: inline;
   float: left;
@@ -301,7 +302,7 @@ a:hover {
   width: 160px;
 }
 
-/* line 136, ../../../app/assets/stylesheets/main.scss */
+/* line 137, ../../../app/assets/stylesheets/main.scss */
 .booking-col-2 {
   display: inline;
   float: left;
@@ -310,7 +311,7 @@ a:hover {
   width: 140px;
 }
 
-/* line 144, ../../../app/assets/stylesheets/main.scss */
+/* line 145, ../../../app/assets/stylesheets/main.scss */
 .booking-col-3 {
   display: inline;
   float: right;
@@ -318,12 +319,12 @@ a:hover {
   width: 70px;
 }
 
-/* line 150, ../../../app/assets/stylesheets/main.scss */
+/* line 151, ../../../app/assets/stylesheets/main.scss */
 .top-margin {
   margin-top: 12px;
 }
 
-/* line 154, ../../../app/assets/stylesheets/main.scss */
+/* line 155, ../../../app/assets/stylesheets/main.scss */
 .center .pagination {
   margin-top: 0px;
   width: 420px;
