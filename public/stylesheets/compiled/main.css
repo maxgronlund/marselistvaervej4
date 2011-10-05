@@ -212,58 +212,66 @@ hr {
 /* line 52, ../../../app/assets/stylesheets/main.scss */
 .desc {
   padding-right: 14px;
-  background-image: url("../../images/arrow_up.png");
+  background-image: url("http://localhost:3000/images/arrow_up.png");
   background-repeat: no-repeat;
   background-color: transparent;
   background-position: right top;
+  /*	background-image:url('<%= asset_path "arrow_up.png" %>');*/
 }
 
-/* line 60, ../../../app/assets/stylesheets/main.scss */
+/* line 62, ../../../app/assets/stylesheets/main.scss */
 .asc {
   padding-right: 14px;
-  background-image: url("../../images/arrow_down.png");
+  /*	background-image:url('../../images/arrow_down.png');*/
+  /*	background-image:url('<%= asset_path "arrow_down.png" %>');*/
+  background-image: url("http://localhost:3000/images/arrow_down.png");
   background-repeat: no-repeat;
   background-color: transparent;
   background-position: right top;
 }
 
-/* line 68, ../../../app/assets/stylesheets/main.scss */
+/* line 72, ../../../app/assets/stylesheets/main.scss */
 .text_right {
   text-align: right;
 }
 
-/* line 72, ../../../app/assets/stylesheets/main.scss */
+/* line 76, ../../../app/assets/stylesheets/main.scss */
 a:focus {
   outline: 0px none;
   color: #000;
 }
 
-/* line 76, ../../../app/assets/stylesheets/main.scss */
+/* line 80, ../../../app/assets/stylesheets/main.scss */
 a:visited {
   color: #666;
 }
 
-/* line 79, ../../../app/assets/stylesheets/main.scss */
+/* line 83, ../../../app/assets/stylesheets/main.scss */
 a:hover {
   color: #ddd;
   background-color: #333;
 }
 
-/* line 84, ../../../app/assets/stylesheets/main.scss */
+/* line 88, ../../../app/assets/stylesheets/main.scss */
 .color_allert {
   color: #f00;
 }
 
-/* line 88, ../../../app/assets/stylesheets/main.scss */
+/* line 92, ../../../app/assets/stylesheets/main.scss */
 .thumbs-box {
   margin-left: 10px;
 }
 
-/* line 92, ../../../app/assets/stylesheets/main.scss */
+/* line 96, ../../../app/assets/stylesheets/main.scss */
 .photo-thumb {
   margin: 2px;
   width: 60px;
   display: block;
+}
+
+/* line 103, ../../../app/assets/stylesheets/main.scss */
+.edit_symbold:hover a:hover {
+  background-color: #DDDDDD;
 }
 
 /*

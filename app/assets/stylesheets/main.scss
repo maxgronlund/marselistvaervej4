@@ -51,15 +51,19 @@ hr {
 
 .desc{
 	padding-right:14px;
-	background-image:url('../../images/arrow_up.png');
+	background-image:url('http://www.marselistvaervej4.dk/images/arrow_up.png');
 	background-repeat:no-repeat;
 	background-color:transparent;
 	background-position:right top;
+	
+/*	background-image:url('<%= asset_path "arrow_up.png" %>');*/
 }
 
 .asc{
 	padding-right:14px;
-	background-image:url('../../images/arrow_down.png');
+/*	background-image:url('../../images/arrow_down.png');*/
+/*	background-image:url('<%= asset_path "arrow_down.png" %>');*/
+	background-image:url('http://www.marselistvaervej4.dk/images/arrow_down.png');
 	background-repeat:no-repeat;
 	background-color:transparent;
 	background-position:right top;
@@ -92,9 +96,17 @@ a:hover {
 .photo-thumb{
 	margin:2px;
 	width:60px;
-	display:block;
+	display:block;	
+}
+
+.edit_symbold:hover{
+	a:hover{
+		background-color:#DDDDDD;
+	}
 	
 }
+
+
 /*
 .desc{
 	padding-right:14px;

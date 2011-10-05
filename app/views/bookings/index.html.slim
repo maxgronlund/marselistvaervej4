@@ -8,7 +8,7 @@
         = sortable 'created_at', 'Tidspunkt'
       .grid-2
         = sortable 'meetingroom_id','Mødelokale'
-      .grid-1
+      .grid-2
         'Bruger
       .grid-1
         'Deltagere
@@ -18,8 +18,7 @@
         'The
       .grid-2
         'Andet
-      .grid-1
-        '-
+
     .grid-12
  
   
@@ -34,7 +33,7 @@
 	  .grid-2
 	    - if booking.meetingroom != nil
 	        = booking.meetingroom.title
-	  .grid-1
+	  .grid-2
 	    = link_to booking.bookers_name, edit_booking_path(booking) 
 	  .grid-1
 	    = booking.attendees 
@@ -45,12 +44,16 @@
         - if booking.bread?
             | X
 
-      .grid-2
-        = booking.custom_message
-	  .grid-1.edit
-        = link_to image_tag('pencil_16.png'), edit_meetingroom_booking_path(booking.meetingroom,booking)
+        
+	  .grid-2.edit_symbold.edit
+        -if booking.custom_message?
+          = link_to image_tag('exclamation.png'),meetingroom_booking_path(booking.meetingroom,booking), :title => 'andet!'
+          '&nbsp; 
+	    = link_to image_tag('magnifying_16.png'),meetingroom_booking_path(booking.meetingroom,booking), :title => 'vis'
         '&nbsp; 
-	    = link_to image_tag('delete_16.png'), booking, :confirm => 'Er du sikker?', :method => :delete
+        = link_to image_tag('pencil_16.png'), edit_meetingroom_booking_path(booking.meetingroom,booking), :title => 'rediger'
+        '&nbsp; 
+	    = link_to image_tag('delete_16.png'), booking, :confirm => 'Er du sikker?', :method => :delete, :title => 'slet'
       hr
   
   div class="grid_10 prefix_1 suffix_1"
