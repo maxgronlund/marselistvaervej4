@@ -398,10 +398,10 @@ $ninesixty-gutter-width: 20px; // default: 20px
 				@include alpha;
 				@include omega;
 				width:230px;
-				font-weight: bold;
+			/*	font-weight: bold;*/
 				a{
 					text-decoration:none;
-					font-weight: bold;
+				/*	font-weight: bold;*/
 					color:#000;
 				}a:hover{
 					color:#fff;
@@ -421,7 +421,7 @@ $ninesixty-gutter-width: 20px; // default: 20px
 		}
 		a{
 			text-decoration:none;
-			font-weight: bold;
+		/*	font-weight: bold;*/
 			color:#448;
 		}a:hover{
 			color:#fff;

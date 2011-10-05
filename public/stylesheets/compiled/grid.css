@@ -771,12 +771,12 @@ footer, header, hgroup, menu, nav, section {
   margin-left: 0;
   margin-right: 0;
   width: 230px;
-  font-weight: bold;
+  /*	font-weight: bold;*/
 }
 /* line 402, ../../../app/assets/stylesheets/grid.scss */
 .bottom-box .news .content .header a {
   text-decoration: none;
-  font-weight: bold;
+  /*	font-weight: bold;*/
   color: #000;
 }
 /* line 406, ../../../app/assets/stylesheets/grid.scss */
@@ -801,7 +801,7 @@ footer, header, hgroup, menu, nav, section {
 /* line 422, ../../../app/assets/stylesheets/grid.scss */
 .bottom-box .news a {
   text-decoration: none;
-  font-weight: bold;
+  /*	font-weight: bold;*/
   color: #448;
 }
 /* line 426, ../../../app/assets/stylesheets/grid.scss */
