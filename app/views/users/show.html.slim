@@ -20,11 +20,34 @@
           - if can?(:manage, @user)
             br
             = link_to t('admin.edit'), edit_user_path(@user)
-
+          
 
   .squared-box
-    .borders.fixed-height
-      = image_tag 'frontpage-house.jpg', :border => 'none', :class => 'image_fix'
+    .borders
+      .content
+        h3 reservationer
+        br
+        -@bookings.each do |booking| 
+          
+          .booking-col-1
+            = l booking.created_at, :format => :date_month_and_year
+            '&nbsp; kl.
+            = l booking.created_at, :format => :bookingtime
+          .booking-col-2
+              = booking.meetingroom.title
+          .booking-col-3.edit_symbold.edit 
+		    = link_to image_tag('magnifying_16.png'),meetingroom_booking_path(booking.meetingroom,booking), :title => 'vis'
+	        '&nbsp; 
+	        = link_to image_tag('pencil_16.png'), edit_meetingroom_booking_path(booking.meetingroom,booking), :title => 'rediger'
+	        '&nbsp; 
+		    = link_to image_tag('delete_16.png'), booking, :confirm => 'Er du sikker?', :method => :delete, :title => 'slet'
+	      hr
+          
+      -#= image_tag 'frontpage-house.jpg', :border => 'none', :class => 'image_fix'
+      .center
+        = will_paginate @bookings
+      .top-margin.edit
+        = link_to 'book mødelokale', new_meetingroom_booking_path(Meetingroom.first), :class => 'button'
 
 = render :partial => "shared/news", :locals => { :newsposts => @newsposts }
 

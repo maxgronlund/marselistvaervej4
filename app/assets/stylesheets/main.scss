@@ -125,3 +125,35 @@ a:hover {
 }
 
 */
+.booking-col-1{
+	display: inline;
+	float: left;
+	margin-right: 10px;
+	min-height: 1px;
+	width: 160px;
+}
+
+.booking-col-2{
+	display: inline;
+	float: left;
+	margin-right: 20px;
+	min-height: 1px;
+	width: 140px;
+}
+
+.booking-col-3{
+	display: inline;
+	float: right;
+	min-height: 1px;
+	width: 70px;
+}
+.top-margin{
+	margin-top:12px;
+}
+.center{
+	.pagination{
+		margin-top:0px;
+		width:420px;
+		text-align:center;
+	}	
+}

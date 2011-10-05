@@ -26,7 +26,11 @@ class UsersController < InheritedResources::Base
 #    
 #  end
 
-  
+  def show
+    @bookings = Booking.where(:bookers_name => @user.name).order('created_at asc').paginate(:per_page => 8, :page => params[:page])
+    show!
+    
+  end
 
   def update
     params[:user].delete(:password) if params[:user][:password].blank?

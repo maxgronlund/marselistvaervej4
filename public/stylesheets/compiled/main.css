@@ -212,7 +212,7 @@ hr {
 /* line 52, ../../../app/assets/stylesheets/main.scss */
 .desc {
   padding-right: 14px;
-  background-image: url("http://localhost:3000/images/arrow_up.png");
+  background-image: url("http://www.marselistvaervej4.dk/images/arrow_up.png");
   background-repeat: no-repeat;
   background-color: transparent;
   background-position: right top;
@@ -224,7 +224,7 @@ hr {
   padding-right: 14px;
   /*	background-image:url('../../images/arrow_down.png');*/
   /*	background-image:url('<%= asset_path "arrow_down.png" %>');*/
-  background-image: url("http://localhost:3000/images/arrow_down.png");
+  background-image: url("http://www.marselistvaervej4.dk/images/arrow_down.png");
   background-repeat: no-repeat;
   background-color: transparent;
   background-position: right top;
@@ -292,3 +292,40 @@ a:hover {
 }
 
 */
+/* line 128, ../../../app/assets/stylesheets/main.scss */
+.booking-col-1 {
+  display: inline;
+  float: left;
+  margin-right: 10px;
+  min-height: 1px;
+  width: 160px;
+}
+
+/* line 136, ../../../app/assets/stylesheets/main.scss */
+.booking-col-2 {
+  display: inline;
+  float: left;
+  margin-right: 20px;
+  min-height: 1px;
+  width: 140px;
+}
+
+/* line 144, ../../../app/assets/stylesheets/main.scss */
+.booking-col-3 {
+  display: inline;
+  float: right;
+  min-height: 1px;
+  width: 70px;
+}
+
+/* line 150, ../../../app/assets/stylesheets/main.scss */
+.top-margin {
+  margin-top: 12px;
+}
+
+/* line 154, ../../../app/assets/stylesheets/main.scss */
+.center .pagination {
+  margin-top: 0px;
+  width: 420px;
+  text-align: center;
+}
