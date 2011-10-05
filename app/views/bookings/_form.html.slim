@@ -1,8 +1,5 @@
 = form_for([@meetingroom, @booking], :html => { :multipart => true, :class => 'booking_form' }) do |f|
-  
-
   .grid-6.alpha
- 
     | Mødelokale
     br/
     = f.select :meetingroom_id, meetingrooms_select
@@ -41,24 +38,26 @@
     br
   .grid-5.omega
     -if @booking.errors.any?
-        h4 
-         .color_allert
-           | kontroller reservations tidspunktet og antallet af deltagerer
+      .alert
+        .message  
+          'Kontroller reservations tidspunktet, antallet af deltagerer og om mødelokalet allerede er booket
+      br
     | -Fra kl.
     = f.time_select :starttime
     |  - Til kl.
     = f.time_select :endtime
-    br
+    .grid-5.alpha.omega.top-margin
 	br
-    'Deltagere: 
-    = f.text_field :attendees, :size=>6
+	'Deltagere: 
     br
-    br
-    = f.check_box :coffee_and_tea
-    |  Kaffe og vand
-    '&nbsp &nbsp; 
-    = f.check_box :bread
-    | The
+    .grid-2.alpha
+      = f.text_field :attendees, :size=> 6
+    .grid-3.omega
+      = f.check_box :coffee_and_tea
+      |  Kaffe og vand
+      '&nbsp &nbsp; 
+      = f.check_box :bread
+      | Brød
     br
     br
     'Andet:

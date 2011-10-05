@@ -4,6 +4,7 @@
 @import "partials/color";
 @import "partials/dimensions";
 @import "partials/images";
+@import "compass/css3/border-radius";
 
 body {
 	background-color: $color_gray;
@@ -85,10 +86,24 @@ a:hover {
        background-color:#333;
 }
 
-.color_allert{
-	color: #f00;
-	font-size:14px;
+.field_with_errors{
+	background-color:#f00;
+	padding:4px;
 }
+
+.alert{	
+	color:#e00;
+	background-color:#fee;
+	@include border-radius(5px, 5px);
+	border-style:solid;
+	border-width:1px;
+	border-color:#888;
+    min-height:32px;
+	.message{
+	  margin:8px;
+	}
+}
+
 
 .thumbs-box{
 	margin-left:10px;

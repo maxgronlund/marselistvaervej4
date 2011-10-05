@@ -154,7 +154,7 @@ a:hover .image_fix {
   margin: 0px 0px -3px 0px;
 }
 
-/* line 8, ../../../app/assets/stylesheets/main.scss */
+/* line 9, ../../../app/assets/stylesheets/main.scss */
 body {
   background-color: #dddddd;
   font-size: 12px;
@@ -163,7 +163,7 @@ body {
   background-image: url("/images/background.jpg");
 }
 
-/* line 16, ../../../app/assets/stylesheets/main.scss */
+/* line 17, ../../../app/assets/stylesheets/main.scss */
 h1, h2, h3, h4, h5, h6 {
   font-family: arial;
   font-weight: lighter;
@@ -171,12 +171,12 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 0px;
 }
 
-/* line 23, ../../../app/assets/stylesheets/main.scss */
+/* line 24, ../../../app/assets/stylesheets/main.scss */
 h1.no-access {
   text-align: center;
 }
 
-/* line 27, ../../../app/assets/stylesheets/main.scss */
+/* line 28, ../../../app/assets/stylesheets/main.scss */
 #header {
   overflow: hidden;
   *zoom: 1;
@@ -184,23 +184,23 @@ h1.no-access {
   min-height: 32px;
 }
 
-/* line 32, ../../../app/assets/stylesheets/main.scss */
+/* line 33, ../../../app/assets/stylesheets/main.scss */
 #header {
   margin-bottom: 24px;
 }
 
-/* line 35, ../../../app/assets/stylesheets/main.scss */
+/* line 36, ../../../app/assets/stylesheets/main.scss */
 #footer {
   margin-top: 24px;
   text-align: center;
 }
 
-/* line 40, ../../../app/assets/stylesheets/main.scss */
+/* line 41, ../../../app/assets/stylesheets/main.scss */
 .links {
   text-align: right;
 }
 
-/* line 44, ../../../app/assets/stylesheets/main.scss */
+/* line 45, ../../../app/assets/stylesheets/main.scss */
 hr {
   border: 0 #ccc solid;
   border-top-width: 1px;
@@ -209,7 +209,7 @@ hr {
   margin: 0px 0px 0px 0px;
 }
 
-/* line 52, ../../../app/assets/stylesheets/main.scss */
+/* line 53, ../../../app/assets/stylesheets/main.scss */
 .desc {
   padding-right: 14px;
   background-image: url("http://www.marselistvaervej4.dk/images/arrow_up.png");
@@ -219,7 +219,7 @@ hr {
   /*	background-image:url('<%= asset_path "arrow_up.png" %>');*/
 }
 
-/* line 62, ../../../app/assets/stylesheets/main.scss */
+/* line 63, ../../../app/assets/stylesheets/main.scss */
 .asc {
   padding-right: 14px;
   /*	background-image:url('../../images/arrow_down.png');*/
@@ -230,47 +230,67 @@ hr {
   background-position: right top;
 }
 
-/* line 72, ../../../app/assets/stylesheets/main.scss */
+/* line 73, ../../../app/assets/stylesheets/main.scss */
 .text_right {
   text-align: right;
 }
 
-/* line 76, ../../../app/assets/stylesheets/main.scss */
+/* line 77, ../../../app/assets/stylesheets/main.scss */
 a:focus {
   outline: 0px none;
   color: #000;
 }
 
-/* line 80, ../../../app/assets/stylesheets/main.scss */
+/* line 81, ../../../app/assets/stylesheets/main.scss */
 a:visited {
   color: #666;
 }
 
-/* line 83, ../../../app/assets/stylesheets/main.scss */
+/* line 84, ../../../app/assets/stylesheets/main.scss */
 a:hover {
   color: #ddd;
   background-color: #333;
 }
 
-/* line 88, ../../../app/assets/stylesheets/main.scss */
-.color_allert {
-  color: #f00;
-  font-size: 14px;
+/* line 89, ../../../app/assets/stylesheets/main.scss */
+.field_with_errors {
+  background-color: #f00;
+  padding: 4px;
 }
 
-/* line 93, ../../../app/assets/stylesheets/main.scss */
+/* line 94, ../../../app/assets/stylesheets/main.scss */
+.alert {
+  color: #e00;
+  background-color: #fee;
+  -webkit-border-radius: 5px 5px;
+  -moz-border-radius: 5px / 5px;
+  -o-border-radius: 5px / 5px;
+  -ms-border-radius: 5px / 5px;
+  -khtml-border-radius: 5px / 5px;
+  border-radius: 5px / 5px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #888;
+  min-height: 32px;
+}
+/* line 102, ../../../app/assets/stylesheets/main.scss */
+.alert .message {
+  margin: 8px;
+}
+
+/* line 108, ../../../app/assets/stylesheets/main.scss */
 .thumbs-box {
   margin-left: 10px;
 }
 
-/* line 97, ../../../app/assets/stylesheets/main.scss */
+/* line 112, ../../../app/assets/stylesheets/main.scss */
 .photo-thumb {
   margin: 2px;
   width: 60px;
   display: block;
 }
 
-/* line 104, ../../../app/assets/stylesheets/main.scss */
+/* line 119, ../../../app/assets/stylesheets/main.scss */
 .edit_symbold:hover a:hover {
   background-color: #DDDDDD;
 }
@@ -293,7 +313,7 @@ a:hover {
 }
 
 */
-/* line 129, ../../../app/assets/stylesheets/main.scss */
+/* line 144, ../../../app/assets/stylesheets/main.scss */
 .booking-col-1 {
   display: inline;
   float: left;
@@ -302,7 +322,7 @@ a:hover {
   width: 160px;
 }
 
-/* line 137, ../../../app/assets/stylesheets/main.scss */
+/* line 152, ../../../app/assets/stylesheets/main.scss */
 .booking-col-2 {
   display: inline;
   float: left;
@@ -311,7 +331,7 @@ a:hover {
   width: 140px;
 }
 
-/* line 145, ../../../app/assets/stylesheets/main.scss */
+/* line 160, ../../../app/assets/stylesheets/main.scss */
 .booking-col-3 {
   display: inline;
   float: right;
@@ -319,12 +339,12 @@ a:hover {
   width: 70px;
 }
 
-/* line 151, ../../../app/assets/stylesheets/main.scss */
+/* line 166, ../../../app/assets/stylesheets/main.scss */
 .top-margin {
   margin-top: 12px;
 }
 
-/* line 155, ../../../app/assets/stylesheets/main.scss */
+/* line 170, ../../../app/assets/stylesheets/main.scss */
 .center .pagination {
   margin-top: 0px;
   width: 420px;
