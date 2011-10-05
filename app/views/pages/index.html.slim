@@ -1,45 +1,47 @@
 - if can_edit?
   .single-column
     h1= t('page.text')
+    b
+      .grid-3.alpha
+        = sortable 'title'
+      .grid-3
+        = sortable 'identity'
+      .grid-3
+         = sortable 'created_at'
+      .grid-1
+        = sortable 'language'
+      .grid-2.omega
+        '
+    hr/
 
-  div class="grid_10 prefix_1 suffix_1 top_margin_24 bottom_margin_6"
-    div class="grid_10 alpha omega color_gray"
-      b
-        div class="grid_2 alpha"
-          = sortable 'title', t('system.title')
-        div class="grid_2"
-          = sortable 'identity', t('system.identity')
-        div class="grid_2"
-          = sortable 'created_at', t('admin.created_at')
-        div class="grid_2 omega"
-          = sortable 'language', t('system.language')
-      hr/
+    - @pages.each do |page|
+      div class="grid-12 alpha omega"
+        div class="grid-12 alpha omega #{cycle('color_light_gray', 'color_gray')}"
+          .grid-3.alpha
+            b= page.title
+          .grid-3
+            = page.identity
+          .grid-3
+            = l page.created_at, :format => :date_month_and_year
+          .grid-1
+            = page.language
+          .grid-2.omega.edit
+            - if can? :manage, page
+              = link_to t('admin.show'), page
+              |  |
+              = link_to t('admin.edit'), edit_page_path(page)
+              |  |
+              = link_to t('admin.delete'), page, :confirm => t('admin.are_you_sure'), :method => :delete
+    
 
-  - @pages.each do |page|
-    div class="grid_10 prefix_1 suffix_1"
-      div class="grid_10 alpha omega #{cycle('color_light_gray', 'color_gray')}"
-        div class="grid_2 alpha"
-          b= page.title
-        div class="grid_2"
-          = page.identity
-        div class="grid_2"
-          = l page.created_at, :format => :date_month_and_year
-        div class="grid_2"
-          = page.language
-        div class="grid_2 omega text_right"
-          - if can? :manage, page
-            = link_to t('admin.show'), page
-            |  |
-            = link_to t('admin.edit'), edit_page_path(page)
-            |  |
-            = link_to t('admin.delete'), page, :confirm => t('admin.are_you_sure'), :method => :delete
-
-  div class="grid_10 prefix_1 suffix_1"
     = will_paginate @pages
-
-  - if can? :manage, Page
-    div class="grid_10 prefix_1 suffix_1 top_margin_10"
-      = link_to t('page.new'), new_page_path
-
+    
+    - if can? :manage, Page
+      br
+        .top-margin.edit
+          = link_to t('page.new'), new_page_path, :class => 'button'
+    
 - else
   = render :partial => "shared/no_access"
+
+
