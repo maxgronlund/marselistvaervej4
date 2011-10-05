@@ -9,9 +9,9 @@
         h1 = @history.title
         =raw @history.body 
         br
-        = link_to 'hus regler', house_rules_index_path  
+        = link_to 'Husregler', house_rules_index_path  
         br
-        = link_to 'uge plan', week_plan_index_path
+        = link_to 'Ugeplan', week_plan_index_path
    
 	    - if can?(:edit, @history)
 	      .text-right
