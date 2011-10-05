@@ -44,7 +44,7 @@ class Booking < ActiveRecord::Base
       :recurring => false,
       :color => meetingroom.color,
       #textColor: 'black',
-      :url => Rails.application.routes.url_helpers.edit_meetingroom_booking_path(meetingroom_id, id, :locale => 'da')
+      :url => Rails.application.routes.url_helpers.meetingroom_booking_path(meetingroom_id, id, :locale => 'da')
     }
   end
   

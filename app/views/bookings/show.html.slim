@@ -11,11 +11,27 @@
         p
           =raw @booking.meetingroom.title
           br
+          'Reserveret til: 
+          = @booking.bookers_name
+          br
           'fra kl.;
           = l @booking.starttime, :format => :bookingtime
           '&nbsp; - &nbsp;
           = l @booking.endtime, :format => :bookingtime
-        
+          br
+          = @booking.attendees
+          '&nbsp; deltagerer
+          
+          -if @booking.coffee_and_tea?
+            br
+            'Der er bestilt kaffe og the
+          -if @booking.bread?
+            br
+            'Der er bestilt brød
+
+          .top-margin.text-right
+            = link_to 'rediger', edit_booking_path(@booking), :class => 'button'
+          
 	       
 
   .squared-box
