@@ -37,6 +37,8 @@ html
               = link_to 'booking' , new_meetingroom_booking_path(Meetingroom.first)
               |  |  
               = link_to 'mødelokaler' , meetingrooms_path
+              |  |  
+              = link_to 'praktisk info', info_index_path
               - InfoPage.all.each do |info_page|
                 '&nbsp;|&nbsp;
                 = link_to info_page.title, info_page

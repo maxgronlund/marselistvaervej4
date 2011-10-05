@@ -28,6 +28,10 @@ class Page < ActiveRecord::Base
     with_identity('history_dk')
   end
   
+  def self.info
+    with_identity('info')
+  end
+  
   define_index do
     indexes :title
     indexes :body

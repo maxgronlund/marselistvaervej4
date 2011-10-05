@@ -1,0 +1,22 @@
+.grid-container
+
+  .squared-box
+    .borders
+      .menu-box
+        = render :partial => "shared/menu"
+      .content
+
+        h1 = @history.title
+        =raw @history.body      
+	    - if can?(:edit, @history)
+	      .text-right
+	        = link_to t('admin.edit'), edit_page_path(@history), :class => 'button'
+        br
+        = link_to 'email alle i huset', "mailto:#{User.all.map(&:email).join(', ')}", :confirm => t('admin.are_you_sure')
+
+  .squared-box
+    .borders.image-box
+      = image_tag 'frontpage-house.jpg', :border => 'none', :class => 'image_fix'
+
+= render :partial => "shared/news", :locals => { :newsposts => @newsposts }
+

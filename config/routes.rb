@@ -1,5 +1,7 @@
 Rails_template::Application.routes.draw do
 
+  get "info/index"
+
   get "gallery/index"
 
   resources :photos
