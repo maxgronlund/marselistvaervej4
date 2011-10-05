@@ -350,3 +350,18 @@ a:hover {
   width: 420px;
   text-align: center;
 }
+
+/* line 177, ../../../app/assets/stylesheets/main.scss */
+.bottom-margin {
+  margin-top: 4px;
+}
+
+/* line 180, ../../../app/assets/stylesheets/main.scss */
+.mail-image {
+  display: inline;
+  float: left;
+  margin-left: 0px;
+  margin-right: 0px;
+  min-height: 1px;
+  width: 30px;
+}

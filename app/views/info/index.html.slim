@@ -12,7 +12,11 @@
 	      .text-right
 	        = link_to t('admin.edit'), edit_page_path(@history), :class => 'button'
         br
-        = link_to 'email alle i huset', "mailto:#{User.all.map(&:email).join(', ')}", :confirm => t('admin.are_you_sure')
+        .mail-image
+          = link_to image_tag('mail_16.png'), "mailto:#{User.all.map(&:email).join(', ')}", :confirm => t('admin.are_you_sure')
+        .grid-2.omega
+          .bottom-margin
+            = link_to 'email alle i huset', "mailto:#{User.all.map(&:email).join(', ')}", :confirm => t('admin.are_you_sure')
 
   .squared-box
     .borders.image-box
