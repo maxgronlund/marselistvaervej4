@@ -16,6 +16,11 @@ class PagesController < InheritedResources::Base
     update! {goto}
   end
   
+  def create
+    create!{pages_path}
+  end
+  
+  
   
 private  
   def sort_column  

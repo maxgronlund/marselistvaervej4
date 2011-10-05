@@ -1,5 +1,9 @@
 Rails_template::Application.routes.draw do
 
+  get "week_plan/index"
+
+  get "house_rules/index"
+
   get "info/index"
 
   get "gallery/index"

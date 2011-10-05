@@ -9,15 +9,16 @@
           'Resevation d.
           = l @booking.created_at, :format => :date_month_and_year
         p
-          =raw @booking.meetingroom.title
-          br
-          'Reserveret til: 
-          = @booking.bookers_name
-          br
-          'fra kl.;
           = l @booking.starttime, :format => :bookingtime
           '&nbsp; - &nbsp;
           = l @booking.endtime, :format => :bookingtime
+          br
+          strong =raw @booking.meetingroom.title
+          br
+          br
+          'Reserveret til: 
+          = @booking.bookers_name
+          
           br
           = @booking.attendees
           '&nbsp; deltagerer
@@ -28,9 +29,9 @@
           -if @booking.bread?
             br
             'Der er bestilt brød
-
-          .top-margin.text-right
-            = link_to 'rediger', edit_booking_path(@booking), :class => 'button'
+          -if can?(:edit, @booking)
+            .top-margin.text-right
+              = link_to 'rediger', edit_booking_path(@booking), :class => 'button'
           
 	       
 

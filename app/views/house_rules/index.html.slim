@@ -1,0 +1,21 @@
+.grid-container
+
+  .squared-box
+    .borders
+      .menu-box
+        = render :partial => "shared/menu"
+      .content
+
+        h1 = @house_rules.title
+        =raw @house_rules.body 
+
+   
+	    - if can?(:edit, @house_rules)
+	      .text-right
+	        = link_to t('admin.edit'), edit_page_path(@house_rules), :class => 'button'
+        
+  .squared-box
+    .borders.image-box
+      = image_tag 'frontpage-house.jpg', :border => 'none', :class => 'image_fix'
+
+= render :partial => "shared/news", :locals => { :newsposts => @newsposts }

@@ -7,7 +7,12 @@
       .content
 
         h1 = @history.title
-        =raw @history.body      
+        =raw @history.body 
+        br
+        = link_to 'hus regler', house_rules_index_path  
+        br
+        = link_to 'uge plan', week_plan_index_path
+   
 	    - if can?(:edit, @history)
 	      .text-right
 	        = link_to t('admin.edit'), edit_page_path(@history), :class => 'button'

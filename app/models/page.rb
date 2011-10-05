@@ -32,6 +32,14 @@ class Page < ActiveRecord::Base
     with_identity('info')
   end
   
+  def self.house_rules
+    with_identity('house_rules')
+  end
+  
+  def self.week_plan
+    with_identity('week_plan')
+  end
+  
   define_index do
     indexes :title
     indexes :body
