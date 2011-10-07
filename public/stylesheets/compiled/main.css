@@ -366,7 +366,7 @@ a:hover {
   width: 30px;
 }
 
-/* line 214, ../../../app/assets/stylesheets/main.scss */
+/* line 190, ../../../app/assets/stylesheets/main.scss */
 .demo-show h3 {
   margin: 0;
   padding: .25em;
@@ -375,7 +375,8 @@ a:hover {
   border-bottom: 1px solid #386785;
 }
 
-/* line 222, ../../../app/assets/stylesheets/main.scss */
+/* line 198, ../../../app/assets/stylesheets/main.scss */
 .demo-show div {
   padding: .5em .25em;
+  display: none;
 }

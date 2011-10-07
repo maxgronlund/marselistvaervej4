@@ -9,10 +9,12 @@
         = @company.title
       - if @company.body.length > 500
         .demo-show
-          'alsdjf asldjkf aslædjf alæsdjf alæsdjf 
+          =raw excerpt(@company.body, '', :radius => 160)
           unfold
-            'read more...
+            b læs mere...
           div =raw @company.body
+      - else
+        =raw @company.body
           
       .tlf-box
         .tlf-content
