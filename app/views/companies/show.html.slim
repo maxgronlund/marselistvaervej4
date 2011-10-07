@@ -9,10 +9,10 @@
         = @company.title
       - if @company.body.length > 500
         .demo-show
-          =raw excerpt(@company.body, '', :radius => 160)
           unfold
-            b læs mere...
-          div =raw @company.body
+            =raw excerpt(@company.body, '', :radius => 500) + '... <b> læs mere</b></p>'
+            
+          div =(raw @company.body)
       - else
         =raw @company.body
           
