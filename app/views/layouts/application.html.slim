@@ -18,6 +18,7 @@ html
       var session_key      = '#{cookies[Rails.application.config.session_options[:key]]}';
       var session_key_name = '#{Rails.application.config.session_options[:key]}';
     = yield :head 
+    = render :partial => "shared/google"
   body
     .background
       div class="container_12 two-column#{' background_grid' if RAILS_ENV == 'development' && (user_signed_in? && current_user.grid?)}"
