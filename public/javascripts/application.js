@@ -1,6 +1,11 @@
 // Place your application-specific JavaScript functions and classes here
 // This file is automatically included by javascript_include_tag :defaults
 $(document).ready(function() {
+	$('div.demo-show:eq(0)> div').hide();  
+	  $('div.demo-show:eq(0)> unfold').click(function() {
+		$(this).hide();
+	    $(this).next().slideToggle('fast');
+	  });
     $('.comment_reply').hide();
     $('.comment_reply').before('<a href="#" class="comment_reply_link">svar</a>');
 
@@ -46,6 +51,8 @@ $(document).ready(function() {
     return true;
   });
 });
+
+
 
 
 

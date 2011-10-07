@@ -8,3 +8,13 @@
 .clear
 
 /= link_to 'tilbage', meetingroom_bookings_path(@meetingroom)
+
+
+<script type="text/javascript">
+	jQuery(document).ready(function($) {
+		$('div.demo-show:eq(0)> div').hide();  
+		  $('div.demo-show:eq(0)> unfold').click(function() {
+			$(this).hide();
+		    $(this).next().slideToggle('fast');
+	});
+</script>
