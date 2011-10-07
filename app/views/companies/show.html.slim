@@ -8,11 +8,11 @@
       h1
         = @company.title
       - if @company.body.length > 500
-        .demo-show
-          'alsdjf asldjkf aslædjf alæsdjf alæsdjf 
-          unfold
+        .company-info
+          .limited style='overflow:hidden;'
+            =raw @company.body
+          .unfold
             'read more...
-          div =raw @company.body
           
       .tlf-box
         .tlf-content
