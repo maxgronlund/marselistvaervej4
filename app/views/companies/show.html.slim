@@ -1,5 +1,3 @@
-
-	 
 .squared-box
   .borders
     .menu-box
@@ -10,19 +8,17 @@
       - if @company.body.length > 500
         .demo-show
           unfold
-            =raw excerpt(@company.body, '', :radius => 500) + '... <b> læs mere</b></p>'
+            =raw excerpt(@company.body, '', :radius => 500) + ' <b> læs mere</b></p>'
             
           div =(raw @company.body)
       - else
         =raw @company.body
           
-      .tlf-box
-        .tlf-content
-	      | T: 
-	      = @company.phone 
-	      '&nbsp; - '&nbsp;
-	    .web-content
-	      =raw @link
+      .edit
+        'T: 
+        = @company.phone 
+        br
+        =raw @link
       - if can?(:edit, @company)
         .edit
           = link_to 'Send E-Mail til alle i firma', "mailto:#{@company.users.map(&:email).join(', ')}", :class =>'button'
