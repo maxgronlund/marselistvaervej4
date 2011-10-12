@@ -25,10 +25,14 @@
           
           -if @booking.coffee_and_tea?
             br
-            'Der er bestilt kaffe og the
+            'Der er bestilt kaffe og vand
           -if @booking.bread?
             br
-            'Der er bestilt brød
+            'Der er bestilt the
+          -if @booking.custom_message?
+            br
+            'Andet: 
+            = @booking.custom_message
           -if can?(:edit, @booking)
             .top-margin.text-right
               = link_to 'rediger', edit_booking_path(@booking), :class => 'button'
