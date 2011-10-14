@@ -3,7 +3,7 @@ source 'http://rubygems.org'
 gem 'rails', '3.0.7'
 
 
-gem 'mysql2', '~> 0.2.7'
+gem 'mysql2', '0.2.13'
 gem 'inherited_resources', '1.1.2'
 gem 'mime-types', '1.16', :require => "mime/types"
 gem 'devise', '1.1.5'
