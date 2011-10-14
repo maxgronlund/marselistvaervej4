@@ -4,7 +4,7 @@ gem 'rails', '3.0.7'
 
 
 group :production do
-  gem 'mysql'
+  gem 'mysql2', '~> 0.2.7'
 end
 group :development, :test do
   gem 'ruby-mysql', '2.9.3'

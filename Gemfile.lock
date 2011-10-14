@@ -63,7 +63,7 @@ GEM
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
     mime-types (1.16)
-    mysql (2.8.1)
+    mysql2 (0.2.13)
     net-scp (1.0.4)
       net-ssh (>= 1.99.1)
     net-sftp (2.0.5)
@@ -123,7 +123,7 @@ DEPENDENCIES
   devise (= 1.1.5)
   inherited_resources (= 1.1.2)
   mime-types (= 1.16)
-  mysql
+  mysql2 (~> 0.2.7)
   rails (= 3.0.7)
   ruby-mysql (= 2.9.3)
   slim
