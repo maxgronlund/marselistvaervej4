@@ -122,7 +122,7 @@ DEPENDENCIES
   devise (= 1.1.5)
   inherited_resources (= 1.1.2)
   mime-types (= 1.16)
-  mysql2 (= 0.2.13)
+  mysql2
   rails (= 3.0.7)
   slim
   thinking-sphinx (= 2.0.1)

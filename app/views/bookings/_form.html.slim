@@ -20,9 +20,9 @@
 
     br
     .field.booking-date
-      | Dato: 
+      | Dato:
       br
-      = f.text_field :created_at, :value => l((@booking.created_at || Date.today).to_date), :readonly => true, :size=>12
+      = f.date_select :created_at, :value => l((@booking.created_at || Date.today).to_date), :readonly => true, :size=>12
     
     .meetingrooms.top-margin
       - Meetingroom.all.each do |meetingroom|
