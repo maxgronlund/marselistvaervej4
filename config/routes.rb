@@ -1,5 +1,7 @@
 Rails_template::Application.routes.draw do
 
+  get "all_history/index"
+
 #  get "show_all_company/index"
 
   get "week_plan/index"

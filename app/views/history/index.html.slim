@@ -7,11 +7,17 @@
       .content
 
         h1 = @history.title
-        =raw @history.body      
+        -#=raw @history.body  
+        - if @history.body.length > 800
+          =raw excerpt(@history.body, '', :radius => 800)
+          '&nbsp;
+          = link_to 'læs mere', all_history_index_path(@history)
+        - else
+          =raw @history.body   
+
 	    - if can?(:edit, @history)
 	      .text-right
 	        = link_to t('admin.edit'), edit_page_path(@history), :class => 'button'
-
 
   .squared-box
     .borders.image-box
