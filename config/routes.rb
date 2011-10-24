@@ -1,5 +1,7 @@
 Rails_template::Application.routes.draw do
 
+#  get "show_all_company/index"
+
   get "week_plan/index"
 
   get "house_rules/index"
@@ -15,7 +17,7 @@ Rails_template::Application.routes.draw do
   resources :company_thumbs
 
   scope "/:locale" do
-    resources :bookings, :blogs, :comments, :companies,:home, :illustrations, :meetingrooms, :newsposts, :pages, :users
+    resources :bookings, :blogs, :comments, :companies,:home, :illustrations, :meetingrooms, :newsposts, :pages, :users, :show_all_company
   end
 
   

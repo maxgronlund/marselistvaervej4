@@ -200,6 +200,12 @@ a:hover {
   display:none;
 }
 
+body { column-count: 2; }
+.two-coloumns{
+	columns: 2;
+	column-fill: balance;
+}
+
 
 
 

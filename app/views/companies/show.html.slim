@@ -5,12 +5,10 @@
     .content
       h1
         = @company.title
-      - if @company.body.length > 500
-        .demo-show
-          unfold
-            =raw excerpt(@company.body, '', :radius => 500) + ' <b> læs mere</b></p>'
-            
-          div =(raw @company.body)
+      - if @company.body.length > 800
+        =raw excerpt(@company.body, '', :radius => 800)
+        '&nbsp;
+        = link_to 'læs mere', show_all_company_path(@company)
       - else
         =raw @company.body
           

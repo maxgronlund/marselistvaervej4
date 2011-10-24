@@ -380,3 +380,14 @@ a:hover {
   padding: .5em .25em;
   display: none;
 }
+
+/* line 203, ../../../app/assets/stylesheets/main.scss */
+body {
+  column-count: 2;
+}
+
+/* line 204, ../../../app/assets/stylesheets/main.scss */
+.two-coloumns {
+  columns: 2;
+  column-fill: balance;
+}
