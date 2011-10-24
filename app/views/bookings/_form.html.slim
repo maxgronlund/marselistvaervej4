@@ -40,7 +40,7 @@
     -if @booking.errors.any?
       .alert
         .message  
-          'Kontroller reservations tidspunktet, antallet af deltagerer og om mødelokalet allerede er booket
+          'Kontroller reservations tidspunktet, antallet af deltagere og om mødelokalet allerede er booket
       br
     | -Fra kl.
     = f.time_select :starttime
@@ -48,7 +48,7 @@
     = f.time_select :endtime
     .grid-5.alpha.omega.top-margin
 	br
-	'Deltagerer: 
+	'Deltagere: 
     br
     .grid-2.alpha
       = f.text_field :attendees, :size=> 6
