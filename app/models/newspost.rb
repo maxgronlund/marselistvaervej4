@@ -3,7 +3,7 @@ class Newspost < ActiveRecord::Base
   has_attached_file :image, 
                     :styles => { :mini => "70x57#",:thumbnail => "140x114#", :preview => "460x376#",:xxl => "754x616>" }, 
                     :processors => [:cropper],
-                    :default_url => "/images/fallback/default_illustration_:style.gif"
+                    :default_url => "/images/fallback/default_illustration_:style.jpg"
 
                     validates_attachment_size :image, :less_than => 8.megabytes
                     validates_attachment_content_type :image, :content_type => ['image/jpeg',
