@@ -5,7 +5,7 @@ class HomeController < ApplicationController
   def index
     session[:go_to_after_edit] = root_path
     @photos = Photo.limit(4)
-    @gallery = Gallery.first
+    @gallery = Gallery.marselistvaervej
 
     
     case locale.to_s

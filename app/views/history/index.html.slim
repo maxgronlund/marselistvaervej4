@@ -14,6 +14,9 @@
           = link_to 'læs mere', all_history_index_path(@history)
         - else
           =raw @history.body   
+        br
+        br
+        = link_to 'Galleri', gallery_path(@gallery)
 
 	    - if can?(:edit, @history)
 	      .text-right

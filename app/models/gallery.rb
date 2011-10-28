@@ -9,5 +9,8 @@ class Gallery < ActiveRecord::Base
     with_identity('marselistvaervej ')
   end
   
-  
+  def self.history 
+    with_identity('history ')
+  end
+
 end
