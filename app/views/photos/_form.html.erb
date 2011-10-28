@@ -12,6 +12,10 @@
   <% end %>
   <%= f.hidden_field :gallery_id, :value => @photo.gallery_id%>
   <div class="field">
+    <%= f.label :gallery_id %><br />
+    <%= f.text_field :gallery_id %>
+  </div>
+  <div class="field">
     <%= f.label :title %><br />
     <%= f.text_field :title %>
   </div>
