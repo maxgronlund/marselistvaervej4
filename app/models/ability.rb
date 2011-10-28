@@ -10,6 +10,7 @@ class Ability
         can :manage, Booking
         can :manage, Comment
         can :manage, Company
+        can :manage, Gallery
         can :manage, Illustration
         can :manage, Meetingroom
         can :manage, CompanyThumb
@@ -18,9 +19,7 @@ class Ability
         can :manage, Page
         can :manage, User
         
-        
-      elsif user.member?#ordinary user
-        
+      elsif user.member?#ordinary user 
         can :read, Blog
         can :create, Blog
         can :create, Booking
@@ -29,6 +28,7 @@ class Ability
         can :create, Comment
         can :manage, Comment, :user_id => user.id  
         can :read, Company
+        can :read, Gallery
         can :read, Illustration
         can :read, Meetingroom
         can :read, Newspost
@@ -36,20 +36,20 @@ class Ability
         can :read, Photo
         can :read, User
         can :manage, User, :id => user.id
-       
       end
     # When not logged in
-   else
-     can :read, Blog
-     can :read, Booking
-     can :read, Comment
-     can :read, Company
-     can :read, Illustration
-     can :read, Meetingroom
-     can :read, Newspost
-     can :read, Page
-     can :read, Photo
-     can :read, User
+    else
+      can :read, Blog
+      can :read, Booking
+      can :read, Comment
+      can :read, Company
+      can :read, Gallery
+      can :read, Illustration
+      can :read, Meetingroom
+      can :read, Newspost
+      can :read, Page
+      can :read, Photo
+      can :read, User
      #can :create, User# <----------- Uncomment this to alow users to signup by them self 
     end
   end

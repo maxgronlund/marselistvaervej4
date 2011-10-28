@@ -24,9 +24,6 @@ alt på dansk
 opret nyt mødelokale skjules
 
 
-
-
- 
 1:
 Mulighed for visning af flere billeder (billedgalleri)
 
@@ -69,13 +66,6 @@ Hurtigere vej til kalenderoversigt, så man ikke kun kan se de reserverede møde
 
 
 upload billeder med crop på ie8
-
-
-
-
-
-
-
 
 
  -@photos.all.each do |photo|

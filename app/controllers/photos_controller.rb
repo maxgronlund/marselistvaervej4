@@ -1,13 +1,20 @@
 class PhotosController < InheritedResources::Base
-     before_filter :get_internal_news
+
+  load_and_authorize_resource
+  before_filter :get_internal_news
+  belongs_to :gallery , :optional => true
+  
+
   
   def create
-    @photo = Photo.new(params[:photo])
+    
+    @gallery = Gallery.find(params[:gallery_id])
+    @photo = @gallery.photos.create(params[:photo])
     @photo.image_content_type = MIME::Types.type_for(@photo.image.original_filename).first.to_s if @photo.image.original_filename.present?
     if @photo.save
       if params[:photo][:image].blank?
         flash[:notice] = "Successfully created photo."
-        redirect_to photos_path
+        redirect_to admin_gallery_path(@gallery) 
       else
         render :action => "crop"
       end
@@ -21,7 +28,7 @@ class PhotosController < InheritedResources::Base
     if @photo.update_attributes(params[:photo])
       if params[:photo][:image].blank?
         flash[:notice] = "Successfully updated photo."
-        redirect_to photos_path
+        redirect_to admin_gallery_path(@photo.gallery_id) 
       else
         render :action => "crop"
       end
@@ -30,8 +37,13 @@ class PhotosController < InheritedResources::Base
     end
   end
    
-   def crop
-     # nothing here
-   end
-   
+  def crop
+    # nothing here
+  end
+  
+  def destroy
+    go_to = admin_gallery_path(@photo.gallery_id)
+    destroy! { go_to}
+  end
+  
 end

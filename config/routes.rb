@@ -1,25 +1,32 @@
 Rails_template::Application.routes.draw do
 
-  get "all_history/index"
 
-#  get "show_all_company/index"
-
-  get "week_plan/index"
-
-  get "house_rules/index"
-
-  get "info/index"
-
-  get "gallery/index"
-
-  resources :photos
+  resources :admin_galleries do
+    resources :photos
+  end
+  
+  resources :galleries
+  resources :galleries do
+    resources :photos
+  end
 
   resources :info_pages
 
   resources :company_thumbs
 
   scope "/:locale" do
-    resources :bookings, :blogs, :comments, :companies,:home, :illustrations, :meetingrooms, :newsposts, :pages, :users, :show_all_company
+    resources :bookings, 
+              :blogs, 
+              :comments, 
+              :companies,
+              :home, 
+              :illustrations, 
+              :meetingrooms, 
+              :newsposts, 
+              :pages,
+              :photos, 
+              :users, 
+              :show_all_company
   end
 
   
@@ -32,8 +39,12 @@ Rails_template::Application.routes.draw do
   get "history/index"
   get "googlemap/index"
   get "bookingcalendar/index"
-
-
+  get "week_plan/index"
+  get "house_rules/index"
+  get "info/index"
+#  get "admin_images/index"
+  get "all_history/index"
+  
   scope "/:locale" do
     resources :users do
       member do

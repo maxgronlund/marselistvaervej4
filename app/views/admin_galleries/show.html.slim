@@ -1,0 +1,28 @@
+.grid-container
+
+  .squared-box
+
+    .content
+      -if can_edit?
+        h1 photos
+        - @gallery.photos.each do |photo|
+          div class="grid-5 alpha omega #{cycle('color_light_gray', 'color_gray')}"
+            .grid-1.alpha
+              = image_tag photo.image.url(:micro)
+            .grid-3.alpha
+              = photo.title
+            .grid-1.omega
+              = link_to 'rediger', edit_photo_path(photo)
+              br
+              = link_to 'slet', photo, :confirm => 'Are you sure?', :method => :delete
+        .grid-5.alpha.omega.edit
+          = link_to 'opret photo', new_gallery_photo_path(@gallery), :class => 'button'
+          -#= link_to 'galleri', gallery_index_path, :class => 'button'
+      -else
+        'no access
+  .squared-box
+    .borders.fixed-height
+      = image_tag 'frontpage-house.jpg', :border => 'none', :class => 'image_fix'
+
+
+
