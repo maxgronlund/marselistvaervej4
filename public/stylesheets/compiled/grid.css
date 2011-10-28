@@ -2,7 +2,7 @@
  * Learn more ~ http://960.gs/
  * *
  * Licensed under GPL and MIT. */
-/* line 17, ../../../../../.rvm/gems/ruby-1.9.2-rc2/gems/compass-0.11.1/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 17, ../../../../../.rvm/gems/ruby-1.9.2-p290@railspre/gems/compass-0.11.1/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -24,56 +24,56 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 
-/* line 20, ../../../../../.rvm/gems/ruby-1.9.2-rc2/gems/compass-0.11.1/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 20, ../../../../../.rvm/gems/ruby-1.9.2-p290@railspre/gems/compass-0.11.1/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 body {
   line-height: 1;
 }
 
-/* line 22, ../../../../../.rvm/gems/ruby-1.9.2-rc2/gems/compass-0.11.1/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 22, ../../../../../.rvm/gems/ruby-1.9.2-p290@railspre/gems/compass-0.11.1/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 ol, ul {
   list-style: none;
 }
 
-/* line 24, ../../../../../.rvm/gems/ruby-1.9.2-rc2/gems/compass-0.11.1/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 24, ../../../../../.rvm/gems/ruby-1.9.2-p290@railspre/gems/compass-0.11.1/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/* line 26, ../../../../../.rvm/gems/ruby-1.9.2-rc2/gems/compass-0.11.1/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 26, ../../../../../.rvm/gems/ruby-1.9.2-p290@railspre/gems/compass-0.11.1/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 caption, th, td {
   text-align: left;
   font-weight: normal;
   vertical-align: middle;
 }
 
-/* line 28, ../../../../../.rvm/gems/ruby-1.9.2-rc2/gems/compass-0.11.1/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 28, ../../../../../.rvm/gems/ruby-1.9.2-p290@railspre/gems/compass-0.11.1/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 q, blockquote {
   quotes: none;
 }
-/* line 101, ../../../../../.rvm/gems/ruby-1.9.2-rc2/gems/compass-0.11.1/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 101, ../../../../../.rvm/gems/ruby-1.9.2-p290@railspre/gems/compass-0.11.1/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 q:before, q:after, blockquote:before, blockquote:after {
   content: "";
   content: none;
 }
 
-/* line 30, ../../../../../.rvm/gems/ruby-1.9.2-rc2/gems/compass-0.11.1/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 30, ../../../../../.rvm/gems/ruby-1.9.2-p290@railspre/gems/compass-0.11.1/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 a img {
   border: none;
 }
 
-/* line 115, ../../../../../.rvm/gems/ruby-1.9.2-rc2/gems/compass-0.11.1/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 115, ../../../../../.rvm/gems/ruby-1.9.2-p290@railspre/gems/compass-0.11.1/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
   display: block;
 }
 
-/* line 14, ../../../app/assets/stylesheets/grid.scss */
+/* line 15, ../../../app/assets/stylesheets/grid.scss */
 .edit {
   text-align: right;
 }
 
-/* line 21, ../../../app/assets/stylesheets/grid.scss */
+/* line 22, ../../../app/assets/stylesheets/grid.scss */
 .grid-1 {
   display: inline;
   float: left;
@@ -83,7 +83,7 @@ footer, header, hgroup, menu, nav, section {
   min-height: 1px;
 }
 
-/* line 22, ../../../app/assets/stylesheets/grid.scss */
+/* line 23, ../../../app/assets/stylesheets/grid.scss */
 .grid-2 {
   display: inline;
   float: left;
@@ -93,7 +93,7 @@ footer, header, hgroup, menu, nav, section {
   min-height: 1px;
 }
 
-/* line 23, ../../../app/assets/stylesheets/grid.scss */
+/* line 24, ../../../app/assets/stylesheets/grid.scss */
 .grid-3 {
   display: inline;
   float: left;
@@ -103,7 +103,7 @@ footer, header, hgroup, menu, nav, section {
   min-height: 1px;
 }
 
-/* line 24, ../../../app/assets/stylesheets/grid.scss */
+/* line 25, ../../../app/assets/stylesheets/grid.scss */
 .grid-4 {
   display: inline;
   float: left;
@@ -113,7 +113,7 @@ footer, header, hgroup, menu, nav, section {
   min-height: 1px;
 }
 
-/* line 25, ../../../app/assets/stylesheets/grid.scss */
+/* line 26, ../../../app/assets/stylesheets/grid.scss */
 .grid-5 {
   display: inline;
   float: left;
@@ -123,7 +123,7 @@ footer, header, hgroup, menu, nav, section {
   min-height: 1px;
 }
 
-/* line 26, ../../../app/assets/stylesheets/grid.scss */
+/* line 27, ../../../app/assets/stylesheets/grid.scss */
 .grid-6 {
   display: inline;
   float: left;
@@ -133,7 +133,7 @@ footer, header, hgroup, menu, nav, section {
   min-height: 1px;
 }
 
-/* line 27, ../../../app/assets/stylesheets/grid.scss */
+/* line 28, ../../../app/assets/stylesheets/grid.scss */
 .grid-7 {
   display: inline;
   float: left;
@@ -143,7 +143,7 @@ footer, header, hgroup, menu, nav, section {
   min-height: 1px;
 }
 
-/* line 28, ../../../app/assets/stylesheets/grid.scss */
+/* line 29, ../../../app/assets/stylesheets/grid.scss */
 .grid-8 {
   display: inline;
   float: left;
@@ -153,7 +153,7 @@ footer, header, hgroup, menu, nav, section {
   min-height: 1px;
 }
 
-/* line 29, ../../../app/assets/stylesheets/grid.scss */
+/* line 30, ../../../app/assets/stylesheets/grid.scss */
 .grid-9 {
   display: inline;
   float: left;
@@ -163,7 +163,7 @@ footer, header, hgroup, menu, nav, section {
   min-height: 1px;
 }
 
-/* line 30, ../../../app/assets/stylesheets/grid.scss */
+/* line 31, ../../../app/assets/stylesheets/grid.scss */
 .grid-10 {
   display: inline;
   float: left;
@@ -173,7 +173,7 @@ footer, header, hgroup, menu, nav, section {
   min-height: 1px;
 }
 
-/* line 31, ../../../app/assets/stylesheets/grid.scss */
+/* line 32, ../../../app/assets/stylesheets/grid.scss */
 .grid-11 {
   display: inline;
   float: left;
@@ -183,7 +183,7 @@ footer, header, hgroup, menu, nav, section {
   min-height: 1px;
 }
 
-/* line 32, ../../../app/assets/stylesheets/grid.scss */
+/* line 33, ../../../app/assets/stylesheets/grid.scss */
 .grid-12 {
   display: inline;
   float: left;
@@ -193,23 +193,23 @@ footer, header, hgroup, menu, nav, section {
   min-height: 1px;
 }
 
-/* line 33, ../../../app/assets/stylesheets/grid.scss */
+/* line 34, ../../../app/assets/stylesheets/grid.scss */
 .alpha {
   margin-left: 0;
 }
 
-/* line 34, ../../../app/assets/stylesheets/grid.scss */
+/* line 35, ../../../app/assets/stylesheets/grid.scss */
 .omega {
   margin-right: 0;
 }
 
-/* line 38, ../../../app/assets/stylesheets/grid.scss */
+/* line 39, ../../../app/assets/stylesheets/grid.scss */
 .two-column {
   margin-left: auto;
   margin-right: auto;
   width: 960px;
 }
-/* line 45, ../../../app/assets/stylesheets/grid.scss */
+/* line 46, ../../../app/assets/stylesheets/grid.scss */
 .two-column #header,
 .two-column #footer,
 .two-column #sidebar,
@@ -220,24 +220,24 @@ footer, header, hgroup, menu, nav, section {
   margin-left: 10px;
   margin-right: 10px;
 }
-/* line 48, ../../../app/assets/stylesheets/grid.scss */
+/* line 49, ../../../app/assets/stylesheets/grid.scss */
 .two-column #header, .two-column #footer, .two-column .single-column {
   width: 940px;
 }
-/* line 50, ../../../app/assets/stylesheets/grid.scss */
+/* line 51, ../../../app/assets/stylesheets/grid.scss */
 .two-column #main-content {
   width: 620px;
 }
-/* line 52, ../../../app/assets/stylesheets/grid.scss */
+/* line 53, ../../../app/assets/stylesheets/grid.scss */
 .two-column #sidebar {
   width: 300px;
 }
-/* line 54, ../../../app/assets/stylesheets/grid.scss */
+/* line 55, ../../../app/assets/stylesheets/grid.scss */
 .two-column #left-box {
   width: 460px;
 }
 
-/* line 60, ../../../app/assets/stylesheets/grid.scss */
+/* line 61, ../../../app/assets/stylesheets/grid.scss */
 #header .locale {
   display: inline;
   float: left;
@@ -246,7 +246,7 @@ footer, header, hgroup, menu, nav, section {
   width: 60px;
   margin-left: 0;
 }
-/* line 64, ../../../app/assets/stylesheets/grid.scss */
+/* line 65, ../../../app/assets/stylesheets/grid.scss */
 #header .nav {
   display: inline;
   float: left;
@@ -256,7 +256,7 @@ footer, header, hgroup, menu, nav, section {
   margin-top: 8px;
   vertical-align: baseline;
 }
-/* line 69, ../../../app/assets/stylesheets/grid.scss */
+/* line 70, ../../../app/assets/stylesheets/grid.scss */
 #header .session {
   display: inline;
   float: left;
@@ -267,7 +267,7 @@ footer, header, hgroup, menu, nav, section {
   text-align: right;
   vertical-align: baseline;
 }
-/* line 75, ../../../app/assets/stylesheets/grid.scss */
+/* line 76, ../../../app/assets/stylesheets/grid.scss */
 #header .search {
   display: inline;
   float: left;
@@ -278,7 +278,7 @@ footer, header, hgroup, menu, nav, section {
   margin-top: 8px;
 }
 
-/* line 82, ../../../app/assets/stylesheets/grid.scss */
+/* line 83, ../../../app/assets/stylesheets/grid.scss */
 .section {
   display: inline;
   float: left;
@@ -290,7 +290,7 @@ footer, header, hgroup, menu, nav, section {
   margin-right: 0;
 }
 
-/* line 90, ../../../app/assets/stylesheets/grid.scss */
+/* line 91, ../../../app/assets/stylesheets/grid.scss */
 .section-edit {
   display: inline;
   float: left;
@@ -302,7 +302,7 @@ footer, header, hgroup, menu, nav, section {
   margin-right: 0;
 }
 
-/* line 97, ../../../app/assets/stylesheets/grid.scss */
+/* line 98, ../../../app/assets/stylesheets/grid.scss */
 .blog-header {
   display: inline;
   float: left;
@@ -314,7 +314,7 @@ footer, header, hgroup, menu, nav, section {
   margin-right: 0;
 }
 
-/* line 103, ../../../app/assets/stylesheets/grid.scss */
+/* line 104, ../../../app/assets/stylesheets/grid.scss */
 .blog-image {
   display: inline;
   float: left;
@@ -325,7 +325,7 @@ footer, header, hgroup, menu, nav, section {
   margin-top: 24px;
 }
 
-/* line 108, ../../../app/assets/stylesheets/grid.scss */
+/* line 109, ../../../app/assets/stylesheets/grid.scss */
 .blog-content {
   display: inline;
   float: left;
@@ -337,7 +337,7 @@ footer, header, hgroup, menu, nav, section {
   margin-top: 24px;
 }
 
-/* line 114, ../../../app/assets/stylesheets/grid.scss */
+/* line 115, ../../../app/assets/stylesheets/grid.scss */
 .blog-comments {
   display: inline;
   float: left;
@@ -350,7 +350,7 @@ footer, header, hgroup, menu, nav, section {
   margin-right: 0;
 }
 
-/* line 121, ../../../app/assets/stylesheets/grid.scss */
+/* line 122, ../../../app/assets/stylesheets/grid.scss */
 .blog-comments-title, .blog-comments-new {
   display: inline;
   float: left;
@@ -364,7 +364,7 @@ footer, header, hgroup, menu, nav, section {
   margin-top: 10px;
 }
 
-/* line 129, ../../../app/assets/stylesheets/grid.scss */
+/* line 130, ../../../app/assets/stylesheets/grid.scss */
 .blog-comment-image {
   display: inline;
   float: left;
@@ -376,7 +376,7 @@ footer, header, hgroup, menu, nav, section {
   text-align: right;
 }
 
-/* line 135, ../../../app/assets/stylesheets/grid.scss */
+/* line 136, ../../../app/assets/stylesheets/grid.scss */
 .blog-comment-content {
   display: inline;
   float: left;
@@ -388,7 +388,7 @@ footer, header, hgroup, menu, nav, section {
   margin-top: 10px;
 }
 
-/* line 144, ../../../app/assets/stylesheets/grid.scss */
+/* line 145, ../../../app/assets/stylesheets/grid.scss */
 .user-image {
   display: inline;
   float: left;
@@ -398,7 +398,7 @@ footer, header, hgroup, menu, nav, section {
   margin-left: 0;
 }
 
-/* line 148, ../../../app/assets/stylesheets/grid.scss */
+/* line 149, ../../../app/assets/stylesheets/grid.scss */
 .user-name {
   display: inline;
   float: left;
@@ -407,7 +407,7 @@ footer, header, hgroup, menu, nav, section {
   width: 140px;
 }
 
-/* line 151, ../../../app/assets/stylesheets/grid.scss */
+/* line 152, ../../../app/assets/stylesheets/grid.scss */
 .user-email {
   display: inline;
   float: left;
@@ -416,7 +416,7 @@ footer, header, hgroup, menu, nav, section {
   width: 220px;
 }
 
-/* line 154, ../../../app/assets/stylesheets/grid.scss */
+/* line 155, ../../../app/assets/stylesheets/grid.scss */
 .user-role {
   display: inline;
   float: left;
@@ -427,7 +427,7 @@ footer, header, hgroup, menu, nav, section {
   margin-right: 0;
 }
 
-/* line 160, ../../../app/assets/stylesheets/grid.scss */
+/* line 161, ../../../app/assets/stylesheets/grid.scss */
 .pagination {
   text-align: center;
   display: inline;
@@ -438,7 +438,7 @@ footer, header, hgroup, menu, nav, section {
   margin-top: 10px;
 }
 
-/* line 169, ../../../app/assets/stylesheets/grid.scss */
+/* line 170, ../../../app/assets/stylesheets/grid.scss */
 .logo-box {
   margin-top: 36px;
   display: inline;
@@ -449,12 +449,12 @@ footer, header, hgroup, menu, nav, section {
   margin-left: 0;
   height: 72px;
 }
-/* line 174, ../../../app/assets/stylesheets/grid.scss */
+/* line 175, ../../../app/assets/stylesheets/grid.scss */
 .logo-box a:hover {
   background-color: transparent;
 }
 
-/* line 179, ../../../app/assets/stylesheets/grid.scss */
+/* line 180, ../../../app/assets/stylesheets/grid.scss */
 .logedin-box {
   margin-top: 36px;
   display: inline;
@@ -466,7 +466,7 @@ footer, header, hgroup, menu, nav, section {
   text-align: right;
 }
 
-/* line 186, ../../../app/assets/stylesheets/grid.scss */
+/* line 187, ../../../app/assets/stylesheets/grid.scss */
 .menu-box {
   background-image: url("/images/nav_left.png");
   background-repeat: no-repeat;
@@ -477,7 +477,7 @@ footer, header, hgroup, menu, nav, section {
   top: 20px;
   color: #fff;
 }
-/* line 195, ../../../app/assets/stylesheets/grid.scss */
+/* line 196, ../../../app/assets/stylesheets/grid.scss */
 .menu-box .menu-back {
   margin-left: 14px;
   background-color: #000;
@@ -485,14 +485,14 @@ footer, header, hgroup, menu, nav, section {
   padding-top: 8px;
   padding-left: 8px;
 }
-/* line 202, ../../../app/assets/stylesheets/grid.scss */
+/* line 203, ../../../app/assets/stylesheets/grid.scss */
 .menu-box h2 {
   color: #fff;
   font-size: 15px;
   margin-top: 1px;
   margin-left: 10px;
 }
-/* line 208, ../../../app/assets/stylesheets/grid.scss */
+/* line 209, ../../../app/assets/stylesheets/grid.scss */
 .menu-box a {
   text-decoration: none;
   color: #fff;
@@ -500,21 +500,21 @@ footer, header, hgroup, menu, nav, section {
   margin-top: 1px;
   margin-left: 19px;
 }
-/* line 215, ../../../app/assets/stylesheets/grid.scss */
+/* line 216, ../../../app/assets/stylesheets/grid.scss */
 .menu-box a:hover {
   color: #000;
   background-color: #fff;
 }
 
-/* line 221, ../../../app/assets/stylesheets/grid.scss */
+/* line 222, ../../../app/assets/stylesheets/grid.scss */
 .content {
   margin: 20px;
 }
-/* line 223, ../../../app/assets/stylesheets/grid.scss */
+/* line 224, ../../../app/assets/stylesheets/grid.scss */
 .content .content-company {
   height: 280px;
 }
-/* line 225, ../../../app/assets/stylesheets/grid.scss */
+/* line 226, ../../../app/assets/stylesheets/grid.scss */
 .content .content-company .pagination {
   text-align: center;
   display: inline;
@@ -525,7 +525,7 @@ footer, header, hgroup, menu, nav, section {
   margin-top: 10px;
 }
 
-/* line 236, ../../../app/assets/stylesheets/grid.scss */
+/* line 234, ../../../app/assets/stylesheets/grid.scss */
 .bookings-box {
   background-color: #fff;
   margin-top: 36px;
@@ -537,41 +537,41 @@ footer, header, hgroup, menu, nav, section {
   min-height: 376px;
   display: block;
 }
-/* line 242, ../../../app/assets/stylesheets/grid.scss */
+/* line 240, ../../../app/assets/stylesheets/grid.scss */
 .bookings-box .borders {
   border-style: solid;
   border-width: 1px;
   min-height: 376px;
   display: block;
 }
-/* line 249, ../../../app/assets/stylesheets/grid.scss */
+/* line 247, ../../../app/assets/stylesheets/grid.scss */
 .bookings-box .content .content-top {
   height: 280px;
 }
-/* line 251, ../../../app/assets/stylesheets/grid.scss */
+/* line 249, ../../../app/assets/stylesheets/grid.scss */
 .bookings-box .text-right {
   text-align: right;
 }
-/* line 254, ../../../app/assets/stylesheets/grid.scss */
+/* line 252, ../../../app/assets/stylesheets/grid.scss */
 .bookings-box .menu-box {
   width: 400px;
   height: 51px;
 }
-/* line 257, ../../../app/assets/stylesheets/grid.scss */
+/* line 255, ../../../app/assets/stylesheets/grid.scss */
 .bookings-box .menu-box a {
   color: #fff;
 }
-/* line 258, ../../../app/assets/stylesheets/grid.scss */
+/* line 256, ../../../app/assets/stylesheets/grid.scss */
 .bookings-box .menu-box a:hover {
   color: #000;
   background-color: #fff;
 }
-/* line 260, ../../../app/assets/stylesheets/grid.scss */
+/* line 258, ../../../app/assets/stylesheets/grid.scss */
 .bookings-box .image-box {
   min-height: 376px;
 }
 
-/* line 265, ../../../app/assets/stylesheets/grid.scss */
+/* line 263, ../../../app/assets/stylesheets/grid.scss */
 .calendar-box {
   background-color: #fff;
   margin-top: 10px;
@@ -583,41 +583,41 @@ footer, header, hgroup, menu, nav, section {
   min-height: 376px;
   display: block;
 }
-/* line 271, ../../../app/assets/stylesheets/grid.scss */
+/* line 269, ../../../app/assets/stylesheets/grid.scss */
 .calendar-box .borders {
   border-style: solid;
   border-width: 1px;
   min-height: 376px;
   display: block;
 }
-/* line 278, ../../../app/assets/stylesheets/grid.scss */
+/* line 276, ../../../app/assets/stylesheets/grid.scss */
 .calendar-box .content .content-top {
   height: 280px;
 }
-/* line 280, ../../../app/assets/stylesheets/grid.scss */
+/* line 278, ../../../app/assets/stylesheets/grid.scss */
 .calendar-box .text-right {
   text-align: right;
 }
-/* line 283, ../../../app/assets/stylesheets/grid.scss */
+/* line 281, ../../../app/assets/stylesheets/grid.scss */
 .calendar-box .menu-box {
   width: 400px;
   height: 51px;
 }
-/* line 286, ../../../app/assets/stylesheets/grid.scss */
+/* line 284, ../../../app/assets/stylesheets/grid.scss */
 .calendar-box .menu-box a {
   color: #fff;
 }
-/* line 287, ../../../app/assets/stylesheets/grid.scss */
+/* line 285, ../../../app/assets/stylesheets/grid.scss */
 .calendar-box .menu-box a:hover {
   color: #000;
   background-color: #fff;
 }
-/* line 289, ../../../app/assets/stylesheets/grid.scss */
+/* line 287, ../../../app/assets/stylesheets/grid.scss */
 .calendar-box .image-box {
   height: 376px;
 }
 
-/* line 294, ../../../app/assets/stylesheets/grid.scss */
+/* line 292, ../../../app/assets/stylesheets/grid.scss */
 .squared-box {
   position: relative;
   background-color: #fff;
@@ -631,7 +631,7 @@ footer, header, hgroup, menu, nav, section {
   display: block;
   overflow: hidden;
 }
-/* line 302, ../../../app/assets/stylesheets/grid.scss */
+/* line 301, ../../../app/assets/stylesheets/grid.scss */
 .squared-box .borders {
   border-style: solid;
   border-width: 1px;
@@ -639,56 +639,104 @@ footer, header, hgroup, menu, nav, section {
   display: block;
   overflow: hidden;
 }
-/* line 310, ../../../app/assets/stylesheets/grid.scss */
+/* line 309, ../../../app/assets/stylesheets/grid.scss */
 .squared-box .content .content-top {
   height: 280px;
 }
-/* line 312, ../../../app/assets/stylesheets/grid.scss */
+/* line 311, ../../../app/assets/stylesheets/grid.scss */
 .squared-box .text-right {
   text-align: right;
 }
-/* line 315, ../../../app/assets/stylesheets/grid.scss */
+/* line 314, ../../../app/assets/stylesheets/grid.scss */
 .squared-box .menu-box {
   width: 400px;
   height: 51px;
 }
-/* line 318, ../../../app/assets/stylesheets/grid.scss */
+/* line 317, ../../../app/assets/stylesheets/grid.scss */
 .squared-box .menu-box a {
   color: #fff;
 }
-/* line 319, ../../../app/assets/stylesheets/grid.scss */
+/* line 318, ../../../app/assets/stylesheets/grid.scss */
 .squared-box .menu-box a:hover {
   color: #000;
   background-color: #fff;
 }
-/* line 321, ../../../app/assets/stylesheets/grid.scss */
+/* line 320, ../../../app/assets/stylesheets/grid.scss */
 .squared-box .image-box {
   height: 376px;
 }
-/* line 324, ../../../app/assets/stylesheets/grid.scss */
+/* line 323, ../../../app/assets/stylesheets/grid.scss */
 .squared-box .tlf-box {
-  text-align: center;
+  text-align: right;
   background-color: #ddd;
   border-style: solid;
   border-width: 1px;
   margin-bottom: 8px;
   display: inline;
+  position: absolute;
+  left: 100px;
+  top: 100px;
+  height: 60px;
+  width: 300px;
 }
-/* line 331, ../../../app/assets/stylesheets/grid.scss */
+/* line 339, ../../../app/assets/stylesheets/grid.scss */
 .squared-box .tlf-box .tlf-content {
   text-align: left;
 }
-/* line 335, ../../../app/assets/stylesheets/grid.scss */
+/* line 342, ../../../app/assets/stylesheets/grid.scss */
 .squared-box .tlf-box .web-content {
   text-align: right;
 }
 
-/* line 341, ../../../app/assets/stylesheets/grid.scss */
+/* line 348, ../../../app/assets/stylesheets/grid.scss */
+.company-image-box {
+  position: relative;
+  background-color: #fff;
+  margin-top: 36px;
+  display: inline;
+  float: left;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 460px;
+  min-height: 376px;
+  display: block;
+  overflow: hidden;
+  text-align: right;
+}
+/* line 359, ../../../app/assets/stylesheets/grid.scss */
+.company-image-box .borders {
+  border-style: solid;
+  border-width: 1px;
+  min-height: 376px;
+  display: block;
+  overflow: hidden;
+}
+/* line 369, ../../../app/assets/stylesheets/grid.scss */
+.company-image-box .tlf-box {
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
+  opacity: 0.8;
+  background-color: #ddd;
+  border-style: solid;
+  border-width: 1px;
+  margin-bottom: 8px;
+  position: absolute;
+  top: 300px;
+  right: 0;
+  padding: 8px;
+}
+/* line 381, ../../../app/assets/stylesheets/grid.scss */
+.company-image-box .tlf-box a {
+  color: #000;
+  text-transform: uppercase;
+}
+
+/* line 391, ../../../app/assets/stylesheets/grid.scss */
 .fixed-height {
   height: 376px;
 }
 
-/* line 345, ../../../app/assets/stylesheets/grid.scss */
+/* line 395, ../../../app/assets/stylesheets/grid.scss */
 .bottom-box {
   display: inline;
   float: left;
@@ -702,13 +750,13 @@ footer, header, hgroup, menu, nav, section {
   display: block;
   float: left;
 }
-/* line 354, ../../../app/assets/stylesheets/grid.scss */
+/* line 404, ../../../app/assets/stylesheets/grid.scss */
 .bottom-box .borders {
   border-style: solid;
   border-width: 1px;
   height: 184px;
 }
-/* line 360, ../../../app/assets/stylesheets/grid.scss */
+/* line 410, ../../../app/assets/stylesheets/grid.scss */
 .bottom-box .left-side {
   height: 184px;
   display: inline;
@@ -719,21 +767,21 @@ footer, header, hgroup, menu, nav, section {
   margin-left: 0;
   width: 168px;
 }
-/* line 367, ../../../app/assets/stylesheets/grid.scss */
+/* line 417, ../../../app/assets/stylesheets/grid.scss */
 .bottom-box .left-side .menu-box {
   width: 154px;
   height: 51px;
 }
-/* line 370, ../../../app/assets/stylesheets/grid.scss */
+/* line 420, ../../../app/assets/stylesheets/grid.scss */
 .bottom-box .left-side .menu-box a {
   color: #fff;
 }
-/* line 371, ../../../app/assets/stylesheets/grid.scss */
+/* line 421, ../../../app/assets/stylesheets/grid.scss */
 .bottom-box .left-side .menu-box a:hover {
   color: #000;
   background-color: #fff;
 }
-/* line 374, ../../../app/assets/stylesheets/grid.scss */
+/* line 424, ../../../app/assets/stylesheets/grid.scss */
 .bottom-box .right-side {
   height: 184px;
   display: inline;
@@ -744,12 +792,12 @@ footer, header, hgroup, menu, nav, section {
   margin-right: 0;
   width: 730px;
 }
-/* line 383, ../../../app/assets/stylesheets/grid.scss */
+/* line 433, ../../../app/assets/stylesheets/grid.scss */
 .bottom-box .booking-box {
   margin-top: 80px;
   margin-left: 20px;
 }
-/* line 388, ../../../app/assets/stylesheets/grid.scss */
+/* line 438, ../../../app/assets/stylesheets/grid.scss */
 .bottom-box .news {
   height: 184px;
   display: inline;
@@ -759,7 +807,7 @@ footer, header, hgroup, menu, nav, section {
   width: 220px;
   width: 230px;
 }
-/* line 394, ../../../app/assets/stylesheets/grid.scss */
+/* line 444, ../../../app/assets/stylesheets/grid.scss */
 .bottom-box .news .content .header {
   height: 54px;
   margin-top: 10px;
@@ -773,18 +821,18 @@ footer, header, hgroup, menu, nav, section {
   width: 230px;
   /*	font-weight: bold;*/
 }
-/* line 402, ../../../app/assets/stylesheets/grid.scss */
+/* line 452, ../../../app/assets/stylesheets/grid.scss */
 .bottom-box .news .content .header a {
   text-decoration: none;
   /*	font-weight: bold;*/
   color: #000;
 }
-/* line 406, ../../../app/assets/stylesheets/grid.scss */
+/* line 456, ../../../app/assets/stylesheets/grid.scss */
 .bottom-box .news .content .header a:hover {
   color: #fff;
   background-color: #000;
 }
-/* line 413, ../../../app/assets/stylesheets/grid.scss */
+/* line 463, ../../../app/assets/stylesheets/grid.scss */
 .bottom-box .news .header {
   height: 54px;
   margin-top: 10px;
@@ -798,50 +846,50 @@ footer, header, hgroup, menu, nav, section {
   width: 230px;
   font-weight: bold;
 }
-/* line 422, ../../../app/assets/stylesheets/grid.scss */
+/* line 472, ../../../app/assets/stylesheets/grid.scss */
 .bottom-box .news a {
   text-decoration: none;
   /*	font-weight: bold;*/
   color: #448;
 }
-/* line 426, ../../../app/assets/stylesheets/grid.scss */
+/* line 476, ../../../app/assets/stylesheets/grid.scss */
 .bottom-box .news a:hover {
   color: #fff;
   background-color: #000;
 }
-/* line 430, ../../../app/assets/stylesheets/grid.scss */
+/* line 480, ../../../app/assets/stylesheets/grid.scss */
 .bottom-box .news h1 {
   margin-bottom: 0px;
   height: 34px;
   color: #000;
 }
-/* line 435, ../../../app/assets/stylesheets/grid.scss */
+/* line 485, ../../../app/assets/stylesheets/grid.scss */
 .bottom-box .news .gray {
   color: #999;
 }
-/* line 438, ../../../app/assets/stylesheets/grid.scss */
+/* line 488, ../../../app/assets/stylesheets/grid.scss */
 .bottom-box .news .content {
   margin-top: 0px;
   width: 210px;
 }
 
-/* line 444, ../../../app/assets/stylesheets/grid.scss */
+/* line 495, ../../../app/assets/stylesheets/grid.scss */
 .text-right {
   text-align: right;
 }
 
-/* line 448, ../../../app/assets/stylesheets/grid.scss */
+/* line 499, ../../../app/assets/stylesheets/grid.scss */
 .grid-container {
   margin-left: auto;
   margin-right: auto;
   width: 960px;
 }
-/* line 450, ../../../app/assets/stylesheets/grid.scss */
+/* line 501, ../../../app/assets/stylesheets/grid.scss */
 .grid-container .top-margin {
   margin-top: 32px;
 }
 
-/* line 455, ../../../app/assets/stylesheets/grid.scss */
+/* line 506, ../../../app/assets/stylesheets/grid.scss */
 .meeting-room {
   display: inline;
   float: left;
@@ -851,7 +899,7 @@ footer, header, hgroup, menu, nav, section {
   margin-left: 0;
 }
 
-/* line 460, ../../../app/assets/stylesheets/grid.scss */
+/* line 511, ../../../app/assets/stylesheets/grid.scss */
 .meeting-room-right {
   display: inline;
   float: left;
@@ -862,19 +910,19 @@ footer, header, hgroup, menu, nav, section {
   padding-right: 480px;
 }
 
-/* line 467, ../../../app/assets/stylesheets/grid.scss */
+/* line 518, ../../../app/assets/stylesheets/grid.scss */
 a {
   text-decoration: none;
   color: #444;
 }
 
-/* line 472, ../../../app/assets/stylesheets/grid.scss */
+/* line 523, ../../../app/assets/stylesheets/grid.scss */
 a:hover {
   color: #fff;
   background-color: #000;
 }
 
-/* line 477, ../../../app/assets/stylesheets/grid.scss */
+/* line 528, ../../../app/assets/stylesheets/grid.scss */
 .slim-box {
   background-color: #fff;
   margin-top: 36px;
@@ -885,29 +933,29 @@ a:hover {
   width: 460px;
   min-height: 80px;
 }
-/* line 482, ../../../app/assets/stylesheets/grid.scss */
+/* line 533, ../../../app/assets/stylesheets/grid.scss */
 .slim-box .borders {
   border-style: solid;
   border-width: 1px;
   height: 80px;
   display: block;
 }
-/* line 488, ../../../app/assets/stylesheets/grid.scss */
+/* line 539, ../../../app/assets/stylesheets/grid.scss */
 .slim-box .menu-box {
   width: 400px;
   height: 51px;
 }
-/* line 491, ../../../app/assets/stylesheets/grid.scss */
+/* line 542, ../../../app/assets/stylesheets/grid.scss */
 .slim-box .menu-box a {
   color: #fff;
 }
-/* line 492, ../../../app/assets/stylesheets/grid.scss */
+/* line 543, ../../../app/assets/stylesheets/grid.scss */
 .slim-box .menu-box a:hover {
   color: #000;
   background-color: #fff;
 }
 
-/* line 496, ../../../app/assets/stylesheets/grid.scss */
+/* line 547, ../../../app/assets/stylesheets/grid.scss */
 .googlemap {
   display: inline;
   float: left;
@@ -920,14 +968,14 @@ a:hover {
   width: 940px;
   display: block;
 }
-/* line 504, ../../../app/assets/stylesheets/grid.scss */
+/* line 555, ../../../app/assets/stylesheets/grid.scss */
 .googlemap .borders {
   border-style: solid;
   border-width: 1px;
   height: 600px;
 }
 
-/* line 511, ../../../app/assets/stylesheets/grid.scss */
+/* line 562, ../../../app/assets/stylesheets/grid.scss */
 .company-index {
   width: 110px;
   height: 60px;
@@ -937,7 +985,7 @@ a:hover {
   margin-right: 10px;
   margin-top: 8px;
 }
-/* line 520, ../../../app/assets/stylesheets/grid.scss */
+/* line 571, ../../../app/assets/stylesheets/grid.scss */
 .company-index .image {
   border-style: solid;
   border-width: 1px;
@@ -948,7 +996,7 @@ a:hover {
   margin: 1px 10px 1px 1px;
 }
 
-/* line 531, ../../../app/assets/stylesheets/grid.scss */
+/* line 582, ../../../app/assets/stylesheets/grid.scss */
 .fullpage {
   display: inline;
   float: left;
@@ -957,7 +1005,7 @@ a:hover {
   width: 940px;
 }
 
-/* line 537, ../../../app/assets/stylesheets/grid.scss */
+/* line 588, ../../../app/assets/stylesheets/grid.scss */
 .calendar-row {
   display: inline;
   float: left;
@@ -968,21 +1016,21 @@ a:hover {
   margin-right: 0;
   margin-right: 6px;
 }
-/* line 543, ../../../app/assets/stylesheets/grid.scss */
+/* line 594, ../../../app/assets/stylesheets/grid.scss */
 .calendar-row .booking-back {
   padding: 4px;
   background-color: #999;
   margin: 6px;
 }
 
-/* line 552, ../../../app/assets/stylesheets/grid.scss */
+/* line 603, ../../../app/assets/stylesheets/grid.scss */
 .booking-meetingroom-column {
   float: left;
   margin: 2px;
   width: 134px;
 }
 
-/* line 558, ../../../app/assets/stylesheets/grid.scss */
+/* line 609, ../../../app/assets/stylesheets/grid.scss */
 #columns-3-2-2-1-2 {
   min-height: 500px;
   display: inline;
@@ -992,7 +1040,7 @@ a:hover {
   width: 940px;
   margin-top: 24px;
 }
-/* line 562, ../../../app/assets/stylesheets/grid.scss */
+/* line 613, ../../../app/assets/stylesheets/grid.scss */
 #columns-3-2-2-1-2 .left-column {
   display: inline;
   float: left;
@@ -1001,7 +1049,7 @@ a:hover {
   width: 220px;
   margin-left: 0;
 }
-/* line 566, ../../../app/assets/stylesheets/grid.scss */
+/* line 617, ../../../app/assets/stylesheets/grid.scss */
 #columns-3-2-2-1-2 .center-column1 {
   display: inline;
   float: left;
@@ -1009,7 +1057,7 @@ a:hover {
   margin-right: 10px;
   width: 60px;
 }
-/* line 569, ../../../app/assets/stylesheets/grid.scss */
+/* line 620, ../../../app/assets/stylesheets/grid.scss */
 #columns-3-2-2-1-2 .center-column2 {
   display: inline;
   float: left;
@@ -1017,7 +1065,7 @@ a:hover {
   margin-right: 10px;
   width: 140px;
 }
-/* line 572, ../../../app/assets/stylesheets/grid.scss */
+/* line 623, ../../../app/assets/stylesheets/grid.scss */
 #columns-3-2-2-1-2 .center-column3 {
   display: inline;
   float: left;
@@ -1025,7 +1073,7 @@ a:hover {
   margin-right: 10px;
   width: 220px;
 }
-/* line 575, ../../../app/assets/stylesheets/grid.scss */
+/* line 626, ../../../app/assets/stylesheets/grid.scss */
 #columns-3-2-2-1-2 .right-column {
   display: inline;
   float: left;
@@ -1036,19 +1084,19 @@ a:hover {
   padding-right: 80px;
 }
 
-/* line 582, ../../../app/assets/stylesheets/grid.scss */
+/* line 633, ../../../app/assets/stylesheets/grid.scss */
 .bookings-calendar {
   margin-top: 10px;
   margin-left: 10px;
   text-align: center;
 }
 
-/* line 588, ../../../app/assets/stylesheets/grid.scss */
+/* line 639, ../../../app/assets/stylesheets/grid.scss */
 .top_margin {
   margin-top: 8px;
 }
 
-/* line 590, ../../../app/assets/stylesheets/grid.scss */
+/* line 641, ../../../app/assets/stylesheets/grid.scss */
 .thumb-box {
   background-color: #fff;
   margin-top: 36px;
@@ -1060,41 +1108,41 @@ a:hover {
   min-height: 376px;
   display: block;
 }
-/* line 596, ../../../app/assets/stylesheets/grid.scss */
+/* line 647, ../../../app/assets/stylesheets/grid.scss */
 .thumb-box .borders {
   border-style: solid;
   border-width: 1px;
   min-height: 376px;
   display: block;
 }
-/* line 603, ../../../app/assets/stylesheets/grid.scss */
+/* line 654, ../../../app/assets/stylesheets/grid.scss */
 .thumb-box .content .content-top {
   height: 280px;
 }
-/* line 605, ../../../app/assets/stylesheets/grid.scss */
+/* line 656, ../../../app/assets/stylesheets/grid.scss */
 .thumb-box .text-right {
   text-align: right;
 }
-/* line 608, ../../../app/assets/stylesheets/grid.scss */
+/* line 659, ../../../app/assets/stylesheets/grid.scss */
 .thumb-box .menu-box {
   width: 400px;
   height: 51px;
 }
-/* line 611, ../../../app/assets/stylesheets/grid.scss */
+/* line 662, ../../../app/assets/stylesheets/grid.scss */
 .thumb-box .menu-box a {
   color: #fff;
 }
-/* line 612, ../../../app/assets/stylesheets/grid.scss */
+/* line 663, ../../../app/assets/stylesheets/grid.scss */
 .thumb-box .menu-box a:hover {
   color: #000;
   background-color: #fff;
 }
-/* line 614, ../../../app/assets/stylesheets/grid.scss */
+/* line 665, ../../../app/assets/stylesheets/grid.scss */
 .thumb-box .image-box {
   height: 376px;
 }
 
-/* line 619, ../../../app/assets/stylesheets/grid.scss */
+/* line 670, ../../../app/assets/stylesheets/grid.scss */
 .gallery-box {
   background-color: #fff;
   margin-top: 36px;
@@ -1106,36 +1154,36 @@ a:hover {
   min-height: 376px;
   display: block;
 }
-/* line 625, ../../../app/assets/stylesheets/grid.scss */
+/* line 676, ../../../app/assets/stylesheets/grid.scss */
 .gallery-box .borders {
   border-style: solid;
   border-width: 1px;
   min-height: 376px;
   display: block;
 }
-/* line 632, ../../../app/assets/stylesheets/grid.scss */
+/* line 683, ../../../app/assets/stylesheets/grid.scss */
 .gallery-box .content .content-top {
   height: 280px;
 }
-/* line 634, ../../../app/assets/stylesheets/grid.scss */
+/* line 685, ../../../app/assets/stylesheets/grid.scss */
 .gallery-box .text-right {
   text-align: right;
 }
-/* line 637, ../../../app/assets/stylesheets/grid.scss */
+/* line 688, ../../../app/assets/stylesheets/grid.scss */
 .gallery-box .menu-box {
   width: 400px;
   height: 51px;
 }
-/* line 640, ../../../app/assets/stylesheets/grid.scss */
+/* line 691, ../../../app/assets/stylesheets/grid.scss */
 .gallery-box .menu-box a {
   color: #fff;
 }
-/* line 641, ../../../app/assets/stylesheets/grid.scss */
+/* line 692, ../../../app/assets/stylesheets/grid.scss */
 .gallery-box .menu-box a:hover {
   color: #000;
   background-color: #fff;
 }
-/* line 643, ../../../app/assets/stylesheets/grid.scss */
+/* line 694, ../../../app/assets/stylesheets/grid.scss */
 .gallery-box .image-box {
   height: 376px;
 }

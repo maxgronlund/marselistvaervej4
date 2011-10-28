@@ -12,11 +12,6 @@
       - else
         =raw @company.body
           
-      .edit
-        'T: 
-        = @company.phone 
-        br
-        =raw @link
       - if can?(:edit, @company)
         .edit
           = link_to 'Send E-Mail til alle i firma', "mailto:#{@company.users.map(&:email).join(', ')}", :class =>'button'
@@ -31,9 +26,14 @@
 
 
       
-.squared-box
+.company-image-box
   .borders.fixed-height
     = image_tag @company.image.url(:preview), :border => 'none', :class => 'image_fix'
+    .tlf-box
+      'T: 
+      = @company.phone 
+      '&nbsp;|&nbsp;
+      =raw @link
     
       
 br
