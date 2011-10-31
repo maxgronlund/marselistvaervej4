@@ -9,6 +9,9 @@
         h1 = @history.title
         =raw @history.body     
         = link_to 'læs mere', all_history_index_path 
+        br
+        br
+        = link_to 'Galleri', gallery_path(@gallery)
 	    - if can?(:edit, @history)
 	      .text-right
 	        = link_to t('admin.edit'), edit_page_path(@history), :class => 'button'
