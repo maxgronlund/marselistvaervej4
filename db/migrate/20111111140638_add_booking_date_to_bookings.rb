@@ -4,6 +4,7 @@ class AddBookingDateToBookings < ActiveRecord::Migration
     
       Booking.all.each do |booking|
         booking.booking_date = booking.created_at
+        booking.save
       end
   end
 
