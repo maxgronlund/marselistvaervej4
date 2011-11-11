@@ -349,7 +349,7 @@ $ninesixty-gutter-width: 20px; // default: 20px
 	
 	position:relative;
 	background-color:#fff;
-    margin-top:36px;
+  margin-top:36px;
 	@include grid(6);
 	min-height:376px;
 	display:block;
@@ -394,11 +394,12 @@ $ninesixty-gutter-width: 20px; // default: 20px
 .bottom-box{
 	@include grid(12);
 	background-color:#fff;
-    margin-top:22px;
+  margin-top:22px;
 	height:186px;
 	width:940px;
 	display:block;
 	float:left;
+	position:relative;
 
 	.borders{
 		border-style:solid;
@@ -421,19 +422,15 @@ $ninesixty-gutter-width: 20px; // default: 20px
 		}
 	}
 	.right-side{
-
 		height:184px;
 		@include grid(8);
 		@include omega;
 		width:730px;
-		
-	
 	}
 	.booking-box{
 		margin-top:80px;
 		margin-left:20px;
 	}
-
 	.news{
 		height:184px;
 		@include grid(3);
@@ -447,10 +444,8 @@ $ninesixty-gutter-width: 20px; // default: 20px
 				@include alpha;
 				@include omega;
 				width:230px;
-			/*	font-weight: bold;*/
 				a{
 					text-decoration:none;
-				/*	font-weight: bold;*/
 					color:#000;
 				}a:hover{
 					color:#fff;
@@ -470,7 +465,6 @@ $ninesixty-gutter-width: 20px; // default: 20px
 		}
 		a{
 			text-decoration:none;
-		/*	font-weight: bold;*/
 			color:#448;
 		}a:hover{
 			color:#fff;
