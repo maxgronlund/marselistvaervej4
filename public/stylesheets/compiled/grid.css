@@ -703,7 +703,7 @@ footer, header, hgroup, menu, nav, section {
   overflow: hidden;
   text-align: right;
 }
-/* line 359, ../../../app/assets/stylesheets/grid.scss */
+/* line 358, ../../../app/assets/stylesheets/grid.scss */
 .company-image-box .borders {
   border-style: solid;
   border-width: 1px;
@@ -711,7 +711,7 @@ footer, header, hgroup, menu, nav, section {
   display: block;
   overflow: hidden;
 }
-/* line 369, ../../../app/assets/stylesheets/grid.scss */
+/* line 368, ../../../app/assets/stylesheets/grid.scss */
 .company-image-box .tlf-box {
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
@@ -725,18 +725,18 @@ footer, header, hgroup, menu, nav, section {
   right: 0;
   padding: 8px;
 }
-/* line 381, ../../../app/assets/stylesheets/grid.scss */
+/* line 380, ../../../app/assets/stylesheets/grid.scss */
 .company-image-box .tlf-box a {
   color: #000;
   text-transform: uppercase;
 }
 
-/* line 391, ../../../app/assets/stylesheets/grid.scss */
+/* line 390, ../../../app/assets/stylesheets/grid.scss */
 .fixed-height {
   height: 376px;
 }
 
-/* line 395, ../../../app/assets/stylesheets/grid.scss */
+/* line 394, ../../../app/assets/stylesheets/grid.scss */
 .bottom-box {
   display: inline;
   float: left;
@@ -750,13 +750,13 @@ footer, header, hgroup, menu, nav, section {
   display: block;
   float: left;
 }
-/* line 404, ../../../app/assets/stylesheets/grid.scss */
+/* line 403, ../../../app/assets/stylesheets/grid.scss */
 .bottom-box .borders {
   border-style: solid;
   border-width: 1px;
   height: 184px;
 }
-/* line 410, ../../../app/assets/stylesheets/grid.scss */
+/* line 409, ../../../app/assets/stylesheets/grid.scss */
 .bottom-box .left-side {
   height: 184px;
   display: inline;
@@ -767,21 +767,21 @@ footer, header, hgroup, menu, nav, section {
   margin-left: 0;
   width: 168px;
 }
-/* line 417, ../../../app/assets/stylesheets/grid.scss */
+/* line 416, ../../../app/assets/stylesheets/grid.scss */
 .bottom-box .left-side .menu-box {
   width: 154px;
   height: 51px;
 }
-/* line 420, ../../../app/assets/stylesheets/grid.scss */
+/* line 419, ../../../app/assets/stylesheets/grid.scss */
 .bottom-box .left-side .menu-box a {
   color: #fff;
 }
-/* line 421, ../../../app/assets/stylesheets/grid.scss */
+/* line 420, ../../../app/assets/stylesheets/grid.scss */
 .bottom-box .left-side .menu-box a:hover {
   color: #000;
   background-color: #fff;
 }
-/* line 424, ../../../app/assets/stylesheets/grid.scss */
+/* line 423, ../../../app/assets/stylesheets/grid.scss */
 .bottom-box .right-side {
   height: 184px;
   display: inline;
@@ -792,12 +792,12 @@ footer, header, hgroup, menu, nav, section {
   margin-right: 0;
   width: 730px;
 }
-/* line 433, ../../../app/assets/stylesheets/grid.scss */
+/* line 432, ../../../app/assets/stylesheets/grid.scss */
 .bottom-box .booking-box {
   margin-top: 80px;
   margin-left: 20px;
 }
-/* line 438, ../../../app/assets/stylesheets/grid.scss */
+/* line 437, ../../../app/assets/stylesheets/grid.scss */
 .bottom-box .news {
   height: 184px;
   display: inline;
@@ -807,7 +807,7 @@ footer, header, hgroup, menu, nav, section {
   width: 220px;
   width: 230px;
 }
-/* line 444, ../../../app/assets/stylesheets/grid.scss */
+/* line 443, ../../../app/assets/stylesheets/grid.scss */
 .bottom-box .news .content .header {
   height: 54px;
   margin-top: 10px;
@@ -821,18 +821,18 @@ footer, header, hgroup, menu, nav, section {
   width: 230px;
   /*	font-weight: bold;*/
 }
-/* line 452, ../../../app/assets/stylesheets/grid.scss */
+/* line 451, ../../../app/assets/stylesheets/grid.scss */
 .bottom-box .news .content .header a {
   text-decoration: none;
   /*	font-weight: bold;*/
   color: #000;
 }
-/* line 456, ../../../app/assets/stylesheets/grid.scss */
+/* line 455, ../../../app/assets/stylesheets/grid.scss */
 .bottom-box .news .content .header a:hover {
   color: #fff;
   background-color: #000;
 }
-/* line 463, ../../../app/assets/stylesheets/grid.scss */
+/* line 462, ../../../app/assets/stylesheets/grid.scss */
 .bottom-box .news .header {
   height: 54px;
   margin-top: 10px;
@@ -846,50 +846,50 @@ footer, header, hgroup, menu, nav, section {
   width: 230px;
   font-weight: bold;
 }
-/* line 472, ../../../app/assets/stylesheets/grid.scss */
+/* line 471, ../../../app/assets/stylesheets/grid.scss */
 .bottom-box .news a {
   text-decoration: none;
   /*	font-weight: bold;*/
   color: #448;
 }
-/* line 476, ../../../app/assets/stylesheets/grid.scss */
+/* line 475, ../../../app/assets/stylesheets/grid.scss */
 .bottom-box .news a:hover {
   color: #fff;
   background-color: #000;
 }
-/* line 480, ../../../app/assets/stylesheets/grid.scss */
+/* line 479, ../../../app/assets/stylesheets/grid.scss */
 .bottom-box .news h1 {
   margin-bottom: 0px;
   height: 34px;
   color: #000;
 }
-/* line 485, ../../../app/assets/stylesheets/grid.scss */
+/* line 484, ../../../app/assets/stylesheets/grid.scss */
 .bottom-box .news .gray {
   color: #999;
 }
-/* line 488, ../../../app/assets/stylesheets/grid.scss */
+/* line 487, ../../../app/assets/stylesheets/grid.scss */
 .bottom-box .news .content {
   margin-top: 0px;
   width: 210px;
 }
 
-/* line 495, ../../../app/assets/stylesheets/grid.scss */
+/* line 494, ../../../app/assets/stylesheets/grid.scss */
 .text-right {
   text-align: right;
 }
 
-/* line 499, ../../../app/assets/stylesheets/grid.scss */
+/* line 498, ../../../app/assets/stylesheets/grid.scss */
 .grid-container {
   margin-left: auto;
   margin-right: auto;
   width: 960px;
 }
-/* line 501, ../../../app/assets/stylesheets/grid.scss */
+/* line 500, ../../../app/assets/stylesheets/grid.scss */
 .grid-container .top-margin {
   margin-top: 32px;
 }
 
-/* line 506, ../../../app/assets/stylesheets/grid.scss */
+/* line 505, ../../../app/assets/stylesheets/grid.scss */
 .meeting-room {
   display: inline;
   float: left;
@@ -899,7 +899,7 @@ footer, header, hgroup, menu, nav, section {
   margin-left: 0;
 }
 
-/* line 511, ../../../app/assets/stylesheets/grid.scss */
+/* line 510, ../../../app/assets/stylesheets/grid.scss */
 .meeting-room-right {
   display: inline;
   float: left;
@@ -910,19 +910,19 @@ footer, header, hgroup, menu, nav, section {
   padding-right: 480px;
 }
 
-/* line 518, ../../../app/assets/stylesheets/grid.scss */
+/* line 517, ../../../app/assets/stylesheets/grid.scss */
 a {
   text-decoration: none;
   color: #444;
 }
 
-/* line 523, ../../../app/assets/stylesheets/grid.scss */
+/* line 522, ../../../app/assets/stylesheets/grid.scss */
 a:hover {
   color: #fff;
   background-color: #000;
 }
 
-/* line 528, ../../../app/assets/stylesheets/grid.scss */
+/* line 527, ../../../app/assets/stylesheets/grid.scss */
 .slim-box {
   background-color: #fff;
   margin-top: 36px;
@@ -933,29 +933,29 @@ a:hover {
   width: 460px;
   min-height: 80px;
 }
-/* line 533, ../../../app/assets/stylesheets/grid.scss */
+/* line 532, ../../../app/assets/stylesheets/grid.scss */
 .slim-box .borders {
   border-style: solid;
   border-width: 1px;
   height: 80px;
   display: block;
 }
-/* line 539, ../../../app/assets/stylesheets/grid.scss */
+/* line 538, ../../../app/assets/stylesheets/grid.scss */
 .slim-box .menu-box {
   width: 400px;
   height: 51px;
 }
-/* line 542, ../../../app/assets/stylesheets/grid.scss */
+/* line 541, ../../../app/assets/stylesheets/grid.scss */
 .slim-box .menu-box a {
   color: #fff;
 }
-/* line 543, ../../../app/assets/stylesheets/grid.scss */
+/* line 542, ../../../app/assets/stylesheets/grid.scss */
 .slim-box .menu-box a:hover {
   color: #000;
   background-color: #fff;
 }
 
-/* line 547, ../../../app/assets/stylesheets/grid.scss */
+/* line 546, ../../../app/assets/stylesheets/grid.scss */
 .googlemap {
   display: inline;
   float: left;
@@ -968,14 +968,14 @@ a:hover {
   width: 940px;
   display: block;
 }
-/* line 555, ../../../app/assets/stylesheets/grid.scss */
+/* line 554, ../../../app/assets/stylesheets/grid.scss */
 .googlemap .borders {
   border-style: solid;
   border-width: 1px;
   height: 600px;
 }
 
-/* line 562, ../../../app/assets/stylesheets/grid.scss */
+/* line 561, ../../../app/assets/stylesheets/grid.scss */
 .company-index {
   width: 110px;
   height: 60px;
@@ -985,7 +985,7 @@ a:hover {
   margin-right: 10px;
   margin-top: 8px;
 }
-/* line 571, ../../../app/assets/stylesheets/grid.scss */
+/* line 570, ../../../app/assets/stylesheets/grid.scss */
 .company-index .image {
   border-style: solid;
   border-width: 1px;
@@ -996,7 +996,7 @@ a:hover {
   margin: 1px 10px 1px 1px;
 }
 
-/* line 582, ../../../app/assets/stylesheets/grid.scss */
+/* line 581, ../../../app/assets/stylesheets/grid.scss */
 .fullpage {
   display: inline;
   float: left;
@@ -1005,7 +1005,7 @@ a:hover {
   width: 940px;
 }
 
-/* line 588, ../../../app/assets/stylesheets/grid.scss */
+/* line 587, ../../../app/assets/stylesheets/grid.scss */
 .calendar-row {
   display: inline;
   float: left;
@@ -1016,21 +1016,21 @@ a:hover {
   margin-right: 0;
   margin-right: 6px;
 }
-/* line 594, ../../../app/assets/stylesheets/grid.scss */
+/* line 593, ../../../app/assets/stylesheets/grid.scss */
 .calendar-row .booking-back {
   padding: 4px;
   background-color: #999;
   margin: 6px;
 }
 
-/* line 603, ../../../app/assets/stylesheets/grid.scss */
+/* line 602, ../../../app/assets/stylesheets/grid.scss */
 .booking-meetingroom-column {
   float: left;
   margin: 2px;
   width: 134px;
 }
 
-/* line 609, ../../../app/assets/stylesheets/grid.scss */
+/* line 608, ../../../app/assets/stylesheets/grid.scss */
 #columns-3-2-2-1-2 {
   min-height: 500px;
   display: inline;
@@ -1040,7 +1040,7 @@ a:hover {
   width: 940px;
   margin-top: 24px;
 }
-/* line 613, ../../../app/assets/stylesheets/grid.scss */
+/* line 612, ../../../app/assets/stylesheets/grid.scss */
 #columns-3-2-2-1-2 .left-column {
   display: inline;
   float: left;
@@ -1049,7 +1049,7 @@ a:hover {
   width: 220px;
   margin-left: 0;
 }
-/* line 617, ../../../app/assets/stylesheets/grid.scss */
+/* line 616, ../../../app/assets/stylesheets/grid.scss */
 #columns-3-2-2-1-2 .center-column1 {
   display: inline;
   float: left;
@@ -1057,7 +1057,7 @@ a:hover {
   margin-right: 10px;
   width: 60px;
 }
-/* line 620, ../../../app/assets/stylesheets/grid.scss */
+/* line 619, ../../../app/assets/stylesheets/grid.scss */
 #columns-3-2-2-1-2 .center-column2 {
   display: inline;
   float: left;
@@ -1065,7 +1065,7 @@ a:hover {
   margin-right: 10px;
   width: 140px;
 }
-/* line 623, ../../../app/assets/stylesheets/grid.scss */
+/* line 622, ../../../app/assets/stylesheets/grid.scss */
 #columns-3-2-2-1-2 .center-column3 {
   display: inline;
   float: left;
@@ -1073,7 +1073,7 @@ a:hover {
   margin-right: 10px;
   width: 220px;
 }
-/* line 626, ../../../app/assets/stylesheets/grid.scss */
+/* line 625, ../../../app/assets/stylesheets/grid.scss */
 #columns-3-2-2-1-2 .right-column {
   display: inline;
   float: left;
@@ -1084,19 +1084,19 @@ a:hover {
   padding-right: 80px;
 }
 
-/* line 633, ../../../app/assets/stylesheets/grid.scss */
+/* line 632, ../../../app/assets/stylesheets/grid.scss */
 .bookings-calendar {
   margin-top: 10px;
   margin-left: 10px;
   text-align: center;
 }
 
-/* line 639, ../../../app/assets/stylesheets/grid.scss */
+/* line 638, ../../../app/assets/stylesheets/grid.scss */
 .top_margin {
   margin-top: 8px;
 }
 
-/* line 641, ../../../app/assets/stylesheets/grid.scss */
+/* line 640, ../../../app/assets/stylesheets/grid.scss */
 .thumb-box {
   background-color: #fff;
   margin-top: 36px;
@@ -1108,41 +1108,41 @@ a:hover {
   min-height: 376px;
   display: block;
 }
-/* line 647, ../../../app/assets/stylesheets/grid.scss */
+/* line 646, ../../../app/assets/stylesheets/grid.scss */
 .thumb-box .borders {
   border-style: solid;
   border-width: 1px;
   min-height: 376px;
   display: block;
 }
-/* line 654, ../../../app/assets/stylesheets/grid.scss */
+/* line 653, ../../../app/assets/stylesheets/grid.scss */
 .thumb-box .content .content-top {
   height: 280px;
 }
-/* line 656, ../../../app/assets/stylesheets/grid.scss */
+/* line 655, ../../../app/assets/stylesheets/grid.scss */
 .thumb-box .text-right {
   text-align: right;
 }
-/* line 659, ../../../app/assets/stylesheets/grid.scss */
+/* line 658, ../../../app/assets/stylesheets/grid.scss */
 .thumb-box .menu-box {
   width: 400px;
   height: 51px;
 }
-/* line 662, ../../../app/assets/stylesheets/grid.scss */
+/* line 661, ../../../app/assets/stylesheets/grid.scss */
 .thumb-box .menu-box a {
   color: #fff;
 }
-/* line 663, ../../../app/assets/stylesheets/grid.scss */
+/* line 662, ../../../app/assets/stylesheets/grid.scss */
 .thumb-box .menu-box a:hover {
   color: #000;
   background-color: #fff;
 }
-/* line 665, ../../../app/assets/stylesheets/grid.scss */
+/* line 664, ../../../app/assets/stylesheets/grid.scss */
 .thumb-box .image-box {
   height: 376px;
 }
 
-/* line 670, ../../../app/assets/stylesheets/grid.scss */
+/* line 669, ../../../app/assets/stylesheets/grid.scss */
 .gallery-box {
   background-color: #fff;
   margin-top: 36px;
@@ -1154,36 +1154,36 @@ a:hover {
   min-height: 376px;
   display: block;
 }
-/* line 676, ../../../app/assets/stylesheets/grid.scss */
+/* line 675, ../../../app/assets/stylesheets/grid.scss */
 .gallery-box .borders {
   border-style: solid;
   border-width: 1px;
   min-height: 376px;
   display: block;
 }
-/* line 683, ../../../app/assets/stylesheets/grid.scss */
+/* line 682, ../../../app/assets/stylesheets/grid.scss */
 .gallery-box .content .content-top {
   height: 280px;
 }
-/* line 685, ../../../app/assets/stylesheets/grid.scss */
+/* line 684, ../../../app/assets/stylesheets/grid.scss */
 .gallery-box .text-right {
   text-align: right;
 }
-/* line 688, ../../../app/assets/stylesheets/grid.scss */
+/* line 687, ../../../app/assets/stylesheets/grid.scss */
 .gallery-box .menu-box {
   width: 400px;
   height: 51px;
 }
-/* line 691, ../../../app/assets/stylesheets/grid.scss */
+/* line 690, ../../../app/assets/stylesheets/grid.scss */
 .gallery-box .menu-box a {
   color: #fff;
 }
-/* line 692, ../../../app/assets/stylesheets/grid.scss */
+/* line 691, ../../../app/assets/stylesheets/grid.scss */
 .gallery-box .menu-box a:hover {
   color: #000;
   background-color: #fff;
 }
-/* line 694, ../../../app/assets/stylesheets/grid.scss */
+/* line 693, ../../../app/assets/stylesheets/grid.scss */
 .gallery-box .image-box {
   height: 376px;
 }
