@@ -26,14 +26,18 @@
             
   
   
-        
-  .squared-box
+     
+  .company-image-box
     .borders.fixed-height
       = image_tag @company.image.url(:preview), :border => 'none', :class => 'image_fix'
+      .tlf-box
+        'T: 
+        = @company.phone 
+        '&nbsp;|&nbsp;
+        =raw @link
       
       
-      
-br
+.clear
 = render :partial => "shared/news", :locals => { :newsposts => @newsposts }
 
 
