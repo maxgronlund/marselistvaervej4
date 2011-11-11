@@ -390,6 +390,8 @@ $ninesixty-gutter-width: 20px; // default: 20px
 
 .bottom-box{
 	clear: both;
+	height: 100%;
+	left:0;
 	@include grid(12);
 	background-color:#fff;
   margin-top:22px;
@@ -691,18 +693,18 @@ a:hover{
 
 
 
-/* full clearfix */
-  /* add to floating elements which shall clear floating after themselves */ 
-* html .clearfix {
-    height: 1%; /* IE5-6 */
-    }
-*+html .clearfix {
-	display: inline-block; /* IE7not8 */
-	}
-.clearfix:after { /* FF, IE8, O, S, etc. */
-	content: ".";
-	display: block;
-	height: 0;
-	clear: both;
-	visibility: hidden;
-}
+///* full clearfix */
+//  /* add to floating elements which shall clear floating after themselves */ 
+//* html .clearfix {
+//    height: 1%; /* IE5-6 */
+//    }
+//*+html .clearfix {
+//	display: inline-block; /* IE7not8 */
+//	}
+//.clearfix:after { /* FF, IE8, O, S, etc. */
+//	content: ".";
+//	display: block;
+//	height: 0;
+//	clear: both;
+//	visibility: hidden;
+//}
