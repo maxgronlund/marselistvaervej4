@@ -1188,3 +1188,13 @@ a:hover {
 .gallery-box .image-box {
   height: 376px;
 }
+
+/* line 694, ../../../app/assets/stylesheets/grid.scss */
+.clearfix:after {
+  /* FF, IE8, O, S, etc. */
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}

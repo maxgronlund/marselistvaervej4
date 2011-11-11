@@ -691,3 +691,10 @@ a:hover{
 
 
 
+.clearfix:after { /* FF, IE8, O, S, etc. */
+		content: ".";
+		display: block;
+		height: 0;
+		clear: both;
+		visibility: hidden;
+}
