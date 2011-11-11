@@ -1174,30 +1174,26 @@ a:hover {
   height: 376px;
 }
 
-/* line 678, ../../../app/assets/stylesheets/grid.scss */
-.clearfix:after {
-  visibility: hidden;
-  display: block;
-  font-size: 0;
-  content: " ";
-  clear: both;
-  height: 0;
+/* full clearfix */
+/* add to floating elements which shall clear floating after themselves */
+/* line 680, ../../../app/assets/stylesheets/grid.scss */
+* html .clearfix {
+  height: 1%;
+  /* IE5-6 */
+}
+
+/* line 683, ../../../app/assets/stylesheets/grid.scss */
+* + html .clearfix {
+  display: inline-block;
+  /* IE7not8 */
 }
 
 /* line 686, ../../../app/assets/stylesheets/grid.scss */
-.clearfix {
-  display: inline-block;
-}
-
-/* start commented backslash hack \*/
-/* line 688, ../../../app/assets/stylesheets/grid.scss */
-* html .clearfix {
-  height: 1%;
-}
-
-/* line 689, ../../../app/assets/stylesheets/grid.scss */
-.clearfix {
+.clearfix:after {
+  /* FF, IE8, O, S, etc. */
+  content: ".";
   display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
 }
-
-/* close commented backslash hack */
