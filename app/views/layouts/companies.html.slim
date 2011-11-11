@@ -42,11 +42,9 @@ html
               - InfoPage.all.each do |info_page|
                 '&nbsp;|&nbsp;
                 = link_to info_page.title, info_page
-
+    
         = yield
-    .clear
-    .background
-      .container_12
+      div class="container_12 two-column#{' background_grid' if RAILS_ENV == 'development' && (user_signed_in? && current_user.grid?)}"
         .grid-container
           = render :partial => "shared/news", :locals => { :newsposts => @newsposts }
         
