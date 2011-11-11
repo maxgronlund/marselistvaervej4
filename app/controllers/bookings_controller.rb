@@ -20,7 +20,7 @@ class BookingsController < InheritedResources::Base
   
   def new
     @booking = Booking.new
-    @booking.created_at = params[:date].present?? params[:date].to_date : Date.today
+    @booking.booking_date = params[:date].present?? params[:date].to_date : Date.today
     @booking.starttime = Time.now
     @booking.endtime = @booking.starttime + 1.hour
     new!
@@ -30,21 +30,21 @@ class BookingsController < InheritedResources::Base
     session[:go_to_after_edit] = nil
     @meetingroom = Meetingroom.find(params[:booking][:meetingroom_id])#Meetingroom.first
     @booking.meetingroom = @meetingroom
-    create! { new_meetingroom_booking_path(@meetingroom, :date => @booking.created_at)}
+    create! { new_meetingroom_booking_path(@meetingroom, :date => @booking.booking_date)}
   end
   
   def update
     session[:go_to_after_edit] = nil
     @meetingroom = Meetingroom.find(params[:booking][:meetingroom_id])#Meetingroom.first
     @booking.meetingroom = @meetingroom
-    update! { new_meetingroom_booking_path(@meetingroom, :date => @booking.created_at)}
+    update! { new_meetingroom_booking_path(@meetingroom, :date => @booking.booking_date)}
   end
   
 
   
 private  
   def sort_column  
-    Page.column_names.include?(params[:sort]) ? params[:sort] : "created_at"  
+    Page.column_names.include?(params[:sort]) ? params[:sort] : "booking_date"  
   end 
 
   def sort_direction  

@@ -7,7 +7,7 @@
       .content
         h3 
           'Resevation d.
-          = l @booking.created_at, :format => :date_month_and_year
+          = l @booking.booking_date, :format => :date_month_and_year
         p
           = l @booking.starttime, :format => :bookingtime
           '&nbsp; - &nbsp;

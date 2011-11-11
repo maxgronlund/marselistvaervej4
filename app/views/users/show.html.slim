@@ -30,7 +30,7 @@
         -@bookings.each do |booking| 
           
           .booking-col-1
-            = l booking.created_at, :format => :date_month_and_year
+            = l booking.booking_date, :format => :date_month_and_year
             '&nbsp; kl.
             = l booking.starttime, :format => :bookingtime
           .booking-col-2

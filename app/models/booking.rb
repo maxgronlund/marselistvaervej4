@@ -3,7 +3,7 @@ class Booking < ActiveRecord::Base
   belongs_to :meetingroom
 
   scope :for_day, lambda { |date|
-    where "created_at BETWEEN ? AND ?",
+    where "booking_date BETWEEN ? AND ?",
       date.beginning_of_day, date.end_of_day
   }
   scope :overlapping, lambda { |starttime, endtime|
@@ -23,13 +23,13 @@ class Booking < ActiveRecord::Base
 
   def bookings_cannot_overlap
     errors.add(:meetingroom, "er allerede booket for det tidsrum") if
-      !meetingroom.available? created_at, starttime, endtime, self
+      !meetingroom.available? booking_date, starttime, endtime, self
   end
 
 
   # Calendar requires this
-  scope :before, lambda {|end_time| {:conditions => ["created_at < ?", Booking.format_date(end_time.end_of_day)] }}
-  scope :after, lambda {|start_time| {:conditions => ["created_at > ?", Booking.format_date(start_time - 1.day)] }} # !!! WTF - beginning_of_day doesn't work properly!?
+  scope :before, lambda {|end_time| {:conditions => ["booking_date < ?", Booking.format_date(end_time.end_of_day)] }}
+  scope :after, lambda {|start_time| {:conditions => ["booking_date > ?", Booking.format_date(start_time - 1.day)] }} # !!! WTF - beginning_of_day doesn't work properly!?
   
   # need to override the json view to return what full_calendar is expecting.
   # http://arshaw.com/fullcalendar/docs/event_data/Event_Object/
@@ -38,8 +38,8 @@ class Booking < ActiveRecord::Base
       :id => self.id,
       :title => self.bookers_name,
       :description => self.custom_message || "",
-      :start => (created_at.beginning_of_day + starttime.hour.hours + starttime.min.minutes).rfc822,
-      :end => (created_at.beginning_of_day + endtime.hour.hours + endtime.min.minutes).rfc822,
+      :start => (booking_date.beginning_of_day + starttime.hour.hours + starttime.min.minutes).rfc822,
+      :end => (booking_date.beginning_of_day + endtime.hour.hours + endtime.min.minutes).rfc822,
       :allDay => false,
       :recurring => false,
       :color => meetingroom.color,

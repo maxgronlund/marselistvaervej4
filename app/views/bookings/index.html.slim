@@ -5,7 +5,7 @@
   b
     .sort-list-header
       .grid-3
-        = sortable 'created_at', 'Tidspunkt'
+        = sortable 'booking_date', 'Tidspunkt'
       .grid-2
         = sortable 'meetingroom_id','Mødelokale'
       .grid-2
@@ -25,7 +25,7 @@
   -@bookings.each do |booking| 
     div class="grid_12 alpha omega #{cycle('color_light_gray', 'color_gray')}"
       .grid-3
-	    = l booking.created_at, :format => :date_month_and_year
+	    = l booking.booking_date, :format => :date_month_and_year
 	    | - kl.
 	    = l booking.starttime, :format => :bookingtime
 	    |  til 
