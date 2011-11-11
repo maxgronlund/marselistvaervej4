@@ -36,7 +36,9 @@
         = @company.phone 
         '&nbsp;|&nbsp;
         =raw @link
-     
+.grid-container
+  .grid-12
+    .clear     
 = render :partial => "shared/news", :locals => { :newsposts => @newsposts }
 
 
