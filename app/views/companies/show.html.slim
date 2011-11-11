@@ -29,7 +29,7 @@
   
         
   .company-image-box
-    .borders.fixed-height
+    .borders.fixed-height.clearfix
       = image_tag @company.image.url(:preview), :border => 'none', :class => 'image_fix'
       .tlf-box
         'T: 

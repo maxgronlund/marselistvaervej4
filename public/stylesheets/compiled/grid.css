@@ -1173,3 +1173,31 @@ a:hover {
 .gallery-box .image-box {
   height: 376px;
 }
+
+/* line 678, ../../../app/assets/stylesheets/grid.scss */
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+
+/* line 686, ../../../app/assets/stylesheets/grid.scss */
+.clearfix {
+  display: inline-block;
+}
+
+/* start commented backslash hack \*/
+/* line 688, ../../../app/assets/stylesheets/grid.scss */
+* html .clearfix {
+  height: 1%;
+}
+
+/* line 689, ../../../app/assets/stylesheets/grid.scss */
+.clearfix {
+  display: block;
+}
+
+/* close commented backslash hack */
