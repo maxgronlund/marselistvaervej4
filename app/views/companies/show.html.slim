@@ -28,7 +28,7 @@
   
   
         
-  .company-image-box
+  .company-image-box.clearfix
     .borders.fixed-height
       = image_tag @company.image.url(:preview), :border => 'none', :class => 'image_fix'
       .tlf-box
@@ -36,8 +36,7 @@
         = @company.phone 
         '&nbsp;|&nbsp;
         =raw @link
-      
-.clearfix      
+     
 = render :partial => "shared/news", :locals => { :newsposts => @newsposts }
 
 

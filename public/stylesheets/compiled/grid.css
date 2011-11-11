@@ -1189,7 +1189,21 @@ a:hover {
   height: 376px;
 }
 
-/* line 694, ../../../app/assets/stylesheets/grid.scss */
+/* full clearfix */
+/* add to floating elements which shall clear floating after themselves */
+/* line 696, ../../../app/assets/stylesheets/grid.scss */
+* html .clearfix {
+  height: 1%;
+  /* IE5-6 */
+}
+
+/* line 699, ../../../app/assets/stylesheets/grid.scss */
+* + html .clearfix {
+  display: inline-block;
+  /* IE7not8 */
+}
+
+/* line 702, ../../../app/assets/stylesheets/grid.scss */
 .clearfix:after {
   /* FF, IE8, O, S, etc. */
   content: ".";
