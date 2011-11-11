@@ -389,9 +389,10 @@ $ninesixty-gutter-width: 20px; // default: 20px
 }
 
 .bottom-box{
-	clear: both;
+/*	clear: both;
 	height: 100%;
 	left:0;
+*/
 	@include grid(12);
 	background-color:#fff;
   margin-top:22px;
