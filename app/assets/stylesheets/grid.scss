@@ -321,29 +321,7 @@ $ninesixty-gutter-width: 20px; // default: 20px
 	.image-box{
 		height:376px;
 	}
-	.tlf-box{
-		text-align:right;
-	//	opacity:0.2;
 	
-		background-color:#ddd;
-		border-style:solid;
-		border-width:1px;
-		margin-bottom:8px;
-		display:inline;
-		position:absolute;
-		left:100px;
-		top:100px;
-		height:60px;
-		width:300px;
-		
-		
-		.tlf-content{
-			text-align:left;
-		}
-		.web-content{
-			text-align:right;
-		}
-	}
 }
 
 .company-image-box{
@@ -378,7 +356,6 @@ $ninesixty-gutter-width: 20px; // default: 20px
 			color:#000;
 			text-transform: uppercase;
 		}
-
 	}
 }
 
@@ -389,10 +366,13 @@ $ninesixty-gutter-width: 20px; // default: 20px
 }
 
 .bottom-box{
-/*	clear: both;
+	clear: both;
 	height: 100%;
 	left:0;
-*/
+	zoom: 1;
+	writing-mode: tb-rl;
+	
+
 	@include grid(12);
 	background-color:#fff;
   margin-top:22px;

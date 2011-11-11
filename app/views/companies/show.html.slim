@@ -37,34 +37,12 @@
         '&nbsp;|&nbsp;
         =raw @link
      
-/= render :partial => "shared/news", :locals => { :newsposts => @newsposts }
+= render :partial => "shared/news", :locals => { :newsposts => @newsposts }
 
-.bottom-box
-  .borders
+
     
     
-    
-    
-    
-    - @newsposts.each do |newspost|
-      .news
-        .content
-          .header
-            h1
-              = link_to newspost.title, newspost
-            .gray
-              = l newspost.created_at, :format => :date_month_and_year
-          =raw excerpt(newspost.body, '', :radius => 160)
-          br /
-          - if newspost.body != nil && newspost.body.length > 160
-            = link_to 'læs mere', newspost_path(newspost)
-  
-          - if can?(:edit, newspost)
-            - if newspost.body != nil
-              - if newspost.body.length > 160
-                |  | 
-              = link_to 'rediger', edit_newspost_path(newspost)
-= will_paginate @newsposts
+
 
 
 
