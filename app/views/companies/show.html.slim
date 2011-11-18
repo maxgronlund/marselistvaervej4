@@ -29,7 +29,7 @@
   
         
   .company-image-box
-    .borders.fixed-height.clearfix
+    .borders.fixed-height
       .company
         = image_tag @company.image.url(:preview), :border => 'none', :class => 'image_fix'
       .info-box
@@ -37,9 +37,8 @@
         = @company.phone 
         '&nbsp;|&nbsp;
         =raw @link
-.grid-container
-  .grid-12
-    .clear     
+    
+
 = render :partial => "shared/news", :locals => { :newsposts => @newsposts }
 
 
