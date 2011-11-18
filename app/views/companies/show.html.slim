@@ -35,7 +35,10 @@
       .info
         = @company.phone 
         '&nbsp;|&nbsp;
-        = @link
+        = link_to @company.homepage, 'http://'+@company.homepage
+
+        
+        /= @link
       
 .grid-container
 

@@ -44,7 +44,7 @@ class CompaniesController < InheritedResources::Base
   end
   
   def show
-    @link = '<a href="http://'+@company.homepage+'">'+@company.homepage+'<a/>'
+    #@link = '<a href="http://'+@company.homepage+'">'+@company.homepage+'<a/>'
     if user_signed_in?
       @newsposts = Newspost.internal.order('created_at desc').paginate(:per_page => 3, :page => params[:page])
     end
