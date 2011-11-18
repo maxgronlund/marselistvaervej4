@@ -1,44 +1,40 @@
-.grid-container
-  
-  .squared-box
-    .borders
-      .menu-box
-        = render :partial => "shared/menu"
-      .content
-        h1
-          = @company.title
-        - if @company.body.length > 800
-          =raw excerpt(@company.body, '', :radius => 800)
+.squared-box
+  .borders
+    .menu-box
+      = render :partial => "shared/menu"
+    .content
+      h1
+        = @company.title
+      - if @company.body.length > 800
+        =raw excerpt(@company.body, '', :radius => 800)
+        '&nbsp;
+        = link_to 'læs mere', show_all_company_path(@company)
+      - else
+        =raw @company.body
+          
+      - if can?(:edit, @company)
+        .edit
+          = link_to 'Send E-Mail til alle i firma', "mailto:#{@company.users.map(&:email).join(', ')}", :class =>'button'
           '&nbsp;
-          = link_to 'læs mere', show_all_company_path(@company)
-        - else
-          =raw @company.body
-            
-        - if can?(:edit, @company)
-          .edit
-            = link_to 'Send E-Mail til alle i firma', "mailto:#{@company.users.map(&:email).join(', ')}", :class =>'button'
-            '&nbsp;
-            = link_to t('admin.edit'), edit_company_path(@company), :class =>'button'
-            '&nbsp;   
-            = link_to t('admin.delete'), @company, :confirm => t('admin.are_you_sure'), :method => :delete, :class =>'button'
-            '&nbsp;  
-            = link_to 'tilføj logo', new_company_company_thumb_path(@company), :class =>'button'
+          = link_to t('admin.edit'), edit_company_path(@company), :class =>'button'
+          '&nbsp;   
+          = link_to t('admin.delete'), @company, :confirm => t('admin.are_you_sure'), :method => :delete, :class =>'button'
+          '&nbsp;  
+          = link_to 'tilføj logo', new_company_company_thumb_path(@company), :class =>'button'
+
+          
+
+
+      
+.company-image-box
+  .borders.fixed-height.clearfix
+    = image_tag @company.image.url(:preview), :border => 'none', :class => 'image_fix'
+    .tlf-box.clearfix
+      'T: 
+      = @company.phone 
+      '&nbsp;|&nbsp;
+      = link_to @company.homepage, 'http://'+@company.homepage
   
-            
-  
-  
-        
-  .company-image-box
-    .borders.fixed-height.clearfix
-      = image_tag @company.image.url(:preview), :border => 'none', :class => 'image_fix'
-      .tlf-box.clearfix
-        'T: 
-        = @company.phone 
-        '&nbsp;|&nbsp;
-        = link_to @company.homepage, 'http://'+@company.homepage
-.grid-container
-  .grid-12
-    .clear     
 = render :partial => "shared/news", :locals => { :newsposts => @newsposts }
 
 
