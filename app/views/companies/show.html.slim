@@ -33,7 +33,9 @@
       .company-height
         = image_tag @company.image.url(:preview), :border => 'none', :class => 'image_fix'
       .info
-        'lasjkdf
+        = @company.phone 
+        '&nbsp;|&nbsp;
+        =raw @link
       
 .grid-container
 
