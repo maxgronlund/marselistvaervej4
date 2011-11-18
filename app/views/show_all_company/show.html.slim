@@ -25,13 +25,17 @@
 
           
 
+
+      
 .company-image-box
-  .borders.fixed-height.clearfix
-    = image_tag @company.image.url(:preview), :border => 'none', :class => 'image_fix'
-    .tlf-box.clearfix
-      'T: 
+  .borders
+    .company-height
+      = image_tag @company.image.url(:preview), :border => 'none', :class => 'image_fix'
+    .info
       = @company.phone 
       '&nbsp;|&nbsp;
       = link_to @company.homepage, 'http://'+@company.homepage
-
+    
+      
+br
 = render :partial => "shared/news", :locals => { :newsposts => @newsposts }
