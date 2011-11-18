@@ -682,7 +682,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   text-align: right;
 }
 /* line 337, ../../../app/assets/stylesheets/grid.scss */
-.company-image-box .borders {
+.company-image-box .com-borders {
   border-style: solid;
   border-width: 1px;
   height: 336px;
