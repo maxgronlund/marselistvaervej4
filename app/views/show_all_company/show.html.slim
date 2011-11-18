@@ -3,16 +3,9 @@
     .menu-box
       = render :partial => "shared/menu"
     .content
-      h1
-        = @company.title
-      
+      h1 = @company.title
       =raw @company.body
           
-      .edit
-        'T: 
-        = @company.phone 
-        br
-        =raw @link
       - if can?(:edit, @company)
         .edit
           = link_to 'Send E-Mail til alle i firma', "mailto:#{@company.users.map(&:email).join(', ')}", :class =>'button'
@@ -22,20 +15,27 @@
           = link_to t('admin.delete'), @company, :confirm => t('admin.are_you_sure'), :method => :delete, :class =>'button'
           '&nbsp;  
           = link_to 'tilføj logo', new_company_company_thumb_path(@company), :class =>'button'
-
-          
-
-
-      
+  
 .company-image-box
-  .borders
-    .company-height
-      = image_tag @company.image.url(:preview), :border => 'none', :class => 'image_fix'
-    .info
+  .borders.fixed-height.clearfix
+    = image_tag @company.image.url(:preview), :border => 'none', :class => 'image_fix'
+    .tlf-box.clearfix
+      'T: 
       = @company.phone 
       '&nbsp;|&nbsp;
       = link_to @company.homepage, 'http://'+@company.homepage
-    
-      
-br
+  
 = render :partial => "shared/news", :locals => { :newsposts => @newsposts }
+
+
+    
+    
+
+
+
+
+
+
+
+
+
