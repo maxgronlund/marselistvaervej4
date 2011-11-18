@@ -386,9 +386,6 @@ $ninesixty-gutter-width: 20px; // default: 20px
 	clear: both;
 	height: 100%;
 	left:0;
-
-	
-
 	@include grid(12);
 	background-color:#fff;
   margin-top:22px;
@@ -397,15 +394,15 @@ $ninesixty-gutter-width: 20px; // default: 20px
 	width:940px;
 	display:block;
 	float:left;
-	position:relative;
-	clear: both;
+/*	position:relative;
+	clear: both;*/
 
 	.borders{
 		border-style:solid;
 		border-width:1px;
 		height:184px;
-		position:relative;
-		clear: both;
+/*		position:relative;
+		clear: both;*/
 
 	}
 	.left-side{
@@ -414,8 +411,8 @@ $ninesixty-gutter-width: 20px; // default: 20px
 		@include grid(3);
 		@include alpha;
 		width:168px;
-		position:relative;
-		clear: both;
+/*		position:relative;
+		clear: both;*/
 		.menu-box{
 			width:154px;
 			height:51px;
