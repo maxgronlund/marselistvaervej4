@@ -669,7 +669,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 
 /* line 328, ../../../app/assets/stylesheets/grid.scss */
 .company-image-box {
-  position: relative;
+  /*	position:relative;*/
   background-color: #fff;
   margin-top: 36px;
   display: inline;
@@ -716,8 +716,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 .company-image-box .info-box {
   min-height: 40px;
   min-width: 40px;
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
-  opacity: 0.8;
+  /*		@include opacity(0.8);*/
   background-color: #ddd;
   text-align: right;
   padding: 8px;

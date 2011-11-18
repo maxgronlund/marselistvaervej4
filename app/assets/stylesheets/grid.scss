@@ -327,7 +327,7 @@ $ninesixty-gutter-width: 20px; // default: 20px
 
 .company-image-box{
 	
-	position:relative;
+/*	position:relative;*/
 	background-color:#fff;
   margin-top:36px;
 	@include grid(6);
@@ -352,7 +352,7 @@ $ninesixty-gutter-width: 20px; // default: 20px
 		
 		min-height:40px;
 		min-width:40px;
-		@include opacity(0.8);
+/*		@include opacity(0.8);*/
 		background-color:#ddd;
 		text-align:right;
 		padding:8px;
