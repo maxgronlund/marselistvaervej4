@@ -67,11 +67,13 @@ Hurtigere vej til kalenderoversigt, så man ikke kun kan se de reserverede møde
 
 upload billeder med crop på ie8
 
-
- -@photos.all.each do |photo|
-      '&nbsp;
-      = link_to image_tag(photo.image.url(:micro)), gallery_index_path
-
+.borders.fixed-height.clearfix
+  = image_tag @company.image.url(:preview), :border => 'none', :class => 'image_fix'
+  .tlf-box.clearfix
+    'T: 
+    = @company.phone 
+    '&nbsp;|&nbsp;
+    =raw @link
 
 
 
