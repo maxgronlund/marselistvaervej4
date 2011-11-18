@@ -30,6 +30,8 @@
         
   .company-image-box
     .borders.fixed-height
+      .company
+        = image_tag @company.image.url(:preview), :border => 'none', :class => 'image_fix'
       
     
 
