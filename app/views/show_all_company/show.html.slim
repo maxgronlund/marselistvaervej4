@@ -27,9 +27,14 @@
 
 
       
-.squared-box
-  .borders.fixed-height
-    = image_tag @company.image.url(:preview), :border => 'none', :class => 'image_fix'
+.company-image-box
+  .borders
+    .company-height
+      = image_tag @company.image.url(:preview), :border => 'none', :class => 'image_fix'
+    .info
+      = @company.phone 
+      '&nbsp;|&nbsp;
+      = link_to @company.homepage, 'http://'+@company.homepage
     
       
 br
