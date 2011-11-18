@@ -334,21 +334,8 @@ $ninesixty-gutter-width: 20px; // default: 20px
 	display:block;
 	overflow:hidden;
 	text-align:right;
-	.com-borders{
-		border-style:solid;
-		border-width:1px;
-		height:336px;
-		display:block;
-	/*	overflow:hidden;*/
-	}
-	.info{
-		border-style:solid;
-		border-width:1px;
-		height:38px;
-		display:block;
-		overflow:hidden;
-		@include opacity(0.8);
-		background-color:#ddd;
+  .info{
+	  padding:11px;
 	}
 
 	.tlf-box{
@@ -372,6 +359,12 @@ $ninesixty-gutter-width: 20px; // default: 20px
 
 .fixed-height{
 	height:376px;
+}
+
+.company-height{
+	height:336px;	
+	overflow:hidden;
+	display:block;
 }
 
 .bottom-box{
