@@ -347,6 +347,8 @@ $ninesixty-gutter-width: 20px; // default: 20px
 		height:38px;
 		display:block;
 		overflow:hidden;
+		@include opacity(0.8);
+		background-color:#ddd;
 	}
 
 	.tlf-box{
