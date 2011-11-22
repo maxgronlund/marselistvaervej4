@@ -34,7 +34,7 @@ html
             
               = link_to 'min konto', current_user
               |  |  
-              = link_to 'admin', admin_path
+              = link_to 'admin', admin_path if(can_edit?)
               |  |  
               = link_to 'booking' , new_meetingroom_booking_path(Meetingroom.first)
               |  |  

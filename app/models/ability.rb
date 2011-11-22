@@ -23,7 +23,7 @@ class Ability
         can :read, Blog
         can :create, Blog
         can :create, Booking
-        can :manage, Booking
+        can :manage, Booking, :user_id => user.id
         can :manage, Blog, :user_id => user.id
         can :create, Comment
         can :manage, Comment, :user_id => user.id  
