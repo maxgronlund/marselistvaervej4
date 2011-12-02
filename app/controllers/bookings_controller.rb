@@ -30,6 +30,7 @@ class BookingsController < InheritedResources::Base
     session[:go_to_after_edit] = nil
     @meetingroom = Meetingroom.find(params[:booking][:meetingroom_id])#Meetingroom.first
     @booking.meetingroom = @meetingroom
+    @booking.user_id = current_user.id
     create! { new_meetingroom_booking_path(@meetingroom, :date => @booking.booking_date)}
   end
   
