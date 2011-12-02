@@ -1,8 +1,8 @@
 class BookingsController < InheritedResources::Base
-#  load_and_authorize_resource
+  load_and_authorize_resource
   belongs_to :meetingroom , :optional => true
   before_filter :get_internal_news
-    helper_method :sort_column, :sort_direction 
+  helper_method :sort_column, :sort_direction 
   
   def index
     @bookings = Booking.scoped
