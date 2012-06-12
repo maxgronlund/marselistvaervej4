@@ -1,0 +1,3 @@
+date jumps to 200
+; , instead off in mails send use ';'
+when create a news date dont gets updated

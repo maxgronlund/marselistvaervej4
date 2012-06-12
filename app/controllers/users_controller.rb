@@ -11,7 +11,7 @@ class UsersController < InheritedResources::Base
     #   @products = Product.order(params[:sort])  
     # end
     
-    @users = User.order(sort_column + " " + sort_direction).paginate(:per_page => 30, :page => params[:page])
+    @users = User.order(sort_column + " " + sort_direction).paginate(:per_page => 40, :page => params[:page])
   end
   
 
