@@ -104,3 +104,47 @@ Rendered shared/_google.html.erb (0.2ms)
   [1m[35mCACHE (0.0ms)[0m  SELECT `info_pages`.* FROM `info_pages`
 Rendered users/index.html.slim within layouts/application (136.4ms)
 Completed 200 OK in 215ms (Views: 148.7ms | ActiveRecord: 3.5ms | Sphinx: 0.0ms)
+DEPRECATION WARNING: Use toplevel init.rb; rails/init.rb is deprecated: /Users/synthmax/Dropbox/marselistvaervej4/vendor/plugins/paperclip/rails/init.rb. (called from <top (required)> at /Users/synthmax/Dropbox/marselistvaervej4/config/environment.rb:5)
+
+
+Started GET "/dk/users" for 127.0.0.1 at 2012-06-12 23:13:25 +0200
+  Processing by UsersController#index as HTML
+  Parameters: {"locale"=>"dk"}
+  [1m[36mInfoPage Load (0.4ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages`[0m
+  [1m[35mSQL (0.6ms)[0m  SHOW TABLES
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mNewspost Load (0.3ms)[0m  SELECT `newsposts`.* FROM `newsposts` WHERE `newsposts`.`internal_letter` = 1 ORDER BY created_at desc LIMIT 3 OFFSET 0
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` ORDER BY name asc LIMIT 40 OFFSET 0[0m
+  [1m[35mCompany Load (0.7ms)[0m  SELECT `companies`.* FROM `companies` WHERE `companies`.`id` = 1 LIMIT 1
+  [1m[36mCompany Load (0.2ms)[0m  [1mSELECT `companies`.* FROM `companies` WHERE `companies`.`id` = 2 LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users`
+Rendered shared/_google.html.erb (0.3ms)
+DEPRECATION WARNING: RAILS_ENV is deprecated. Please use ::Rails.env. (called from _app_views_layouts_application_html_slim___2782961559287436675_70219866831520__4300676553170561282 at /Users/synthmax/Dropbox/marselistvaervej4/app/views/layouts/application.html.slim:25)
+  [1m[36mMeetingroom Load (0.3ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `info_pages`.* FROM `info_pages`
+Rendered users/index.html.slim within layouts/application (133.8ms)
+Completed 200 OK in 201ms (Views: 139.3ms | ActiveRecord: 3.3ms | Sphinx: 0.0ms)
+
+
+Started GET "/assets/avant_garde_gothic.swf?0.1324448361992836" for 127.0.0.1 at 2012-06-12 23:19:11 +0200
+
+ActionController::RoutingError (No route matches "/assets/avant_garde_gothic.swf"):
+  
+
+Rendered /Users/synthmax/.rvm/gems/ruby-1.9.2-p290@bootstrap/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/assets/avant_garde_gothic.swf?0.9550010007806122" for 127.0.0.1 at 2012-06-12 23:19:24 +0200
+
+ActionController::RoutingError (No route matches "/assets/avant_garde_gothic.swf"):
+  
+
+Rendered /Users/synthmax/.rvm/gems/ruby-1.9.2-p290@bootstrap/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/assets/avant_garde_gothic.swf?0.32333536073565483" for 127.0.0.1 at 2012-06-12 23:19:28 +0200
+
+ActionController::RoutingError (No route matches "/assets/avant_garde_gothic.swf"):
+  
+
+Rendered /Users/synthmax/.rvm/gems/ruby-1.9.2-p290@bootstrap/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
