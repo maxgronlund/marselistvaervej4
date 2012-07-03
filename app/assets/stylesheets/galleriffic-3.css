@@ -1,7 +1,7 @@
 
 div.gallery_content {
 	/* The display of content is enabled using jQuery so that the slideshow content won't display unless javascript is enabled. */
-	display: none;*/
+	display: none;
 	float: right;
 	width: 540px; 
 }

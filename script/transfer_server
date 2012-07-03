@@ -1,0 +1,11 @@
+#!/bin/sh
+
+rm -rf /tmp/mt4
+mkdir /tmp/mt4
+rsync -a koblo:/var/www/marselistvaervej4/shared/system/images /tmp/mt4
+rsync -a /tmp/mt4/images synthmax:/var/www/marselistvaervej4/shared/system/
+
+ssh koblo "mysqldump -u root marselistvaervej4 | bzip2 -9" | pv > /tmp/mt4/dump.sql.bz2
+
+scp /tmp/mt4/dump.sql.bz2 synthmax:/tmp
+ssh synthmax "bzcat /tmp/dump.sql.bz2 | mysql -u root marselistvaervej4"
