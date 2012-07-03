@@ -63,3 +63,5 @@ task :tail do
     break if stream == :err
   end
 end
+
+load 'deploy/assets'
