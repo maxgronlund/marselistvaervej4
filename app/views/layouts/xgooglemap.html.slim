@@ -8,7 +8,7 @@ html
   	= stylesheet_link_tag 'compiled/grid.css', 'compiled/text.css', 'compiled/main.css', :media => 'screen, projection'
     = javascript_include_tag 'jquery.tools.min.js', 'rails', 'application'
     = csrf_meta_tag
-    = include_tiny_mce_if_needed
+    /= include_tiny_mce_if_needed
     javascript:
       var session_key      = '#{cookies[Rails.application.config.session_options[:key]]}';
       var session_key_name = '#{Rails.application.config.session_options[:key]}';

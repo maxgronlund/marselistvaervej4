@@ -1,5 +1,5 @@
 .single-column
-  h1= t('user.users') + '2'
+  h1= t('user.users')
 
 
   b
@@ -18,26 +18,26 @@
   hr/
 
   - @users.each do |user|
-    div class="grid_10 prefix_1 suffix_1"
-      div class="grid_10 alpha omega #{cycle('color_light_gray', 'color_gray')}"
-  
-        .grid-3.alpha.top_margin_6
-          = link_to user.name, user_path(user)
-        .grid-3.top_margin_6
-          = user.email
-        .grid-3.top_margin_6
-          = user.company.title if user.company.present?
-        .grid-1.top_margin_6
-          = user.role
-          br/
-        .grid-2.omega.top_margin_6.text_right
-          - if can_edit?
-            = link_to t('admin.edit'), edit_user_path(user)
-            - unless user.super?
-              |  |
-              = link_to t('admin.delete'), user_path(user), :confirm => t('admin.are_you_sure'), :method => :delete
-        hr/
-
+    /div class="grid_12 prefix_1 suffix_1"
+    div class="grid_12 alpha omega #{cycle('color_light_gray', 'color_gray')}"
+    
+      .grid-3.alpha.top_margin_6
+        = link_to user.name, user_path(user)
+      .grid-3.top_margin_6
+        = user.email
+      .grid-3.top_margin_6
+        = user.company.title if user.company.present?
+      .grid-1.top_margin_6
+        = user.role
+        br/
+      .grid-2.omega.top_margin_6.text_right
+        - if can_edit?
+          = link_to t('admin.edit'), edit_user_path(user)
+          - unless user.super?
+            |  |
+            = link_to t('admin.delete'), user_path(user), :confirm => t('admin.are_you_sure'), :method => :delete
+      hr/
+    
 
   = will_paginate @users
 

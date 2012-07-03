@@ -1,7 +1,7 @@
 # encoding: utf-8
 class PagesController < InheritedResources::Base
   load_and_authorize_resource
-  uses_tiny_mce :only => [:new, :create, :edit, :update]
+  #uses_tiny_mce :only => [:new, :create, :edit, :update]
   
   helper_method :sort_column, :sort_direction
   

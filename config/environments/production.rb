@@ -1,5 +1,18 @@
 Rails_template::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb
+  
+  
+  # Compress JavaScript and CSS
+  config.assets.compress = true
+
+  # Don't fallback to assets pipeline
+  config.assets.compile = false
+
+  # Generate digests for assets URLs
+  config.assets.digest = true
+  
+  
+  
 
   # The production environment is meant for finished, "live" apps.
   # Code is not reloaded between requests

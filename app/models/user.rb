@@ -6,7 +6,7 @@ class User < ActiveRecord::Base
   #!!! if registerable is enabled all can signup and admin can't create accounts
   #!!! when registeerable is enabled links to signup has to be enabled
   
-  devise :database_authenticatable, #:registerable,
+  devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
   # Setup accessible (or protected) attributes for your model
@@ -22,7 +22,9 @@ class User < ActiveRecord::Base
   
   has_attached_file :image, 
                     :styles => { :small => "120x130#", :large => "480x520>"}, 
-                    :processors => [:cropper]
+                    :processors => [:cropper],
+                    :path => ":rails_root/public/system/:attachment/:id/:style/:filename",
+                    :url => "/system/:attachment/:id/:style/:filename"
                     
   
   after_update :reprocess_image, :if => :cropping?

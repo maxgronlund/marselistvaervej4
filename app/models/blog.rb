@@ -9,18 +9,13 @@ class Blog < ActiveRecord::Base
 
   scope :language, lambda { where(:language => I18n.locale.to_s) }
 
-  define_index do
-    indexes :title
-    indexes :body
-    indexes :language
-  end
-
 #  define_index do
 #    indexes :title
 #    indexes :body
 #    indexes :language
-#   # indexes :comments.body :as => :comment_content
 #  end
+
+
 
   
 

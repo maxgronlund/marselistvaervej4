@@ -7,7 +7,10 @@ class Photo < ActiveRecord::Base
   has_attached_file :image, 
                     :styles => {  :micro => "60x45>",:mini => "100x75>", :fullSize => "540x405>" }, 
                     :processors => [:cropper],
-                    :default_url => "/images/fallback/default_avatar_:style.jpg"
+                    :default_url => "/images/fallback/default_avatar_:style.jpg",
+                    :path => ":rails_root/public/system/:attachment/:id/:style/:filename",
+                    :url => "/system/:attachment/:id/:style/:filename"
+                    
                     
   validates_attachment_size :image, :less_than => 3.megabytes
   #validates_attachment_content_type :image, :content_type => ['image/jpeg','image/jpg','image/png','image/gif']

@@ -43,9 +43,10 @@
           'Kontroller reservations tidspunktet, antallet af deltagere og om mødelokalet allerede er booket
       br
     | -Fra kl.
-    = f.time_select :starttime
+    /{:minute_step => 15}
+    = f.time_select :starttime, :minute_step => 15
     |  - Til kl.
-    = f.time_select :endtime
+    = f.time_select :endtime, :minute_step => 15
     .grid-5.alpha.omega.top-margin
 	br
 	'Deltagere: 

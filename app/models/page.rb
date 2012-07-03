@@ -40,11 +40,11 @@ class Page < ActiveRecord::Base
     with_identity('week_plan')
   end
   
-  define_index do
-    indexes :title
-    indexes :body
-    indexes :language
-  end
+#  define_index do
+#    indexes :title
+#    indexes :body
+#    indexes :language
+#  end
   
   
 end

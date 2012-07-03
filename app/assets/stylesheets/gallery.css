@@ -1,0 +1,121 @@
+@charset "UTF-8";
+
+.mstv{
+	margin-top:0px;
+
+	/* CSS Document                  */
+	/* Written by Chris Converse     */
+	/* for Lynda.com                 */
+	
+	/*
+	body { background-color: #fff; font-family: Arial; color: #555; font-size: 11px; }
+	
+	h1 { margin: 0px; color: #fff; font-size: 18px; letter-spacing: 2px; font-weight: normal; }
+	h2 { margin: 0px; color: #555; font-size: 16px; letter-spacing: 19px; font-weight: normal; text-transform: uppercase; }
+	
+	p { margin: 0px 0px 15px 0px;  }
+	*/
+	a img { border: 1px solid #aaa; }
+	/*
+	a { color: #fff; }
+	a:hover { color: #bbb; }
+	*/
+	a.contactLink { font-size: .8em; background: url(../images/template/link_email.png) no-repeat 0px right; padding: 0px 30px 0px 0px; text-transform: uppercase; text-decoration: none }
+	a.zoom { font-size: .8em; background: url(../images/template/link_zoom.png) no-repeat 0px 0px; padding: 0px 0px 5px 20px; text-transform: uppercase; text-decoration: none }
+	
+	.clear_both { clear: both; line-height: 1px; }
+	
+	.gallery_data { padding: 40px; display: none; }
+	.gallery_preload_area { display: none; }
+	
+	.gallery_container { width: 1008px; margin: 0px auto 0px auto; }
+	
+	/*
+	.gallery_credit { margin: 0px 0px 10px 15px; float: left; width: 425px; }
+	.gallery_type { margin: 0px 0px 10px 0px; float: left; width: 500px; text-align: right; padding: 4px 0px 0px 0px; }
+	*/
+	.gallery_top {
+		margin: 0px;
+		padding: 0px;
+		height: 8px;
+	/*	background: url(../images/template/page_top.jpg) no-repeat 0px 0px; */
+	}
+	.gallery_content {
+	/*	margin: 0px;
+		padding: 0px 0px 1px 0px;*/
+	/*	background: url(../images/template/page_tile.jpg) repeat-y 0px 0px; */
+	}
+	.gallery_bottom {
+		margin: 0px;
+		padding: 0px;
+		height: 8px;
+	/*	background: url(../images/template/page_bottom.jpg) no-repeat 0px 0px; */
+	}
+	
+	
+	.gallery_preview { width: 500px; height: 357px; float: left; margin-left: 0px; }
+	.gallery_preview a { display: block; width: 500px; height: 357px; border: 1px solid #555; }
+	.gallery_preview a:hover { border-color: #000; }
+	
+	/*.gallery_contact { width: 477px; height: 60px; margin-left: 40px; padding-right: 23px; float: left; text-align: right; }*/
+	.gallery_caption { 
+		font-size: 1.75em;
+		width: 375px; 
+		float: left; 
+	}
+	
+	.gallery_preview_text{
+		
+		width: 500px;
+		height: 357px;
+		margin-right:8px;
+		margin-left:516px;
+		
+	}
+	
+	.gallery_thumbnails { width: 1024px; margin-top: 32px; margin-left: 0px; float: left; }
+	.gallery_thumbnails a {
+		display: block;
+		width: 246px;
+		height: 175px;
+		float: left;
+	/*	border: 1px solid #555;*/
+		border:none;
+		margin: 0px 6px 6px 0px;
+	}
+	
+	.gallery_thumbnails .box{
+		
+		width: 252px;
+		height: 256px;
+		float: left;
+	}
+	
+	.box .content{
+		width: 244px;
+		height: 65px;
+		float: left;
+		margin-right:8px;
+		margin-bottom:8px;
+	}
+	
+	.gallery_container:hover{
+		background-color:#fff;
+	}
+	.gallery_thumbnails a:hover { border-color: #000; }
+	.gallery_thumbnails a.selected { border-color: #000; }
+	
+	
+	
+	
+	
+	/* Hide for browsers with no JavaScript support */
+	
+	.gallery_data { display: block }
+	.gallery_thumbnails { width: auto; }
+	.gallery_preview { display: none; }
+	.gallery_caption { display: none; }
+	
+}	
+	
+	
