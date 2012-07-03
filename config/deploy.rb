@@ -9,7 +9,7 @@ require 'bundler/capistrano'
 
 # main details
 set :application, "marselistvaervej4"                                       # <<< change name
-server "188.40.142.76", :app, :web, :db, :primary => true
+server "46.4.64.81", :app, :web, :db, :primary => true
 set :rvm_type, :user
 set :rvm_ruby_string, '1.9.2@marselistvaervej4'
 
