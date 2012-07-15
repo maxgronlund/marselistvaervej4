@@ -1,6 +1,8 @@
 Rails_template::Application.routes.draw do
 
 
+  get "mail_all/index"
+
   resources :admin_galleries do
     resources :photos
   end
@@ -9,7 +11,7 @@ Rails_template::Application.routes.draw do
   resources :galleries do
     resources :photos
   end
-
+  resources :photos
   resources :info_pages
 
   resources :company_thumbs

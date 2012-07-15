@@ -10,8 +10,8 @@ div.gallery_content a, div.navigation a {
 	color: #777;
 }
 div.gallery_content a:focus, div.content a:hover, div.content a:active {
-	text-decoration: underline;
-	background-color:#fff;
+	/*text-decoration: underline;*/
+	background-color:#000;
 }
 div.controls {
 	margin-top: 5px;

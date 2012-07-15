@@ -14,6 +14,7 @@
             .grid-1.omega
               = link_to 'rediger', edit_photo_path(photo)
               br
+              /= link_to 'slet', photo, :confirm => 'Are you sure?', :method => :delete
               = link_to 'slet', photo, :confirm => 'Are you sure?', :method => :delete
         .grid-5.alpha.omega.edit
           = link_to 'opret photo', new_gallery_photo_path(@gallery), :class => 'button'

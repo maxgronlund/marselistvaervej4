@@ -1,64 +1,104 @@
 .grid-container
 
-  h1
-   | Alle mødelokale reservationer
-  b
-    .sort-list-header
-      .grid-3
-        = sortable 'booking_date', 'Tidspunkt'
-      .grid-2
-        = sortable 'meetingroom_id','Mødelokale'
-      .grid-2
-        'Bruger
-      .grid-1
-        'Deltagere
-      .grid-1
-        'Kaffe og vand
-      .grid-1
-        'The
-      .grid-2
-        'Andet
-
-    .grid-12
- 
-  
-  -@bookings.each do |booking| 
-    div class="grid_12 alpha omega #{cycle('color_light_gray', 'color_gray')}"
-      .grid-3
-	    = l booking.booking_date, :format => :date_month_and_year
-	    | - kl.
-	    = l booking.starttime, :format => :bookingtime
-	    |  til 
-	    = l booking.endtime, :format => :bookingtime
-	  .grid-2
-	    - if booking.meetingroom != nil
-	        = booking.meetingroom.title
-	  .grid-2
-	    = link_to booking.bookers_name, edit_booking_path(booking) 
-	  .grid-1
-	    = booking.attendees 
-	  .grid-1
-        - if booking.coffee_and_tea?
-            | X
-      .grid-1
-        - if booking.bread?
-            | X
-
-        
-	  .grid-2.edit_symbold.edit
-        -if booking.custom_message?
-          = link_to image_tag('plus_16.png'),meetingroom_booking_path(booking.meetingroom,booking), :title => 'andet!'
-          '&nbsp; 
-	    = link_to image_tag('magnifying_16.png'),meetingroom_booking_path(booking.meetingroom,booking), :title => 'vis'
-        '&nbsp; 
-        = link_to image_tag('pencil_16.png'), edit_meetingroom_booking_path(booking.meetingroom,booking), :title => 'rediger'
-        '&nbsp; 
-	    = link_to image_tag('delete_16.png'), booking, :confirm => 'Er du sikker?', :method => :delete, :title => 'slet'
-      hr
-  
-  div class="grid_10 prefix_1 suffix_1"
-      = will_paginate @bookings
-  
-
+  h1 Alle mødelokale reservationer
+   
+  table id="bookings" class="display"
+    thead
+      tr 
+        th Dato
+        th Tidspunkt
+        th Mødelokale
+        th Bruger
+        th Deltagerer
+        th Kaffe og vand
+        th The
+        th Andet
+        th Administrer
+    tbody  
+      -@bookings.each do |booking| 
+        tr
+          td= l booking.booking_date, :format => :date_month_and_year
+          td
+            ' - kl.
+            = l booking.starttime, :format => :bookingtime
+            '  til 
+            = l booking.endtime, :format => :bookingtime
+          td= booking.meetingroom.title if booking.meetingroom
+          td= link_to booking.bookers_name, edit_booking_path(booking) 
+          td= booking.attendees 
+          td
+            -if booking.coffee_and_tea?
+              ' X
+          td
+            -if booking.bread?
+              ' X
+              
+          td
+            -if booking.custom_message?
+              = link_to image_tag('plus_16.png'),meetingroom_booking_path(booking.meetingroom,booking), :title => 'andet!'
+          td
+            = link_to image_tag('magnifying_16.png'),meetingroom_booking_path(booking.meetingroom,booking), :title => 'vis'
+            '&nbsp; 
+            = link_to image_tag('pencil_16.png'), edit_meetingroom_booking_path(booking.meetingroom,booking), :title => 'rediger'
+            '&nbsp; 
+            = link_to image_tag('delete_16.png'), booking, :confirm => 'Er du sikker?', :method => :delete, :title => 'slet'
+/  b
+/    .sort-list-header
+/      .grid-3
+/        = sortable 'booking_date', 'Tidspunkt'
+/      .grid-2
+/        = sortable 'meetingroom_id','Mødelokale'
+/      .grid-2
+/        'Bruger
+/      .grid-1
+/        'Deltagere
+/      .grid-1
+/        'Kaffe og vand
+/      .grid-1
+/        'The
+/      .grid-2
+/        'Andet
+/
+/    .grid-12
+/ 
+/  
+/  -@bookings.each do |booking| 
+/    div class="grid_12 alpha omega #{cycle('color_light_gray', 'color_gray')}"
+/      .grid-3
+/	    = l booking.booking_date, :format => :date_month_and_year
+/	    | - kl.
+/	    = l booking.starttime, :format => :bookingtime
+/	    |  til 
+/	    = l booking.endtime, :format => :bookingtime
+/	  .grid-2
+/	    - if booking.meetingroom != nil
+/	        = booking.meetingroom.title
+/	  .grid-2
+/	    = link_to booking.bookers_name, edit_booking_path(booking) 
+/	  .grid-1
+/	    = booking.attendees 
+/	  .grid-1
+/        - if booking.coffee_and_tea?
+/            | X
+/      .grid-1
+/        - if booking.bread?
+/            | X
+/
+/        
+/	  .grid-2.edit_symbold.edit
+/        -if booking.custom_message?
+/          = link_to image_tag('plus_16.png'),meetingroom_booking_path(booking.meetingroom,booking), :title => 'andet!'
+/          '&nbsp; 
+/	    = link_to image_tag('magnifying_16.png'),meetingroom_booking_path(booking.meetingroom,booking), :title => 'vis'
+/        '&nbsp; 
+/        = link_to image_tag('pencil_16.png'), edit_meetingroom_booking_path(booking.meetingroom,booking), :title => 'rediger'
+/        '&nbsp; 
+/	    = link_to image_tag('delete_16.png'), booking, :confirm => 'Er du sikker?', :method => :delete, :title => 'slet'
+/      hr
+/  
+/  div class="grid_10 prefix_1 suffix_1"
+/      = will_paginate @bookings
+/  
+/
   
   

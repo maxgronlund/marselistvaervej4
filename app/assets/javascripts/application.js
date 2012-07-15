@@ -11,6 +11,9 @@
 //= require fullcalendar
 //= require calendar
 //= require_self
+//= require rails
+//= require dataTables/jquery.dataTables
+//= require bookings
 // require_tree .
 
 

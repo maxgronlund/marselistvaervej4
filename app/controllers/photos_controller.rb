@@ -4,6 +4,12 @@ class PhotosController < InheritedResources::Base
   before_filter :get_internal_news
   belongs_to :gallery , :optional => true
   
+  def show
+    logger.debug '++++++++++++++++++++++++++++++++++++++++++++++'
+     @photo = Photo.find(params[:id])
+    @photo.destroy
+    redirect_to :back
+  end
 
   
   def create
@@ -42,6 +48,7 @@ class PhotosController < InheritedResources::Base
   end
   
   def destroy
+    logger.debug '************************************************************'
     go_to = admin_gallery_path(@photo.gallery_id)
     destroy! { go_to}
   end

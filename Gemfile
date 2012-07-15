@@ -13,7 +13,6 @@ gem 'mysql2'
 gem 'inherited_resources'
 
 gem 'mime-types', '1.16', :require => "mime/types"
-
 #gem 'devise', '1.1.5'
 gem 'devise', '1.5'
 
@@ -31,6 +30,7 @@ gem 'compass-960-plugin'
 gem 'slim'
 
 gem "paperclip", "~> 3.0"
+gem 'quiet_assets', group: :development
 
 
 # Gems used only for assets and not required
@@ -42,3 +42,7 @@ group :assets do
 end
 
 gem 'jquery-rails'
+
+gem 'jquery-datatables-rails'#, github: 'rweng/jquery-datatables-rails'
+gem 'jquery-ui-rails'
+

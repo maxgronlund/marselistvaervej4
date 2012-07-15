@@ -5,10 +5,11 @@ class BookingsController < InheritedResources::Base
   helper_method :sort_column, :sort_direction 
   
   def index
-    @bookings = Booking.scoped
-    @bookings = @bookings.after(Time.at(params['start'].to_i)) if (params['start'])
-    @bookings = @bookings.before(Time.at(params['end'].to_i)) if (params['end'])
-    @bookings = @bookings.order(sort_column + ' ' + sort_direction).paginate(:per_page => 24, :page => params[:page]) unless params['start'] or params['end']
+    #@bookings = Booking.scoped
+    #@bookings = @bookings.after(Time.at(params['start'].to_i)) if (params['start'])
+    #@bookings = @bookings.before(Time.at(params['end'].to_i)) if (params['end'])
+    #@bookings = @bookings.order(sort_column + ' ' + sort_direction).paginate(:per_page => 24, :page => params[:page]) unless params['start'] or params['end']
+    @bookings = Booking.all
     @meetingroom ||= Meetingroom.first
 
     respond_to do |format|

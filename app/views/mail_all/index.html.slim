@@ -1,0 +1,99 @@
+-mails = User.all.map(&:email)
+script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.min.js"
+javascript:
+  var emails = {
+    #{ User.all.map { |user| "'#{user.email}' : true" }.join(",\n")  }
+  };
+  
+  function update_emails() {
+    
+    mail_string = "";
+    all_checked = true;
+    non_checked = true;
+    
+    for (var email in emails) {
+      if(emails[email]) {
+        mail_string += email + ", ";
+        non_checked = false;
+      } else {
+        all_checked = false;
+      }
+    }
+    
+    $('#email_button').attr("href","mailto:" + mail_string);
+    
+    if(all_checked) {
+      make_button_deselect();
+      $('#email_button').text("Email alle i huset");
+    } else if(non_checked) {
+      
+      make_button_select();
+      $('#email_button').text("Ingen mails valgt");
+    } else {
+      make_button_deselect();
+      $('#email_button').text("Email nogen fra huset");
+    }
+    
+  }
+  
+  function make_button_deselect() {
+    $("#multi_mail_selector").attr('value', "Fravælg alle emails");
+    $("#multi_mail_selector").attr('action', "deselect");
+  }
+  
+  function make_button_select() {
+    $("#multi_mail_selector").attr('value', "Vælg alle emails");
+    $("#multi_mail_selector").attr('action', "select");
+  }
+  
+  function deselect_all_mails() {
+    $('.checkbox input').each(function(i, checkbox) {
+      checkbox.checked = false;
+      emails[checkbox.id] = checkbox.checked;
+      
+    });
+    update_emails();
+  }
+  
+  function select_all_mails() {
+    $('.checkbox input').each(function(i, checkbox) {
+      checkbox.checked = true;
+      emails[checkbox.id] = checkbox.checked;
+      
+    });
+    update_emails();
+  }
+  
+  $(document).ready(function(){
+    $('.checkbox input').live("change", function(){
+      emails[$(this).attr('id')] = ($(this).attr('checked') == 'checked');
+      update_emails();
+    });
+    
+    $("#multi_mail_selector").live("click", function() {
+      action = $(this).attr('action')
+      
+      if(action == "select") {
+        select_all_mails();
+      } else if(action == "deselect") {
+        deselect_all_mails();
+      }
+    })
+  });
+
+a href="mail_to:#{mails.join(', ')}" data-confirm="Er du sikker?" id="email_button"
+ 'Email alle i huset
+br
+
+input id="multi_mail_selector" type="button" value="Fravælg alle emails" action="deselect"
+br
+
+-mails.each do |mail|
+  label class="checkbox"
+    input type="checkbox" checked=true id="#{mail}"
+  =mail
+  br
+
+
+ 
+/= link_to 'email alle i huset', "mailto:#{User.all.map(&:email).join(', ')}", :confirm => t('admin.are_you_sure')

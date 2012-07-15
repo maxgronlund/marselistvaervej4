@@ -173,7 +173,7 @@ $ninesixty-gutter-width: 20px; // default: 20px
   @include alpha;
   height:72px;
   a:hover{
-	background-color: transparent;
+	  background-color: transparent;
   }
 }
 
@@ -213,6 +213,7 @@ $ninesixty-gutter-width: 20px; // default: 20px
 		margin-top:1px;
 		margin-left:19px;
 	}
+	
 	a:hover{
 		color:#000;
 		background-color:#fff;
@@ -585,7 +586,7 @@ a:hover{
 .booking-meetingroom-column{
 	float:left;
 	margin: 2px;
-	width: 134px;
+/*	width: 134px;*/
 }
 
 #columns-3-2-2-1-2{
@@ -677,6 +678,7 @@ a:hover{
 		height:376px;
 	}
 }
+
 
 
 /* full clearfix */
