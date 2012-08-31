@@ -15,7 +15,7 @@ gem 'inherited_resources'
 
 gem 'mime-types', '1.16', :require => "mime/types"
 #gem 'devise', '1.1.5'
-gem 'devise', '1.5'
+gem 'devise'
 
 
 gem 'cancan', '1.4.1'
@@ -39,7 +39,7 @@ gem 'quiet_assets', group: :development
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
-  #gem 'uglifier'
+  gem 'uglifier'
 end
 
 
