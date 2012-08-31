@@ -2,7 +2,8 @@ source 'http://rubygems.org'
 
 #gem 'rails', '3.0.7'
 #gem "rails", "3.1.0"
-gem 'rails', '3.2.3'
+#gem 'rails', '3.2.3'
+gem 'rails', '3.2.8'
 
 #gem 'mysql2', '0.2.13'
 
@@ -41,8 +42,9 @@ group :assets do
   #gem 'uglifier'
 end
 
-gem 'jquery-rails'
+
+
 
 gem 'jquery-datatables-rails'#, github: 'rweng/jquery-datatables-rails'
 gem 'jquery-ui-rails'
-
+gem "jquery-rails"

@@ -21,7 +21,7 @@ module Rails_template
     config.assets.enabled = true
 
     # Version of your assets, change this if you want to expire all your assets
-    config.assets.version = '1.0'
+    config.assets.version = '1.0.1'
     
     
     # Custom directories with classes and modules you want to be autoloadable.
