@@ -58614,3 +58614,523 @@ Processing by MeetingroomsController#update as HTML
   [1m[36mCACHE (0.0ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1[0m
   [1m[35mCACHE (0.0ms)[0m  SELECT `info_pages`.* FROM `info_pages` 
 Completed 200 OK in 625ms (Views: 25.6ms | ActiveRecord: 1.8ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/dk/meetingrooms/8" for 127.0.0.1 at 2012-08-31 13:03:07 +0200
+[paperclip] Duplicate URL for image with /system/:attachment/:id/:style/:filename. This will clash with attachment defined in User class
+Processing by MeetingroomsController#show as HTML
+  Parameters: {"locale"=>"dk", "id"=>"8"}
+  [1m[36mInfoPage Load (0.1ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages` [0m
+  [1m[35mMeetingroom Load (0.3ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 8 LIMIT 1
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mMeetingroom Load (0.4ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1
+[paperclip] Duplicate URL for image with /system/:attachment/:id/:style/:filename. This will clash with attachment defined in Meetingroom class
+  Rendered shared/_menu.html.slim (2.3ms)
+  [1m[36mNewspost Load (0.5ms)[0m  [1mSELECT `newsposts`.* FROM `newsposts` WHERE `newsposts`.`internal_letter` = 1 ORDER BY created_at desc LIMIT 3 OFFSET 0[0m
+  Rendered shared/_news.html.slim (78.0ms)
+  Rendered meetingrooms/show.html.slim within layouts/application (117.0ms)
+  Rendered shared/_google.html.erb (14.1ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages` [0m
+Completed 200 OK in 372ms (Views: 272.2ms | ActiveRecord: 8.5ms)
+
+
+Started GET "/images/fallback/default_illustration_preview.gif" for 127.0.0.1 at 2012-08-31 13:03:08 +0200
+
+ActionController::RoutingError (No route matches [GET] "/images/fallback/default_illustration_preview.gif"):
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  quiet_assets (1.0.1) lib/quiet_assets.rb:20:in `call_with_quiet_assets'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/static.rb:62:in `call'
+  rack-cache (1.2) lib/rack/cache/context.rb:136:in `forward'
+  rack-cache (1.2) lib/rack/cache/context.rb:245:in `fetch'
+  rack-cache (1.2) lib/rack/cache/context.rb:185:in `lookup'
+  rack-cache (1.2) lib/rack/cache/context.rb:66:in `call!'
+  rack-cache (1.2) lib/rack/cache/context.rb:51:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/synthmax/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /Users/synthmax/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /Users/synthmax/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+
+  Rendered /Users/synthmax/.rvm/gems/ruby-1.9.2-p290@bootstrap/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/meetingrooms/8/bookings/new?locale=dk" for 127.0.0.1 at 2012-08-31 13:03:10 +0200
+Processing by BookingsController#new as HTML
+  Parameters: {"locale"=>"dk", "meetingroom_id"=>"8"}
+  [1m[35mInfoPage Load (0.2ms)[0m  SELECT `info_pages`.* FROM `info_pages` 
+  [1m[36mMeetingroom Load (0.3ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 8 LIMIT 1[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  Rendered shared/_menu.html.slim (0.8ms)
+  [1m[36mMeetingroom Load (0.4ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` ORDER BY title DESC[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` ORDER BY name DESC
+  [1m[36mMeetingroom Load (0.3ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` [0m
+  Rendered bookings/_form.html.slim (19.8ms)
+  [1m[35mNewspost Load (0.3ms)[0m  SELECT `newsposts`.* FROM `newsposts` WHERE `newsposts`.`internal_letter` = 1 ORDER BY created_at desc LIMIT 3 OFFSET 0
+  Rendered shared/_news.html.slim (2.8ms)
+  Rendered bookings/new.html.slim within layouts/application (27.6ms)
+  Rendered shared/_google.html.erb (0.0ms)
+  [1m[36mMeetingroom Load (0.3ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `info_pages`.* FROM `info_pages` 
+Completed 200 OK in 151ms (Views: 75.3ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/da/bookings?start=1346018400&end=1346623200&_=1346410991199" for 127.0.0.1 at 2012-08-31 13:03:11 +0200
+Processing by BookingsController#index as JS
+  Parameters: {"start"=>"1346018400", "end"=>"1346623200", "_"=>"1346410991199", "locale"=>"da"}
+  [1m[36mInfoPage Load (0.3ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages` [0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mBooking Load (0.4ms)[0m  [1mSELECT `bookings`.* FROM `bookings` [0m
+  [1m[35mMeetingroom Load (0.3ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1
+  [1m[36mMeetingroom Load (0.3ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 5 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 5 LIMIT 1
+  [1m[36mMeetingroom Load (0.2ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 6 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 6 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 5 LIMIT 1[0m
+  [1m[35mMeetingroom Load (0.2ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 7 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 5 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 6 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 5 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 5 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 5 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 7 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 7 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 6 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 7 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 7 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 7 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 7 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 7 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 7 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 7 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 7 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 7 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 7 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 7 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 7 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 7 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 7 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 7 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 7 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 7 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 5 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 7 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 7 LIMIT 1
+Completed 200 OK in 72ms (Views: 53.7ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/images/fallback/default_illustration_mini.gif" for 127.0.0.1 at 2012-08-31 13:03:11 +0200
+
+ActionController::RoutingError (No route matches [GET] "/images/fallback/default_illustration_mini.gif"):
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  quiet_assets (1.0.1) lib/quiet_assets.rb:20:in `call_with_quiet_assets'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/static.rb:62:in `call'
+  rack-cache (1.2) lib/rack/cache/context.rb:136:in `forward'
+  rack-cache (1.2) lib/rack/cache/context.rb:245:in `fetch'
+  rack-cache (1.2) lib/rack/cache/context.rb:185:in `lookup'
+  rack-cache (1.2) lib/rack/cache/context.rb:66:in `call!'
+  rack-cache (1.2) lib/rack/cache/context.rb:51:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/synthmax/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /Users/synthmax/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /Users/synthmax/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+
+  Rendered /Users/synthmax/.rvm/gems/ruby-1.9.2-p290@bootstrap/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/dk/meetingrooms/8/edit" for 127.0.0.1 at 2012-08-31 13:03:15 +0200
+Processing by MeetingroomsController#edit as HTML
+  Parameters: {"locale"=>"dk", "id"=>"8"}
+  [1m[36mInfoPage Load (0.2ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages` [0m
+  [1m[35mMeetingroom Load (0.3ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 8 LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mMeetingroom Load (0.2ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1
+  Rendered meetingrooms/_form.html.slim (7.0ms)
+  Rendered meetingrooms/edit.html.erb within layouts/application (8.3ms)
+  Rendered shared/_google.html.erb (0.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `info_pages`.* FROM `info_pages` 
+Completed 200 OK in 29ms (Views: 23.0ms | ActiveRecord: 1.0ms)
+
+
+Started PUT "/dk/meetingrooms/8" for 127.0.0.1 at 2012-08-31 13:03:24 +0200
+Processing by MeetingroomsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QhFPWZSPfQ+ZSmg198tMLFSOOjnfurYo27xRbj7rTNQ=", "meetingroom"=>{"image"=>#<ActionDispatch::Http::UploadedFile:0x007fdcf363bac8 @original_filename="kantine.JPG", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"meetingroom[image]\"; filename=\"kantine.JPG\"\r\nContent-Type: image/jpeg\r\n", @tempfile=#<File:/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/RackMultipart20120831-16268-30pz7b>>, "title"=>"Kælderen", "body"=>"asdf", "color"=>"#dddddd"}, "locale"=>"dk", "id"=>"8"}
+  [1m[36mInfoPage Load (0.2ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages` [0m
+  [1m[35mMeetingroom Load (0.2ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 8 LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mMeetingroom Load (0.2ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 8 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+[32mCommand[0m :: identify -format %wx%h '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/kantine20120831-16268-lddkr8.JPG[0]'
+[paperclip] An error was received while processing: #<Paperclip::Errors::NotIdentifiedByImageMagickError: /var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/kantine20120831-16268-lddkr8.JPG is not recognized by the 'identify' command.>
+[32mCommand[0m :: identify -format %wx%h '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/kantine20120831-16268-lddkr8.JPG[0]'
+[paperclip] An error was received while processing: #<Paperclip::Errors::NotIdentifiedByImageMagickError: /var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/kantine20120831-16268-lddkr8.JPG is not recognized by the 'identify' command.>
+[32mCommand[0m :: identify -format %wx%h '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/kantine20120831-16268-lddkr8.JPG[0]'
+[paperclip] An error was received while processing: #<Paperclip::Errors::NotIdentifiedByImageMagickError: /var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/kantine20120831-16268-lddkr8.JPG is not recognized by the 'identify' command.>
+[32mCommand[0m :: identify -format %wx%h '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/kantine20120831-16268-lddkr8.JPG[0]'
+[paperclip] An error was received while processing: #<Paperclip::Errors::NotIdentifiedByImageMagickError: /var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/kantine20120831-16268-lddkr8.JPG is not recognized by the 'identify' command.>
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  Rendered meetingrooms/_form.html.slim (7.1ms)
+  Rendered meetingrooms/edit.html.erb within layouts/application (8.4ms)
+  Rendered shared/_google.html.erb (0.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages` [0m
+Completed 200 OK in 792ms (Views: 25.6ms | ActiveRecord: 1.0ms)
+Connecting to database specified by database.yml
+
+
+Started PUT "/dk/meetingrooms/8" for 127.0.0.1 at 2012-08-31 13:07:24 +0200
+[paperclip] Duplicate URL for image with /system/:attachment/:id/:style/:filename. This will clash with attachment defined in User class
+Processing by MeetingroomsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QhFPWZSPfQ+ZSmg198tMLFSOOjnfurYo27xRbj7rTNQ=", "meetingroom"=>{"image"=>#<ActionDispatch::Http::UploadedFile:0x007fd29d95b4c0 @original_filename="kantine.JPG", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"meetingroom[image]\"; filename=\"kantine.JPG\"\r\nContent-Type: image/jpeg\r\n", @tempfile=#<File:/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/RackMultipart20120831-16411-18ajk8d>>, "title"=>"Kælderen", "body"=>"asdf", "color"=>"#dddddd"}, "locale"=>"dk", "id"=>"8"}
+  [1m[36mInfoPage Load (0.1ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages` [0m
+  [1m[35mMeetingroom Load (0.2ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 8 LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mMeetingroom Load (0.3ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1
+[paperclip] Duplicate URL for image with /system/:attachment/:id/:style/:filename. This will clash with attachment defined in Meetingroom class
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 8 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+[32mCommand[0m :: identify -format %wx%h '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/kantine20120831-16411-1mkt6sh.JPG[0]'
+[paperclip] An error was received while processing: #<Paperclip::Errors::NotIdentifiedByImageMagickError: /var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/kantine20120831-16411-1mkt6sh.JPG is not recognized by the 'identify' command.>
+[32mCommand[0m :: identify -format %wx%h '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/kantine20120831-16411-1mkt6sh.JPG[0]'
+[paperclip] An error was received while processing: #<Paperclip::Errors::NotIdentifiedByImageMagickError: /var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/kantine20120831-16411-1mkt6sh.JPG is not recognized by the 'identify' command.>
+[32mCommand[0m :: identify -format %wx%h '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/kantine20120831-16411-1mkt6sh.JPG[0]'
+[paperclip] An error was received while processing: #<Paperclip::Errors::NotIdentifiedByImageMagickError: /var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/kantine20120831-16411-1mkt6sh.JPG is not recognized by the 'identify' command.>
+[32mCommand[0m :: identify -format %wx%h '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/kantine20120831-16411-1mkt6sh.JPG[0]'
+[paperclip] An error was received while processing: #<Paperclip::Errors::NotIdentifiedByImageMagickError: /var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/kantine20120831-16411-1mkt6sh.JPG is not recognized by the 'identify' command.>
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  Rendered meetingrooms/_form.html.slim (35.9ms)
+  Rendered meetingrooms/edit.html.erb within layouts/application (63.4ms)
+  Rendered shared/_google.html.erb (0.3ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages` [0m
+Completed 200 OK in 1010ms (Views: 201.5ms | ActiveRecord: 9.3ms)
+
+
+Started GET "/dk/meetingrooms" for 127.0.0.1 at 2012-08-31 13:08:24 +0200
+Processing by MeetingroomsController#index as HTML
+  Parameters: {"locale"=>"dk"}
+  [1m[35mInfoPage Load (0.5ms)[0m  SELECT `info_pages`.* FROM `info_pages` 
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mMeetingroom Load (0.3ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1
+  Rendered shared/_menu.html.slim (2.2ms)
+  [1m[36mMeetingroom Load (0.4ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` [0m
+  Rendered meetingrooms/index.html.slim within layouts/application (36.1ms)
+  Rendered shared/_google.html.erb (0.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages` [0m
+Completed 200 OK in 58ms (Views: 49.7ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/images/fallback/default_illustration_thumbnail.gif" for 127.0.0.1 at 2012-08-31 13:08:25 +0200
+
+ActionController::RoutingError (No route matches [GET] "/images/fallback/default_illustration_thumbnail.gif"):
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  quiet_assets (1.0.1) lib/quiet_assets.rb:20:in `call_with_quiet_assets'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/static.rb:62:in `call'
+  rack-cache (1.2) lib/rack/cache/context.rb:136:in `forward'
+  rack-cache (1.2) lib/rack/cache/context.rb:245:in `fetch'
+  rack-cache (1.2) lib/rack/cache/context.rb:185:in `lookup'
+  rack-cache (1.2) lib/rack/cache/context.rb:66:in `call!'
+  rack-cache (1.2) lib/rack/cache/context.rb:51:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/synthmax/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /Users/synthmax/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /Users/synthmax/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+
+  Rendered /Users/synthmax/.rvm/gems/ruby-1.9.2-p290@bootstrap/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/meetingrooms/5/bookings/new?locale=dk" for 127.0.0.1 at 2012-08-31 13:08:29 +0200
+Processing by BookingsController#new as HTML
+  Parameters: {"locale"=>"dk", "meetingroom_id"=>"5"}
+  [1m[35mInfoPage Load (0.3ms)[0m  SELECT `info_pages`.* FROM `info_pages` 
+  [1m[36mMeetingroom Load (0.3ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 5 LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  Rendered shared/_menu.html.slim (0.8ms)
+  [1m[36mMeetingroom Load (0.3ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` ORDER BY title DESC[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` ORDER BY name DESC
+  [1m[36mMeetingroom Load (0.3ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` [0m
+  Rendered bookings/_form.html.slim (24.5ms)
+  [1m[35mNewspost Load (0.3ms)[0m  SELECT `newsposts`.* FROM `newsposts` WHERE `newsposts`.`internal_letter` = 1 ORDER BY created_at desc LIMIT 3 OFFSET 0
+  Rendered shared/_news.html.slim (66.3ms)
+  Rendered bookings/new.html.slim within layouts/application (96.0ms)
+  Rendered shared/_google.html.erb (0.0ms)
+  [1m[36mMeetingroom Load (0.3ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `info_pages`.* FROM `info_pages` 
+Completed 200 OK in 324ms (Views: 59.1ms | ActiveRecord: 162.5ms)
+
+
+Started GET "/da/bookings?start=1346018400&end=1346623200&_=1346411309787" for 127.0.0.1 at 2012-08-31 13:08:29 +0200
+Processing by BookingsController#index as JS
+  Parameters: {"start"=>"1346018400", "end"=>"1346623200", "_"=>"1346411309787", "locale"=>"da"}
+  [1m[36mInfoPage Load (0.2ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages` [0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mBooking Load (0.4ms)[0m  [1mSELECT `bookings`.* FROM `bookings` [0m
+  [1m[35mMeetingroom Load (0.3ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1
+  [1m[36mMeetingroom Load (0.3ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 5 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 5 LIMIT 1
+  [1m[36mMeetingroom Load (0.2ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 6 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 6 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 5 LIMIT 1[0m
+  [1m[35mMeetingroom Load (0.3ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 7 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 5 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 6 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 5 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 5 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 5 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 7 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 7 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 6 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 7 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 7 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 7 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 7 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 7 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 7 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 7 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 7 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 7 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 7 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 7 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 7 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 7 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 7 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 7 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 7 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 7 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 5 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 7 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 7 LIMIT 1
+Completed 200 OK in 74ms (Views: 54.3ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/images/fallback/default_illustration_mini.gif" for 127.0.0.1 at 2012-08-31 13:08:29 +0200
+
+ActionController::RoutingError (No route matches [GET] "/images/fallback/default_illustration_mini.gif"):
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  quiet_assets (1.0.1) lib/quiet_assets.rb:20:in `call_with_quiet_assets'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/static.rb:62:in `call'
+  rack-cache (1.2) lib/rack/cache/context.rb:136:in `forward'
+  rack-cache (1.2) lib/rack/cache/context.rb:245:in `fetch'
+  rack-cache (1.2) lib/rack/cache/context.rb:185:in `lookup'
+  rack-cache (1.2) lib/rack/cache/context.rb:66:in `call!'
+  rack-cache (1.2) lib/rack/cache/context.rb:51:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/synthmax/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /Users/synthmax/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /Users/synthmax/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+
+  Rendered /Users/synthmax/.rvm/gems/ruby-1.9.2-p290@bootstrap/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/meetingrooms/5/bookings/new?locale=dk" for 127.0.0.1 at 2012-08-31 13:12:39 +0200
+Processing by BookingsController#new as HTML
+  Parameters: {"locale"=>"dk", "meetingroom_id"=>"5"}
+  [1m[36mInfoPage Load (0.3ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages` [0m
+  [1m[35mMeetingroom Load (0.3ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 5 LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  Rendered shared/_menu.html.slim (0.8ms)
+  [1m[35mMeetingroom Load (0.4ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` ORDER BY title DESC
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` ORDER BY name DESC[0m
+  Rendered bookings/_form.html.slim (14.9ms)
+  [1m[35mNewspost Load (0.4ms)[0m  SELECT `newsposts`.* FROM `newsposts` WHERE `newsposts`.`internal_letter` = 1 ORDER BY created_at desc LIMIT 3 OFFSET 0
+  Rendered shared/_news.html.slim (2.9ms)
+  Rendered bookings/new.html.slim within layouts/application (20.7ms)
+  Rendered shared/_google.html.erb (0.0ms)
+  [1m[36mMeetingroom Load (0.3ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `info_pages`.* FROM `info_pages` 
+Completed 200 OK in 84ms (Views: 76.5ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/da/bookings?start=1346018400&end=1346623200&_=1346411560072" for 127.0.0.1 at 2012-08-31 13:12:40 +0200
+Processing by BookingsController#index as JS
+  Parameters: {"start"=>"1346018400", "end"=>"1346623200", "_"=>"1346411560072", "locale"=>"da"}
+  [1m[36mInfoPage Load (0.2ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages` [0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mBooking Load (0.4ms)[0m  [1mSELECT `bookings`.* FROM `bookings` [0m
+  [1m[35mMeetingroom Load (7.5ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1
+  [1m[36mMeetingroom Load (0.8ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 5 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 5 LIMIT 1
+  [1m[36mMeetingroom Load (0.4ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 6 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 6 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 5 LIMIT 1[0m
+  [1m[35mMeetingroom Load (0.3ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 7 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 5 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 6 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 5 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 5 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 5 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 7 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 7 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 6 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 7 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 7 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 7 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 7 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 7 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 7 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 7 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 7 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 7 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 7 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 7 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 7 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 7 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 7 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 7 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 7 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 7 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 5 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 7 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 7 LIMIT 1
+Completed 200 OK in 74ms (Views: 51.6ms | ActiveRecord: 9.9ms)
+
+
+Started GET "/meetingrooms/5/bookings/new?locale=dk" for 127.0.0.1 at 2012-08-31 13:12:58 +0200
+Processing by BookingsController#new as HTML
+  Parameters: {"locale"=>"dk", "meetingroom_id"=>"5"}
+  [1m[36mInfoPage Load (0.5ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages` [0m
+  [1m[35mMeetingroom Load (0.3ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 5 LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  Rendered shared/_menu.html.slim (0.8ms)
+  [1m[35mMeetingroom Load (0.5ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` ORDER BY title DESC
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT `users`.* FROM `users` ORDER BY name DESC[0m
+  [1m[35mMeetingroom Load (0.3ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` 
+  Rendered bookings/_form.html.slim (19.8ms)
+  [1m[36mNewspost Load (0.5ms)[0m  [1mSELECT `newsposts`.* FROM `newsposts` WHERE `newsposts`.`internal_letter` = 1 ORDER BY created_at desc LIMIT 3 OFFSET 0[0m
+  Rendered shared/_news.html.slim (2.9ms)
+  Rendered bookings/new.html.slim within layouts/application (25.4ms)
+  Rendered shared/_google.html.erb (0.0ms)
+  [1m[35mMeetingroom Load (0.4ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages` [0m
+Completed 200 OK in 46ms (Views: 37.1ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/da/bookings?start=1346018400&end=1346623200&_=1346411579268" for 127.0.0.1 at 2012-08-31 13:12:59 +0200
+Processing by BookingsController#index as JS
+  Parameters: {"start"=>"1346018400", "end"=>"1346623200", "_"=>"1346411579268", "locale"=>"da"}
+  [1m[35mInfoPage Load (0.2ms)[0m  SELECT `info_pages`.* FROM `info_pages` 
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mBooking Load (0.4ms)[0m  SELECT `bookings`.* FROM `bookings` 
+  [1m[36mMeetingroom Load (0.2ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1[0m
+  [1m[35mMeetingroom Load (0.2ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 5 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 5 LIMIT 1[0m
+  [1m[35mMeetingroom Load (0.3ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 6 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 6 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 5 LIMIT 1
+  [1m[36mMeetingroom Load (0.2ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 7 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 5 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 6 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 5 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 5 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 5 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 7 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 7 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 6 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 7 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 7 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 7 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 7 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 7 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 7 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 7 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 7 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 7 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 7 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 7 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 7 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 7 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 7 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 7 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 7 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 7 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 5 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 7 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 7 LIMIT 1[0m
+Completed 200 OK in 81ms (Views: 70.4ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/images/fallback/default_illustration_mini.gif" for 127.0.0.1 at 2012-08-31 13:12:59 +0200
+
+ActionController::RoutingError (No route matches [GET] "/images/fallback/default_illustration_mini.gif"):
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  quiet_assets (1.0.1) lib/quiet_assets.rb:20:in `call_with_quiet_assets'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/static.rb:62:in `call'
+  rack-cache (1.2) lib/rack/cache/context.rb:136:in `forward'
+  rack-cache (1.2) lib/rack/cache/context.rb:245:in `fetch'
+  rack-cache (1.2) lib/rack/cache/context.rb:185:in `lookup'
+  rack-cache (1.2) lib/rack/cache/context.rb:66:in `call!'
+  rack-cache (1.2) lib/rack/cache/context.rb:51:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/synthmax/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /Users/synthmax/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /Users/synthmax/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+
+  Rendered /Users/synthmax/.rvm/gems/ruby-1.9.2-p290@bootstrap/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
