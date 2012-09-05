@@ -21,7 +21,7 @@ class BookingsController < InheritedResources::Base
   
   def new
     @booking = Booking.new
-    @booking.booking_date = params[:date].present?? params[:date].to_date : Date.today
+    @booking.booking_date = params[:date].present? ? params[:date].to_date : Date.today
     @booking.starttime = Time.now
     @booking.endtime = @booking.starttime + 1.hour
     new!

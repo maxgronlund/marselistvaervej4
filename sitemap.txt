@@ -1,3 +1,6 @@
+"v=spf1 +a +mx +ip4:66.147.244.169 ?all"
+
+
 SYSTEMET
 har en blog
 har dagens afirmation
