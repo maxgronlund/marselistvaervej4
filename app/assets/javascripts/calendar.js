@@ -74,7 +74,7 @@ $(document).ready(function() {
         },
 
         dayClick: function(date, allDay, jsEvent, view){
-          calendarSelectDate(date, allDay);
+          /*calendarSelectDate(date, allDay);*/
         },
 
 	});
@@ -115,6 +115,7 @@ function calendarGotoDate(date){
 function calendarSelectDate(date, allDay){
 	// get meetingroom_id from current selection in booking form
 	var meetingroom_id = $('#booking_meetingroom_id').val();
+	alert('hey');
 	location.href = "/meetingrooms/"+meetingroom_id+"/bookings/new?date="+date+"&allDay="+allDay;
 }
 
