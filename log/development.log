@@ -61686,3 +61686,1395 @@ Processing by CompaniesController#show as HTML
   [1m[35mMeetingroom Load (0.3ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1
   [1m[36mCACHE (0.0ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages` [0m
 Completed 200 OK in 34ms (Views: 26.7ms | ActiveRecord: 1.5ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-12 13:21:20 +0200
+Processing by HomeController#index as HTML
+  [1m[36mInfoPage Load (0.2ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages` [0m
+[paperclip] Duplicate URL for image with /system/:attachment/:id/:style/:filename. This will clash with attachment defined in User class
+[paperclip] Duplicate URL for image with /system/:attachment/:id/:style/:filename. This will clash with attachment defined in Newspost class
+  [1m[35mGallery Load (0.2ms)[0m  SELECT `galleries`.* FROM `galleries` WHERE `galleries`.`identity` = 'marselistvaervej ' LIMIT 1
+  [1m[36mPage Load (0.3ms)[0m  [1mSELECT `pages`.* FROM `pages` WHERE `pages`.`identity` = 'welcome_dk ' LIMIT 1[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  Rendered shared/_menu.html.slim (31.4ms)
+  [1m[36mNewspost Load (0.4ms)[0m  [1mSELECT `newsposts`.* FROM `newsposts` WHERE `newsposts`.`internal_letter` = 0 ORDER BY created_at desc LIMIT 3 OFFSET 0[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM `newsposts` WHERE `newsposts`.`internal_letter` = 0
+  Rendered shared/_news.html.slim (94.3ms)
+  Rendered home/index.html.slim within layouts/application (262.0ms)
+Compiled application.css  (65ms)  (pid 57991)
+Compiled application.js  (62ms)  (pid 57991)
+  Rendered shared/_google.html.erb (60.3ms)
+[paperclip] Duplicate URL for image with /system/:attachment/:id/:style/:filename. This will clash with attachment defined in Photo class
+  [1m[36mMeetingroom Load (0.1ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `info_pages`.* FROM `info_pages` 
+Completed 200 OK in 1585ms (Views: 1080.5ms | ActiveRecord: 406.6ms)
+
+
+Started GET "/dk/companies" for 127.0.0.1 at 2012-10-12 13:21:25 +0200
+[paperclip] Duplicate URL for image with /system/:attachment/:id/:style/:filename. This will clash with attachment defined in Meetingroom class
+Processing by CompaniesController#index as HTML
+  Parameters: {"locale"=>"dk"}
+  [1m[36mInfoPage Load (0.3ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages` [0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  Rendered shared/_menu.html.slim (0.8ms)
+  [1m[36mCompany Load (0.3ms)[0m  [1mSELECT `companies`.* FROM `companies` ORDER BY title asc LIMIT 12 OFFSET 0[0m
+[paperclip] Duplicate URL for image with /system/:attachment/:id/:style/:filename. This will clash with attachment defined in Company class
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM `company_thumbs` WHERE `company_thumbs`.`company_id` = 13
+  [1m[36mCompanyThumb Load (0.2ms)[0m  [1mSELECT `company_thumbs`.* FROM `company_thumbs` WHERE `company_thumbs`.`company_id` = 13 ORDER BY `company_thumbs`.`id` DESC LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM `company_thumbs` WHERE `company_thumbs`.`company_id` = 2
+  [1m[36mCompanyThumb Load (0.3ms)[0m  [1mSELECT `company_thumbs`.* FROM `company_thumbs` WHERE `company_thumbs`.`company_id` = 2 ORDER BY `company_thumbs`.`id` DESC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM `company_thumbs` WHERE `company_thumbs`.`company_id` = 12
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM `company_thumbs` WHERE `company_thumbs`.`company_id` = 8[0m
+  [1m[35mCompanyThumb Load (0.3ms)[0m  SELECT `company_thumbs`.* FROM `company_thumbs` WHERE `company_thumbs`.`company_id` = 8 ORDER BY `company_thumbs`.`id` DESC LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM `company_thumbs` WHERE `company_thumbs`.`company_id` = 11[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM `company_thumbs` WHERE `company_thumbs`.`company_id` = 7
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM `company_thumbs` WHERE `company_thumbs`.`company_id` = 10[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM `company_thumbs` WHERE `company_thumbs`.`company_id` = 1
+  [1m[36mCompanyThumb Load (0.1ms)[0m  [1mSELECT `company_thumbs`.* FROM `company_thumbs` WHERE `company_thumbs`.`company_id` = 1 ORDER BY `company_thumbs`.`id` DESC LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM `company_thumbs` WHERE `company_thumbs`.`company_id` = 6
+  [1m[36mNewspost Load (0.3ms)[0m  [1mSELECT `newsposts`.* FROM `newsposts` WHERE `newsposts`.`internal_letter` = 1 ORDER BY created_at desc LIMIT 3 OFFSET 0[0m
+  Rendered shared/_news.html.slim (2.7ms)
+  Rendered companies/index.html.slim within layouts/application (202.9ms)
+  Rendered shared/_google.html.erb (0.0ms)
+  [1m[35mMeetingroom Load (0.2ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages` [0m
+Completed 200 OK in 225ms (Views: 183.7ms | ActiveRecord: 35.1ms)
+
+
+Started GET "/system/images/24/mini/MaxKoblo.jpg?1314099653" for 127.0.0.1 at 2012-10-12 13:21:25 +0200
+
+ActionController::RoutingError (No route matches [GET] "/system/images/24/mini/MaxKoblo.jpg"):
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  quiet_assets (1.0.1) lib/quiet_assets.rb:20:in `call_with_quiet_assets'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/static.rb:62:in `call'
+  rack-cache (1.2) lib/rack/cache/context.rb:136:in `forward'
+  rack-cache (1.2) lib/rack/cache/context.rb:245:in `fetch'
+  rack-cache (1.2) lib/rack/cache/context.rb:185:in `lookup'
+  rack-cache (1.2) lib/rack/cache/context.rb:66:in `call!'
+  rack-cache (1.2) lib/rack/cache/context.rb:51:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/synthmax/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /Users/synthmax/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /Users/synthmax/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+
+  Rendered /Users/synthmax/.rvm/gems/ruby-1.9.2-p290@bootstrap/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/system/images/25/mini/max_avatar.jpg?1314099808" for 127.0.0.1 at 2012-10-12 13:21:25 +0200
+
+ActionController::RoutingError (No route matches [GET] "/system/images/25/mini/max_avatar.jpg"):
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  quiet_assets (1.0.1) lib/quiet_assets.rb:20:in `call_with_quiet_assets'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/static.rb:62:in `call'
+  rack-cache (1.2) lib/rack/cache/context.rb:136:in `forward'
+  rack-cache (1.2) lib/rack/cache/context.rb:245:in `fetch'
+  rack-cache (1.2) lib/rack/cache/context.rb:185:in `lookup'
+  rack-cache (1.2) lib/rack/cache/context.rb:66:in `call!'
+  rack-cache (1.2) lib/rack/cache/context.rb:51:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/synthmax/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /Users/synthmax/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /Users/synthmax/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+
+  Rendered /Users/synthmax/.rvm/gems/ruby-1.9.2-p290@bootstrap/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/dk/companies/8" for 127.0.0.1 at 2012-10-12 13:21:27 +0200
+Processing by CompaniesController#show as HTML
+  Parameters: {"locale"=>"dk", "id"=>"8"}
+  [1m[35mInfoPage Load (0.3ms)[0m  SELECT `info_pages`.* FROM `info_pages` 
+  [1m[36mCompany Load (0.2ms)[0m  [1mSELECT `companies`.* FROM `companies` WHERE `companies`.`id` = 8 LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  Rendered shared/_menu.html.slim (0.8ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`company_id` = 8[0m
+  [1m[35mNewspost Load (0.2ms)[0m  SELECT `newsposts`.* FROM `newsposts` WHERE `newsposts`.`internal_letter` = 1 ORDER BY created_at desc LIMIT 3 OFFSET 0
+  Rendered shared/_news.html.slim (2.8ms)
+  Rendered companies/show.html.slim within layouts/application (12.5ms)
+  Rendered shared/_google.html.erb (0.0ms)
+  [1m[36mMeetingroom Load (0.3ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `info_pages`.* FROM `info_pages` 
+Completed 200 OK in 34ms (Views: 26.9ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/dk/companies/8/edit" for 127.0.0.1 at 2012-10-12 13:21:29 +0200
+Processing by CompaniesController#edit as HTML
+  Parameters: {"locale"=>"dk", "id"=>"8"}
+  [1m[36mInfoPage Load (0.3ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages` [0m
+  [1m[35mCompany Load (0.2ms)[0m  SELECT `companies`.* FROM `companies` WHERE `companies`.`id` = 8 LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  Rendered companies/_form.html.slim (5.7ms)
+  Rendered companies/edit.html.slim within layouts/application (7.6ms)
+  Rendered shared/_google.html.erb (0.0ms)
+  [1m[35mMeetingroom Load (0.3ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages` [0m
+Completed 200 OK in 28ms (Views: 22.0ms | ActiveRecord: 1.1ms)
+
+
+Started PUT "/dk/companies/8" for 127.0.0.1 at 2012-10-12 13:21:38 +0200
+Processing by CompaniesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"sGTuMKritxRYtbqZW6m2WCMl4190ygHl/C60gSayiIQ=", "company"=>{"image"=>#<ActionDispatch::Http::UploadedFile:0x007fb3ab128b10 @original_filename="Modern-architectural-designs-3.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"company[image]\"; filename=\"Modern-architectural-designs-3.jpg\"\r\nContent-Type: image/jpeg\r\n", @tempfile=#<File:/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/RackMultipart20121012-57991-12e15t0>>, "title"=>"dfghdfgh", "body"=>"asdf", "phone"=>"sd", "homepage"=>"sdf"}, "commit"=>"Gem", "locale"=>"dk", "id"=>"8"}
+  [1m[35mInfoPage Load (0.3ms)[0m  SELECT `info_pages`.* FROM `info_pages` 
+  [1m[36mCompany Load (0.3ms)[0m  [1mSELECT `companies`.* FROM `companies` WHERE `companies`.`id` = 8 LIMIT 1[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `companies`.* FROM `companies` WHERE `companies`.`id` = 8 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+[32mCommand[0m :: identify -format %wx%h '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-1y3kk9w.jpg[0]'
+[32mCommand[0m :: identify -format %m '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-1y3kk9w.jpg[0]'
+[32mCommand[0m :: identify -format %m '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-1y3kk9w.jpg[0]'
+[32mCommand[0m :: convert '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-1y3kk9w.jpg[0]' -resize "x57" -crop "70x57+0+0" +repage '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-1y3kk9w20121012-57991-1vtdpj5'
+[32mCommand[0m :: file -b --mime '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-1y3kk9w20121012-57991-1vtdpj5'
+[32mCommand[0m :: identify -format %wx%h '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-1y3kk9w.jpg[0]'
+[32mCommand[0m :: identify -format %m '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-1y3kk9w.jpg[0]'
+[32mCommand[0m :: identify -format %m '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-1y3kk9w.jpg[0]'
+[32mCommand[0m :: convert '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-1y3kk9w.jpg[0]' -resize "x114" -crop "140x114+1+0" +repage '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-1y3kk9w20121012-57991-8vcpyp'
+[32mCommand[0m :: file -b --mime '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-1y3kk9w20121012-57991-8vcpyp'
+[32mCommand[0m :: identify -format %wx%h '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-1y3kk9w.jpg[0]'
+[32mCommand[0m :: identify -format %m '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-1y3kk9w.jpg[0]'
+[32mCommand[0m :: identify -format %m '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-1y3kk9w.jpg[0]'
+[32mCommand[0m :: convert '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-1y3kk9w.jpg[0]' -resize "x376" -crop "460x376+4+0" +repage '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-1y3kk9w20121012-57991-kd5lmq'
+[32mCommand[0m :: file -b --mime '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-1y3kk9w20121012-57991-kd5lmq'
+[32mCommand[0m :: identify -format %wx%h '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-1y3kk9w.jpg[0]'
+[32mCommand[0m :: identify -format %m '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-1y3kk9w.jpg[0]'
+[32mCommand[0m :: identify -format %m '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-1y3kk9w.jpg[0]'
+[32mCommand[0m :: convert '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-1y3kk9w.jpg[0]' -resize "754x616>" '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-1y3kk9w20121012-57991-11tzsjl'
+[32mCommand[0m :: file -b --mime '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-1y3kk9w20121012-57991-11tzsjl'
+  [1m[36m (0.4ms)[0m  [1mUPDATE `companies` SET `image_updated_at` = '2012-10-12 11:21:38', `body` = 'asdf', `phone` = 'sd', `homepage` = 'sdf', `updated_at` = '2012-10-12 11:21:39' WHERE `companies`.`id` = 8[0m
+[paperclip] Saving attachments.
+[paperclip] deleting /Users/synthmax/Dropbox/marselistvaervej4/public/system/images/8/original/Modern-architectural-designs-3.jpg
+[paperclip] deleting /Users/synthmax/Dropbox/marselistvaervej4/public/system/images/8/mini/Modern-architectural-designs-3.jpg
+[paperclip] deleting /Users/synthmax/Dropbox/marselistvaervej4/public/system/images/8/thumbnail/Modern-architectural-designs-3.jpg
+[paperclip] deleting /Users/synthmax/Dropbox/marselistvaervej4/public/system/images/8/preview/Modern-architectural-designs-3.jpg
+[paperclip] deleting /Users/synthmax/Dropbox/marselistvaervej4/public/system/images/8/xxl/Modern-architectural-designs-3.jpg
+  [1m[35m (0.4ms)[0m  COMMIT
+[32mCommand[0m :: identify -format %wx%h '/Users/synthmax/Dropbox/marselistvaervej4/public/system/images/8/xxl/Modern-architectural-designs-3.jpg[0]'
+[32mCommand[0m :: identify -format %wx%h '/Users/synthmax/Dropbox/marselistvaervej4/public/system/images/8/original/Modern-architectural-designs-3.jpg[0]'
+  Rendered companies/crop.html.slim within layouts/application (108.9ms)
+  Rendered shared/_google.html.erb (0.0ms)
+  [1m[36mMeetingroom Load (0.3ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1[0m
+  [1m[35mInfoPage Load (0.3ms)[0m  SELECT `info_pages`.* FROM `info_pages` 
+Completed 200 OK in 1233ms (Views: 131.9ms | ActiveRecord: 2.4ms)
+
+
+Started PUT "/dk/companies/8" for 127.0.0.1 at 2012-10-12 13:21:47 +0200
+Processing by CompaniesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"sGTuMKritxRYtbqZW6m2WCMl4190ygHl/C60gSayiIQ=", "company"=>{"crop_x"=>"0", "crop_y"=>"0", "crop_w"=>"1568", "crop_h"=>"1282"}, "commit"=>"Crop", "locale"=>"dk", "id"=>"8"}
+  [1m[36mInfoPage Load (0.3ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages` [0m
+  [1m[35mCompany Load (0.3ms)[0m  SELECT `companies`.* FROM `companies` WHERE `companies`.`id` = 8 LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `companies`.* FROM `companies` WHERE `companies`.`id` = 8 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+[32mCommand[0m :: identify -format %wx%h '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-1hcn47.jpg[0]'
+[32mCommand[0m :: identify -format %m '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-1hcn47.jpg[0]'
+[32mCommand[0m :: identify -format %m '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-1hcn47.jpg[0]'
+[32mCommand[0m :: convert '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-1hcn47.jpg[0]' -crop 1568x1282+0+0 -resize "x57" +repage '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-1hcn4720121012-57991-1ulge6h'
+[32mCommand[0m :: file -b --mime '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-1hcn4720121012-57991-1ulge6h'
+[32mCommand[0m :: identify -format %wx%h '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-1hcn47.jpg[0]'
+[32mCommand[0m :: identify -format %m '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-1hcn47.jpg[0]'
+[32mCommand[0m :: identify -format %m '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-1hcn47.jpg[0]'
+[32mCommand[0m :: convert '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-1hcn47.jpg[0]' -crop 1568x1282+0+0 -resize "x114" +repage '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-1hcn4720121012-57991-9bhvso'
+[32mCommand[0m :: file -b --mime '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-1hcn4720121012-57991-9bhvso'
+[32mCommand[0m :: identify -format %wx%h '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-1hcn47.jpg[0]'
+[32mCommand[0m :: identify -format %m '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-1hcn47.jpg[0]'
+[32mCommand[0m :: identify -format %m '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-1hcn47.jpg[0]'
+[32mCommand[0m :: convert '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-1hcn47.jpg[0]' -crop 1568x1282+0+0 -resize "x376" +repage '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-1hcn4720121012-57991-j1ac5k'
+[32mCommand[0m :: file -b --mime '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-1hcn4720121012-57991-j1ac5k'
+[32mCommand[0m :: identify -format %wx%h '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-1hcn47.jpg[0]'
+[32mCommand[0m :: identify -format %m '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-1hcn47.jpg[0]'
+[32mCommand[0m :: identify -format %m '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-1hcn47.jpg[0]'
+[32mCommand[0m :: convert '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-1hcn47.jpg[0]' -crop 1568x1282+0+0 -resize "754x616>" '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-1hcn4720121012-57991-1b4kumy'
+[32mCommand[0m :: file -b --mime '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-1hcn4720121012-57991-1b4kumy'
+[paperclip] deleting /Users/synthmax/Dropbox/marselistvaervej4/public/system/images/8/original/Modern-architectural-designs-3.jpg
+[paperclip] deleting /Users/synthmax/Dropbox/marselistvaervej4/public/system/images/8/mini/Modern-architectural-designs-3.jpg
+[paperclip] deleting /Users/synthmax/Dropbox/marselistvaervej4/public/system/images/8/thumbnail/Modern-architectural-designs-3.jpg
+[paperclip] deleting /Users/synthmax/Dropbox/marselistvaervej4/public/system/images/8/preview/Modern-architectural-designs-3.jpg
+[paperclip] deleting /Users/synthmax/Dropbox/marselistvaervej4/public/system/images/8/xxl/Modern-architectural-designs-3.jpg
+[paperclip] Saving attachments.
+  [1m[35m (0.1ms)[0m  COMMIT
+Redirected to http://localhost:3000/dk/companies/8
+Completed 302 Found in 1045ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/dk/companies/8" for 127.0.0.1 at 2012-10-12 13:21:48 +0200
+Processing by CompaniesController#show as HTML
+  Parameters: {"locale"=>"dk", "id"=>"8"}
+  [1m[36mInfoPage Load (0.3ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages` [0m
+  [1m[35mCompany Load (0.4ms)[0m  SELECT `companies`.* FROM `companies` WHERE `companies`.`id` = 8 LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  Rendered shared/_menu.html.slim (1.4ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`company_id` = 8
+  [1m[36mNewspost Load (0.2ms)[0m  [1mSELECT `newsposts`.* FROM `newsposts` WHERE `newsposts`.`internal_letter` = 1 ORDER BY created_at desc LIMIT 3 OFFSET 0[0m
+  Rendered shared/_news.html.slim (3.9ms)
+  Rendered companies/show.html.slim within layouts/application (11.2ms)
+  Rendered shared/_google.html.erb (0.0ms)
+  [1m[35mMeetingroom Load (0.3ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages` [0m
+Completed 200 OK in 38ms (Views: 29.4ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/dk/companies/8/edit" for 127.0.0.1 at 2012-10-12 13:21:52 +0200
+Processing by CompaniesController#edit as HTML
+  Parameters: {"locale"=>"dk", "id"=>"8"}
+  [1m[35mInfoPage Load (0.3ms)[0m  SELECT `info_pages`.* FROM `info_pages` 
+  [1m[36mCompany Load (0.3ms)[0m  [1mSELECT `companies`.* FROM `companies` WHERE `companies`.`id` = 8 LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  Rendered companies/_form.html.slim (1.6ms)
+  Rendered companies/edit.html.slim within layouts/application (2.2ms)
+  Rendered shared/_google.html.erb (0.0ms)
+  [1m[36mMeetingroom Load (0.3ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `info_pages`.* FROM `info_pages` 
+Completed 200 OK in 23ms (Views: 17.5ms | ActiveRecord: 1.1ms)
+
+
+Started PUT "/dk/companies/8" for 127.0.0.1 at 2012-10-12 13:23:08 +0200
+Processing by CompaniesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"sGTuMKritxRYtbqZW6m2WCMl4190ygHl/C60gSayiIQ=", "company"=>{"image"=>#<ActionDispatch::Http::UploadedFile:0x007fb3a980aac0 @original_filename="Modern-architectural-designs-3.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"company[image]\"; filename=\"Modern-architectural-designs-3.jpg\"\r\nContent-Type: image/jpeg\r\n", @tempfile=#<File:/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/RackMultipart20121012-57991-1a418qu>>, "title"=>"dfghdfgh", "body"=>"asdf", "phone"=>"sd", "homepage"=>"sdf"}, "commit"=>"Gem", "locale"=>"dk", "id"=>"8"}
+  [1m[36mInfoPage Load (0.3ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages` [0m
+  [1m[35mCompany Load (0.3ms)[0m  SELECT `companies`.* FROM `companies` WHERE `companies`.`id` = 8 LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `companies`.* FROM `companies` WHERE `companies`.`id` = 8 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+[32mCommand[0m :: identify -format %wx%h '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-1jhlns5.jpg[0]'
+[32mCommand[0m :: identify -format %m '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-1jhlns5.jpg[0]'
+[32mCommand[0m :: identify -format %m '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-1jhlns5.jpg[0]'
+[32mCommand[0m :: convert '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-1jhlns5.jpg[0]' -resize "x57" -crop "70x57+0+0" +repage '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-1jhlns520121012-57991-musuze'
+[32mCommand[0m :: file -b --mime '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-1jhlns520121012-57991-musuze'
+[32mCommand[0m :: identify -format %wx%h '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-1jhlns5.jpg[0]'
+[32mCommand[0m :: identify -format %m '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-1jhlns5.jpg[0]'
+[32mCommand[0m :: identify -format %m '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-1jhlns5.jpg[0]'
+[32mCommand[0m :: convert '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-1jhlns5.jpg[0]' -resize "x114" -crop "140x114+1+0" +repage '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-1jhlns520121012-57991-1g5wjmf'
+[32mCommand[0m :: file -b --mime '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-1jhlns520121012-57991-1g5wjmf'
+[32mCommand[0m :: identify -format %wx%h '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-1jhlns5.jpg[0]'
+[32mCommand[0m :: identify -format %m '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-1jhlns5.jpg[0]'
+[32mCommand[0m :: identify -format %m '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-1jhlns5.jpg[0]'
+[32mCommand[0m :: convert '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-1jhlns5.jpg[0]' -resize "x376" -crop "460x376+4+0" +repage '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-1jhlns520121012-57991-17i2nh7'
+[32mCommand[0m :: file -b --mime '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-1jhlns520121012-57991-17i2nh7'
+[32mCommand[0m :: identify -format %wx%h '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-1jhlns5.jpg[0]'
+[32mCommand[0m :: identify -format %m '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-1jhlns5.jpg[0]'
+[32mCommand[0m :: identify -format %m '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-1jhlns5.jpg[0]'
+[32mCommand[0m :: convert '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-1jhlns5.jpg[0]' -resize "754x616>" '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-1jhlns520121012-57991-d4o4wq'
+[32mCommand[0m :: file -b --mime '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-1jhlns520121012-57991-d4o4wq'
+  [1m[35m (0.3ms)[0m  UPDATE `companies` SET `image_updated_at` = '2012-10-12 11:23:08', `updated_at` = '2012-10-12 11:23:09' WHERE `companies`.`id` = 8
+[paperclip] Saving attachments.
+[paperclip] deleting /Users/synthmax/Dropbox/marselistvaervej4/public/system/images/8/original/Modern-architectural-designs-3.jpg
+[paperclip] deleting /Users/synthmax/Dropbox/marselistvaervej4/public/system/images/8/mini/Modern-architectural-designs-3.jpg
+[paperclip] deleting /Users/synthmax/Dropbox/marselistvaervej4/public/system/images/8/thumbnail/Modern-architectural-designs-3.jpg
+[paperclip] deleting /Users/synthmax/Dropbox/marselistvaervej4/public/system/images/8/preview/Modern-architectural-designs-3.jpg
+[paperclip] deleting /Users/synthmax/Dropbox/marselistvaervej4/public/system/images/8/xxl/Modern-architectural-designs-3.jpg
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+[32mCommand[0m :: identify -format %wx%h '/Users/synthmax/Dropbox/marselistvaervej4/public/system/images/8/xxl/Modern-architectural-designs-3.jpg[0]'
+[32mCommand[0m :: identify -format %wx%h '/Users/synthmax/Dropbox/marselistvaervej4/public/system/images/8/original/Modern-architectural-designs-3.jpg[0]'
+  Rendered companies/crop.html.slim within layouts/application (48.9ms)
+  Rendered shared/_google.html.erb (0.1ms)
+  [1m[35mMeetingroom Load (0.3ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1
+  [1m[36mInfoPage Load (0.4ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages` [0m
+Completed 200 OK in 1030ms (Views: 74.2ms | ActiveRecord: 2.2ms)
+
+
+Started PUT "/dk/companies/8" for 127.0.0.1 at 2012-10-12 13:23:43 +0200
+Processing by CompaniesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"sGTuMKritxRYtbqZW6m2WCMl4190ygHl/C60gSayiIQ=", "company"=>{"image"=>#<ActionDispatch::Http::UploadedFile:0x007fb3a8376988 @original_filename="Modern-architectural-designs-3.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"company[image]\"; filename=\"Modern-architectural-designs-3.jpg\"\r\nContent-Type: image/jpeg\r\n", @tempfile=#<File:/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/RackMultipart20121012-57991-1j51rna>>, "title"=>"dfghdfgh", "body"=>"asdf", "phone"=>"sd", "homepage"=>"sdf"}, "commit"=>"Gem", "locale"=>"dk", "id"=>"8"}
+  [1m[35mInfoPage Load (0.4ms)[0m  SELECT `info_pages`.* FROM `info_pages` 
+  [1m[36mCompany Load (0.2ms)[0m  [1mSELECT `companies`.* FROM `companies` WHERE `companies`.`id` = 8 LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `companies`.* FROM `companies` WHERE `companies`.`id` = 8 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+[32mCommand[0m :: identify -format %wx%h '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-1rwx40w.jpg[0]'
+[32mCommand[0m :: identify -format %m '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-1rwx40w.jpg[0]'
+[32mCommand[0m :: identify -format %m '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-1rwx40w.jpg[0]'
+[32mCommand[0m :: convert '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-1rwx40w.jpg[0]' -resize "x57" -crop "70x57+0+0" +repage '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-1rwx40w20121012-57991-o4e91y'
+[32mCommand[0m :: file -b --mime '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-1rwx40w20121012-57991-o4e91y'
+[32mCommand[0m :: identify -format %wx%h '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-1rwx40w.jpg[0]'
+[32mCommand[0m :: identify -format %m '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-1rwx40w.jpg[0]'
+[32mCommand[0m :: identify -format %m '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-1rwx40w.jpg[0]'
+[32mCommand[0m :: convert '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-1rwx40w.jpg[0]' -resize "x114" -crop "140x114+1+0" +repage '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-1rwx40w20121012-57991-1ayvisa'
+[32mCommand[0m :: file -b --mime '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-1rwx40w20121012-57991-1ayvisa'
+[32mCommand[0m :: identify -format %wx%h '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-1rwx40w.jpg[0]'
+[32mCommand[0m :: identify -format %m '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-1rwx40w.jpg[0]'
+[32mCommand[0m :: identify -format %m '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-1rwx40w.jpg[0]'
+[32mCommand[0m :: convert '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-1rwx40w.jpg[0]' -resize "x376" -crop "460x376+4+0" +repage '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-1rwx40w20121012-57991-7bwkgr'
+[32mCommand[0m :: file -b --mime '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-1rwx40w20121012-57991-7bwkgr'
+[32mCommand[0m :: identify -format %wx%h '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-1rwx40w.jpg[0]'
+[32mCommand[0m :: identify -format %m '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-1rwx40w.jpg[0]'
+[32mCommand[0m :: identify -format %m '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-1rwx40w.jpg[0]'
+[32mCommand[0m :: convert '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-1rwx40w.jpg[0]' -resize "754x616>" '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-1rwx40w20121012-57991-1iyguyf'
+[32mCommand[0m :: file -b --mime '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-1rwx40w20121012-57991-1iyguyf'
+  [1m[36m (0.4ms)[0m  [1mUPDATE `companies` SET `image_updated_at` = '2012-10-12 11:23:43', `updated_at` = '2012-10-12 11:23:44' WHERE `companies`.`id` = 8[0m
+[paperclip] Saving attachments.
+[paperclip] deleting /Users/synthmax/Dropbox/marselistvaervej4/public/system/images/8/original/Modern-architectural-designs-3.jpg
+[paperclip] deleting /Users/synthmax/Dropbox/marselistvaervej4/public/system/images/8/mini/Modern-architectural-designs-3.jpg
+[paperclip] deleting /Users/synthmax/Dropbox/marselistvaervej4/public/system/images/8/thumbnail/Modern-architectural-designs-3.jpg
+[paperclip] deleting /Users/synthmax/Dropbox/marselistvaervej4/public/system/images/8/preview/Modern-architectural-designs-3.jpg
+[paperclip] deleting /Users/synthmax/Dropbox/marselistvaervej4/public/system/images/8/xxl/Modern-architectural-designs-3.jpg
+  [1m[35m (0.4ms)[0m  COMMIT
+Compiled jquery.Jcrop.css  (0ms)  (pid 57991)
+[32mCommand[0m :: identify -format %wx%h '/Users/synthmax/Dropbox/marselistvaervej4/public/system/images/8/xxl/Modern-architectural-designs-3.jpg[0]'
+[32mCommand[0m :: identify -format %wx%h '/Users/synthmax/Dropbox/marselistvaervej4/public/system/images/8/original/Modern-architectural-designs-3.jpg[0]'
+  Rendered companies/crop.html.slim within layouts/application (161.1ms)
+  Rendered shared/_google.html.erb (0.0ms)
+  [1m[36mMeetingroom Load (0.3ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1[0m
+  [1m[35mInfoPage Load (0.2ms)[0m  SELECT `info_pages`.* FROM `info_pages` 
+Completed 200 OK in 1134ms (Views: 182.0ms | ActiveRecord: 2.3ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/Jcrop.gif"):
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  quiet_assets (1.0.1) lib/quiet_assets.rb:20:in `call_with_quiet_assets'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/static.rb:62:in `call'
+  rack-cache (1.2) lib/rack/cache/context.rb:136:in `forward'
+  rack-cache (1.2) lib/rack/cache/context.rb:245:in `fetch'
+  rack-cache (1.2) lib/rack/cache/context.rb:185:in `lookup'
+  rack-cache (1.2) lib/rack/cache/context.rb:66:in `call!'
+  rack-cache (1.2) lib/rack/cache/context.rb:51:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/synthmax/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /Users/synthmax/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /Users/synthmax/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+
+
+
+Started PUT "/dk/companies/8" for 127.0.0.1 at 2012-10-12 13:24:32 +0200
+Processing by CompaniesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"sGTuMKritxRYtbqZW6m2WCMl4190ygHl/C60gSayiIQ=", "company"=>{"image"=>#<ActionDispatch::Http::UploadedFile:0x007fb3ab7638b8 @original_filename="Modern-architectural-designs-3.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"company[image]\"; filename=\"Modern-architectural-designs-3.jpg\"\r\nContent-Type: image/jpeg\r\n", @tempfile=#<File:/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/RackMultipart20121012-57991-1b745ka>>, "title"=>"dfghdfgh", "body"=>"asdf", "phone"=>"sd", "homepage"=>"sdf"}, "commit"=>"Gem", "locale"=>"dk", "id"=>"8"}
+  [1m[36mInfoPage Load (0.5ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages` [0m
+  [1m[35mCompany Load (0.2ms)[0m  SELECT `companies`.* FROM `companies` WHERE `companies`.`id` = 8 LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `companies`.* FROM `companies` WHERE `companies`.`id` = 8 LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+[32mCommand[0m :: identify -format %wx%h '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-xosdya.jpg[0]'
+[32mCommand[0m :: identify -format %m '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-xosdya.jpg[0]'
+[32mCommand[0m :: identify -format %m '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-xosdya.jpg[0]'
+[32mCommand[0m :: convert '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-xosdya.jpg[0]' -resize "x57" -crop "70x57+0+0" +repage '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-xosdya20121012-57991-1pamzc'
+[32mCommand[0m :: file -b --mime '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-xosdya20121012-57991-1pamzc'
+[32mCommand[0m :: identify -format %wx%h '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-xosdya.jpg[0]'
+[32mCommand[0m :: identify -format %m '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-xosdya.jpg[0]'
+[32mCommand[0m :: identify -format %m '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-xosdya.jpg[0]'
+[32mCommand[0m :: convert '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-xosdya.jpg[0]' -resize "x114" -crop "140x114+1+0" +repage '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-xosdya20121012-57991-nugwp9'
+[32mCommand[0m :: file -b --mime '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-xosdya20121012-57991-nugwp9'
+[32mCommand[0m :: identify -format %wx%h '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-xosdya.jpg[0]'
+[32mCommand[0m :: identify -format %m '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-xosdya.jpg[0]'
+[32mCommand[0m :: identify -format %m '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-xosdya.jpg[0]'
+[32mCommand[0m :: convert '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-xosdya.jpg[0]' -resize "x376" -crop "460x376+4+0" +repage '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-xosdya20121012-57991-1gi4ze6'
+[32mCommand[0m :: file -b --mime '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-xosdya20121012-57991-1gi4ze6'
+[32mCommand[0m :: identify -format %wx%h '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-xosdya.jpg[0]'
+[32mCommand[0m :: identify -format %m '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-xosdya.jpg[0]'
+[32mCommand[0m :: identify -format %m '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-xosdya.jpg[0]'
+[32mCommand[0m :: convert '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-xosdya.jpg[0]' -resize "754x616>" '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-xosdya20121012-57991-1vvb0e9'
+[32mCommand[0m :: file -b --mime '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-xosdya20121012-57991-1vvb0e9'
+  [1m[35m (0.3ms)[0m  UPDATE `companies` SET `image_updated_at` = '2012-10-12 11:24:32', `updated_at` = '2012-10-12 11:24:33' WHERE `companies`.`id` = 8
+[paperclip] Saving attachments.
+[paperclip] deleting /Users/synthmax/Dropbox/marselistvaervej4/public/system/images/8/original/Modern-architectural-designs-3.jpg
+[paperclip] deleting /Users/synthmax/Dropbox/marselistvaervej4/public/system/images/8/mini/Modern-architectural-designs-3.jpg
+[paperclip] deleting /Users/synthmax/Dropbox/marselistvaervej4/public/system/images/8/thumbnail/Modern-architectural-designs-3.jpg
+[paperclip] deleting /Users/synthmax/Dropbox/marselistvaervej4/public/system/images/8/preview/Modern-architectural-designs-3.jpg
+[paperclip] deleting /Users/synthmax/Dropbox/marselistvaervej4/public/system/images/8/xxl/Modern-architectural-designs-3.jpg
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+[32mCommand[0m :: identify -format %wx%h '/Users/synthmax/Dropbox/marselistvaervej4/public/system/images/8/xxl/Modern-architectural-designs-3.jpg[0]'
+[32mCommand[0m :: identify -format %wx%h '/Users/synthmax/Dropbox/marselistvaervej4/public/system/images/8/original/Modern-architectural-designs-3.jpg[0]'
+  Rendered companies/crop.html.slim within layouts/application (55.4ms)
+Compiled application.js  (11ms)  (pid 57991)
+  Rendered shared/_google.html.erb (0.0ms)
+  [1m[35mMeetingroom Load (0.4ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1
+  [1m[36mInfoPage Load (0.2ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages` [0m
+Completed 200 OK in 1157ms (Views: 190.2ms | ActiveRecord: 2.6ms)
+
+
+Started PUT "/dk/companies/8" for 127.0.0.1 at 2012-10-12 13:25:31 +0200
+Processing by CompaniesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"sGTuMKritxRYtbqZW6m2WCMl4190ygHl/C60gSayiIQ=", "company"=>{"image"=>#<ActionDispatch::Http::UploadedFile:0x007fb3aa838a78 @original_filename="Modern-architectural-designs-3.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"company[image]\"; filename=\"Modern-architectural-designs-3.jpg\"\r\nContent-Type: image/jpeg\r\n", @tempfile=#<File:/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/RackMultipart20121012-57991-agdb09>>, "title"=>"dfghdfgh", "body"=>"asdf", "phone"=>"sd", "homepage"=>"sdf"}, "commit"=>"Gem", "locale"=>"dk", "id"=>"8"}
+  [1m[35mInfoPage Load (0.5ms)[0m  SELECT `info_pages`.* FROM `info_pages` 
+  [1m[36mCompany Load (0.2ms)[0m  [1mSELECT `companies`.* FROM `companies` WHERE `companies`.`id` = 8 LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `companies`.* FROM `companies` WHERE `companies`.`id` = 8 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+[32mCommand[0m :: identify -format %wx%h '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-6x371.jpg[0]'
+[32mCommand[0m :: identify -format %m '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-6x371.jpg[0]'
+[32mCommand[0m :: identify -format %m '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-6x371.jpg[0]'
+[32mCommand[0m :: convert '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-6x371.jpg[0]' -resize "x57" -crop "70x57+0+0" +repage '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-6x37120121012-57991-1n3iwun'
+[32mCommand[0m :: file -b --mime '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-6x37120121012-57991-1n3iwun'
+[32mCommand[0m :: identify -format %wx%h '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-6x371.jpg[0]'
+[32mCommand[0m :: identify -format %m '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-6x371.jpg[0]'
+[32mCommand[0m :: identify -format %m '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-6x371.jpg[0]'
+[32mCommand[0m :: convert '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-6x371.jpg[0]' -resize "x114" -crop "140x114+1+0" +repage '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-6x37120121012-57991-zceuph'
+[32mCommand[0m :: file -b --mime '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-6x37120121012-57991-zceuph'
+[32mCommand[0m :: identify -format %wx%h '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-6x371.jpg[0]'
+[32mCommand[0m :: identify -format %m '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-6x371.jpg[0]'
+[32mCommand[0m :: identify -format %m '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-6x371.jpg[0]'
+[32mCommand[0m :: convert '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-6x371.jpg[0]' -resize "x376" -crop "460x376+4+0" +repage '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-6x37120121012-57991-83sdgf'
+[32mCommand[0m :: file -b --mime '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-6x37120121012-57991-83sdgf'
+[32mCommand[0m :: identify -format %wx%h '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-6x371.jpg[0]'
+[32mCommand[0m :: identify -format %m '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-6x371.jpg[0]'
+[32mCommand[0m :: identify -format %m '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-6x371.jpg[0]'
+[32mCommand[0m :: convert '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-6x371.jpg[0]' -resize "754x616>" '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-6x37120121012-57991-iulymi'
+[32mCommand[0m :: file -b --mime '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-6x37120121012-57991-iulymi'
+  [1m[36m (0.5ms)[0m  [1mUPDATE `companies` SET `image_updated_at` = '2012-10-12 11:25:31', `updated_at` = '2012-10-12 11:25:32' WHERE `companies`.`id` = 8[0m
+[paperclip] Saving attachments.
+[paperclip] deleting /Users/synthmax/Dropbox/marselistvaervej4/public/system/images/8/original/Modern-architectural-designs-3.jpg
+[paperclip] deleting /Users/synthmax/Dropbox/marselistvaervej4/public/system/images/8/mini/Modern-architectural-designs-3.jpg
+[paperclip] deleting /Users/synthmax/Dropbox/marselistvaervej4/public/system/images/8/thumbnail/Modern-architectural-designs-3.jpg
+[paperclip] deleting /Users/synthmax/Dropbox/marselistvaervej4/public/system/images/8/preview/Modern-architectural-designs-3.jpg
+[paperclip] deleting /Users/synthmax/Dropbox/marselistvaervej4/public/system/images/8/xxl/Modern-architectural-designs-3.jpg
+  [1m[35m (0.4ms)[0m  COMMIT
+[32mCommand[0m :: identify -format %wx%h '/Users/synthmax/Dropbox/marselistvaervej4/public/system/images/8/xxl/Modern-architectural-designs-3.jpg[0]'
+[32mCommand[0m :: identify -format %wx%h '/Users/synthmax/Dropbox/marselistvaervej4/public/system/images/8/original/Modern-architectural-designs-3.jpg[0]'
+  Rendered companies/crop.html.slim within layouts/application (50.7ms)
+  Rendered shared/_google.html.erb (0.0ms)
+  [1m[36mMeetingroom Load (0.3ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1[0m
+  [1m[35mInfoPage Load (0.3ms)[0m  SELECT `info_pages`.* FROM `info_pages` 
+Completed 200 OK in 1042ms (Views: 136.3ms | ActiveRecord: 2.5ms)
+
+
+Started PUT "/dk/companies/8" for 127.0.0.1 at 2012-10-12 13:25:51 +0200
+Processing by CompaniesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"sGTuMKritxRYtbqZW6m2WCMl4190ygHl/C60gSayiIQ=", "company"=>{"image"=>#<ActionDispatch::Http::UploadedFile:0x007fb3a5f2af48 @original_filename="Modern-architectural-designs-3.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"company[image]\"; filename=\"Modern-architectural-designs-3.jpg\"\r\nContent-Type: image/jpeg\r\n", @tempfile=#<File:/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/RackMultipart20121012-57991-wuaq18>>, "title"=>"dfghdfgh", "body"=>"asdf", "phone"=>"sd", "homepage"=>"sdf"}, "commit"=>"Gem", "locale"=>"dk", "id"=>"8"}
+  [1m[36mInfoPage Load (0.4ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages` [0m
+  [1m[35mCompany Load (0.4ms)[0m  SELECT `companies`.* FROM `companies` WHERE `companies`.`id` = 8 LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `companies`.* FROM `companies` WHERE `companies`.`id` = 8 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+[32mCommand[0m :: identify -format %wx%h '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-cg6kxl.jpg[0]'
+[32mCommand[0m :: identify -format %m '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-cg6kxl.jpg[0]'
+[32mCommand[0m :: identify -format %m '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-cg6kxl.jpg[0]'
+[32mCommand[0m :: convert '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-cg6kxl.jpg[0]' -resize "x57" -crop "70x57+0+0" +repage '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-cg6kxl20121012-57991-x2573s'
+[32mCommand[0m :: file -b --mime '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-cg6kxl20121012-57991-x2573s'
+[32mCommand[0m :: identify -format %wx%h '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-cg6kxl.jpg[0]'
+[32mCommand[0m :: identify -format %m '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-cg6kxl.jpg[0]'
+[32mCommand[0m :: identify -format %m '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-cg6kxl.jpg[0]'
+[32mCommand[0m :: convert '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-cg6kxl.jpg[0]' -resize "x114" -crop "140x114+1+0" +repage '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-cg6kxl20121012-57991-h2e8ln'
+[32mCommand[0m :: file -b --mime '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-cg6kxl20121012-57991-h2e8ln'
+[32mCommand[0m :: identify -format %wx%h '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-cg6kxl.jpg[0]'
+[32mCommand[0m :: identify -format %m '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-cg6kxl.jpg[0]'
+[32mCommand[0m :: identify -format %m '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-cg6kxl.jpg[0]'
+[32mCommand[0m :: convert '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-cg6kxl.jpg[0]' -resize "x376" -crop "460x376+4+0" +repage '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-cg6kxl20121012-57991-1w0oq2s'
+[32mCommand[0m :: file -b --mime '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-cg6kxl20121012-57991-1w0oq2s'
+[32mCommand[0m :: identify -format %wx%h '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-cg6kxl.jpg[0]'
+[32mCommand[0m :: identify -format %m '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-cg6kxl.jpg[0]'
+[32mCommand[0m :: identify -format %m '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-cg6kxl.jpg[0]'
+[32mCommand[0m :: convert '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-cg6kxl.jpg[0]' -resize "754x616>" '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-cg6kxl20121012-57991-os1p2u'
+[32mCommand[0m :: file -b --mime '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-cg6kxl20121012-57991-os1p2u'
+  [1m[35m (0.2ms)[0m  UPDATE `companies` SET `image_updated_at` = '2012-10-12 11:25:51', `updated_at` = '2012-10-12 11:25:52' WHERE `companies`.`id` = 8
+[paperclip] Saving attachments.
+[paperclip] deleting /Users/synthmax/Dropbox/marselistvaervej4/public/system/images/8/original/Modern-architectural-designs-3.jpg
+[paperclip] deleting /Users/synthmax/Dropbox/marselistvaervej4/public/system/images/8/mini/Modern-architectural-designs-3.jpg
+[paperclip] deleting /Users/synthmax/Dropbox/marselistvaervej4/public/system/images/8/thumbnail/Modern-architectural-designs-3.jpg
+[paperclip] deleting /Users/synthmax/Dropbox/marselistvaervej4/public/system/images/8/preview/Modern-architectural-designs-3.jpg
+[paperclip] deleting /Users/synthmax/Dropbox/marselistvaervej4/public/system/images/8/xxl/Modern-architectural-designs-3.jpg
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+[32mCommand[0m :: identify -format %wx%h '/Users/synthmax/Dropbox/marselistvaervej4/public/system/images/8/xxl/Modern-architectural-designs-3.jpg[0]'
+[32mCommand[0m :: identify -format %wx%h '/Users/synthmax/Dropbox/marselistvaervej4/public/system/images/8/original/Modern-architectural-designs-3.jpg[0]'
+  Rendered companies/crop.html.slim within layouts/application (51.3ms)
+  Rendered shared/_google.html.erb (0.0ms)
+  [1m[35mMeetingroom Load (0.4ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1
+  [1m[36mInfoPage Load (0.3ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages` [0m
+Completed 200 OK in 980ms (Views: 73.8ms | ActiveRecord: 2.3ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/Jcrop.gif"):
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  quiet_assets (1.0.1) lib/quiet_assets.rb:20:in `call_with_quiet_assets'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/static.rb:62:in `call'
+  rack-cache (1.2) lib/rack/cache/context.rb:136:in `forward'
+  rack-cache (1.2) lib/rack/cache/context.rb:245:in `fetch'
+  rack-cache (1.2) lib/rack/cache/context.rb:185:in `lookup'
+  rack-cache (1.2) lib/rack/cache/context.rb:66:in `call!'
+  rack-cache (1.2) lib/rack/cache/context.rb:51:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/synthmax/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /Users/synthmax/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /Users/synthmax/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+
+
+
+Started PUT "/dk/companies/8" for 127.0.0.1 at 2012-10-12 13:26:39 +0200
+Processing by CompaniesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"sGTuMKritxRYtbqZW6m2WCMl4190ygHl/C60gSayiIQ=", "company"=>{"image"=>#<ActionDispatch::Http::UploadedFile:0x007fb3a82a9168 @original_filename="Modern-architectural-designs-3.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"company[image]\"; filename=\"Modern-architectural-designs-3.jpg\"\r\nContent-Type: image/jpeg\r\n", @tempfile=#<File:/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/RackMultipart20121012-57991-1sqbcfs>>, "title"=>"dfghdfgh", "body"=>"asdf", "phone"=>"sd", "homepage"=>"sdf"}, "commit"=>"Gem", "locale"=>"dk", "id"=>"8"}
+  [1m[35mInfoPage Load (0.2ms)[0m  SELECT `info_pages`.* FROM `info_pages` 
+  [1m[36mCompany Load (0.3ms)[0m  [1mSELECT `companies`.* FROM `companies` WHERE `companies`.`id` = 8 LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `companies`.* FROM `companies` WHERE `companies`.`id` = 8 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+[32mCommand[0m :: identify -format %wx%h '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-9wo1ae.jpg[0]'
+[32mCommand[0m :: identify -format %m '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-9wo1ae.jpg[0]'
+[32mCommand[0m :: identify -format %m '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-9wo1ae.jpg[0]'
+[32mCommand[0m :: convert '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-9wo1ae.jpg[0]' -resize "x57" -crop "70x57+0+0" +repage '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-9wo1ae20121012-57991-1beu0r3'
+[32mCommand[0m :: file -b --mime '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-9wo1ae20121012-57991-1beu0r3'
+[32mCommand[0m :: identify -format %wx%h '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-9wo1ae.jpg[0]'
+[32mCommand[0m :: identify -format %m '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-9wo1ae.jpg[0]'
+[32mCommand[0m :: identify -format %m '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-9wo1ae.jpg[0]'
+[32mCommand[0m :: convert '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-9wo1ae.jpg[0]' -resize "x114" -crop "140x114+1+0" +repage '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-9wo1ae20121012-57991-14j13zc'
+[32mCommand[0m :: file -b --mime '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-9wo1ae20121012-57991-14j13zc'
+[32mCommand[0m :: identify -format %wx%h '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-9wo1ae.jpg[0]'
+[32mCommand[0m :: identify -format %m '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-9wo1ae.jpg[0]'
+[32mCommand[0m :: identify -format %m '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-9wo1ae.jpg[0]'
+[32mCommand[0m :: convert '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-9wo1ae.jpg[0]' -resize "x376" -crop "460x376+4+0" +repage '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-9wo1ae20121012-57991-5w51h1'
+[32mCommand[0m :: file -b --mime '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-9wo1ae20121012-57991-5w51h1'
+[32mCommand[0m :: identify -format %wx%h '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-9wo1ae.jpg[0]'
+[32mCommand[0m :: identify -format %m '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-9wo1ae.jpg[0]'
+[32mCommand[0m :: identify -format %m '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-9wo1ae.jpg[0]'
+[32mCommand[0m :: convert '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-9wo1ae.jpg[0]' -resize "754x616>" '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-9wo1ae20121012-57991-6ztp7'
+[32mCommand[0m :: file -b --mime '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-9wo1ae20121012-57991-6ztp7'
+  [1m[36m (0.3ms)[0m  [1mUPDATE `companies` SET `image_updated_at` = '2012-10-12 11:26:39', `updated_at` = '2012-10-12 11:26:40' WHERE `companies`.`id` = 8[0m
+[paperclip] Saving attachments.
+[paperclip] deleting /Users/synthmax/Dropbox/marselistvaervej4/public/system/images/8/original/Modern-architectural-designs-3.jpg
+[paperclip] deleting /Users/synthmax/Dropbox/marselistvaervej4/public/system/images/8/mini/Modern-architectural-designs-3.jpg
+[paperclip] deleting /Users/synthmax/Dropbox/marselistvaervej4/public/system/images/8/thumbnail/Modern-architectural-designs-3.jpg
+[paperclip] deleting /Users/synthmax/Dropbox/marselistvaervej4/public/system/images/8/preview/Modern-architectural-designs-3.jpg
+[paperclip] deleting /Users/synthmax/Dropbox/marselistvaervej4/public/system/images/8/xxl/Modern-architectural-designs-3.jpg
+  [1m[35m (0.5ms)[0m  COMMIT
+[32mCommand[0m :: identify -format %wx%h '/Users/synthmax/Dropbox/marselistvaervej4/public/system/images/8/xxl/Modern-architectural-designs-3.jpg[0]'
+[32mCommand[0m :: identify -format %wx%h '/Users/synthmax/Dropbox/marselistvaervej4/public/system/images/8/original/Modern-architectural-designs-3.jpg[0]'
+  Rendered companies/crop.html.slim within layouts/application (54.9ms)
+Compiled application.css  (15ms)  (pid 57991)
+  Rendered shared/_google.html.erb (0.0ms)
+  [1m[36mMeetingroom Load (0.3ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1[0m
+  [1m[35mInfoPage Load (0.2ms)[0m  SELECT `info_pages`.* FROM `info_pages` 
+Completed 200 OK in 1083ms (Views: 172.3ms | ActiveRecord: 2.2ms)
+
+
+Started PUT "/dk/companies/8" for 127.0.0.1 at 2012-10-12 13:27:11 +0200
+Processing by CompaniesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"sGTuMKritxRYtbqZW6m2WCMl4190ygHl/C60gSayiIQ=", "company"=>{"image"=>#<ActionDispatch::Http::UploadedFile:0x007fb3ab4321f8 @original_filename="Modern-architectural-designs-3.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"company[image]\"; filename=\"Modern-architectural-designs-3.jpg\"\r\nContent-Type: image/jpeg\r\n", @tempfile=#<File:/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/RackMultipart20121012-57991-1drhgxo>>, "title"=>"dfghdfgh", "body"=>"asdf", "phone"=>"sd", "homepage"=>"sdf"}, "commit"=>"Gem", "locale"=>"dk", "id"=>"8"}
+  [1m[36mInfoPage Load (0.4ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages` [0m
+  [1m[35mCompany Load (0.2ms)[0m  SELECT `companies`.* FROM `companies` WHERE `companies`.`id` = 8 LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `companies`.* FROM `companies` WHERE `companies`.`id` = 8 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+[32mCommand[0m :: identify -format %wx%h '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-x1zqpw.jpg[0]'
+[32mCommand[0m :: identify -format %m '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-x1zqpw.jpg[0]'
+[32mCommand[0m :: identify -format %m '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-x1zqpw.jpg[0]'
+[32mCommand[0m :: convert '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-x1zqpw.jpg[0]' -resize "x57" -crop "70x57+0+0" +repage '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-x1zqpw20121012-57991-4x32ud'
+[32mCommand[0m :: file -b --mime '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-x1zqpw20121012-57991-4x32ud'
+[32mCommand[0m :: identify -format %wx%h '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-x1zqpw.jpg[0]'
+[32mCommand[0m :: identify -format %m '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-x1zqpw.jpg[0]'
+[32mCommand[0m :: identify -format %m '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-x1zqpw.jpg[0]'
+[32mCommand[0m :: convert '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-x1zqpw.jpg[0]' -resize "x114" -crop "140x114+1+0" +repage '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-x1zqpw20121012-57991-lj8g3n'
+[32mCommand[0m :: file -b --mime '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-x1zqpw20121012-57991-lj8g3n'
+[32mCommand[0m :: identify -format %wx%h '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-x1zqpw.jpg[0]'
+[32mCommand[0m :: identify -format %m '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-x1zqpw.jpg[0]'
+[32mCommand[0m :: identify -format %m '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-x1zqpw.jpg[0]'
+[32mCommand[0m :: convert '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-x1zqpw.jpg[0]' -resize "x376" -crop "460x376+4+0" +repage '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-x1zqpw20121012-57991-1t1qa6c'
+[32mCommand[0m :: file -b --mime '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-x1zqpw20121012-57991-1t1qa6c'
+[32mCommand[0m :: identify -format %wx%h '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-x1zqpw.jpg[0]'
+[32mCommand[0m :: identify -format %m '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-x1zqpw.jpg[0]'
+[32mCommand[0m :: identify -format %m '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-x1zqpw.jpg[0]'
+[32mCommand[0m :: convert '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-x1zqpw.jpg[0]' -resize "754x616>" '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-x1zqpw20121012-57991-1x6qrzu'
+[32mCommand[0m :: file -b --mime '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-x1zqpw20121012-57991-1x6qrzu'
+  [1m[35m (0.4ms)[0m  UPDATE `companies` SET `image_updated_at` = '2012-10-12 11:27:11', `updated_at` = '2012-10-12 11:27:12' WHERE `companies`.`id` = 8
+[paperclip] Saving attachments.
+[paperclip] deleting /Users/synthmax/Dropbox/marselistvaervej4/public/system/images/8/original/Modern-architectural-designs-3.jpg
+[paperclip] deleting /Users/synthmax/Dropbox/marselistvaervej4/public/system/images/8/mini/Modern-architectural-designs-3.jpg
+[paperclip] deleting /Users/synthmax/Dropbox/marselistvaervej4/public/system/images/8/thumbnail/Modern-architectural-designs-3.jpg
+[paperclip] deleting /Users/synthmax/Dropbox/marselistvaervej4/public/system/images/8/preview/Modern-architectural-designs-3.jpg
+[paperclip] deleting /Users/synthmax/Dropbox/marselistvaervej4/public/system/images/8/xxl/Modern-architectural-designs-3.jpg
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+[32mCommand[0m :: identify -format %wx%h '/Users/synthmax/Dropbox/marselistvaervej4/public/system/images/8/xxl/Modern-architectural-designs-3.jpg[0]'
+[32mCommand[0m :: identify -format %wx%h '/Users/synthmax/Dropbox/marselistvaervej4/public/system/images/8/original/Modern-architectural-designs-3.jpg[0]'
+  Rendered companies/crop.html.slim within layouts/application (107.9ms)
+Compiled application.css  (12ms)  (pid 57991)
+  Rendered shared/_google.html.erb (0.0ms)
+  [1m[35mMeetingroom Load (0.2ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1
+  [1m[36mInfoPage Load (0.1ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages` [0m
+Completed 200 OK in 1076ms (Views: 153.1ms | ActiveRecord: 2.2ms)
+
+
+Started PUT "/dk/companies/8" for 127.0.0.1 at 2012-10-12 13:27:48 +0200
+Processing by CompaniesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"sGTuMKritxRYtbqZW6m2WCMl4190ygHl/C60gSayiIQ=", "company"=>{"image"=>#<ActionDispatch::Http::UploadedFile:0x007fb3ab6e2fd8 @original_filename="Modern-architectural-designs-3.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"company[image]\"; filename=\"Modern-architectural-designs-3.jpg\"\r\nContent-Type: image/jpeg\r\n", @tempfile=#<File:/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/RackMultipart20121012-57991-gqvcp6>>, "title"=>"dfghdfgh", "body"=>"asdf", "phone"=>"sd", "homepage"=>"sdf"}, "commit"=>"Gem", "locale"=>"dk", "id"=>"8"}
+  [1m[35mInfoPage Load (0.3ms)[0m  SELECT `info_pages`.* FROM `info_pages` 
+  [1m[36mCompany Load (0.3ms)[0m  [1mSELECT `companies`.* FROM `companies` WHERE `companies`.`id` = 8 LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `companies`.* FROM `companies` WHERE `companies`.`id` = 8 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+[32mCommand[0m :: identify -format %wx%h '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-18yzka.jpg[0]'
+[32mCommand[0m :: identify -format %m '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-18yzka.jpg[0]'
+[32mCommand[0m :: identify -format %m '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-18yzka.jpg[0]'
+[32mCommand[0m :: convert '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-18yzka.jpg[0]' -resize "x57" -crop "70x57+0+0" +repage '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-18yzka20121012-57991-wpvxul'
+[32mCommand[0m :: file -b --mime '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-18yzka20121012-57991-wpvxul'
+[32mCommand[0m :: identify -format %wx%h '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-18yzka.jpg[0]'
+[32mCommand[0m :: identify -format %m '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-18yzka.jpg[0]'
+[32mCommand[0m :: identify -format %m '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-18yzka.jpg[0]'
+[32mCommand[0m :: convert '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-18yzka.jpg[0]' -resize "x114" -crop "140x114+1+0" +repage '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-18yzka20121012-57991-915unh'
+[32mCommand[0m :: file -b --mime '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-18yzka20121012-57991-915unh'
+[32mCommand[0m :: identify -format %wx%h '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-18yzka.jpg[0]'
+[32mCommand[0m :: identify -format %m '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-18yzka.jpg[0]'
+[32mCommand[0m :: identify -format %m '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-18yzka.jpg[0]'
+[32mCommand[0m :: convert '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-18yzka.jpg[0]' -resize "x376" -crop "460x376+4+0" +repage '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-18yzka20121012-57991-1qni011'
+[32mCommand[0m :: file -b --mime '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-18yzka20121012-57991-1qni011'
+[32mCommand[0m :: identify -format %wx%h '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-18yzka.jpg[0]'
+[32mCommand[0m :: identify -format %m '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-18yzka.jpg[0]'
+[32mCommand[0m :: identify -format %m '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-18yzka.jpg[0]'
+[32mCommand[0m :: convert '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-18yzka.jpg[0]' -resize "754x616>" '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-18yzka20121012-57991-13pcaqm'
+[32mCommand[0m :: file -b --mime '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-18yzka20121012-57991-13pcaqm'
+  [1m[36m (0.5ms)[0m  [1mUPDATE `companies` SET `image_updated_at` = '2012-10-12 11:27:48', `updated_at` = '2012-10-12 11:27:49' WHERE `companies`.`id` = 8[0m
+[paperclip] Saving attachments.
+[paperclip] deleting /Users/synthmax/Dropbox/marselistvaervej4/public/system/images/8/original/Modern-architectural-designs-3.jpg
+[paperclip] deleting /Users/synthmax/Dropbox/marselistvaervej4/public/system/images/8/mini/Modern-architectural-designs-3.jpg
+[paperclip] deleting /Users/synthmax/Dropbox/marselistvaervej4/public/system/images/8/thumbnail/Modern-architectural-designs-3.jpg
+[paperclip] deleting /Users/synthmax/Dropbox/marselistvaervej4/public/system/images/8/preview/Modern-architectural-designs-3.jpg
+[paperclip] deleting /Users/synthmax/Dropbox/marselistvaervej4/public/system/images/8/xxl/Modern-architectural-designs-3.jpg
+  [1m[35m (0.4ms)[0m  COMMIT
+[32mCommand[0m :: identify -format %wx%h '/Users/synthmax/Dropbox/marselistvaervej4/public/system/images/8/xxl/Modern-architectural-designs-3.jpg[0]'
+[32mCommand[0m :: identify -format %wx%h '/Users/synthmax/Dropbox/marselistvaervej4/public/system/images/8/original/Modern-architectural-designs-3.jpg[0]'
+  Rendered companies/crop.html.slim within layouts/application (49.8ms)
+Compiled application.js  (12ms)  (pid 57991)
+  Rendered shared/_google.html.erb (0.0ms)
+  [1m[36mMeetingroom Load (0.3ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1[0m
+  [1m[35mInfoPage Load (0.2ms)[0m  SELECT `info_pages`.* FROM `info_pages` 
+Completed 200 OK in 1134ms (Views: 172.8ms | ActiveRecord: 2.1ms)
+
+
+Started PUT "/dk/companies/8" for 127.0.0.1 at 2012-10-12 13:28:16 +0200
+Processing by CompaniesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"sGTuMKritxRYtbqZW6m2WCMl4190ygHl/C60gSayiIQ=", "company"=>{"image"=>#<ActionDispatch::Http::UploadedFile:0x007fb3a98c7a58 @original_filename="Modern-architectural-designs-3.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"company[image]\"; filename=\"Modern-architectural-designs-3.jpg\"\r\nContent-Type: image/jpeg\r\n", @tempfile=#<File:/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/RackMultipart20121012-57991-fwuy2r>>, "title"=>"dfghdfgh", "body"=>"asdf", "phone"=>"sd", "homepage"=>"sdf"}, "commit"=>"Gem", "locale"=>"dk", "id"=>"8"}
+  [1m[36mInfoPage Load (0.3ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages` [0m
+  [1m[35mCompany Load (0.4ms)[0m  SELECT `companies`.* FROM `companies` WHERE `companies`.`id` = 8 LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `companies`.* FROM `companies` WHERE `companies`.`id` = 8 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+[32mCommand[0m :: identify -format %wx%h '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-19d105.jpg[0]'
+[32mCommand[0m :: identify -format %m '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-19d105.jpg[0]'
+[32mCommand[0m :: identify -format %m '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-19d105.jpg[0]'
+[32mCommand[0m :: convert '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-19d105.jpg[0]' -resize "x57" -crop "70x57+0+0" +repage '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-19d10520121012-57991-5q9ojw'
+[32mCommand[0m :: file -b --mime '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-19d10520121012-57991-5q9ojw'
+[32mCommand[0m :: identify -format %wx%h '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-19d105.jpg[0]'
+[32mCommand[0m :: identify -format %m '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-19d105.jpg[0]'
+[32mCommand[0m :: identify -format %m '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-19d105.jpg[0]'
+[32mCommand[0m :: convert '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-19d105.jpg[0]' -resize "x114" -crop "140x114+1+0" +repage '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-19d10520121012-57991-1si87yk'
+[32mCommand[0m :: file -b --mime '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-19d10520121012-57991-1si87yk'
+[32mCommand[0m :: identify -format %wx%h '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-19d105.jpg[0]'
+[32mCommand[0m :: identify -format %m '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-19d105.jpg[0]'
+[32mCommand[0m :: identify -format %m '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-19d105.jpg[0]'
+[32mCommand[0m :: convert '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-19d105.jpg[0]' -resize "x376" -crop "460x376+4+0" +repage '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-19d10520121012-57991-3wb34l'
+[32mCommand[0m :: file -b --mime '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-19d10520121012-57991-3wb34l'
+[32mCommand[0m :: identify -format %wx%h '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-19d105.jpg[0]'
+[32mCommand[0m :: identify -format %m '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-19d105.jpg[0]'
+[32mCommand[0m :: identify -format %m '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-19d105.jpg[0]'
+[32mCommand[0m :: convert '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-19d105.jpg[0]' -resize "754x616>" '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-19d10520121012-57991-14djtr2'
+[32mCommand[0m :: file -b --mime '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-19d10520121012-57991-14djtr2'
+  [1m[35m (0.5ms)[0m  UPDATE `companies` SET `image_updated_at` = '2012-10-12 11:28:16', `updated_at` = '2012-10-12 11:28:17' WHERE `companies`.`id` = 8
+[paperclip] Saving attachments.
+[paperclip] deleting /Users/synthmax/Dropbox/marselistvaervej4/public/system/images/8/original/Modern-architectural-designs-3.jpg
+[paperclip] deleting /Users/synthmax/Dropbox/marselistvaervej4/public/system/images/8/mini/Modern-architectural-designs-3.jpg
+[paperclip] deleting /Users/synthmax/Dropbox/marselistvaervej4/public/system/images/8/thumbnail/Modern-architectural-designs-3.jpg
+[paperclip] deleting /Users/synthmax/Dropbox/marselistvaervej4/public/system/images/8/preview/Modern-architectural-designs-3.jpg
+[paperclip] deleting /Users/synthmax/Dropbox/marselistvaervej4/public/system/images/8/xxl/Modern-architectural-designs-3.jpg
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+[32mCommand[0m :: identify -format %wx%h '/Users/synthmax/Dropbox/marselistvaervej4/public/system/images/8/xxl/Modern-architectural-designs-3.jpg[0]'
+[32mCommand[0m :: identify -format %wx%h '/Users/synthmax/Dropbox/marselistvaervej4/public/system/images/8/original/Modern-architectural-designs-3.jpg[0]'
+  Rendered companies/crop.html.slim within layouts/application (41.2ms)
+Compiled application.css  (3ms)  (pid 57991)
+  Rendered shared/_google.html.erb (0.0ms)
+  [1m[35mMeetingroom Load (0.2ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1
+  [1m[36mInfoPage Load (0.2ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages` [0m
+Completed 200 OK in 1059ms (Views: 81.5ms | ActiveRecord: 2.5ms)
+
+
+Started PUT "/dk/companies/8" for 127.0.0.1 at 2012-10-12 13:28:37 +0200
+Processing by CompaniesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"sGTuMKritxRYtbqZW6m2WCMl4190ygHl/C60gSayiIQ=", "company"=>{"image"=>#<ActionDispatch::Http::UploadedFile:0x007fb3ab10cc58 @original_filename="Modern-architectural-designs-3.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"company[image]\"; filename=\"Modern-architectural-designs-3.jpg\"\r\nContent-Type: image/jpeg\r\n", @tempfile=#<File:/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/RackMultipart20121012-57991-1wq2y8b>>, "title"=>"dfghdfgh", "body"=>"asdf", "phone"=>"sd", "homepage"=>"sdf"}, "commit"=>"Gem", "locale"=>"dk", "id"=>"8"}
+  [1m[35mInfoPage Load (0.4ms)[0m  SELECT `info_pages`.* FROM `info_pages` 
+  [1m[36mCompany Load (0.2ms)[0m  [1mSELECT `companies`.* FROM `companies` WHERE `companies`.`id` = 8 LIMIT 1[0m
+  [1m[35mUser Load (0.5ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `companies`.* FROM `companies` WHERE `companies`.`id` = 8 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+[32mCommand[0m :: identify -format %wx%h '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-k4u3nz.jpg[0]'
+[32mCommand[0m :: identify -format %m '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-k4u3nz.jpg[0]'
+[32mCommand[0m :: identify -format %m '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-k4u3nz.jpg[0]'
+[32mCommand[0m :: convert '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-k4u3nz.jpg[0]' -resize "x57" -crop "70x57+0+0" +repage '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-k4u3nz20121012-57991-1y9dvpm'
+[32mCommand[0m :: file -b --mime '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-k4u3nz20121012-57991-1y9dvpm'
+[32mCommand[0m :: identify -format %wx%h '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-k4u3nz.jpg[0]'
+[32mCommand[0m :: identify -format %m '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-k4u3nz.jpg[0]'
+[32mCommand[0m :: identify -format %m '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-k4u3nz.jpg[0]'
+[32mCommand[0m :: convert '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-k4u3nz.jpg[0]' -resize "x114" -crop "140x114+1+0" +repage '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-k4u3nz20121012-57991-1vrcmzp'
+[32mCommand[0m :: file -b --mime '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-k4u3nz20121012-57991-1vrcmzp'
+[32mCommand[0m :: identify -format %wx%h '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-k4u3nz.jpg[0]'
+[32mCommand[0m :: identify -format %m '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-k4u3nz.jpg[0]'
+[32mCommand[0m :: identify -format %m '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-k4u3nz.jpg[0]'
+[32mCommand[0m :: convert '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-k4u3nz.jpg[0]' -resize "x376" -crop "460x376+4+0" +repage '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-k4u3nz20121012-57991-d6o5pg'
+[32mCommand[0m :: file -b --mime '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-k4u3nz20121012-57991-d6o5pg'
+[32mCommand[0m :: identify -format %wx%h '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-k4u3nz.jpg[0]'
+[32mCommand[0m :: identify -format %m '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-k4u3nz.jpg[0]'
+[32mCommand[0m :: identify -format %m '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-k4u3nz.jpg[0]'
+[32mCommand[0m :: convert '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-k4u3nz.jpg[0]' -resize "754x616>" '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-k4u3nz20121012-57991-1mgtpyg'
+[32mCommand[0m :: file -b --mime '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-k4u3nz20121012-57991-1mgtpyg'
+  [1m[36m (0.3ms)[0m  [1mUPDATE `companies` SET `image_updated_at` = '2012-10-12 11:28:37', `updated_at` = '2012-10-12 11:28:38' WHERE `companies`.`id` = 8[0m
+[paperclip] Saving attachments.
+[paperclip] deleting /Users/synthmax/Dropbox/marselistvaervej4/public/system/images/8/original/Modern-architectural-designs-3.jpg
+[paperclip] deleting /Users/synthmax/Dropbox/marselistvaervej4/public/system/images/8/mini/Modern-architectural-designs-3.jpg
+[paperclip] deleting /Users/synthmax/Dropbox/marselistvaervej4/public/system/images/8/thumbnail/Modern-architectural-designs-3.jpg
+[paperclip] deleting /Users/synthmax/Dropbox/marselistvaervej4/public/system/images/8/preview/Modern-architectural-designs-3.jpg
+[paperclip] deleting /Users/synthmax/Dropbox/marselistvaervej4/public/system/images/8/xxl/Modern-architectural-designs-3.jpg
+  [1m[35m (1.4ms)[0m  COMMIT
+[32mCommand[0m :: identify -format %wx%h '/Users/synthmax/Dropbox/marselistvaervej4/public/system/images/8/xxl/Modern-architectural-designs-3.jpg[0]'
+[32mCommand[0m :: identify -format %wx%h '/Users/synthmax/Dropbox/marselistvaervej4/public/system/images/8/original/Modern-architectural-designs-3.jpg[0]'
+  Rendered companies/crop.html.slim within layouts/application (53.5ms)
+Compiled application.css  (32ms)  (pid 57991)
+  Rendered shared/_google.html.erb (0.1ms)
+  [1m[36mMeetingroom Load (0.3ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1[0m
+  [1m[35mInfoPage Load (0.2ms)[0m  SELECT `info_pages`.* FROM `info_pages` 
+Completed 200 OK in 1106ms (Views: 123.6ms | ActiveRecord: 3.4ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/Jcrop.gif"):
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  quiet_assets (1.0.1) lib/quiet_assets.rb:20:in `call_with_quiet_assets'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/static.rb:62:in `call'
+  rack-cache (1.2) lib/rack/cache/context.rb:136:in `forward'
+  rack-cache (1.2) lib/rack/cache/context.rb:245:in `fetch'
+  rack-cache (1.2) lib/rack/cache/context.rb:185:in `lookup'
+  rack-cache (1.2) lib/rack/cache/context.rb:66:in `call!'
+  rack-cache (1.2) lib/rack/cache/context.rb:51:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/synthmax/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /Users/synthmax/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /Users/synthmax/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+
+
+ActionController::RoutingError (No route matches [GET] "/assets/Jcrop.gif"):
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  quiet_assets (1.0.1) lib/quiet_assets.rb:20:in `call_with_quiet_assets'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/static.rb:62:in `call'
+  rack-cache (1.2) lib/rack/cache/context.rb:136:in `forward'
+  rack-cache (1.2) lib/rack/cache/context.rb:245:in `fetch'
+  rack-cache (1.2) lib/rack/cache/context.rb:185:in `lookup'
+  rack-cache (1.2) lib/rack/cache/context.rb:66:in `call!'
+  rack-cache (1.2) lib/rack/cache/context.rb:51:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/synthmax/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /Users/synthmax/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /Users/synthmax/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+
+
+
+Started PUT "/dk/companies/8" for 127.0.0.1 at 2012-10-12 13:41:01 +0200
+Processing by CompaniesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"sGTuMKritxRYtbqZW6m2WCMl4190ygHl/C60gSayiIQ=", "company"=>{"image"=>#<ActionDispatch::Http::UploadedFile:0x007fb3a9897448 @original_filename="Modern-architectural-designs-3.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"company[image]\"; filename=\"Modern-architectural-designs-3.jpg\"\r\nContent-Type: image/jpeg\r\n", @tempfile=#<File:/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/RackMultipart20121012-57991-te0ljw>>, "title"=>"dfghdfgh", "body"=>"asdf", "phone"=>"sd", "homepage"=>"sdf"}, "commit"=>"Gem", "locale"=>"dk", "id"=>"8"}
+  [1m[36mInfoPage Load (0.4ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages` [0m
+  [1m[35mCompany Load (0.3ms)[0m  SELECT `companies`.* FROM `companies` WHERE `companies`.`id` = 8 LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `companies`.* FROM `companies` WHERE `companies`.`id` = 8 LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+[32mCommand[0m :: identify -format %wx%h '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-a1jnww.jpg[0]'
+[32mCommand[0m :: identify -format %m '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-a1jnww.jpg[0]'
+[32mCommand[0m :: identify -format %m '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-a1jnww.jpg[0]'
+[32mCommand[0m :: convert '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-a1jnww.jpg[0]' -resize "x57" -crop "70x57+0+0" +repage '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-a1jnww20121012-57991-174474n'
+[32mCommand[0m :: file -b --mime '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-a1jnww20121012-57991-174474n'
+[32mCommand[0m :: identify -format %wx%h '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-a1jnww.jpg[0]'
+[32mCommand[0m :: identify -format %m '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-a1jnww.jpg[0]'
+[32mCommand[0m :: identify -format %m '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-a1jnww.jpg[0]'
+[32mCommand[0m :: convert '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-a1jnww.jpg[0]' -resize "x114" -crop "140x114+1+0" +repage '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-a1jnww20121012-57991-5kdckm'
+[32mCommand[0m :: file -b --mime '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-a1jnww20121012-57991-5kdckm'
+[32mCommand[0m :: identify -format %wx%h '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-a1jnww.jpg[0]'
+[32mCommand[0m :: identify -format %m '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-a1jnww.jpg[0]'
+[32mCommand[0m :: identify -format %m '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-a1jnww.jpg[0]'
+[32mCommand[0m :: convert '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-a1jnww.jpg[0]' -resize "x376" -crop "460x376+4+0" +repage '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-a1jnww20121012-57991-1gd6xjl'
+[32mCommand[0m :: file -b --mime '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-a1jnww20121012-57991-1gd6xjl'
+[32mCommand[0m :: identify -format %wx%h '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-a1jnww.jpg[0]'
+[32mCommand[0m :: identify -format %m '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-a1jnww.jpg[0]'
+[32mCommand[0m :: identify -format %m '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-a1jnww.jpg[0]'
+[32mCommand[0m :: convert '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-a1jnww.jpg[0]' -resize "754x616>" '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-a1jnww20121012-57991-iv4n3i'
+[32mCommand[0m :: file -b --mime '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-a1jnww20121012-57991-iv4n3i'
+  [1m[35m (0.5ms)[0m  UPDATE `companies` SET `image_updated_at` = '2012-10-12 11:41:01', `updated_at` = '2012-10-12 11:41:02' WHERE `companies`.`id` = 8
+[paperclip] Saving attachments.
+[paperclip] deleting /Users/synthmax/Dropbox/marselistvaervej4/public/system/images/8/original/Modern-architectural-designs-3.jpg
+[paperclip] deleting /Users/synthmax/Dropbox/marselistvaervej4/public/system/images/8/mini/Modern-architectural-designs-3.jpg
+[paperclip] deleting /Users/synthmax/Dropbox/marselistvaervej4/public/system/images/8/thumbnail/Modern-architectural-designs-3.jpg
+[paperclip] deleting /Users/synthmax/Dropbox/marselistvaervej4/public/system/images/8/preview/Modern-architectural-designs-3.jpg
+[paperclip] deleting /Users/synthmax/Dropbox/marselistvaervej4/public/system/images/8/xxl/Modern-architectural-designs-3.jpg
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+[32mCommand[0m :: identify -format %wx%h '/Users/synthmax/Dropbox/marselistvaervej4/public/system/images/8/xxl/Modern-architectural-designs-3.jpg[0]'
+[32mCommand[0m :: identify -format %wx%h '/Users/synthmax/Dropbox/marselistvaervej4/public/system/images/8/original/Modern-architectural-designs-3.jpg[0]'
+  Rendered companies/crop.html.slim within layouts/application (43.0ms)
+  Rendered shared/_google.html.erb (0.0ms)
+  [1m[35mMeetingroom Load (0.4ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1
+  [1m[36mInfoPage Load (0.3ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages` [0m
+Completed 200 OK in 1034ms (Views: 70.9ms | ActiveRecord: 2.7ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/Jcrop.gif"):
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  quiet_assets (1.0.1) lib/quiet_assets.rb:20:in `call_with_quiet_assets'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/static.rb:62:in `call'
+  rack-cache (1.2) lib/rack/cache/context.rb:136:in `forward'
+  rack-cache (1.2) lib/rack/cache/context.rb:245:in `fetch'
+  rack-cache (1.2) lib/rack/cache/context.rb:185:in `lookup'
+  rack-cache (1.2) lib/rack/cache/context.rb:66:in `call!'
+  rack-cache (1.2) lib/rack/cache/context.rb:51:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/synthmax/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /Users/synthmax/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /Users/synthmax/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+
+
+
+Started PUT "/dk/companies/8" for 127.0.0.1 at 2012-10-12 13:41:32 +0200
+Processing by CompaniesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"sGTuMKritxRYtbqZW6m2WCMl4190ygHl/C60gSayiIQ=", "company"=>{"image"=>#<ActionDispatch::Http::UploadedFile:0x007fb3ab398738 @original_filename="Modern-architectural-designs-3.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"company[image]\"; filename=\"Modern-architectural-designs-3.jpg\"\r\nContent-Type: image/jpeg\r\n", @tempfile=#<File:/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/RackMultipart20121012-57991-1nizv20>>, "title"=>"dfghdfgh", "body"=>"asdf", "phone"=>"sd", "homepage"=>"sdf"}, "commit"=>"Gem", "locale"=>"dk", "id"=>"8"}
+  [1m[35mInfoPage Load (0.5ms)[0m  SELECT `info_pages`.* FROM `info_pages` 
+  [1m[36mCompany Load (0.4ms)[0m  [1mSELECT `companies`.* FROM `companies` WHERE `companies`.`id` = 8 LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `companies`.* FROM `companies` WHERE `companies`.`id` = 8 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+[32mCommand[0m :: identify -format %wx%h '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-7jpfbj.jpg[0]'
+[32mCommand[0m :: identify -format %m '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-7jpfbj.jpg[0]'
+[32mCommand[0m :: identify -format %m '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-7jpfbj.jpg[0]'
+[32mCommand[0m :: convert '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-7jpfbj.jpg[0]' -resize "x57" -crop "70x57+0+0" +repage '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-7jpfbj20121012-57991-566zv'
+[32mCommand[0m :: file -b --mime '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-7jpfbj20121012-57991-566zv'
+[32mCommand[0m :: identify -format %wx%h '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-7jpfbj.jpg[0]'
+[32mCommand[0m :: identify -format %m '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-7jpfbj.jpg[0]'
+[32mCommand[0m :: identify -format %m '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-7jpfbj.jpg[0]'
+[32mCommand[0m :: convert '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-7jpfbj.jpg[0]' -resize "x114" -crop "140x114+1+0" +repage '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-7jpfbj20121012-57991-1y8gscf'
+[32mCommand[0m :: file -b --mime '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-7jpfbj20121012-57991-1y8gscf'
+[32mCommand[0m :: identify -format %wx%h '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-7jpfbj.jpg[0]'
+[32mCommand[0m :: identify -format %m '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-7jpfbj.jpg[0]'
+[32mCommand[0m :: identify -format %m '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-7jpfbj.jpg[0]'
+[32mCommand[0m :: convert '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-7jpfbj.jpg[0]' -resize "x376" -crop "460x376+4+0" +repage '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-7jpfbj20121012-57991-4vfyvo'
+[32mCommand[0m :: file -b --mime '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-7jpfbj20121012-57991-4vfyvo'
+[32mCommand[0m :: identify -format %wx%h '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-7jpfbj.jpg[0]'
+[32mCommand[0m :: identify -format %m '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-7jpfbj.jpg[0]'
+[32mCommand[0m :: identify -format %m '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-7jpfbj.jpg[0]'
+[32mCommand[0m :: convert '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-7jpfbj.jpg[0]' -resize "754x616>" '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-7jpfbj20121012-57991-1lni3ru'
+[32mCommand[0m :: file -b --mime '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-7jpfbj20121012-57991-1lni3ru'
+  [1m[36m (0.3ms)[0m  [1mUPDATE `companies` SET `image_updated_at` = '2012-10-12 11:41:32', `updated_at` = '2012-10-12 11:41:33' WHERE `companies`.`id` = 8[0m
+[paperclip] Saving attachments.
+[paperclip] deleting /Users/synthmax/Dropbox/marselistvaervej4/public/system/images/8/original/Modern-architectural-designs-3.jpg
+[paperclip] deleting /Users/synthmax/Dropbox/marselistvaervej4/public/system/images/8/mini/Modern-architectural-designs-3.jpg
+[paperclip] deleting /Users/synthmax/Dropbox/marselistvaervej4/public/system/images/8/thumbnail/Modern-architectural-designs-3.jpg
+[paperclip] deleting /Users/synthmax/Dropbox/marselistvaervej4/public/system/images/8/preview/Modern-architectural-designs-3.jpg
+[paperclip] deleting /Users/synthmax/Dropbox/marselistvaervej4/public/system/images/8/xxl/Modern-architectural-designs-3.jpg
+  [1m[35m (0.8ms)[0m  COMMIT
+[32mCommand[0m :: identify -format %wx%h '/Users/synthmax/Dropbox/marselistvaervej4/public/system/images/8/xxl/Modern-architectural-designs-3.jpg[0]'
+[32mCommand[0m :: identify -format %wx%h '/Users/synthmax/Dropbox/marselistvaervej4/public/system/images/8/original/Modern-architectural-designs-3.jpg[0]'
+  Rendered companies/crop.html.slim within layouts/application (49.6ms)
+Compiled jquery.Jcrop.css  (0ms)  (pid 57991)
+Compiled application.css  (14ms)  (pid 57991)
+  Rendered shared/_google.html.erb (0.1ms)
+  [1m[36mMeetingroom Load (0.3ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1[0m
+  [1m[35mInfoPage Load (0.1ms)[0m  SELECT `info_pages`.* FROM `info_pages` 
+Completed 200 OK in 1083ms (Views: 116.2ms | ActiveRecord: 2.7ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/Jcrop.gif"):
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  quiet_assets (1.0.1) lib/quiet_assets.rb:20:in `call_with_quiet_assets'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/static.rb:62:in `call'
+  rack-cache (1.2) lib/rack/cache/context.rb:136:in `forward'
+  rack-cache (1.2) lib/rack/cache/context.rb:245:in `fetch'
+  rack-cache (1.2) lib/rack/cache/context.rb:185:in `lookup'
+  rack-cache (1.2) lib/rack/cache/context.rb:66:in `call!'
+  rack-cache (1.2) lib/rack/cache/context.rb:51:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/synthmax/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /Users/synthmax/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /Users/synthmax/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+
+
+ActionController::RoutingError (No route matches [GET] "/assets/Jcrop.gif"):
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  quiet_assets (1.0.1) lib/quiet_assets.rb:20:in `call_with_quiet_assets'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/static.rb:62:in `call'
+  rack-cache (1.2) lib/rack/cache/context.rb:136:in `forward'
+  rack-cache (1.2) lib/rack/cache/context.rb:245:in `fetch'
+  rack-cache (1.2) lib/rack/cache/context.rb:185:in `lookup'
+  rack-cache (1.2) lib/rack/cache/context.rb:66:in `call!'
+  rack-cache (1.2) lib/rack/cache/context.rb:51:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/synthmax/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /Users/synthmax/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /Users/synthmax/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+
+
+ActionController::RoutingError (No route matches [GET] "/assets/Jcrop.gif"):
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  quiet_assets (1.0.1) lib/quiet_assets.rb:20:in `call_with_quiet_assets'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/static.rb:62:in `call'
+  rack-cache (1.2) lib/rack/cache/context.rb:136:in `forward'
+  rack-cache (1.2) lib/rack/cache/context.rb:245:in `fetch'
+  rack-cache (1.2) lib/rack/cache/context.rb:185:in `lookup'
+  rack-cache (1.2) lib/rack/cache/context.rb:66:in `call!'
+  rack-cache (1.2) lib/rack/cache/context.rb:51:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/synthmax/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /Users/synthmax/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /Users/synthmax/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+
+
+ActionController::RoutingError (No route matches [GET] "/assets/Jcrop.gif"):
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  quiet_assets (1.0.1) lib/quiet_assets.rb:20:in `call_with_quiet_assets'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/static.rb:62:in `call'
+  rack-cache (1.2) lib/rack/cache/context.rb:136:in `forward'
+  rack-cache (1.2) lib/rack/cache/context.rb:245:in `fetch'
+  rack-cache (1.2) lib/rack/cache/context.rb:185:in `lookup'
+  rack-cache (1.2) lib/rack/cache/context.rb:66:in `call!'
+  rack-cache (1.2) lib/rack/cache/context.rb:51:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/synthmax/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /Users/synthmax/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /Users/synthmax/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+
+
+ActionController::RoutingError (No route matches [GET] "/assets/Jcrop.gif"):
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  quiet_assets (1.0.1) lib/quiet_assets.rb:20:in `call_with_quiet_assets'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/static.rb:62:in `call'
+  rack-cache (1.2) lib/rack/cache/context.rb:136:in `forward'
+  rack-cache (1.2) lib/rack/cache/context.rb:245:in `fetch'
+  rack-cache (1.2) lib/rack/cache/context.rb:185:in `lookup'
+  rack-cache (1.2) lib/rack/cache/context.rb:66:in `call!'
+  rack-cache (1.2) lib/rack/cache/context.rb:51:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/synthmax/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /Users/synthmax/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /Users/synthmax/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+
+
+ActionController::RoutingError (No route matches [GET] "/assets/Jcrop.gif"):
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  quiet_assets (1.0.1) lib/quiet_assets.rb:20:in `call_with_quiet_assets'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/static.rb:62:in `call'
+  rack-cache (1.2) lib/rack/cache/context.rb:136:in `forward'
+  rack-cache (1.2) lib/rack/cache/context.rb:245:in `fetch'
+  rack-cache (1.2) lib/rack/cache/context.rb:185:in `lookup'
+  rack-cache (1.2) lib/rack/cache/context.rb:66:in `call!'
+  rack-cache (1.2) lib/rack/cache/context.rb:51:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/synthmax/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /Users/synthmax/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /Users/synthmax/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+
+
+ActionController::RoutingError (No route matches [GET] "/assets/Jcrop.gif"):
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  quiet_assets (1.0.1) lib/quiet_assets.rb:20:in `call_with_quiet_assets'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/static.rb:62:in `call'
+  rack-cache (1.2) lib/rack/cache/context.rb:136:in `forward'
+  rack-cache (1.2) lib/rack/cache/context.rb:245:in `fetch'
+  rack-cache (1.2) lib/rack/cache/context.rb:185:in `lookup'
+  rack-cache (1.2) lib/rack/cache/context.rb:66:in `call!'
+  rack-cache (1.2) lib/rack/cache/context.rb:51:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/synthmax/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /Users/synthmax/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /Users/synthmax/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+
+
+ActionController::RoutingError (No route matches [GET] "/assets/Jcrop.gif"):
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  quiet_assets (1.0.1) lib/quiet_assets.rb:20:in `call_with_quiet_assets'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/static.rb:62:in `call'
+  rack-cache (1.2) lib/rack/cache/context.rb:136:in `forward'
+  rack-cache (1.2) lib/rack/cache/context.rb:245:in `fetch'
+  rack-cache (1.2) lib/rack/cache/context.rb:185:in `lookup'
+  rack-cache (1.2) lib/rack/cache/context.rb:66:in `call!'
+  rack-cache (1.2) lib/rack/cache/context.rb:51:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/synthmax/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /Users/synthmax/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /Users/synthmax/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+
+
+ActionController::RoutingError (No route matches [GET] "/assets/Jcrop.gif"):
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  quiet_assets (1.0.1) lib/quiet_assets.rb:20:in `call_with_quiet_assets'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/static.rb:62:in `call'
+  rack-cache (1.2) lib/rack/cache/context.rb:136:in `forward'
+  rack-cache (1.2) lib/rack/cache/context.rb:245:in `fetch'
+  rack-cache (1.2) lib/rack/cache/context.rb:185:in `lookup'
+  rack-cache (1.2) lib/rack/cache/context.rb:66:in `call!'
+  rack-cache (1.2) lib/rack/cache/context.rb:51:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/synthmax/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /Users/synthmax/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /Users/synthmax/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+
+
+ActionController::RoutingError (No route matches [GET] "/assets/Jcrop.gif"):
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  quiet_assets (1.0.1) lib/quiet_assets.rb:20:in `call_with_quiet_assets'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/static.rb:62:in `call'
+  rack-cache (1.2) lib/rack/cache/context.rb:136:in `forward'
+  rack-cache (1.2) lib/rack/cache/context.rb:245:in `fetch'
+  rack-cache (1.2) lib/rack/cache/context.rb:185:in `lookup'
+  rack-cache (1.2) lib/rack/cache/context.rb:66:in `call!'
+  rack-cache (1.2) lib/rack/cache/context.rb:51:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/synthmax/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /Users/synthmax/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /Users/synthmax/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+
+
+ActionController::RoutingError (No route matches [GET] "/assets/Jcrop.gif"):
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  quiet_assets (1.0.1) lib/quiet_assets.rb:20:in `call_with_quiet_assets'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/static.rb:62:in `call'
+  rack-cache (1.2) lib/rack/cache/context.rb:136:in `forward'
+  rack-cache (1.2) lib/rack/cache/context.rb:245:in `fetch'
+  rack-cache (1.2) lib/rack/cache/context.rb:185:in `lookup'
+  rack-cache (1.2) lib/rack/cache/context.rb:66:in `call!'
+  rack-cache (1.2) lib/rack/cache/context.rb:51:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/synthmax/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /Users/synthmax/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /Users/synthmax/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+
+
+
+Started PUT "/dk/companies/8" for 127.0.0.1 at 2012-10-12 13:45:44 +0200
+Processing by CompaniesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"sGTuMKritxRYtbqZW6m2WCMl4190ygHl/C60gSayiIQ=", "company"=>{"image"=>#<ActionDispatch::Http::UploadedFile:0x007fb3a82b3168 @original_filename="Modern-architectural-designs-3.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"company[image]\"; filename=\"Modern-architectural-designs-3.jpg\"\r\nContent-Type: image/jpeg\r\n", @tempfile=#<File:/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/RackMultipart20121012-57991-n56smw>>, "title"=>"dfghdfgh", "body"=>"asdf", "phone"=>"sd", "homepage"=>"sdf"}, "commit"=>"Gem", "locale"=>"dk", "id"=>"8"}
+  [1m[36mInfoPage Load (0.2ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages` [0m
+  [1m[35mCompany Load (0.2ms)[0m  SELECT `companies`.* FROM `companies` WHERE `companies`.`id` = 8 LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `companies`.* FROM `companies` WHERE `companies`.`id` = 8 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+[32mCommand[0m :: identify -format %wx%h '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-1jzdrwa.jpg[0]'
+[32mCommand[0m :: identify -format %m '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-1jzdrwa.jpg[0]'
+[32mCommand[0m :: identify -format %m '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-1jzdrwa.jpg[0]'
+[32mCommand[0m :: convert '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-1jzdrwa.jpg[0]' -resize "x57" -crop "70x57+0+0" +repage '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-1jzdrwa20121012-57991-lc7pjj'
+[32mCommand[0m :: file -b --mime '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-1jzdrwa20121012-57991-lc7pjj'
+[32mCommand[0m :: identify -format %wx%h '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-1jzdrwa.jpg[0]'
+[32mCommand[0m :: identify -format %m '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-1jzdrwa.jpg[0]'
+[32mCommand[0m :: identify -format %m '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-1jzdrwa.jpg[0]'
+[32mCommand[0m :: convert '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-1jzdrwa.jpg[0]' -resize "x114" -crop "140x114+1+0" +repage '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-1jzdrwa20121012-57991-1fflgv5'
+[32mCommand[0m :: file -b --mime '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-1jzdrwa20121012-57991-1fflgv5'
+[32mCommand[0m :: identify -format %wx%h '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-1jzdrwa.jpg[0]'
+[32mCommand[0m :: identify -format %m '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-1jzdrwa.jpg[0]'
+[32mCommand[0m :: identify -format %m '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-1jzdrwa.jpg[0]'
+[32mCommand[0m :: convert '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-1jzdrwa.jpg[0]' -resize "x376" -crop "460x376+4+0" +repage '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-1jzdrwa20121012-57991-1h0huba'
+[32mCommand[0m :: file -b --mime '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-1jzdrwa20121012-57991-1h0huba'
+[32mCommand[0m :: identify -format %wx%h '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-1jzdrwa.jpg[0]'
+[32mCommand[0m :: identify -format %m '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-1jzdrwa.jpg[0]'
+[32mCommand[0m :: identify -format %m '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-1jzdrwa.jpg[0]'
+[32mCommand[0m :: convert '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-1jzdrwa.jpg[0]' -resize "754x616>" '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-1jzdrwa20121012-57991-1kmio6e'
+[32mCommand[0m :: file -b --mime '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-1jzdrwa20121012-57991-1kmio6e'
+  [1m[35m (0.4ms)[0m  UPDATE `companies` SET `image_updated_at` = '2012-10-12 11:45:44', `updated_at` = '2012-10-12 11:45:45' WHERE `companies`.`id` = 8
+[paperclip] Saving attachments.
+[paperclip] deleting /Users/synthmax/Dropbox/marselistvaervej4/public/system/images/8/original/Modern-architectural-designs-3.jpg
+[paperclip] deleting /Users/synthmax/Dropbox/marselistvaervej4/public/system/images/8/mini/Modern-architectural-designs-3.jpg
+[paperclip] deleting /Users/synthmax/Dropbox/marselistvaervej4/public/system/images/8/thumbnail/Modern-architectural-designs-3.jpg
+[paperclip] deleting /Users/synthmax/Dropbox/marselistvaervej4/public/system/images/8/preview/Modern-architectural-designs-3.jpg
+[paperclip] deleting /Users/synthmax/Dropbox/marselistvaervej4/public/system/images/8/xxl/Modern-architectural-designs-3.jpg
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+[32mCommand[0m :: identify -format %wx%h '/Users/synthmax/Dropbox/marselistvaervej4/public/system/images/8/xxl/Modern-architectural-designs-3.jpg[0]'
+[32mCommand[0m :: identify -format %wx%h '/Users/synthmax/Dropbox/marselistvaervej4/public/system/images/8/original/Modern-architectural-designs-3.jpg[0]'
+  Rendered companies/crop.html.slim within layouts/application (43.1ms)
+Compiled jquery.Jcrop.css  (0ms)  (pid 57991)
+Compiled application.css  (15ms)  (pid 57991)
+  Rendered shared/_google.html.erb (0.0ms)
+  [1m[35mMeetingroom Load (0.2ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1
+  [1m[36mInfoPage Load (0.1ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages` [0m
+Completed 200 OK in 1086ms (Views: 172.1ms | ActiveRecord: 2.1ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/Jcrop.gif"):
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  quiet_assets (1.0.1) lib/quiet_assets.rb:20:in `call_with_quiet_assets'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/static.rb:62:in `call'
+  rack-cache (1.2) lib/rack/cache/context.rb:136:in `forward'
+  rack-cache (1.2) lib/rack/cache/context.rb:245:in `fetch'
+  rack-cache (1.2) lib/rack/cache/context.rb:185:in `lookup'
+  rack-cache (1.2) lib/rack/cache/context.rb:66:in `call!'
+  rack-cache (1.2) lib/rack/cache/context.rb:51:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/synthmax/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /Users/synthmax/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /Users/synthmax/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+
+
+
+Started PUT "/dk/companies/8" for 127.0.0.1 at 2012-10-12 13:45:54 +0200
+Processing by CompaniesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"sGTuMKritxRYtbqZW6m2WCMl4190ygHl/C60gSayiIQ=", "company"=>{"crop_x"=>"284", "crop_y"=>"206", "crop_w"=>"991", "crop_h"=>"811"}, "commit"=>"Crop", "locale"=>"dk", "id"=>"8"}
+  [1m[35mInfoPage Load (0.3ms)[0m  SELECT `info_pages`.* FROM `info_pages` 
+  [1m[36mCompany Load (0.2ms)[0m  [1mSELECT `companies`.* FROM `companies` WHERE `companies`.`id` = 8 LIMIT 1[0m
+  [1m[35mUser Load (0.5ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `companies`.* FROM `companies` WHERE `companies`.`id` = 8 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+[32mCommand[0m :: identify -format %wx%h '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-1l40opy.jpg[0]'
+[32mCommand[0m :: identify -format %m '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-1l40opy.jpg[0]'
+[32mCommand[0m :: identify -format %m '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-1l40opy.jpg[0]'
+[32mCommand[0m :: convert '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-1l40opy.jpg[0]' -crop 991x811+284+206 -resize "x57" +repage '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-1l40opy20121012-57991-10601rt'
+[32mCommand[0m :: file -b --mime '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-1l40opy20121012-57991-10601rt'
+[32mCommand[0m :: identify -format %wx%h '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-1l40opy.jpg[0]'
+[32mCommand[0m :: identify -format %m '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-1l40opy.jpg[0]'
+[32mCommand[0m :: identify -format %m '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-1l40opy.jpg[0]'
+[32mCommand[0m :: convert '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-1l40opy.jpg[0]' -crop 991x811+284+206 -resize "x114" +repage '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-1l40opy20121012-57991-ov60bo'
+[32mCommand[0m :: file -b --mime '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-1l40opy20121012-57991-ov60bo'
+[32mCommand[0m :: identify -format %wx%h '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-1l40opy.jpg[0]'
+[32mCommand[0m :: identify -format %m '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-1l40opy.jpg[0]'
+[32mCommand[0m :: identify -format %m '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-1l40opy.jpg[0]'
+[32mCommand[0m :: convert '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-1l40opy.jpg[0]' -crop 991x811+284+206 -resize "x376" +repage '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-1l40opy20121012-57991-1qbc3mq'
+[32mCommand[0m :: file -b --mime '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-1l40opy20121012-57991-1qbc3mq'
+[32mCommand[0m :: identify -format %wx%h '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-1l40opy.jpg[0]'
+[32mCommand[0m :: identify -format %m '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-1l40opy.jpg[0]'
+[32mCommand[0m :: identify -format %m '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-1l40opy.jpg[0]'
+[32mCommand[0m :: convert '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-1l40opy.jpg[0]' -crop 991x811+284+206 -resize "754x616>" '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-1l40opy20121012-57991-1m4db5f'
+[32mCommand[0m :: file -b --mime '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Modern-architectural-designs-320121012-57991-1l40opy20121012-57991-1m4db5f'
+[paperclip] deleting /Users/synthmax/Dropbox/marselistvaervej4/public/system/images/8/original/Modern-architectural-designs-3.jpg
+[paperclip] deleting /Users/synthmax/Dropbox/marselistvaervej4/public/system/images/8/mini/Modern-architectural-designs-3.jpg
+[paperclip] deleting /Users/synthmax/Dropbox/marselistvaervej4/public/system/images/8/thumbnail/Modern-architectural-designs-3.jpg
+[paperclip] deleting /Users/synthmax/Dropbox/marselistvaervej4/public/system/images/8/preview/Modern-architectural-designs-3.jpg
+[paperclip] deleting /Users/synthmax/Dropbox/marselistvaervej4/public/system/images/8/xxl/Modern-architectural-designs-3.jpg
+[paperclip] Saving attachments.
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/dk/companies/8
+Completed 302 Found in 811ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/dk/companies/8" for 127.0.0.1 at 2012-10-12 13:45:54 +0200
+Processing by CompaniesController#show as HTML
+  Parameters: {"locale"=>"dk", "id"=>"8"}
+  [1m[35mInfoPage Load (0.2ms)[0m  SELECT `info_pages`.* FROM `info_pages` 
+  [1m[36mCompany Load (0.2ms)[0m  [1mSELECT `companies`.* FROM `companies` WHERE `companies`.`id` = 8 LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  Rendered shared/_menu.html.slim (1.0ms)
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`company_id` = 8[0m
+  [1m[35mNewspost Load (0.4ms)[0m  SELECT `newsposts`.* FROM `newsposts` WHERE `newsposts`.`internal_letter` = 1 ORDER BY created_at desc LIMIT 3 OFFSET 0
+  Rendered shared/_news.html.slim (4.3ms)
+  Rendered companies/show.html.slim within layouts/application (11.7ms)
+  Rendered shared/_google.html.erb (0.0ms)
+  [1m[36mMeetingroom Load (0.2ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `info_pages`.* FROM `info_pages` 
+Completed 200 OK in 39ms (Views: 29.4ms | ActiveRecord: 1.9ms)

@@ -14,6 +14,7 @@
 //= require rails
 //= require dataTables/jquery.dataTables
 //= require bookings
+//= require jquery.Jcrop.min
 // require_tree .
 
 
