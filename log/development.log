@@ -63078,3 +63078,77 @@ Processing by CompaniesController#show as HTML
   [1m[36mMeetingroom Load (0.2ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1[0m
   [1m[35mCACHE (0.0ms)[0m  SELECT `info_pages`.* FROM `info_pages` 
 Completed 200 OK in 39ms (Views: 29.4ms | ActiveRecord: 1.9ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2013-01-10 23:37:28 +0100
+Processing by HomeController#index as HTML
+  [1m[36mInfoPage Load (0.2ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages` [0m
+[paperclip] Duplicate path for image with :rails_root/public/system/:attachment/:id/:style/:filename. This will clash with attachment defined in User class
+[paperclip] Duplicate path for image with :rails_root/public/system/:attachment/:id/:style/:filename. This will clash with attachment defined in Newspost class
+  [1m[35mGallery Load (0.3ms)[0m  SELECT `galleries`.* FROM `galleries` WHERE `galleries`.`identity` = 'marselistvaervej ' LIMIT 1
+  [1m[36mPage Load (0.3ms)[0m  [1mSELECT `pages`.* FROM `pages` WHERE `pages`.`identity` = 'welcome_dk ' LIMIT 1[0m
+  Rendered shared/_menu.html.slim (2.9ms)
+[paperclip] Duplicate path for image with :rails_root/public/system/:attachment/:id/:style/:filename. This will clash with attachment defined in Photo class
+[paperclip] Duplicate path for image with :rails_root/public/system/:attachment/:id/:style/:filename. This will clash with attachment defined in Company class
+[paperclip] Duplicate path for image with :rails_root/public/system/:attachment/:id/:style/:filename. This will clash with attachment defined in Illustration class
+  [1m[35mNewspost Load (0.6ms)[0m  SELECT `newsposts`.* FROM `newsposts` WHERE `newsposts`.`internal_letter` = 0 ORDER BY created_at desc LIMIT 3 OFFSET 0
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM `newsposts` WHERE `newsposts`.`internal_letter` = 0[0m
+  Rendered shared/_news.html.slim (151.3ms)
+  Rendered home/index.html.slim within layouts/application (387.4ms)
+Compiled galleriffic-3.css  (0ms)  (pid 33809)
+Compiled gallery.css  (0ms)  (pid 33809)
+Compiled fullcalendar.css  (0ms)  (pid 33809)
+Compiled grid.css  (547ms)  (pid 33809)
+Compiled main.css  (191ms)  (pid 33809)
+Compiled text.css  (53ms)  (pid 33809)
+Compiled jquery.ui.core.css  (1ms)  (pid 33809)
+Compiled jquery.ui.theme.css  (7ms)  (pid 33809)
+Compiled dataTables/src/demo_table_jui.css  (0ms)  (pid 33809)
+Compiled jquery.Jcrop.css  (0ms)  (pid 33809)
+Compiled application.css  (2104ms)  (pid 33809)
+Compiled jquery.js  (1ms)  (pid 33809)
+Compiled jquery_ujs.js  (0ms)  (pid 33809)
+Compiled jquery-ui.js  (7ms)  (pid 33809)
+Compiled jquery.rest.js  (0ms)  (pid 33809)
+Compiled jquery.galleriffic.js  (0ms)  (pid 33809)
+Compiled jquery.history.js  (0ms)  (pid 33809)
+Compiled jush.js  (0ms)  (pid 33809)
+Compiled jquery.opacityrollover.js  (0ms)  (pid 33809)
+Compiled fullcalendar.js  (1ms)  (pid 33809)
+Compiled calendar.js  (0ms)  (pid 33809)
+Compiled rails.js  (0ms)  (pid 33809)
+Compiled dataTables/jquery.dataTables.js  (1ms)  (pid 33809)
+Compiled bookings.js  (119ms)  (pid 33809)
+Compiled jquery.Jcrop.min.js  (1ms)  (pid 33809)
+Compiled application.js  (669ms)  (pid 33809)
+  Rendered shared/_google.html.erb (16.1ms)
+Completed 200 OK in 3866ms (Views: 3609.1ms | ActiveRecord: 147.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-01-10 23:37:33 +0100
+Processing by HomeController#index as HTML
+  [1m[35mInfoPage Load (0.3ms)[0m  SELECT `info_pages`.* FROM `info_pages` 
+  [1m[36mGallery Load (0.4ms)[0m  [1mSELECT `galleries`.* FROM `galleries` WHERE `galleries`.`identity` = 'marselistvaervej ' LIMIT 1[0m
+  [1m[35mPage Load (0.4ms)[0m  SELECT `pages`.* FROM `pages` WHERE `pages`.`identity` = 'welcome_dk ' LIMIT 1
+  Rendered shared/_menu.html.slim (1.1ms)
+  [1m[36mNewspost Load (0.5ms)[0m  [1mSELECT `newsposts`.* FROM `newsposts` WHERE `newsposts`.`internal_letter` = 0 ORDER BY created_at desc LIMIT 3 OFFSET 0[0m
+  [1m[35m (0.6ms)[0m  SELECT COUNT(*) FROM `newsposts` WHERE `newsposts`.`internal_letter` = 0
+  Rendered shared/_news.html.slim (7.8ms)
+  Rendered home/index.html.slim within layouts/application (13.2ms)
+  Rendered shared/_google.html.erb (0.0ms)
+Completed 200 OK in 32ms (Views: 26.7ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-01-10 23:37:38 +0100
+Processing by HomeController#index as HTML
+  [1m[36mInfoPage Load (0.4ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages` [0m
+  [1m[35mGallery Load (0.4ms)[0m  SELECT `galleries`.* FROM `galleries` WHERE `galleries`.`identity` = 'marselistvaervej ' LIMIT 1
+  [1m[36mPage Load (0.4ms)[0m  [1mSELECT `pages`.* FROM `pages` WHERE `pages`.`identity` = 'welcome_dk ' LIMIT 1[0m
+  Rendered shared/_menu.html.slim (0.9ms)
+  [1m[35mNewspost Load (0.5ms)[0m  SELECT `newsposts`.* FROM `newsposts` WHERE `newsposts`.`internal_letter` = 0 ORDER BY created_at desc LIMIT 3 OFFSET 0
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM `newsposts` WHERE `newsposts`.`internal_letter` = 0[0m
+  Rendered shared/_news.html.slim (4.7ms)
+  Rendered home/index.html.slim within layouts/application (8.9ms)
+  Rendered shared/_google.html.erb (0.0ms)
+Completed 200 OK in 24ms (Views: 20.0ms | ActiveRecord: 1.9ms)

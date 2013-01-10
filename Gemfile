@@ -3,7 +3,7 @@ source 'http://rubygems.org'
 #gem 'rails', '3.0.7'
 #gem "rails", "3.1.0"
 #gem 'rails', '3.2.3'
-gem 'rails', '3.2.8'
+gem 'rails', '3.2.11'
 
 #gem 'mysql2', '0.2.13'
 
