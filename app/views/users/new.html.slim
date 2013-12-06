@@ -16,7 +16,7 @@
     .field.top_margin
       = f.label :company, t('user.company')
       br/
-      = f.select(:company, Company.all.map { |company| [company.title, company.id] }, :include_blank => true)
+      = f.select(:company, Company.all.map { |company| [company.title, company.id] }, :include_blank => false)
 
     .field.top_margin
       - if current_user.super?
