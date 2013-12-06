@@ -72964,3 +72964,4 @@ Processing by MeetingroomsController#show as HTML
   [1m[35mCACHE (0.0ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1
   [1m[36mCACHE (0.0ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages` [0m
 Completed 200 OK in 34ms (Views: 26.7ms | ActiveRecord: 0.9ms)
+Connecting to database specified by database.yml
