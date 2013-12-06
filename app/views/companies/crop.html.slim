@@ -40,7 +40,7 @@
     div class="clear">&nbsp;
     = image_tag @company.image.url(:xxl), :id => "cropbox"
 
-    = form_for @company do |f|
+    = form_for( @company)do |f|
       - for attribute in [:crop_x, :crop_y, :crop_w, :crop_h]
         = f.hidden_field attribute, :id => attribute
       br

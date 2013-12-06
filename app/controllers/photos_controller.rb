@@ -5,7 +5,7 @@ class PhotosController < InheritedResources::Base
   belongs_to :gallery , :optional => true
   
   def show
-    logger.debug '++++++++++++++++++++++++++++++++++++++++++++++'
+
      @photo = Photo.find(params[:id])
     @photo.destroy
     redirect_to :back
@@ -20,6 +20,7 @@ class PhotosController < InheritedResources::Base
     if @photo.save
       if params[:photo][:image].blank?
         flash[:notice] = "Successfully created photo."
+         @photo.image.reprocess! if params[:photo][:crop_x]
         redirect_to admin_gallery_path(@gallery) 
       else
         render :action => "crop"
@@ -34,6 +35,7 @@ class PhotosController < InheritedResources::Base
     if @photo.update_attributes(params[:photo])
       if params[:photo][:image].blank?
         flash[:notice] = "Successfully updated photo."
+        @photo.image.reprocess! if params[:photo][:crop_x]
         redirect_to admin_gallery_path(@photo.gallery_id) 
       else
         render :action => "crop"

@@ -15,7 +15,7 @@ class Photo < ActiveRecord::Base
   validates_attachment_size :image, :less_than => 3.megabytes
   #validates_attachment_content_type :image, :content_type => ['image/jpeg','image/jpg','image/png','image/gif']
   
-  after_update :reprocess_image, :if => :cropping?
+  #after_update :reprocess_image, :if => :cropping?
   
   attr_accessor :crop_x, :crop_y, :crop_w, :crop_h
   
@@ -29,9 +29,9 @@ class Photo < ActiveRecord::Base
      @geometry[style] ||= Paperclip::Geometry.from_file(image.path(style))
    end
 
-   def reprocess_image
-     image.reprocess!
-   end
+   #def reprocess_image
+   #  image.reprocess!
+   #end
   
 
   

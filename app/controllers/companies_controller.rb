@@ -15,9 +15,11 @@ class CompaniesController < InheritedResources::Base
 
   def update
     @company = Company.find(params[:id])
+
     if @company.update_attributes(params[:company])
       if params[:company][:image].blank?
         flash[:notice] = "Successfully updated company."
+        @company.image.reprocess! if params[:company][:crop_x]
         redirect_to @company
       else
         render :action => "crop"

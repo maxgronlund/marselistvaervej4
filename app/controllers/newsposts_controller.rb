@@ -16,6 +16,7 @@ class NewspostsController < InheritedResources::Base
     if @newspost.update_attributes(params[:newspost])
       if params[:newspost][:image].blank?
         flash[:notice] = "Successfully updated newspost."
+        @newspost.image.reprocess! if params[:newspost][:crop_x]
         goto = session[:go_to_after_edit] || newsposts_path
         session[:go_to_after_edit] = nil
         update! {goto}

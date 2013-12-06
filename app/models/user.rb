@@ -18,7 +18,7 @@ class User < ActiveRecord::Base
   belongs_to :company
   
   validates_presence_of :name          
-  after_update :reprocess_image, :if => :cropping?
+  #after_update :reprocess_image, :if => :cropping?
   
   has_attached_file :image, 
                     :styles => { :small => "120x130#", :large => "480x520>"}, 
@@ -27,7 +27,7 @@ class User < ActiveRecord::Base
                     :url => "/system/:attachment/:id/:style/:filename"
                     
   
-  after_update :reprocess_image, :if => :cropping?
+  #after_update :reprocess_image, :if => :cropping?
   
   
   #, :default_url => "/images/fallback/default_avatar_:style.png"
@@ -69,9 +69,9 @@ class User < ActiveRecord::Base
 
 
 
-   def reprocess_image
-     image.reprocess!
-   end
+   #def reprocess_image
+   #  image.reprocess!
+   #end
   
   
 end

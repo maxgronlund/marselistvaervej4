@@ -16,7 +16,7 @@ class CompanyThumb < ActiveRecord::Base
                     #                                                            'image/x-png',
                     #                                                            'image/gif',
                     #                                                            'image/pjpeg'],:message => 'must be a URL for GIF, JPG or PNG image.'
-  after_update :reprocess_image, :if => :cropping?
+  #after_update :reprocess_image, :if => :cropping?
 
   attr_accessor :crop_x, :crop_y, :crop_w, :crop_h
 
@@ -30,8 +30,8 @@ class CompanyThumb < ActiveRecord::Base
      @geometry[style] ||= Paperclip::Geometry.from_file(image.path(style))
    end
 
-   def reprocess_image
-     image.reprocess!
-   end
+   #def reprocess_image
+   #  image.reprocess!
+   #end
    
 end

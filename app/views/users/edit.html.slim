@@ -9,40 +9,40 @@
           - @user.errors.full_messages.each do |msg|
             li= msg
 
-    br/
+    br
     .field
       = f.label :name, t('user.portrait')
-      br/
+      br
       = f.file_field :image
-    br/
+    br
     .field
       = f.label :name, t('user.name')
-      br/
+      br
       = f.text_field :name
 
     .field
       = f.label :email
-      br/
+      br
       = f.text_field :email
 
     .field
       = f.label :company_id, t('user.company')
-      br/
-      = f.select(:company_id, Company.all.map { |company| [company.title, company.id] }, :include_blank => true)
+      br
+      = f.select(:company_id, Company.all.map { |company| [company.title, company.id] }, :include_blank => false)
 
     .field
       = f.label :password
-      br/
-      = f.password_field :password
+      br
+      = f.password_field :password, id: 'password'
     .field
       = f.label :password_confirmation
-      br/
+      br
       = f.password_field :password_confirmation
       
     - if current_user && current_user.admin_or_super?
       .field
         = f.label :grid
-        br/
+        br
         = f.check_box :grid
 
 
@@ -51,12 +51,12 @@
         - if can_edit?
           - if current_user.super?
             = f.label :role, t('user.role')
-	        br/
+	        br
             = f.select(:role, User::ROLES)
           
           - else
             = f.label :role, t('user.role')
-	        br/
+	        br
             = f.select(:role, User::ROLES - ['super'])
               
 

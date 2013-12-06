@@ -69,8 +69,10 @@ $(document).ready(function() {
     //  }
     //});
     calendarGotoDate(date);
+    
     return true;
   });
+  $('#password').value = '';
 });
 
 

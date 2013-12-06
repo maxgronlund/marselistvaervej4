@@ -16,6 +16,7 @@ gem 'inherited_resources'
 gem 'mime-types', '1.16', :require => "mime/types"
 #gem 'devise', '1.1.5'
 gem 'devise'
+#gem 'devise-encryptable'
 
 
 gem 'cancan', '1.4.1'

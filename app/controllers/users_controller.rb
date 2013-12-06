@@ -39,6 +39,7 @@ class UsersController < InheritedResources::Base
     if @user.update_attributes(params[:user])
       if params[:user][:image].blank?
         flash[:notice] = "Successfully updated user."
+        @user.image.reprocess! if params[:user][:crop_x]
         redirect_to @user
       else
         render :action => "crop"

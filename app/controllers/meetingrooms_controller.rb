@@ -13,6 +13,7 @@ class MeetingroomsController < InheritedResources::Base
     if @meetingroom.update_attributes(params[:meetingroom])
       if params[:meetingroom][:image].blank?
         flash[:notice] = "Successfully updated meetingroom."
+        @meetingroom.image.reprocess! if params[:meetingroom][:crop_x]
         redirect_to @meetingroom
       else
         render :action => "crop"
@@ -29,6 +30,7 @@ class MeetingroomsController < InheritedResources::Base
     if @meetingroom.save
       if params[:meetingroom][:image].blank?
         flash[:notice] = "Successfully created meetingroom."
+         
         redirect_to meetingroom_path(@meetingroom)
       else
         render :action => "crop"
