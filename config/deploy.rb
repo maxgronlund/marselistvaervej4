@@ -1,7 +1,7 @@
 # RVM bootstrap
 #$:.unshift(File.expand_path("~/.rvm/lib"))
 require 'rvm/capistrano'
-set :rvm_ruby_string, '1.9.2-p136'
+set :rvm_ruby_string, '1.9.3-p327-falcon'
 set :rvm_type, :user
 
 # bundler bootstrap
@@ -9,13 +9,8 @@ require 'bundler/capistrano'
 load 'deploy/assets'
 
 # main details
-set :application, "marselistvaervej4"                                       # <<< change name
+set :application, "marselistvaervej4"                                # <<< change name
 server "46.4.64.81", :app, :web, :db, :primary => true
-#set :rvm_type, :user
-#set :rvm_ruby_string, '1.9.2@marselistvaervej4'
-
-# Old
-# server "46.4.64.81", :app, :web, :db, :primary => true
 
 # server details
 default_run_options[:pty] = true
@@ -24,11 +19,6 @@ set :deploy_to, "/var/www/#{application}"
 set :deploy_via, :remote_cache
 set :user, "deploy"
 set :use_sudo, false
-#set :deploy_via, :copy
-#set :copy_cache, true
-#set :copy_exclude, ['**/.git', '.git']
-#set :user, "deploy"
-#set :use_sudo, false
 
 # repo details
 set :scm , :git
@@ -61,6 +51,7 @@ end
 
 after 'deploy:update_code', 'deploy:symlink_shared'
 
+
 desc "Tail all or a single remote file"
 task :tail do
   ENV["LOGFILE"] ||= "*.log"
@@ -70,4 +61,3 @@ task :tail do
   end
 end
 
-load 'deploy/assets'
