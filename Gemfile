@@ -16,7 +16,7 @@ gem 'inherited_resources'
 gem 'mime-types', '1.16', :require => "mime/types"
 #gem 'devise', '1.1.5'
 gem 'devise'
-#gem 'devise-encryptable'
+gem 'devise-encryptable'
 
 
 gem 'cancan', '1.4.1'
@@ -26,6 +26,7 @@ gem 'cancan', '1.4.1'
 gem 'will_paginate'
 #gem 'thinking-sphinx', '2.0.1', :require => 'thinking_sphinx'
 gem 'capistrano'
+gem 'rvm-capistrano'
 #gem 'compass'
 gem 'compass-rails','~> 1.0.0.rc.2'
 gem 'compass-960-plugin'

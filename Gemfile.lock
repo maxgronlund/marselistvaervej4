@@ -60,6 +60,8 @@ GEM
       orm_adapter (~> 0.1)
       railties (~> 3.1)
       warden (~> 1.2.1)
+    devise-encryptable (0.1.2)
+      devise (>= 2.1.0)
     erubis (2.7.0)
     execjs (1.4.0)
       multi_json (~> 1.0)
@@ -132,6 +134,8 @@ GEM
       json (~> 1.4)
     responders (0.9.3)
       railties (~> 3.1)
+    rvm-capistrano (1.2.7)
+      capistrano (>= 2.0.0)
     sass (3.2.5)
     sass-rails (3.2.5)
       railties (~> 3.2.0)
@@ -169,6 +173,7 @@ DEPENDENCIES
   compass-960-plugin
   compass-rails (~> 1.0.0.rc.2)
   devise
+  devise-encryptable
   inherited_resources
   jquery-datatables-rails
   jquery-rails
@@ -178,6 +183,7 @@ DEPENDENCIES
   paperclip (~> 3.0)
   quiet_assets
   rails (= 3.2.11)
+  rvm-capistrano
   sass-rails (~> 3.2.3)
   slim
   uglifier

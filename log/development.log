@@ -72155,3 +72155,812 @@ Processing by UsersController#show as HTML
   [1m[36mCACHE (0.0ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1[0m
   [1m[35mInfoPage Load (0.2ms)[0m  SELECT `info_pages`.* FROM `info_pages` 
 Completed 200 OK in 59ms (Views: 46.5ms | ActiveRecord: 2.5ms)
+Connecting to database specified by database.yml
+
+
+Started PUT "/dk/users/1" for 127.0.0.1 at 2013-12-06 19:49:55 +0100
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"H5SR+23v0KMLtal5NuxNFDr6yK9Uirn4QvZBp7yVUK8=", "user"=>{"image"=>#<ActionDispatch::Http::UploadedFile:0x007ff64a402b10 @original_filename="1961-Isetta-300-pickup-Bruce-Weiner-Auction.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"user[image]\"; filename=\"1961-Isetta-300-pickup-Bruce-Weiner-Auction.jpg\"\r\nContent-Type: image/jpeg\r\n", @tempfile=#<File:/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/RackMultipart20131206-24770-16ca835>>, "name"=>"Max Grønlund", "email"=>"max@synthmax.dk", "company_id"=>"2", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "grid"=>"1"}, "commit"=>"Gem", "locale"=>"dk", "id"=>"1"}
+WARNING: Can't verify CSRF token authenticity
+  [1m[36mInfoPage Load (0.1ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages` [0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+[paperclip] Saving attachments.
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mUPDATE `users` SET `last_sign_in_at` = '2013-12-06 18:42:49', `current_sign_in_at` = '2013-12-06 18:49:56', `sign_in_count` = 127, `updated_at` = '2013-12-06 18:49:56' WHERE `users`.`id` = 1[0m
+[paperclip] Saving attachments.
+  [1m[35m (0.5ms)[0m  COMMIT
+[paperclip] Duplicate path for image with :rails_root/public/system/:attachment/:id/:style/:filename. This will clash with attachment defined in User class
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/1961-Isetta-300-pickup-Bruce-Weiner-Auction20131206-24770-mx5168.jpg[0]'
+Command :: identify -format %m '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/1961-Isetta-300-pickup-Bruce-Weiner-Auction20131206-24770-mx5168.jpg[0]'
+Command :: identify -format %m '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/1961-Isetta-300-pickup-Bruce-Weiner-Auction20131206-24770-mx5168.jpg[0]'
+Command :: convert '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/1961-Isetta-300-pickup-Bruce-Weiner-Auction20131206-24770-mx5168.jpg[0]' -auto-orient -resize "x130" -crop "120x130+48+0" +repage '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/1961-Isetta-300-pickup-Bruce-Weiner-Auction20131206-24770-mx516820131206-24770-1p55ivc'
+Command :: file -b --mime '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/1961-Isetta-300-pickup-Bruce-Weiner-Auction20131206-24770-mx516820131206-24770-1p55ivc'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/1961-Isetta-300-pickup-Bruce-Weiner-Auction20131206-24770-mx5168.jpg[0]'
+Command :: identify -format %m '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/1961-Isetta-300-pickup-Bruce-Weiner-Auction20131206-24770-mx5168.jpg[0]'
+Command :: identify -format %m '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/1961-Isetta-300-pickup-Bruce-Weiner-Auction20131206-24770-mx5168.jpg[0]'
+Command :: convert '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/1961-Isetta-300-pickup-Bruce-Weiner-Auction20131206-24770-mx5168.jpg[0]' -auto-orient -resize "480x520>" '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/1961-Isetta-300-pickup-Bruce-Weiner-Auction20131206-24770-mx516820131206-24770-18kamz7'
+Command :: file -b --mime '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/1961-Isetta-300-pickup-Bruce-Weiner-Auction20131206-24770-mx516820131206-24770-18kamz7'
+  [1m[36m (0.2ms)[0m  [1mUPDATE `users` SET `image_updated_at` = '2013-12-06 18:49:56', `encrypted_password` = '$2a$10$vm87kFawH4TvMYHLS3TfmuCW0vqraEirVHX3bqsmOBjrwcx0dmOmy', `updated_at` = '2013-12-06 18:49:56' WHERE `users`.`id` = 1[0m
+[paperclip] Saving attachments.
+[paperclip] deleting /Users/synthmax/Documents/marselistvaervej4/public/system/images/1/original/1961-Isetta-300-pickup-Bruce-Weiner-Auction.jpg
+[paperclip] deleting /Users/synthmax/Documents/marselistvaervej4/public/system/images/1/small/1961-Isetta-300-pickup-Bruce-Weiner-Auction.jpg
+[paperclip] deleting /Users/synthmax/Documents/marselistvaervej4/public/system/images/1/large/1961-Isetta-300-pickup-Bruce-Weiner-Auction.jpg
+  [1m[35m (16.3ms)[0m  COMMIT
+Command :: identify -format '%wx%h,%[exif:orientation]' '/Users/synthmax/Documents/marselistvaervej4/public/system/images/1/large/1961-Isetta-300-pickup-Bruce-Weiner-Auction.jpg[0]'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/Users/synthmax/Documents/marselistvaervej4/public/system/images/1/original/1961-Isetta-300-pickup-Bruce-Weiner-Auction.jpg[0]'
+  Rendered users/crop.html.slim within layouts/application (141.9ms)
+Compiled jquery.Jcrop.css  (0ms)  (pid 24770)
+Compiled application.css  (115ms)  (pid 24770)
+Compiled jquery.Jcrop.min.js  (0ms)  (pid 24770)
+Compiled application.js  (98ms)  (pid 24770)
+  Rendered shared/_google.html.erb (0.4ms)
+[paperclip] Duplicate path for image with :rails_root/public/system/:attachment/:id/:style/:filename. This will clash with attachment defined in Newspost class
+  [1m[36mMeetingroom Load (0.2ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1[0m
+  [1m[35mInfoPage Load (0.2ms)[0m  SELECT `info_pages`.* FROM `info_pages` 
+Completed 200 OK in 1265ms (Views: 657.8ms | ActiveRecord: 23.7ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/Jcrop.gif"):
+  actionpack (3.2.11) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.11) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.11) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.11) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.11) lib/rails/rack/logger.rb:16:in `call'
+  quiet_assets (1.0.1) lib/quiet_assets.rb:20:in `call_with_quiet_assets'
+  actionpack (3.2.11) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.3) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.3) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.11) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.3) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/static.rb:62:in `call'
+  rack-cache (1.2) lib/rack/cache/context.rb:136:in `forward'
+  rack-cache (1.2) lib/rack/cache/context.rb:245:in `fetch'
+  rack-cache (1.2) lib/rack/cache/context.rb:185:in `lookup'
+  rack-cache (1.2) lib/rack/cache/context.rb:66:in `call!'
+  rack-cache (1.2) lib/rack/cache/context.rb:51:in `call'
+  railties (3.2.11) lib/rails/engine.rb:479:in `call'
+  railties (3.2.11) lib/rails/application.rb:223:in `call'
+  rack (1.4.3) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.11) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.3) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/synthmax/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /Users/synthmax/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /Users/synthmax/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+
+
+
+Started PUT "/dk/users/1" for 127.0.0.1 at 2013-12-06 19:50:01 +0100
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"TULbkozzVVu9dszV3ovDR2szwxsp3dloGmiUrpBj+/g=", "user"=>{"crop_x"=>"244", "crop_y"=>"0", "crop_w"=>"499", "crop_h"=>"540"}, "commit"=>"Crop", "locale"=>"dk", "id"=>"1"}
+  [1m[36mInfoPage Load (0.2ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages` [0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+[paperclip] Saving attachments.
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mUPDATE `users` SET `last_sign_in_at` = '2013-12-06 18:49:56', `current_sign_in_at` = '2013-12-06 18:50:01', `sign_in_count` = 128, `updated_at` = '2013-12-06 18:50:01' WHERE `users`.`id` = 1[0m
+[paperclip] Saving attachments.
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+[paperclip] Saving attachments.
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/1961-Isetta-300-pickup-Bruce-Weiner-Auction20131206-24770-rb5yyu.jpg[0]'
+Command :: identify -format %m '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/1961-Isetta-300-pickup-Bruce-Weiner-Auction20131206-24770-rb5yyu.jpg[0]'
+Command :: identify -format %m '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/1961-Isetta-300-pickup-Bruce-Weiner-Auction20131206-24770-rb5yyu.jpg[0]'
+Command :: convert '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/1961-Isetta-300-pickup-Bruce-Weiner-Auction20131206-24770-rb5yyu.jpg[0]' -crop 499x540+244+0 -auto-orient -resize "x130" +repage '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/1961-Isetta-300-pickup-Bruce-Weiner-Auction20131206-24770-rb5yyu20131206-24770-17zqmil'
+Command :: file -b --mime '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/1961-Isetta-300-pickup-Bruce-Weiner-Auction20131206-24770-rb5yyu20131206-24770-17zqmil'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/1961-Isetta-300-pickup-Bruce-Weiner-Auction20131206-24770-rb5yyu.jpg[0]'
+Command :: identify -format %m '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/1961-Isetta-300-pickup-Bruce-Weiner-Auction20131206-24770-rb5yyu.jpg[0]'
+Command :: identify -format %m '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/1961-Isetta-300-pickup-Bruce-Weiner-Auction20131206-24770-rb5yyu.jpg[0]'
+Command :: convert '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/1961-Isetta-300-pickup-Bruce-Weiner-Auction20131206-24770-rb5yyu.jpg[0]' -crop 499x540+244+0 -auto-orient -resize "480x520>" '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/1961-Isetta-300-pickup-Bruce-Weiner-Auction20131206-24770-rb5yyu20131206-24770-zkg6ah'
+Command :: file -b --mime '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/1961-Isetta-300-pickup-Bruce-Weiner-Auction20131206-24770-rb5yyu20131206-24770-zkg6ah'
+[paperclip] deleting /Users/synthmax/Documents/marselistvaervej4/public/system/images/1/original/1961-Isetta-300-pickup-Bruce-Weiner-Auction.jpg
+[paperclip] deleting /Users/synthmax/Documents/marselistvaervej4/public/system/images/1/small/1961-Isetta-300-pickup-Bruce-Weiner-Auction.jpg
+[paperclip] deleting /Users/synthmax/Documents/marselistvaervej4/public/system/images/1/large/1961-Isetta-300-pickup-Bruce-Weiner-Auction.jpg
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mUPDATE `users` SET `image_updated_at` = '2013-12-06 18:50:01', `updated_at` = '2013-12-06 18:50:01' WHERE `users`.`id` = 1[0m
+[paperclip] Saving attachments.
+  [1m[35m (15.7ms)[0m  COMMIT
+Redirected to http://localhost:3000/dk/users/1
+Completed 302 Found in 321ms (ActiveRecord: 17.6ms)
+
+
+Started GET "/dk/users/1" for 127.0.0.1 at 2013-12-06 19:50:01 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"locale"=>"dk", "id"=>"1"}
+  [1m[36mInfoPage Load (0.2ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages` [0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  Rendered shared/_menu.html.slim (4.7ms)
+[paperclip] Duplicate path for image with :rails_root/public/system/:attachment/:id/:style/:filename. This will clash with attachment defined in Meetingroom class
+  [1m[35mCompany Load (0.2ms)[0m  SELECT `companies`.* FROM `companies` WHERE `companies`.`id` = 2 LIMIT 1
+  [1m[36mBooking Load (0.3ms)[0m  [1mSELECT `bookings`.* FROM `bookings` WHERE `bookings`.`bookers_name` = 'Max Grønlund' ORDER BY booking_date desc LIMIT 8 OFFSET 0[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM `bookings` WHERE `bookings`.`bookers_name` = 'Max Grønlund'
+  [1m[36mMeetingroom Load (0.2ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 7 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 7 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 7 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 7 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 7 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 7 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 7 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 7 LIMIT 1
+  [1m[36mMeetingroom Load (0.2ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1[0m
+  [1m[35mNewspost Load (0.2ms)[0m  SELECT `newsposts`.* FROM `newsposts` WHERE `newsposts`.`internal_letter` = 1 ORDER BY created_at desc LIMIT 3 OFFSET 0
+  Rendered shared/_news.html.slim (80.1ms)
+  Rendered users/show.html.slim within layouts/application (334.6ms)
+  Rendered shared/_google.html.erb (0.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `info_pages`.* FROM `info_pages` 
+Completed 200 OK in 366ms (Views: 334.0ms | ActiveRecord: 20.7ms)
+
+
+Started GET "/dk/users/1/edit" for 127.0.0.1 at 2013-12-06 19:50:04 +0100
+Processing by UsersController#edit as HTML
+  Parameters: {"locale"=>"dk", "id"=>"1"}
+  [1m[36mInfoPage Load (0.2ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages` [0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mCompany Load (0.3ms)[0m  SELECT `companies`.* FROM `companies` 
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` LIMIT 1[0m
+  Rendered users/edit.html.slim within layouts/application (16.5ms)
+  Rendered shared/_google.html.erb (0.0ms)
+  [1m[35mMeetingroom Load (0.2ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages` [0m
+Completed 200 OK in 93ms (Views: 85.7ms | ActiveRecord: 1.1ms)
+
+
+Started PUT "/dk/users/1" for 127.0.0.1 at 2013-12-06 19:50:06 +0100
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"TULbkozzVVu9dszV3ovDR2szwxsp3dloGmiUrpBj+/g=", "user"=>{"name"=>"Max Grønlund", "email"=>"max@synthmax.dk", "company_id"=>"2", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "grid"=>"1"}, "commit"=>"Gem", "locale"=>"dk", "id"=>"1"}
+  [1m[35mInfoPage Load (0.3ms)[0m  SELECT `info_pages`.* FROM `info_pages` 
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mUPDATE `users` SET `encrypted_password` = '$2a$10$KVXl9RmbgVqlz37xeCEkz.d6E6uKCFqV4yQY8Hz.cHDooqKAODhKC', `updated_at` = '2013-12-06 18:50:06' WHERE `users`.`id` = 1[0m
+[paperclip] Saving attachments.
+  [1m[35m (0.4ms)[0m  COMMIT
+Redirected to http://localhost:3000/dk/users/1
+Completed 302 Found in 84ms (ActiveRecord: 1.4ms)
+
+
+Started GET "/dk/users/1" for 127.0.0.1 at 2013-12-06 19:50:06 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"locale"=>"dk", "id"=>"1"}
+  [1m[36mInfoPage Load (0.2ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages` [0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+[paperclip] Saving attachments.
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  UPDATE `users` SET `last_sign_in_at` = '2013-12-06 18:50:01', `current_sign_in_at` = '2013-12-06 18:50:06', `sign_in_count` = 129, `updated_at` = '2013-12-06 18:50:06' WHERE `users`.`id` = 1
+[paperclip] Saving attachments.
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  Rendered shared/_menu.html.slim (1.0ms)
+  [1m[35mCompany Load (0.2ms)[0m  SELECT `companies`.* FROM `companies` WHERE `companies`.`id` = 2 LIMIT 1
+  [1m[36mBooking Load (0.3ms)[0m  [1mSELECT `bookings`.* FROM `bookings` WHERE `bookings`.`bookers_name` = 'Max Grønlund' ORDER BY booking_date desc LIMIT 8 OFFSET 0[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM `bookings` WHERE `bookings`.`bookers_name` = 'Max Grønlund'
+  [1m[36mMeetingroom Load (0.2ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 7 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 7 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 7 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 7 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 7 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 7 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 7 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 7 LIMIT 1
+  [1m[36mMeetingroom Load (0.2ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1[0m
+  [1m[35mNewspost Load (0.2ms)[0m  SELECT `newsposts`.* FROM `newsposts` WHERE `newsposts`.`internal_letter` = 1 ORDER BY created_at desc LIMIT 3 OFFSET 0
+  Rendered shared/_news.html.slim (3.2ms)
+  Rendered users/show.html.slim within layouts/application (29.9ms)
+  Rendered shared/_google.html.erb (0.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1[0m
+  [1m[35mInfoPage Load (0.2ms)[0m  SELECT `info_pages`.* FROM `info_pages` 
+Completed 200 OK in 62ms (Views: 47.7ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/dk/users/1" for 127.0.0.1 at 2013-12-06 19:50:08 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"locale"=>"dk", "id"=>"1"}
+  [1m[36mInfoPage Load (0.2ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages` [0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  Rendered shared/_menu.html.slim (1.0ms)
+  [1m[35mCompany Load (0.2ms)[0m  SELECT `companies`.* FROM `companies` WHERE `companies`.`id` = 2 LIMIT 1
+  [1m[36mBooking Load (0.3ms)[0m  [1mSELECT `bookings`.* FROM `bookings` WHERE `bookings`.`bookers_name` = 'Max Grønlund' ORDER BY booking_date desc LIMIT 8 OFFSET 0[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM `bookings` WHERE `bookings`.`bookers_name` = 'Max Grønlund'
+  [1m[36mMeetingroom Load (0.1ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 7 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 7 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 7 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 7 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 7 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 7 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 7 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 7 LIMIT 1
+  [1m[36mMeetingroom Load (0.2ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1[0m
+  [1m[35mNewspost Load (0.2ms)[0m  SELECT `newsposts`.* FROM `newsposts` WHERE `newsposts`.`internal_letter` = 1 ORDER BY created_at desc LIMIT 3 OFFSET 0
+  Rendered shared/_news.html.slim (3.2ms)
+  Rendered users/show.html.slim within layouts/application (28.8ms)
+  Rendered shared/_google.html.erb (0.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `info_pages`.* FROM `info_pages` 
+Completed 200 OK in 53ms (Views: 46.2ms | ActiveRecord: 1.4ms)
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+
+
+Started GET "/dk/users/1" for 127.0.0.1 at 2013-12-06 19:56:35 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"locale"=>"dk", "id"=>"1"}
+  [1m[36mInfoPage Load (0.1ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages` [0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+[paperclip] Duplicate path for image with :rails_root/public/system/:attachment/:id/:style/:filename. This will clash with attachment defined in User class
+  Rendered shared/_menu.html.slim (3.8ms)
+[paperclip] Duplicate path for image with :rails_root/public/system/:attachment/:id/:style/:filename. This will clash with attachment defined in Newspost class
+  [1m[35mCompany Load (0.3ms)[0m  SELECT `companies`.* FROM `companies` WHERE `companies`.`id` = 2 LIMIT 1
+  [1m[36mBooking Load (0.3ms)[0m  [1mSELECT `bookings`.* FROM `bookings` WHERE `bookings`.`bookers_name` = 'Max Grønlund' ORDER BY booking_date desc LIMIT 8 OFFSET 0[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM `bookings` WHERE `bookings`.`bookers_name` = 'Max Grønlund'
+[paperclip] Duplicate path for image with :rails_root/public/system/:attachment/:id/:style/:filename. This will clash with attachment defined in Company class
+  [1m[36mMeetingroom Load (0.2ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 7 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 7 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 7 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 7 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 7 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 7 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 7 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 7 LIMIT 1
+  [1m[36mMeetingroom Load (0.2ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1[0m
+  [1m[35mNewspost Load (0.2ms)[0m  SELECT `newsposts`.* FROM `newsposts` WHERE `newsposts`.`internal_letter` = 1 ORDER BY created_at desc LIMIT 3 OFFSET 0
+  Rendered shared/_news.html.slim (96.8ms)
+  Rendered users/show.html.slim within layouts/application (396.7ms)
+  Rendered shared/_google.html.erb (20.5ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `info_pages`.* FROM `info_pages` 
+Completed 200 OK in 671ms (Views: 588.2ms | ActiveRecord: 11.1ms)
+
+
+Started GET "/dk/users/1/edit" for 127.0.0.1 at 2013-12-06 19:56:39 +0100
+Processing by UsersController#edit as HTML
+  Parameters: {"locale"=>"dk", "id"=>"1"}
+  [1m[36mInfoPage Load (0.3ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages` [0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mCompany Load (0.3ms)[0m  SELECT `companies`.* FROM `companies` 
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` LIMIT 1[0m
+  Rendered users/edit.html.slim within layouts/application (18.1ms)
+  Rendered shared/_google.html.erb (0.0ms)
+  [1m[35mMeetingroom Load (0.2ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages` [0m
+Completed 200 OK in 47ms (Views: 37.9ms | ActiveRecord: 1.2ms)
+
+
+Started PUT "/dk/users/1" for 127.0.0.1 at 2013-12-06 19:56:45 +0100
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"TULbkozzVVu9dszV3ovDR2szwxsp3dloGmiUrpBj+/g=", "user"=>{"name"=>"Max Grønlundx", "email"=>"max@synthmax.dk", "company_id"=>"2", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "grid"=>"1"}, "commit"=>"Gem", "locale"=>"dk", "id"=>"1"}
+  [1m[35mInfoPage Load (0.2ms)[0m  SELECT `info_pages`.* FROM `info_pages` 
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mUPDATE `users` SET `name` = 'Max Grønlundx', `encrypted_password` = '$2a$10$KKNXtgiM.2J7WxxtRfi1ke72f96HGtggAPn/Sk8MROpiu0gA5AiS.', `updated_at` = '2013-12-06 18:56:45' WHERE `users`.`id` = 1[0m
+[paperclip] Saving attachments.
+  [1m[35m (0.5ms)[0m  COMMIT
+Redirected to http://localhost:3000/dk/users/1
+Completed 302 Found in 82ms (ActiveRecord: 1.2ms)
+
+
+Started GET "/dk/users/1" for 127.0.0.1 at 2013-12-06 19:56:45 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"locale"=>"dk", "id"=>"1"}
+  [1m[36mInfoPage Load (0.2ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages` [0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+[paperclip] Saving attachments.
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  UPDATE `users` SET `last_sign_in_at` = '2013-12-06 18:50:06', `current_sign_in_at` = '2013-12-06 18:56:45', `sign_in_count` = 130, `updated_at` = '2013-12-06 18:56:45' WHERE `users`.`id` = 1
+[paperclip] Saving attachments.
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  Rendered shared/_menu.html.slim (1.1ms)
+  [1m[35mCompany Load (0.3ms)[0m  SELECT `companies`.* FROM `companies` WHERE `companies`.`id` = 2 LIMIT 1
+  [1m[36mBooking Load (0.2ms)[0m  [1mSELECT `bookings`.* FROM `bookings` WHERE `bookings`.`bookers_name` = 'Max Grønlundx' ORDER BY booking_date desc LIMIT 8 OFFSET 0[0m
+  [1m[35mMeetingroom Load (0.1ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1
+  [1m[36mNewspost Load (0.2ms)[0m  [1mSELECT `newsposts`.* FROM `newsposts` WHERE `newsposts`.`internal_letter` = 1 ORDER BY created_at desc LIMIT 3 OFFSET 0[0m
+  Rendered shared/_news.html.slim (3.1ms)
+  Rendered users/show.html.slim within layouts/application (11.8ms)
+  Rendered shared/_google.html.erb (0.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1
+  [1m[36mInfoPage Load (0.2ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages` [0m
+Completed 200 OK in 51ms (Views: 29.7ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/dk/users/1/edit" for 127.0.0.1 at 2013-12-06 19:56:47 +0100
+Processing by UsersController#edit as HTML
+  Parameters: {"locale"=>"dk", "id"=>"1"}
+  [1m[35mInfoPage Load (0.2ms)[0m  SELECT `info_pages`.* FROM `info_pages` 
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mCompany Load (0.3ms)[0m  [1mSELECT `companies`.* FROM `companies` [0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` LIMIT 1
+  Rendered users/edit.html.slim within layouts/application (7.2ms)
+  Rendered shared/_google.html.erb (0.0ms)
+  [1m[36mMeetingroom Load (0.2ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `info_pages`.* FROM `info_pages` 
+Completed 200 OK in 32ms (Views: 25.6ms | ActiveRecord: 1.1ms)
+
+
+Started PUT "/dk/users/1" for 127.0.0.1 at 2013-12-06 19:56:53 +0100
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"TULbkozzVVu9dszV3ovDR2szwxsp3dloGmiUrpBj+/g=", "user"=>{"image"=>#<ActionDispatch::Http::UploadedFile:0x007fb87411a0b0 @original_filename="1955-BMW-Isetta-Jagdwagen-Bruce-Weiner-Auction.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"user[image]\"; filename=\"1955-BMW-Isetta-Jagdwagen-Bruce-Weiner-Auction.jpg\"\r\nContent-Type: image/jpeg\r\n", @tempfile=#<File:/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/RackMultipart20131206-25308-bu40w1>>, "name"=>"Max Grønlundx", "email"=>"max@synthmax.dk", "company_id"=>"2", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "grid"=>"1"}, "commit"=>"Gem", "locale"=>"dk", "id"=>"1"}
+  [1m[36mInfoPage Load (0.2ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages` [0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/1955-BMW-Isetta-Jagdwagen-Bruce-Weiner-Auction20131206-25308-h92eyd.jpg[0]'
+Command :: identify -format %m '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/1955-BMW-Isetta-Jagdwagen-Bruce-Weiner-Auction20131206-25308-h92eyd.jpg[0]'
+Command :: identify -format %m '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/1955-BMW-Isetta-Jagdwagen-Bruce-Weiner-Auction20131206-25308-h92eyd.jpg[0]'
+Command :: convert '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/1955-BMW-Isetta-Jagdwagen-Bruce-Weiner-Auction20131206-25308-h92eyd.jpg[0]' -auto-orient -resize "x130" -crop "120x130+48+0" +repage '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/1955-BMW-Isetta-Jagdwagen-Bruce-Weiner-Auction20131206-25308-h92eyd20131206-25308-1om3j34'
+Command :: file -b --mime '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/1955-BMW-Isetta-Jagdwagen-Bruce-Weiner-Auction20131206-25308-h92eyd20131206-25308-1om3j34'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/1955-BMW-Isetta-Jagdwagen-Bruce-Weiner-Auction20131206-25308-h92eyd.jpg[0]'
+Command :: identify -format %m '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/1955-BMW-Isetta-Jagdwagen-Bruce-Weiner-Auction20131206-25308-h92eyd.jpg[0]'
+Command :: identify -format %m '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/1955-BMW-Isetta-Jagdwagen-Bruce-Weiner-Auction20131206-25308-h92eyd.jpg[0]'
+Command :: convert '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/1955-BMW-Isetta-Jagdwagen-Bruce-Weiner-Auction20131206-25308-h92eyd.jpg[0]' -auto-orient -resize "480x520>" '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/1955-BMW-Isetta-Jagdwagen-Bruce-Weiner-Auction20131206-25308-h92eyd20131206-25308-dpxdlz'
+Command :: file -b --mime '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/1955-BMW-Isetta-Jagdwagen-Bruce-Weiner-Auction20131206-25308-h92eyd20131206-25308-dpxdlz'
+  [1m[35m (0.3ms)[0m  UPDATE `users` SET `image_file_name` = '1955-BMW-Isetta-Jagdwagen-Bruce-Weiner-Auction.jpg', `image_file_size` = 35355, `image_updated_at` = '2013-12-06 18:56:53', `encrypted_password` = '$2a$10$hbGEWetniZ5eRMj9924..OEjk7n434rZOSBTC1CTAQ4BJQmIkq1Xu', `updated_at` = '2013-12-06 18:56:54' WHERE `users`.`id` = 1
+[paperclip] Saving attachments.
+[paperclip] deleting /Users/synthmax/Documents/marselistvaervej4/public/system/images/1/original/1961-Isetta-300-pickup-Bruce-Weiner-Auction.jpg
+[paperclip] deleting /Users/synthmax/Documents/marselistvaervej4/public/system/images/1/small/1961-Isetta-300-pickup-Bruce-Weiner-Auction.jpg
+[paperclip] deleting /Users/synthmax/Documents/marselistvaervej4/public/system/images/1/large/1961-Isetta-300-pickup-Bruce-Weiner-Auction.jpg
+  [1m[36m (15.8ms)[0m  [1mCOMMIT[0m
+Command :: identify -format '%wx%h,%[exif:orientation]' '/Users/synthmax/Documents/marselistvaervej4/public/system/images/1/large/1955-BMW-Isetta-Jagdwagen-Bruce-Weiner-Auction.jpg[0]'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/Users/synthmax/Documents/marselistvaervej4/public/system/images/1/original/1955-BMW-Isetta-Jagdwagen-Bruce-Weiner-Auction.jpg[0]'
+  Rendered users/crop.html.slim within layouts/application (67.9ms)
+  Rendered shared/_google.html.erb (0.0ms)
+  [1m[35mMeetingroom Load (0.2ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1
+  [1m[36mInfoPage Load (0.1ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages` [0m
+Completed 200 OK in 576ms (Views: 90.2ms | ActiveRecord: 16.9ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/Jcrop.gif"):
+  actionpack (3.2.11) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.11) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.11) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.11) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.11) lib/rails/rack/logger.rb:16:in `call'
+  quiet_assets (1.0.1) lib/quiet_assets.rb:20:in `call_with_quiet_assets'
+  actionpack (3.2.11) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.3) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.3) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.11) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.3) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/static.rb:62:in `call'
+  rack-cache (1.2) lib/rack/cache/context.rb:136:in `forward'
+  rack-cache (1.2) lib/rack/cache/context.rb:245:in `fetch'
+  rack-cache (1.2) lib/rack/cache/context.rb:185:in `lookup'
+  rack-cache (1.2) lib/rack/cache/context.rb:66:in `call!'
+  rack-cache (1.2) lib/rack/cache/context.rb:51:in `call'
+  railties (3.2.11) lib/rails/engine.rb:479:in `call'
+  railties (3.2.11) lib/rails/application.rb:223:in `call'
+  rack (1.4.3) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.11) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.3) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/synthmax/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /Users/synthmax/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /Users/synthmax/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+
+
+
+Started PUT "/dk/users/1" for 127.0.0.1 at 2013-12-06 19:56:58 +0100
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"TULbkozzVVu9dszV3ovDR2szwxsp3dloGmiUrpBj+/g=", "user"=>{"crop_x"=>"401", "crop_y"=>"0", "crop_w"=>"499", "crop_h"=>"540"}, "commit"=>"Crop", "locale"=>"dk", "id"=>"1"}
+  [1m[35mInfoPage Load (0.2ms)[0m  SELECT `info_pages`.* FROM `info_pages` 
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+[paperclip] Saving attachments.
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mUPDATE `users` SET `last_sign_in_at` = '2013-12-06 18:56:45', `current_sign_in_at` = '2013-12-06 18:56:58', `sign_in_count` = 131, `updated_at` = '2013-12-06 18:56:58' WHERE `users`.`id` = 1[0m
+[paperclip] Saving attachments.
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+[paperclip] Saving attachments.
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/1955-BMW-Isetta-Jagdwagen-Bruce-Weiner-Auction20131206-25308-1izr8f6.jpg[0]'
+Command :: identify -format %m '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/1955-BMW-Isetta-Jagdwagen-Bruce-Weiner-Auction20131206-25308-1izr8f6.jpg[0]'
+Command :: identify -format %m '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/1955-BMW-Isetta-Jagdwagen-Bruce-Weiner-Auction20131206-25308-1izr8f6.jpg[0]'
+Command :: convert '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/1955-BMW-Isetta-Jagdwagen-Bruce-Weiner-Auction20131206-25308-1izr8f6.jpg[0]' -crop 499x540+401+0 -auto-orient -resize "x130" +repage '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/1955-BMW-Isetta-Jagdwagen-Bruce-Weiner-Auction20131206-25308-1izr8f620131206-25308-11f1bdc'
+Command :: file -b --mime '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/1955-BMW-Isetta-Jagdwagen-Bruce-Weiner-Auction20131206-25308-1izr8f620131206-25308-11f1bdc'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/1955-BMW-Isetta-Jagdwagen-Bruce-Weiner-Auction20131206-25308-1izr8f6.jpg[0]'
+Command :: identify -format %m '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/1955-BMW-Isetta-Jagdwagen-Bruce-Weiner-Auction20131206-25308-1izr8f6.jpg[0]'
+Command :: identify -format %m '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/1955-BMW-Isetta-Jagdwagen-Bruce-Weiner-Auction20131206-25308-1izr8f6.jpg[0]'
+Command :: convert '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/1955-BMW-Isetta-Jagdwagen-Bruce-Weiner-Auction20131206-25308-1izr8f6.jpg[0]' -crop 499x540+401+0 -auto-orient -resize "480x520>" '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/1955-BMW-Isetta-Jagdwagen-Bruce-Weiner-Auction20131206-25308-1izr8f620131206-25308-latr9c'
+Command :: file -b --mime '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/1955-BMW-Isetta-Jagdwagen-Bruce-Weiner-Auction20131206-25308-1izr8f620131206-25308-latr9c'
+[paperclip] deleting /Users/synthmax/Documents/marselistvaervej4/public/system/images/1/original/1955-BMW-Isetta-Jagdwagen-Bruce-Weiner-Auction.jpg
+[paperclip] deleting /Users/synthmax/Documents/marselistvaervej4/public/system/images/1/small/1955-BMW-Isetta-Jagdwagen-Bruce-Weiner-Auction.jpg
+[paperclip] deleting /Users/synthmax/Documents/marselistvaervej4/public/system/images/1/large/1955-BMW-Isetta-Jagdwagen-Bruce-Weiner-Auction.jpg
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mUPDATE `users` SET `image_updated_at` = '2013-12-06 18:56:58', `updated_at` = '2013-12-06 18:56:58' WHERE `users`.`id` = 1[0m
+[paperclip] Saving attachments.
+  [1m[35m (15.7ms)[0m  COMMIT
+Redirected to http://localhost:3000/dk/users/1
+Completed 302 Found in 337ms (ActiveRecord: 17.7ms)
+
+
+Started GET "/dk/users/1" for 127.0.0.1 at 2013-12-06 19:56:58 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"locale"=>"dk", "id"=>"1"}
+  [1m[36mInfoPage Load (0.2ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages` [0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  Rendered shared/_menu.html.slim (1.1ms)
+  [1m[35mCompany Load (0.3ms)[0m  SELECT `companies`.* FROM `companies` WHERE `companies`.`id` = 2 LIMIT 1
+  [1m[36mBooking Load (0.2ms)[0m  [1mSELECT `bookings`.* FROM `bookings` WHERE `bookings`.`bookers_name` = 'Max Grønlundx' ORDER BY booking_date desc LIMIT 8 OFFSET 0[0m
+  [1m[35mMeetingroom Load (0.1ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1
+  [1m[36mNewspost Load (0.2ms)[0m  [1mSELECT `newsposts`.* FROM `newsposts` WHERE `newsposts`.`internal_letter` = 1 ORDER BY created_at desc LIMIT 3 OFFSET 0[0m
+  Rendered shared/_news.html.slim (3.3ms)
+  Rendered users/show.html.slim within layouts/application (12.0ms)
+  Rendered shared/_google.html.erb (0.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages` [0m
+Completed 200 OK in 39ms (Views: 31.7ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/dk/users/1/edit" for 127.0.0.1 at 2013-12-06 19:57:01 +0100
+Processing by UsersController#edit as HTML
+  Parameters: {"locale"=>"dk", "id"=>"1"}
+  [1m[35mInfoPage Load (0.2ms)[0m  SELECT `info_pages`.* FROM `info_pages` 
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mCompany Load (0.3ms)[0m  [1mSELECT `companies`.* FROM `companies` [0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` LIMIT 1
+  Rendered users/edit.html.slim within layouts/application (7.6ms)
+  Rendered shared/_google.html.erb (0.0ms)
+  [1m[36mMeetingroom Load (0.2ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `info_pages`.* FROM `info_pages` 
+Completed 200 OK in 32ms (Views: 25.7ms | ActiveRecord: 1.1ms)
+
+
+Started PUT "/dk/users/1" for 127.0.0.1 at 2013-12-06 19:57:05 +0100
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"TULbkozzVVu9dszV3ovDR2szwxsp3dloGmiUrpBj+/g=", "user"=>{"name"=>"Max Grønlund", "email"=>"max@synthmax.dk", "company_id"=>"2", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "grid"=>"1"}, "commit"=>"Gem", "locale"=>"dk", "id"=>"1"}
+  [1m[36mInfoPage Load (0.2ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages` [0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  UPDATE `users` SET `name` = 'Max Grønlund', `encrypted_password` = '$2a$10$5KAinzB9gGLXhAO4rPP1vOBwyN.qeU5c066dvBaTDxEw47zIoW1si', `updated_at` = '2013-12-06 18:57:05' WHERE `users`.`id` = 1
+[paperclip] Saving attachments.
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/dk/users/1
+Completed 302 Found in 80ms (ActiveRecord: 1.2ms)
+
+
+Started GET "/dk/users/1" for 127.0.0.1 at 2013-12-06 19:57:05 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"locale"=>"dk", "id"=>"1"}
+  [1m[35mInfoPage Load (0.2ms)[0m  SELECT `info_pages`.* FROM `info_pages` 
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+[paperclip] Saving attachments.
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mUPDATE `users` SET `last_sign_in_at` = '2013-12-06 18:56:58', `current_sign_in_at` = '2013-12-06 18:57:05', `sign_in_count` = 132, `updated_at` = '2013-12-06 18:57:05' WHERE `users`.`id` = 1[0m
+[paperclip] Saving attachments.
+  [1m[35m (0.5ms)[0m  COMMIT
+  Rendered shared/_menu.html.slim (1.1ms)
+  [1m[36mCompany Load (0.2ms)[0m  [1mSELECT `companies`.* FROM `companies` WHERE `companies`.`id` = 2 LIMIT 1[0m
+  [1m[35mBooking Load (0.3ms)[0m  SELECT `bookings`.* FROM `bookings` WHERE `bookings`.`bookers_name` = 'Max Grønlund' ORDER BY booking_date desc LIMIT 8 OFFSET 0
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM `bookings` WHERE `bookings`.`bookers_name` = 'Max Grønlund'[0m
+  [1m[35mMeetingroom Load (0.2ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 7 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 7 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 7 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 7 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 7 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 7 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 7 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 7 LIMIT 1[0m
+  [1m[35mMeetingroom Load (0.2ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1
+  [1m[36mNewspost Load (0.2ms)[0m  [1mSELECT `newsposts`.* FROM `newsposts` WHERE `newsposts`.`internal_letter` = 1 ORDER BY created_at desc LIMIT 3 OFFSET 0[0m
+  Rendered shared/_news.html.slim (3.1ms)
+  Rendered users/show.html.slim within layouts/application (29.6ms)
+  Rendered shared/_google.html.erb (0.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1
+  [1m[36mInfoPage Load (0.2ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages` [0m
+Completed 200 OK in 61ms (Views: 48.1ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/dk/meetingrooms" for 127.0.0.1 at 2013-12-06 19:57:14 +0100
+Processing by MeetingroomsController#index as HTML
+  Parameters: {"locale"=>"dk"}
+  [1m[35mInfoPage Load (0.3ms)[0m  SELECT `info_pages`.* FROM `info_pages` 
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mMeetingroom Load (0.2ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1
+  Rendered shared/_menu.html.slim (1.0ms)
+  [1m[36mMeetingroom Load (0.2ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` [0m
+  Rendered meetingrooms/index.html.slim within layouts/application (18.4ms)
+  Rendered shared/_google.html.erb (0.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages` [0m
+Completed 200 OK in 50ms (Views: 38.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/system/images/6/thumbnail/5-modern-house-design.jpg?1317806244" for 127.0.0.1 at 2013-12-06 19:57:15 +0100
+
+ActionController::RoutingError (No route matches [GET] "/system/images/6/thumbnail/5-modern-house-design.jpg"):
+  actionpack (3.2.11) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.11) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.11) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.11) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.11) lib/rails/rack/logger.rb:16:in `call'
+  quiet_assets (1.0.1) lib/quiet_assets.rb:20:in `call_with_quiet_assets'
+  actionpack (3.2.11) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.3) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.3) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.11) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.3) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/static.rb:62:in `call'
+  rack-cache (1.2) lib/rack/cache/context.rb:136:in `forward'
+  rack-cache (1.2) lib/rack/cache/context.rb:245:in `fetch'
+  rack-cache (1.2) lib/rack/cache/context.rb:185:in `lookup'
+  rack-cache (1.2) lib/rack/cache/context.rb:66:in `call!'
+  rack-cache (1.2) lib/rack/cache/context.rb:51:in `call'
+  railties (3.2.11) lib/rails/engine.rb:479:in `call'
+  railties (3.2.11) lib/rails/application.rb:223:in `call'
+  rack (1.4.3) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.11) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.3) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/synthmax/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /Users/synthmax/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /Users/synthmax/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+
+  Rendered /Users/synthmax/.rvm/gems/ruby-1.9.2-p290@bootstrap/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/system/images/7/thumbnail/123585_f520.jpg?1317806261" for 127.0.0.1 at 2013-12-06 19:57:15 +0100
+
+ActionController::RoutingError (No route matches [GET] "/system/images/7/thumbnail/123585_f520.jpg"):
+  actionpack (3.2.11) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.11) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.11) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.11) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.11) lib/rails/rack/logger.rb:16:in `call'
+  quiet_assets (1.0.1) lib/quiet_assets.rb:20:in `call_with_quiet_assets'
+  actionpack (3.2.11) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.3) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.3) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.11) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.3) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/static.rb:62:in `call'
+  rack-cache (1.2) lib/rack/cache/context.rb:136:in `forward'
+  rack-cache (1.2) lib/rack/cache/context.rb:245:in `fetch'
+  rack-cache (1.2) lib/rack/cache/context.rb:185:in `lookup'
+  rack-cache (1.2) lib/rack/cache/context.rb:66:in `call!'
+  rack-cache (1.2) lib/rack/cache/context.rb:51:in `call'
+  railties (3.2.11) lib/rails/engine.rb:479:in `call'
+  railties (3.2.11) lib/rails/application.rb:223:in `call'
+  rack (1.4.3) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.11) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.3) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/synthmax/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /Users/synthmax/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /Users/synthmax/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+
+  Rendered /Users/synthmax/.rvm/gems/ruby-1.9.2-p290@bootstrap/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/dk/meetingrooms/6/edit" for 127.0.0.1 at 2013-12-06 19:57:19 +0100
+Processing by MeetingroomsController#edit as HTML
+  Parameters: {"locale"=>"dk", "id"=>"6"}
+  [1m[35mInfoPage Load (0.2ms)[0m  SELECT `info_pages`.* FROM `info_pages` 
+  [1m[36mMeetingroom Load (0.2ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 6 LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mMeetingroom Load (0.2ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1[0m
+  Rendered meetingrooms/_form.html.slim (10.3ms)
+  Rendered meetingrooms/edit.html.erb within layouts/application (12.4ms)
+  Rendered shared/_google.html.erb (0.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages` [0m
+Completed 200 OK in 41ms (Views: 32.3ms | ActiveRecord: 0.8ms)
+
+
+Started PUT "/dk/meetingrooms/6" for 127.0.0.1 at 2013-12-06 19:57:25 +0100
+Processing by MeetingroomsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"TULbkozzVVu9dszV3ovDR2szwxsp3dloGmiUrpBj+/g=", "meetingroom"=>{"image"=>#<ActionDispatch::Http::UploadedFile:0x007fb878efb4a0 @original_filename="Scootacar-Mk-1.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"meetingroom[image]\"; filename=\"Scootacar-Mk-1.jpg\"\r\nContent-Type: image/jpeg\r\n", @tempfile=#<File:/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/RackMultipart20131206-25308-jw1ovr>>, "title"=>"Mødelokale 2, 1. sal", "body"=>"nu med fri bar", "color"=>"#dddddd"}, "locale"=>"dk", "id"=>"6"}
+  [1m[35mInfoPage Load (0.2ms)[0m  SELECT `info_pages`.* FROM `info_pages` 
+  [1m[36mMeetingroom Load (0.2ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 6 LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mMeetingroom Load (0.1ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 6 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Scootacar-Mk-120131206-25308-1iqin0g.jpg[0]'
+Command :: identify -format %m '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Scootacar-Mk-120131206-25308-1iqin0g.jpg[0]'
+Command :: identify -format %m '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Scootacar-Mk-120131206-25308-1iqin0g.jpg[0]'
+Command :: convert '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Scootacar-Mk-120131206-25308-1iqin0g.jpg[0]' -auto-orient -resize "70x57>" '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Scootacar-Mk-120131206-25308-1iqin0g20131206-25308-1vz12n6'
+Command :: file -b --mime '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Scootacar-Mk-120131206-25308-1iqin0g20131206-25308-1vz12n6'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Scootacar-Mk-120131206-25308-1iqin0g.jpg[0]'
+Command :: identify -format %m '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Scootacar-Mk-120131206-25308-1iqin0g.jpg[0]'
+Command :: identify -format %m '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Scootacar-Mk-120131206-25308-1iqin0g.jpg[0]'
+Command :: convert '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Scootacar-Mk-120131206-25308-1iqin0g.jpg[0]' -auto-orient -resize "x114" -crop "140x114+6+0" +repage '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Scootacar-Mk-120131206-25308-1iqin0g20131206-25308-gwwwz9'
+Command :: file -b --mime '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Scootacar-Mk-120131206-25308-1iqin0g20131206-25308-gwwwz9'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Scootacar-Mk-120131206-25308-1iqin0g.jpg[0]'
+Command :: identify -format %m '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Scootacar-Mk-120131206-25308-1iqin0g.jpg[0]'
+Command :: identify -format %m '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Scootacar-Mk-120131206-25308-1iqin0g.jpg[0]'
+Command :: convert '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Scootacar-Mk-120131206-25308-1iqin0g.jpg[0]' -auto-orient -resize "x376" -crop "460x376+20+0" +repage '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Scootacar-Mk-120131206-25308-1iqin0g20131206-25308-1t3dyki'
+Command :: file -b --mime '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Scootacar-Mk-120131206-25308-1iqin0g20131206-25308-1t3dyki'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Scootacar-Mk-120131206-25308-1iqin0g.jpg[0]'
+Command :: identify -format %m '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Scootacar-Mk-120131206-25308-1iqin0g.jpg[0]'
+Command :: identify -format %m '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Scootacar-Mk-120131206-25308-1iqin0g.jpg[0]'
+Command :: convert '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Scootacar-Mk-120131206-25308-1iqin0g.jpg[0]' -auto-orient -resize "754x616>" '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Scootacar-Mk-120131206-25308-1iqin0g20131206-25308-hcly7r'
+Command :: file -b --mime '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Scootacar-Mk-120131206-25308-1iqin0g20131206-25308-hcly7r'
+  [1m[35m (0.3ms)[0m  UPDATE `meetingrooms` SET `image_file_name` = 'Scootacar-Mk-1.jpg', `image_file_size` = 83692, `image_updated_at` = '2013-12-06 18:57:25', `updated_at` = '2013-12-06 18:57:26' WHERE `meetingrooms`.`id` = 6
+[paperclip] Saving attachments.
+  [1m[36m (15.7ms)[0m  [1mCOMMIT[0m
+Command :: identify -format '%wx%h,%[exif:orientation]' '/Users/synthmax/Documents/marselistvaervej4/public/system/images/6/xxl/Scootacar-Mk-1.jpg[0]'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/Users/synthmax/Documents/marselistvaervej4/public/system/images/6/original/Scootacar-Mk-1.jpg[0]'
+  Rendered meetingrooms/crop.html.slim within layouts/application (85.4ms)
+  Rendered shared/_google.html.erb (0.0ms)
+  [1m[35mMeetingroom Load (0.2ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1
+  [1m[36mInfoPage Load (0.2ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages` [0m
+Completed 200 OK in 997ms (Views: 167.3ms | ActiveRecord: 17.1ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/Jcrop.gif"):
+  actionpack (3.2.11) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.11) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.11) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.11) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.11) lib/rails/rack/logger.rb:16:in `call'
+  quiet_assets (1.0.1) lib/quiet_assets.rb:20:in `call_with_quiet_assets'
+  actionpack (3.2.11) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.3) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.3) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.11) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.3) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/static.rb:62:in `call'
+  rack-cache (1.2) lib/rack/cache/context.rb:136:in `forward'
+  rack-cache (1.2) lib/rack/cache/context.rb:245:in `fetch'
+  rack-cache (1.2) lib/rack/cache/context.rb:185:in `lookup'
+  rack-cache (1.2) lib/rack/cache/context.rb:66:in `call!'
+  rack-cache (1.2) lib/rack/cache/context.rb:51:in `call'
+  railties (3.2.11) lib/rails/engine.rb:479:in `call'
+  railties (3.2.11) lib/rails/application.rb:223:in `call'
+  rack (1.4.3) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.11) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.3) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/synthmax/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /Users/synthmax/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /Users/synthmax/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+
+
+
+Started PUT "/dk/meetingrooms/6" for 127.0.0.1 at 2013-12-06 19:57:32 +0100
+Processing by MeetingroomsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"TULbkozzVVu9dszV3ovDR2szwxsp3dloGmiUrpBj+/g=", "meetingroom"=>{"crop_x"=>"566", "crop_y"=>"288", "crop_w"=>"384", "crop_h"=>"314"}, "commit"=>"Crop", "locale"=>"dk", "id"=>"6"}
+  [1m[35mInfoPage Load (0.2ms)[0m  SELECT `info_pages`.* FROM `info_pages` 
+  [1m[36mMeetingroom Load (0.2ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 6 LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mMeetingroom Load (0.1ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 6 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+[paperclip] Saving attachments.
+  [1m[35m (0.1ms)[0m  COMMIT
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Scootacar-Mk-120131206-25308-gu9c00.jpg[0]'
+Command :: identify -format %m '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Scootacar-Mk-120131206-25308-gu9c00.jpg[0]'
+Command :: identify -format %m '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Scootacar-Mk-120131206-25308-gu9c00.jpg[0]'
+Command :: convert '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Scootacar-Mk-120131206-25308-gu9c00.jpg[0]' -crop 384x314+566+288 -auto-orient -resize "70x57>" '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Scootacar-Mk-120131206-25308-gu9c0020131206-25308-7l907s'
+Command :: file -b --mime '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Scootacar-Mk-120131206-25308-gu9c0020131206-25308-7l907s'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Scootacar-Mk-120131206-25308-gu9c00.jpg[0]'
+Command :: identify -format %m '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Scootacar-Mk-120131206-25308-gu9c00.jpg[0]'
+Command :: identify -format %m '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Scootacar-Mk-120131206-25308-gu9c00.jpg[0]'
+Command :: convert '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Scootacar-Mk-120131206-25308-gu9c00.jpg[0]' -crop 384x314+566+288 -auto-orient -resize "x114" +repage '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Scootacar-Mk-120131206-25308-gu9c0020131206-25308-1ohyihn'
+Command :: file -b --mime '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Scootacar-Mk-120131206-25308-gu9c0020131206-25308-1ohyihn'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Scootacar-Mk-120131206-25308-gu9c00.jpg[0]'
+Command :: identify -format %m '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Scootacar-Mk-120131206-25308-gu9c00.jpg[0]'
+Command :: identify -format %m '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Scootacar-Mk-120131206-25308-gu9c00.jpg[0]'
+Command :: convert '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Scootacar-Mk-120131206-25308-gu9c00.jpg[0]' -crop 384x314+566+288 -auto-orient -resize "x376" +repage '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Scootacar-Mk-120131206-25308-gu9c0020131206-25308-11gy4k8'
+Command :: file -b --mime '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Scootacar-Mk-120131206-25308-gu9c0020131206-25308-11gy4k8'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Scootacar-Mk-120131206-25308-gu9c00.jpg[0]'
+Command :: identify -format %m '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Scootacar-Mk-120131206-25308-gu9c00.jpg[0]'
+Command :: identify -format %m '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Scootacar-Mk-120131206-25308-gu9c00.jpg[0]'
+Command :: convert '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Scootacar-Mk-120131206-25308-gu9c00.jpg[0]' -crop 384x314+566+288 -auto-orient -resize "754x616>" '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Scootacar-Mk-120131206-25308-gu9c0020131206-25308-3wdb4'
+Command :: file -b --mime '/var/folders/5l/ysvwffm965z5ljqntzb6wr200000gn/T/Scootacar-Mk-120131206-25308-gu9c0020131206-25308-3wdb4'
+[paperclip] deleting /Users/synthmax/Documents/marselistvaervej4/public/system/images/6/original/Scootacar-Mk-1.jpg
+[paperclip] deleting /Users/synthmax/Documents/marselistvaervej4/public/system/images/6/mini/Scootacar-Mk-1.jpg
+[paperclip] deleting /Users/synthmax/Documents/marselistvaervej4/public/system/images/6/thumbnail/Scootacar-Mk-1.jpg
+[paperclip] deleting /Users/synthmax/Documents/marselistvaervej4/public/system/images/6/preview/Scootacar-Mk-1.jpg
+[paperclip] deleting /Users/synthmax/Documents/marselistvaervej4/public/system/images/6/xxl/Scootacar-Mk-1.jpg
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  UPDATE `meetingrooms` SET `image_updated_at` = '2013-12-06 18:57:32', `updated_at` = '2013-12-06 18:57:32' WHERE `meetingrooms`.`id` = 6
+[paperclip] Saving attachments.
+  [1m[36m (15.4ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/dk/meetingrooms/6
+Completed 302 Found in 698ms (ActiveRecord: 16.5ms)
+
+
+Started GET "/dk/meetingrooms/6" for 127.0.0.1 at 2013-12-06 19:57:32 +0100
+Processing by MeetingroomsController#show as HTML
+  Parameters: {"locale"=>"dk", "id"=>"6"}
+  [1m[35mInfoPage Load (0.2ms)[0m  SELECT `info_pages`.* FROM `info_pages` 
+  [1m[36mMeetingroom Load (0.2ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 6 LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mMeetingroom Load (0.2ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1[0m
+  Rendered shared/_menu.html.slim (1.2ms)
+  [1m[35mNewspost Load (0.3ms)[0m  SELECT `newsposts`.* FROM `newsposts` WHERE `newsposts`.`internal_letter` = 1 ORDER BY created_at desc LIMIT 3 OFFSET 0
+  Rendered shared/_news.html.slim (4.0ms)
+  Rendered meetingrooms/show.html.slim within layouts/application (15.6ms)
+  Rendered shared/_google.html.erb (0.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `info_pages`.* FROM `info_pages` 
+Completed 200 OK in 46ms (Views: 36.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/dk/meetingrooms/6/edit" for 127.0.0.1 at 2013-12-06 19:57:36 +0100
+Processing by MeetingroomsController#edit as HTML
+  Parameters: {"locale"=>"dk", "id"=>"6"}
+  [1m[36mInfoPage Load (0.2ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages` [0m
+  [1m[35mMeetingroom Load (0.2ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 6 LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mMeetingroom Load (0.2ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1
+  Rendered meetingrooms/_form.html.slim (3.5ms)
+  Rendered meetingrooms/edit.html.erb within layouts/application (4.9ms)
+  Rendered shared/_google.html.erb (0.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `info_pages`.* FROM `info_pages` 
+Completed 200 OK in 33ms (Views: 25.2ms | ActiveRecord: 0.8ms)
+
+
+Started PUT "/dk/meetingrooms/6" for 127.0.0.1 at 2013-12-06 19:57:40 +0100
+Processing by MeetingroomsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"TULbkozzVVu9dszV3ovDR2szwxsp3dloGmiUrpBj+/g=", "meetingroom"=>{"title"=>"Mødelokale 2, 1. salx", "body"=>"nu med fri bar", "color"=>"#dddddd"}, "locale"=>"dk", "id"=>"6"}
+  [1m[36mInfoPage Load (0.2ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages` [0m
+  [1m[35mMeetingroom Load (0.2ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 6 LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mMeetingroom Load (0.1ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 6 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mUPDATE `meetingrooms` SET `title` = 'Mødelokale 2, 1. salx', `updated_at` = '2013-12-06 18:57:40' WHERE `meetingrooms`.`id` = 6[0m
+[paperclip] Saving attachments.
+  [1m[35m (14.7ms)[0m  COMMIT
+Redirected to http://localhost:3000/dk/meetingrooms/6
+Completed 302 Found in 26ms (ActiveRecord: 15.7ms)
+
+
+Started GET "/dk/meetingrooms/6" for 127.0.0.1 at 2013-12-06 19:57:40 +0100
+Processing by MeetingroomsController#show as HTML
+  Parameters: {"locale"=>"dk", "id"=>"6"}
+  [1m[36mInfoPage Load (0.2ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages` [0m
+  [1m[35mMeetingroom Load (0.2ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` WHERE `meetingrooms`.`id` = 6 LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mMeetingroom Load (0.2ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1
+  Rendered shared/_menu.html.slim (0.9ms)
+  [1m[36mNewspost Load (0.3ms)[0m  [1mSELECT `newsposts`.* FROM `newsposts` WHERE `newsposts`.`internal_letter` = 1 ORDER BY created_at desc LIMIT 3 OFFSET 0[0m
+  Rendered shared/_news.html.slim (3.5ms)
+  Rendered meetingrooms/show.html.slim within layouts/application (8.0ms)
+  Rendered shared/_google.html.erb (0.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT `meetingrooms`.* FROM `meetingrooms` LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `info_pages`.* FROM `info_pages` [0m
+Completed 200 OK in 34ms (Views: 26.7ms | ActiveRecord: 0.9ms)
